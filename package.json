@@ -1,0 +1,59 @@
+{
+  "name": "@ediflow/core",
+  "version": "0.0.0",
+  "description": "Modern EDI parsing and building library for EDIFACT, X12, IDOC, VDA, and HL7",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "edi",
+    "edifact",
+    "x12",
+    "idoc",
+    "vda",
+    "hl7",
+    "parser",
+    "builder",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ediflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ediflow/issues"
+  },
+  "homepage": "https://github.com/yourusername/ediflow#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
