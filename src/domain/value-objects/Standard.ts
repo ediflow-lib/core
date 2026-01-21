@@ -1,5 +1,5 @@
 /**
- * EDI Standards enumeration
+ * EDI Standards
  */
 export enum Standard {
   EDIFACT = 'EDIFACT',
