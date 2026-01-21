@@ -1,7 +1,7 @@
 /**
  * EDIFlow Domain Layer
  *
- * Public API for domain entities, value objects, and rules.
+ * Public API for domain entities, value objects, and validation.
  */
 
 // Entities
@@ -14,12 +14,5 @@ export { Standard } from './value-objects/Standard';
 export { Version } from './value-objects/Version';
 export { MessageType } from './value-objects/MessageType';
 
-// Validation Rules
-export { ValidationRule } from './rules/ValidationRule';
-export { MandatoryRule } from './rules/MandatoryRule';
-export { LengthRule } from './rules/LengthRule';
-export { TypeRule } from './rules/TypeRule';
-
-// Errors
-export { EDIError } from './errors/EDIError';
-export { ValidationError } from './errors/ValidationError';
+// Validation
+export * from './validation';
