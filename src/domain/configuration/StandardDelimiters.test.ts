@@ -56,9 +56,9 @@ describe('StandardDelimiters', () => {
     });
   });
 
-  describe('getSupportedStandards', () => {
+  describe('getAllStandards', () => {
     it('should return array of supported standards', () => {
-      const standards = StandardDelimiters.getSupportedStandards();
+      const standards = StandardDelimiters.getAllStandards();
 
       expect(standards).toContain(Standard.EDIFACT);
       expect(standards).toContain(Standard.X12);

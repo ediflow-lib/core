@@ -1,12 +1,3 @@
-
-/**
- * Delimiters Value Object
- *
- * Represents delimiter configuration for EDI standards.
- * Immutable and validated.
- *
- * Domain Layer - Pure Value Object
- */
 export class Delimiters {
   readonly component: string;
   readonly element: string;
@@ -33,41 +24,6 @@ export class Delimiters {
     this.validate();
   }
 
-  private validate(): void {
-    // Check that core delimiters are defined (element and segment are mandatory)
-    if (!this.element || !this.segment) {
-      throw new Error('Element and segment delimiters must be defined');
-    }
-
-    // Check delimiter length (must be single character if defined)
-    const delimiters = [this.component, this.element, this.decimal, this.escape, this.segment].filter(
-      (d) => d && d.length > 0
-    );
-
-    for (const delimiter of delimiters) {
-      if (delimiter.length !== 1) {
-        throw new Error(`Delimiter must be a single character, got: "${delimiter}"`);
-      }
-    }
-
-    // Check uniqueness (all non-empty delimiters must be different)
-    const nonEmptyDelimiters = [this.component, this.element, this.decimal, this.escape, this.segment].filter(
-      (d) => d && d.length > 0
-    );
-    const uniqueDelimiters = new Set(nonEmptyDelimiters);
-    if (uniqueDelimiters.size !== nonEmptyDelimiters.length) {
-      throw new Error('All delimiters must be unique');
-    }
-
-    // Check repetition if present
-    if (this.repetition && this.repetition.length !== 1) {
-      throw new Error(`Repetition separator must be a single character, got: "${this.repetition}"`);
-    }
-  }
-
-  /**
-   * Create custom delimiters
-   */
   static custom(config: {
     component: string;
     element: string;
@@ -86,11 +42,6 @@ export class Delimiters {
     );
   }
 
-  /**
-   * Check if delimiters match standard for given standard
-   *
-   * Note: This requires standard configuration to be passed in
-   */
   equals(other: Delimiters): boolean {
     return (
       this.component === other.component &&
@@ -102,17 +53,50 @@ export class Delimiters {
     );
   }
 
-  /**
-   * Check if escape character exists
-   */
   hasEscape(): boolean {
     return this.escape !== '';
   }
 
-  /**
-   * String representation (UNA format for EDIFACT)
-   */
   toUNA(): string {
     return `UNA${this.component}${this.element}${this.decimal}${this.escape} ${this.segment}`;
+  }
+
+  private validate(): void {
+    this.validateMandatoryDelimiters();
+    this.validateSingleCharacter();
+    this.validateUniqueness();
+    this.validateRepetition();
+  }
+
+  private validateMandatoryDelimiters(): void {
+    if (!this.element || !this.segment) {
+      throw new Error('Element and segment delimiters must be defined');
+    }
+  }
+
+  private validateSingleCharacter(): void {
+    const coreDelimiters = [this.component, this.element, this.decimal, this.escape, this.segment]
+      .filter(d => d && d.length > 0);
+
+    const invalidDelimiter = coreDelimiters.find(d => d.length !== 1);
+    if (invalidDelimiter) {
+      throw new Error(`Delimiter must be a single character, got: "${invalidDelimiter}"`);
+    }
+  }
+
+  private validateUniqueness(): void {
+    const nonEmptyDelimiters = [this.component, this.element, this.decimal, this.escape, this.segment]
+      .filter(d => d && d.length > 0);
+
+    const uniqueDelimiters = new Set(nonEmptyDelimiters);
+    if (uniqueDelimiters.size !== nonEmptyDelimiters.length) {
+      throw new Error('All delimiters must be unique');
+    }
+  }
+
+  private validateRepetition(): void {
+    if (this.repetition && this.repetition.length !== 1) {
+      throw new Error(`Repetition separator must be a single character, got: "${this.repetition}"`);
+    }
   }
 }

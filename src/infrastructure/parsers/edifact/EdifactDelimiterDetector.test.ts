@@ -76,13 +76,13 @@ describe('EdifactDelimiterDetector', () => {
     it('should throw error when message does not start with UNA', () => {
       const message = "UNH+1+DESADV:D:20B:UN'";
 
-      expect(() => detector.extractFromUNA(message)).toThrow('Message does not start with valid UNA segment');
+      expect(() => detector.extractFromUNA(message)).toThrow('Message does not have UNA segment');
     });
 
     it('should throw error when UNA is incomplete', () => {
       const message = 'UNA:+';
 
-      expect(() => detector.extractFromUNA(message)).toThrow('Message does not start with valid UNA segment');
+      expect(() => detector.extractFromUNA(message)).toThrow('Message does not have UNA segment');
     });
   });
 
