@@ -14,5 +14,8 @@ export { Standard } from './value-objects/Standard';
 export { Version } from './value-objects/Version';
 export { MessageType } from './value-objects/MessageType';
 
+// Configuration
+export * from './configuration';
+
 // Validation
 export * from './validation';

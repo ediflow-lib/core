@@ -1,0 +1,1 @@
+export { IDelimiterDetector } from './IDelimiterDetector';
