@@ -1,6 +1,6 @@
 import { BuildEDIInputDTO } from './BuildEDIInputDTO';
 import { BuildEDIOutputDTO, BuildError } from './BuildEDIOutputDTO';
-import { EDIMessageValidator, StandardDelimiters } from '../../../domain';
+import { EDIMessageValidator, StandardDelimiters, EDIMessage, Delimiters } from '../../../domain';
 
 export class BuildEDIUseCase {
   execute(input: BuildEDIInputDTO): BuildEDIOutputDTO {
@@ -31,7 +31,7 @@ export class BuildEDIUseCase {
     };
   }
 
-  private buildString(message: any, delimiters: any): string {
+  private buildString(message: EDIMessage, delimiters: Delimiters): string {
     const segments: string[] = [];
 
     for (const segment of message.segments) {
