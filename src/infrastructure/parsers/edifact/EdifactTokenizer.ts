@@ -1,5 +1,5 @@
-import { Delimiters } from '../../../domain/value-objects/Delimiters';
-import { ITokenizer } from '../../../application/ports/ITokenizer';
+import { Delimiters } from '../../../domain';
+import { ITokenizer } from '../../../application';
 
 export class EdifactTokenizer implements ITokenizer {
   tokenize(message: string, delimiters: Delimiters): string[] {
@@ -10,20 +10,23 @@ export class EdifactTokenizer implements ITokenizer {
     let position = 0;
 
     while (position < message.length) {
+      const char = message[position];
+      if (!char) break;
+
       if (this.isEscapedCharacter(message, position, delimiters)) {
         currentSegment += this.consumeEscapedCharacter(message, position);
         position += 2;
         continue;
       }
 
-      if (this.isSegmentTerminator(message[position], delimiters)) {
+      if (this.isSegmentTerminator(char, delimiters)) {
         this.addSegmentIfNotEmpty(segments, currentSegment);
         currentSegment = '';
         position++;
         continue;
       }
 
-      currentSegment += message[position];
+      currentSegment += char;
       position++;
     }
 
@@ -42,7 +45,9 @@ export class EdifactTokenizer implements ITokenizer {
   }
 
   private consumeEscapedCharacter(message: string, position: number): string {
-    return message[position] + message[position + 1];
+    const char1 = message[position];
+    const char2 = message[position + 1];
+    return (char1 ?? '') + (char2 ?? '');
   }
 
   private isSegmentTerminator(char: string, delimiters: Delimiters): boolean {
