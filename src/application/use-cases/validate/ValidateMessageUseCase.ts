@@ -1,10 +1,10 @@
 import { ValidateMessageInputDTO } from './ValidateMessageInputDTO';
 import { ValidateMessageOutputDTO, ValidationError } from './ValidateMessageOutputDTO';
-import { EDIMessageValidator } from '../../../domain';
+import { EDIMessageValidationService } from '../../services';
 
 export class ValidateMessageUseCase {
   execute(input: ValidateMessageInputDTO): ValidateMessageOutputDTO {
-    const validator = new EDIMessageValidator();
+    const validator = new EDIMessageValidationService();
     const validationResult = validator.validate(input.message);
 
     if (validationResult.isValid) {
