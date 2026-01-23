@@ -1,4 +1,3 @@
-export { IDelimiterDetector } from './IDelimiterDetector';
-export { ITokenizer } from './ITokenizer';
-export { IParser } from './IParser';
+// Output Ports (Infrastructure Dependencies)
+export * from './output';
 

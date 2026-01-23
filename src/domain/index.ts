@@ -7,5 +7,7 @@ export { Version } from './value-objects/Version';
 export { MessageType } from './value-objects/MessageType';
 export { Delimiters } from './value-objects/Delimiters';
 
-export * from './configuration';
+export * from './constants';
 export * from './validation';
+export * from './repositories';
+export * from './services';

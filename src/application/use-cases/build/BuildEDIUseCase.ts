@@ -1,11 +1,12 @@
 import { BuildEDIInputDTO } from './BuildEDIInputDTO';
 import { BuildEDIOutputDTO, BuildError } from './BuildEDIOutputDTO';
-import { EDIMessageValidator, StandardDelimiters, EDIMessage, Delimiters } from '../../../domain';
+import { StandardDelimiters, EDIMessage, Delimiters } from '../../../domain';
+import { EDIMessageValidationService } from '../../services';
 
 export class BuildEDIUseCase {
   execute(input: BuildEDIInputDTO): BuildEDIOutputDTO {
     if (input.validateBeforeBuild) {
-      const validator = new EDIMessageValidator();
+      const validator = new EDIMessageValidationService();
       const validationResult = validator.validate(input.message);
 
       if (!validationResult.isValid) {

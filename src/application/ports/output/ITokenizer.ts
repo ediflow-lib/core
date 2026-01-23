@@ -1,4 +1,4 @@
-import { Delimiters } from '../../domain/value-objects/Delimiters';
+import { Delimiters } from '../../../domain';
 
 /**
  * Tokenizer Port (Interface)
