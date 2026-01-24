@@ -1,163 +1,113 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ValidateMessageUseCase } from './ValidateMessageUseCase';
-import { EDIMessage, Standard, Version, MessageType, EDISegment } from '../../../domain';
+import { EDIMessage, Standard, Version, MessageType, EDISegment } from '@domain';
+import type { IValidationService } from '@domain/services/IValidationService';
+import { ValidationResult, ValidationError } from '@domain/validation';
 
 describe('ValidateMessageUseCase', () => {
   let useCase: ValidateMessageUseCase;
+  let mockValidationService: IValidationService<EDIMessage>;
 
   const createMessage = (standard: Standard, versionValue: string, messageTypeValue: string): EDIMessage => {
-    return new EDIMessage(
+    const message = new EDIMessage(
       standard,
       new Version(standard, versionValue),
       new MessageType(standard, messageTypeValue)
     );
-  };
-
-  const createValidMessage = (standard: Standard, versionValue: string, messageTypeValue: string): EDIMessage => {
-    const message = createMessage(standard, versionValue, messageTypeValue);
-    message.addSegment(new EDISegment('TEST1', []));
-    message.addSegment(new EDISegment('TEST2', []));
+    message.addSegment(new EDISegment('TEST', []));
     return message;
   };
 
   beforeEach(() => {
-    useCase = new ValidateMessageUseCase();
+    mockValidationService = {
+      validate: vi.fn(),
+    };
+    useCase = new ValidateMessageUseCase(mockValidationService);
   });
 
   describe('execute', () => {
-    describe('EDIFACT messages', () => {
-      it('should validate a valid EDIFACT message successfully', () => {
-        const message = createValidMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
+    it('should return success with validation result for valid message', () => {
+      // GIVEN: Mock service returns valid result
+      const message = createMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const validResult = ValidationResult.success();
+      mockValidationService.validate = vi.fn().mockReturnValue(validResult);
 
-        const result = useCase.execute({ message });
+      // WHEN
+      const result = useCase.execute({ message });
 
-        expect(result.isValid).toBe(true);
-        expect(result.errors).toHaveLength(0);
-      });
-
-      it('should return validation errors for invalid EDIFACT message', () => {
-        const message = createMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-        expect(result.errors[0]?.code).toBeDefined();
-        expect(result.errors[0]?.message).toBeDefined();
-      });
+      // THEN: Discriminated union success branch
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.validationResult).toBe(validResult);
+        expect(result.metadata.standard).toBe(Standard.EDIFACT);
+        expect(result.metadata.segmentCount).toBe(1);
+      }
     });
 
-    describe('X12 messages', () => {
-      it('should validate a valid X12 message successfully', () => {
-        const message = createValidMessage(Standard.X12, '005010', '850');
+    it('should return success with validation errors when message has validation issues', () => {
+      // GIVEN: Mock service returns invalid result
+      const message = createMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const error = new ValidationError('TEST_ERROR', 'Test error', 'test');
+      const invalidResult = ValidationResult.failure(error);
+      mockValidationService.validate = vi.fn().mockReturnValue(invalidResult);
 
-        const result = useCase.execute({ message });
+      // WHEN
+      const result = useCase.execute({ message });
 
-        expect(result.isValid).toBe(true);
-        expect(result.errors).toHaveLength(0);
-      });
-
-      it('should return validation errors for invalid X12 message', () => {
-        const message = createMessage(Standard.X12, '005010', '850');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-      });
+      // THEN: Still success (validation ran), but result shows errors
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.validationResult.isValid).toBe(false);
+        expect(result.validationResult.errors.length).toBeGreaterThan(0);
+      }
     });
 
-    describe('IDOC messages', () => {
-      it('should validate a valid IDOC message successfully', () => {
-        const message = createValidMessage(Standard.IDOC, 'SAP-ECC', 'ORDERS05');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(true);
-        expect(result.errors).toHaveLength(0);
+    it('should return failure when validation service throws error', () => {
+      // GIVEN: Mock service throws
+      const message = createMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      mockValidationService.validate = vi.fn().mockImplementation(() => {
+        throw new Error('Service error');
       });
 
-      it('should return validation errors for invalid IDOC message', () => {
-        const message = createMessage(Standard.IDOC, 'SAP-ECC', 'ORDERS05');
+      // WHEN
+      const result = useCase.execute({ message });
 
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-      });
+      // THEN: Discriminated union failure branch
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.errors).toHaveLength(1);
+        expect(result.errors[0]?.code).toBe('VALIDATION_SERVICE_ERROR');
+      }
     });
 
-    describe('VDA messages', () => {
-      it('should validate a valid VDA message successfully', () => {
-        const message = createValidMessage(Standard.VDA, '4905', '4905');
+    it('should call validation service with correct message', () => {
+      // GIVEN
+      const message = createMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.success());
 
-        const result = useCase.execute({ message });
+      // WHEN
+      useCase.execute({ message });
 
-        expect(result.isValid).toBe(true);
-        expect(result.errors).toHaveLength(0);
-      });
-
-      it('should return validation errors for invalid VDA message', () => {
-        const message = createMessage(Standard.VDA, '4905', '4905');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-      });
+      // THEN
+      expect(mockValidationService.validate).toHaveBeenCalledWith(message);
     });
 
-    describe('HL7v2 messages', () => {
-      it('should validate a valid HL7v2 message successfully', () => {
-        const message = createValidMessage(Standard.HL7v2, '2.5', 'ADT');
+    it('should include metadata in success result', () => {
+      // GIVEN
+      const message = createMessage(Standard.X12, '005010', '850');
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.success());
 
-        const result = useCase.execute({ message });
+      // WHEN
+      const result = useCase.execute({ message });
 
-        expect(result.isValid).toBe(true);
-        expect(result.errors).toHaveLength(0);
-      });
-
-      it('should return validation errors for invalid HL7v2 message', () => {
-        const message = createMessage(Standard.HL7v2, '2.5', 'ADT');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-      });
-    });
-
-    describe('validation modes', () => {
-      it('should collect warnings in non-strict mode', () => {
-        const message = createMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
-        message.addSegment(new EDISegment('UNH', []));
-
-        const result = useCase.execute({ message, strictMode: false });
-
-        expect(result.warnings).toBeDefined();
-      });
-
-      it('should fail fast in strict mode', () => {
-        const message = createMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
-
-        const result = useCase.execute({ message, strictMode: true });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors.length).toBeGreaterThan(0);
-      });
-    });
-
-    describe('error details', () => {
-      it('should provide detailed error information', () => {
-        const message = createMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
-
-        const result = useCase.execute({ message });
-
-        expect(result.isValid).toBe(false);
-        expect(result.errors[0]?.field).toBeDefined();
-        expect(result.errors[0]?.code).toBeDefined();
-        expect(result.errors[0]?.message).toBeDefined();
-      });
+      // THEN
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.metadata.standard).toBe(Standard.X12);
+        expect(result.metadata.version.value).toBe('005010');
+        expect(result.metadata.messageType.value).toBe('850');
+        expect(result.metadata.segmentCount).toBe(1);
+      }
     });
   });
 });

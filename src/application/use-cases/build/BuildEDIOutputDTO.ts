@@ -4,8 +4,19 @@ export interface BuildError {
   field?: string;
 }
 
-export interface BuildEDIOutputDTO {
-  success: boolean;
-  ediString?: string;
-  errors?: BuildError[];
-}
+/**
+ * Discriminated union for Build EDI output.
+ * TypeScript will narrow types correctly based on the `success` property.
+ *
+ * SUCCESS: ediString is defined
+ * FAILURE: errors is defined
+ */
+export type BuildEDIOutputDTO =
+  | {
+      success: true;
+      ediString: string;
+    }
+  | {
+      success: false;
+      errors: BuildError[];
+    };

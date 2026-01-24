@@ -46,7 +46,7 @@ describe('DefinitionLoader', () => {
       getVersions: vi.fn().mockReturnValue([new Version(Standard.EDIFACT, 'D.96A')]),
     };
 
-    // ...existing code...
+    // Mock repository manager
     mockRepositoryManager = {
       findRepository: vi.fn().mockReturnValue(mockRepository),
     } as any;
@@ -165,6 +165,100 @@ describe('DefinitionLoader', () => {
 
       // THEN
       expect(result).toBe(false);
+    });
+  });
+
+  describe('caching', () => {
+    it('should cache loaded definitions', () => {
+      // GIVEN
+      const standard = Standard.EDIFACT;
+      const version = new Version(Standard.EDIFACT, 'D.96A');
+      const messageType = new MessageType(Standard.EDIFACT, 'ORDERS');
+
+      // WHEN: Load twice
+      definitionLoader.loadDefinition(standard, version, messageType);
+      definitionLoader.loadDefinition(standard, version, messageType);
+
+      // THEN: Repository should be called only once (second is cached)
+      expect(mockRepository.getMessageDefinition).toHaveBeenCalledTimes(1);
+    });
+
+    it('should return cached definition on second call', () => {
+      // GIVEN
+      const standard = Standard.EDIFACT;
+      const version = new Version(Standard.EDIFACT, 'D.96A');
+      const messageType = new MessageType(Standard.EDIFACT, 'ORDERS');
+
+      // WHEN
+      const def1 = definitionLoader.loadDefinition(standard, version, messageType);
+      const def2 = definitionLoader.loadDefinition(standard, version, messageType);
+
+      // THEN: Same instance returned
+      expect(def1).toBe(def2);
+    });
+
+    it('should check cache before repository in hasDefinition', () => {
+      // GIVEN: Load to populate cache
+      const standard = Standard.EDIFACT;
+      const version = new Version(Standard.EDIFACT, 'D.96A');
+      const messageType = new MessageType(Standard.EDIFACT, 'ORDERS');
+
+      definitionLoader.loadDefinition(standard, version, messageType);
+
+      // WHEN: Check if exists
+      const exists = definitionLoader.hasDefinition(standard, version, messageType);
+
+      // THEN: Should return true without checking repository again
+      expect(exists).toBe(true);
+      // Repository getMessageDefinition was called once during load, not during hasDefinition
+      expect(mockRepository.getMessageDefinition).toHaveBeenCalledTimes(1);
+    });
+
+    it('should clear cache', () => {
+      // GIVEN: Load and cache
+      const standard = Standard.EDIFACT;
+      const version = new Version(Standard.EDIFACT, 'D.96A');
+      const messageType = new MessageType(Standard.EDIFACT, 'ORDERS');
+
+      definitionLoader.loadDefinition(standard, version, messageType);
+      expect(definitionLoader.getCacheSize()).toBe(1);
+
+      // WHEN: Clear cache
+      definitionLoader.clearCache();
+
+      // THEN: Cache is empty
+      expect(definitionLoader.getCacheSize()).toBe(0);
+
+      // Loading again should call repository
+      mockRepository.getMessageDefinition = vi.fn().mockReturnValue(mockDefinition);
+      definitionLoader.loadDefinition(standard, version, messageType);
+      expect(mockRepository.getMessageDefinition).toHaveBeenCalledTimes(1);
+    });
+
+    it('should respect custom cache size', () => {
+      // GIVEN: Small cache
+      const smallCacheLoader = new DefinitionLoader(mockRepositoryManager, 2);
+      const standard = Standard.EDIFACT;
+
+      // WHEN: Load 3 definitions
+      smallCacheLoader.loadDefinition(
+        standard,
+        new Version(Standard.EDIFACT, 'D.96A'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+      smallCacheLoader.loadDefinition(
+        standard,
+        new Version(Standard.EDIFACT, 'D.96A'),
+        new MessageType(Standard.EDIFACT, 'INVOIC')
+      );
+      smallCacheLoader.loadDefinition(
+        standard,
+        new Version(Standard.EDIFACT, 'D.96A'),
+        new MessageType(Standard.EDIFACT, 'DESADV')
+      );
+
+      // THEN: Cache size should be 2 (LRU evicted oldest)
+      expect(smallCacheLoader.getCacheSize()).toBe(2);
     });
   });
 });
