@@ -1,5 +1,5 @@
 import type { IRepository } from '../ports';
-import type { MessageType, Version, MessageDefinition } from '../../domain';
+import type { MessageType, Version, MessageDefinition, Standard } from '@domain';
 
 /**
  * Manages multiple repositories and provides a unified interface for finding message definitions.
@@ -16,6 +16,26 @@ export class RepositoryManager {
    */
   addRepository(repository: IRepository): void {
     this.repositories.push(repository);
+  }
+
+  /**
+   * Finds a repository that supports the given standard and version.
+   *
+   * @param standard - The EDI standard (e.g., EDIFACT, X12)
+   * @param version - The version (e.g., D.96A, D.20B)
+   * @returns The repository if found, null otherwise
+   */
+  findRepository(standard: Standard, version: Version): IRepository | null {
+    for (const repository of this.repositories) {
+      if (repository.getStandard() === standard) {
+        // Check if this repository supports the requested version
+        const versions = repository.getVersions();
+        if (versions.some((v: Version) => v.value === version.value)) {
+          return repository;
+        }
+      }
+    }
+    return null;
   }
 
   /**

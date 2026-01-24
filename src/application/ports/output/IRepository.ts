@@ -1,4 +1,4 @@
-import type { MessageType, Version, MessageDefinition } from '@domain';
+import type { MessageType, Version, MessageDefinition, Standard } from '@domain';
 
 /**
  * Repository interface for storing and retrieving message definitions.
@@ -21,5 +21,21 @@ export interface IRepository {
    * @param version - The version to check
    * @returns true if definition exists, false otherwise
    */
-  hasDefinition(type: MessageType, version: Version): boolean;
+  hasMessageDefinition(type: MessageType, version: Version): boolean;
+
+  /**
+   * Returns the EDI standard this repository supports.
+   * Each repository supports exactly one standard (e.g., EDIFACT or X12).
+   *
+   * @returns The supported standard
+   */
+  getStandard(): Standard;
+
+  /**
+   * Returns all versions this repository supports for its standard.
+   * A repository can support multiple versions of the same standard.
+   *
+   * @returns Array of supported versions (e.g., [D.96A, D.20B] for EDIFACT)
+   */
+  getVersions(): Version[];
 }

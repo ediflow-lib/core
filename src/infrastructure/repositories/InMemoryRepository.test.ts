@@ -132,25 +132,25 @@ describe('InMemoryRepository', () => {
     });
   });
 
-  describe('hasDefinition', () => {
+  describe('hasMessageDefinition', () => {
     it('should return false for non-existent definition', () => {
       const nonExistentType = new MessageType(Standard.EDIFACT, 'DESADV');
       const nonExistentVersion = new Version(Standard.EDIFACT, 'D.96A');
 
-      expect(repository.hasDefinition(nonExistentType, nonExistentVersion)).toBe(false);
+      expect(repository.hasMessageDefinition(nonExistentType, nonExistentVersion)).toBe(false);
     });
 
     it('should return true for existing definition', () => {
       repository.register(sampleDefinition);
 
-      expect(repository.hasDefinition(sampleDefinition.messageType, sampleDefinition.version)).toBe(true);
+      expect(repository.hasMessageDefinition(sampleDefinition.messageType, sampleDefinition.version)).toBe(true);
     });
 
     it('should return false after registering different version', () => {
       repository.register(sampleDefinition);
 
       const differentVersion = new Version(Standard.EDIFACT, 'D.01B');
-      expect(repository.hasDefinition(sampleDefinition.messageType, differentVersion)).toBe(false);
+      expect(repository.hasMessageDefinition(sampleDefinition.messageType, differentVersion)).toBe(false);
     });
   });
 });

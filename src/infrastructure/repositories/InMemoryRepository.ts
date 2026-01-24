@@ -1,5 +1,5 @@
-import type { MessageType, Version, MessageDefinition } from '../../domain';
-import type { IRepository } from '../../application';
+import type { MessageType, Version, MessageDefinition, Standard } from '@domain';
+import type { IRepository } from '@application';
 
 /**
  * In-memory implementation of the repository interface.
@@ -8,6 +8,7 @@ import type { IRepository } from '../../application';
  */
 export class InMemoryRepository implements IRepository {
   private readonly definitions = new Map<string, MessageDefinition>();
+  private standard: Standard | null = null;
 
   /**
    * Registers a message definition in the repository.
@@ -16,6 +17,15 @@ export class InMemoryRepository implements IRepository {
    * @param definition - The message definition to register
    */
   register(definition: MessageDefinition): void {
+    // Track the standard from the first definition
+    if (this.standard === null) {
+      this.standard = definition.standard;
+    } else if (this.standard !== definition.standard) {
+      throw new Error(
+        `Repository supports ${this.standard} but tried to register ${definition.standard}`
+      );
+    }
+
     const key = this.createKey(definition.messageType, definition.version);
     this.definitions.set(key, definition);
   }
@@ -39,9 +49,39 @@ export class InMemoryRepository implements IRepository {
    * @param version - The version to check
    * @returns true if definition exists, false otherwise
    */
-  hasDefinition(type: MessageType, version: Version): boolean {
+  hasMessageDefinition(type: MessageType, version: Version): boolean {
     const key = this.createKey(type, version);
     return this.definitions.has(key);
+  }
+
+  /**
+   * Returns the EDI standard this repository supports.
+   *
+   * @returns The supported standard
+   * @throws Error if no definitions have been registered yet
+   */
+  getStandard(): Standard {
+    if (this.standard === null) {
+      throw new Error('Repository has no definitions registered yet');
+    }
+    return this.standard;
+  }
+
+  /**
+   * Returns all versions this repository supports.
+   *
+   * @returns Array of unique versions from all registered definitions
+   */
+  getVersions(): Version[] {
+    const versions = new Set<string>();
+    for (const definition of this.definitions.values()) {
+      versions.add(definition.version.value);
+    }
+    // Convert back to Version objects
+    if (this.standard === null) {
+      return [];
+    }
+    return Array.from(versions).map(v => ({ value: v } as Version));
   }
 
   /**
