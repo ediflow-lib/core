@@ -21,9 +21,13 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:integration": "vitest run --testPathPattern=integration",
+    "test:smoke": "vitest run --testNamePattern=\"Smoke\"",
     "typecheck": "tsc --noEmit",
+    "lint": "echo \"Lint check - to be configured\"",
     "dev": "tsup --watch",
-    "prepublishOnly": "npm run build && npm run test"
+    "release:check": "npm run typecheck && npm test && npm run test:coverage && npm run build",
+    "prepublishOnly": "npm run release:check"
   },
   "keywords": [
     "edi",
