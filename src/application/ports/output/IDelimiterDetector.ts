@@ -1,4 +1,4 @@
-import { Delimiters } from '../../../domain';
+import { Delimiters } from '@domain';
 
 /**
  * IDelimiterDetector

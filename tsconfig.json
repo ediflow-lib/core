@@ -8,6 +8,16 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@domain": ["./src/domain"],
+      "@domain/*": ["./src/domain/*"],
+      "@application": ["./src/application"],
+      "@application/*": ["./src/application/*"],
+      "@infrastructure": ["./src/infrastructure"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@test/*": ["./test/*"]
+    },
 
     /* Emit */
     "declaration": true,

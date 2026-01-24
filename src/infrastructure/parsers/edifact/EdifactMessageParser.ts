@@ -1,5 +1,5 @@
-import { EDIMessage, Standard, Version, MessageType, EDISegment, Delimiters } from '../../../domain';
-import type { IDelimiterDetector, ITokenizer } from '../../../application';
+import { EDIMessage, Standard, Version, MessageType, EDISegment, Delimiters } from '@domain';
+import type { IDelimiterDetector, ITokenizer, IMessageParser } from '@application';
 import type { EdifactSegmentParser } from './EdifactSegmentParser';
 
 /**
@@ -7,7 +7,7 @@ import type { EdifactSegmentParser } from './EdifactSegmentParser';
  * Orchestrates delimiter detection, tokenization, and segment parsing
  * to create EDIMessage objects from EDIFACT strings.
  */
-export class EdifactMessageParser {
+export class EdifactMessageParser implements IMessageParser {
   constructor(
     private readonly delimiterDetector: IDelimiterDetector,
     private readonly tokenizer: ITokenizer,
@@ -118,5 +118,24 @@ export class EdifactMessageParser {
     const version = new Version(Standard.EDIFACT, versionString);
 
     return { version, messageType };
+  }
+
+  /**
+   * Returns the EDI standard this parser supports.
+   */
+  getSupportedStandard(): Standard {
+    return Standard.EDIFACT;
+  }
+
+  /**
+   * Checks if this parser can parse the given EDI string.
+   * For EDIFACT, we check for the presence of UNH segment.
+   */
+  canParse(ediString: string): boolean {
+    if (!ediString || ediString.trim().length === 0) {
+      return false;
+    }
+    // Simple check: EDIFACT messages should contain 'UNH'
+    return ediString.includes('UNH');
   }
 }

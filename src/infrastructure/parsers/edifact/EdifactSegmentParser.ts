@@ -1,4 +1,4 @@
-import { EDISegment, EDIElement, Delimiters } from '../../../domain';
+import { EDISegment, EDIElement, Delimiters } from '@domain';
 
 /**
  * Parser for EDIFACT segment strings.

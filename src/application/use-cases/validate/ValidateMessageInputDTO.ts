@@ -1,4 +1,4 @@
-import { EDIMessage } from '../../../domain';
+import { EDIMessage } from '@domain';
 
 export interface ValidateMessageInputDTO {
   message: EDIMessage;

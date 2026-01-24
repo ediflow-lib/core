@@ -1,4 +1,4 @@
-import { EDIMessage, Delimiters, Standard } from '../../../domain';
+import { EDIMessage, Delimiters, Standard } from '@domain';
 
 export interface IParser {
   parse(segments: string[], delimiters: Delimiters): EDIMessage;

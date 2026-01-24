@@ -1,5 +1,5 @@
-import { Delimiters, Standard, StandardDelimiters } from '../../../domain';
-import { IDelimiterDetector } from '../../../application';
+import { Delimiters, Standard, StandardDelimiters } from '@domain';
+import { IDelimiterDetector } from '@application';
 
 export class EdifactDelimiterDetector implements IDelimiterDetector {
   private static readonly UNA_PREFIX = 'UNA';

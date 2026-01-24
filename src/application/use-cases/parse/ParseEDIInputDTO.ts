@@ -1,4 +1,4 @@
-import { Standard } from '../../../domain';
+import { Standard } from '@domain';
 
 export interface ParseEDIInputDTO {
   message: string;

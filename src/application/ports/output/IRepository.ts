@@ -1,4 +1,4 @@
-import type { MessageType, Version, MessageDefinition } from '../../../domain';
+import type { MessageType, Version, MessageDefinition } from '@domain';
 
 /**
  * Repository interface for storing and retrieving message definitions.

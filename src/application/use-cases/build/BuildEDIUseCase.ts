@@ -1,6 +1,6 @@
 import { BuildEDIInputDTO } from './BuildEDIInputDTO';
 import { BuildEDIOutputDTO, BuildError } from './BuildEDIOutputDTO';
-import { StandardDelimiters, EDIMessage, Delimiters } from '../../../domain';
+import { StandardDelimiters, EDIMessage, Delimiters } from '@domain';
 import { EDIMessageValidationService } from '../../services';
 
 export class BuildEDIUseCase {

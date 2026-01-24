@@ -1,5 +1,5 @@
-import { Delimiters } from '../../../domain';
-import { ITokenizer } from '../../../application';
+import { Delimiters } from '@domain';
+import { ITokenizer } from '@application';
 
 export class EdifactTokenizer implements ITokenizer {
   tokenize(message: string, delimiters: Delimiters): string[] {
