@@ -42,8 +42,7 @@ parseCommand.register(program);
 const validateCommand = new ValidateCommand(factory);
 validateCommand.register(program);
 
-// TODO: BuildCommand not yet implemented
-const buildCommand = new BuildCommand();
+const buildCommand = new BuildCommand(factory);
 buildCommand.register(program);
 
 // Parse CLI arguments
