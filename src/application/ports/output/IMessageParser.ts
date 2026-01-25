@@ -1,4 +1,5 @@
 import { EDIMessage, Standard } from '@domain';
+import type { ParserConfig } from '@application/configuration';
 
 /**
  * High-level parser interface for complete EDI messages.
@@ -9,10 +10,11 @@ export interface IMessageParser {
    * Parses a complete EDI message string into an EDIMessage object.
    *
    * @param ediString - The complete EDI message string
+   * @param config - Optional parser configuration for controlling parsing behavior
    * @returns Parsed EDIMessage with all segments and metadata
    * @throws Error if the message is invalid or cannot be parsed
    */
-  parse(ediString: string): EDIMessage;
+  parse(ediString: string, config?: ParserConfig): EDIMessage;
 
   /**
    * Returns the EDI standard this parser supports.

@@ -13,6 +13,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "bin": {
+    "ediflow": "./dist/presentation/cli/index.js"
+  },
   "files": [
     "dist"
   ],
@@ -62,6 +65,9 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "lru-cache": "^11.2.4"
+    "@types/js-yaml": "^4.0.9",
+    "commander": "^14.0.2",
+    "lru-cache": "^11.2.4",
+    "yaml": "^2.8.2"
   }
 }

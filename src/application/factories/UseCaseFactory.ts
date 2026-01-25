@@ -1,0 +1,74 @@
+import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
+import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
+import { ValidateMessageUseCase } from '@application/use-cases/validate/ValidateMessageUseCase';
+import { IMessageParser } from '@application/ports';
+import { IValidationService } from '@domain/services/IValidationService';
+import { EDIMessage } from '@domain/entities/EDIMessage';
+
+/**
+ * Factory for creating configured use cases.
+ *
+ * Centralizes use case instantiation with proper dependency injection.
+ * Follows Clean Architecture - Application Layer coordinates between
+ * Ports (interfaces) without knowing Infrastructure implementations.
+ *
+ * @example
+ * ```typescript
+ * const factory = new UseCaseFactory(parsers, validationService);
+ * const parseUseCase = factory.createParseUseCase('EDIFACT');
+ * ```
+ */
+export class UseCaseFactory {
+  constructor(
+    private readonly parsers: Map<string, IMessageParser>,
+    private readonly validationService: IValidationService<EDIMessage>
+  ) {}
+
+  /**
+   * Creates a ParseEDIUseCase with the appropriate parser.
+   *
+   * @param standard - EDI standard (e.g., 'EDIFACT', 'X12')
+   * @returns Configured ParseEDIUseCase
+   * @throws Error if standard is not supported
+   */
+  createParseUseCase(standard: string): ParseEDIUseCase {
+    const parser = this.parsers.get(standard.toUpperCase());
+    if (!parser) {
+      throw new Error(`No parser registered for standard: ${standard}`);
+    }
+    return new ParseEDIUseCase(parser);
+  }
+
+  /**
+   * Creates a BuildEDIUseCase with the appropriate parser.
+   *
+   * @param standard - EDI standard (e.g., 'EDIFACT', 'X12')
+   * @returns Configured BuildEDIUseCase
+   * @throws Error if standard is not supported
+   */
+  createBuildUseCase(standard: string): BuildEDIUseCase {
+    const parser = this.parsers.get(standard.toUpperCase());
+    if (!parser) {
+      throw new Error(`No parser registered for standard: ${standard}`);
+    }
+    return new BuildEDIUseCase();
+  }
+
+  /**
+   * Creates a ValidateMessageUseCase.
+   *
+   * @returns Configured ValidateMessageUseCase
+   */
+  createValidateUseCase(): ValidateMessageUseCase {
+    return new ValidateMessageUseCase(this.validationService);
+  }
+
+  /**
+   * Gets list of supported standards.
+   *
+   * @returns Array of standard names
+   */
+  getSupportedStandards(): string[] {
+    return Array.from(this.parsers.keys());
+  }
+}

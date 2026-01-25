@@ -1,0 +1,1 @@
+export { UseCaseFactory } from './UseCaseFactory';

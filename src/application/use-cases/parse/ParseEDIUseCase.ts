@@ -34,7 +34,7 @@ export class ParseEDIUseCase {
       }
 
       // Parse the message using infrastructure
-      const message = this.messageParser.parse(input.message);
+      const message = this.messageParser.parse(input.message, input.parserConfig);
 
       // Return success result
       return {

@@ -1,5 +1,6 @@
 import { EDIMessage, Standard, Version, MessageType, EDISegment, Delimiters } from '@domain';
 import type { IDelimiterDetector, ITokenizer, IMessageParser } from '@application';
+import type { ParserConfig } from '@application/configuration';
 import type { EdifactSegmentParser } from './EdifactSegmentParser';
 
 /**
@@ -18,6 +19,7 @@ export class EdifactMessageParser implements IMessageParser {
    * Parses a complete EDIFACT message string into an EDIMessage object.
    *
    * @param ediString - The complete EDIFACT message string
+   * @param config - Optional parser configuration for controlling parsing behavior
    * @returns Parsed EDIMessage with all segments and metadata
    *
    * @example
@@ -27,7 +29,10 @@ export class EdifactMessageParser implements IMessageParser {
    * // message.version === "D.96A"
    * // message.segments.length === 3
    */
-  parse(ediString: string): EDIMessage {
+  parse(ediString: string, _config?: ParserConfig): EDIMessage {
+    // TODO: Use _config for controlling parsing behavior (propertyParseMode, codeListValueParseMode)
+    // Currently not used but will be needed for advanced parsing features
+
     this.validateMessage(ediString);
 
     const delimiters = this.delimiterDetector.detect(ediString);
