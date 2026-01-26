@@ -11,6 +11,8 @@
  * Order is preserved through array sequence.
  */
 
+import type { MappingRule } from '../mapping/MappingRule';
+
 
 // ============================================================================
 // ELEMENT LEVEL (Lowest Level)
@@ -50,6 +52,7 @@ export interface SegmentNode {
   maxOccurrences: number;
   position: number;
   elements: ElementOrComposite[];
+  mapping?: MappingRule;  // Phase 2: How to map to business object field
 }
 
 export interface SegmentGroupNode {
@@ -61,6 +64,7 @@ export interface SegmentGroupNode {
   position: number;
   triggerSegment: string;
   children: (SegmentNode | SegmentGroupNode)[];
+  mapping?: MappingRule;  // Phase 2: How to map group to nested object
 }
 
 export type SegmentOrGroup = SegmentNode | SegmentGroupNode;
