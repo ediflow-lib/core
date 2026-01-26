@@ -1,4 +1,6 @@
-import type { MessageType, Version, MessageDefinition, Standard } from '@domain';
+import { MessageType, Version } from '@domain';
+import type { Standard } from '@domain';
+import type { MessageDefinition } from '@domain/repositories/MessageDefinition';
 import type { IRepository } from '@application';
 
 /**
@@ -38,7 +40,7 @@ export class InMemoryRepository implements IRepository {
    * @returns The message definition if found, null otherwise
    */
   getMessageDefinition(type: MessageType, version: Version): MessageDefinition | null {
-    const key = this.createKey(type, version);
+    const key = this.createKey(type.value, version.value);
     return this.definitions.get(key) ?? null;
   }
 
@@ -50,7 +52,7 @@ export class InMemoryRepository implements IRepository {
    * @returns true if definition exists, false otherwise
    */
   hasMessageDefinition(type: MessageType, version: Version): boolean {
-    const key = this.createKey(type, version);
+    const key = this.createKey(type.value, version.value);
     return this.definitions.has(key);
   }
 
@@ -75,13 +77,13 @@ export class InMemoryRepository implements IRepository {
   getVersions(): Version[] {
     const versions = new Set<string>();
     for (const definition of this.definitions.values()) {
-      versions.add(definition.version.value);
+      versions.add(definition.version);
     }
     // Convert back to Version objects
     if (this.standard === null) {
       return [];
     }
-    return Array.from(versions).map(v => ({ value: v } as Version));
+    return Array.from(versions).map(v => new Version(this.standard!, v));
   }
 
   /**
@@ -91,7 +93,7 @@ export class InMemoryRepository implements IRepository {
    *
    * @private
    */
-  private createKey(type: MessageType, version: Version): string {
-    return `${type.standard}:${type.value}:${version.value}`;
+  private createKey(type: string, version: string): string {
+    return `${this.standard}:${type}:${version}`;
   }
 }

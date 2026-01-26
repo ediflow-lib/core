@@ -1,8 +1,11 @@
-import type { MessageType, Version, MessageDefinition, Standard } from '@domain';
+import type { MessageType, Version, Standard } from '@domain';
+import type { MessageDefinition } from '@domain/repositories/MessageDefinition';
 
 /**
- * Repository interface for storing and retrieving message definitions.
- * Implementations can store definitions in memory, files, databases, etc.
+ * Legacy Repository interface for storing and retrieving message definitions.
+ * Uses flat structure (segments array instead of Composite Pattern).
+ *
+ * @deprecated Use IMessageStructureRepository for new implementations
  */
 export interface IRepository {
   /**

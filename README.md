@@ -7,6 +7,8 @@ Parse, Validate, and Build any EDI standard with a modern, type-safe API.
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
 
+> **⚠️ Note for Contributors:** Some directories (`scripts/`, `resources/`) are not included in the public repository. See [PRIVATE_RESOURCES.md](PRIVATE_RESOURCES.md) for details.
+
 ## 🚧 In Active Development
 
 EDIFlow is a next-generation EDI library for TypeScript/JavaScript, designed to make EDI integration simple and enjoyable.

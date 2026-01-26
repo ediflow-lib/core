@@ -1,1 +1,3 @@
-export type { MessageDefinition, SegmentDefinition } from './MessageDefinition';
+export * from './MessageStructure';
+export * from './IMessageStructureRepository';
+export * from './MessageDefinition';

@@ -1,37 +1,81 @@
-import type { MessageType, Version, Standard } from '../value-objects';
+import type { Standard } from '../value-objects';
 
-/**
- * Definition of a single segment within a message.
- * Describes the structure and constraints of a segment.
- */
-export interface SegmentDefinition {
-  /** Segment tag (e.g., "UNH", "BGM", "DTM") */
-  tag: string;
-
-  /** Human-readable segment name (e.g., "Message Header", "Beginning of Message") */
+export interface DataElementDefinition {
+  code: string;
   name: string;
-
-  /** Whether this segment is mandatory in the message */
-  mandatory: boolean;
-
-  /** Maximum number of times this segment can occur (0 = unlimited) */
-  maxOccurrences: number;
+  description?: string;
+  type: 'an' | 'a' | 'n';
+  minLength?: number;
+  maxLength: number;
+  codeListCode?: string;
 }
 
-/**
- * Complete definition of an EDI message type.
- * Describes the structure, segments, and rules for a specific message.
- */
+export interface CompositeElementDefinition {
+  code: string;
+  name: string;
+  description?: string;
+  components: Array<{
+    position: number;
+    elementCode: string;
+    name: string;
+    mandatory: boolean;
+  }>;
+}
+
+export interface SegmentElementReference {
+  position: number;
+  elementCode: string;
+  name: string;
+  type: string;
+  mandatory: boolean;
+}
+
+export interface SegmentDefinition {
+  tag: string;
+  name: string;
+  description?: string;
+  elements: SegmentElementReference[];
+}
+
+export interface SegmentGroupDefinition {
+  id: string;
+  name: string;
+  triggerSegment: string;
+  mandatory: boolean;
+  maxOccurrences: number;
+  segments: Array<{
+    tag: string;
+    mandatory: boolean;
+    maxOccurrences: number;
+  }>;
+  subGroups?: SegmentGroupDefinition[];
+}
+
+export interface MessageSegmentReference {
+  tag: string;
+  name: string;
+  mandatory: boolean;
+  maxOccurrences: number;
+  position: number;
+}
+
 export interface MessageDefinition {
-  /** The message type this definition describes */
-  messageType: MessageType;
-
-  /** The version this definition is for */
-  version: Version;
-
-  /** The EDI standard (EDIFACT, X12, etc.) */
   standard: Standard;
+  version: string;
+  messageType: string;
+  name: string;
+  description?: string;
+  segments: MessageSegmentReference[];
+  segmentGroups?: SegmentGroupDefinition[];
+}
 
-  /** List of segment definitions that make up this message */
-  segments: SegmentDefinition[];
+export interface CodeListDefinition {
+  code: string;
+  name: string;
+  description?: string;
+  values: Array<{
+    value: string;
+    name: string;
+    description?: string;
+  }>;
 }

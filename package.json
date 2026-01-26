@@ -8,9 +8,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.js"
     }
   },
   "bin": {
@@ -28,6 +28,7 @@
     "test:smoke": "vitest run --testNamePattern=\"Smoke\"",
     "typecheck": "tsc --noEmit",
     "lint": "echo \"Lint check - to be configured\"",
+    "generate:d20b": "tsx scripts/generate-d20b.ts",
     "dev": "tsup --watch",
     "release:check": "npm run typecheck && npm test && npm run test:coverage && npm run build",
     "prepublishOnly": "npm run release:check"
@@ -66,7 +67,9 @@
   },
   "dependencies": {
     "@types/js-yaml": "^4.0.9",
+    "adm-zip": "^0.5.16",
     "commander": "^14.0.2",
+    "js-yaml": "^4.1.1",
     "lru-cache": "^11.2.4",
     "yaml": "^2.8.2"
   }

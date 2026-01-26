@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { InMemoryRepository } from './InMemoryRepository';
 import { MessageType, Version, Standard } from '../../domain';
-import type { MessageDefinition } from '../../domain/repositories/MessageDefinition';
+import type { MessageDefinition as MessageDefinition } from '../../domain/repositories/MessageDefinition';
 
 describe('InMemoryRepository', () => {
   let repository: InMemoryRepository;
