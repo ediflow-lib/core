@@ -9,6 +9,6 @@ export { Delimiters } from './value-objects/Delimiters';
 
 export * from './constants';
 export * from './errors';
-export * from './validation';
+export { ValidationError, ValidationResult, StructuralValidationContext, StructuralValidator } from './validation';
 export * from './repositories';
 export * from './services';

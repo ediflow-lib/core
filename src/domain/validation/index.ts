@@ -1,4 +1,4 @@
 export { ValidationError } from './ValidationError';
 export { ValidationResult } from './ValidationResult';
-export { ValidationContext } from './ValidationContext';
+export { StructuralValidationContext } from './StructuralValidationContext';
 export { StructuralValidator } from './StructuralValidator';

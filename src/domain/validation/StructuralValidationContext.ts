@@ -1,10 +1,10 @@
 /**
- * ValidationContext
+ * StructuralValidationContext
  *
  * Tracks the current path in MessageStructure for detailed error messages.
  * Maintains group hierarchy and segment indices for error reporting.
  */
-export class ValidationContext {
+export class StructuralValidationContext {
   public path: string[] = [];
   private segmentIndex: Map<string, number> = new Map();
 

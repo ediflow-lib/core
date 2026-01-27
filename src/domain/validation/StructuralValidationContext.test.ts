@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ValidationContext } from './ValidationContext';
+import { StructuralValidationContext } from './StructuralValidationContext';
 
-describe('ValidationContext', () => {
-  let context: ValidationContext;
+describe('StructuralValidationContext', () => {
+  let context: StructuralValidationContext;
 
   beforeEach(() => {
-    context = new ValidationContext();
+    context = new StructuralValidationContext();
   });
 
   describe('getPath()', () => {
