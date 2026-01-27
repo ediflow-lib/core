@@ -1,4 +1,4 @@
-﻿﻿import { describe, it, expect } from 'vitest';
+﻿import { describe, it, expect } from 'vitest';
 import { loadInvalidFixture } from '../../FixtureLoader';
 import { ValidationServiceBuilder } from '@application/services';
 import { EDIMessage, EDISegment, Standard, Version, MessageType } from '@domain';
