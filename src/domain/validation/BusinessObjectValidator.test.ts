@@ -44,8 +44,8 @@ describe('BusinessObjectValidator', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors).toHaveLength(1);
-      expect(result.errors[0].field).toBe('documentNumber');
-      expect(result.errors[0].message).toContain('Required');
+      expect(result.errors[0]?.field).toBe('documentNumber');
+      expect(result.errors[0]?.message).toContain('Required');
     });
 
     it('should validate type: string', () => {
@@ -93,7 +93,7 @@ describe('BusinessObjectValidator', () => {
 
       const result = validator.validate(invalidObject, schema);
       expect(result.isValid).toBe(false);
-      expect(result.errors[0].message).toContain('maxLength');
+      expect(result.errors[0]?.message).toContain('maxLength');
     });
 
     it('should validate array type', () => {
@@ -132,7 +132,7 @@ describe('BusinessObjectValidator', () => {
 
       const result = validator.validate(invalidObject, schema);
       expect(result.isValid).toBe(false);
-      expect(result.errors[0].message).toContain('maxItems');
+      expect(result.errors[0]?.message).toContain('maxItems');
     });
 
     it('should validate nested objects', () => {
@@ -161,7 +161,7 @@ describe('BusinessObjectValidator', () => {
 
       const result = validator.validate(invalidObject, schema);
       expect(result.isValid).toBe(false);
-      expect(result.errors[0].field).toBe('party.name');
+      expect(result.errors[0]?.field).toBe('party.name');
     });
 
     it('should validate array of objects', () => {
@@ -199,7 +199,7 @@ describe('BusinessObjectValidator', () => {
 
       const result = validator.validate(invalidObject, schema);
       expect(result.isValid).toBe(false);
-      expect(result.errors[0].field).toBe('lineItems[0].lineNumber');
+      expect(result.errors[0]?.field).toBe('lineItems[0].lineNumber');
     });
 
     it('should accumulate multiple errors', () => {

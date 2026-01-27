@@ -1,8 +1,7 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { BusinessObjectSchemaGenerator } from './BusinessObjectSchemaGenerator';
-import { SchemaCache } from './SchemaCache';
-import type { MessageStructure, SegmentNode, ElementNode } from '@domain/repositories/MessageStructure';
-import type { JSONSchema } from './JSONSchema';
+import {beforeEach, describe, expect, it} from 'vitest';
+import {BusinessObjectSchemaGenerator} from './BusinessObjectSchemaGenerator';
+import {SchemaCache} from './SchemaCache';
+import type {ElementNode, MessageStructure, SegmentNode} from '@domain/repositories/MessageStructure';
 
 describe('BusinessObjectSchemaGenerator', () => {
   let generator: BusinessObjectSchemaGenerator;
@@ -51,7 +50,7 @@ describe('BusinessObjectSchemaGenerator', () => {
 
       expect(schema.type).toBe('object');
       expect(schema.properties).toBeDefined();
-      expect(schema.properties?.documentNumber).toEqual({
+      expect(schema.properties?.['documentNumber']).toEqual({
         type: 'string',
         maxLength: 35
       });
@@ -145,7 +144,7 @@ describe('BusinessObjectSchemaGenerator', () => {
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.textField?.type).toBe('string');
+      expect(schema.properties?.['textField']?.type).toBe('string');
     });
 
     it('should map dataType "n" to number', () => {
@@ -182,10 +181,11 @@ describe('BusinessObjectSchemaGenerator', () => {
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.quantity?.type).toBe('number');
+      expect(schema.properties?.['quantity']?.type).toBe('number');
     });
 
     it('should handle array fields (maxOccurrences > 1)', () => {
+      const maxLineItems = 999;
       const structure: MessageStructure = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -197,7 +197,7 @@ describe('BusinessObjectSchemaGenerator', () => {
             tag: 'LIN',
             name: 'Line Item',
             mandatory: true,
-            maxOccurrences: 999,
+            maxOccurrences: maxLineItems,
             position: 1,
             elements: [
               {
@@ -220,8 +220,8 @@ describe('BusinessObjectSchemaGenerator', () => {
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.lineItems?.type).toBe('array');
-      expect(schema.properties?.lineItems?.maxItems).toBe(999);
+      expect(schema.properties?.['lineItems']?.type).toBe('array');
+      expect(schema.properties?.['lineItems']?.maxItems).toBe(maxLineItems);
     });
   });
 });

@@ -14,7 +14,6 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
     generator = new BusinessObjectSchemaGenerator(cache);
     validator = new BusinessObjectValidator();
 
-    // Simplified DESADV structure (Despatch Advice)
     desadvStructure = {
       standard: 'EDIFACT',
       version: 'D.20B',
@@ -216,10 +215,11 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
 
     it('should include documentNumber in schema properties', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
+      const maxDocumentNumberLength = 35;
 
-      expect(schema.properties?.documentNumber).toBeDefined();
-      expect(schema.properties?.documentNumber.type).toBe('string');
-      expect(schema.properties?.documentNumber.maxLength).toBe(35);
+      expect(schema.properties?.['documentNumber']).toBeDefined();
+      expect(schema.properties?.['documentNumber']?.type).toBe('string');
+      expect(schema.properties?.['documentNumber']?.maxLength).toBe(maxDocumentNumberLength);
     });
 
     it('should mark mandatory fields as required', () => {
@@ -231,10 +231,10 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
     });
 
     it('should cache generated schema for performance', () => {
-      const schema1 = generator.fromMessageStructure(desadvStructure);
-      const schema2 = generator.fromMessageStructure(desadvStructure);
+      const firstSchema = generator.fromMessageStructure(desadvStructure);
+      const secondSchema = generator.fromMessageStructure(desadvStructure);
 
-      expect(schema1).toBe(schema2); // Same instance = cached
+      expect(firstSchema).toBe(secondSchema);
     });
   });
 
@@ -306,8 +306,8 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors.length).toBeGreaterThan(0);
-      expect(result.errors[0].field).toBe('documentNumber');
-      expect(result.errors[0].message).toContain('Required');
+      expect(result.errors[0]?.field).toBe('documentNumber');
+      expect(result.errors[0]?.message).toContain('Required');
     });
 
     it('should detect wrong type for field', () => {
@@ -327,9 +327,10 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
 
     it('should detect maxLength violation', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
+      const exceedsMaxLength = 50;
 
       const invalidDesadv = {
-        documentNumber: 'A'.repeat(50), // max is 35!
+        documentNumber: 'A'.repeat(exceedsMaxLength),
         documentDate: '20260127',
         parties: []
       };
@@ -369,16 +370,18 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
 
   describe('Performance', () => {
     it('should generate schema in < 100ms', () => {
+      const maxGenerationTimeMs = 100;
       const startTime = Date.now();
 
       generator.fromMessageStructure(desadvStructure);
 
       const duration = Date.now() - startTime;
-      expect(duration).toBeLessThan(100);
+      expect(duration).toBeLessThan(maxGenerationTimeMs);
     });
 
     it('should validate business object in < 50ms', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
+      const maxValidationTimeMs = 50;
       const businessObject = {
         documentNumber: 'DESADV-PERF-001',
         documentDate: '20260127',
@@ -391,7 +394,7 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       validator.validate(businessObject, schema);
 
       const duration = Date.now() - startTime;
-      expect(duration).toBeLessThan(50);
+      expect(duration).toBeLessThan(maxValidationTimeMs);
     });
   });
 });

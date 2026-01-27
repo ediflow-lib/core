@@ -1,6 +1,12 @@
-import type { MessageStructure, SegmentOrGroup, SegmentNode, SegmentGroupNode, ElementNode } from '@domain/repositories/MessageStructure';
-import type { JSONSchema, JSONSchemaType } from './JSONSchema';
-import { SchemaCache } from './SchemaCache';
+import type {
+  ElementNode,
+  MessageStructure,
+  SegmentGroupNode,
+  SegmentNode,
+  SegmentOrGroup
+} from '@domain/repositories/MessageStructure';
+import type {JSONSchema, JSONSchemaType} from './JSONSchema';
+import {SchemaCache} from './SchemaCache';
 
 /**
  * BusinessObjectSchemaGenerator
@@ -13,13 +19,10 @@ import { SchemaCache } from './SchemaCache';
 export class BusinessObjectSchemaGenerator {
   constructor(private readonly cache: SchemaCache) {}
 
-  /**
-   * Generate JSON Schema from MessageStructure
-   */
   fromMessageStructure(structure: MessageStructure): JSONSchema {
     const cacheKey = SchemaCache.generateCacheKey(JSON.stringify(structure));
-
     const cached = this.cache.get(cacheKey);
+
     if (cached) {
       return cached;
     }
@@ -56,41 +59,55 @@ export class BusinessObjectSchemaGenerator {
   ): void {
     if (node.nodeType === 'segment') {
       this.processSegment(node, properties, required);
-    } else if (node.nodeType === 'segmentGroup') {
-      // If segment group has array mapping, create array property first
-      if (node.mapping?.isArray) {
-        const { targetField } = node.mapping;
-        if (!properties[targetField]) {
-          properties[targetField] = {
-            type: 'array',
-            items: this.generateSegmentGroupItemSchema(node),
-            maxItems: node.maxOccurrences
-          };
-          if (node.mandatory && !required.includes(targetField)) {
-            required.push(targetField);
-          }
-        }
-      } else {
-        // Non-array segment group: process children normally
-        for (const child of node.children) {
-          this.processNode(child, properties, required);
-        }
-      }
+      return;
+    }
+
+    if (node.mapping?.isArray) {
+      this.addArrayGroupProperty(node, properties, required);
+    } else {
+      this.processChildNodes(node, properties, required);
     }
   }
 
-  private generateSegmentGroupItemSchema(group: SegmentGroupNode): JSONSchema {
+  private addArrayGroupProperty(
+    group: SegmentGroupNode,
+    properties: Record<string, JSONSchema>,
+    required: string[]
+  ): void {
+    const { targetField } = group.mapping!;
+
+    if (properties[targetField]) {
+      return;
+    }
+
+    properties[targetField] = {
+      type: 'array',
+      items: this.createGroupItemSchema(group),
+      maxItems: group.maxOccurrences
+    };
+
+    if (group.mandatory && !required.includes(targetField)) {
+      required.push(targetField);
+    }
+  }
+
+  private processChildNodes(
+    group: SegmentGroupNode,
+    properties: Record<string, JSONSchema>,
+    required: string[]
+  ): void {
+    for (const child of group.children) {
+      this.processNode(child, properties, required);
+    }
+  }
+
+  private createGroupItemSchema(group: SegmentGroupNode): JSONSchema {
     const itemProperties: Record<string, JSONSchema> = {};
     const itemRequired: string[] = [];
 
     for (const child of group.children) {
       if (child.nodeType === 'segment') {
-        // For segments inside array group, use element names directly
-        for (const element of child.elements) {
-          if (element.nodeType === 'element') {
-            this.processElement(element, element.name, itemProperties, element.mandatory ? itemRequired : []);
-          }
-        }
+        this.addElementsToItemSchema(child, itemProperties, itemRequired);
       }
     }
 
@@ -99,6 +116,18 @@ export class BusinessObjectSchemaGenerator {
       properties: itemProperties,
       required: itemRequired.length > 0 ? itemRequired : undefined
     };
+  }
+
+  private addElementsToItemSchema(
+    segment: SegmentNode,
+    properties: Record<string, JSONSchema>,
+    required: string[]
+  ): void {
+    for (const element of segment.elements) {
+      if (element.nodeType === 'element') {
+        this.processElement(element, element.name, properties, element.mandatory ? required : []);
+      }
+    }
   }
 
   private processSegment(
@@ -113,20 +142,9 @@ export class BusinessObjectSchemaGenerator {
     const { targetField, isArray } = segment.mapping;
 
     if (isArray) {
-      // Only create array schema if it doesn't already exist (from segment group)
-      if (!properties[targetField]) {
-        properties[targetField] = {
-          type: 'array',
-          items: this.generateItemSchema(segment),
-          maxItems: segment.maxOccurrences
-        };
-      }
+      this.addArraySegmentProperty(segment, targetField, properties);
     } else {
-      for (const element of segment.elements) {
-        if (element.nodeType === 'element') {
-          this.processElement(element, targetField, properties, segment.mandatory ? required : []);
-        }
-      }
+      this.addSegmentElements(segment, targetField, properties, required);
     }
 
     if (segment.mandatory && !required.includes(targetField)) {
@@ -134,7 +152,36 @@ export class BusinessObjectSchemaGenerator {
     }
   }
 
-  private generateItemSchema(segment: SegmentNode): JSONSchema {
+  private addArraySegmentProperty(
+    segment: SegmentNode,
+    targetField: string,
+    properties: Record<string, JSONSchema>
+  ): void {
+    if (properties[targetField]) {
+      return;
+    }
+
+    properties[targetField] = {
+      type: 'array',
+      items: this.createSegmentItemSchema(segment),
+      maxItems: segment.maxOccurrences
+    };
+  }
+
+  private addSegmentElements(
+    segment: SegmentNode,
+    targetField: string,
+    properties: Record<string, JSONSchema>,
+    required: string[]
+  ): void {
+    for (const element of segment.elements) {
+      if (element.nodeType === 'element') {
+        this.processElement(element, targetField, properties, segment.mandatory ? required : []);
+      }
+    }
+  }
+
+  private createSegmentItemSchema(segment: SegmentNode): JSONSchema {
     const itemProperties: Record<string, JSONSchema> = {};
     const itemRequired: string[] = [];
 
@@ -157,12 +204,10 @@ export class BusinessObjectSchemaGenerator {
     properties: Record<string, JSONSchema>,
     required: string[]
   ): void {
-    const schema: JSONSchema = {
+    properties[fieldName] = {
       type: this.mapDataType(element.dataType),
-      ...(element.maxLength && { maxLength: element.maxLength })
+      ...(element.maxLength && {maxLength: element.maxLength})
     };
-
-    properties[fieldName] = schema;
 
     if (element.mandatory) {
       required.push(fieldName);
