@@ -218,7 +218,13 @@ export class StructureMapper {
    * Convert value to target type
    */
   private convertType(value: string, mapping: MappingRule): any {
-    if (!value) {
+    // Allow empty strings for string type, but return undefined for other types
+    if (value === undefined || value === null) {
+      return undefined;
+    }
+
+    // For non-string types, treat empty string as undefined
+    if (value === '' && mapping.typeConversion && mapping.typeConversion !== 'string') {
       return undefined;
     }
 
