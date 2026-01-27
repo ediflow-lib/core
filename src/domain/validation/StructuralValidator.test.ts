@@ -79,9 +79,9 @@ describe('StructuralValidator', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors).toHaveLength(1);
-      expect(result.errors[0].field).toBe('UNH[0]');
-      expect(result.errors[0].code).toBe('MISSING_MANDATORY_SEGMENT');
-      expect(result.errors[0].message).toContain('Mandatory segment UNH is missing');
+      expect(result.errors[0]?.field).toBe('UNH[0]');
+      expect(result.errors[0]?.code).toBe('MISSING_MANDATORY_SEGMENT');
+      expect(result.errors[0]?.message).toContain('Mandatory segment UNH is missing');
     });
 
     it('should pass when optional segment is missing', () => {
@@ -173,10 +173,10 @@ describe('StructuralValidator', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors).toHaveLength(1);
-      expect(result.errors[0].field).toBe('LIN[0]');
-      expect(result.errors[0].code).toBe('MAX_OCCURRENCES_EXCEEDED');
-      expect(result.errors[0].message).toContain('3 times');
-      expect(result.errors[0].message).toContain('max: 2');
+      expect(result.errors[0]?.field).toBe('LIN[0]');
+      expect(result.errors[0]?.code).toBe('MAX_OCCURRENCES_EXCEEDED');
+      expect(result.errors[0]?.message).toContain('3 times');
+      expect(result.errors[0]?.message).toContain('max: 2');
     });
   });
 
@@ -257,8 +257,8 @@ describe('StructuralValidator', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors).toHaveLength(2);
-      expect(result.errors[0].field).toBe('SG2');
-      expect(result.errors[0].code).toBe('MISSING_MANDATORY_GROUP');
+      expect(result.errors[0]?.field).toBe('SG2');
+      expect(result.errors[0]?.code).toBe('MISSING_MANDATORY_GROUP');
     });
 
     it('should fail when group exceeds max occurrences', () => {
@@ -301,10 +301,10 @@ describe('StructuralValidator', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors).toHaveLength(1);
-      expect(result.errors[0].field).toBe('SG2');
-      expect(result.errors[0].code).toBe('MAX_GROUP_OCCURRENCES_EXCEEDED');
-      expect(result.errors[0].message).toContain('3 times');
-      expect(result.errors[0].message).toContain('max: 2');
+      expect(result.errors[0]?.field).toBe('SG2');
+      expect(result.errors[0]?.code).toBe('MAX_GROUP_OCCURRENCES_EXCEEDED');
+      expect(result.errors[0]?.message).toContain('3 times');
+      expect(result.errors[0]?.message).toContain('max: 2');
     });
 
     it('should validate nested segment groups', () => {
