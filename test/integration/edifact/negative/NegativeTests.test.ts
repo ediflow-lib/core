@@ -1,11 +1,11 @@
-﻿import { describe, it, expect } from 'vitest';
-import { loadInvalidFixture } from '../../fixture-loader';
-import { ValidationServiceBuilder } from '../../../../src';
-import { EDIMessage, EDISegment, Standard, Version, MessageType } from '../../../../src';
-import { EdifactMessageParser } from '../../../../src/infrastructure/parsers/edifact/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../../src/infrastructure/parsers/edifact/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../../src/infrastructure/parsers/edifact/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../../src/infrastructure/parsers/edifact/EdifactDelimiterDetector';
+﻿﻿import { describe, it, expect } from 'vitest';
+import { loadInvalidFixture } from '../../FixtureLoader';
+import { ValidationServiceBuilder } from '@application/services';
+import { EDIMessage, EDISegment, Standard, Version, MessageType } from '@domain';
+import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
+import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';
+import { EdifactTokenizer } from '@infrastructure/parsers/edifact/EdifactTokenizer';
+import { EdifactDelimiterDetector } from '@infrastructure/parsers/edifact/EdifactDelimiterDetector';
 
 describe('Integration: EDIFACT Negative Tests', () => {
   function createParser(): EdifactMessageParser {

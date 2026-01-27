@@ -1,11 +1,11 @@
 ﻿import { describe, it, expect } from 'vitest';
-import { generateLargeOrdersMessage } from '../../fixture-loader';
-import { ValidationServiceBuilder } from '../../../../src';
-import { BuildEDIUseCase } from '../../../../src/application/use-cases/build/BuildEDIUseCase';
-import { EdifactMessageParser } from '../../../../src/infrastructure/parsers/edifact/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../../src/infrastructure/parsers/edifact/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../../src/infrastructure/parsers/edifact/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../../src/infrastructure/parsers/edifact/EdifactDelimiterDetector';
+import { generateLargeOrdersMessage } from '../../FixtureLoader';
+import { ValidationServiceBuilder } from '@application/services';
+import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
+import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
+import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';
+import { EdifactTokenizer } from '@infrastructure/parsers/edifact/EdifactTokenizer';
+import { EdifactDelimiterDetector } from '@infrastructure/parsers/edifact/EdifactDelimiterDetector';
 describe('Integration: EDIFACT Performance Tests', () => {
   function createParser(): EdifactMessageParser {
     const delimiterDetector = new EdifactDelimiterDetector();

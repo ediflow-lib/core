@@ -2,6 +2,7 @@ import { ParseEDIInputDTO } from './ParseEDIInputDTO';
 import { ParseEDIOutputDTO, ParseError } from './ParseEDIOutputDTO';
 import { IMessageParser } from '@application/ports';
 import { StandardDelimiters } from '@domain';
+import { StructureMapper } from '@domain/mapping';
 
 /**
  * Use Case for parsing EDI messages.
@@ -9,10 +10,14 @@ import { StandardDelimiters } from '@domain';
  *
  * Clean Architecture: This Use Case depends on IMessageParser (interface),
  * not on concrete implementations like EdifactMessageParser.
+ *
+ * Phase 1: EDI String → EDIMessage (Syntax Parsing)
+ * Phase 2: EDIMessage → Business Object (Structure Mapping) - US-6.2
  */
 export class ParseEDIUseCase {
   constructor(
-    private readonly messageParser: IMessageParser
+    private readonly messageParser: IMessageParser,
+    private readonly structureMapper?: StructureMapper  // Optional: for Phase 2
   ) {}
 
   execute(input: ParseEDIInputDTO): ParseEDIOutputDTO {
@@ -33,13 +38,22 @@ export class ParseEDIUseCase {
         });
       }
 
-      // Parse the message using infrastructure
+      // Phase 1: Syntax Parsing (EDI String → EDIMessage)
       const message = this.messageParser.parse(input.message, input.parserConfig);
+
+      // Phase 2: Structure Mapping (EDIMessage → Business Object) - US-6.2
+      // NOTE: Requires explicit messageStructure in input (cannot use async repository in sync method)
+      let businessObject: any | undefined;
+
+      if (input.returnTypedObject && input.messageStructure && this.structureMapper) {
+        businessObject = this.structureMapper.map(message, input.messageStructure);
+      }
 
       // Return success result
       return {
         success: true,
         message,
+        businessObject,  // Phase 2: Typed business object (if requested)
         metadata: {
           standard: message.standard,
           version: message.version,

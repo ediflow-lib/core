@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { loadValidFixture } from '../fixture-loader';
-import { ParseEDIUseCase } from '../../../src/application/use-cases/parse/ParseEDIUseCase';
+import { loadValidFixture } from '../FixtureLoader';
+import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { Standard } from '@domain';
 import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
 import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';

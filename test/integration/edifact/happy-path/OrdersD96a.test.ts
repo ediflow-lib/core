@@ -1,17 +1,17 @@
 ﻿import { describe, it, expect } from 'vitest';
-import { loadValidFixture } from '../../fixture-loader';
-import { ValidationServiceBuilder } from '../../../../src/application/services';
-import { BuildEDIUseCase } from '../../../../src/application/use-cases/build/BuildEDIUseCase';
-import { Standard } from '../../../../src/domain';
-import { EdifactMessageParser } from '../../../../src/infrastructure/parsers/edifact/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../../src/infrastructure/parsers/edifact/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../../src/infrastructure/parsers/edifact/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../../src/infrastructure/parsers/edifact/EdifactDelimiterDetector';
+import { loadValidFixture } from '../../FixtureLoader';
+import { ValidationServiceBuilder } from '@application/services';
+import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
+import { Standard } from '@domain';
+import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
+import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';
+import { EdifactTokenizer } from '@infrastructure/parsers/edifact/EdifactTokenizer';
+import { EdifactDelimiterDetector } from '@infrastructure/parsers/edifact/EdifactDelimiterDetector';
 describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   const ordersFixture = loadValidFixture('orders-valid-d96a.edi');
   function createParser(): EdifactMessageParser {
     const delimiterDetector = new EdifactDelimiterDetector();
-    const tokenizer = new EdifactTokenizer(delimiterDetector);
+    const tokenizer = new EdifactTokenizer();
     const segmentParser = new EdifactSegmentParser();
     return new EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
   }
