@@ -1144,6 +1144,207 @@ describe('StructureMapper', () => {
       expect(result).toEqual({});
     });
 
+    it('should handle time values as strings', () => {
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const segment = new EDISegment('DTM', [
+        new EDIElement('1430', []),
+      ]);
+      ediMessage.addSegment(segment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'DTM',
+            name: 'Time',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'time',
+              elementIndex: 0,
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.map<{ time: string }>(ediMessage, structure);
+
+      expect(result.time).toBe('1430');
+    });
+
+    it('should handle decimal numbers with type conversion', () => {
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const segment = new EDISegment('PRI', [
+        new EDIElement('99.99', []),
+      ]);
+      ediMessage.addSegment(segment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'PRI',
+            name: 'Price',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'price',
+              elementIndex: 0,
+              typeConversion: 'number',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.map<{ price: number }>(ediMessage, structure);
+
+      expect(result.price).toBe(99.99);
+      expect(typeof result.price).toBe('number');
+    });
+
+    it('should handle boolean false values', () => {
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const segment = new EDISegment('TST', [
+        new EDIElement('0', []),
+      ]);
+      ediMessage.addSegment(segment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'TST',
+            name: 'Test',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'flag',
+              elementIndex: 0,
+              typeConversion: 'boolean',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.map<{ flag: boolean }>(ediMessage, structure);
+
+      expect(result.flag).toBe(false);
+      expect(typeof result.flag).toBe('boolean');
+    });
+
+    it('should handle negative numbers', () => {
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const segment = new EDISegment('QTY', [
+        new EDIElement('-50', []),
+      ]);
+      ediMessage.addSegment(segment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'QTY',
+            name: 'Quantity',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'quantity',
+              elementIndex: 0,
+              typeConversion: 'number',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.map<{ quantity: number }>(ediMessage, structure);
+
+      expect(result.quantity).toBe(-50);
+    });
+
+    it('should handle zero as valid number', () => {
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const segment = new EDISegment('QTY', [
+        new EDIElement('0', []),
+      ]);
+      ediMessage.addSegment(segment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'QTY',
+            name: 'Quantity',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'quantity',
+              elementIndex: 0,
+              typeConversion: 'number',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.map<{ quantity: number }>(ediMessage, structure);
+
+      expect(result.quantity).toBe(0);
+    });
+
     it('should handle multiple occurrences with maxOccurrences = 1 (take first)', () => {
       const ediMessage = new EDIMessage(
         Standard.EDIFACT,
@@ -1287,6 +1488,272 @@ describe('StructureMapper', () => {
       expect(result.party.contact).toBeDefined();
       expect(result.party.contact.contactName).toBe('John');
       expect(result.party.contact.email).toBe('john@example.com');
+    });
+  });
+
+  describe('unmap() - Business Object to EDIMessage', () => {
+    it('should unmap simple business object to EDI segments', () => {
+      const businessObject = {
+        documentNumber: 'DOC123',
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'BGM',
+            name: 'Beginning',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'documentNumber',
+              elementIndex: 1,
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result).toBeDefined();
+      expect(result.segments).toHaveLength(1);
+      expect(result.segments[0]!.tag).toBe('BGM');
+      expect(result.segments[0]!.elements[1]!.value).toBe('DOC123');
+    });
+
+    it('should unmap date fields with proper formatting', () => {
+      const businessObject = {
+        documentDate: new Date('2026-01-26'),
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'DTM',
+            name: 'Date',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'documentDate',
+              elementIndex: 0,
+              typeConversion: 'date',
+              dateFormat: 'YYYYMMDD',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments[0]!.elements[0]!.value).toBe('20260126');
+    });
+
+    it('should unmap array to multiple segments', () => {
+      const businessObject = {
+        parties: ['1234567890', '0987654321'],
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'NAD',
+            name: 'Party',
+            mandatory: false,
+            maxOccurrences: 99,
+            position: 30,
+            elements: [],
+            mapping: {
+              targetField: 'parties',
+              elementIndex: 1,
+              isArray: true,
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments).toHaveLength(2);
+      expect(result.segments[0]!.tag).toBe('NAD');
+      expect(result.segments[0]!.elements[1]!.value).toBe('1234567890');
+      expect(result.segments[1]!.elements[1]!.value).toBe('0987654321');
+    });
+
+    it('should unmap number fields', () => {
+      const businessObject = {
+        quantity: 100,
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'QTY',
+            name: 'Quantity',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 40,
+            elements: [],
+            mapping: {
+              targetField: 'quantity',
+              elementIndex: 1,
+              typeConversion: 'number',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments[0]!.elements[1]!.value).toBe('100');
+    });
+
+    it('should unmap boolean fields', () => {
+      const businessObject = {
+        flag: true,
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'TST',
+            name: 'Test',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'flag',
+              elementIndex: 0,
+              typeConversion: 'boolean',
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments[0]!.elements[0]!.value).toBe('1');
+    });
+
+    it('should skip undefined fields', () => {
+      const businessObject = {
+        documentNumber: 'DOC123',
+        // optionalField is undefined
+      };
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'BGM',
+            name: 'Beginning',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'documentNumber',
+              elementIndex: 1,
+            },
+          } as SegmentNode,
+          {
+            nodeType: 'segment',
+            tag: 'DTM',
+            name: 'Date',
+            mandatory: false,
+            maxOccurrences: 1,
+            position: 20,
+            elements: [],
+            mapping: {
+              targetField: 'optionalField',
+              elementIndex: 0,
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments).toHaveLength(1); // Only BGM, no DTM
+      expect(result.segments[0]!.tag).toBe('BGM');
+    });
+
+    it('should handle roundtrip: map → unmap', () => {
+      // Start with EDI message
+      const ediMessage = new EDIMessage(
+        Standard.EDIFACT,
+        new Version(Standard.EDIFACT, 'D.20B'),
+        new MessageType(Standard.EDIFACT, 'ORDERS')
+      );
+
+      const bgmSegment = new EDISegment('BGM', [
+        new EDIElement('220', []),
+        new EDIElement('DOC123', []),
+      ]);
+      ediMessage.addSegment(bgmSegment);
+
+      const structure: MessageStructure = {
+        standard: 'EDIFACT',
+        version: 'D.20B',
+        messageType: 'ORDERS',
+        name: 'Test',
+        structure: [
+          {
+            nodeType: 'segment',
+            tag: 'BGM',
+            name: 'Beginning',
+            mandatory: true,
+            maxOccurrences: 1,
+            position: 10,
+            elements: [],
+            mapping: {
+              targetField: 'documentNumber',
+              elementIndex: 1,
+            },
+          } as SegmentNode,
+        ],
+      };
+
+      // Map to business object
+      const businessObject = mapper.map<{ documentNumber: string }>(ediMessage, structure);
+
+      // Unmap back to EDI
+      const result = mapper.unmap(businessObject, structure);
+
+      expect(result.segments[0]!.tag).toBe('BGM');
+      expect(result.segments[0]!.elements[1]!.value).toBe('DOC123');
     });
   });
 });

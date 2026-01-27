@@ -7,10 +7,9 @@
  * - unmap(): Business Object → EDIMessage (Phase 1 of Building)
  */
 
-import type { EDIMessage } from '../entities/EDIMessage';
-import type { EDISegment } from '../entities/EDISegment';
-import type { MessageStructure, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '../repositories/MessageStructure';
-import type { MappingRule } from './MappingRule';
+import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType } from '..';
+import type { MessageStructure, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '../repositories';
+import type { MappingRule } from '.';
 
 export class StructureMapper {
   /**
@@ -33,13 +32,197 @@ export class StructureMapper {
   /**
    * Maps Business Object to generic EDIMessage (Phase 1 of Building - reverse)
    *
-   * @param _businessObject - Typed business object
-   * @param _structure - Message structure with mapping rules
+   * @param businessObject - Typed business object
+   * @param structure - Message structure with mapping rules
    * @returns Generic EDI message
    */
-  unmap(_businessObject: any, _structure: MessageStructure): EDIMessage {
-    // TODO: Implement reverse mapping (Phase 1 of Building)
-    throw new Error('unmap() not yet implemented');
+  unmap(businessObject: any, structure: MessageStructure): EDIMessage {
+    const standard = structure.standard as Standard;
+    const version = new Version(standard, structure.version);
+    const messageType = new MessageType(standard, structure.messageType);
+
+    const ediMessage = new EDIMessage(standard, version, messageType);
+
+    // Process each node in the structure
+    for (const node of structure.structure) {
+      this.unmapNode(node, businessObject, ediMessage);
+    }
+
+    return ediMessage;
+  }
+
+  /**
+   * Unmap a single node (segment or segment group) from business object
+   */
+  private unmapNode(
+    node: SegmentOrGroup,
+    businessObject: any,
+    ediMessage: EDIMessage
+  ): void {
+    if (node.nodeType === 'segment') {
+      this.unmapSegment(node, businessObject, ediMessage);
+    } else if (node.nodeType === 'segmentGroup') {
+      this.unmapSegmentGroup(node, businessObject, ediMessage);
+    }
+  }
+
+  /**
+   * Unmap a segment from business object field to EDI segment
+   */
+  private unmapSegment(
+    node: SegmentNode,
+    businessObject: any,
+    ediMessage: EDIMessage
+  ): void {
+    if (!node.mapping) {
+      return;
+    }
+
+    const fieldValue = businessObject[node.mapping.targetField];
+
+    if (fieldValue === undefined || fieldValue === null) {
+      return; // Skip optional fields
+    }
+
+    // Handle array mapping (multiple occurrences)
+    if (node.mapping.isArray && Array.isArray(fieldValue)) {
+      for (const item of fieldValue) {
+        const segment = this.createSegment(node, item, node.mapping);
+        ediMessage.addSegment(segment);
+      }
+    } else {
+      // Single occurrence
+      const segment = this.createSegment(node, fieldValue, node.mapping);
+      ediMessage.addSegment(segment);
+    }
+  }
+
+  /**
+   * Unmap a segment group from nested business object to EDI segments
+   */
+  private unmapSegmentGroup(
+    node: SegmentGroupNode,
+    businessObject: any,
+    ediMessage: EDIMessage
+  ): void {
+    if (!node.mapping) {
+      return;
+    }
+
+    const fieldValue = businessObject[node.mapping.targetField];
+
+    if (fieldValue === undefined || fieldValue === null) {
+      return;
+    }
+
+    // Handle array of nested objects
+    if (node.mapping.isArray && Array.isArray(fieldValue)) {
+      for (const groupData of fieldValue) {
+        this.unmapGroupOccurrence(node, groupData, ediMessage);
+      }
+    } else {
+      // Single nested object
+      this.unmapGroupOccurrence(node, fieldValue, ediMessage);
+    }
+  }
+
+  /**
+   * Unmap a single segment group occurrence
+   */
+  private unmapGroupOccurrence(
+    node: SegmentGroupNode,
+    groupData: any,
+    ediMessage: EDIMessage
+  ): void {
+    // Process all child segments/groups in order
+    for (const child of node.children) {
+      if (child.nodeType === 'segment') {
+        this.unmapSegment(child, groupData, ediMessage);
+      } else {
+        // Nested segment group
+        this.unmapSegmentGroup(child, groupData, ediMessage);
+      }
+    }
+  }
+
+  /**
+   * Create an EDI segment from business object field value
+   */
+  private createSegment(
+    node: SegmentNode,
+    fieldValue: any,
+    mapping: MappingRule
+  ): EDISegment {
+    // Create elements array with proper size
+    const elements: EDIElement[] = [];
+
+    // Initialize with empty elements up to the mapping index
+    for (let i = 0; i <= mapping.elementIndex; i++) {
+      elements.push(new EDIElement('', []));
+    }
+
+    // Convert value back to string
+    const stringValue = this.convertToString(fieldValue, mapping);
+
+    // Handle composite elements
+    if (mapping.componentIndex !== undefined) {
+      // Need to create a composite element
+      const components: string[] = [];
+      for (let i = 0; i <= mapping.componentIndex; i++) {
+        components.push(i === mapping.componentIndex ? stringValue : '');
+      }
+      elements[mapping.elementIndex] = new EDIElement('', components);
+    } else {
+      // Simple element
+      elements[mapping.elementIndex] = new EDIElement(stringValue, []);
+    }
+
+    return new EDISegment(node.tag, elements);
+  }
+
+  /**
+   * Convert business object value to EDI string format
+   */
+  private convertToString(value: any, mapping: MappingRule): string {
+    if (value === undefined || value === null) {
+      return '';
+    }
+
+    switch (mapping.typeConversion) {
+      case 'date':
+        return this.formatDate(value, mapping.dateFormat);
+
+      case 'number':
+        return value.toString();
+
+      case 'boolean':
+        return value ? '1' : '0';
+
+      case 'string':
+      default:
+        return value.toString();
+    }
+  }
+
+  /**
+   * Format Date object to EDI date string
+   */
+  private formatDate(date: Date, format?: string): string {
+    if (isNaN(date.getTime())) {
+      return '';
+    }
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+
+    if (format === 'YYMMDD') {
+      const shortYear = String(year).substring(2);
+      return `${shortYear}${month}${day}`;
+    } else {
+      // YYYYMMDD or CCYYMMDD (default)
+      return `${year}${month}${day}`;
+    }
   }
 
   /**
@@ -118,12 +301,11 @@ export class StructureMapper {
       );
     } else {
       // Map to single nested object (first occurrence)
-      const groupObject = this.mapGroupOccurrence(
+      result[node.mapping.targetField] = this.mapGroupOccurrence(
         node,
         ediMessage,
         triggerSegments[0]!
       );
-      result[node.mapping.targetField] = groupObject;
     }
   }
 
