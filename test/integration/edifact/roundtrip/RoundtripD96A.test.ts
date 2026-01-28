@@ -24,7 +24,6 @@ import { loadValidFixture } from '../../FixtureLoader';
 describe('E2E Roundtrip Tests - D.96A (US-8.2)', () => {
   const mapper = new StructureMapper();
 
-  // Setup EDIFACT parser with all dependencies
   const delimiterDetector = new EdifactDelimiterDetector();
   const tokenizer = new EdifactTokenizer();
   const segmentParser = new EdifactSegmentParser();
@@ -35,10 +34,8 @@ describe('E2E Roundtrip Tests - D.96A (US-8.2)', () => {
 
   describe('ORDERS D.96A - Complete Roundtrip', () => {
     it('should parse, map, build, and parse again with identical result', () => {
-      // 🔴 RED: Test FIRST (will fail - no implementation yet)
       const ediString = loadValidFixture('orders-valid-d96a.edi');
 
-      // Step 1: Parse original EDI
       const firstParseResult = parseUseCase.execute({ message: ediString, standard: Standard.EDIFACT });
       expect(firstParseResult.success).toBe(true);
       if (!firstParseResult.success) return;
@@ -49,7 +46,6 @@ describe('E2E Roundtrip Tests - D.96A (US-8.2)', () => {
       expect(originalMessage.version.toString()).toBe('D.96A');
       expect(originalMessage.messageType.value).toBe('ORDERS');
 
-      // Step 2: Build back to EDI string
       const buildResult = buildUseCase.execute({ message: originalMessage });
       expect(buildResult.success).toBe(true);
       if (!buildResult.success) return;
@@ -58,20 +54,17 @@ describe('E2E Roundtrip Tests - D.96A (US-8.2)', () => {
       expect(rebuiltEdiString).toBeDefined();
       expect(rebuiltEdiString.length).toBeGreaterThan(0);
 
-      // Step 3: Parse rebuilt EDI (Roundtrip!)
       const secondParseResult = parseUseCase.execute({ message: rebuiltEdiString, standard: Standard.EDIFACT });
       expect(secondParseResult.success).toBe(true);
       if (!secondParseResult.success) return;
 
       const roundtripMessage = secondParseResult.message;
 
-      // Step 4: Assert equality (Regression check!)
       expect(roundtripMessage.standard).toBe(originalMessage.standard);
       expect(roundtripMessage.version.toString()).toBe(originalMessage.version.toString());
       expect(roundtripMessage.messageType.value).toBe(originalMessage.messageType.value);
       expect(roundtripMessage.segments.length).toBe(originalMessage.segments.length);
 
-      // Deep equality check for each segment
       for (let i = 0; i < originalMessage.segments.length; i++) {
         const originalSeg = originalMessage.segments[i];
         const roundtripSeg = roundtripMessage.segments[i];
