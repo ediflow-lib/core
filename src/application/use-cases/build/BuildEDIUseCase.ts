@@ -1,8 +1,11 @@
 import { BuildEDIInputDTO } from './BuildEDIInputDTO';
 import { BuildEDIOutputDTO, BuildError } from './BuildEDIOutputDTO';
 import { StandardDelimiters, EDIMessage, Delimiters } from '@domain';
+import { EDISegment } from '@domain/entities/EDISegment';
+import { EDIElement } from '@domain/entities/EDIElement';
 import { EDIMessageValidationService } from '@application/services';
 import { StructureMapper } from '@domain/mapping';
+import { EnvelopeGenerator } from '@domain/services';
 
 /**
  * Use Case for building EDI messages.
@@ -11,20 +14,21 @@ import { StructureMapper } from '@domain/mapping';
  * Phase 2: EDIMessage → EDI String (Serialization)
  */
 export class BuildEDIUseCase {
+  private readonly envelopeGenerator: EnvelopeGenerator;
+
   constructor(
-    private readonly structureMapper?: StructureMapper  // Optional: for Phase 2 (building from business object)
-  ) {}
+    private readonly structureMapper?: StructureMapper
+  ) {
+    this.envelopeGenerator = new EnvelopeGenerator();
+  }
 
   execute(input: BuildEDIInputDTO): BuildEDIOutputDTO {
     try {
-      // Phase 1 (Reverse): Business Object → EDIMessage (US-6.2)
       let message: EDIMessage;
 
       if (input.businessObject && input.messageStructure && this.structureMapper) {
-        // Build from business object (Phase 2 reverse)
         message = this.structureMapper.unmap(input.businessObject, input.messageStructure);
       } else if (input.message) {
-        // Direct EDIMessage provided (existing behavior)
         message = input.message;
       } else {
         return {
@@ -36,7 +40,15 @@ export class BuildEDIUseCase {
         };
       }
 
-      // Validation (if requested)
+      if (input.includeEnvelope) {
+        const validationError = this.validateEnvelopeConfig(input);
+        if (validationError) {
+          return validationError;
+        }
+
+        message = this.wrapWithEnvelope(message, input);
+      }
+
       if (input.validateBeforeBuild) {
         const validator = new EDIMessageValidationService();
         const validationResult = validator.validate(message);
@@ -55,7 +67,6 @@ export class BuildEDIUseCase {
         }
       }
 
-      // Phase 2: EDIMessage → EDI String (Serialization)
       const delimiters = input.delimiters || StandardDelimiters.getDefault(message.standard);
       const ediString = this.buildString(message, delimiters);
 
@@ -74,19 +85,104 @@ export class BuildEDIUseCase {
     }
   }
 
-  private buildString(message: EDIMessage, delimiters: Delimiters): string {
-    const segments: string[] = [];
-
-    for (const segment of message.segments) {
-      const elements: string[] = [segment.tag];
-
-      for (const element of segment.elements) {
-        elements.push(element.value);
-      }
-
-      segments.push(elements.join(delimiters.element));
+  private validateEnvelopeConfig(input: BuildEDIInputDTO): BuildEDIOutputDTO | null {
+    if (!input.messageType || !input.version) {
+      return {
+        success: false,
+        errors: [{
+          code: 'MISSING_ENVELOPE_CONFIG',
+          message: 'messageType and version are required when includeEnvelope is true',
+        }],
+      };
     }
 
-    return segments.join(delimiters.segment);
+    if (input.includeInterchange && (!input.sender || !input.receiver)) {
+      return {
+        success: false,
+        errors: [{
+          code: 'MISSING_INTERCHANGE_CONFIG',
+          message: 'sender and receiver are required when includeInterchange is true',
+        }],
+      };
+    }
+
+    return null;
+  }
+
+  private wrapWithEnvelope(message: EDIMessage, input: BuildEDIInputDTO): EDIMessage {
+    const messageRef = input.messageRef || this.generateMessageRef();
+    const segments = [...message.segments];
+
+    const businessSegmentCount = segments.length;
+    const totalSegmentCount = businessSegmentCount + 2;
+
+    const unh = this.envelopeGenerator.generateUNH(
+      input.messageType!,
+      input.version!,
+      messageRef
+    );
+
+    const unt = this.envelopeGenerator.generateUNT(totalSegmentCount, messageRef);
+
+    let wrappedSegments = [unh, ...segments, unt];
+
+    if (input.includeInterchange) {
+      const controlRef = input.controlRef || this.generateControlRef();
+      const dateTime = input.interchangeDateTime || new Date();
+
+      const unb = this.envelopeGenerator.generateUNB(
+        input.sender!,
+        input.receiver!,
+        dateTime,
+        controlRef
+      );
+
+      const unz = this.envelopeGenerator.generateUNZ(1, controlRef);
+
+      wrappedSegments = [unb, ...wrappedSegments, unz];
+    }
+
+    const wrappedMessage = new EDIMessage(
+      message.standard,
+      message.version,
+      message.messageType
+    );
+
+    for (const segment of wrappedSegments) {
+      wrappedMessage.addSegment(segment);
+    }
+
+    return wrappedMessage;
+  }
+
+  private generateMessageRef(): string {
+    return Date.now().toString();
+  }
+
+  private generateControlRef(): string {
+    return `REF${Date.now()}`;
+  }
+
+  private buildString(message: EDIMessage, delimiters: Delimiters): string {
+    const segmentStrings = message.segments.map(segment =>
+      this.serializeSegment(segment, delimiters)
+    );
+
+    return segmentStrings.join(delimiters.segment) + delimiters.segment;
+  }
+
+  private serializeSegment(segment: EDISegment, delimiters: Delimiters): string {
+    const elements = [
+      segment.tag,
+      ...segment.elements.map(element => this.serializeElement(element, delimiters))
+    ];
+
+    return elements.join(delimiters.element);
+  }
+
+  private serializeElement(element: EDIElement, delimiters: Delimiters): string {
+    return element.isComposite()
+      ? element.components.join(delimiters.component)
+      : element.value;
   }
 }
