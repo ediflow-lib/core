@@ -1,18 +1,13 @@
-# Quick Start Guide - EDIFlow
+# 🚀 Quick Start Guide - EDIFlow
 
-Get started with EDIFlow in **5 minutes**! This guide shows you how to parse, validate, and build EDIFACT messages.
+Get started with **EDIFlow** in 5 minutes! Learn how to work with **type-safe TypeScript objects** instead of raw EDIFACT segments.
 
----
-
-## 📋 Prerequisites
-
-- **Node.js** >= 18.0.0
-- **TypeScript** >= 5.3.0 (optional, but recommended)
-- Basic knowledge of EDIFACT (helpful, but not required)
+> **💡 What makes EDIFlow different?**  
+> Most libraries only parse EDIFACT to generic segments. EDIFlow maps directly to **type-safe TypeScript objects** and generates **JSON Schema** for validation!
 
 ---
 
-## 🚀 Installation
+## 📦 Installation
 
 ### Step 1: Install Core Library
 
@@ -22,288 +17,132 @@ npm install @ediflow/core
 
 ### Step 2: Install EDIFACT Standard(s)
 
-Choose the EDIFACT version you need:
-
 ```bash
-# Latest standard (recommended for new projects)
-npm install @ediflow/edifact-d20b
-
-# OR: Full coverage (196 message types)
-npm install @ediflow/edifact-d12a
-
-# OR: Legacy systems
-npm install @ediflow/edifact-d01b
-npm install @ediflow/edifact-d96a
+# Community Packages (MIT License)
+npm install @ediflow/edifact-d96a  # D.96A - 89 messages
+npm install @ediflow/edifact-d01b  # D.01B - 155 messages  
+npm install @ediflow/edifact-d20b  # D.20B - 178 messages
 ```
 
-**💡 Tip:** Most projects need only **core + one standard**. You can always add more later!
+**💡 Tip:** Install only what you need. Each package is ~5-15 MB.
 
 ---
 
-## 📖 Example: Parse an EDIFACT Message
+## 🎯 Killer Feature #1: Business Object Mapping
 
-### Sample EDIFACT Message
+### Why This Matters
 
-Let's parse a simple ORDERS (Purchase Order) message:
-
-```edifact
-UNB+UNOC:3+SENDER:14+RECEIVER:14+20260129:1200+1234567'
-UNH+1+ORDERS:D:20B:UN'
-BGM+220+PO12345+9'
-DTM+137:20260129:102'
-NAD+BY+BUYER123::92'
-NAD+SU+SUPPLIER456::92'
-LIN+1++PRODUCT001:SA'
-QTY+21:100'
-UNT+8+1'
-UNZ+1+1234567'
+**Other Libraries:**
+```typescript
+// ❌ Generic segments - no type safety!
+const bgm = message.segments.find(s => s.tag === 'BGM');
+const docNumber = bgm?.elements[1]?.value;  // What is element[1]? 🤷
 ```
 
-### TypeScript Code
+**EDIFlow:**
+```typescript
+// ✅ Type-safe TypeScript objects!
+const order = mapper.mapToBusinessObject(message);
+console.log(order.documentNumber);  // IntelliSense works! 🎉
+console.log(order.parties.buyer.id);
+console.log(order.lineItems[0].productId);
+```
+
+### Example: EDIFACT → TypeScript Object
 
 ```typescript
-import { DIContainer } from '@ediflow/core';
+import { DIContainer, StructureMapper } from '@ediflow/core';
 
-// Get DIContainer instance
 const container = DIContainer.getInstance();
-
-// Resolve ParseEDIUseCase
 const parseUseCase = container.resolve('ParseEDIUseCase');
 
-// Your EDIFACT message
-const edifactString = `UNB+UNOC:3+SENDER:14+RECEIVER:14+20260129:1200+1234567'
+const edifact = `UNB+UNOC:3+SENDER:14+RECEIVER:14+20260129:1200+1'
 UNH+1+ORDERS:D:20B:UN'
 BGM+220+PO12345+9'
 DTM+137:20260129:102'
 NAD+BY+BUYER123::92'
 NAD+SU+SUPPLIER456::92'
 LIN+1++PRODUCT001:SA'
-QTY+21:100'
-UNT+8+1'
-UNZ+1+1234567'`;
+QTY+21:100:PCE'
+PRI+AAA:49.99:EUR'
+UNT+9+1'
+UNZ+1+1'`;
 
-// Parse the message
 const result = parseUseCase.execute({
-  message: edifactString,
+  message: edifact,
   standard: 'EDIFACT'
 });
 
-// Check result
-if (result.success) {
-  console.log('✅ Parsing successful!');
-  console.log('Message Type:', result.message.header?.tag); // UNH
-  console.log('Segments:', result.message.segments.length);
-  
-  // Access specific segments
-  const bgm = result.message.segments.find(s => s.tag === 'BGM');
-  console.log('Document Number:', bgm?.elements[1]?.value); // PO12345
-} else {
-  console.error('❌ Parsing failed:', result.errors);
-}
-```
+// Map to Business Object
+const mapper = new StructureMapper();
+const order = mapper.mapToBusinessObject(result.message);
 
-**Expected Output:**
-```
-✅ Parsing successful!
-Message Type: UNH
-Segments: 6
-Document Number: PO12345
-```
+// ✅ Work with type-safe objects!
+console.log('📦 Order Details:');
+console.log('  Order Number:', order.documentNumber);        // PO12345
+console.log('  Order Date:', order.orderDate);               // 2026-01-29
+console.log('  Buyer:', order.parties.buyer.id);            // BUYER123
+console.log('  Supplier:', order.parties.supplier.id);      // SUPPLIER456
 
----
-
-## ✅ Example: Validate a Message
-
-Validation ensures your message follows EDIFACT structure rules:
-
-```typescript
-import { DIContainer } from '@ediflow/core';
-
-const container = DIContainer.getInstance();
-const validateUseCase = container.resolve('ValidateMessageUseCase');
-
-// Validate the parsed message
-const validation = validateUseCase.execute({
-  message: result.message,
-  messageType: 'ORDERS',
-  version: 'D20B',
-  repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
+console.log('\n📋 Line Items:');
+order.lineItems.forEach((item, idx) => {
+  console.log(`  ${idx + 1}. ${item.productId}`);
+  console.log(`     Quantity: ${item.quantity} ${item.quantityUnit}`);
+  console.log(`     Price: ${item.price} ${item.currency}`);
 });
-
-if (validation.success) {
-  console.log('✅ Message is valid!');
-  console.log('Validated against:', validation.messageStructure?.name);
-} else {
-  console.log('❌ Validation errors:');
-  validation.errors?.forEach(error => {
-    console.log(`  - ${error.message} (at ${error.path})`);
-  });
-}
 ```
 
-**What gets validated:**
-- ✅ **Syntax** - Correct EDIFACT syntax (delimiters, escaping)
-- ✅ **Structure** - Required segments, correct order, cardinality
-- ✅ **Business Rules** - Data element formats, code lists
+**Output:**
+```
+📦 Order Details:
+  Order Number: PO12345
+  Order Date: 2026-01-29
+  Buyer: BUYER123
+  Supplier: SUPPLIER456
 
----
+📋 Line Items:
+  1. PRODUCT001
+     Quantity: 100 PCE
+     Price: 49.99 EUR
+```
 
-## 🔨 Example: Build an EDIFACT Message
-
-Create EDIFACT messages programmatically:
+### Example: TypeScript Object → EDIFACT
 
 ```typescript
-import { DIContainer, EDIMessage, EDISegment, EDIElement } from '@ediflow/core';
+// Your business object (from database, API, etc.)
+const order = {
+  documentNumber: 'PO12345',
+  documentType: '220',
+  messageFunction: '9',
+  orderDate: new Date('2026-01-29'),
+  parties: {
+    buyer: { id: 'BUYER123', qualifier: '92' },
+    supplier: { id: 'SUPPLIER456', qualifier: '92' }
+  },
+  lineItems: [
+    {
+      lineNumber: 1,
+      productId: 'PRODUCT001',
+      productIdType: 'SA',
+      quantity: 100,
+      quantityUnit: 'PCE',
+      price: 49.99,
+      currency: 'EUR'
+    }
+  ]
+};
 
-const container = DIContainer.getInstance();
-const buildUseCase = container.resolve('BuildEDIUseCase');
-
-// Create message structure
-const message = new EDIMessage({
+// Map to EDI Message
+const ediMessage = mapper.mapFromBusinessObject(order, {
   standard: 'EDIFACT',
   version: 'D20B',
-  messageType: 'ORDERS',
-  segments: [
-    new EDISegment({
-      tag: 'BGM',
-      elements: [
-        new EDIElement({ value: '220' }),        // Document type: Order
-        new EDIElement({ value: 'PO12345' }),    // Document number
-        new EDIElement({ value: '9' })           // Message function: Original
-      ]
-    }),
-    new EDISegment({
-      tag: 'DTM',
-      elements: [
-        new EDIElement({
-          components: [
-            { value: '137' },              // Date/time qualifier: Document date
-            { value: '20260129' },         // Date
-            { value: '102' }               // Format: CCYYMMDD
-          ]
-        })
-      ]
-    }),
-    new EDISegment({
-      tag: 'NAD',
-      elements: [
-        new EDIElement({ value: 'BY' }),   // Party qualifier: Buyer
-        new EDIElement({
-          components: [
-            { value: 'BUYER123' },         // Party ID
-            { value: '' },
-            { value: '92' }                // Code list: Assigned by buyer
-          ]
-        })
-      ]
-    })
-  ]
+  messageType: 'ORDERS'
 });
 
 // Build EDIFACT string
-const ediString = buildUseCase.execute({
-  message,
-  standard: 'EDIFACT'
-});
-
-console.log('📄 Generated EDIFACT:');
-console.log(ediString);
-```
-
-**Expected Output:**
-```edifact
-BGM+220+PO12345+9'
-DTM+137:20260129:102'
-NAD+BY+BUYER123::92'
-```
-
----
-
-## 🔒 Example: Build with Envelopes
-
-Add UNH/UNT/UNB/UNZ headers and trailers automatically:
-
-```typescript
 const buildUseCase = container.resolve('BuildEDIUseCase');
-
-const ediString = buildUseCase.execute({
-  message,
-  standard: 'EDIFACT',
-  envelope: {
-    sender: {
-      id: 'SENDER123',
-      qualifier: '14'
-    },
-    receiver: {
-      id: 'RECEIVER456',
-      qualifier: '14'
-    },
-    messageType: 'ORDERS',
-    version: 'D20B',
-    controlRef: '1234567',
-    messageRef: '1'
-  }
-});
-
-console.log(ediString);
-```
-
-**Expected Output:**
-```edifact
-UNB+UNOC:3+SENDER123:14+RECEIVER456:14+20260129:1200+1234567'
-UNH+1+ORDERS:D:20B:UN'
-BGM+220+PO12345+9'
-DTM+137:20260129:102'
-NAD+BY+BUYER123::92'
-UNT+5+1'
-UNZ+1+1234567'
-```
-
----
-
-## 🎯 Common Use Cases
-
-### Use Case 1: Parse Incoming EDI
-
-```typescript
-// Receive EDIFACT from partner
-const incomingEDI = receiveFromPartner();
-
-// Parse
-const parseResult = parseUseCase.execute({
-  message: incomingEDI,
-  standard: 'EDIFACT'
-});
-
-// Validate
-const validation = validateUseCase.execute({
-  message: parseResult.message,
-  messageType: 'ORDERS',
-  version: 'D20B',
-  repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
-});
-
-if (validation.success) {
-  // Process order
-  processOrder(parseResult.message);
-}
-```
-
-### Use Case 2: Generate EDI Response
-
-```typescript
-// Build ORDRSP (Order Response)
-const response = new EDIMessage({
-  standard: 'EDIFACT',
-  messageType: 'ORDRSP',
-  segments: [
-    // ... your segments
-  ]
-});
-
-// Build with envelope
-const responseEDI = buildUseCase.execute({
-  message: response,
+const edifactString = buildUseCase.execute({
+  message: ediMessage,
   standard: 'EDIFACT',
   envelope: {
     sender: { id: 'MYCOMPANY', qualifier: '14' },
@@ -311,159 +150,212 @@ const responseEDI = buildUseCase.execute({
   }
 });
 
-// Send to partner
-sendToPartner(responseEDI);
+console.log(edifactString);
 ```
 
-### Use Case 3: Transform EDI to JSON
+### Complete Roundtrip
 
 ```typescript
-// Parse EDIFACT
-const parsed = parseUseCase.execute({
-  message: edifactString,
-  standard: 'EDIFACT'
+// 1️⃣ Parse incoming EDIFACT
+const parseResult = parseUseCase.execute({ message: incomingEDI, standard: 'EDIFACT' });
+
+// 2️⃣ Map to Business Object
+const order = mapper.mapToBusinessObject(parseResult.message);
+
+// 3️⃣ Modify with type safety! ✨
+order.lineItems[0].quantity = 150;
+order.lineItems.push({
+  lineNumber: 2,
+  productId: 'PRODUCT002',
+  quantity: 50,
+  price: 29.99
 });
 
-// Convert to JSON
-const json = JSON.stringify(parsed.message, null, 2);
-
-// Store in database or API
-await saveToDatabase(json);
+// 4️⃣ Map back and send
+const modified = mapper.mapFromBusinessObject(order, {...});
+const outgoing = buildUseCase.execute({ message: modified, ...});
+await sendToPartner(outgoing);
 ```
 
 ---
 
-## 🗂️ Working with Multiple Standards
+## 🎯 Killer Feature #2: Schema Export
 
-Install and use multiple EDIFACT versions:
-
-```bash
-npm install @ediflow/edifact-d96a
-npm install @ediflow/edifact-d20b
-npm install @ediflow/edifact-d12a
-```
+### Generate JSON Schema
 
 ```typescript
-import { FileBasedMessageStructureRepository } from '@ediflow/core/infrastructure';
+const exportSchemaUseCase = container.resolve('ExportSchemaUseCase');
 
-// Load different versions dynamically
-const repositories = {
-  D96A: new FileBasedMessageStructureRepository(
-    './node_modules/@ediflow/edifact-d96a/data'
-  ),
-  D20B: new FileBasedMessageStructureRepository(
-    './node_modules/@ediflow/edifact-d20b/data'
-  ),
-  D12A: new FileBasedMessageStructureRepository(
-    './node_modules/@ediflow/edifact-d12a/data'
-  )
-};
+const schema = exportSchemaUseCase.execute({
+  standard: 'EDIFACT',
+  version: 'D20B',
+  messageType: 'ORDERS',
+  format: 'json-schema'
+});
 
-// Use based on incoming message version
-const version = detectVersion(edifactString); // D96A, D20B, etc.
-const repo = repositories[version];
+writeFileSync('./schemas/orders.schema.json', JSON.stringify(schema, null, 2));
+```
+
+**Generated JSON Schema:**
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ORDERS - Purchase Order Message",
+  "type": "object",
+  "required": ["documentNumber", "parties"],
+  "properties": {
+    "documentNumber": {
+      "type": "string",
+      "maxLength": 35
+    },
+    "documentType": {
+      "type": "string",
+      "enum": ["220", "221", "224"]
+    },
+    "parties": {
+      "type": "object",
+      "required": ["buyer"],
+      "properties": {
+        "buyer": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "qualifier": { "type": "string" }
+          }
+        }
+      }
+    },
+    "lineItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productId": { "type": "string" },
+          "quantity": { "type": "number" },
+          "price": { "type": "number" }
+        }
+      }
+    }
+  }
+}
+```
+
+### Generate TypeScript Types
+
+```typescript
+const tsSchema = exportSchemaUseCase.execute({
+  standard: 'EDIFACT',
+  version: 'D20B',
+  messageType: 'ORDERS',
+  format: 'typescript'
+});
+
+writeFileSync('./types/orders.d.ts', tsSchema);
+```
+
+**Generated TypeScript:**
+```typescript
+export interface OrdersMessage {
+  documentNumber: string;
+  documentType?: '220' | '221' | '224';
+  orderDate?: Date;
+  parties: {
+    buyer: {
+      id: string;
+      qualifier?: string;
+    };
+    supplier?: {
+      id: string;
+    };
+  };
+  lineItems?: Array<{
+    lineNumber: number;
+    productId: string;
+    quantity: number;
+    price?: number;
+    currency?: string;
+  }>;
+}
+```
+
+### Validate with Ajv
+
+```typescript
+import Ajv from 'ajv';
+import ordersSchema from './schemas/orders.schema.json';
+
+const ajv = new Ajv();
+const validate = ajv.compile(ordersSchema);
+
+if (!validate(order)) {
+  console.error('❌ Validation failed:', validate.errors);
+  return;
+}
+
+await sendToPartner(buildEDI(order));
 ```
 
 ---
 
-## 🧪 Testing Your Integration
+## 🔧 Basic Usage
+
+### Parse
 
 ```typescript
-import { describe, it, expect } from 'vitest';
+const parseUseCase = container.resolve('ParseEDIUseCase');
+const result = parseUseCase.execute({ message: edifact, standard: 'EDIFACT' });
+```
 
-describe('EDIFACT Integration', () => {
-  it('should parse ORDERS message', () => {
-    const result = parseUseCase.execute({
-      message: sampleEDIFACT,
-      standard: 'EDIFACT'
-    });
-    
-    expect(result.success).toBe(true);
-    expect(result.message.segments).toHaveLength(6);
-  });
-  
-  it('should validate ORDERS structure', () => {
-    const validation = validateUseCase.execute({
-      message: parsedMessage,
-      messageType: 'ORDERS',
-      version: 'D20B',
-      repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
-    });
-    
-    expect(validation.success).toBe(true);
-  });
+### Validate
+
+```typescript
+const validateUseCase = container.resolve('ValidateMessageUseCase');
+const validation = validateUseCase.execute({
+  message: result.message,
+  enableStructuralValidation: true
 });
 ```
+
+### Build
+
+```typescript
+const buildUseCase = container.resolve('BuildEDIUseCase');
+const edifact = buildUseCase.execute({
+  message: ediMessage,
+  envelope: { sender: {...}, receiver: {...} }
+});
+```
+
+---
+
+## 💡 Key Takeaways
+
+**EDIFlow is different because:**
+
+1. 🎯 **Type-Safe Business Objects** - Work with TypeScript, not segments
+2. 📋 **Schema Export** - Generate JSON Schema & TypeScript types
+3. 🔄 **Roundtrip** - Parse → Modify → Build with type safety
+4. ✅ **Validation** - Validate with Ajv before sending
+5. 🧪 **Testable** - Easy to mock business objects
+
+**Other libraries force you to work with raw segments. EDIFlow lets you work with real business objects!**
 
 ---
 
 ## 📚 Next Steps
 
-Now that you know the basics, explore more:
-
-1. **[Architecture Guide](ARCHITECTURE.md)** - Understand Clean Architecture
-2. **[Developer Guide](DEVELOPER_GUIDE.md)** - Contributing and development
-3. **[API Reference](API.md)** - Complete API documentation
-4. **[Package READMEs](../packages/)** - Detailed package documentation
-
----
-
-## 🆘 Troubleshooting
-
-### Problem: "Cannot find module '@ediflow/core'"
-
-**Solution:** Make sure you installed the package:
-```bash
-npm install @ediflow/core
-```
-
-### Problem: "Repository path not found"
-
-**Solution:** Ensure you installed the EDIFACT standard package:
-```bash
-npm install @ediflow/edifact-d20b
-```
-
-And use the correct path:
-```typescript
-repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
-```
-
-### Problem: "Parsing failed with syntax error"
-
-**Solution:** Check your EDIFACT syntax:
-- Segments end with `'` (segment delimiter)
-- Elements separated by `+` (element delimiter)
-- Components separated by `:` (component delimiter)
-- UNA segment defines delimiters (if present)
-
-### Problem: "Validation errors"
-
-**Solution:** 
-1. Check message type matches structure (ORDERS, INVOIC, etc.)
-2. Verify EDIFACT version (D96A, D01B, D20B, D12A)
-3. Ensure required segments are present
-4. Check segment order
-
----
-
-## 💡 Tips & Best Practices
-
-✅ **Cache repositories** - Load once, reuse multiple times  
-✅ **Use TypeScript** - Full type safety and IntelliSense  
-✅ **Validate early** - Catch errors before processing  
-✅ **Test with real data** - Use actual partner messages  
-✅ **Log parsing errors** - Debug issues faster  
-✅ **Handle envelopes** - Always include UNH/UNT/UNB/UNZ  
+- [Architecture Guide](ARCHITECTURE.md)
+- [Developer Guide](DEVELOPER_GUIDE.md)
+- [API Reference](API.md)
 
 ---
 
 ## 🤝 Need Help?
 
-- **GitHub Issues:** [Report bugs](https://github.com/ediflow-lib/ediflow/issues)
-- **Discussions:** [Ask questions](https://github.com/ediflow-lib/ediflow/discussions)
-- **Email:** hello.ediflow@gmail.com
+- [GitHub Issues](https://github.com/ediflow/ediflow/issues)
+- [Discussions](https://github.com/ediflow/ediflow/discussions)
+- Email: hello.ediflow@gmail.com
 
 ---
 
-**Ready to dive deeper?** Check out the [Developer Guide](DEVELOPER_GUIDE.md) next! 🚀
+**Ready for more?** Check out the [Architecture Guide](ARCHITECTURE.md)! 🚀

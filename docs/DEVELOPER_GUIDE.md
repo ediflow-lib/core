@@ -115,6 +115,36 @@ ediflow/
 └── tsconfig.json                # TypeScript config
 ```
 
+## 📁 Project Structure
+
+```
+ediflow/ (Monorepo)
+├── packages/                    # NPM packages
+│   ├── core/                   # @ediflow/core
+│   │   ├── src/
+│   │   │   ├── domain/         # Entities, Value Objects
+│   │   │   ├── application/    # Use Cases, DTOs
+│   │   │   ├── infrastructure/ # Parsers, Repositories
+│   │   │   └── presentation/   # CLI
+│   │   ├── test/               # Integration & E2E tests
+│   │   ├── dist/               # Build output
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   ├── tsup.config.ts
+│   │   └── vitest.config.ts
+│   │
+│   ├── edifact-d96a/           # @ediflow/edifact-d96a
+│   ├── edifact-d01b/           # @ediflow/edifact-d01b
+│   ├── edifact-d20b/           # @ediflow/edifact-d20b
+│   └── edifact-d12a/           # @ediflow/edifact-d12a
+│
+├── scripts/                     # Build & generation scripts
+├── docs/                        # Documentation
+├── coverage/                    # Test coverage reports
+├── package.json                 # Workspace config
+└── tsconfig.json                # Root TypeScript config
+```
+
 ### Source Code Structure (`packages/core/src/`)
 
 ```

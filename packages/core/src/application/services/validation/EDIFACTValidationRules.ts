@@ -1,5 +1,5 @@
-import type { IValidationRule, EDIMessage } from '../../../domain';
-import { ValidationError, Standard } from '../../../domain';
+import type { IValidationRule, EDIMessage } from '@domain';
+import { ValidationError, Standard } from '@domain';
 
 /**
  * EDIFACT-Specific Validation Rules

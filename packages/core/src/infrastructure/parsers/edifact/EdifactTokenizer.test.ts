@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { EdifactTokenizer } from './EdifactTokenizer';
-import { Delimiters } from '../../../domain/value-objects/Delimiters';
+import { Delimiters } from '@domain/value-objects/Delimiters';
 
 describe('EdifactTokenizer', () => {
   const tokenizer = new EdifactTokenizer();

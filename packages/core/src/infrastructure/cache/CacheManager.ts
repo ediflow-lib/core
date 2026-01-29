@@ -6,7 +6,7 @@ import { LRUCache } from 'lru-cache';
  * Provides O(1) get/set operations with automatic eviction of least recently
  * used items when the cache reaches its maximum size.
  *
- * @template T - The type of values stored in the cache (must be object type)
+ * @template T - The type of values stored in the cache
  *
  * @example
  * ```typescript
@@ -19,7 +19,7 @@ import { LRUCache } from 'lru-cache';
  * const cached = cache.get('EDIFACT:D.96A:ORDERS');
  * ```
  */
-export class CacheManager<T extends object> {
+export class CacheManager<T extends {} = {}> {
   private readonly cache: LRUCache<string, T>;
 
   /**

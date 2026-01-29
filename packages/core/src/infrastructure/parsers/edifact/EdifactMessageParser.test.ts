@@ -3,7 +3,7 @@ import { EdifactMessageParser } from './EdifactMessageParser';
 import { EdifactDelimiterDetector } from './EdifactDelimiterDetector';
 import { EdifactTokenizer } from './EdifactTokenizer';
 import { EdifactSegmentParser } from './EdifactSegmentParser';
-import { Standard, Version, MessageType } from '../../../domain';
+import { Standard, Version, MessageType } from '@domain';
 
 describe('EdifactMessageParser', () => {
   let parser: EdifactMessageParser;

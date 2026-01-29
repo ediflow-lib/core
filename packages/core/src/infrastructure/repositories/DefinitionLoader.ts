@@ -1,6 +1,8 @@
-import { IDefinitionLoader } from '@application/ports';
+import { IDefinitionLoader } from '@application/ports/output/IDefinitionLoader';
 import { RepositoryManager } from '@application/services/RepositoryManager';
-import { Standard, Version, MessageType } from '@domain';
+import { Standard } from '@domain/value-objects/Standard';
+import { Version } from '@domain/value-objects/Version';
+import { MessageType } from '@domain/value-objects/MessageType';
 import { MessageDefinition } from '@domain/repositories/MessageDefinition';
 import { DefinitionNotFoundError } from '@domain/errors/DefinitionNotFoundError';
 import { CacheManager } from '../cache/CacheManager';

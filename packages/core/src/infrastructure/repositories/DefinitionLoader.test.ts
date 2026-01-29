@@ -13,26 +13,30 @@ describe('DefinitionLoader', () => {
 
   const mockDefinition: MessageDefinition = {
     standard: Standard.EDIFACT,
-    version: new Version(Standard.EDIFACT, 'D.96A'),
-    messageType: new MessageType(Standard.EDIFACT, 'ORDERS'),
+    version: 'D.96A',
+    messageType: 'ORDERS',
+    name: 'Purchase Order',
     segments: [
       {
         tag: 'UNH',
         name: 'Message Header',
         mandatory: true,
         maxOccurrences: 1,
+        position: 1,
       },
       {
         tag: 'BGM',
         name: 'Beginning of Message',
         mandatory: true,
         maxOccurrences: 1,
+        position: 2,
       },
       {
         tag: 'UNT',
         name: 'Message Trailer',
         mandatory: true,
         maxOccurrences: 1,
+        position: 3,
       },
     ],
   };
@@ -67,8 +71,8 @@ describe('DefinitionLoader', () => {
       // THEN
       expect(definition).toBeDefined();
       expect(definition.standard).toBe(Standard.EDIFACT);
-      expect(definition.version.value).toBe('D.96A');
-      expect(definition.messageType.value).toBe('ORDERS');
+      expect(definition.version).toBe('D.96A');
+      expect(definition.messageType).toBe('ORDERS');
       expect(definition.segments).toHaveLength(3);
     });
 

@@ -2,6 +2,8 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { BuildEDIUseCase } from './BuildEDIUseCase';
 import { EDIMessage, EDISegment, EDIElement } from '@domain/entities';
 import { Standard } from '@domain/value-objects/Standard';
+import { Version } from '@domain/value-objects/Version';
+import { MessageType } from '@domain/value-objects/MessageType';
 import { StructureMapper } from '@domain/mapping';
 
 describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
@@ -15,7 +17,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
   describe('Envelope Generation', () => {
     it('should generate EDIFACT message with UNH/UNT envelope when includeEnvelope is true', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
       message.addSegment(new EDISegment('DTM', [new EDIElement('137:20210124:102')]));
 
@@ -40,7 +42,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should generate EDIFACT message with UNB/UNZ envelope when includeInterchange is true', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
       message.addSegment(new EDISegment('DTM', [new EDIElement('137:20210124:102')]));
 
@@ -67,7 +69,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should auto-generate message reference if not provided', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -84,7 +86,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should auto-generate control reference if not provided', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -105,7 +107,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should calculate segment count correctly including UNH and UNT', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
       message.addSegment(new EDISegment('DTM', [new EDIElement('137')]));
       message.addSegment(new EDISegment('NAD', [new EDIElement('BY')]));
@@ -127,7 +129,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
   describe('Backward Compatibility', () => {
     it('should work without envelope when includeEnvelope is false', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -144,7 +146,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should work without envelope when includeEnvelope is undefined (default)', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -161,7 +163,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
   describe('Error Handling', () => {
     it('should return error if includeEnvelope is true but messageType is missing', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -177,7 +179,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should return error if includeInterchange is true but sender is missing', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
@@ -198,7 +200,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
   describe('Multiple Message Types', () => {
     it('should work with DESADV message type', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.20B', 'DESADV');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.20B'), new MessageType(Standard.EDIFACT, 'DESADV'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('351')]));
 
       const result = useCase.execute({
@@ -216,7 +218,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
     });
 
     it('should work with INVOIC message type', () => {
-      const message = new EDIMessage(Standard.EDIFACT, 'D.01B', 'INVOIC');
+      const message = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.01B'), new MessageType(Standard.EDIFACT, 'INVOIC'));
       message.addSegment(new EDISegment('BGM', [new EDIElement('380')]));
 
       const result = useCase.execute({

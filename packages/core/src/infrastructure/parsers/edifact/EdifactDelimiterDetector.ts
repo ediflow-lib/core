@@ -37,7 +37,7 @@ export class EdifactDelimiterDetector implements IDelimiterDetector {
            message.length >= EdifactDelimiterDetector.UNA_LENGTH;
   }
 
-  private extractFromUNA(message: string): Delimiters {
+  public extractFromUNA(message: string): Delimiters {
     if (!this.hasUNA(message)) {
       throw new Error('Message does not have UNA segment');
     }

@@ -1,16 +1,16 @@
-import { ComposableValidationService } from '../ComposableValidationService';
-import type { EDIMessage } from '../../../domain';
-import { Standard } from '../../../domain';
+import { ComposableValidationService } from '@application/services';
+import type { EDIMessage } from '@domain';
+import { Standard } from '@domain';
 import {
   MessageMustHaveSegmentsRule,
   VersionStandardMustMatchRule,
   MessageTypeStandardMustMatchRule
-} from './BasicValidationRules';
+} from '@application/services';
 import {
   UNBMustBeFirstRule,
   UNZMustBeLastRule,
   EDIFACTSegmentTagFormatRule
-} from './EDIFACTValidationRules';
+} from '@application/services';
 
 /**
  * Validator Builder for different EDI standards

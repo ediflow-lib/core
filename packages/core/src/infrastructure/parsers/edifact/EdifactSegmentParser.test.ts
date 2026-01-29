@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { EdifactSegmentParser } from './EdifactSegmentParser';
-import { Delimiters, EDISegment } from '../../../domain';
+import { Delimiters } from '@domain/value-objects/Delimiters';
+import { EDISegment } from '@domain/entities/EDISegment';
 
 describe('EdifactSegmentParser', () => {
   let parser: EdifactSegmentParser;

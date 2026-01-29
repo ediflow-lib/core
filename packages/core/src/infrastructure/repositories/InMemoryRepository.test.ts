@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { InMemoryRepository } from './InMemoryRepository';
-import { MessageType, Version, Standard } from '../../domain';
+import { MessageType, Version, Standard } from '@domain';
 import type { MessageDefinition as MessageDefinition } from '../../domain/repositories/MessageDefinition';
 
 describe('InMemoryRepository', () => {
@@ -12,14 +12,15 @@ describe('InMemoryRepository', () => {
 
     // Create a sample ORDERS D.96A definition
     sampleDefinition = {
-      messageType: new MessageType(Standard.EDIFACT, 'ORDERS'),
-      version: new Version(Standard.EDIFACT, 'D.96A'),
+      messageType: 'ORDERS',
+      version: 'D.96A',
       standard: Standard.EDIFACT,
+      name: 'Purchase Order',
       segments: [
-        { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1 },
-        { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1 },
-        { tag: 'DTM', name: 'Date/Time/Period', mandatory: false, maxOccurrences: 10 },
-        { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1 },
+        { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
+        { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
+        { tag: 'DTM', name: 'Date/Time/Period', mandatory: false, maxOccurrences: 10, position: 3 },
+        { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 4 },
       ],
     };
   });
@@ -29,8 +30,8 @@ describe('InMemoryRepository', () => {
       repository.register(sampleDefinition);
 
       const retrieved = repository.getMessageDefinition(
-        sampleDefinition.messageType,
-        sampleDefinition.version
+        new MessageType(Standard.EDIFACT, sampleDefinition.messageType),
+        new Version(Standard.EDIFACT, sampleDefinition.version)
       );
 
       expect(retrieved).toBeDefined();
@@ -40,59 +41,62 @@ describe('InMemoryRepository', () => {
     it('should allow registering multiple definitions', () => {
       const ordersDefinition = sampleDefinition;
       const invoicDefinition: MessageDefinition = {
-        messageType: new MessageType(Standard.EDIFACT, 'INVOIC'),
-        version: new Version(Standard.EDIFACT, 'D.96A'),
+        messageType: 'INVOIC',
+        version: 'D.96A',
         standard: Standard.EDIFACT,
+        name: 'Invoice',
         segments: [
-          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1 },
-          { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1 },
-          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1 },
+          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
+          { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
+          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 3 },
         ],
       };
 
       repository.register(ordersDefinition);
       repository.register(invoicDefinition);
 
-      expect(repository.getMessageDefinition(ordersDefinition.messageType, ordersDefinition.version)).toBe(ordersDefinition);
-      expect(repository.getMessageDefinition(invoicDefinition.messageType, invoicDefinition.version)).toBe(invoicDefinition);
+      expect(repository.getMessageDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version))).toBe(ordersDefinition);
+      expect(repository.getMessageDefinition(new MessageType(Standard.EDIFACT, invoicDefinition.messageType), new Version(Standard.EDIFACT, invoicDefinition.version))).toBe(invoicDefinition);
     });
 
     it('should allow registering same message type with different versions', () => {
       const orders96A = sampleDefinition;
       const orders01B: MessageDefinition = {
-        messageType: new MessageType(Standard.EDIFACT, 'ORDERS'),
-        version: new Version(Standard.EDIFACT, 'D.01B'),
+        messageType: 'ORDERS',
+        version: 'D.01B',
         standard: Standard.EDIFACT,
+        name: 'Purchase Order D.01B',
         segments: [
-          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1 },
-          { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1 },
-          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1 },
+          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
+          { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
+          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 3 },
         ],
       };
 
       repository.register(orders96A);
       repository.register(orders01B);
 
-      expect(repository.getMessageDefinition(orders96A.messageType, orders96A.version)).toBe(orders96A);
-      expect(repository.getMessageDefinition(orders01B.messageType, orders01B.version)).toBe(orders01B);
+      expect(repository.getMessageDefinition(new MessageType(Standard.EDIFACT, orders96A.messageType), new Version(Standard.EDIFACT, orders96A.version))).toBe(orders96A);
+      expect(repository.getMessageDefinition(new MessageType(Standard.EDIFACT, orders01B.messageType), new Version(Standard.EDIFACT, orders01B.version))).toBe(orders01B);
     });
 
     it('should overwrite existing definition when registering same type and version', () => {
       const firstDefinition = sampleDefinition;
       const updatedDefinition: MessageDefinition = {
-        messageType: new MessageType(Standard.EDIFACT, 'ORDERS'),
-        version: new Version(Standard.EDIFACT, 'D.96A'),
+        messageType: 'ORDERS',
+        version: 'D.96A',
         standard: Standard.EDIFACT,
+        name: 'Updated Purchase Order',
         segments: [
-          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1 },
-          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1 },
+          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
+          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 2 },
         ],
       };
 
       repository.register(firstDefinition);
       repository.register(updatedDefinition);
 
-      const retrieved = repository.getMessageDefinition(firstDefinition.messageType, firstDefinition.version);
+      const retrieved = repository.getMessageDefinition(new MessageType(Standard.EDIFACT, firstDefinition.messageType), new Version(Standard.EDIFACT, firstDefinition.version));
       expect(retrieved).toBe(updatedDefinition);
       expect(retrieved?.segments.length).toBe(2);
     });
@@ -112,7 +116,7 @@ describe('InMemoryRepository', () => {
       repository.register(sampleDefinition);
 
       const differentVersion = new Version(Standard.EDIFACT, 'D.01B');
-      const result = repository.getMessageDefinition(sampleDefinition.messageType, differentVersion);
+      const result = repository.getMessageDefinition(new MessageType(Standard.EDIFACT, sampleDefinition.messageType), differentVersion);
 
       expect(result).toBeNull();
     });
@@ -121,13 +125,13 @@ describe('InMemoryRepository', () => {
       repository.register(sampleDefinition);
 
       const retrieved = repository.getMessageDefinition(
-        sampleDefinition.messageType,
-        sampleDefinition.version
+        new MessageType(Standard.EDIFACT, sampleDefinition.messageType),
+        new Version(Standard.EDIFACT, sampleDefinition.version)
       );
 
       expect(retrieved).toBe(sampleDefinition);
-      expect(retrieved?.messageType.value).toBe('ORDERS');
-      expect(retrieved?.version.value).toBe('D.96A');
+      expect(retrieved?.messageType).toBe('ORDERS');
+      expect(retrieved?.version).toBe('D.96A');
       expect(retrieved?.segments.length).toBe(4);
     });
   });
@@ -143,14 +147,14 @@ describe('InMemoryRepository', () => {
     it('should return true for existing definition', () => {
       repository.register(sampleDefinition);
 
-      expect(repository.hasMessageDefinition(sampleDefinition.messageType, sampleDefinition.version)).toBe(true);
+      expect(repository.hasMessageDefinition(new MessageType(Standard.EDIFACT, sampleDefinition.messageType), new Version(Standard.EDIFACT, sampleDefinition.version))).toBe(true);
     });
 
     it('should return false after registering different version', () => {
       repository.register(sampleDefinition);
 
       const differentVersion = new Version(Standard.EDIFACT, 'D.01B');
-      expect(repository.hasMessageDefinition(sampleDefinition.messageType, differentVersion)).toBe(false);
+      expect(repository.hasMessageDefinition(new MessageType(Standard.EDIFACT, sampleDefinition.messageType), differentVersion)).toBe(false);
     });
   });
 });

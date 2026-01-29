@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { BuildEDIUseCase } from './BuildEDIUseCase';
-import { EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement, Delimiters } from '../../../domain';
+import { EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement, Delimiters } from '@domain';
 
 describe('BuildEDIUseCase', () => {
   let useCase: BuildEDIUseCase;
@@ -42,9 +42,9 @@ describe('BuildEDIUseCase', () => {
         const result = useCase.execute({ message, delimiters: edifactDelimiters });
 
         expect(result.success).toBe(true);
-        expect(result.ediString).toBeDefined();
-        expect(result.ediString).toContain('TEST1');
-        expect(result.ediString).toContain('TEST2');
+        expect(result.success && result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toContain('TEST1');
+        expect(result.success && result.ediString).toContain('TEST2');
       });
 
       it('should use correct EDIFACT delimiters', () => {
@@ -52,8 +52,8 @@ describe('BuildEDIUseCase', () => {
 
         const result = useCase.execute({ message, delimiters: edifactDelimiters });
 
-        expect(result.ediString).toContain('+');
-        expect(result.ediString).toContain("'");
+        expect(result.success && result.ediString).toContain('+');
+        expect(result.success && result.ediString).toContain("'");
       });
     });
 
@@ -73,8 +73,8 @@ describe('BuildEDIUseCase', () => {
         const result = useCase.execute({ message, delimiters: x12Delimiters });
 
         expect(result.success).toBe(true);
-        expect(result.ediString).toBeDefined();
-        expect(result.ediString).toContain('TEST1');
+        expect(result.success && result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toContain('TEST1');
       });
 
       it('should use correct X12 delimiters', () => {
@@ -82,8 +82,8 @@ describe('BuildEDIUseCase', () => {
 
         const result = useCase.execute({ message, delimiters: x12Delimiters });
 
-        expect(result.ediString).toContain('*');
-        expect(result.ediString).toContain('~');
+        expect(result.success && result.ediString).toContain('*');
+        expect(result.success && result.ediString).toContain('~');
       });
     });
 
@@ -102,7 +102,7 @@ describe('BuildEDIUseCase', () => {
         const result = useCase.execute({ message, delimiters: idocDelimiters });
 
         expect(result.success).toBe(true);
-        expect(result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toBeDefined();
       });
     });
 
@@ -121,7 +121,7 @@ describe('BuildEDIUseCase', () => {
         const result = useCase.execute({ message, delimiters: vdaDelimiters });
 
         expect(result.success).toBe(true);
-        expect(result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toBeDefined();
       });
     });
 
@@ -141,7 +141,7 @@ describe('BuildEDIUseCase', () => {
         const result = useCase.execute({ message, delimiters: hl7Delimiters });
 
         expect(result.success).toBe(true);
-        expect(result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toBeDefined();
       });
     });
 
@@ -158,12 +158,14 @@ describe('BuildEDIUseCase', () => {
           validateBeforeBuild: true
         });
 
-        expect(result.success).toBe(false);
+      expect(result.success).toBe(false);
+      if (!result.success) {
         expect(result.errors).toBeDefined();
-        expect(result.errors?.[0]?.code).toBeDefined();
-      });
+        expect(result.errors[0]?.code).toBeDefined();
+      }
+    });
 
-      it('should build without validation when not requested', () => {
+    it('should build without validation when not requested', () => {
         const message = createMessage(Standard.EDIFACT, 'D.96A', 'DESADV');
         const delimiters = Delimiters.custom({
           component: ':', element: '+', decimal: '.', escape: '?', segment: "'"
@@ -188,7 +190,7 @@ describe('BuildEDIUseCase', () => {
 
         const result = useCase.execute({ message, delimiters });
 
-        expect(result.ediString).toBeDefined();
+        expect(result.success && result.ediString).toBeDefined();
       });
     });
   });

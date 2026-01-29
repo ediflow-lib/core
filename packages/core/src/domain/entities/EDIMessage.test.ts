@@ -4,7 +4,6 @@ import { Standard } from '../value-objects/Standard';
 import { Version } from '../value-objects/Version';
 import { MessageType } from '../value-objects/MessageType';
 import { EDISegment } from './EDISegment';
-import { EDIElement } from './EDIElement';
 
 describe('EDIMessage', () => {
   describe('constructor', () => {

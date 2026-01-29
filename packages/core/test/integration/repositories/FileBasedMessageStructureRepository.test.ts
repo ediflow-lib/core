@@ -1,9 +1,14 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { FileBasedMessageStructureRepository } from '@infrastructure/repositories/FileBasedMessageStructureRepository';
+import { SegmentOrGroup } from '@domain/repositories/MessageStructure';
 import * as path from 'path';
 
 describe('FileBasedMessageStructureRepository Integration', () => {
-  const basePath = path.resolve(__dirname, '../../../directories');
+  // Path from: packages/core/test/integration/repositories/
+  // To:        packages/ (parent of core)
+  // = ../../../ (up 3 levels from test/integration/repositories/)
+  // Then walk to: ../../../../packages/ (up 4 from core)
+  const basePath = path.resolve(__dirname, '../../../../');
   let repository: FileBasedMessageStructureRepository;
 
   beforeEach(() => {
@@ -40,7 +45,7 @@ describe('FileBasedMessageStructureRepository Integration', () => {
       const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
 
       const unhSegment = definition?.structure.find(
-        node => node.nodeType === 'segment' && 'segmentRef' in node && node.segmentRef === 'UNH'
+        (node: SegmentOrGroup) => node.nodeType === 'segment' && 'segmentRef' in node && node.segmentRef === 'UNH'
       );
 
       expect(unhSegment).toBeDefined();
@@ -54,16 +59,16 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     it('should validate message structure contains segment groups', async () => {
       const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
 
-      const sg2Group = definition?.structure.find(
-        node => node.nodeType === 'segmentGroup' && 'id' in node && node.id === 'SG2'
+      const segmentGroup = definition?.structure.find(
+        (node: SegmentOrGroup) => node.nodeType === 'segmentGroup' && 'id' in node && node.id === 'SG2'
       );
 
-      expect(sg2Group).toBeDefined();
-      expect(sg2Group?.nodeType).toBe('segmentGroup');
-      if (sg2Group && 'id' in sg2Group) {
-        expect(sg2Group.id).toBe('SG2');
-        expect(sg2Group.name).toBe('Segment group 2');
-        expect(sg2Group.children).toBeDefined();
+      expect(segmentGroup).toBeDefined();
+      expect(segmentGroup?.nodeType).toBe('segmentGroup');
+      if (segmentGroup && 'id' in segmentGroup) {
+        expect(segmentGroup.id).toBe('SG2');
+        expect(segmentGroup.name).toBe('Segment group 2');
+        expect(segmentGroup.children).toBeDefined();
         // Note: Detailed segment group children parsing is future enhancement
         // For now, children array exists but may be empty (flat structure)
       }

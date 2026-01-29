@@ -5,29 +5,86 @@
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
-[![Tests](https://img.shields.io/badge/tests-590%20passing-brightgreen)](https://github.com/ediflow-lib/ediflow)
+[![Tests](https://img.shields.io/badge/tests-599%20passing-brightgreen)](https://github.com/ediflow-lib/ediflow)
 [![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
-**Clean Architecture** • **Type-Safe** • **Zero Config** • **Battle-Tested**
-
-EDIFlow is a modern, enterprise-grade EDIFACT library built with **Clean Architecture** principles. Parse, validate, and build EDIFACT messages with full TypeScript support and comprehensive validation.
+**Clean Architecture** • **Type-Safe** • **Business Object Mapping** • **Schema Export** • **Battle-Tested**
 
 ---
 
-## ✨ Why EDIFlow?
+## 💡 What Makes EDIFlow Different?
 
-✅ **Type-Safe** - Full TypeScript support with advanced type inference  
+**Most EDIFACT libraries only parse to generic segments:**
+```typescript
+// ❌ Other Libraries - No type safety, manual segment parsing
+const bgm = message.segments.find(s => s.tag === 'BGM');
+const docNumber = bgm?.elements[1]?.value;  // What is element[1]? 🤷
+```
+
+**EDIFlow maps to type-safe TypeScript business objects:**
+```typescript
+// ✅ EDIFlow - IntelliSense, type safety, business logic
+const order = mapper.mapToBusinessObject(message);
+console.log(order.documentNumber);         // Auto-complete works! 🎉
+console.log(order.parties.buyer.id);
+console.log(order.lineItems[0].productId);
+```
+
+### 🎯 Killer Features
+
+#### 1. **Business Object Mapping** (EDIFACT ↔️ TypeScript)
+```typescript
+// Parse EDIFACT → TypeScript Object
+const order = mapper.mapToBusinessObject(parsedMessage);
+
+// Modify with type safety
+order.lineItems[0].quantity = 150;
+order.lineItems.push({ productId: 'PRODUCT002', quantity: 50 });
+
+// TypeScript Object → EDIFACT
+const edifact = mapper.mapFromBusinessObject(order, {...});
+```
+
+#### 2. **Schema Export** (JSON Schema & TypeScript)
+```typescript
+// Generate JSON Schema for validation
+const schema = exportSchemaUseCase.execute({
+  standard: 'EDIFACT',
+  version: 'D20B',
+  messageType: 'ORDERS',
+  format: 'json-schema'  // or 'typescript'
+});
+
+// Validate with Ajv before sending
+const ajv = new Ajv();
+const validate = ajv.compile(schema);
+if (validate(order)) {
+  sendToPartner(buildEDI(order));
+}
+```
+
+**Benefits:**
+- ✅ **Type Safety** - Catch errors at compile time
+- ✅ **IntelliSense** - Auto-completion for all fields
+- ✅ **Validation** - Validate with JSON Schema before sending
+- ✅ **Testing** - Easy to mock business objects
+- ✅ **Documentation** - Auto-generated TypeScript types
+
+---
+
+## ✨ Features
+
+✅ **Type-Safe Business Objects** - Map EDIFACT to TypeScript objects  
+✅ **Schema Export** - Generate JSON Schema & TypeScript definitions  
 ✅ **Clean Architecture** - SOLID principles, testable, maintainable  
-✅ **Complete EDIFACT Support** - 214 message types across 4 versions  
+✅ **Complete EDIFACT Support** - D.96A, D.01B, D.20B standards  
 ✅ **3-Phase Validation** - Syntax → Structure → Business Logic  
-✅ **Phase 2 Mapping** - Auto-convert to/from business objects  
 ✅ **Envelope Support** - UNH/UNT/UNB/UNZ generation & parsing  
-✅ **Well-Tested** - 590 tests, 100% coverage goal  
+✅ **Well-Tested** - 599 tests passing  
 ✅ **Zero Config** - Works out of the box  
 
 ---
 
----
 
 ## 🚀 Quick Start
 
@@ -40,10 +97,10 @@ EDIFlow is published as **5 separate NPM packages** (all MIT licensed):
 npm install @ediflow/core
 
 # 2. Install EDIFACT standard(s) you need (choose one or more)
-npm install @ediflow/edifact-d20b   # Latest (2020) - 7 message types
-npm install @ediflow/edifact-d12a   # Comprehensive (2012) - 196 message types
-npm install @ediflow/edifact-d01b   # Legacy (2001) - 4 message types
-npm install @ediflow/edifact-d96a   # Classic (1996) - 7 message types
+npm install @ediflow/edifact-d96a   # D.96A (1996) - 89 messages - Community
+npm install @ediflow/edifact-d01b   # D.01B (2001) - 155 messages - Community
+npm install @ediflow/edifact-d20b   # D.20B (2020) - 178 messages - Community (Latest)
+npm install @ediflow/edifact-d12a   # D.12A (2012) - 196 messages - Business (Prep)
 ```
 
 ### Parse EDIFACT Message
@@ -74,9 +131,8 @@ const validateUseCase = container.resolve('ValidateMessageUseCase');
 
 const validation = validateUseCase.execute({
   message: result.message,
-  messageType: 'ORDERS',
-  version: 'D20B',
-  repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
+  strictMode: false,
+  enableStructuralValidation: true
 });
 
 if (validation.success) {
@@ -108,17 +164,17 @@ console.log(ediString); // Ready to send!
 
 ## 📦 Package Overview
 
-| Package | Size | Messages | Use Case |
-|---------|------|----------|----------|
-| **[@ediflow/core](packages/core)** | 120 KB | - | Parser, Validator, Builder engine |
-| **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 7 | D.96A (1996) - Early adopters |
-| **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 4 | D.01B (2001) - Legacy systems |
-| **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 7 | D.20B (2020) - Latest standard |
-| **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | D.12A (2012) - Full coverage |
+| Package | Size | Messages | License | Use Case |
+|---------|------|----------|---------|----------|
+| **[@ediflow/core](packages/core)** | 120 KB | - | MIT | Parser, Validator, Builder engine |
+| **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 89 | MIT | D.96A (1996) - Community |
+| **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 155 | MIT | D.01B (2001) - Community |
+| **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 178 | MIT | D.20B (2020) - Community (Latest) |
+| **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | MIT | D.12A (2012) - Business (Prep) |
 
-**Total if all installed:** 6.6 MB • **214 message types** • **All MIT licensed**
+**Total if all installed:** 6.6 MB • **618 message types** • **All MIT licensed**
 
-💡 **Tip:** Install only what you need! Most projects need only `core` + one standard.
+💡 **Tip:** Community packages (D.96A, D.01B, D.20B) are free and open source. D.12A is in preparation for business customers.
 
 ---
 
@@ -134,16 +190,16 @@ console.log(ediString); // Ready to send!
 - **Envelopes** - UNH/UNT/UNB/UNZ generation & parsing
 
 ### EDIFACT Versions Supported
-- **D.96A** (1996) - 7 message types
-- **D.01B** (2001) - 4 message types  
-- **D.20B** (2020) - 7 message types
-- **D.12A** (2012) - 196 message types (Full Coverage!)
+- **D.96A** (1996) - 89 message types - **Community (MIT)**
+- **D.01B** (2001) - 155 message types - **Community (MIT)**
+- **D.20B** (2020) - 178 message types - **Community (MIT) - Latest!**
+- **D.12A** (2012) - 196 message types - **Business (Preparation)**
 
-### Message Types (214 total)
+### Message Types (618 total)
 **Logistics:** DESADV, ORDERS, ORDRSP, RECADV, IFTMIN, IFTSTA, IFCSUM  
 **Financial:** INVOIC, REMADV, FINSTA, PAYMUL  
 **Catalog:** PRICAT, SLSRPT  
-**Plus:** 200+ more message types in D.12A
+**Plus:** 600+ more message types across all versions
 
 ---
 
@@ -206,9 +262,9 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 ### ✅ M1 - EDIFACT Foundation (February 2026)
 - EDIFACT parsing, validation, building
 - 4 EDIFACT versions (D.96A, D.01B, D.20B, D.12A)
-- 214 message types
+- 618 message types total
 - Clean Architecture
-- 590 tests
+- 599 tests
 
 ### 🚀 M2 - Enhanced Features (Q2 2026)
 - UNG/UNE functional groups
@@ -228,7 +284,7 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 EDIFlow is extensively tested with **TDD (Test-Driven Development)**:
 
-- **590 tests** passing (Unit + Integration + E2E)
+- **599 tests** passing (Unit + Integration + E2E)
 - **100% coverage goal** for critical paths
 - **E2E roundtrip tests** across 3 EDIFACT versions
 - **Performance tests** (< 200ms parse-build-parse cycle)

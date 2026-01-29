@@ -46,9 +46,9 @@ describe('Integration: ExportSchemaCommand (US-7.9)', () => {
     const generator = new BusinessObjectSchemaGenerator(cache);
 
     mockRepository = {
-      getMessageDefinition: vi.fn().mockImplementation((standard, version, messageType) => {
-        if (messageType === 'DESADV' || messageType === 'ORDERS' || messageType === 'INVOIC') {
-          return Promise.resolve({ ...desadvStructure, messageType });
+      getMessageDefinition: vi.fn().mockImplementation((_standard, _version, msgType: string) => {
+        if (msgType === 'DESADV' || msgType === 'ORDERS' || msgType === 'INVOIC') {
+          return Promise.resolve({ ...desadvStructure, messageType: msgType });
         }
         return Promise.resolve(null);
       }),
@@ -125,11 +125,11 @@ describe('Integration: ExportSchemaCommand (US-7.9)', () => {
 
   describe('Error Cases', () => {
     it('should throw error for non-existent message type', async () => {
-      await expect(
-        command.execute({
-          message: 'NONEXISTENT',
-          version: 'D.20B'
-        })
+      expect(
+          command.execute({
+            message: 'NONEXISTENT',
+            version: 'D.20B'
+          })
       ).rejects.toThrow('Message type NONEXISTENT not found');
     });
   });
