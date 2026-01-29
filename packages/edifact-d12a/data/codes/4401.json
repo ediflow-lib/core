@@ -1,0 +1,497 @@
+{
+  "code": "4401",
+  "name": "Instruction description code",
+  "description": "Code specifying an instruction.",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Send credit note",
+      "description": "Send credit note Send a credit note."
+    },
+    {
+      "code": "AB",
+      "name": "Change invoice",
+      "description": "Change invoice Send invoice, taking into account specified discrepancies."
+    },
+    {
+      "code": "AC",
+      "name": "Advise by airmail",
+      "description": "Advise by airmail Instruction to advise party by airmail."
+    },
+    {
+      "code": "AD",
+      "name": "Advise",
+      "description": "Advise Instruction to advise a party."
+    },
+    {
+      "code": "AE",
+      "name": "Read meter at beginning of supply",
+      "description": "Read meter at beginning of supply Read the meter when the supply period starts."
+    },
+    {
+      "code": "AF",
+      "name": "Stop delivery process",
+      "description": "Stop delivery process Instruction to cease delivery."
+    },
+    {
+      "code": "AG",
+      "name": "Send replacement",
+      "description": "Send replacement The identified item must be sent for replacement."
+    },
+    {
+      "code": "AH",
+      "name": "Pick-up",
+      "description": "Pick-up The identified item is to be picked up."
+    },
+    {
+      "code": "AI",
+      "name": "Advise by telecommunication",
+      "description": "Advise by telecommunication Advise of documentary credit by telecommunication."
+    },
+    {
+      "code": "AJ",
+      "name": "Advise by fax",
+      "description": "Advise by fax Instruction to advise party by fax."
+    },
+    {
+      "code": "AK",
+      "name": "By registered airmail",
+      "description": "By registered airmail Issue documentary credit by registered airmail."
+    },
+    {
+      "code": "AL",
+      "name": "By registered airmail in one set",
+      "description": "By registered airmail in one set Deliver documents in one set by registered airmail."
+    },
+    {
+      "code": "AM",
+      "name": "By registered airmail in two sets",
+      "description": "By registered airmail in two sets Deliver documents in two sets by registered airmail."
+    },
+    {
+      "code": "AN",
+      "name": "Authorized to debit our account when due",
+      "description": "Authorized to debit our account when due The receiver is authorized to debit the account of the sender when due."
+    },
+    {
+      "code": "AO",
+      "name": "Authorized to reimburse yourselves on the reimbursing bank",
+      "description": "Authorized to reimburse yourselves on the reimbursing bank when due The receiver is authorized to reimburse themselves on the reimbursing bank when due."
+    },
+    {
+      "code": "AP",
+      "name": "Advise by phone",
+      "description": "Advise by phone Instruction to advise party by phone."
+    },
+    {
+      "code": "AQ",
+      "name": "Upon receipt and verification of documents we shall credit",
+      "description": "Upon receipt and verification of documents we shall credit your account with us when due Upon receipt and verification of documents we shall credit your account with us when due."
+    },
+    {
+      "code": "AR",
+      "name": "Protest non-payment",
+      "description": "Protest non-payment Protest is to be made in case of non-payment."
+    },
+    {
+      "code": "AS",
+      "name": "Protest non-acceptance",
+      "description": "Protest non-acceptance Protest is to be made in case of non-acceptance."
+    },
+    {
+      "code": "AT",
+      "name": "Advise by telex",
+      "description": "Advise by telex Instruction to advise party by telex."
+    },
+    {
+      "code": "AU",
+      "name": "Protest non-acceptance and non-payment",
+      "description": "Protest non-acceptance and non-payment Protest is to be made in case of non-acceptance and non- payment."
+    },
+    {
+      "code": "AV",
+      "name": "May not be waived",
+      "description": "May not be waived Not permitted to be waived."
+    },
+    {
+      "code": "AW",
+      "name": "May be waived",
+      "description": "May be waived Permitted to be waived."
+    },
+    {
+      "code": "AX",
+      "name": "Acceptance and/or payment may be deferred until the arrival",
+      "description": "Acceptance and/or payment may be deferred until the arrival of goods Acceptance and/or payment may be deferred until the goods have arrived."
+    },
+    {
+      "code": "AY",
+      "name": "Acceptance and/or payment may not be deferred until the",
+      "description": "Acceptance and/or payment may not be deferred until the arrival of goods Acceptance and/or payment may not be deferred until the goods have arrived."
+    },
+    {
+      "code": "AZ",
+      "name": "If documents are not honoured on arrival of goods then",
+      "description": "If documents are not honoured on arrival of goods then warehouse goods Goods are to be warehoused if documents are not taken up on the goods' arrival."
+    },
+    {
+      "code": "BA",
+      "name": "If documents are not honoured on arrival of goods then",
+      "description": "If documents are not honoured on arrival of goods then warehouse goods and insure against fire Goods are to be warehoused and insured against fire if documents are not taken up on the goods' arrival."
+    },
+    {
+      "code": "BB",
+      "name": "If documents are not honoured on arrival of goods then",
+      "description": "If documents are not honoured on arrival of goods then warehouse goods and insure against usual risks Goods are to be warehoused and insured against the usual risks if documents are not taken up on the goods' arrival."
+    },
+    {
+      "code": "BC",
+      "name": "Case of need party has power to give instructions",
+      "description": "Case of need party has power to give instructions Case of need party has the power to give instructions."
+    },
+    {
+      "code": "BD",
+      "name": "Case of need party may advise only",
+      "description": "Case of need party may advise only The case of need party may advise only."
+    },
+    {
+      "code": "BE",
+      "name": "Draft must be returned after acceptance",
+      "description": "Draft must be returned after acceptance The draft must be returned after acceptance."
+    },
+    {
+      "code": "BF",
+      "name": "Advise by mail",
+      "description": "Advise by mail Instruction to advise party by mail."
+    },
+    {
+      "code": "BG",
+      "name": "Release documents against acceptance",
+      "description": "Release documents against acceptance The documents are to be released against acceptance."
+    },
+    {
+      "code": "BH",
+      "name": "Release documents against payment",
+      "description": "Release documents against payment The documents are to be released against payment."
+    },
+    {
+      "code": "BI",
+      "name": "Release documents against issuance of drawee's undertaking",
+      "description": "Release documents against issuance of drawee's undertaking The documents are to be released against issuance of drawee's undertaking."
+    },
+    {
+      "code": "BJ",
+      "name": "Release documents against issuance of presenting bank's",
+      "description": "Release documents against issuance of presenting bank's undertaking The documents are to be released against issuance of presenting bank's undertaking."
+    },
+    {
+      "code": "BK",
+      "name": "Release documents against issuance of named bank's",
+      "description": "Release documents against issuance of named bank's undertaking The documents are to be released against issuance of named bank's undertaking."
+    },
+    {
+      "code": "BL",
+      "name": "Release documents against issuance of drawee's signed",
+      "description": "Release documents against issuance of drawee's signed promissory note The documents are to be released against issuance of drawee's signed promissory note."
+    },
+    {
+      "code": "BM",
+      "name": "Release documents against issuance of presenting bank's",
+      "description": "Release documents against issuance of presenting bank's signed promissory note The documents are to be released against issuance of presenting bank's signed promissory note."
+    },
+    {
+      "code": "BN",
+      "name": "Release documents against issuance of named bank's signed",
+      "description": "Release documents against issuance of named bank's signed promissory note The documents are to be released against issuance of named bank's signed promissory note."
+    },
+    {
+      "code": "BO",
+      "name": "Release documents against issuance of drawee's signed trust",
+      "description": "Release documents against issuance of drawee's signed trust receipt The documents are to be released against issuance of drawee's signed trust receipt."
+    },
+    {
+      "code": "BP",
+      "name": "Release documents against acceptance and aval of presenting",
+      "description": "Release documents against acceptance and aval of presenting bank The documents are to be released against acceptance and aval of presenting bank."
+    },
+    {
+      "code": "BQ",
+      "name": "Release documents against acceptance and aval of named bank",
+      "description": "Release documents against acceptance and aval of named bank The documents are to be released against acceptance and aval of named bank."
+    },
+    {
+      "code": "BR",
+      "name": "Remit proceeds",
+      "description": "Remit proceeds The proceeds are to be remitted."
+    },
+    {
+      "code": "BS",
+      "name": "Remit proceeds to intermediary bank",
+      "description": "Remit proceeds to intermediary bank The proceeds are to be remitted to the intermediary bank."
+    },
+    {
+      "code": "BT",
+      "name": "Accept provisional deposit if covered in local currency",
+      "description": "Accept provisional deposit if covered in local currency Where the currency of the collection is not available, the collection bank is authorised to accept a provisional deposit in local currency."
+    },
+    {
+      "code": "BU",
+      "name": "Read meter at end of supply",
+      "description": "Read meter at end of supply Read the meter when the supply period ends."
+    },
+    {
+      "code": "BV",
+      "name": "Replace if necessary",
+      "description": "Replace if necessary Replace the item if necessary."
+    },
+    {
+      "code": "BW",
+      "name": "Replace",
+      "description": "Replace Replace the item."
+    },
+    {
+      "code": "BX",
+      "name": "Do not replace",
+      "description": "Do not replace Do not replace the item."
+    },
+    {
+      "code": "BY",
+      "name": "Remedial action for incorrect account number",
+      "description": "Remedial action for incorrect account number Instruction to take the appropriate remedial action to correct the referenced account number."
+    },
+    {
+      "code": "BZ",
+      "name": "Remedial action for unknown account",
+      "description": "Remedial action for unknown account Instruction to take the appropriate remedial action because the referenced account is not known."
+    },
+    {
+      "code": "CA",
+      "name": "Remedial action for account frozen by legal authorities",
+      "description": "Remedial action for account frozen by legal authorities Instruction to take the appropriate remedial action because the referenced account has been frozen by legal authorities."
+    },
+    {
+      "code": "CB",
+      "name": "Remedial action for deceased account holder",
+      "description": "Remedial action for deceased account holder Instruction to take remedial action that is appropriate because the holder of the referenced account is dead."
+    },
+    {
+      "code": "CC",
+      "name": "Remedial action for refusal by account owner or ultimate",
+      "description": "Remedial action for refusal by account owner or ultimate beneficiary Instruction to take the appropriate remedial action because the account owner or ultimate beneficiary has refused to accept the transaction."
+    },
+    {
+      "code": "CD",
+      "name": "Remedial action for unjustified charges claim on",
+      "description": "Remedial action for unjustified charges claim on beneficiary Instruction to take the appropriate remedial action because it is claimed that the charges on the beneficiary are unjustified."
+    },
+    {
+      "code": "CE",
+      "name": "Remedial action for unrecognised destination bank or branch",
+      "description": "Remedial action for unrecognised destination bank or branch identification Instruction to take the appropriate remedial action because the destination bank or branch identification is not recognised."
+    },
+    {
+      "code": "CF",
+      "name": "Remedial action for closed destination account",
+      "description": "Remedial action for closed destination account Instruction to take the appropriate remedial action beause the destination account has been closed."
+    },
+    {
+      "code": "CG",
+      "name": "Remedial action for transaction over credit limit",
+      "description": "Remedial action for transaction over credit limit Instruction to take the appropriate remedial action because the transaction exceeds an agreed credit limit."
+    },
+    {
+      "code": "CH",
+      "name": "Remedial action for disallowed transaction type",
+      "description": "Remedial action for disallowed transaction type Instruction to take the appropriate remedial action because the type of transaction is not allowed."
+    },
+    {
+      "code": "CI",
+      "name": "Remedial action for insufficient funds",
+      "description": "Remedial action for insufficient funds Instruction to take the appropriate remedial action because of insufficient funds."
+    },
+    {
+      "code": "CJ",
+      "name": "Remedial action for no prior mandate in place",
+      "description": "Remedial action for no prior mandate in place Instruction to take the appropriate remedial action because no mandate has been agreed beforehand."
+    },
+    {
+      "code": "CK",
+      "name": "Remedial action for revoked mandate",
+      "description": "Remedial action for revoked mandate Instruction to take the appropriate remedial action because the mandate has been revoked."
+    },
+    {
+      "code": "CL",
+      "name": "Remedial action for unknown party",
+      "description": "Remedial action for unknown party Instruction to take the appropriate remedial action because a party is unknown."
+    },
+    {
+      "code": "CM",
+      "name": "Remedial action for incorrect bank information",
+      "description": "Remedial action for incorrect bank information Instruction to take the appropriate remedial action because the specified bank information is incorrect or invalid."
+    },
+    {
+      "code": "CN",
+      "name": "Remedial action for duplicated transaction",
+      "description": "Remedial action for duplicated transaction Instruction to take the appropriate remedial action because a transaction has been duplicated."
+    },
+    {
+      "code": "CO",
+      "name": "Convert",
+      "description": "Convert Convert the message into other format."
+    },
+    {
+      "code": "CP",
+      "name": "Remedial action for transaction not completed for a reason",
+      "description": "Remedial action for transaction not completed for a reason that cannot be disclosed Instructs the recipient of the returned message to take the appropriate remedial action when the transaction has been rejected for a reason that, for legal or other reasons, cannot be disclosed."
+    },
+    {
+      "code": "CS",
+      "name": "Send by courier services",
+      "description": "Send by courier services Send the item(s) by courier services."
+    },
+    {
+      "code": "CZ",
+      "name": "Specific clearing",
+      "description": "Specific clearing Item(s) are subject to specific clearing."
+    },
+    {
+      "code": "DA",
+      "name": "Without",
+      "description": "Without The bank advising the documentary credit is not requested to confirm the credit."
+    },
+    {
+      "code": "DB",
+      "name": "May add",
+      "description": "May add The bank advising the documentary credit may add its confirmation to the documentary credit."
+    },
+    {
+      "code": "DC",
+      "name": "Confirm",
+      "description": "Confirm The bank advising the documentary credit is requested to confirm the credit."
+    },
+    {
+      "code": "DD",
+      "name": "By registered mail",
+      "description": "By registered mail Issue documentary credit by registered mail."
+    },
+    {
+      "code": "DE",
+      "name": "By courier service",
+      "description": "By courier service Issue documentary credit by courier service."
+    },
+    {
+      "code": "DF",
+      "name": "By teletransmission",
+      "description": "By teletransmission Issue documentary credit by teletransmission."
+    },
+    {
+      "code": "DG",
+      "name": "Preadvice by teletransmission",
+      "description": "Preadvice by teletransmission Preadvise documentary credit by teletransmission."
+    },
+    {
+      "code": "DH",
+      "name": "By courier service in one set",
+      "description": "By courier service in one set Deliver documents in one set by courier service."
+    },
+    {
+      "code": "DI",
+      "name": "By courier service in two sets",
+      "description": "By courier service in two sets Deliver documents in two sets by courier service."
+    },
+    {
+      "code": "DJ",
+      "name": "By registered mail in one set",
+      "description": "By registered mail in one set Deliver documents in one set by registered mail."
+    },
+    {
+      "code": "DK",
+      "name": "By registered mail in two sets",
+      "description": "By registered mail in two sets Deliver documents in two sets by registered mail."
+    },
+    {
+      "code": "DN",
+      "name": "Per teletransmission",
+      "description": "Per teletransmission Deliver documents by teletransmission."
+    },
+    {
+      "code": "DO",
+      "name": "Advise beneficiary by phone",
+      "description": "Advise beneficiary by phone Advise beneficiary of documentary credit by phone."
+    },
+    {
+      "code": "DP",
+      "name": "Late presentation of documents within documentary credit",
+      "description": "Late presentation of documents within documentary credit validity acceptable Late presentation of documents with the documentary credit validity is acceptable."
+    },
+    {
+      "code": "EI",
+      "name": "EDI",
+      "description": "EDI Instructions to advise beneficiary by EDI."
+    },
+    {
+      "code": "EM",
+      "name": "Electronic mail",
+      "description": "Electronic mail Instructions to advise beneficiary by electronic mail."
+    },
+    {
+      "code": "EX",
+      "name": "Expedite",
+      "description": "Expedite Forward the information to requested party immediately."
+    },
+    {
+      "code": "IM",
+      "name": "Send by regular mail",
+      "description": "Send by regular mail Send the tem(s) by regular mail."
+    },
+    {
+      "code": "PT",
+      "name": "Print",
+      "description": "Print Print the item(s)."
+    },
+    {
+      "code": "QC",
+      "name": "Quality control held",
+      "description": "Quality control held Goods to be held from distribution by stockholder until a quality control assessment is completed by the manufacturer."
+    },
+    {
+      "code": "QE",
+      "name": "Quality control embargo",
+      "description": "Quality control embargo Quality control assessment is negative, goods are to be held from distribution by stockholder."
+    },
+    {
+      "code": "RL",
+      "name": "Released",
+      "description": "Released Goods are released by manufacturer for distribution by stockholder."
+    },
+    {
+      "code": "RM",
+      "name": "Send by registered mail",
+      "description": "Send by registered mail Send the item(s) by registered mail."
+    },
+    {
+      "code": "SW",
+      "name": "S.W.I.F.T.",
+      "description": "S.W.I.F.T. Instructions to advise beneficiary by S.W.I.F.T."
+    },
+    {
+      "code": "SX",
+      "name": "Take once a day",
+      "description": "Take once a day To be taken once daily."
+    },
+    {
+      "code": "SY",
+      "name": "Take two times a day",
+      "description": "Take two times a day To be taken two times each day."
+    },
+    {
+      "code": "SZ",
+      "name": "Take three times a day",
+      "description": "Take three times a day To be taken three times each day."
+    },
+    {
+      "code": "TA",
+      "name": "Take four times a day",
+      "description": "Take four times a day To be taken four times daily."
+    }
+  ]
+}

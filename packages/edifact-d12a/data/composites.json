@@ -1,0 +1,6168 @@
+[
+  {
+    "code": "C001",
+    "name": "TRANSPORT MEANS",
+    "description": "Code and/or name identifying the type of means of transport.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8179",
+        "name": "Transport means description code",
+        "mandatory": false,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "8178",
+        "name": "Transport means description",
+        "mandatory": false,
+        "dataType": "an..17"
+      }
+    ]
+  },
+  {
+    "code": "C002",
+    "name": "DOCUMENT/MESSAGE NAME",
+    "description": "Identification of a type of document/message by code or name. Code preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1001",
+        "name": "Document name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1000",
+        "name": "Document name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C003",
+    "name": "POWER TYPE",
+    "description": "To specify the type of power.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7041",
+        "name": "Power type code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7040",
+        "name": "Power type description",
+        "mandatory": false,
+        "dataType": "an..17"
+      }
+    ]
+  },
+  {
+    "code": "C004",
+    "name": "EVENT CATEGORY",
+    "description": "To specify the event category.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9637",
+        "name": "Event category description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9636",
+        "name": "Event category description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C008",
+    "name": "MONETARY AMOUNT FUNCTION DETAIL",
+    "description": "To provide the detail of a monetary amount function.",
+    "components": []
+  },
+  {
+    "code": "C009",
+    "name": "INFORMATION CATEGORY",
+    "description": "To specify the category of information.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4149",
+        "name": "Information category description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9614",
+        "name": "Information category description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C010",
+    "name": "INFORMATION TYPE",
+    "description": "To specify the type of information.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4473",
+        "name": "Information type code",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4472",
+        "name": "Information type",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C011",
+    "name": "INFORMATION DETAIL",
+    "description": "To provide the information details.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4151",
+        "name": "Information detail description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4150",
+        "name": "Information detail description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C012",
+    "name": "PROCESSING INDICATOR",
+    "description": "Identification of the processing indicator.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7365",
+        "name": "Processing indicator description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7364",
+        "name": "Processing indicator description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C019",
+    "name": "PAYMENT TERMS",
+    "description": "Terms of payment information.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4277",
+        "name": "Payment terms description identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4276",
+        "name": "Payment terms description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C030",
+    "name": "EVENT TYPE",
+    "description": "To specify the type of event.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9171",
+        "name": "Event type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9170",
+        "name": "Event type description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C040",
+    "name": "CARRIER",
+    "description": "Identification of a carrier by code and/or by name. Code preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3127",
+        "name": "Carrier identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3126",
+        "name": "Carrier name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C042",
+    "name": "NATIONALITY DETAILS",
+    "description": "To specify a nationality.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3293",
+        "name": "Nationality name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3292",
+        "name": "Nationality name",
+        "mandatory": false,
+        "dataType": "a..35"
+      }
+    ]
+  },
+  {
+    "code": "C045",
+    "name": "BILL LEVEL IDENTIFICATION",
+    "description": "A sequenced collection of facetted codes used for multiple indexing purposes.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7436",
+        "name": "Level one identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "7438",
+        "name": "Level two identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "7440",
+        "name": "Level three identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "7442",
+        "name": "Level four identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "7444",
+        "name": "Level five identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 60,
+        "elementCode": "7446",
+        "name": "Level six identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      }
+    ]
+  },
+  {
+    "code": "C049",
+    "name": "REMUNERATION TYPE IDENTIFICATION",
+    "description": "Identification of the type of a remuneration.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5315",
+        "name": "Remuneration type name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5314",
+        "name": "Remuneration type name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "5314",
+        "name": "Remuneration type name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C056",
+    "name": "CONTACT DETAILS",
+    "description": "Code and/or name of a contact such as a department or employee. Code preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3413",
+        "name": "Contact identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "3412",
+        "name": "Contact name",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C058",
+    "name": "NAME AND ADDRESS",
+    "description": "Unstructured name and address: one to five lines.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3124",
+        "name": "Name and address description",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "3124",
+        "name": "Name and address description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "3124",
+        "name": "Name and address description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 40,
+        "elementCode": "3124",
+        "name": "Name and address description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "3124",
+        "name": "Name and address description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C059",
+    "name": "STREET",
+    "description": "Street address and/or PO Box number in a structured address: one to four lines.",
+    "components": []
+  },
+  {
+    "code": "C063",
+    "name": "EVENT IDENTIFICATION",
+    "description": "To identify an event.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9173",
+        "name": "Event description code",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9172",
+        "name": "Event",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C076",
+    "name": "COMMUNICATION CONTACT",
+    "description": "Communication number of a department or employee in a specified channel.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3148",
+        "name": "Communication address identifier",
+        "mandatory": true,
+        "dataType": "an..512"
+      },
+      {
+        "position": 20,
+        "elementCode": "3155",
+        "name": "Communication means type code",
+        "mandatory": true,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C077",
+    "name": "FILE IDENTIFICATION",
+    "description": "To identify a file.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1508",
+        "name": "File name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7008",
+        "name": "Item description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C078",
+    "name": "ACCOUNT HOLDER IDENTIFICATION",
+    "description": "Identification of an account holder by account number and/or account holder name in one or two lines. Number preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3194",
+        "name": "Account holder identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "3192",
+        "name": "Account holder name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "3192",
+        "name": "Account holder name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 40,
+        "elementCode": "6345",
+        "name": "Currency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C079",
+    "name": "COMPUTER ENVIRONMENT IDENTIFICATION",
+    "description": "To identify parts of a computer environment.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1511",
+        "name": "Computer environment name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1510",
+        "name": "Computer environment name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 60,
+        "elementCode": "1058",
+        "name": "Release identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 70,
+        "elementCode": "7402",
+        "name": "Object identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C080",
+    "name": "PARTY NAME",
+    "description": "Identification of a transaction party by name, one to five lines. Party name may be formatted.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": true,
+        "dataType": "an..70"
+      },
+      {
+        "position": 20,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 30,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 40,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 50,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 60,
+        "elementCode": "3045",
+        "name": "Party name format code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C082",
+    "name": "PARTY IDENTIFICATION DETAILS",
+    "description": "Identification of a transaction party by code.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3039",
+        "name": "Party identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C085",
+    "name": "MARITAL STATUS DETAILS",
+    "description": "To specify the marital status of a person.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3479",
+        "name": "Marital status description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3478",
+        "name": "Marital status description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C088",
+    "name": "INSTITUTION IDENTIFICATION",
+    "description": "Identification of a financial institution by code branch number, or name and name of place. Code or branch number preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3433",
+        "name": "Institution name code",
+        "mandatory": false,
+        "dataType": "an..11"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3434",
+        "name": "Institution branch identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 60,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 70,
+        "elementCode": "3432",
+        "name": "Institution name",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 80,
+        "elementCode": "3436",
+        "name": "Institution branch location name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C090",
+    "name": "ADDRESS DETAILS",
+    "description": "To specify the details of an address.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3477",
+        "name": "Address format code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3286",
+        "name": "Address component description",
+        "mandatory": true,
+        "dataType": "an..70"
+      },
+      {
+        "position": 30,
+        "elementCode": "3286",
+        "name": "Address component description",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 40,
+        "elementCode": "3286",
+        "name": "Address component description",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 50,
+        "elementCode": "3286",
+        "name": "Address component description",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 60,
+        "elementCode": "3286",
+        "name": "Address component description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C099",
+    "name": "FILE DETAILS",
+    "description": "To define details relevant to a file.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1516",
+        "name": "File format name",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 30,
+        "elementCode": "1503",
+        "name": "Data format description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1502",
+        "name": "Data format description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C100",
+    "name": "TERMS OF DELIVERY OR TRANSPORT",
+    "description": "Terms of delivery or transport code from a specified source.",
+    "components": []
+  },
+  {
+    "code": "C101",
+    "name": "RELIGION DETAILS",
+    "description": "To specify the religion of a person.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3483",
+        "name": "Religion name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3482",
+        "name": "Religion name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C106",
+    "name": "DOCUMENT/MESSAGE IDENTIFICATION",
+    "description": "Identification of a document/message by its number and eventually its version or revision.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1004",
+        "name": "Document identifier",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 20,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 30,
+        "elementCode": "1060",
+        "name": "Revision identifier",
+        "mandatory": false,
+        "dataType": "an..6"
+      }
+    ]
+  },
+  {
+    "code": "C107",
+    "name": "TEXT REFERENCE",
+    "description": "Coded reference to a standard text and its source.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4441",
+        "name": "Free text description code",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C108",
+    "name": "TEXT LITERAL",
+    "description": "Free text; one to five lines.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4440",
+        "name": "Free text",
+        "mandatory": true,
+        "dataType": "an..512"
+      },
+      {
+        "position": 20,
+        "elementCode": "4440",
+        "name": "Free text",
+        "mandatory": false,
+        "dataType": "an..512"
+      },
+      {
+        "position": 30,
+        "elementCode": "4440",
+        "name": "Free text",
+        "mandatory": false,
+        "dataType": "an..512"
+      },
+      {
+        "position": 40,
+        "elementCode": "4440",
+        "name": "Free text",
+        "mandatory": false,
+        "dataType": "an..512"
+      },
+      {
+        "position": 50,
+        "elementCode": "4440",
+        "name": "Free text",
+        "mandatory": false,
+        "dataType": "an..512"
+      }
+    ]
+  },
+  {
+    "code": "C128",
+    "name": "RATE DETAILS",
+    "description": "Rate per unit and rate basis.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5419",
+        "name": "Rate type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "5420",
+        "name": "Unit price basis rate",
+        "mandatory": true
+      },
+      {
+        "position": 30,
+        "elementCode": "5284",
+        "name": "Unit price basis quantity",
+        "mandatory": false
+      },
+      {
+        "position": 40,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C138",
+    "name": "PRICE MULTIPLIER INFORMATION",
+    "description": "Price multiplier and its identification.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5394",
+        "name": "Price multiplier rate",
+        "mandatory": true
+      },
+      {
+        "position": 20,
+        "elementCode": "5393",
+        "name": "Price multiplier type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C174",
+    "name": "VALUE/RANGE",
+    "description": "Measurement value and relevant minimum and maximum values of the measurement range.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": true,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "6314",
+        "name": "Measure",
+        "mandatory": false,
+        "dataType": "an..18"
+      },
+      {
+        "position": 30,
+        "elementCode": "6162",
+        "name": "Range minimum quantity",
+        "mandatory": false
+      },
+      {
+        "position": 40,
+        "elementCode": "6152",
+        "name": "Range maximum quantity",
+        "mandatory": false
+      },
+      {
+        "position": 50,
+        "elementCode": "6432",
+        "name": "Significant digits quantity",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C186",
+    "name": "QUANTITY DETAILS",
+    "description": "Quantity information in a transaction, qualified when relevant.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6063",
+        "name": "Quantity type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6060",
+        "name": "Quantity",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C200",
+    "name": "CHARGE",
+    "description": "Identification of a charge by code and/or by name.",
+    "components": []
+  },
+  {
+    "code": "C202",
+    "name": "PACKAGE TYPE",
+    "description": "Type of package by name or by code from a specified source.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7065",
+        "name": "Package type description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7064",
+        "name": "Type of packages",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C203",
+    "name": "RATE/TARIFF CLASS",
+    "description": "Identification of the applicable rate/tariff class.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5243",
+        "name": "Rate or tariff class description code",
+        "mandatory": true,
+        "dataType": "an..9"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5242",
+        "name": "Rate or tariff class description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "5275",
+        "name": "Supplementary rate or tariff code",
+        "mandatory": false,
+        "dataType": "an..6"
+      },
+      {
+        "position": 60,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 70,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 80,
+        "elementCode": "5275",
+        "name": "Supplementary rate or tariff code",
+        "mandatory": false,
+        "dataType": "an..6"
+      },
+      {
+        "position": 90,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 100,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C205",
+    "name": "HAZARD CODE",
+    "description": "The identification of the dangerous goods in code.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8351",
+        "name": "Hazard identification code",
+        "mandatory": true,
+        "dataType": "an..7"
+      }
+    ]
+  },
+  {
+    "code": "C206",
+    "name": "IDENTIFICATION NUMBER",
+    "description": "The identification of an object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7402",
+        "name": "Object identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "4405",
+        "name": "Status description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C208",
+    "name": "IDENTITY NUMBER RANGE",
+    "description": "Goods item identification numbers, start and end of consecutively numbered range.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7402",
+        "name": "Object identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7402",
+        "name": "Object identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C210",
+    "name": "MARKS & LABELS",
+    "description": "Shipping marks on packages in free text; one to ten lines.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 40,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 60,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 70,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 80,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 90,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 100,
+        "elementCode": "7102",
+        "name": "Shipping marks description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C211",
+    "name": "DIMENSIONS",
+    "description": "Specification of the dimensions of a transportable unit.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": true,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "6168",
+        "name": "Length measure",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "6140",
+        "name": "Width measure",
+        "mandatory": false
+      },
+      {
+        "position": 40,
+        "elementCode": "6008",
+        "name": "Height measure",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C212",
+    "name": "ITEM NUMBER IDENTIFICATION",
+    "description": "Goods identification for a specified source.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7140",
+        "name": "Item identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7143",
+        "name": "Item type identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C213",
+    "name": "NUMBER AND TYPE OF PACKAGES",
+    "description": "Number and type of individual parts of a shipment.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7224",
+        "name": "Package quantity",
+        "mandatory": false
+      },
+      {
+        "position": 20,
+        "elementCode": "7065",
+        "name": "Package type description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "7064",
+        "name": "Type of packages",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 60,
+        "elementCode": "7233",
+        "name": "Packaging related description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C214",
+    "name": "SPECIAL SERVICES IDENTIFICATION",
+    "description": "Identification of a special service by a code from a specified source or by description.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7161",
+        "name": "Special service description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7160",
+        "name": "Special service description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7160",
+        "name": "Special service description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C215",
+    "name": "SEAL ISSUER",
+    "description": "Identification of the issuer of a seal on equipment either by code or by name.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9303",
+        "name": "Sealing party name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9302",
+        "name": "Sealing party name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C218",
+    "name": "HAZARDOUS MATERIAL",
+    "description": "To specify a hazardous material.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7419",
+        "name": "Hazardous material category name code",
+        "mandatory": false,
+        "dataType": "an..7"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7418",
+        "name": "Hazardous material category name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C219",
+    "name": "MOVEMENT TYPE",
+    "description": "Description of type of service for movement of cargo.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8335",
+        "name": "Movement type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "8334",
+        "name": "Movement type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C220",
+    "name": "MODE OF TRANSPORT",
+    "description": "Method of transport code or name. Code preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8067",
+        "name": "Transport mode name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "8066",
+        "name": "Transport mode name",
+        "mandatory": false,
+        "dataType": "an..17"
+      }
+    ]
+  },
+  {
+    "code": "C222",
+    "name": "TRANSPORT IDENTIFICATION",
+    "description": "Code and/or name identifying the means of transport.",
+    "components": []
+  },
+  {
+    "code": "C223",
+    "name": "DANGEROUS GOODS SHIPMENT FLASHPOINT",
+    "description": "Temperature at which a vapor can be ignited as per ISO 1523/73.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7106",
+        "name": "Shipment flashpoint degree",
+        "mandatory": false
+      },
+      {
+        "position": 20,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C224",
+    "name": "EQUIPMENT SIZE AND TYPE",
+    "description": "Code and or name identifying size and type of equipment. Code preferred.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8155",
+        "name": "Equipment size and type description code",
+        "mandatory": false,
+        "dataType": "an..10"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "8154",
+        "name": "Equipment size and type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C229",
+    "name": "CHARGE CATEGORY",
+    "description": "Identification of a category or a zone of charges.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5237",
+        "name": "Charge category code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C231",
+    "name": "METHOD OF PAYMENT",
+    "description": "Code identifying the method of payment.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4215",
+        "name": "Transport charges payment method code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C232",
+    "name": "GOVERNMENT ACTION",
+    "description": "Function: To indicate the requirement for a specific governmental action and/or procedure or which specific procedure is valid for a specific part of the transport and cross-border transactions. (Note the red portion as change in the segment description.).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9415",
+        "name": "Government agency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "9411",
+        "name": "Government involvement code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "9417",
+        "name": "Government action code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9353",
+        "name": "Government procedure code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C233",
+    "name": "SERVICE",
+    "description": "To identify a service (which may constitute an additional component to a basic contract).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7273",
+        "name": "Service requirement code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7273",
+        "name": "Service requirement code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 60,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C234",
+    "name": "UNDG INFORMATION",
+    "description": "Information on dangerous goods, taken from the United Nations Dangerous Goods classification.",
+    "components": []
+  },
+  {
+    "code": "C235",
+    "name": "HAZARD IDENTIFICATION PLACARD DETAILS",
+    "description": "These numbers appear on the hazard identification placard required on the means of transport.",
+    "components": []
+  },
+  {
+    "code": "C236",
+    "name": "DANGEROUS GOODS LABEL",
+    "description": "Markings identifying the type of hazardous goods and similar information.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8246",
+        "name": "Dangerous goods marking identifier",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 20,
+        "elementCode": "8246",
+        "name": "Dangerous goods marking identifier",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 30,
+        "elementCode": "8246",
+        "name": "Dangerous goods marking identifier",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 40,
+        "elementCode": "8246",
+        "name": "Dangerous goods marking identifier",
+        "mandatory": false,
+        "dataType": "an..4"
+      }
+    ]
+  },
+  {
+    "code": "C237",
+    "name": "EQUIPMENT IDENTIFICATION",
+    "description": "Marks (letters/numbers) identifying equipment.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8260",
+        "name": "Equipment identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3207",
+        "name": "Country identifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C239",
+    "name": "TEMPERATURE SETTING",
+    "description": "The temperature under which the goods are (to be) stored or shipped.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6246",
+        "name": "Temperature degree",
+        "mandatory": false
+      },
+      {
+        "position": 20,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C240",
+    "name": "CHARACTERISTIC DESCRIPTION",
+    "description": "To provide a description of a characteristic.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7037",
+        "name": "Characteristic description code",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7036",
+        "name": "Characteristic description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7036",
+        "name": "Characteristic description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C241",
+    "name": "DUTY/TAX/FEE TYPE",
+    "description": "Code and/or name identifying duty, tax or fee.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5153",
+        "name": "Duty or tax or fee type name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5152",
+        "name": "Duty or tax or fee type name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C242",
+    "name": "PROCESS TYPE AND DESCRIPTION",
+    "description": "Identification of process type and description.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7187",
+        "name": "Process type description code",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7186",
+        "name": "Process type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7186",
+        "name": "Process type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C243",
+    "name": "DUTY/TAX/FEE DETAIL",
+    "description": "Rate of duty/tax/fee applicable to commodities or of tax applicable to services.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5279",
+        "name": "Duty or tax or fee rate code",
+        "mandatory": false,
+        "dataType": "an..7"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5278",
+        "name": "Duty or tax or fee rate",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "5273",
+        "name": "Duty or tax or fee rate basis code",
+        "mandatory": false,
+        "dataType": "an..12"
+      },
+      {
+        "position": 60,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 70,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C244",
+    "name": "TEST METHOD",
+    "description": "Specification of the test method employed.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4415",
+        "name": "Test method identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4416",
+        "name": "Test description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C246",
+    "name": "CUSTOMS IDENTITY CODES",
+    "description": "Specification of goods in terms of customs identity.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7361",
+        "name": "Customs goods identifier",
+        "mandatory": true,
+        "dataType": "an..18"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C270",
+    "name": "CONTROL",
+    "description": "Control total for checking integrity of a message or part of a message.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6069",
+        "name": "Control total type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6066",
+        "name": "Control total quantity",
+        "mandatory": true
+      },
+      {
+        "position": 30,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C272",
+    "name": "ITEM CHARACTERISTIC",
+    "description": "To provide the characteristic of the item being described.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7081",
+        "name": "Item characteristic code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C273",
+    "name": "ITEM DESCRIPTION",
+    "description": "Description of an item.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7009",
+        "name": "Item description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7008",
+        "name": "Item description",
+        "mandatory": false,
+        "dataType": "an..256"
+      },
+      {
+        "position": 50,
+        "elementCode": "7008",
+        "name": "Item description",
+        "mandatory": false,
+        "dataType": "an..256"
+      },
+      {
+        "position": 60,
+        "elementCode": "3453",
+        "name": "Language name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C279",
+    "name": "QUANTITY DIFFERENCE INFORMATION",
+    "description": "Information on quantity difference.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6064",
+        "name": "Variance quantity",
+        "mandatory": true
+      },
+      {
+        "position": 20,
+        "elementCode": "6063",
+        "name": "Quantity type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C280",
+    "name": "RANGE",
+    "description": "Range minimum and maximum limits.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": true,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "6162",
+        "name": "Range minimum quantity",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "6152",
+        "name": "Range maximum quantity",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C286",
+    "name": "SEQUENCE INFORMATION",
+    "description": "Identification of a sequence and source for sequencing.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1050",
+        "name": "Sequence position identifier",
+        "mandatory": true,
+        "dataType": "an..10"
+      },
+      {
+        "position": 20,
+        "elementCode": "1159",
+        "name": "Sequence identifier source code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C288",
+    "name": "PRODUCT GROUP",
+    "description": "To give product group information.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5389",
+        "name": "Product group name code",
+        "mandatory": false,
+        "dataType": "an..25"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5388",
+        "name": "Product group name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C289",
+    "name": "TUNNEL RESTRICTION",
+    "description": "To specify a restriction for transport through tunnels.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8461",
+        "name": "Tunnel Restriction Code",
+        "mandatory": false,
+        "dataType": "an..6"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C329",
+    "name": "PATTERN DESCRIPTION",
+    "description": "Shipment, delivery or production interval pattern and timing.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "2013",
+        "name": "Frequency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "2015",
+        "name": "Despatch pattern code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "2017",
+        "name": "Despatch pattern timing code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C330",
+    "name": "INSURANCE COVER TYPE",
+    "description": "To provide the insurance cover type.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4497",
+        "name": "Insurance cover type code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C331",
+    "name": "INSURANCE COVER DETAILS",
+    "description": "To provide the insurance cover details.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4495",
+        "name": "Insurance cover description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4494",
+        "name": "Insurance cover description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "4494",
+        "name": "Insurance cover description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C332",
+    "name": "SALES CHANNEL IDENTIFICATION",
+    "description": "Identification of sales channel for marketing data, sales, forecast, planning...",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3496",
+        "name": "Sales channel identifier",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C333",
+    "name": "INFORMATION REQUEST",
+    "description": "To specify the information requested in a responding message.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4511",
+        "name": "Requested information description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4510",
+        "name": "Requested information description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C401",
+    "name": "EXCESS TRANSPORTATION INFORMATION",
+    "description": "To provide details of reason for, and responsibility for, use of transportation other than normally utilized.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8457",
+        "name": "Excess transportation reason code",
+        "mandatory": true,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C402",
+    "name": "PACKAGE TYPE IDENTIFICATION",
+    "description": "Identification of the form in which goods are described.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7077",
+        "name": "Description format code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "7064",
+        "name": "Type of packages",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "7143",
+        "name": "Item type identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7064",
+        "name": "Type of packages",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7143",
+        "name": "Item type identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C501",
+    "name": "PERCENTAGE DETAILS",
+    "description": "Percentage relating to a specified basis.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5245",
+        "name": "Percentage type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "5482",
+        "name": "Percentage",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "5249",
+        "name": "Percentage basis identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C502",
+    "name": "MEASUREMENT DETAILS",
+    "description": "Identification of measurement type.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6313",
+        "name": "Measured attribute code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6321",
+        "name": "Measurement significance code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "6155",
+        "name": "Non-discrete measurement name code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "6154",
+        "name": "Non-discrete measurement name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C503",
+    "name": "DOCUMENT/MESSAGE DETAILS",
+    "description": "Identification of document/message by number, status, source and/or language.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1004",
+        "name": "Document identifier",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 20,
+        "elementCode": "1373",
+        "name": "Document status code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1366",
+        "name": "Document source description",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 40,
+        "elementCode": "3453",
+        "name": "Language name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 60,
+        "elementCode": "1060",
+        "name": "Revision identifier",
+        "mandatory": false,
+        "dataType": "an..6"
+      }
+    ]
+  },
+  {
+    "code": "C504",
+    "name": "CURRENCY DETAILS",
+    "description": "The usage to which a currency relates.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6347",
+        "name": "Currency usage code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6345",
+        "name": "Currency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "6343",
+        "name": "Currency type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "6348",
+        "name": "Currency rate",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C506",
+    "name": "REFERENCE",
+    "description": "Identification of a reference.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1153",
+        "name": "Reference code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1154",
+        "name": "Reference identifier",
+        "mandatory": false,
+        "dataType": "an..70"
+      },
+      {
+        "position": 30,
+        "elementCode": "1156",
+        "name": "Document line identifier",
+        "mandatory": false,
+        "dataType": "an..6"
+      },
+      {
+        "position": 40,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 50,
+        "elementCode": "1060",
+        "name": "Revision identifier",
+        "mandatory": false,
+        "dataType": "an..6"
+      }
+    ]
+  },
+  {
+    "code": "C507",
+    "name": "DATE/TIME/PERIOD",
+    "description": "Date and/or time, or period relevant to the specified date/time/period type.",
+    "components": []
+  },
+  {
+    "code": "C508",
+    "name": "LANGUAGE DETAILS",
+    "description": "To identify a language.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3453",
+        "name": "Language name code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3452",
+        "name": "Language name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C509",
+    "name": "PRICE INFORMATION",
+    "description": "Identification of price type, price and related details.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5125",
+        "name": "Price code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "5118",
+        "name": "Price amount",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "5375",
+        "name": "Price type code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5387",
+        "name": "Price specification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "5284",
+        "name": "Unit price basis quantity",
+        "mandatory": false
+      },
+      {
+        "position": 60,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C512",
+    "name": "SIZE DETAILS",
+    "description": "Information about the number of observations.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6173",
+        "name": "Size type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6174",
+        "name": "Size measure",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C514",
+    "name": "SAMPLE LOCATION DETAILS",
+    "description": "Identification of location within the specimen, from which the sample was taken.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3237",
+        "name": "Sample location description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3236",
+        "name": "Sample location description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C515",
+    "name": "TEST REASON",
+    "description": "To identify the reason for the test as specified.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4425",
+        "name": "Test reason name code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4424",
+        "name": "Test reason name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C516",
+    "name": "MONETARY AMOUNT",
+    "description": "Amount of goods or services stated as a monetary amount in a specified currency.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5025",
+        "name": "Monetary amount type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "5004",
+        "name": "Monetary amount",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "6345",
+        "name": "Currency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "6343",
+        "name": "Currency type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "4405",
+        "name": "Status description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C517",
+    "name": "LOCATION IDENTIFICATION",
+    "description": "Identification of a location by code or name.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3225",
+        "name": "Location identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3224",
+        "name": "Location name",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C519",
+    "name": "RELATED LOCATION ONE IDENTIFICATION",
+    "description": "Identification the first related location by code or name.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3223",
+        "name": "First related location identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3222",
+        "name": "First related location name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C521",
+    "name": "BUSINESS FUNCTION",
+    "description": "To specify a business reason.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4027",
+        "name": "Business function type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "4025",
+        "name": "Business function code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "4022",
+        "name": "Business description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C522",
+    "name": "INSTRUCTION",
+    "description": "To specify an instruction.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4403",
+        "name": "Instruction type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "4401",
+        "name": "Instruction description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "4400",
+        "name": "Instruction description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C523",
+    "name": "NUMBER OF UNIT DETAILS",
+    "description": "Identification of number of units and its purpose.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6350",
+        "name": "Units quantity",
+        "mandatory": false
+      },
+      {
+        "position": 20,
+        "elementCode": "6353",
+        "name": "Unit type code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C524",
+    "name": "HANDLING INSTRUCTIONS",
+    "description": "Instruction for the handling of goods, products or articles in shipment, storage etc.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4079",
+        "name": "Handling instruction description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4078",
+        "name": "Handling instruction description",
+        "mandatory": false,
+        "dataType": "an..512"
+      }
+    ]
+  },
+  {
+    "code": "C525",
+    "name": "PURPOSE OF CONVEYANCE CALL",
+    "description": "Description of the purpose of the call of the conveyance.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "8025",
+        "name": "Conveyance call purpose description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "8024",
+        "name": "Conveyance call purpose description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C526",
+    "name": "FREQUENCY DETAILS",
+    "description": "Number of samples collected per specified unit of measure.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6071",
+        "name": "Frequency code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "6072",
+        "name": "Frequency rate",
+        "mandatory": false
+      },
+      {
+        "position": 30,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      }
+    ]
+  },
+  {
+    "code": "C527",
+    "name": "STATISTICAL DETAILS",
+    "description": "Specifications related to statistical measurements.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6314",
+        "name": "Measure",
+        "mandatory": false,
+        "dataType": "an..18"
+      },
+      {
+        "position": 20,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      },
+      {
+        "position": 30,
+        "elementCode": "6313",
+        "name": "Measured attribute code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "6321",
+        "name": "Measurement significance code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C528",
+    "name": "COMMODITY/RATE DETAIL",
+    "description": "Identification of commodity/rates.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7357",
+        "name": "Commodity identification code",
+        "mandatory": false,
+        "dataType": "an..18"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C531",
+    "name": "PACKAGING DETAILS",
+    "description": "Packaging level and details, terms and conditions.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7075",
+        "name": "Packaging level code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "7233",
+        "name": "Packaging related description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "7073",
+        "name": "Packaging terms and conditions code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C532",
+    "name": "RETURNABLE PACKAGE DETAILS",
+    "description": "Indication of responsibility for payment and load contents of returnable packages.",
+    "components": []
+  },
+  {
+    "code": "C533",
+    "name": "DUTY/TAX/FEE ACCOUNT DETAIL",
+    "description": "Indication of account reference for duties, taxes and/or fees.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5289",
+        "name": "Duty or tax or fee account code",
+        "mandatory": true,
+        "dataType": "an..6"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C534",
+    "name": "PAYMENT INSTRUCTION DETAILS",
+    "description": "Indication of method of payment employed or to be employed.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4439",
+        "name": "Payment conditions code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "4431",
+        "name": "Payment guarantee means code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "4461",
+        "name": "Payment means code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 60,
+        "elementCode": "4435",
+        "name": "Payment channel code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C536",
+    "name": "CONTRACT AND CARRIAGE CONDITION",
+    "description": "To identify a contract and carriage condition.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4065",
+        "name": "Contract and carriage condition code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C537",
+    "name": "TRANSPORT PRIORITY",
+    "description": "To indicate the priority of requested transport service.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4219",
+        "name": "Transport service priority code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C543",
+    "name": "AGREEMENT TYPE IDENTIFICATION",
+    "description": "Identification of specific agreement type by code or name.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7431",
+        "name": "Agreement type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "7433",
+        "name": "Agreement type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "7434",
+        "name": "Agreement type description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C545",
+    "name": "INDEX IDENTIFICATION",
+    "description": "To identify an index.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5013",
+        "name": "Index code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "5027",
+        "name": "Index type identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C546",
+    "name": "INDEX VALUE",
+    "description": "To identify the value of an index.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5030",
+        "name": "Index text",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "5039",
+        "name": "Index representation code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C549",
+    "name": "MONETARY AMOUNT FUNCTION",
+    "description": "To identify the function of a monetary amount.",
+    "components": []
+  },
+  {
+    "code": "C550",
+    "name": "REQUIREMENT/CONDITION IDENTIFICATION",
+    "description": "To identify the specific rule/condition requirement.",
+    "components": []
+  },
+  {
+    "code": "C551",
+    "name": "BANK OPERATION",
+    "description": "Identification of a bank operation by code.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4383",
+        "name": "Bank operation code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C552",
+    "name": "ALLOWANCE/CHARGE INFORMATION",
+    "description": "Identification of allowance/charge information by number and/or code.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1230",
+        "name": "Allowance or charge identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "5189",
+        "name": "Allowance or charge identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C553",
+    "name": "RELATED LOCATION TWO IDENTIFICATION",
+    "description": "Identification of second related location by code or name.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3233",
+        "name": "Second related location identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3232",
+        "name": "Second related location name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C554",
+    "name": "RATE/TARIFF CLASS DETAIL",
+    "description": "Identification of the applicable rate/tariff class.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5243",
+        "name": "Rate or tariff class description code",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C555",
+    "name": "STATUS",
+    "description": "To specify a status.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4405",
+        "name": "Status description code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4404",
+        "name": "Status description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C556",
+    "name": "STATUS REASON",
+    "description": "To specify the reason for a status.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9013",
+        "name": "Status reason description code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9012",
+        "name": "Status reason description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C564",
+    "name": "PHYSICAL OR LOGICAL STATE INFORMATION",
+    "description": "To give information in coded or clear text form on the physical or logical state.",
+    "components": []
+  },
+  {
+    "code": "C585",
+    "name": "PRIORITY DETAILS",
+    "description": "To indicate a priority.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4037",
+        "name": "Priority description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4036",
+        "name": "Priority description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C593",
+    "name": "ACCOUNT IDENTIFICATION",
+    "description": "Identification of an account.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1147",
+        "name": "Account identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1148",
+        "name": "Account abbreviated name",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "1146",
+        "name": "Account name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 60,
+        "elementCode": "1146",
+        "name": "Account name",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 70,
+        "elementCode": "6345",
+        "name": "Currency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C595",
+    "name": "ACCOUNTING JOURNAL IDENTIFICATION",
+    "description": "Identification of an accounting journal.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1171",
+        "name": "Accounting journal identifier",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1170",
+        "name": "Accounting journal name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C596",
+    "name": "ACCOUNTING ENTRY TYPE DETAILS",
+    "description": "Identification of the type of entry included in an accounting journal.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4475",
+        "name": "Accounting entry type name code",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4474",
+        "name": "Accounting entry type name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C601",
+    "name": "STATUS CATEGORY",
+    "description": "To specify the category of the status.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9015",
+        "name": "Status category code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C701",
+    "name": "ERROR POINT DETAILS",
+    "description": "Indication of the point of error in a message.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1049",
+        "name": "Message section code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1052",
+        "name": "Message item identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 30,
+        "elementCode": "1054",
+        "name": "Message sub-item identifier",
+        "mandatory": false
+      }
+    ]
+  },
+  {
+    "code": "C702",
+    "name": "CODE SET IDENTIFICATION",
+    "description": "To identify a code set.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9150",
+        "name": "Simple data element tag identifier",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C703",
+    "name": "NATURE OF CARGO",
+    "description": "Rough classification of a type of cargo.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7085",
+        "name": "Cargo type classification code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C709",
+    "name": "MESSAGE IDENTIFIER",
+    "description": "Identification of the message.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1003",
+        "name": "Message type code",
+        "mandatory": true,
+        "dataType": "an..6"
+      },
+      {
+        "position": 20,
+        "elementCode": "1056",
+        "name": "Version identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 30,
+        "elementCode": "1058",
+        "name": "Release identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 40,
+        "elementCode": "1476",
+        "name": "Controlling agency identifier",
+        "mandatory": false,
+        "dataType": "an..2"
+      }
+    ]
+  },
+  {
+    "code": "C770",
+    "name": "ARRAY CELL DETAILS",
+    "description": "To contain the data for a contiguous set of cells in an array.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9424",
+        "name": "Array cell data description",
+        "mandatory": false,
+        "dataType": "an..512"
+      }
+    ]
+  },
+  {
+    "code": "C778",
+    "name": "POSITION IDENTIFICATION",
+    "description": "To identify the position of an object in a structure containing the object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7164",
+        "name": "Hierarchical structure level identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "1050",
+        "name": "Sequence position identifier",
+        "mandatory": false,
+        "dataType": "an..10"
+      }
+    ]
+  },
+  {
+    "code": "C779",
+    "name": "ARRAY STRUCTURE IDENTIFICATION",
+    "description": "The identification of an array structure.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9428",
+        "name": "Array cell structure identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C780",
+    "name": "VALUE LIST IDENTIFICATION",
+    "description": "The identification of a coded or non coded value list.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1518",
+        "name": "Value list identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C782",
+    "name": "DATA SET IDENTIFICATION",
+    "description": "The identification of a data set.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1520",
+        "name": "Data set identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C783",
+    "name": "FOOTNOTE SET IDENTIFICATION",
+    "description": "The identification of a set of footnotes.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9430",
+        "name": "Footnote set identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C784",
+    "name": "FOOTNOTE IDENTIFICATION",
+    "description": "The identification of a footnote.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9432",
+        "name": "Footnote identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C785",
+    "name": "STATISTICAL CONCEPT IDENTIFICATION",
+    "description": "The identification of a statistical concept.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6434",
+        "name": "Statistical concept identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C786",
+    "name": "STRUCTURE COMPONENT IDENTIFICATION",
+    "description": "The identification of a structure component.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7512",
+        "name": "Structure component identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "7405",
+        "name": "Object identification code qualifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C811",
+    "name": "QUESTION DETAILS",
+    "description": "To specify a question.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4057",
+        "name": "Question description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4056",
+        "name": "Question description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C812",
+    "name": "RESPONSE DETAILS",
+    "description": "To specify a response to a question, in code or text.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4345",
+        "name": "Response description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4344",
+        "name": "Response description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C814",
+    "name": "SAFETY SECTION",
+    "description": "To identify the safety section to which information relates.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4046",
+        "name": "Safety section number",
+        "mandatory": true
+      },
+      {
+        "position": 20,
+        "elementCode": "4044",
+        "name": "Safety section name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C815",
+    "name": "ADDITIONAL SAFETY INFORMATION",
+    "description": "To identify additional safety information.",
+    "components": []
+  },
+  {
+    "code": "C816",
+    "name": "NAME COMPONENT DETAILS",
+    "description": "To specify a name component.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3405",
+        "name": "Name component type code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3398",
+        "name": "Name component description",
+        "mandatory": false,
+        "dataType": "an..256"
+      },
+      {
+        "position": 30,
+        "elementCode": "3401",
+        "name": "Name component usage code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3295",
+        "name": "Name original alphabet code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C817",
+    "name": "ADDRESS USAGE",
+    "description": "To describe the usage of an address.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3299",
+        "name": "Address purpose code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3131",
+        "name": "Address type code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "3475",
+        "name": "Address status code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C818",
+    "name": "PERSON INHERITED CHARACTERISTIC DETAILS",
+    "description": "To specify an inherited characteristic of a person.",
+    "components": []
+  },
+  {
+    "code": "C819",
+    "name": "COUNTRY SUBDIVISION DETAILS",
+    "description": "To specify a country subdivision, such as state, canton, county, prefecture.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3229",
+        "name": "Country subdivision identifier",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3228",
+        "name": "Country subdivision name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C820",
+    "name": "PREMIUM CALCULATION COMPONENT",
+    "description": "To identify the component affecting premium calculation.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4521",
+        "name": "Premium calculation component identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C821",
+    "name": "TYPE OF DAMAGE",
+    "description": "To specify the type of damage to an object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7501",
+        "name": "Damage type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7500",
+        "name": "Damage type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C822",
+    "name": "DAMAGE AREA",
+    "description": "To specify where the damage is on an object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7503",
+        "name": "Damage area description code",
+        "mandatory": false,
+        "dataType": "an..4"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7502",
+        "name": "Damage area description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C823",
+    "name": "TYPE OF UNIT/COMPONENT",
+    "description": "To identify the type of unit/component of an object (e.g. lock, door, tyre).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7505",
+        "name": "Unit or component type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7504",
+        "name": "Unit or component type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C824",
+    "name": "COMPONENT MATERIAL",
+    "description": "To identify the material of which a component is composed (e.g. steel, plastics).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7507",
+        "name": "Component material description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7506",
+        "name": "Component material description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C825",
+    "name": "DAMAGE SEVERITY",
+    "description": "To specify the severity of damage to an object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7509",
+        "name": "Damage severity description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7508",
+        "name": "Damage severity description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C826",
+    "name": "ACTION",
+    "description": "To indicate an action which has been taken or is to be taken (e.g. in relation to a certain object).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "1229",
+        "name": "Action code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "1228",
+        "name": "Action description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C827",
+    "name": "TYPE OF MARKING",
+    "description": "Specification of the type of marking that reflects the method that was used and the conventions adhered to for marking (e.g. of packages).",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7511",
+        "name": "Marking type code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C828",
+    "name": "CLINICAL INTERVENTION DETAILS",
+    "description": "To specify a clinical intervention.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9437",
+        "name": "Clinical intervention description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9436",
+        "name": "Clinical intervention description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C829",
+    "name": "SUB-LINE INFORMATION",
+    "description": "To provide an indication that a segment or segment group is used to contain sub-line or sub-line item information and to optionally enable the sub-line to be identified.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5495",
+        "name": "Sub-line indicator code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1082",
+        "name": "Line item identifier",
+        "mandatory": false,
+        "dataType": "an..6"
+      }
+    ]
+  },
+  {
+    "code": "C830",
+    "name": "PROCESS IDENTIFICATION DETAILS",
+    "description": "To identify the details of a specific process.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7191",
+        "name": "Process description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7190",
+        "name": "Process description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C831",
+    "name": "RESULT DETAILS",
+    "description": "To specify a value.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6314",
+        "name": "Measure",
+        "mandatory": false,
+        "dataType": "an..18"
+      },
+      {
+        "position": 20,
+        "elementCode": "6321",
+        "name": "Measurement significance code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 30,
+        "elementCode": "6155",
+        "name": "Non-discrete measurement name code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 50,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 60,
+        "elementCode": "6154",
+        "name": "Non-discrete measurement name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C836",
+    "name": "CLINICAL INFORMATION DETAILS",
+    "description": "To specify an item of clinical information.",
+    "components": []
+  },
+  {
+    "code": "C837",
+    "name": "CERTAINTY DETAILS",
+    "description": "To specify the certainty.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4049",
+        "name": "Certainty description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4048",
+        "name": "Certainty description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C838",
+    "name": "DOSAGE DETAILS",
+    "description": "To specify a dosage.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6083",
+        "name": "Dosage description identifier",
+        "mandatory": false,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "6082",
+        "name": "Dosage description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C839",
+    "name": "ATTENDEE CATEGORY",
+    "description": "To specify the category of the attendee.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7459",
+        "name": "Attendee category description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7458",
+        "name": "Attendee category description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C840",
+    "name": "ATTENDANCE ADMISSION DETAILS",
+    "description": "To specify type of admission.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9445",
+        "name": "Admission type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9444",
+        "name": "Admission type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C841",
+    "name": "ATTENDANCE DISCHARGE DETAILS",
+    "description": "To specify type of discharge.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9447",
+        "name": "Discharge type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9446",
+        "name": "Discharge type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C844",
+    "name": "ORGANISATION CLASSIFICATION DETAIL",
+    "description": "To specify details regarding the class of an organisation.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3083",
+        "name": "Organisational class name code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3082",
+        "name": "Organisational class name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C848",
+    "name": "MEASUREMENT UNIT DETAILS",
+    "description": "To specify a measurement unit.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "6411",
+        "name": "Measurement unit code",
+        "mandatory": false,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "6410",
+        "name": "Measurement unit name",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C849",
+    "name": "PARTIES TO INSTRUCTION",
+    "description": "Identify the sending and receiving parties of the instruction.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3301",
+        "name": "Enacting party identifier",
+        "mandatory": true,
+        "dataType": "an..35"
+      },
+      {
+        "position": 20,
+        "elementCode": "3285",
+        "name": "Instruction receiving party identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C850",
+    "name": "STATUS OF INSTRUCTION",
+    "description": "Provides information regarding the status of an instruction.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4405",
+        "name": "Status description code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "3036",
+        "name": "Party name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C851",
+    "name": "RISK OBJECT TYPE",
+    "description": "Specification of a type of risk object.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7179",
+        "name": "Risk object type identifier",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C852",
+    "name": "RISK OBJECT SUB-TYPE",
+    "description": "To provide identification details for a risk object sub-type.",
+    "components": []
+  },
+  {
+    "code": "C853",
+    "name": "ERROR SEGMENT POINT DETAILS",
+    "description": "To indicate the exact segment location of an application error within a message.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9166",
+        "name": "Segment tag identifier",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1050",
+        "name": "Sequence position identifier",
+        "mandatory": false,
+        "dataType": "an..10"
+      },
+      {
+        "position": 30,
+        "elementCode": "1159",
+        "name": "Sequence identifier source code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C878",
+    "name": "CHARGE/ALLOWANCE ACCOUNT",
+    "description": "Identification of the account for charge or allowance.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "3434",
+        "name": "Institution branch identifier",
+        "mandatory": true,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "3194",
+        "name": "Account holder identifier",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "6345",
+        "name": "Currency identification code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C889",
+    "name": "CHARACTERISTIC VALUE",
+    "description": "To provide the value of a characteristic.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7111",
+        "name": "Characteristic value description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7110",
+        "name": "Characteristic value description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "7110",
+        "name": "Characteristic value description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C901",
+    "name": "APPLICATION ERROR DETAIL",
+    "description": "Code assigned by the recipient of a message to indicate a data validation error condition.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9321",
+        "name": "Application error code",
+        "mandatory": true,
+        "dataType": "an..8"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C941",
+    "name": "RELATIONSHIP",
+    "description": "Identification and/or description of a relationship.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9143",
+        "name": "Relationship description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9142",
+        "name": "Relationship description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C942",
+    "name": "MEMBERSHIP CATEGORY",
+    "description": "Identification and/or description of a membership category for a member of a scheme or group.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7451",
+        "name": "Membership category description code",
+        "mandatory": true,
+        "dataType": "an..4"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7450",
+        "name": "Membership category description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C944",
+    "name": "MEMBERSHIP STATUS",
+    "description": "Code and/or description of membership status.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7453",
+        "name": "Membership status description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "7452",
+        "name": "Membership status description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C945",
+    "name": "MEMBERSHIP LEVEL",
+    "description": "Identification of a membership level.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "7455",
+        "name": "Membership level code qualifier",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "7457",
+        "name": "Membership level description code",
+        "mandatory": false,
+        "dataType": "an..9"
+      },
+      {
+        "position": 30,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 40,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 50,
+        "elementCode": "7456",
+        "name": "Membership level description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C948",
+    "name": "EMPLOYMENT CATEGORY",
+    "description": "Code and/or description of an employment category.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9005",
+        "name": "Employment category description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9004",
+        "name": "Employment category description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C950",
+    "name": "QUALIFICATION CLASSIFICATION",
+    "description": "Qualification classification description and/or code. This specifies the trade, skill, professional or similar qualification category.",
+    "components": []
+  },
+  {
+    "code": "C951",
+    "name": "OCCUPATION",
+    "description": "Description of an occupation.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9009",
+        "name": "Occupation description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9008",
+        "name": "Occupation description",
+        "mandatory": false,
+        "dataType": "an..35"
+      },
+      {
+        "position": 50,
+        "elementCode": "9008",
+        "name": "Occupation description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C953",
+    "name": "CONTRIBUTION TYPE",
+    "description": "Identification of the type of a contribution to a scheme or group.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "5049",
+        "name": "Contribution type description code",
+        "mandatory": true,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "5048",
+        "name": "Contribution type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C955",
+    "name": "ATTRIBUTE TYPE",
+    "description": "Identification of the type of attribute.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9021",
+        "name": "Attribute type description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9020",
+        "name": "Attribute type description",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C956",
+    "name": "ATTRIBUTE DETAIL",
+    "description": "Identification of the attribute related to an entity.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9019",
+        "name": "Attribute description code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9018",
+        "name": "Attribute description",
+        "mandatory": false,
+        "dataType": "an..256"
+      }
+    ]
+  },
+  {
+    "code": "C960",
+    "name": "REASON FOR CHANGE",
+    "description": "Code and/or description of the reason for a change.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4295",
+        "name": "Change reason description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4294",
+        "name": "Change reason description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C961",
+    "name": "FORMULA COMPLEXITY",
+    "description": "Identification of the complexity of a formula.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9505",
+        "name": "Formula complexity code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      }
+    ]
+  },
+  {
+    "code": "C970",
+    "name": "CLAUSE NAME",
+    "description": "Identification of a clause in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4069",
+        "name": "Clause name code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4068",
+        "name": "Clause name",
+        "mandatory": false,
+        "dataType": "an..70"
+      }
+    ]
+  },
+  {
+    "code": "C971",
+    "name": "PROVISO TYPE",
+    "description": "Specification of the proviso type in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4073",
+        "name": "Proviso type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4072",
+        "name": "Proviso type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C972",
+    "name": "PROVISO CALCULATION",
+    "description": "Specification of the proviso calculation in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "4075",
+        "name": "Proviso calculation description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "4074",
+        "name": "Proviso calculation description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C973",
+    "name": "APPLICABILITY TYPE",
+    "description": "Specification of the applicability type in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9049",
+        "name": "Applicability type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9048",
+        "name": "Applicability type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C974",
+    "name": "BASIS TYPE",
+    "description": "Specification of the basis in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "9047",
+        "name": "Basis type description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "9046",
+        "name": "Basis type description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  },
+  {
+    "code": "C977",
+    "name": "PERIOD DETAIL",
+    "description": "Specification of the period detail in coded or clear form.",
+    "components": [
+      {
+        "position": 10,
+        "elementCode": "2119",
+        "name": "Period detail description code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 20,
+        "elementCode": "1131",
+        "name": "Code list identification code",
+        "mandatory": false,
+        "dataType": "an..17"
+      },
+      {
+        "position": 30,
+        "elementCode": "3055",
+        "name": "Code list responsible agency code",
+        "mandatory": false,
+        "dataType": "an..3"
+      },
+      {
+        "position": 40,
+        "elementCode": "2118",
+        "name": "Period detail description",
+        "mandatory": false,
+        "dataType": "an..35"
+      }
+    ]
+  }
+]

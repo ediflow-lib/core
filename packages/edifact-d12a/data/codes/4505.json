@@ -1,0 +1,47 @@
+{
+  "code": "4505",
+  "name": "Credit cover request type code",
+  "description": "Code specifying the type of request for credit cover.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Multi-currency credit cover",
+      "description": "Multi-currency credit cover Invoices in currencies other than the currency of the credit cover are expected."
+    },
+    {
+      "code": "2",
+      "name": "Request new limit",
+      "description": "Request new limit Seller requests new limit."
+    },
+    {
+      "code": "3",
+      "name": "Request increased limit",
+      "description": "Request increased limit Seller requests increase of existing limit."
+    },
+    {
+      "code": "4",
+      "name": "Request for preliminary assessment",
+      "description": "Request for preliminary assessment Request for information to be used during negotiation with prospective clients (sellers)."
+    },
+    {
+      "code": "5",
+      "name": "Request for new account only",
+      "description": "Request for new account only Request for opening new account only."
+    },
+    {
+      "code": "6",
+      "name": "Cancellation",
+      "description": "Cancellation Request to cancel an existing credit cover."
+    },
+    {
+      "code": "7",
+      "name": "Reduction",
+      "description": "Reduction Request to reduce an existing credit cover."
+    },
+    {
+      "code": "8",
+      "name": "Prolongation of credit cover",
+      "description": "Prolongation of credit cover Request to prolong an existing credit cover."
+    }
+  ]
+}

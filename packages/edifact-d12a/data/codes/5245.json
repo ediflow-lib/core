@@ -1,0 +1,812 @@
+{
+  "code": "5245",
+  "name": "Percentage type code qualifier",
+  "description": "Code qualifying the type of percentage.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Allowance",
+      "description": "Allowance (5044) Allowance expressed as a percentage."
+    },
+    {
+      "code": "2",
+      "name": "Charge",
+      "description": "Charge (5044) Charge expressed as a percentage."
+    },
+    {
+      "code": "3",
+      "name": "Monetary amount adjustment percentage",
+      "description": "Monetary amount adjustment percentage [5044] Specification of any additional charges, dues or deductions, expressed as a percentage."
+    },
+    {
+      "code": "4",
+      "name": "Reinsurer's share",
+      "description": "Reinsurer's share To indicate the share of the reinsurer in a treaty."
+    },
+    {
+      "code": "5",
+      "name": "Entry percentage",
+      "description": "Entry percentage To indicate the percentage used for the specified entry (e.g. commission %, deposits % ...)."
+    },
+    {
+      "code": "6",
+      "name": "Quality/yield",
+      "description": "Quality/yield (5482) The percentage of specified material in the total product."
+    },
+    {
+      "code": "7",
+      "name": "Percentage of invoice",
+      "description": "Percentage of invoice Code specifying the percentage of invoice."
+    },
+    {
+      "code": "8",
+      "name": "Reduction/surcharge percentage",
+      "description": "Reduction/surcharge percentage Percentage to calculate a reduction/surcharge."
+    },
+    {
+      "code": "9",
+      "name": "Adjustment",
+      "description": "Adjustment Code specifying the adjustment expressed as a percentage."
+    },
+    {
+      "code": "10",
+      "name": "Bureau share",
+      "description": "Bureau share London insurance market bureau (bureau share in reinsurance treaty)."
+    },
+    {
+      "code": "11",
+      "name": "Buffer stock requirement",
+      "description": "Buffer stock requirement Anticipated additional consumption to safeguard against unforeseen shortages or demands."
+    },
+    {
+      "code": "12",
+      "name": "Discount",
+      "description": "Discount Discount expressed as a percentage."
+    },
+    {
+      "code": "13",
+      "name": "Amount tolerance",
+      "description": "Amount tolerance Tolerance of amount in percentage."
+    },
+    {
+      "code": "14",
+      "name": "Percentage of note",
+      "description": "Percentage of note Percentage of debit or credit note."
+    },
+    {
+      "code": "15",
+      "name": "Penalty percentage",
+      "description": "Penalty percentage Code specifying the penalty percentage."
+    },
+    {
+      "code": "16",
+      "name": "Interest percentage",
+      "description": "Interest percentage Code specifying the interest percentage."
+    },
+    {
+      "code": "17",
+      "name": "Part of documentary credit amount",
+      "description": "Part of documentary credit amount Part of documentary credit amount in percentage subject to sight payment, deferred payment or acceptance when the documentary credit is available by mixed payment."
+    },
+    {
+      "code": "18",
+      "name": "Percentage credit note",
+      "description": "Percentage credit note Percentage of a credit note."
+    },
+    {
+      "code": "19",
+      "name": "Percentage debit note",
+      "description": "Percentage debit note Percentage of a debit note."
+    },
+    {
+      "code": "20",
+      "name": "Percentage of insurance",
+      "description": "Percentage of insurance Code specifying the percentage of insurance."
+    },
+    {
+      "code": "21",
+      "name": "Own risk percentage",
+      "description": "Own risk percentage Percentage of total amount which is not covered by credit cover."
+    },
+    {
+      "code": "22",
+      "name": "Transferred VAT percentage",
+      "description": "Transferred VAT percentage VAT percentage rate for which accountability is being transferred from one party to another. VAT means: Value added tax."
+    },
+    {
+      "code": "23",
+      "name": "Part time employment",
+      "description": "Part time employment The time a person is employed expressed as a percentage of the equivalent full time employment."
+    },
+    {
+      "code": "24",
+      "name": "Voluntary contribution",
+      "description": "Voluntary contribution Contribution to a superannuation scheme which is not compulsory, expressed as a percentage of salary."
+    },
+    {
+      "code": "25",
+      "name": "Attribute factor",
+      "description": "Attribute factor To indicate a mathematical factor, expressed as a percentage , used to multiply a specified attribute item."
+    },
+    {
+      "code": "26",
+      "name": "Additional contribution",
+      "description": "Additional contribution Contribution to a scheme in addition to the normal contribution, expressed as a percentage (in superannuation usually expressed as a percentage of salary)."
+    },
+    {
+      "code": "27",
+      "name": "Benefits allocation",
+      "description": "Benefits allocation Percentage of total benefits allocated to a person."
+    },
+    {
+      "code": "28",
+      "name": "Attribute classification",
+      "description": "Attribute classification To indicate the percentage of a specified attribute classification (e.g. percentage contributed before a defined year for superannuation purposes)."
+    },
+    {
+      "code": "29",
+      "name": "Renegotiation trigger upper limit",
+      "description": "Renegotiation trigger upper limit The percentage rise in a currency rate of exchange which would result in renegotiation of prices."
+    },
+    {
+      "code": "30",
+      "name": "Renegotiation trigger lower limit",
+      "description": "Renegotiation trigger lower limit The percentage fall in a currency rate of exchange which would result in renegotiation of prices."
+    },
+    {
+      "code": "31",
+      "name": "Material reduction factor",
+      "description": "Material reduction factor The percentage reduction in constituent material which occurs in the production process."
+    },
+    {
+      "code": "32",
+      "name": "Acceptable price difference",
+      "description": "Acceptable price difference The maximum percentage increase or decrease resulting from price recalculation which will not result in price renegotiation."
+    },
+    {
+      "code": "33",
+      "name": "Share of buyer's total requirement",
+      "description": "Share of buyer's total requirement The percentage of the buyer's total acquisition requirement for the referenced or similar item which will be ordered from the named supplier."
+    },
+    {
+      "code": "34",
+      "name": "Price increase",
+      "description": "Price increase The percentage increase in price of the referenced item since the last notification."
+    },
+    {
+      "code": "35",
+      "name": "Share of tool cost paid by buyer",
+      "description": "Share of tool cost paid by buyer The percentage of the cost of tooling which will be paid by the buyer."
+    },
+    {
+      "code": "36",
+      "name": "Volume capacity usage",
+      "description": "Volume capacity usage Percentage of the volume capacity used."
+    },
+    {
+      "code": "37",
+      "name": "Weight capacity usage",
+      "description": "Weight capacity usage Percentage of the weight capacity used."
+    },
+    {
+      "code": "38",
+      "name": "Loading length capacity usage",
+      "description": "Loading length capacity usage Percentage of the loading length capacity used."
+    },
+    {
+      "code": "39",
+      "name": "Share of packaging cost paid by vendor",
+      "description": "Share of packaging cost paid by vendor The percentage of the cost of packaging which will be paid by the vendor."
+    },
+    {
+      "code": "40",
+      "name": "Reduction percentage",
+      "description": "Reduction percentage Reduction from an amount/price expressed in a percentage."
+    },
+    {
+      "code": "41",
+      "name": "Surcharge percentage",
+      "description": "Surcharge percentage Additional amount expressed in a percentage."
+    },
+    {
+      "code": "42",
+      "name": "Local content",
+      "description": "Local content To indicate the percentage of a products local (i.e. domestic) content."
+    },
+    {
+      "code": "43",
+      "name": "Chargeback",
+      "description": "Chargeback Percentage amount charged back."
+    },
+    {
+      "code": "44",
+      "name": "Gross turnover commission",
+      "description": "Gross turnover commission Percentage of gross turnover used to calculate commission."
+    },
+    {
+      "code": "45",
+      "name": "Progress payment percentage",
+      "description": "Progress payment percentage Indicates the rate applying for a progress payment."
+    },
+    {
+      "code": "46",
+      "name": "Offset",
+      "description": "Offset Indicates the figure agreed between parties to calculate an offset."
+    },
+    {
+      "code": "47",
+      "name": "Prepaid payment percentage",
+      "description": "Prepaid payment percentage A code to indicate the percentage of the prepayment."
+    },
+    {
+      "code": "48",
+      "name": "Percentage of work completed",
+      "description": "Percentage of work completed A code to indicate the percentage of work completed."
+    },
+    {
+      "code": "49",
+      "name": "Underwriting rating",
+      "description": "Underwriting rating Table used for mortality or morbidity rating."
+    },
+    {
+      "code": "50",
+      "name": "Mortgage interest rate",
+      "description": "Mortgage interest rate Rate of interest used in amortization of a mortgage."
+    },
+    {
+      "code": "51",
+      "name": "Maximum cost of living adjustment rate",
+      "description": "Maximum cost of living adjustment rate Maximum rate of the cost of living adjustment."
+    },
+    {
+      "code": "52",
+      "name": "Humidity",
+      "description": "Humidity The amount of moisture in the air."
+    },
+    {
+      "code": "53",
+      "name": "Minimum cost of living adjustment rate",
+      "description": "Minimum cost of living adjustment rate Minimum rate of a cost of living adjustment."
+    },
+    {
+      "code": "54",
+      "name": "Contractor cost share",
+      "description": "Contractor cost share The cost share borne by the contractor."
+    },
+    {
+      "code": "55",
+      "name": "Government cost share",
+      "description": "Government cost share The cost share borne by the Government."
+    },
+    {
+      "code": "56",
+      "name": "Progress payment liquidation percentage",
+      "description": "Progress payment liquidation percentage The percentage applied to the liquidation of progress payments."
+    },
+    {
+      "code": "57",
+      "name": "Fee percentage",
+      "description": "Fee percentage The percentage applied to determine the fee."
+    },
+    {
+      "code": "58",
+      "name": "Resource availability",
+      "description": "Resource availability Percentage of resource availability."
+    },
+    {
+      "code": "59",
+      "name": "Resource efficiency",
+      "description": "Resource efficiency Percentage of resource efficiency."
+    },
+    {
+      "code": "60",
+      "name": "Rework yield",
+      "description": "Rework yield Percentage yield from rework effort."
+    },
+    {
+      "code": "61",
+      "name": "Gross profit margin",
+      "description": "Gross profit margin Percentage calculated by dividing gross profit by net sales."
+    },
+    {
+      "code": "62",
+      "name": "Remaining work",
+      "description": "Remaining work Percentage of remaining work."
+    },
+    {
+      "code": "63",
+      "name": "Actual work percent completed",
+      "description": "Actual work percent completed Percentage of actual work completed."
+    },
+    {
+      "code": "64",
+      "name": "Earned value",
+      "description": "Earned value Percentage representing earned value."
+    },
+    {
+      "code": "65",
+      "name": "Cost escalation",
+      "description": "Cost escalation Percentage of cost escalation."
+    },
+    {
+      "code": "66",
+      "name": "Loss",
+      "description": "Loss To identify the percentage of the loss."
+    },
+    {
+      "code": "67",
+      "name": "Cost of living adjustment rate",
+      "description": "Cost of living adjustment rate To specify a cost of living adjustment rate."
+    },
+    {
+      "code": "68",
+      "name": "Percentage of due amount",
+      "description": "Percentage of due amount The percentage of an amount due."
+    },
+    {
+      "code": "69",
+      "name": "Asset ownership",
+      "description": "Asset ownership Percent owned of an asset."
+    },
+    {
+      "code": "70",
+      "name": "Common stock reported",
+      "description": "Common stock reported Percentage of common stock reported."
+    },
+    {
+      "code": "71",
+      "name": "Preferred stock reported",
+      "description": "Preferred stock reported Percentage of preferred stock reported."
+    },
+    {
+      "code": "72",
+      "name": "Ordinary profit to sales",
+      "description": "Ordinary profit to sales The ratio of ordinary profit to sales expressed as a percentage."
+    },
+    {
+      "code": "73",
+      "name": "Invested capital ratio",
+      "description": "Invested capital ratio Ratio of invested capital to total capital."
+    },
+    {
+      "code": "74",
+      "name": "Equity to loan ratio",
+      "description": "Equity to loan ratio Ratio of equity to outstanding loans expressed as a percentage."
+    },
+    {
+      "code": "75",
+      "name": "Equity to deposit ratio",
+      "description": "Equity to deposit ratio Ratio of equity to deposits expressed as a percentage."
+    },
+    {
+      "code": "76",
+      "name": "Loan to deposit ratio",
+      "description": "Loan to deposit ratio Ratio of outstanding loans to deposits expressed as a percentage."
+    },
+    {
+      "code": "77",
+      "name": "Percent of total",
+      "description": "Percent of total Percentage of the total value."
+    },
+    {
+      "code": "78",
+      "name": "Participation",
+      "description": "Participation Participation expressed as a percentage."
+    },
+    {
+      "code": "79",
+      "name": "Indebtedness",
+      "description": "Indebtedness Indebtedness expressed as a percentage."
+    },
+    {
+      "code": "80",
+      "name": "Liquid ratio",
+      "description": "Liquid ratio Ratio of liquid assets to current liabilities."
+    },
+    {
+      "code": "81",
+      "name": "Net worth to total assets",
+      "description": "Net worth to total assets Ratio of net worth to total assets expressed as a percentage."
+    },
+    {
+      "code": "82",
+      "name": "Subcontracted",
+      "description": "Subcontracted Percentage of work that is subcontracted."
+    },
+    {
+      "code": "83",
+      "name": "Sales per employee",
+      "description": "Sales per employee Ratio of sales per employee expressed as a percentage."
+    },
+    {
+      "code": "84",
+      "name": "Sales to net working capital",
+      "description": "Sales to net working capital Ratio of sales to net working capital expressed as a percentage."
+    },
+    {
+      "code": "85",
+      "name": "Total liability to net worth",
+      "description": "Total liability to net worth Ratio of total liability to net worth expressed as a percentage."
+    },
+    {
+      "code": "86",
+      "name": "Assets to sales",
+      "description": "Assets to sales Ratio of assets to sales expressed as a percentage."
+    },
+    {
+      "code": "87",
+      "name": "Capital per employee",
+      "description": "Capital per employee Ratio of capital per employee expressed as a percentage."
+    },
+    {
+      "code": "88",
+      "name": "Costs per employee",
+      "description": "Costs per employee Ratio of costs per employee expressed as a percentage."
+    },
+    {
+      "code": "89",
+      "name": "Accounts payable to sales",
+      "description": "Accounts payable to sales Ratio of accounts payable to sales expressed as a percentage."
+    },
+    {
+      "code": "90",
+      "name": "Current liabilities to net worth",
+      "description": "Current liabilities to net worth Ratio of current liabilities to net worth expressed as a percentage."
+    },
+    {
+      "code": "91",
+      "name": "Current liabilities to inventory",
+      "description": "Current liabilities to inventory Ratio of current liabilities to inventory value expressed as a percentage."
+    },
+    {
+      "code": "92",
+      "name": "Current ratio",
+      "description": "Current ratio Ratio of current assets to current liabilities expressed as a percentage."
+    },
+    {
+      "code": "93",
+      "name": "Fixed assets to net worth",
+      "description": "Fixed assets to net worth Ratio of fixed assets to net worth expressed as a percentage."
+    },
+    {
+      "code": "94",
+      "name": "Inventory turnover",
+      "description": "Inventory turnover Net annual sales divided by inventory."
+    },
+    {
+      "code": "95",
+      "name": "Quick ratio",
+      "description": "Quick ratio Ratio of cash and accounts receivable to current liabilities."
+    },
+    {
+      "code": "96",
+      "name": "Resources retained for project",
+      "description": "Resources retained for project The percentage of resources that must be retained for a project."
+    },
+    {
+      "code": "97",
+      "name": "Return on assets",
+      "description": "Return on assets Net profit after taxes divided by total assets."
+    },
+    {
+      "code": "98",
+      "name": "Return on sales ratio",
+      "description": "Return on sales ratio Net profit after taxes divided by net annual sales."
+    },
+    {
+      "code": "99",
+      "name": "Return on capital ratio",
+      "description": "Return on capital ratio Net profit after taxes divided by capital."
+    },
+    {
+      "code": "100",
+      "name": "Shareholders' return ratio",
+      "description": "Shareholders' return ratio Net profit after taxes divided by net worth."
+    },
+    {
+      "code": "101",
+      "name": "Contracts obtained by bid",
+      "description": "Contracts obtained by bid Percentage of contracts obtained by bid."
+    },
+    {
+      "code": "102",
+      "name": "Contracts obtained by negotiation",
+      "description": "Contracts obtained by negotiation Percentage of contracts obtained by negotiation."
+    },
+    {
+      "code": "103",
+      "name": "Cost plus basis",
+      "description": "Cost plus basis Percentage of business conducted on a cost plus basis."
+    },
+    {
+      "code": "104",
+      "name": "Lump sum payments",
+      "description": "Lump sum payments Percentage of lump sum payments to total payments."
+    },
+    {
+      "code": "105",
+      "name": "Purchases on letter of credit",
+      "description": "Purchases on letter of credit Percentage of purchases on letter of credit to total purchases."
+    },
+    {
+      "code": "106",
+      "name": "Purchases on floor plan",
+      "description": "Purchases on floor plan Percentage of purchases on floor plan basis to total purchases."
+    },
+    {
+      "code": "107",
+      "name": "Change in sales",
+      "description": "Change in sales Percentage change in sales."
+    },
+    {
+      "code": "108",
+      "name": "Change in profit",
+      "description": "Change in profit Percentage change in profit."
+    },
+    {
+      "code": "109",
+      "name": "Damage",
+      "description": "Damage Damage expressed as a percentage."
+    },
+    {
+      "code": "110",
+      "name": "Interest on liabilities",
+      "description": "Interest on liabilities Paid finance cost divided by total liabilities."
+    },
+    {
+      "code": "111",
+      "name": "Risk margin",
+      "description": "Risk margin Total assets divided by interest on liabilities."
+    },
+    {
+      "code": "112",
+      "name": "Liability ratio",
+      "description": "Liability ratio Ratio of liability to net worth expressed as a percentage."
+    },
+    {
+      "code": "113",
+      "name": "Interest cover",
+      "description": "Interest cover Paid finance cost divided by total income."
+    },
+    {
+      "code": "114",
+      "name": "Change",
+      "description": "Change Change expressed as a percentage."
+    },
+    {
+      "code": "115",
+      "name": "Expense",
+      "description": "Expense Expenses expressed as a percentage."
+    },
+    {
+      "code": "116",
+      "name": "Market share",
+      "description": "Market share Share of the market business held by an entity."
+    },
+    {
+      "code": "117",
+      "name": "Owned by small shareholders",
+      "description": "Owned by small shareholders Percentage of an entity that is owned by small shareholders."
+    },
+    {
+      "code": "118",
+      "name": "Paid in capital",
+      "description": "Paid in capital Percentage of capital paid in by shareholders."
+    },
+    {
+      "code": "119",
+      "name": "Previous participation",
+      "description": "Previous participation Previous participation expressed as a percentage."
+    },
+    {
+      "code": "120",
+      "name": "Fixed fee",
+      "description": "Fixed fee Fixed fee expressed as a percentage."
+    },
+    {
+      "code": "121",
+      "name": "Asset turnover",
+      "description": "Asset turnover Net annual sales divided by total assets."
+    },
+    {
+      "code": "122",
+      "name": "Percentage of total payment",
+      "description": "Percentage of total payment A percentage based on a total payment."
+    },
+    {
+      "code": "123",
+      "name": "Territorial trade percent",
+      "description": "Territorial trade percent Territorial trade expressed as a percentage."
+    },
+    {
+      "code": "124",
+      "name": "Change in taxable income",
+      "description": "Change in taxable income Change in the taxable income from one period to another."
+    },
+    {
+      "code": "125",
+      "name": "Sales by type of customer",
+      "description": "Sales by type of customer Percentage of sales by type of customer."
+    },
+    {
+      "code": "126",
+      "name": "Previous period percent of total",
+      "description": "Previous period percent of total The percent of the total from a preceding period."
+    },
+    {
+      "code": "127",
+      "name": "Minority interest return on equity",
+      "description": "Minority interest return on equity The return on equity achieved by a minority interest in an entity."
+    },
+    {
+      "code": "128",
+      "name": "Change in ordinary income",
+      "description": "Change in ordinary income Change in ordinary income from one period to another."
+    },
+    {
+      "code": "129",
+      "name": "Net sales to fixed assets",
+      "description": "Net sales to fixed assets The ratio of net sales to fixed assets expressed as a percentage."
+    },
+    {
+      "code": "130",
+      "name": "Total liabilities to total assets",
+      "description": "Total liabilities to total assets The ratio of total liabilities to total assets expressed as a percentage."
+    },
+    {
+      "code": "131",
+      "name": "Profit percentage",
+      "description": "Profit percentage The percentage applied to determine the profit."
+    },
+    {
+      "code": "132",
+      "name": "Contractor above cost share",
+      "description": "Contractor above cost share The percentage of the cost over-run incurred by the contractor."
+    },
+    {
+      "code": "133",
+      "name": "Contractor below cost share",
+      "description": "Contractor below cost share The percentage of the cost under-run allocated to the contractor."
+    },
+    {
+      "code": "134",
+      "name": "Current liabilities to total liabilities",
+      "description": "Current liabilities to total liabilities Ratio calculated by dividing current liabilities by total liabilities expressed as a percentage."
+    },
+    {
+      "code": "135",
+      "name": "Current assets to total liabilities",
+      "description": "Current assets to total liabilities Ratio calculated by dividing current assets by total liabilities expressed as a percentage."
+    },
+    {
+      "code": "136",
+      "name": "Vessel experience factor",
+      "description": "Vessel experience factor The compilation of the total calculated volume vessel measurements, adjusted for on-board quantity or remaining on-board quantity, compared with the total calculated volume shore measurements expressed as a percentage."
+    },
+    {
+      "code": "137",
+      "name": "Vessel load ratio",
+      "description": "Vessel load ratio The total calculated volume by vessel measurement upon sailing, less on-board quantity, divided by the total calculated volume by shore measurement at loading expressed as a percentage."
+    },
+    {
+      "code": "138",
+      "name": "Vessel discharge ratio",
+      "description": "Vessel discharge ratio The total calculated volume by vessel measurement on arrival, less remaining on board, divided by the total calculated volume by shore measurement discharge expressed as a percentage."
+    },
+    {
+      "code": "139",
+      "name": "National average percentile",
+      "description": "National average percentile Relative ranking for a corresponding class to the national average."
+    },
+    {
+      "code": "140",
+      "name": "Industry average percentile",
+      "description": "Industry average percentile Relative ranking for a corresponding class to the industry average."
+    },
+    {
+      "code": "141",
+      "name": "Non-current assets to net worth",
+      "description": "Non-current assets to net worth The ratio of non-current assets to net worth expressed as a percentage."
+    },
+    {
+      "code": "142",
+      "name": "Non-current assets to total assets",
+      "description": "Non-current assets to total assets The ratio of non-current assets to total assets expressed as a percentage."
+    },
+    {
+      "code": "143",
+      "name": "Sales to current assets",
+      "description": "Sales to current assets The ratio of sales to current assets expressed as a percentage."
+    },
+    {
+      "code": "144",
+      "name": "Working capital to sales",
+      "description": "Working capital to sales The ratio of working capital to sales expressed as a percentage."
+    },
+    {
+      "code": "145",
+      "name": "Creditors to sales costs",
+      "description": "Creditors to sales costs The ratio of creditors to sales costs expressed as a percentage."
+    },
+    {
+      "code": "146",
+      "name": "Concentration",
+      "description": "Concentration Concentration expressed as a percentage value."
+    },
+    {
+      "code": "147",
+      "name": "Percentage of months before an instalment",
+      "description": "Percentage of months before an instalment The number of months before an instalment is made expressed as a percentage."
+    },
+    {
+      "code": "148",
+      "name": "Accounts receivable turnover",
+      "description": "Accounts receivable turnover Net annual sales divided by accounts receivable."
+    },
+    {
+      "code": "149",
+      "name": "Employee costs to value added ratio",
+      "description": "Employee costs to value added ratio Ratio of employee costs to total income minus raw materials and sales costs expressed as a percentage."
+    },
+    {
+      "code": "150",
+      "name": "Interest payable to net sales ratio",
+      "description": "Interest payable to net sales ratio Ratio of interest payable divided by net sales expressed as a percentage."
+    },
+    {
+      "code": "151",
+      "name": "Inventory to cost of goods sold ratio",
+      "description": "Inventory to cost of goods sold ratio Ratio of inventory divided by cost of goods sold expressed as a percentage."
+    },
+    {
+      "code": "152",
+      "name": "Liquid assets to sales ratio",
+      "description": "Liquid assets to sales ratio Ratio of liquid assets divided by net sales expressed as a percentage."
+    },
+    {
+      "code": "153",
+      "name": "Return on value added ratio",
+      "description": "Return on value added ratio Ratio of total income minus raw materials and services to net sales expressed as a percentage."
+    },
+    {
+      "code": "154",
+      "name": "Daily working capital need",
+      "description": "Daily working capital need The value of working capital divided by net sales multiplied by 360."
+    },
+    {
+      "code": "155",
+      "name": "Financial expenses to net sales ratio",
+      "description": "Financial expenses to net sales ratio The ratio of financial expenses to net sales expressed as a percentage."
+    },
+    {
+      "code": "156",
+      "name": "Inflation",
+      "description": "Inflation Percentage representing a general increase in prices and fall in the purchasing value of money."
+    },
+    {
+      "code": "157",
+      "name": "Probability of financial distress",
+      "description": "Probability of financial distress The probability of financial distress expressed as a percentage."
+    },
+    {
+      "code": "158",
+      "name": "Gearing",
+      "description": "Gearing Ratio of the total short and long term loans divided by shareholder equity expressed as a percentage."
+    },
+    {
+      "code": "159",
+      "name": "Nestable percentage",
+      "description": "Nestable percentage Extent expressed as a percentage to which an item can be nested within an identical item."
+    },
+    {
+      "code": "160",
+      "name": "Data reliability percentage",
+      "description": "Data reliability percentage To identify the degree of the reliability of the data."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined As agreed by the trading partners."
+    }
+  ]
+}

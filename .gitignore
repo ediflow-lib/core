@@ -50,6 +50,20 @@ web_modules/
 # Optional npm cache directory
 .npm
 
+# Private/Business Documentation (WICHTIG!)
+docs/private/
+*SECRET*
+*REVENUE*
+
+# IDE specific
+.idea/
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+.npm
+
 # Optional eslint cache
 .eslintcache
 
@@ -137,3 +151,18 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Private documentation (not for Git)
+docs/private/
+
+# Private generator scripts (nur lokal)
+scripts/
+
+# EDIFACT/X12 specification files (UN/EDIFACT Directories)
+# Diese sind urheberrechtlich geschützt und dürfen nicht öffentlich verteilt werden
+resources/
+
+# Generated JSON data (distributed via NPM packages)
+# Nur Schema-Definitionen (YAML) werden in Git committed
+directories/*/data/
+

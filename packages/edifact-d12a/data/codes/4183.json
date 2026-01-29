@@ -1,0 +1,1047 @@
+{
+  "code": "4183",
+  "name": "Special condition code",
+  "description": "Code specifying a special condition.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Item for national preference",
+      "description": "Item for national preference Item concerned is applicable to national preference calculation."
+    },
+    {
+      "code": "2",
+      "name": "Item qualifying for payment discount",
+      "description": "Item qualifying for payment discount Item concerned is applicable for settlement/payment discount calculation."
+    },
+    {
+      "code": "3",
+      "name": "Item not qualifying for payment discount",
+      "description": "Item not qualifying for payment discount Item concerned is not applicable for settlement/payment discount calculation."
+    },
+    {
+      "code": "4",
+      "name": "Urgent delivery of reserved goods",
+      "description": "Urgent delivery of reserved goods Urgent delivery of goods for which a reservation was made."
+    },
+    {
+      "code": "5",
+      "name": "Item not to be included in bonus calculation",
+      "description": "Item not to be included in bonus calculation Item concerned is not applicable for bonus calculation."
+    },
+    {
+      "code": "6",
+      "name": "Subject to bonus",
+      "description": "Subject to bonus Item concerned is applicable for bonus calculation."
+    },
+    {
+      "code": "7",
+      "name": "Subject to commission",
+      "description": "Subject to commission Item concerned is applicable for commission calculation."
+    },
+    {
+      "code": "8",
+      "name": "Subject to discount",
+      "description": "Subject to discount Item concerned is applicable for discount calculation."
+    },
+    {
+      "code": "9",
+      "name": "Freely available in EEC",
+      "description": "Freely available in EEC Item should be available freely within the European Economic Community."
+    },
+    {
+      "code": "10",
+      "name": "Subject to settlement discount",
+      "description": "Subject to settlement discount Item concerned is applicable for the overall settlement discount."
+    },
+    {
+      "code": "11",
+      "name": "Price includes excise",
+      "description": "Price includes excise The stated price is inclusive of excise."
+    },
+    {
+      "code": "12",
+      "name": "Price includes tax",
+      "description": "Price includes tax The stated price is inclusive of tax."
+    },
+    {
+      "code": "13",
+      "name": "Price include duty",
+      "description": "Price include duty The stated price is inclusive of duty."
+    },
+    {
+      "code": "14",
+      "name": "Not subject to commission",
+      "description": "Not subject to commission Item concerned is not applicable for commission calculation."
+    },
+    {
+      "code": "15",
+      "name": "Not subject to discount",
+      "description": "Not subject to discount Item concerned is not applicable for discount calculation."
+    },
+    {
+      "code": "16",
+      "name": "Subject to embargo restriction",
+      "description": "Subject to embargo restriction Item concerned is subject to embargo restriction."
+    },
+    {
+      "code": "17",
+      "name": "Item not subject to embargo restrictions",
+      "description": "Item not subject to embargo restrictions Item concerned is not subject to embargo restriction."
+    },
+    {
+      "code": "18",
+      "name": "Item subject to national export restrictions",
+      "description": "Item subject to national export restrictions Item concerned requires export declaration."
+    },
+    {
+      "code": "19",
+      "name": "Item not subject to national export restrictions",
+      "description": "Item not subject to national export restrictions Item concerned does not require export declaration."
+    },
+    {
+      "code": "20",
+      "name": "Item subject to import restrictions",
+      "description": "Item subject to import restrictions Item concerned is liable to import restrictions defined by relevant national authority."
+    },
+    {
+      "code": "21",
+      "name": "Item not subject to import restrictions",
+      "description": "Item not subject to import restrictions Item concerned is not liable to import restrictions defined by relevant national authority."
+    },
+    {
+      "code": "22",
+      "name": "Signed",
+      "description": "Signed Document has to be signed."
+    },
+    {
+      "code": "23",
+      "name": "Authenticated",
+      "description": "Authenticated Document/message has to have official or regulatory approval."
+    },
+    {
+      "code": "24",
+      "name": "Original(s) to be certified",
+      "description": "Original(s) to be certified Original document/message is to be certified by an official, or otherwise qualified, organization or person."
+    },
+    {
+      "code": "25",
+      "name": "Original(s) to be legalized",
+      "description": "Original(s) to be legalized Original document/message is to be issued under the legal requirements of a governmental authority."
+    },
+    {
+      "code": "26",
+      "name": "Quote documentary credit number",
+      "description": "Quote documentary credit number The documentary credit number of the issuing bank must be quoted on the document."
+    },
+    {
+      "code": "27",
+      "name": "Full set bill of lading",
+      "description": "Full set bill of lading Full set of bill of lading is required."
+    },
+    {
+      "code": "28",
+      "name": "Full set bill of lading less one original",
+      "description": "Full set bill of lading less one original Full set of bill of lading, less one original bill of lading, is required."
+    },
+    {
+      "code": "29",
+      "name": "Full set bill of lading less two originals",
+      "description": "Full set bill of lading less two originals Full set of bill of lading, less two originals bill of lading, is required."
+    },
+    {
+      "code": "30",
+      "name": "Shipped on board",
+      "description": "Shipped on board Transport document is to be marked \"shipped on board\"."
+    },
+    {
+      "code": "31",
+      "name": "Freight prepaid to be marked",
+      "description": "Freight prepaid to be marked Transport document is to be marked \"freight prepaid\"."
+    },
+    {
+      "code": "32",
+      "name": "Freight collect to be marked",
+      "description": "Freight collect to be marked Transport document is to be marked \"freight collect\"."
+    },
+    {
+      "code": "33",
+      "name": "Issued to order and blank endorsed",
+      "description": "Issued to order and blank endorsed Document is to be issued to order and must be blank endorsed."
+    },
+    {
+      "code": "34",
+      "name": "Issued and/or endorsed to the order of",
+      "description": "Issued and/or endorsed to the order of Document is to be issued and/or endorsed to the order of a specific party."
+    },
+    {
+      "code": "35",
+      "name": "Consigned to",
+      "description": "Consigned to Transport document is to be consigned to a specified party."
+    },
+    {
+      "code": "36",
+      "name": "Notify",
+      "description": "Notify Transport document is to be marked \"notify party\"."
+    },
+    {
+      "code": "37",
+      "name": "Issued by",
+      "description": "Issued by Document is to be issued by a specified party."
+    },
+    {
+      "code": "38",
+      "name": "Charter party allowed",
+      "description": "Charter party allowed Charter party bill of lading is allowed."
+    },
+    {
+      "code": "39",
+      "name": "Loading on deck allowed",
+      "description": "Loading on deck allowed Loading of goods on deck is allowed."
+    },
+    {
+      "code": "40",
+      "name": "Quote actual flight date and flight number",
+      "description": "Quote actual flight date and flight number Document/message must evidence the actual flight date and the flight number certifying air transportation and countersigned by the respective airline company."
+    },
+    {
+      "code": "41",
+      "name": "House AWB allowed",
+      "description": "House AWB allowed House air waybill is allowed."
+    },
+    {
+      "code": "42",
+      "name": "Express post receipt",
+      "description": "Express post receipt Express post receipt is required."
+    },
+    {
+      "code": "43",
+      "name": "Air parcel post receipt",
+      "description": "Air parcel post receipt Air parcel post receipt is required."
+    },
+    {
+      "code": "44",
+      "name": "Parcel post receipt",
+      "description": "Parcel post receipt Parcel post receipt is required."
+    },
+    {
+      "code": "45",
+      "name": "Issued to bearer",
+      "description": "Issued to bearer Document is to be issued to bearer."
+    },
+    {
+      "code": "46",
+      "name": "Full set of insurance certificate",
+      "description": "Full set of insurance certificate Full set of insurance certificate is required."
+    },
+    {
+      "code": "47",
+      "name": "Full set of insurance policy",
+      "description": "Full set of insurance policy Full set of insurance policy is required."
+    },
+    {
+      "code": "48",
+      "name": "Addressed to",
+      "description": "Addressed to Document is to be addressed to a specified party."
+    },
+    {
+      "code": "49",
+      "name": "Transmission by telecommunication",
+      "description": "Transmission by telecommunication Document is to be transmitted by telecommunication."
+    },
+    {
+      "code": "50",
+      "name": "Bill of exchange drawn on",
+      "description": "Bill of exchange drawn on Bill of exchange is to be drawn on \"party\"."
+    },
+    {
+      "code": "51",
+      "name": "Bill of exchange in duplicate",
+      "description": "Bill of exchange in duplicate Bill of exchange is to be issued as drawn in duplicate."
+    },
+    {
+      "code": "52",
+      "name": "Insurance certificate alternative",
+      "description": "Insurance certificate alternative Alternative to insurance certificate."
+    },
+    {
+      "code": "53",
+      "name": "Insurance policy alternative",
+      "description": "Insurance policy alternative Alternative to insurance policy."
+    },
+    {
+      "code": "54",
+      "name": "Original(s) and copies to be certified",
+      "description": "Original(s) and copies to be certified Original and copies of document/message is to be certified by an official, or otherwise qualified, organization or person."
+    },
+    {
+      "code": "55",
+      "name": "Original(s) and copies to be legalized",
+      "description": "Original(s) and copies to be legalized Original and copies of document/message is to be issued under the legal requirements or a governmental authority."
+    },
+    {
+      "code": "56",
+      "name": "Consolidators AWB allowed",
+      "description": "Consolidators AWB allowed Consolidators air waybill is allowed."
+    },
+    {
+      "code": "57",
+      "name": "Full set",
+      "description": "Full set Full set of a document is required."
+    },
+    {
+      "code": "58",
+      "name": "Full set less one original",
+      "description": "Full set less one original Full set of a document, less one original, is required."
+    },
+    {
+      "code": "59",
+      "name": "Full set less two originals",
+      "description": "Full set less two originals Full set of a document, less two originals, is required."
+    },
+    {
+      "code": "60",
+      "name": "Goods despatched to",
+      "description": "Goods despatched to Document must show that the goods have been despatched to a specified party."
+    },
+    {
+      "code": "61",
+      "name": "Insurance certificate allowed",
+      "description": "Insurance certificate allowed Presentation of an insurance certificate instead of an insurance policy is allowed."
+    },
+    {
+      "code": "62",
+      "name": "Issued to",
+      "description": "Issued to Document is to be issued to a specified party."
+    },
+    {
+      "code": "63",
+      "name": "Original(s) and copy(ies) signed",
+      "description": "Original(s) and copy(ies) signed Original(s) and copy(ies) of the document must be signed."
+    },
+    {
+      "code": "64",
+      "name": "Original(s) signed",
+      "description": "Original(s) signed Original(s) of the document must be signed."
+    },
+    {
+      "code": "65",
+      "name": "No disposal clause",
+      "description": "No disposal clause The shipper hereby irrevocably renounces any right to vary the identity of the consignee of these goods during transit."
+    },
+    {
+      "code": "66",
+      "name": "Delivery without change of ownership",
+      "description": "Delivery without change of ownership There is no change of ownership of the goods after they are received by the consignee."
+    },
+    {
+      "code": "67",
+      "name": "Delivery with change of ownership",
+      "description": "Delivery with change of ownership There is a change of ownership of the goods after they are received by the consignee."
+    },
+    {
+      "code": "68",
+      "name": "Supply for outright purchase/sale",
+      "description": "Supply for outright purchase/sale Goods are supplied under outright purchase/sale condition."
+    },
+    {
+      "code": "69",
+      "name": "Supply for consignment",
+      "description": "Supply for consignment Goods are supplied for consignment purposes."
+    },
+    {
+      "code": "70",
+      "name": "Supply for sale 'on approval' or after trial",
+      "description": "Supply for sale 'on approval' or after trial The sale of the goods will only be finalised after trial or approval."
+    },
+    {
+      "code": "71",
+      "name": "Exchange of goods compensated in kind",
+      "description": "Exchange of goods compensated in kind Goods are delivered on the basis of a compensation kind."
+    },
+    {
+      "code": "72",
+      "name": "Sale for export by foreigner travelling in member state",
+      "description": "Sale for export by foreigner travelling in member state concerned A cross border delivery of goods to be sold by a foreigner travelling in the European Economic Community member state concerned."
+    },
+    {
+      "code": "73",
+      "name": "Samples",
+      "description": "Samples The delivered goods are samples."
+    },
+    {
+      "code": "74",
+      "name": "Temporary export, loan or hire",
+      "description": "Temporary export, loan or hire Loaned or hired goods delivered on a temporary export basis."
+    },
+    {
+      "code": "75",
+      "name": "Temporary export, leasing",
+      "description": "Temporary export, leasing Leased goods delivered on a temporary export basis."
+    },
+    {
+      "code": "76",
+      "name": "Temporary export, operation for job processing",
+      "description": "Temporary export, operation for job processing Goods temporarily exported for operation for job processing."
+    },
+    {
+      "code": "77",
+      "name": "Temporary export, repair and maintenance against payment",
+      "description": "Temporary export, repair and maintenance against payment Goods temporarily exported for a chargeable repair or maintenance reason."
+    },
+    {
+      "code": "78",
+      "name": "Temporary export, repair and maintenance free of charge",
+      "description": "Temporary export, repair and maintenance free of charge Goods temporarily exported for a free of charge repair or maintenance reason."
+    },
+    {
+      "code": "79",
+      "name": "Reimport following job processing",
+      "description": "Reimport following job processing Goods reimported after they have been used for job processing."
+    },
+    {
+      "code": "80",
+      "name": "Reimport following repair and maintenance against payment",
+      "description": "Reimport following repair and maintenance against payment Goods reimported after a temporary export for a chargeable repair or maintenance reason."
+    },
+    {
+      "code": "81",
+      "name": "Reimport following repair and maintenance free of charge",
+      "description": "Reimport following repair and maintenance free of charge Goods reimported after a temporary export for a free of charge repair or maintenance reason."
+    },
+    {
+      "code": "82",
+      "name": "Supply of goods under joint production contract for defence",
+      "description": "Supply of goods under joint production contract for defence purposes Goods supplied under joint production contact for defence purposes condition."
+    },
+    {
+      "code": "83",
+      "name": "Supply of goods under joint production contract for civil",
+      "description": "Supply of goods under joint production contract for civil purposes Goods supplied under joint production contact for civil purposes condition."
+    },
+    {
+      "code": "84",
+      "name": "Supply of goods for warehousing for foreign account",
+      "description": "Supply of goods for warehousing for foreign account Goods supplied for warehousing for foreign account."
+    },
+    {
+      "code": "85",
+      "name": "Supply of goods as gifts by country of despatch and food",
+      "description": "Supply of goods as gifts by country of despatch and food aid under European Economic Community regulation Goods supplied as gifts by country of despatch and food aid under European Economic Community regulation."
+    },
+    {
+      "code": "86",
+      "name": "Supply of goods for disaster relief equipment",
+      "description": "Supply of goods for disaster relief equipment Goods supplied as disaster relief equipment."
+    },
+    {
+      "code": "87",
+      "name": "Supply of goods as transactions without compensation",
+      "description": "Supply of goods as transactions without compensation Goods supplied as transactions without compensation (financial or otherwise) involving goods which will not be re-exported or compensated by the importation of equivalent goods."
+    },
+    {
+      "code": "88",
+      "name": "Supply of goods as returned consignment on which payment",
+      "description": "Supply of goods as returned consignment on which payment has been made Goods supplied as returned consignment on which payment has been made."
+    },
+    {
+      "code": "89",
+      "name": "Supply of goods as returned consignment on which no payment",
+      "description": "Supply of goods as returned consignment on which no payment has been made Goods supplied as returned consignment on which no payment has been made."
+    },
+    {
+      "code": "90",
+      "name": "Supply of goods in standard exchange giving rise to payment",
+      "description": "Supply of goods in standard exchange giving rise to payment Goods supplied in standard exchange giving rise to payment."
+    },
+    {
+      "code": "91",
+      "name": "Supply of goods in standard exchange not giving rise to",
+      "description": "Supply of goods in standard exchange not giving rise to payment Goods supplied in standard exchange not giving rise to payment."
+    },
+    {
+      "code": "92",
+      "name": "Supply of goods/services in standard exchange under",
+      "description": "Supply of goods/services in standard exchange under warranty Goods/services provided in standard exchange under warranty."
+    },
+    {
+      "code": "93",
+      "name": "Goods",
+      "description": "Goods The special conditions for the tax declaration are linked to the fact that the line item relates to goods."
+    },
+    {
+      "code": "94",
+      "name": "Service",
+      "description": "Service The special conditions for the tax declaration are linked to the fact that the line item is a service."
+    },
+    {
+      "code": "95",
+      "name": "Financial regulation",
+      "description": "Financial regulation The special conditions are linked to the fact that the line item is a financial regulation."
+    },
+    {
+      "code": "96",
+      "name": "Promotional advertising",
+      "description": "Promotional advertising A media press communication informing about a promotion."
+    },
+    {
+      "code": "97",
+      "name": "Promotional price",
+      "description": "Promotional price Reduction in price for a specified period of time for promotional purposes."
+    },
+    {
+      "code": "98",
+      "name": "Promotional shelf display",
+      "description": "Promotional shelf display Product in promotion is displayed in a special shelf or display."
+    },
+    {
+      "code": "99",
+      "name": "Safety data sheet required to accompany goods when moved",
+      "description": "Safety data sheet required to accompany goods when moved Material safety data sheet is required to accompany the goods when they are moved."
+    },
+    {
+      "code": "100",
+      "name": "Multiple delivery points",
+      "description": "Multiple delivery points An order that has more than one specified delivery point."
+    },
+    {
+      "code": "101",
+      "name": "Provisional settlement",
+      "description": "Provisional settlement Provides an indication that the settlement may be subject to further potential adjustment."
+    },
+    {
+      "code": "102",
+      "name": "Hire purchase",
+      "description": "Hire purchase Indicates that an item is supplied under the special condition of hire purchase."
+    },
+    {
+      "code": "103",
+      "name": "Loan",
+      "description": "Loan Indicates that an item is supplied under the special condition of a loan."
+    },
+    {
+      "code": "104",
+      "name": "Rental",
+      "description": "Rental Indicates that an item is supplied under the special condition of rental."
+    },
+    {
+      "code": "105",
+      "name": "Processing",
+      "description": "Processing Indicates that the predominant operation is an administrative or technical process."
+    },
+    {
+      "code": "106",
+      "name": "Exchange",
+      "description": "Exchange Indicates that an item is supplied under the special condition as an exchange."
+    },
+    {
+      "code": "107",
+      "name": "Sale on commission",
+      "description": "Sale on commission Indicates that an item is supplied under the special condition of sale on commission."
+    },
+    {
+      "code": "108",
+      "name": "Financial compensation",
+      "description": "Financial compensation Indicates that an item is supplied under the special condition as financial compensation."
+    },
+    {
+      "code": "109",
+      "name": "Sale or return",
+      "description": "Sale or return Item concerned may be returned to supplier or otherwise disposed of if it remains unsold after a pre-determined period of time."
+    },
+    {
+      "code": "110",
+      "name": "Final settlement",
+      "description": "Final settlement Settlement will not be subject to further adjustment."
+    },
+    {
+      "code": "111",
+      "name": "Requires national pricing authority agreement",
+      "description": "Requires national pricing authority agreement Provides an indication to the receiving party that the information provided requires national pricing authority agreement."
+    },
+    {
+      "code": "112",
+      "name": "National pricing authority approved price",
+      "description": "National pricing authority approved price Provides an indication to the receiving party that the price provided has been agreed by the national pricing authority."
+    },
+    {
+      "code": "113",
+      "name": "Not subject to national pricing authority approval",
+      "description": "Not subject to national pricing authority approval Provides an indication to the receiving party that the price provided is not subject to approval by the national pricing authority."
+    },
+    {
+      "code": "114",
+      "name": "Agency approved price",
+      "description": "Agency approved price Provides an indication to the receiving party that the price has been approved by an agreed agency."
+    },
+    {
+      "code": "115",
+      "name": "Exempt from tax",
+      "description": "Exempt from tax To indicate that the product, goods, or services is exempt from taxes."
+    },
+    {
+      "code": "116",
+      "name": "Subject to postponed discount",
+      "description": "Subject to postponed discount The item concerned is applicable for postponed discount which will be refunded via a later credit."
+    },
+    {
+      "code": "117",
+      "name": "Repair",
+      "description": "Repair The special conditions are related to repairs."
+    },
+    {
+      "code": "118",
+      "name": "Illustration affected by provisioning change",
+      "description": "Illustration affected by provisioning change Indication that a change to provisioning data affects the related illustrations but not the technical content."
+    },
+    {
+      "code": "119",
+      "name": "Product genetically modified",
+      "description": "Product genetically modified An indication that a product has been genetically modified during its production process."
+    },
+    {
+      "code": "120",
+      "name": "Subject to price recalculation without negotiation",
+      "description": "Subject to price recalculation without negotiation The price may be recalculated without negotiation."
+    },
+    {
+      "code": "121",
+      "name": "Not subject to price recalculation without negotiation",
+      "description": "Not subject to price recalculation without negotiation The price may not be recalculated without negotiation."
+    },
+    {
+      "code": "122",
+      "name": "Bonded",
+      "description": "Bonded A code to indicate that the product is bonded."
+    },
+    {
+      "code": "123",
+      "name": "Pharmacy sales only",
+      "description": "Pharmacy sales only A special condition limiting the sale of a product to a pharmacy."
+    },
+    {
+      "code": "124",
+      "name": "Sale requires medical prescription",
+      "description": "Sale requires medical prescription The sale of the product requires a medical prescription."
+    },
+    {
+      "code": "125",
+      "name": "New item, not yet available",
+      "description": "New item, not yet available The item is new and not yet available."
+    },
+    {
+      "code": "126",
+      "name": "New, available",
+      "description": "New, available The item is new and available."
+    },
+    {
+      "code": "127",
+      "name": "Obsolete",
+      "description": "Obsolete The item is obsolete."
+    },
+    {
+      "code": "128",
+      "name": "Prototype",
+      "description": "Prototype The item is a prototype and is not yet in normal production."
+    },
+    {
+      "code": "129",
+      "name": "Non-standard product",
+      "description": "Non-standard product This item is not a standard product."
+    },
+    {
+      "code": "130",
+      "name": "Discontinued",
+      "description": "Discontinued The item is no longer available."
+    },
+    {
+      "code": "131",
+      "name": "Expired catalogue prices provisionally allowed",
+      "description": "Expired catalogue prices provisionally allowed The use of prices from an expired catalogue is provisionally allowed."
+    },
+    {
+      "code": "132",
+      "name": "Not subject to automated processing",
+      "description": "Not subject to automated processing The conditions to be applied are of a complex nature and are not subject to automated processing."
+    },
+    {
+      "code": "133",
+      "name": "Gift supplied with purchase",
+      "description": "Gift supplied with purchase Product made available as a gift to a customer when purchasing an accompanying product."
+    },
+    {
+      "code": "134",
+      "name": "Sale from promotional stock",
+      "description": "Sale from promotional stock An indication that products sold came from promotional stock."
+    },
+    {
+      "code": "135",
+      "name": "Sale from obsolete stock",
+      "description": "Sale from obsolete stock An indication that products sold came from obsolete stock."
+    },
+    {
+      "code": "136",
+      "name": "Buying group conditions",
+      "description": "Buying group conditions A code indicating that buying group conditions apply."
+    },
+    {
+      "code": "137",
+      "name": "Cancel order unless complete delivery possible on requested",
+      "description": "Cancel order unless complete delivery possible on requested date and or time Code indicating that the order is to be cancelled if complete delivery is not possible on the date and or time requested in the order."
+    },
+    {
+      "code": "138",
+      "name": "Delivery subject to final authorisation from supplier",
+      "description": "Delivery subject to final authorisation from supplier Delivery of an order should not be made until the final authorisation from the supplier or supplier's agent has been received."
+    },
+    {
+      "code": "139",
+      "name": "Special promotional conditions applicable to only this",
+      "description": "Special promotional conditions applicable to only this invoice A code indicating that special promotional conditions are in force which only apply to the current invoice."
+    },
+    {
+      "code": "140",
+      "name": "Return of goods",
+      "description": "Return of goods Special conditions related to the return of goods."
+    },
+    {
+      "code": "141",
+      "name": "Subject to annual bonus",
+      "description": "Subject to annual bonus Item concerned is applicable for annual bonus calculation."
+    },
+    {
+      "code": "142",
+      "name": "Invoiced but not replenished",
+      "description": "Invoiced but not replenished A special condition indicating the fact that goods which have not yet been replenished have been invoiced."
+    },
+    {
+      "code": "143",
+      "name": "Replenished but not invoiced",
+      "description": "Replenished but not invoiced A special condition indicating the fact that goods which have been replenished have not yet been invoiced."
+    },
+    {
+      "code": "144",
+      "name": "Deliver full order",
+      "description": "Deliver full order A special condition indicating that delivery of the order will only be accepted in full."
+    },
+    {
+      "code": "145",
+      "name": "Roll pattern side out",
+      "description": "Roll pattern side out An instruction to roll a product with the pattern side facing out."
+    },
+    {
+      "code": "146",
+      "name": "Roll pattern side in",
+      "description": "Roll pattern side in An instruction to roll a product with the pattern side facing in."
+    },
+    {
+      "code": "147",
+      "name": "Special handling requirements at point of receipt",
+      "description": "Special handling requirements at point of receipt An indication that the product requires special handling at the point of receipt."
+    },
+    {
+      "code": "148",
+      "name": "Supply direct delivery",
+      "description": "Supply direct delivery Goods to be supplied direct delivery to the delivery store and not through a distribution centre or a warehouse."
+    },
+    {
+      "code": "149",
+      "name": "Single item pallet",
+      "description": "Single item pallet Goods to be supplied on single item pallet."
+    },
+    {
+      "code": "150",
+      "name": "Mixed item pallet",
+      "description": "Mixed item pallet Goods to be supplied on mixed item pallet."
+    },
+    {
+      "code": "151",
+      "name": "Items from the same dye lot",
+      "description": "Items from the same dye lot The items should be supplied from the same dye lot."
+    },
+    {
+      "code": "152",
+      "name": "Awaiting credit clearance",
+      "description": "Awaiting credit clearance Processing of the referenced document is delayed while credit clearance is obtained."
+    },
+    {
+      "code": "153",
+      "name": "Return publication full copies",
+      "description": "Return publication full copies Return the full copies of a publication."
+    },
+    {
+      "code": "154",
+      "name": "Return publication headings only",
+      "description": "Return publication headings only Return only the heading of a publication."
+    },
+    {
+      "code": "155",
+      "name": "Destroy publication",
+      "description": "Destroy publication Destroy the publication by whatever means, but in such a way that it cannot be read afterwards."
+    },
+    {
+      "code": "156",
+      "name": "Await further product instructions",
+      "description": "Await further product instructions Wait for further instructions as to what to do with the products."
+    },
+    {
+      "code": "157",
+      "name": "Not subject to sale or return",
+      "description": "Not subject to sale or return Product supplied not subject to sale or return."
+    },
+    {
+      "code": "158",
+      "name": "Item to be sold in both domestic and export markets",
+      "description": "Item to be sold in both domestic and export markets The item will be sold in both the domestic and export markets."
+    },
+    {
+      "code": "159",
+      "name": "Item to be sold only in export markets",
+      "description": "Item to be sold only in export markets The item will be sold only in export markets."
+    },
+    {
+      "code": "160",
+      "name": "No back orders",
+      "description": "No back orders Indication that no back orders are permitted."
+    },
+    {
+      "code": "161",
+      "name": "Back orders permitted",
+      "description": "Back orders permitted Indication that back orders are permitted."
+    },
+    {
+      "code": "162",
+      "name": "At home repair",
+      "description": "At home repair The repair is carried out at the house of the client."
+    },
+    {
+      "code": "163",
+      "name": "At service centre repair",
+      "description": "At service centre repair The repair is carried out at a service centre."
+    },
+    {
+      "code": "164",
+      "name": "Shipment completes order",
+      "description": "Shipment completes order There will be no further shipments for this order as it is considered complete."
+    },
+    {
+      "code": "165",
+      "name": "Split shipment",
+      "description": "Split shipment Subsequent shipment(s) will arrive for this order as it has been split over more than one shipment."
+    },
+    {
+      "code": "166",
+      "name": "Include in continuous replenishment calculation",
+      "description": "Include in continuous replenishment calculation An indication that a product or group of products are to be included in the continuous replenishment calculation."
+    },
+    {
+      "code": "167",
+      "name": "Remove from continuous replenishment calculation",
+      "description": "Remove from continuous replenishment calculation An indication that a product or group of products are to be removed from the continuous replenishment calculation."
+    },
+    {
+      "code": "168",
+      "name": "Standard pack shipment",
+      "description": "Standard pack shipment The shipment contains only standard packs."
+    },
+    {
+      "code": "169",
+      "name": "Pick pack shipment",
+      "description": "Pick pack shipment The shipment contains only packages resulting from a pick and pack operation."
+    },
+    {
+      "code": "170",
+      "name": "Goods for retail outlet shelf",
+      "description": "Goods for retail outlet shelf Goods to be placed on a retail outlet shelf."
+    },
+    {
+      "code": "171",
+      "name": "Security stock",
+      "description": "Security stock The goods are required to maintain the security stock."
+    },
+    {
+      "code": "172",
+      "name": "Production batch number allocated",
+      "description": "Production batch number allocated A batch number is allocated by the manufacturer to the item."
+    },
+    {
+      "code": "173",
+      "name": "Production batch number allocated as required by law",
+      "description": "Production batch number allocated as required by law A batch number is allocated by the manufacturer to the item as required by law."
+    },
+    {
+      "code": "174",
+      "name": "Product not genetically modified",
+      "description": "Product not genetically modified An indication that a product has not been genetically modified during its production process."
+    },
+    {
+      "code": "175",
+      "name": "Suspended",
+      "description": "Suspended An item whose production or distribution has been suspended."
+    },
+    {
+      "code": "176",
+      "name": "No re-ordering",
+      "description": "No re-ordering The item will not be re-ordered."
+    },
+    {
+      "code": "177",
+      "name": "Product irradiated for preservation",
+      "description": "Product irradiated for preservation An indication that a product has had radioactive rays directed onto it to preserve it."
+    },
+    {
+      "code": "178",
+      "name": "Services taxable at customer location",
+      "description": "Services taxable at customer location Services which, for taxation purposes, are considered to be supplied at the customer location, as per the 6th European Council directive of 17 May, 1997 Article 9.2 (e)."
+    },
+    {
+      "code": "179",
+      "name": "Product gluten-free",
+      "description": "Product gluten-free An indication that a product does not contain any gluten."
+    },
+    {
+      "code": "180",
+      "name": "Product contains gluten",
+      "description": "Product contains gluten An indication that a product contains gluten."
+    },
+    {
+      "code": "181",
+      "name": "Product lactose-free",
+      "description": "Product lactose-free An indication that a product does not contain any lactose."
+    },
+    {
+      "code": "182",
+      "name": "Product contains lactose",
+      "description": "Product contains lactose An indication that a product contains lactose."
+    },
+    {
+      "code": "183",
+      "name": "CH, compliant with Genetically Modified Food law",
+      "description": "CH, compliant with Genetically Modified Food law An indication that a product complies with the Swiss law on genetically modified food."
+    },
+    {
+      "code": "184",
+      "name": "CH, non-compliant with Genetically Modified Food law",
+      "description": "CH, non-compliant with Genetically Modified Food law An indication that a product does not comply with the Swiss law on genetically modified food."
+    },
+    {
+      "code": "185",
+      "name": "CH, compliant with General Food law",
+      "description": "CH, compliant with General Food law An indication that a product complies with the Swiss general food law."
+    },
+    {
+      "code": "186",
+      "name": "CH, non-compliant with General Food law",
+      "description": "CH, non-compliant with General Food law An indication that a product does not comply with the Swiss general food law."
+    },
+    {
+      "code": "187",
+      "name": "Store may not order",
+      "description": "Store may not order The store is not allowed to order."
+    },
+    {
+      "code": "188",
+      "name": "Distribution centre may not order",
+      "description": "Distribution centre may not order Distribution centre is not allowed to order."
+    },
+    {
+      "code": "189",
+      "name": "Net content declaration indicated",
+      "description": "Net content declaration indicated A declaration of a trade item's net content is on the product label."
+    },
+    {
+      "code": "190",
+      "name": "Net content declaration not indicated",
+      "description": "Net content declaration not indicated A declaration of a trade item's net content is not on the product label."
+    },
+    {
+      "code": "191",
+      "name": "Not irradiated",
+      "description": "Not irradiated Radiation has not been applied."
+    },
+    {
+      "code": "192",
+      "name": "Batch or lot number not allocated",
+      "description": "Batch or lot number not allocated The trade item has no batch or lot number."
+    },
+    {
+      "code": "193",
+      "name": "Unsold trade item not returnable",
+      "description": "Unsold trade item not returnable A trade item that is not sold cannot be returned."
+    },
+    {
+      "code": "194",
+      "name": "Ingredient irradiated",
+      "description": "Ingredient irradiated Radiation has been applied to a trade item's ingredient."
+    },
+    {
+      "code": "195",
+      "name": "Ingredients not irradiated",
+      "description": "Ingredients not irradiated Radiation has not been applied to any trade item's ingredient."
+    },
+    {
+      "code": "196",
+      "name": "Raw material irradiated",
+      "description": "Raw material irradiated Radiation has been applied to a trade item's raw material."
+    },
+    {
+      "code": "197",
+      "name": "Raw material not irradiated",
+      "description": "Raw material not irradiated Radiation has not been applied to any trade item's raw material."
+    },
+    {
+      "code": "198",
+      "name": "Re-orderable",
+      "description": "Re-orderable The item may be re-ordered."
+    },
+    {
+      "code": "199",
+      "name": "Receipt advice, fully detailed",
+      "description": "Receipt advice, fully detailed Includes qualitative and/or quantitative details regarding everything received (all line items) whether or not there were exceptions between what was received and what was advised as being sent."
+    },
+    {
+      "code": "200",
+      "name": "Receipt advice, only exceptions",
+      "description": "Receipt advice, only exceptions Includes only qualitative and/or quantitative exceptions between what was received and what was advised as being sent."
+    },
+    {
+      "code": "201",
+      "name": "Ingredient is irradiated not applicable",
+      "description": "Ingredient is irradiated not applicable The indication that an ingredient of a trade item is irradiated is not applicable."
+    },
+    {
+      "code": "202",
+      "name": "Raw material is irradiated not applicable",
+      "description": "Raw material is irradiated not applicable The indication that raw material of a trade item is irradiated is not applicable."
+    },
+    {
+      "code": "203",
+      "name": "Trade item is genetically modified not applicable",
+      "description": "Trade item is genetically modified not applicable The indication that a product has not been genetically modified is not applicable."
+    },
+    {
+      "code": "204",
+      "name": "Trade item is irradiated not applicable",
+      "description": "Trade item is irradiated not applicable The indication that a trade item is irradiated is not applicable."
+    },
+    {
+      "code": "205",
+      "name": "Size dependent pricing",
+      "description": "Size dependent pricing An item price may be different depending on the size."
+    },
+    {
+      "code": "206",
+      "name": "Size independent pricing",
+      "description": "Size independent pricing An item price is independent of the size."
+    },
+    {
+      "code": "207",
+      "name": "Only accepted products",
+      "description": "Only accepted products Includes only details regarding accepted products."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Special condition mutually agreed between interchanging parties."
+    }
+  ]
+}

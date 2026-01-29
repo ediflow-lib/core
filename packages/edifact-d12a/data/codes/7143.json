@@ -1,0 +1,832 @@
+{
+  "code": "7143",
+  "name": "Item type identification code",
+  "description": "Coded identification of an item type.",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Product version number",
+      "description": "Product version number Number assigned by manufacturer or seller to identify the release of a product."
+    },
+    {
+      "code": "AB",
+      "name": "Assembly",
+      "description": "Assembly The item number is that of an assembly."
+    },
+    {
+      "code": "AC",
+      "name": "HIBC (Health Industry Bar Code)",
+      "description": "HIBC (Health Industry Bar Code) Article identifier used within health sector to indicate data used conforms to HIBC."
+    },
+    {
+      "code": "AD",
+      "name": "Cold roll number",
+      "description": "Cold roll number Number assigned to a cold roll."
+    },
+    {
+      "code": "AE",
+      "name": "Hot roll number",
+      "description": "Hot roll number Number assigned to a hot roll."
+    },
+    {
+      "code": "AF",
+      "name": "Slab number",
+      "description": "Slab number Number assigned to a slab, which is produced in a particular production step."
+    },
+    {
+      "code": "AG",
+      "name": "Software revision number",
+      "description": "Software revision number A number assigned to indicate a revision of software."
+    },
+    {
+      "code": "AH",
+      "name": "UPC (Universal Product Code) Consumer package code (1-5-5)",
+      "description": "UPC (Universal Product Code) Consumer package code (1-5-5) An 11-digit code that uniquely identifies consumer packaging of a product; does not have a check digit."
+    },
+    {
+      "code": "AI",
+      "name": "UPC (Universal Product Code) Consumer package code (1-5-5-",
+      "description": "UPC (Universal Product Code) Consumer package code (1-5-5- 1) A 12-digit code that uniquely identifies the consumer packaging of a product, including a check digit."
+    },
+    {
+      "code": "AJ",
+      "name": "Sample number",
+      "description": "Sample number Number assigned to a sample."
+    },
+    {
+      "code": "AK",
+      "name": "Pack number",
+      "description": "Pack number Number assigned to a pack containing a stack of items put together (e.g. cold roll sheets (steel product))."
+    },
+    {
+      "code": "AL",
+      "name": "UPC (Universal Product Code) Shipping container code (1-2-",
+      "description": "UPC (Universal Product Code) Shipping container code (1-2- 5-5) A 13-digit code that uniquely identifies the manufacturer's shipping unit, including the packaging indicator."
+    },
+    {
+      "code": "AM",
+      "name": "UPC (Universal Product Code)/EAN (European article number)",
+      "description": "UPC (Universal Product Code)/EAN (European article number) Shipping container code (1-2-5-5-1) A 14-digit code that uniquely identifies the manufacturer's shipping unit, including the packaging indicator and the check digit."
+    },
+    {
+      "code": "AN",
+      "name": "UPC (Universal Product Code) suffix",
+      "description": "UPC (Universal Product Code) suffix A suffix used in conjunction with a higher level UPC (Universal product code) to define packing variations for a product."
+    },
+    {
+      "code": "AO",
+      "name": "State label code",
+      "description": "State label code A code which specifies the codification of the state's labelling requirements."
+    },
+    {
+      "code": "AP",
+      "name": "Heat number",
+      "description": "Heat number Number assigned to the heat (also known as the iron charge) for the production of steel products."
+    },
+    {
+      "code": "AQ",
+      "name": "Coupon number",
+      "description": "Coupon number A number identifying a coupon."
+    },
+    {
+      "code": "AR",
+      "name": "Resource number",
+      "description": "Resource number A number to identify a resource."
+    },
+    {
+      "code": "AS",
+      "name": "Work task number",
+      "description": "Work task number A number to identify a work task."
+    },
+    {
+      "code": "AT",
+      "name": "Price look up number",
+      "description": "Price look up number Identification number on a product allowing a quick electronic retrieval of price information for that product."
+    },
+    {
+      "code": "AU",
+      "name": "NSN (North Atlantic Treaty Organization Stock Number)",
+      "description": "NSN (North Atlantic Treaty Organization Stock Number) Number assigned under the NATO (North Atlantic Treaty Organization) codification system to provide the identification of an approved item of supply."
+    },
+    {
+      "code": "AV",
+      "name": "Refined product code",
+      "description": "Refined product code A code specifying the product refinement designation."
+    },
+    {
+      "code": "AW",
+      "name": "Exhibit",
+      "description": "Exhibit A code indicating that the product is identified by an exhibit number."
+    },
+    {
+      "code": "AX",
+      "name": "End item",
+      "description": "End item A number specifying an end item."
+    },
+    {
+      "code": "AY",
+      "name": "Federal supply classification",
+      "description": "Federal supply classification A code to specify a product's Federal supply classification."
+    },
+    {
+      "code": "AZ",
+      "name": "Engineering data list",
+      "description": "Engineering data list A code specifying the product's engineering data list."
+    },
+    {
+      "code": "BA",
+      "name": "Milestone event number",
+      "description": "Milestone event number A number to identify a milestone event."
+    },
+    {
+      "code": "BB",
+      "name": "Lot number",
+      "description": "Lot number A number indicating the lot number of a product."
+    },
+    {
+      "code": "BC",
+      "name": "National drug code 4-4-2 format",
+      "description": "National drug code 4-4-2 format A code identifying the product in national drug format 4-4-2."
+    },
+    {
+      "code": "BD",
+      "name": "National drug code 5-3-2 format",
+      "description": "National drug code 5-3-2 format A code identifying the product in national drug format 5-3-2."
+    },
+    {
+      "code": "BE",
+      "name": "National drug code 5-4-1 format",
+      "description": "National drug code 5-4-1 format A code identifying the product in national drug format 5-4-1."
+    },
+    {
+      "code": "BF",
+      "name": "National drug code 5-4-2 format",
+      "description": "National drug code 5-4-2 format A code identifying the product in national drug format 5-4-2."
+    },
+    {
+      "code": "BG",
+      "name": "National drug code",
+      "description": "National drug code A code specifying the national drug classification."
+    },
+    {
+      "code": "BH",
+      "name": "Part number",
+      "description": "Part number A number indicating the part."
+    },
+    {
+      "code": "BI",
+      "name": "Local Stock Number (LSN)",
+      "description": "Local Stock Number (LSN) A local number assigned to an item of stock."
+    },
+    {
+      "code": "BJ",
+      "name": "Next higher assembly number",
+      "description": "Next higher assembly number A number specifying the next higher assembly or component into which the product is being incorporated."
+    },
+    {
+      "code": "BK",
+      "name": "Data category",
+      "description": "Data category A code specifying a category of data."
+    },
+    {
+      "code": "BL",
+      "name": "Control number",
+      "description": "Control number To specify the control number."
+    },
+    {
+      "code": "BM",
+      "name": "Special material identification code",
+      "description": "Special material identification code A number to identify the special material code."
+    },
+    {
+      "code": "BN",
+      "name": "Locally assigned control number",
+      "description": "Locally assigned control number A number assigned locally for control purposes."
+    },
+    {
+      "code": "BO",
+      "name": "Buyer's colour",
+      "description": "Buyer's colour Colour assigned by buyer."
+    },
+    {
+      "code": "BP",
+      "name": "Buyer's part number",
+      "description": "Buyer's part number Reference number assigned by the buyer to identify an article."
+    },
+    {
+      "code": "BQ",
+      "name": "Variable measure product code",
+      "description": "Variable measure product code A code assigned to identify a variable measure item."
+    },
+    {
+      "code": "BR",
+      "name": "Financial phase",
+      "description": "Financial phase To specify as an item, the financial phase."
+    },
+    {
+      "code": "BS",
+      "name": "Contract breakdown",
+      "description": "Contract breakdown To specify as an item, the contract breakdown."
+    },
+    {
+      "code": "BT",
+      "name": "Technical phase",
+      "description": "Technical phase To specify as an item, the technical phase."
+    },
+    {
+      "code": "BU",
+      "name": "Dye lot number",
+      "description": "Dye lot number Number identifying a dye lot."
+    },
+    {
+      "code": "BV",
+      "name": "Daily statement of activities",
+      "description": "Daily statement of activities A statement listing activities of one day."
+    },
+    {
+      "code": "BW",
+      "name": "Periodical statement of activities within a bilaterally",
+      "description": "Periodical statement of activities within a bilaterally agreed time period Periodical statement listing activities within a bilaterally agreed time period."
+    },
+    {
+      "code": "BX",
+      "name": "Calendar week statement of activities",
+      "description": "Calendar week statement of activities A statement listing activities of a calendar week."
+    },
+    {
+      "code": "BY",
+      "name": "Calendar month statement of activities",
+      "description": "Calendar month statement of activities A statement listing activities of a calendar month."
+    },
+    {
+      "code": "BZ",
+      "name": "Original equipment number",
+      "description": "Original equipment number Original equipment number allocated to spare parts by the manufacturer."
+    },
+    {
+      "code": "CC",
+      "name": "Industry commodity code",
+      "description": "Industry commodity code The codes given to certain commodities by an industry."
+    },
+    {
+      "code": "CG",
+      "name": "Commodity grouping",
+      "description": "Commodity grouping Code for a group of articles with common characteristics (e.g. used for statistical purposes)."
+    },
+    {
+      "code": "CL",
+      "name": "Colour number",
+      "description": "Colour number Code for the colour of an article."
+    },
+    {
+      "code": "CR",
+      "name": "Contract number",
+      "description": "Contract number Reference number identifying a contract."
+    },
+    {
+      "code": "CV",
+      "name": "Customs article number",
+      "description": "Customs article number Code defined by Customs authorities to an article or a group of articles for Customs purposes."
+    },
+    {
+      "code": "DR",
+      "name": "Drawing revision number",
+      "description": "Drawing revision number Reference number indicating that a change or revision has been applied to a drawing."
+    },
+    {
+      "code": "DW",
+      "name": "Drawing",
+      "description": "Drawing Reference number identifying a drawing of an article."
+    },
+    {
+      "code": "EC",
+      "name": "Engineering change level",
+      "description": "Engineering change level Reference number indicating that a change or revision has been applied to an article's specification."
+    },
+    {
+      "code": "EF",
+      "name": "Material code",
+      "description": "Material code Code defining the material's type, surface, geometric form plus various classifying characteristics."
+    },
+    {
+      "code": "EN",
+      "name": "International Article Numbering Association (EAN)",
+      "description": "International Article Numbering Association (EAN) Number assigned to a manufacturer's product according to the International Article Numbering Association."
+    },
+    {
+      "code": "GB",
+      "name": "Buyer's internal product group code",
+      "description": "Buyer's internal product group code Product group code used within a buyer's internal systems."
+    },
+    {
+      "code": "GN",
+      "name": "National product group code",
+      "description": "National product group code National product group code. Administered by a national agency."
+    },
+    {
+      "code": "GS",
+      "name": "General specification number",
+      "description": "General specification number The item number is a general specification number."
+    },
+    {
+      "code": "HS",
+      "name": "Harmonised system",
+      "description": "Harmonised system The item number is part of, or is generated in the context of the Harmonised Commodity Description and Coding System (Harmonised System), as developed and maintained by the World Customs Organization (WCO)."
+    },
+    {
+      "code": "IB",
+      "name": "ISBN (International Standard Book Number)",
+      "description": "ISBN (International Standard Book Number) A unique number identifying a book."
+    },
+    {
+      "code": "IN",
+      "name": "Buyer's item number",
+      "description": "Buyer's item number The item number has been allocated by the buyer."
+    },
+    {
+      "code": "IS",
+      "name": "ISSN (International Standard Serial Number)",
+      "description": "ISSN (International Standard Serial Number) A unique number identifying a serial publication."
+    },
+    {
+      "code": "IT",
+      "name": "Buyer's style number",
+      "description": "Buyer's style number Number given by the buyer to a specific style or form of an article, especially used for garments."
+    },
+    {
+      "code": "IZ",
+      "name": "Buyer's size code",
+      "description": "Buyer's size code Code given by the buyer to designate the size of an article in textile and shoe industry."
+    },
+    {
+      "code": "MA",
+      "name": "Machine number",
+      "description": "Machine number The item number is a machine number."
+    },
+    {
+      "code": "MF",
+      "name": "Manufacturer's (producer's) article number",
+      "description": "Manufacturer's (producer's) article number The number given to an article by its manufacturer."
+    },
+    {
+      "code": "MN",
+      "name": "Model number",
+      "description": "Model number Reference number assigned by the manufacturer to differentiate variations in similar products in a class or group."
+    },
+    {
+      "code": "MP",
+      "name": "Product/service identification number",
+      "description": "Product/service identification number Reference number identifying a product or service."
+    },
+    {
+      "code": "NB",
+      "name": "Batch number",
+      "description": "Batch number The item number is a batch number."
+    },
+    {
+      "code": "ON",
+      "name": "Customer order number",
+      "description": "Customer order number Reference number of a customer's order."
+    },
+    {
+      "code": "PD",
+      "name": "Part number description",
+      "description": "Part number description Reference number identifying a description associated with a number ultimately used to identify an article."
+    },
+    {
+      "code": "PL",
+      "name": "Purchaser's order line number",
+      "description": "Purchaser's order line number Reference number identifying a line entry in a customer's order for goods or services."
+    },
+    {
+      "code": "PO",
+      "name": "Purchase order number",
+      "description": "Purchase order number Reference number identifying a customer's order."
+    },
+    {
+      "code": "PV",
+      "name": "Promotional variant number",
+      "description": "Promotional variant number The item number is a promotional variant number."
+    },
+    {
+      "code": "QS",
+      "name": "Buyer's qualifier for size",
+      "description": "Buyer's qualifier for size The item number qualifies the size of the buyer."
+    },
+    {
+      "code": "RC",
+      "name": "Returnable container number",
+      "description": "Returnable container number Reference number identifying a returnable container."
+    },
+    {
+      "code": "RN",
+      "name": "Release number",
+      "description": "Release number Reference number identifying a release from a buyer's purchase order."
+    },
+    {
+      "code": "RU",
+      "name": "Run number",
+      "description": "Run number The item number identifies the production or manufacturing run or sequence in which the item was manufactured, processed or assembled."
+    },
+    {
+      "code": "RY",
+      "name": "Record keeping of model year",
+      "description": "Record keeping of model year The item number relates to the year in which the particular model was kept."
+    },
+    {
+      "code": "SA",
+      "name": "Supplier's article number",
+      "description": "Supplier's article number Number assigned to an article by the supplier of that article."
+    },
+    {
+      "code": "SG",
+      "name": "Standard group of products (mixed assortment)",
+      "description": "Standard group of products (mixed assortment) The item number relates to a standard group of other items (mixed) which are grouped together as a single item for identification purposes."
+    },
+    {
+      "code": "SK",
+      "name": "SKU (Stock keeping unit)",
+      "description": "SKU (Stock keeping unit) Reference number of a stock keeping unit."
+    },
+    {
+      "code": "SN",
+      "name": "Serial number",
+      "description": "Serial number Identification number of an item which distinguishes this specific item out of a number of identical items."
+    },
+    {
+      "code": "SRS",
+      "name": "RSK number",
+      "description": "RSK number Plumbing and heating."
+    },
+    {
+      "code": "SRT",
+      "name": "IFLS (Institut Francais du Libre Service) 5 digit product",
+      "description": "IFLS (Institut Francais du Libre Service) 5 digit product classification code 5 digit code for product classification managed by the Institut Francais du Libre Service."
+    },
+    {
+      "code": "SRU",
+      "name": "IFLS (Institut Francais du Libre Service) 9 digit product",
+      "description": "IFLS (Institut Francais du Libre Service) 9 digit product classification code 9 digit code for product classification managed by the Institut Francais du Libre Service."
+    },
+    {
+      "code": "SRV",
+      "name": "EAN.UCC Global Trade Item Number",
+      "description": "EAN.UCC Global Trade Item Number A unique number, up to 14-digits, assigned according to the numbering structure of the EAN.UCC system. 'EAN' stands for the 'International Article Numbering Association', and 'UCC' for the 'Uniform Code Council'."
+    },
+    {
+      "code": "SRW",
+      "name": "EDIS (Energy Data Identification System)",
+      "description": "EDIS (Energy Data Identification System) European system for identification of meter data."
+    },
+    {
+      "code": "SRX",
+      "name": "Slaughter number",
+      "description": "Slaughter number Unique number given by a slaughterhouse to an animal or a group of animals of the same breed."
+    },
+    {
+      "code": "SRY",
+      "name": "Official animal number",
+      "description": "Official animal number Unique number given by a national authority to identify an animal individually."
+    },
+    {
+      "code": "SRZ",
+      "name": "Harmonized tariff schedule",
+      "description": "Harmonized tariff schedule The international Harmonized Tariff Schedule (HTS) to classify the article for customs, statistical and other purposes."
+    },
+    {
+      "code": "SS",
+      "name": "Supplier's supplier article number",
+      "description": "Supplier's supplier article number Article number referring to a sales catalogue of supplier's supplier."
+    },
+    {
+      "code": "SSA",
+      "name": "46 Level DOT Code",
+      "description": "46 Level DOT Code A US Department of Transportation (DOT) code to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency."
+    },
+    {
+      "code": "SSB",
+      "name": "Airline Tariff 6D",
+      "description": "Airline Tariff 6D A US code agreed to by the airline industry to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency."
+    },
+    {
+      "code": "SSC",
+      "name": "Title 49 Code of Federal Regulations",
+      "description": "Title 49 Code of Federal Regulations A US Customs and Border Protection (CBP) code used to identify hazardous (dangerous) goods."
+    },
+    {
+      "code": "SSD",
+      "name": "International Civil Aviation Administration code",
+      "description": "International Civil Aviation Administration code A US Department of Transportation/Federal Aviation Administration code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency."
+    },
+    {
+      "code": "SSE",
+      "name": "Hazardous Materials ID DOT",
+      "description": "Hazardous Materials ID DOT A US Department of Transportation (DOT) code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency."
+    },
+    {
+      "code": "SSF",
+      "name": "Endorsement",
+      "description": "Endorsement A US Customs and Border Protection (CBP) code used to identify hazardous (dangerous) goods."
+    },
+    {
+      "code": "SSG",
+      "name": "Air Force Regulation 71-4",
+      "description": "Air Force Regulation 71-4 A department of Defense/Air Force code used to identify hazardous (dangerous) goods, managed by the Customs and Border Protection (CBP) agency."
+    },
+    {
+      "code": "SSH",
+      "name": "Breed",
+      "description": "Breed The breed of the item (e.g. plant or animal)."
+    },
+    {
+      "code": "SSI",
+      "name": "Chemical Abstract Service (CAS) registry number",
+      "description": "Chemical Abstract Service (CAS) registry number A unique numerical identifier for for chemical compounds, polymers, biological sequences, mixtures and alloys."
+    },
+    {
+      "code": "SSJ",
+      "name": "Engine model designation",
+      "description": "Engine model designation A name or designation to identify an engine model."
+    },
+    {
+      "code": "SSK",
+      "name": "Institutional Meat Purchase Specifications (IMPS) Number",
+      "description": "Institutional Meat Purchase Specifications (IMPS) Number A number assigned by agricultural authorities to identify and track meat and meat products."
+    },
+    {
+      "code": "SSL",
+      "name": "Price Look-Up code (PLU)",
+      "description": "Price Look-Up code (PLU) Identification number affixed to produce in stores to retrieve price information."
+    },
+    {
+      "code": "SSM",
+      "name": "International Maritime Organization (IMO) Code",
+      "description": "International Maritime Organization (IMO) Code An International Maritime Organization (IMO) code used to identify hazardous (dangerous) goods."
+    },
+    {
+      "code": "SSN",
+      "name": "Bureau of Explosives 600-A (rail)",
+      "description": "Bureau of Explosives 600-A (rail) A Department of Transportation/Federal Railroad Administration code used to identify hazardous (dangerous) goods."
+    },
+    {
+      "code": "SSO",
+      "name": "United Nations Dangerous Goods List",
+      "description": "United Nations Dangerous Goods List A UN code used to classify and identify dangerous goods."
+    },
+    {
+      "code": "SSP",
+      "name": "International Code of Botanical Nomenclature (ICBN)",
+      "description": "International Code of Botanical Nomenclature (ICBN) A code established by the International Code of Botanical Nomenclature (ICBN) used to classify and identify botanical articles and commodities."
+    },
+    {
+      "code": "SSQ",
+      "name": "International Code of Zoological Nomenclature (ICZN)",
+      "description": "International Code of Zoological Nomenclature (ICZN) A code established by the International Code of Zoological Nomenclature (ICZN) used to classify and identify animals."
+    },
+    {
+      "code": "SSR",
+      "name": "International Code of Nomenclature for Cultivated Plants",
+      "description": "International Code of Nomenclature for Cultivated Plants (ICNCP) A code established by the International Code of Nomenclature for Cultivated Plants (ICNCP) used to classify and identify animals."
+    },
+    {
+      "code": "SSS",
+      "name": "Distributor�s article identifier",
+      "description": "Distributor�s article identifier Identifier assigned to an article by the distributor of that article."
+    },
+    {
+      "code": "SST",
+      "name": "Norwegian Classification system ENVA",
+      "description": "Norwegian Classification system ENVA Product classification system used in the Norwegian market."
+    },
+    {
+      "code": "SSU",
+      "name": "Supplier assigned classification",
+      "description": "Supplier assigned classification Product classification assigned by the supplier."
+    },
+    {
+      "code": "SSV",
+      "name": "Mexican classification system AMECE",
+      "description": "Mexican classification system AMECE Product classification system used in the Mexican market."
+    },
+    {
+      "code": "SSW",
+      "name": "German classification system CCG",
+      "description": "German classification system CCG Product classification system used in the German market."
+    },
+    {
+      "code": "SSX",
+      "name": "Finnish classification system EANFIN",
+      "description": "Finnish classification system EANFIN Product classification system used in the Finnish market."
+    },
+    {
+      "code": "SSY",
+      "name": "Canadian classification system ICC",
+      "description": "Canadian classification system ICC Product classification system used in the Canadian market."
+    },
+    {
+      "code": "SSZ",
+      "name": "French classification system IFLS5",
+      "description": "French classification system IFLS5 Product classification system used in the French market."
+    },
+    {
+      "code": "ST",
+      "name": "Style number",
+      "description": "Style number Number given to a specific style or form of an article, especially used for garments."
+    },
+    {
+      "code": "STA",
+      "name": "Dutch classification system CBL",
+      "description": "Dutch classification system CBL Product classification system used in the Dutch market."
+    },
+    {
+      "code": "STB",
+      "name": "Japanese classification system JICFS",
+      "description": "Japanese classification system JICFS Product classification system used in the Japanese market."
+    },
+    {
+      "code": "STC",
+      "name": "European Union dairy subsidy eligibility classification",
+      "description": "European Union dairy subsidy eligibility classification Category of product eligible for EU subsidy (applies for certain dairy products with specific level of fat content)."
+    },
+    {
+      "code": "STD",
+      "name": "GS1 Spain classification system",
+      "description": "GS1 Spain classification system Product classification system used in the Spanish market."
+    },
+    {
+      "code": "STE",
+      "name": "GS1 Poland classification system",
+      "description": "GS1 Poland classification system Product classification system used in the Polish market."
+    },
+    {
+      "code": "STF",
+      "name": "Federal Agency on Technical Regulating and Metrology of the",
+      "description": "Federal Agency on Technical Regulating and Metrology of the Russian Federation A Russian government agency that serves as a national standardization body of the Russian Federation."
+    },
+    {
+      "code": "STG",
+      "name": "Efficient Consumer Response (ECR) Austria classification",
+      "description": "Efficient Consumer Response (ECR) Austria classification system Product classification system used in the Austrian market."
+    },
+    {
+      "code": "STH",
+      "name": "GS1 Italy classification system",
+      "description": "GS1 Italy classification system Product classification system used in the Italian market."
+    },
+    {
+      "code": "STI",
+      "name": "CPV (Common Procurement Vocabulary)",
+      "description": "CPV (Common Procurement Vocabulary) Official classification system for public procurement in the European Union."
+    },
+    {
+      "code": "STJ",
+      "name": "IFDA (International Foodservice Distributors Association)",
+      "description": "IFDA (International Foodservice Distributors Association) International Foodservice Distributors Association (IFDA)."
+    },
+    {
+      "code": "STK",
+      "name": "AHFS (American Hospital Formulary Service) pharmacologic -",
+      "description": "AHFS (American Hospital Formulary Service) pharmacologic - therapeutic classification Pharmacologic - therapeutic classification maintained by the American Hospital Formulary Service (AHFS)."
+    },
+    {
+      "code": "STL",
+      "name": "ATC (Anatomical Therapeutic Chemical) classification system",
+      "description": "ATC (Anatomical Therapeutic Chemical) classification system Anatomical Therapeutic Chemical classification system maintained by the World Health Organisation (WHO)."
+    },
+    {
+      "code": "STM",
+      "name": "CLADIMED (Classification des Dispositifs M�dicaux)",
+      "description": "CLADIMED (Classification des Dispositifs M�dicaux) A five level classification system for medical decvices maintained by the CLADIMED organisation used in the French market."
+    },
+    {
+      "code": "STN",
+      "name": "CMDR (Canadian Medical Device Regulations) classification",
+      "description": "CMDR (Canadian Medical Device Regulations) classification system Classification system related to the Canadian Medical Device Regulations maintained by Health Canada."
+    },
+    {
+      "code": "STO",
+      "name": "CNDM (Classificazione Nazionale dei Dispositivi Medici)",
+      "description": "CNDM (Classificazione Nazionale dei Dispositivi Medici) A classification system for medical devices used in the Italian market."
+    },
+    {
+      "code": "STP",
+      "name": "UK DM&D (Dictionary of Medicines & Devices) standard coding",
+      "description": "UK DM&D (Dictionary of Medicines & Devices) standard coding scheme A classification system for medicines and devices used in the UK market."
+    },
+    {
+      "code": "STQ",
+      "name": "eCl@ss",
+      "description": "eCl@ss Standardized material and service classification and dictionary maintained by eClass e.V."
+    },
+    {
+      "code": "STR",
+      "name": "EDMA (European Diagnostic Manufacturers Association)",
+      "description": "EDMA (European Diagnostic Manufacturers Association) Products Classification Classification for in vitro diagnostics medical devices maintained by the European Diagnostic Manufacturers Association."
+    },
+    {
+      "code": "STS",
+      "name": "EGAR (European Generic Article Register)",
+      "description": "EGAR (European Generic Article Register) A classification system for medical devices."
+    },
+    {
+      "code": "STT",
+      "name": "GMDN (Global Medical Devices Nomenclature)",
+      "description": "GMDN (Global Medical Devices Nomenclature) Nomenclature system for identification of medical devices officially apprroved by the European Union."
+    },
+    {
+      "code": "STU",
+      "name": "GPI (Generic Product Identifier)",
+      "description": "GPI (Generic Product Identifier) A drug classification system managed by Medi-Span."
+    },
+    {
+      "code": "STV",
+      "name": "HCPCS (Healthcare Common Procedure Coding System)",
+      "description": "HCPCS (Healthcare Common Procedure Coding System) A classification system used with US healthcare insurance programs."
+    },
+    {
+      "code": "STW",
+      "name": "ICPS (International Classification for Patient Safety)",
+      "description": "ICPS (International Classification for Patient Safety) A patient safety taxonomy maintained by the World Health Organisation."
+    },
+    {
+      "code": "STX",
+      "name": "MedDRA (Medical Dictionary for Regulatory Activities)",
+      "description": "MedDRA (Medical Dictionary for Regulatory Activities) A medical dictionary maintained by the International Federation of Pharmaceutical Manufacturers and Associations (IFPMA)."
+    },
+    {
+      "code": "STY",
+      "name": "Medical Columbus",
+      "description": "Medical Columbus Medical product classification system used in the German market."
+    },
+    {
+      "code": "STZ",
+      "name": "NAPCS (North American Product Classification System)",
+      "description": "NAPCS (North American Product Classification System) Product classification system used in the North American market."
+    },
+    {
+      "code": "SUA",
+      "name": "NHS (National Health Services) eClass",
+      "description": "NHS (National Health Services) eClass Product and Service classification system used in United Kingdom market."
+    },
+    {
+      "code": "SUB",
+      "name": "US FDA (Food and Drug Administration) Product Code",
+      "description": "US FDA (Food and Drug Administration) Product Code Classification Database US FDA Product Code Classification Database contains medical device names and associated information developed by the Center for Devices and Radiological Health (CDRH)."
+    },
+    {
+      "code": "SUC",
+      "name": "SNOMED CT (Systematized Nomenclature of Medicine-Clinical",
+      "description": "SNOMED CT (Systematized Nomenclature of Medicine-Clinical Terms) A medical nomenclature system developed between the NHS and the College of American Pathologists."
+    },
+    {
+      "code": "SUD",
+      "name": "UMDNS (Universal Medical Device Nomenclature System)",
+      "description": "UMDNS (Universal Medical Device Nomenclature System) A standard international nomenclature and computer coding system for medical devices maintained by the Emergency Care Research Institute (ECRI)."
+    },
+    {
+      "code": "SUE",
+      "name": "GS1 Global Returnable Asset Identifier, non-serialised",
+      "description": "GS1 Global Returnable Asset Identifier, non-serialised A unique, 13-digit number assigned according to the numbering structure of the GS1 system and used to identify a type of Reusable Transport Item (RTI)."
+    },
+    {
+      "code": "TG",
+      "name": "Transport group number",
+      "description": "Transport group number (8012) Additional number to form article groups for packing and/or transportation purposes."
+    },
+    {
+      "code": "UA",
+      "name": "Ultimate customer's article number",
+      "description": "Ultimate customer's article number Number assigned by ultimate customer to identify relevant article."
+    },
+    {
+      "code": "UP",
+      "name": "UPC (Universal product code)",
+      "description": "UPC (Universal product code) Number assigned to a manufacturer's product by the Product Code Council."
+    },
+    {
+      "code": "VN",
+      "name": "Vendor item number",
+      "description": "Vendor item number Reference number assigned by a vendor/seller identifying a product/service/article."
+    },
+    {
+      "code": "VP",
+      "name": "Vendor's (seller's) part number",
+      "description": "Vendor's (seller's) part number Reference number assigned by a vendor/seller identifying an article."
+    },
+    {
+      "code": "VS",
+      "name": "Vendor's supplemental item number",
+      "description": "Vendor's supplemental item number The item number is a specified by the vendor as a supplemental number for the vendor's purposes."
+    },
+    {
+      "code": "VX",
+      "name": "Vendor specification number",
+      "description": "Vendor specification number The item number has been allocated by the vendor as a specification number."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Item type identification mutually agreed between interchanging parties."
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "code": "1229",
+  "name": "Action code",
+  "description": "Code specifying the action to be taken or already taken.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Added"
+    },
+    {
+      "code": "2",
+      "name": "Deleted"
+    },
+    {
+      "code": "3",
+      "name": "Changed"
+    },
+    {
+      "code": "4",
+      "name": "No action"
+    },
+    {
+      "code": "5",
+      "name": "Accepted without amendment"
+    },
+    {
+      "code": "6",
+      "name": "Accepted with amendment"
+    },
+    {
+      "code": "7",
+      "name": "Not accepted"
+    },
+    {
+      "code": "8",
+      "name": "Schedule only"
+    },
+    {
+      "code": "9",
+      "name": "Amendments"
+    },
+    {
+      "code": "10",
+      "name": "Not found"
+    },
+    {
+      "code": "11",
+      "name": "Not amended"
+    },
+    {
+      "code": "12",
+      "name": "Line item numbers changed"
+    },
+    {
+      "code": "13",
+      "name": "Buyer has deducted amount"
+    },
+    {
+      "code": "14",
+      "name": "Buyer claims against invoice"
+    },
+    {
+      "code": "15",
+      "name": "Charge back by seller"
+    },
+    {
+      "code": "16",
+      "name": "Seller will issue credit note"
+    },
+    {
+      "code": "17",
+      "name": "Terms changed for new terms"
+    },
+    {
+      "code": "18",
+      "name": "Abide outcome of negotiations"
+    },
+    {
+      "code": "19",
+      "name": "Seller rejects dispute"
+    },
+    {
+      "code": "20",
+      "name": "Settlement"
+    },
+    {
+      "code": "21",
+      "name": "No delivery"
+    },
+    {
+      "code": "22",
+      "name": "Call-off delivery"
+    },
+    {
+      "code": "A",
+      "name": "request for delivery of a particular quantity of goods"
+    },
+    {
+      "code": "23",
+      "name": "Proposed amendment"
+    },
+    {
+      "code": "A",
+      "name": "code used to indicate an amendment suggested by the"
+    },
+    {
+      "code": "24",
+      "name": "Accepted with amendment, no confirmation required"
+    },
+    {
+      "code": "25",
+      "name": "Equipment provisionally repaired"
+    },
+    {
+      "code": "26",
+      "name": "Included"
+    },
+    {
+      "code": "27",
+      "name": "Upon receipt and verification of documents we shall cover"
+    },
+    {
+      "code": "28",
+      "name": "Upon receipt and verification of documents we shall"
+    },
+    {
+      "code": "29",
+      "name": "On receipt of your authenticated advice we shall cover you"
+    },
+    {
+      "code": "30",
+      "name": "On receipt of your authenticated advice we shall authorize"
+    },
+    {
+      "code": "31",
+      "name": "On receipt of your authenticated advice we shall credit"
+    },
+    {
+      "code": "32",
+      "name": "Credit advice requested for direct debit"
+    },
+    {
+      "code": "A",
+      "name": "credit advice is requested for the direct debit."
+    },
+    {
+      "code": "33",
+      "name": "Credit advice and acknowledgement for direct debit"
+    },
+    {
+      "code": "A",
+      "name": "credit advice and acknowledgement are requested for"
+    },
+    {
+      "code": "34",
+      "name": "Inquiry"
+    },
+    {
+      "code": "35",
+      "name": "Checked"
+    },
+    {
+      "code": "36",
+      "name": "Not checked"
+    },
+    {
+      "code": "37",
+      "name": "Cancelled"
+    },
+    {
+      "code": "38",
+      "name": "Replaced"
+    },
+    {
+      "code": "39",
+      "name": "New"
+    },
+    {
+      "code": "40",
+      "name": "Agreed"
+    },
+    {
+      "code": "41",
+      "name": "Proposed"
+    },
+    {
+      "code": "42",
+      "name": "Already delivered"
+    },
+    {
+      "code": "43",
+      "name": "Additional subordinate structures will follow"
+    },
+    {
+      "code": "44",
+      "name": "Additional subordinate structures will not follow"
+    },
+    {
+      "code": "45",
+      "name": "Result opposed"
+    },
+    {
+      "code": "A",
+      "name": "notification that the result is opposed."
+    },
+    {
+      "code": "46",
+      "name": "Auction held"
+    },
+    {
+      "code": "A",
+      "name": "notification that an auction was held."
+    },
+    {
+      "code": "47",
+      "name": "Legal action pursued"
+    },
+    {
+      "code": "A",
+      "name": "notification that legal action has been pursued."
+    },
+    {
+      "code": "48",
+      "name": "Meeting held"
+    },
+    {
+      "code": "A",
+      "name": "notification that a meeting was held."
+    },
+    {
+      "code": "49",
+      "name": "Result set aside"
+    },
+    {
+      "code": "A",
+      "name": "notification that the result has been set aside."
+    },
+    {
+      "code": "50",
+      "name": "Result disputed"
+    },
+    {
+      "code": "A",
+      "name": "notification that the result has been disputed."
+    },
+    {
+      "code": "51",
+      "name": "Countersued"
+    },
+    {
+      "code": "A",
+      "name": "notification that a countersuit has been filed."
+    },
+    {
+      "code": "52",
+      "name": "Pending"
+    },
+    {
+      "code": "A",
+      "name": "notification that an action is awaiting settlement."
+    },
+    {
+      "code": "53",
+      "name": "Court action dismissed"
+    },
+    {
+      "code": "A",
+      "name": "notification that a court action will no longer be"
+    },
+    {
+      "code": "54",
+      "name": "Referred item, accepted"
+    },
+    {
+      "code": "55",
+      "name": "Referred item, rejected"
+    },
+    {
+      "code": "56",
+      "name": "Debit advice statement line"
+    },
+    {
+      "code": "57",
+      "name": "Credit advice statement line"
+    },
+    {
+      "code": "58",
+      "name": "Grouped credit advices"
+    },
+    {
+      "code": "59",
+      "name": "Grouped debit advices"
+    },
+    {
+      "code": "60",
+      "name": "Registered"
+    },
+    {
+      "code": "61",
+      "name": "Payment denied"
+    },
+    {
+      "code": "62",
+      "name": "Approved as amended"
+    },
+    {
+      "code": "63",
+      "name": "Approved as submitted"
+    },
+    {
+      "code": "64",
+      "name": "Cancelled, no activity"
+    },
+    {
+      "code": "65",
+      "name": "Under investigation"
+    },
+    {
+      "code": "66",
+      "name": "Initial claim received"
+    },
+    {
+      "code": "67",
+      "name": "Not in process"
+    },
+    {
+      "code": "68",
+      "name": "Rejected, duplicate"
+    },
+    {
+      "code": "69",
+      "name": "Rejected, resubmit with corrections"
+    },
+    {
+      "code": "70",
+      "name": "Pending, incomplete"
+    },
+    {
+      "code": "71",
+      "name": "Under field office investigation"
+    },
+    {
+      "code": "72",
+      "name": "Pending, awaiting additional material"
+    },
+    {
+      "code": "73",
+      "name": "Pending, awaiting review"
+    },
+    {
+      "code": "74",
+      "name": "Reopened"
+    },
+    {
+      "code": "75",
+      "name": "Processed by primary, forwarded to additional payer(s)"
+    },
+    {
+      "code": "76",
+      "name": "Processed by secondary, forwarded to additional payer(s)"
+    },
+    {
+      "code": "77",
+      "name": "Processed by tertiary, forwarded to additional payer(s)"
+    },
+    {
+      "code": "78",
+      "name": "Previous payment decision reversed"
+    },
+    {
+      "code": "A",
+      "name": "previous payment decision has been reversed."
+    },
+    {
+      "code": "79",
+      "name": "Not our claim, forwarded to another payer(s)"
+    },
+    {
+      "code": "A",
+      "name": "request does not belong to this payer but has been"
+    },
+    {
+      "code": "80",
+      "name": "Transferred to correct insurance carrier"
+    },
+    {
+      "code": "81",
+      "name": "Not paid, predetermination pricing only"
+    },
+    {
+      "code": "82",
+      "name": "Documentation claim"
+    },
+    {
+      "code": "83",
+      "name": "Reviewed"
+    },
+    {
+      "code": "84",
+      "name": "Repriced"
+    },
+    {
+      "code": "85",
+      "name": "Audited"
+    },
+    {
+      "code": "86",
+      "name": "Conditionally paid"
+    },
+    {
+      "code": "87",
+      "name": "On appeal"
+    },
+    {
+      "code": "88",
+      "name": "Closed"
+    },
+    {
+      "code": "89",
+      "name": "Reaudited"
+    },
+    {
+      "code": "A",
+      "name": "subsequent official examination has occurred."
+    },
+    {
+      "code": "90",
+      "name": "Reissued"
+    },
+    {
+      "code": "91",
+      "name": "Closed after reopening"
+    },
+    {
+      "code": "92",
+      "name": "Redetermined"
+    },
+    {
+      "code": "93",
+      "name": "Processed as primary"
+    },
+    {
+      "code": "94",
+      "name": "Processed as secondary"
+    },
+    {
+      "code": "95",
+      "name": "Processed as tertiary"
+    },
+    {
+      "code": "96",
+      "name": "Correction of error"
+    },
+    {
+      "code": "A",
+      "name": "correction to information previously communicated"
+    },
+    {
+      "code": "97",
+      "name": "Single credit item of a group"
+    },
+    {
+      "code": "98",
+      "name": "Single debit item of a group"
+    },
+    {
+      "code": "99",
+      "name": "Interim response"
+    },
+    {
+      "code": "100",
+      "name": "Final response"
+    },
+    {
+      "code": "101",
+      "name": "Debit advice requested"
+    },
+    {
+      "code": "A",
+      "name": "debit advice is requested for the transaction."
+    },
+    {
+      "code": "102",
+      "name": "Transaction not impacted"
+    },
+    {
+      "code": "103",
+      "name": "Patient to be notified"
+    },
+    {
+      "code": "104",
+      "name": "Healthcare provider to be notified"
+    },
+    {
+      "code": "105",
+      "name": "Usual general practitioner to be notified"
+    },
+    {
+      "code": "106",
+      "name": "Advice without details"
+    },
+    {
+      "code": "107",
+      "name": "Advice with details"
+    },
+    {
+      "code": "108",
+      "name": "Amendment requested"
+    },
+    {
+      "code": "109",
+      "name": "For information"
+    },
+    {
+      "code": "110",
+      "name": "Withdraw"
+    },
+    {
+      "code": "A",
+      "name": "code indicating discontinuance or retraction."
+    },
+    {
+      "code": "111",
+      "name": "Delivery date change"
+    },
+    {
+      "code": "112",
+      "name": "Quantity change"
+    },
+    {
+      "code": "113",
+      "name": "Resale and claim"
+    },
+    {
+      "code": "114",
+      "name": "Resale"
+    },
+    {
+      "code": "115",
+      "name": "Prior addition"
+    },
+    {
+      "code": "116",
+      "name": "Expired"
+    },
+    {
+      "code": "117",
+      "name": "Hold"
+    },
+    {
+      "code": "118",
+      "name": "Open"
+    }
+  ]
+}

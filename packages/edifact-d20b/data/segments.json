@@ -1,0 +1,4460 @@
+{
+  "ADR": {
+    "tag": "ADR",
+    "name": "ADDRESS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C817",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C090",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C819",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C517",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "AGR": {
+    "tag": "AGR",
+    "name": "AGREEMENT IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C543",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9419",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "AJT": {
+    "tag": "AJT",
+    "name": "ADJUSTMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4465",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ALC": {
+    "tag": "ALC",
+    "name": "ALLOWANCE OR CHARGE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5463",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C552",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4471",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1227",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C214",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "ALI": {
+    "tag": "ALI",
+    "name": "ADDITIONAL INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3239",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9213",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "APP": {
+    "tag": "APP",
+    "name": "APPLICABILITY",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9051",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C973",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "APR": {
+    "tag": "APR",
+    "name": "ADDITIONAL PRICE INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4043",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C138",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "ARD": {
+    "tag": "ARD",
+    "name": "MONETARY AMOUNT FUNCTION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C549",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C008",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ARR": {
+    "tag": "ARR",
+    "name": "ARRAY INFORMATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C770",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ASI": {
+    "tag": "ASI",
+    "name": "ARRAY STRUCTURE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C779",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ATT": {
+    "tag": "ATT",
+    "name": "ATTRIBUTE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C955",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C956",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "AUT": {
+    "tag": "AUT",
+    "name": "AUTHENTICATION RESULT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9280",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9282",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "BAS": {
+    "tag": "BAS",
+    "name": "BASIS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9045",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C974",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "BGM": {
+    "tag": "BGM",
+    "name": "BEGINNING OF MESSAGE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C106",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4343",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1373",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "BII": {
+    "tag": "BII",
+    "name": "STRUCTURE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7429",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C045",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7140",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "BUS": {
+    "tag": "BUS",
+    "name": "BUSINESS FUNCTION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C521",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3279",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4487",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C551",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4463",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "CAV": {
+    "tag": "CAV",
+    "name": "CHARACTERISTIC VALUE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C889",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "CCD": {
+    "tag": "CCD",
+    "name": "CREDIT COVER DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4505",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4509",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CCI": {
+    "tag": "CCI",
+    "name": "CHARACTERISTIC/CLASS ID",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7059",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C502",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "CDI": {
+    "tag": "CDI",
+    "name": "PHYSICAL OR LOGICAL STATE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C564",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "CDS": {
+    "tag": "CDS",
+    "name": "CODE SET IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C702",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CDV": {
+    "tag": "CDV",
+    "name": "CODE VALUE DEFINITION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9426",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9434",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9453",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "CED": {
+    "tag": "CED",
+    "name": "COMPUTER ENVIRONMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C079",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9448",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CIN": {
+    "tag": "CIN",
+    "name": "CLINICAL INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6415",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C836",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C837",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CLA": {
+    "tag": "CLA",
+    "name": "CLAUSE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4059",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C970",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "CLI": {
+    "tag": "CLI",
+    "name": "CLINICAL INTERVENTION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9441",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C828",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "CMP": {
+    "tag": "CMP",
+    "name": "COMPOSITE DATA ELEMENT IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9146",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CNI": {
+    "tag": "CNI",
+    "name": "CONSIGNMENT INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1490",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C503",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1312",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CNT": {
+    "tag": "CNT",
+    "name": "CONTROL TOTAL",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C270",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "COD": {
+    "tag": "COD",
+    "name": "COMPONENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C823",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C824",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "COM": {
+    "tag": "COM",
+    "name": "COMMUNICATION CONTACT",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C076",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "COT": {
+    "tag": "COT",
+    "name": "CONTRIBUTION DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5047",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C953",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "CPI": {
+    "tag": "CPI",
+    "name": "CHARGE PAYMENT INSTRUCTIONS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C231",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4237",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CPS": {
+    "tag": "CPS",
+    "name": "CONSIGNMENT PACKING SEQUENCE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7164",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7166",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7075",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CPT": {
+    "tag": "CPT",
+    "name": "ACCOUNT IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4437",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C593",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "CST": {
+    "tag": "CST",
+    "name": "CUSTOMS STATUS OF GOODS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1496",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "CTA": {
+    "tag": "CTA",
+    "name": "CONTACT INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3139",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C056",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "CUX": {
+    "tag": "CUX",
+    "name": "CURRENCIES",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C504",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C504",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5402",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6341",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DAM": {
+    "tag": "DAM",
+    "name": "DAMAGE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7493",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C821",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C822",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C825",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C826",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DFN": {
+    "tag": "DFN",
+    "name": "DEFINITION FUNCTION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9023",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9025",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4519",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "DGS": {
+    "tag": "DGS",
+    "name": "DANGEROUS GOODS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8273",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C205",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C234",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C223",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8339",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8364",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8410",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8126",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C235",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C236",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8255",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C289",
+        "mandatory": false,
+        "position": 14
+      }
+    ]
+  },
+  "DII": {
+    "tag": "DII",
+    "name": "DIRECTORY IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1056",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1058",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9148",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1476",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "DIM": {
+    "tag": "DIM",
+    "name": "DIMENSIONS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6145",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C211",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "DLI": {
+    "tag": "DLI",
+    "name": "DOCUMENT LINE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "DLM": {
+    "tag": "DLM",
+    "name": "DELIVERY LIMITATIONS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4455",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C214",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4457",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DMS": {
+    "tag": "DMS",
+    "name": "DOCUMENT/MESSAGE SUMMARY",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C106",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7240",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "DOC": {
+    "tag": "DOC",
+    "name": "DOCUMENT/MESSAGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C503",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3153",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1220",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1218",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DRD": {
+    "tag": "DRD",
+    "name": "DATA REPRESENTATION DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7512",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7515",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9169",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6174",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DSG": {
+    "tag": "DSG",
+    "name": "DOSAGE ADMINISTRATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6085",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C838",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "DSI": {
+    "tag": "DSI",
+    "name": "DATA SET IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C782",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C286",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DTM": {
+    "tag": "DTM",
+    "name": "DATE/TIME/PERIOD",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C507",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "EDT": {
+    "tag": "EDT",
+    "name": "EDITING DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6178",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9026",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9031",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4447",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "EFI": {
+    "tag": "EFI",
+    "name": "EXTERNAL FILE LINK IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C077",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C099",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9450",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ELM": {
+    "tag": "ELM",
+    "name": "SIMPLE DATA ELEMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9150",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6113",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9156",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9158",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9161",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6432",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "ELU": {
+    "tag": "ELU",
+    "name": "DATA ELEMENT USAGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9162",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6176",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9453",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9285",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9175",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "ELV": {
+    "tag": "ELV",
+    "name": "ELEMENT VALUE DEFINITION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9029",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9422",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "EMP": {
+    "tag": "EMP",
+    "name": "EMPLOYMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9003",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C948",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C951",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C950",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3480",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9035",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "EQA": {
+    "tag": "EQA",
+    "name": "ATTACHED EQUIPMENT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8053",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "EQD": {
+    "tag": "EQD",
+    "name": "EQUIPMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8053",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C224",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8077",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8249",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8169",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4233",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "EQN": {
+    "tag": "EQN",
+    "name": "NUMBER OF UNITS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C523",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "ERC": {
+    "tag": "ERC",
+    "name": "APPLICATION ERROR INFORMATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C901",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "ERP": {
+    "tag": "ERP",
+    "name": "ERROR POINT DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C701",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C853",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "EVE": {
+    "tag": "EVE",
+    "name": "EVENT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9635",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C030",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C063",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "FCA": {
+    "tag": "FCA",
+    "name": "FINANCIAL CHARGES ALLOCATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4471",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C878",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "FII": {
+    "tag": "FII",
+    "name": "FINANCIAL INSTITUTION INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C078",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C088",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "FNS": {
+    "tag": "FNS",
+    "name": "FOOTNOTE SET",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C783",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "FNT": {
+    "tag": "FNT",
+    "name": "FOOTNOTE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C784",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "FOR": {
+    "tag": "FOR",
+    "name": "FORMULA",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9501",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9502",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C961",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "FSQ": {
+    "tag": "FSQ",
+    "name": "FORMULA SEQUENCE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9507",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9509",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9510",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "FTX": {
+    "tag": "FTX",
+    "name": "FREE TEXT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4451",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4453",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C107",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C108",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4447",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "GDS": {
+    "tag": "GDS",
+    "name": "NATURE OF CARGO",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C703",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C288",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "GEI": {
+    "tag": "GEI",
+    "name": "PROCESSING INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9649",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C012",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7187",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "GID": {
+    "tag": "GID",
+    "name": "GOODS ITEM DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1496",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "GIN": {
+    "tag": "GIN",
+    "name": "GOODS IDENTITY NUMBER",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "GIR": {
+    "tag": "GIR",
+    "name": "RELATED IDENTIFICATION NUMBERS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7297",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "GOR": {
+    "tag": "GOR",
+    "name": "GOVERNMENTAL REQUIREMENTS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8323",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "GPO": {
+    "tag": "GPO",
+    "name": "GEOGRAPHICAL POSITION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6029",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6000",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6002",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6096",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "GRU": {
+    "tag": "GRU",
+    "name": "SEGMENT GROUP USAGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9164",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6176",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "HAN": {
+    "tag": "HAN",
+    "name": "HANDLING INSTRUCTIONS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C524",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C218",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "HYN": {
+    "tag": "HYN",
+    "name": "HIERARCHY INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7173",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7171",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7166",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "ICD": {
+    "tag": "ICD",
+    "name": "INSURANCE COVER DESCRIPTION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C330",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C331",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "IDE": {
+    "tag": "IDE",
+    "name": "IDENTITY",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7495",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "IFD": {
+    "tag": "IFD",
+    "name": "INFORMATION DETAIL",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4153",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C009",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C010",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C011",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "IHC": {
+    "tag": "IHC",
+    "name": "PERSON CHARACTERISTIC",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3289",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C818",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "IMD": {
+    "tag": "IMD",
+    "name": "ITEM DESCRIPTION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7077",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C272",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C273",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7383",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "IND": {
+    "tag": "IND",
+    "name": "INDEX DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C545",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C546",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "INP": {
+    "tag": "INP",
+    "name": "PARTIES AND INSTRUCTION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C849",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C850",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "INV": {
+    "tag": "INV",
+    "name": "INVENTORY MANAGEMENT RELATED DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4501",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7491",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4499",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4503",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "IRQ": {
+    "tag": "IRQ",
+    "name": "INFORMATION REQUIRED",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C333",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "LAN": {
+    "tag": "LAN",
+    "name": "LANGUAGE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3455",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C508",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "LIN": {
+    "tag": "LIN",
+    "name": "LINE ITEM",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C829",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7083",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "LOC": {
+    "tag": "LOC",
+    "name": "PLACE/LOCATION IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3227",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C517",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C519",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C553",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5479",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "MEA": {
+    "tag": "MEA",
+    "name": "MEASUREMENTS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6311",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C502",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C174",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7383",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "MEM": {
+    "tag": "MEM",
+    "name": "MEMBERSHIP DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7449",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C942",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C944",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C945",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "MKS": {
+    "tag": "MKS",
+    "name": "MARKET/SALES CHANNEL INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C332",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "MOA": {
+    "tag": "MOA",
+    "name": "MONETARY AMOUNT",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C516",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "MSG": {
+    "tag": "MSG",
+    "name": "MESSAGE TYPE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C709",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C941",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "MTD": {
+    "tag": "MTD",
+    "name": "MAINTENANCE OPERATION DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7495",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3005",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3009",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "NAD": {
+    "tag": "NAD",
+    "name": "NAME AND ADDRESS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C058",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C080",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C059",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C819",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "NAT": {
+    "tag": "NAT",
+    "name": "NATIONALITY",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3493",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PAC": {
+    "tag": "PAC",
+    "name": "PACKAGE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7224",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C531",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C202",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C402",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C532",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "PAI": {
+    "tag": "PAI",
+    "name": "PAYMENT INSTRUCTIONS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C534",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PAS": {
+    "tag": "PAS",
+    "name": "ATTENDANCE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9443",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C839",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C840",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C841",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "PCC": {
+    "tag": "PCC",
+    "name": "PREMIUM CALCULATION COMPONENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C820",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "PCD": {
+    "tag": "PCD",
+    "name": "PERCENTAGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C501",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PCI": {
+    "tag": "PCI",
+    "name": "PACKAGE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4233",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C210",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8169",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C827",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "PDI": {
+    "tag": "PDI",
+    "name": "PERSON DEMOGRAPHIC INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3499",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C085",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C101",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "PER": {
+    "tag": "PER",
+    "name": "PERIOD RELATED DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "2023",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C977",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PGI": {
+    "tag": "PGI",
+    "name": "PRODUCT GROUP INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5379",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C288",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PIA": {
+    "tag": "PIA",
+    "name": "ADDITIONAL PRODUCT ID",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4347",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "PNA": {
+    "tag": "PNA",
+    "name": "PARTY IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3403",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3397",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "POC": {
+    "tag": "POC",
+    "name": "PURPOSE OF CONVEYANCE CALL",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C525",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PRC": {
+    "tag": "PRC",
+    "name": "PROCESS IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C242",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C830",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PRI": {
+    "tag": "PRI",
+    "name": "PRICE DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C509",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5213",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PRV": {
+    "tag": "PRV",
+    "name": "PROVISO DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4071",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C971",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C972",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "PSD": {
+    "tag": "PSD",
+    "name": "PHYSICAL SAMPLE DESCRIPTION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4407",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7039",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C526",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7045",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7047",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "PTY": {
+    "tag": "PTY",
+    "name": "PRIORITY",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C585",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PYT": {
+    "tag": "PYT",
+    "name": "PAYMENT TERMS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4279",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C019",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2475",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2009",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2151",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2152",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "QRS": {
+    "tag": "QRS",
+    "name": "QUERY AND RESPONSE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C811",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C812",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "QTY": {
+    "tag": "QTY",
+    "name": "QUANTITY",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C186",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "QUA": {
+    "tag": "QUA",
+    "name": "QUALIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9037",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C950",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "QVR": {
+    "tag": "QVR",
+    "name": "QUANTITY VARIANCES",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C279",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4221",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "RCS": {
+    "tag": "RCS",
+    "name": "REQUIREMENTS AND CONDITIONS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C550",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "REL": {
+    "tag": "REL",
+    "name": "RELATIONSHIP",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9141",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C941",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "RFF": {
+    "tag": "RFF",
+    "name": "REFERENCE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C506",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "RJL": {
+    "tag": "RJL",
+    "name": "ACCOUNTING JOURNAL IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C595",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C596",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "RNG": {
+    "tag": "RNG",
+    "name": "RANGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6167",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C280",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ROD": {
+    "tag": "ROD",
+    "name": "RISK OBJECT TYPE",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C851",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C852",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "RSL": {
+    "tag": "RSL",
+    "name": "RESULT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6087",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6077",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C831",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C831",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C848",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6079",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "RTE": {
+    "tag": "RTE",
+    "name": "RATE DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C128",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SAL": {
+    "tag": "SAL",
+    "name": "REMUNERATION TYPE IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C049",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "SCC": {
+    "tag": "SCC",
+    "name": "SCHEDULING CONDITIONS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4493",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C329",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "SCD": {
+    "tag": "SCD",
+    "name": "STRUCTURE COMPONENT DEFINITION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C786",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "SEG": {
+    "tag": "SEG",
+    "name": "SEGMENT IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9166",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "SEL": {
+    "tag": "SEL",
+    "name": "SEAL NUMBER",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9308",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C215",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4517",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4525",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "SEQ": {
+    "tag": "SEQ",
+    "name": "SEQUENCE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C286",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SFI": {
+    "tag": "SFI",
+    "name": "SAFETY INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7164",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C814",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C815",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "SGP": {
+    "tag": "SGP",
+    "name": "SPLIT GOODS PLACEMENT",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7224",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SGU": {
+    "tag": "SGU",
+    "name": "SEGMENT USAGE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9166",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6176",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7168",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1049",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "SPR": {
+    "tag": "SPR",
+    "name": "ORGANISATION CLASSIFICATION DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3079",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C844",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "SPS": {
+    "tag": "SPS",
+    "name": "SAMPLING PARAMETERS FOR SUMMARY STATISTICS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C526",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6074",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "STA": {
+    "tag": "STA",
+    "name": "STATISTICS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6331",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C527",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "STC": {
+    "tag": "STC",
+    "name": "STATISTICAL CONCEPT",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C785",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "STG": {
+    "tag": "STG",
+    "name": "STAGES",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9421",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6426",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6428",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "STS": {
+    "tag": "STS",
+    "name": "STATUS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C601",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C555",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "TAX": {
+    "tag": "TAX",
+    "name": "DUTY/TAX/FEE DETAILS",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5283",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C241",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C533",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C243",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5305",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3446",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1227",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5307",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "TCC": {
+    "tag": "TCC",
+    "name": "CHARGE/RATE CALCULATIONS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C200",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C528",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C554",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "TDT": {
+    "tag": "TDT",
+    "name": "TRANSPORT INFORMATION",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8051",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8028",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C220",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C040",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8101",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C401",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C222",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8281",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C290",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "TEM": {
+    "tag": "TEM",
+    "name": "TEST METHOD",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C244",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4419",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3077",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6311",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7188",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C515",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "TMD": {
+    "tag": "TMD",
+    "name": "TRANSPORT MOVEMENT DETAILS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C219",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8332",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8341",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "TMP": {
+    "tag": "TMP",
+    "name": "TEMPERATURE",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6245",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C239",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "TOD": {
+    "tag": "TOD",
+    "name": "TERMS OF DELIVERY OR TRANSPORT",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4055",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4215",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C100",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "TPL": {
+    "tag": "TPL",
+    "name": "TRANSPORT PLACEMENT",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C222",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "TRU": {
+    "tag": "TRU",
+    "name": "TECHNICAL RULES",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1058",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7175",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "TSR": {
+    "tag": "TSR",
+    "name": "TRANSPORT SERVICE REQUIREMENTS",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C536",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C233",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C537",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C703",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "VLI": {
+    "tag": "VLI",
+    "name": "VALUE LIST IDENTIFICATION",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C780",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1514",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1505",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  }
+}

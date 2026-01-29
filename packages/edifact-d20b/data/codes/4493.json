@@ -1,0 +1,71 @@
+{
+  "code": "4493",
+  "name": "Delivery instruction code",
+  "description": "Code specifying a delivery instruction.",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Ship on authorization"
+    },
+    {
+      "code": "A",
+      "name": "delivery requirement indicating the items should not"
+    },
+    {
+      "code": "BK",
+      "name": "Ship partial - balance back order"
+    },
+    {
+      "code": "CD",
+      "name": "Cancel if not delivered by date"
+    },
+    {
+      "code": "DA",
+      "name": "Do not deliver after"
+    },
+    {
+      "code": "A",
+      "name": "requirement that an order should not be delivered"
+    },
+    {
+      "code": "DB",
+      "name": "Do not deliver before"
+    },
+    {
+      "code": "A",
+      "name": "requirement that an order should not be delivered"
+    },
+    {
+      "code": "DD",
+      "name": "Deliver on date"
+    },
+    {
+      "code": "IS",
+      "name": "Substitute item"
+    },
+    {
+      "code": "A",
+      "name": "substitute item may be delivered, if the ordered item"
+    },
+    {
+      "code": "P1",
+      "name": "No schedule established"
+    },
+    {
+      "code": "P2",
+      "name": "Ship as soon as possible"
+    },
+    {
+      "code": "SC",
+      "name": "Ship complete order"
+    },
+    {
+      "code": "SF",
+      "name": "Ship partial, if no freight rate increase"
+    },
+    {
+      "code": "SP",
+      "name": "Ship partial - balance cancel"
+    }
+  ]
+}

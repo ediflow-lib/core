@@ -1,0 +1,82 @@
+{
+  "code": "4509",
+  "name": "Credit cover response reason code",
+  "description": "Code specifying the reason for a response to a request for credit cover.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Requested financial information not provided",
+      "description": "Requested financial information not provided Party requested has not provided financial information."
+    },
+    {
+      "code": "2",
+      "name": "No financial information available",
+      "description": "No financial information available No financial information is available on buyer."
+    },
+    {
+      "code": "3",
+      "name": "Debtor is out of business",
+      "description": "Debtor is out of business Debtor ceased trading activities."
+    },
+    {
+      "code": "4",
+      "name": "Debtor is new company",
+      "description": "Debtor is new company Debtor is newly incorporated."
+    },
+    {
+      "code": "5",
+      "name": "Debtor is not registered",
+      "description": "Debtor is not registered Debtor is not formally registered as legal entity."
+    },
+    {
+      "code": "6",
+      "name": "Debtor is non-trading company",
+      "description": "Debtor is non-trading company Debtor without trading, e.g. holding company."
+    },
+    {
+      "code": "7",
+      "name": "No comment",
+      "description": "No comment No information can be disclosed."
+    },
+    {
+      "code": "8",
+      "name": "Only insolvency risk covered",
+      "description": "Only insolvency risk covered Only the risk of insolvency is covered."
+    },
+    {
+      "code": "9",
+      "name": "Subject to acceptance of bill of exchange",
+      "description": "Subject to acceptance of bill of exchange Limit cover conditional to buyer's acceptance of bill of exchange."
+    },
+    {
+      "code": "10",
+      "name": "Document against acceptance",
+      "description": "Document against acceptance Limit given on documents against acceptance terms."
+    },
+    {
+      "code": "11",
+      "name": "Document against payment",
+      "description": "Document against payment Limit given on documents against payment terms."
+    },
+    {
+      "code": "12",
+      "name": "Adverse information is publicly available",
+      "description": "Adverse information is publicly available Adverse information on buyer is publicly available."
+    },
+    {
+      "code": "13",
+      "name": "Credit limit full",
+      "description": "Credit limit full No approval or increase in credit possible."
+    },
+    {
+      "code": "14",
+      "name": "Lack of turnover",
+      "description": "Lack of turnover Limit reduced. E.g. cancelled due to absence of activity."
+    },
+    {
+      "code": "15",
+      "name": "Other",
+      "description": "Other Reasons not otherwise specified here."
+    }
+  ]
+}

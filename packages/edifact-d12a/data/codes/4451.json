@@ -1,0 +1,1847 @@
+{
+  "code": "4451",
+  "name": "Text subject code qualifier",
+  "description": "Code qualifying the subject of the text.",
+  "values": [
+    {
+      "code": "AAA",
+      "name": "Goods item description",
+      "description": "Goods item description [7002] Plain language description of the nature of a goods item sufficient to identify it for customs, statistical or transport purposes."
+    },
+    {
+      "code": "AAB",
+      "name": "Payment term",
+      "description": "Payment term [4276] Free form description of the conditions of payment between the parties to a transaction."
+    },
+    {
+      "code": "AAC",
+      "name": "Dangerous goods additional information",
+      "description": "Dangerous goods additional information [7488] Additional information concerning dangerous substances and/or article in a consignment."
+    },
+    {
+      "code": "AAD",
+      "name": "Dangerous goods technical name",
+      "description": "Dangerous goods technical name [7254] Proper shipping name, supplemented as necessary with the correct technical name, by which a dangerous substance or article may be correctly identified, or which is sufficiently informative to permit identification by reference to generally available literature."
+    },
+    {
+      "code": "AAE",
+      "name": "Acknowledgement description",
+      "description": "Acknowledgement description The content of an acknowledgement."
+    },
+    {
+      "code": "AAF",
+      "name": "Rate additional information",
+      "description": "Rate additional information Specific details applying to rates."
+    },
+    {
+      "code": "AAG",
+      "name": "Party instructions",
+      "description": "Party instructions Indicates that the segment contains instructions to be passed on to the identified party."
+    },
+    {
+      "code": "AAI",
+      "name": "General information",
+      "description": "General information The text contains general information."
+    },
+    {
+      "code": "AAJ",
+      "name": "Additional conditions of sale/purchase",
+      "description": "Additional conditions of sale/purchase Additional conditions specific to this order or project."
+    },
+    {
+      "code": "AAK",
+      "name": "Price conditions",
+      "description": "Price conditions Information on the price conditions that are expected or given."
+    },
+    {
+      "code": "AAL",
+      "name": "Goods dimensions in characters",
+      "description": "Goods dimensions in characters Expression of a number in characters as length of ten meters."
+    },
+    {
+      "code": "AAM",
+      "name": "Equipment re-usage restrictions",
+      "description": "Equipment re-usage restrictions Technical or commercial reasons why a piece of equipment may not be re-used after the current transport terminates."
+    },
+    {
+      "code": "AAN",
+      "name": "Handling restriction",
+      "description": "Handling restriction Restrictions in handling depending on the technical characteristics of the piece of equipment or on the nature of the goods."
+    },
+    {
+      "code": "AAO",
+      "name": "Error description (free text)",
+      "description": "Error description (free text) Error described by a free text."
+    },
+    {
+      "code": "AAP",
+      "name": "Response (free text)",
+      "description": "Response (free text) Free text of the response to a communication."
+    },
+    {
+      "code": "AAQ",
+      "name": "Package content's description",
+      "description": "Package content's description A description of the contents of a package."
+    },
+    {
+      "code": "AAR",
+      "name": "Terms of delivery",
+      "description": "Terms of delivery (4053) Free text of the non Incoterms terms of delivery. For Incoterms, use: 4053."
+    },
+    {
+      "code": "AAS",
+      "name": "Bill of lading remarks",
+      "description": "Bill of lading remarks The remarks printed or to be printed on a bill of lading."
+    },
+    {
+      "code": "AAT",
+      "name": "Mode of settlement information",
+      "description": "Mode of settlement information Free text information on an IATA Air Waybill to indicate means by which account is to be settled."
+    },
+    {
+      "code": "AAU",
+      "name": "Consignment invoice information",
+      "description": "Consignment invoice information Information pertaining to the invoice covering the consignment."
+    },
+    {
+      "code": "AAV",
+      "name": "Clearance invoice information",
+      "description": "Clearance invoice information Information pertaining to the invoice covering clearance of the cargo."
+    },
+    {
+      "code": "AAW",
+      "name": "Letter of credit information",
+      "description": "Letter of credit information Information pertaining to the letter of credit."
+    },
+    {
+      "code": "AAX",
+      "name": "License information",
+      "description": "License information Information pertaining to a license."
+    },
+    {
+      "code": "AAY",
+      "name": "Certification statements",
+      "description": "Certification statements The text contains certification statements."
+    },
+    {
+      "code": "AAZ",
+      "name": "Additional export information",
+      "description": "Additional export information The text contains additional export information."
+    },
+    {
+      "code": "ABA",
+      "name": "Tariff statements",
+      "description": "Tariff statements Description of parameters relating to a tariff."
+    },
+    {
+      "code": "ABB",
+      "name": "Medical history",
+      "description": "Medical history Historical details of a patients medical events."
+    },
+    {
+      "code": "ABC",
+      "name": "Conditions of sale or purchase",
+      "description": "Conditions of sale or purchase (4490) Additional information regarding terms and conditions which apply to the transaction."
+    },
+    {
+      "code": "ABD",
+      "name": "Contract document type",
+      "description": "Contract document type [4422] Textual representation of the type of contract."
+    },
+    {
+      "code": "ABE",
+      "name": "Additional terms and/or conditions (documentary credit)",
+      "description": "Additional terms and/or conditions (documentary credit) (4260) Additional terms and/or conditions to the documentary credit."
+    },
+    {
+      "code": "ABF",
+      "name": "Instructions or information about standby documentary",
+      "description": "Instructions or information about standby documentary credit Instruction or information about a standby documentary credit."
+    },
+    {
+      "code": "ABG",
+      "name": "Instructions or information about partial shipment(s)",
+      "description": "Instructions or information about partial shipment(s) Instructions or information about partial shipment(s)."
+    },
+    {
+      "code": "ABH",
+      "name": "Instructions or information about transhipment(s)",
+      "description": "Instructions or information about transhipment(s) Instructions or information about transhipment(s)."
+    },
+    {
+      "code": "ABI",
+      "name": "Additional handling instructions documentary credit",
+      "description": "Additional handling instructions documentary credit Additional handling instructions for a documentary credit."
+    },
+    {
+      "code": "ABJ",
+      "name": "Domestic routing information",
+      "description": "Domestic routing information Information regarding the domestic routing."
+    },
+    {
+      "code": "ABK",
+      "name": "Chargeable category of equipment",
+      "description": "Chargeable category of equipment Equipment types are coded by category for financial purposes."
+    },
+    {
+      "code": "ABL",
+      "name": "Government information",
+      "description": "Government information Information pertaining to government."
+    },
+    {
+      "code": "ABM",
+      "name": "Onward routing information",
+      "description": "Onward routing information The text contains onward routing information."
+    },
+    {
+      "code": "ABN",
+      "name": "Accounting information",
+      "description": "Accounting information The text contains information related to accounting."
+    },
+    {
+      "code": "ABO",
+      "name": "Discrepancy information",
+      "description": "Discrepancy information Free text or coded information to indicate a specific discrepancy."
+    },
+    {
+      "code": "ABP",
+      "name": "Confirmation instructions",
+      "description": "Confirmation instructions Documentary credit confirmation instructions."
+    },
+    {
+      "code": "ABQ",
+      "name": "Method of issuance",
+      "description": "Method of issuance Method of issuance of documentary credit."
+    },
+    {
+      "code": "ABR",
+      "name": "Documents delivery instructions",
+      "description": "Documents delivery instructions Delivery instructions for documents required under a documentary credit."
+    },
+    {
+      "code": "ABS",
+      "name": "Additional conditions",
+      "description": "Additional conditions Additional conditions to the issuance of a documentary credit."
+    },
+    {
+      "code": "ABT",
+      "name": "Information/instructions about additional amounts covered",
+      "description": "Information/instructions about additional amounts covered Additional amounts information/instruction."
+    },
+    {
+      "code": "ABU",
+      "name": "Deferred payment termed additional",
+      "description": "Deferred payment termed additional Additional terms concerning deferred payment."
+    },
+    {
+      "code": "ABV",
+      "name": "Acceptance terms additional",
+      "description": "Acceptance terms additional Additional terms concerning acceptance."
+    },
+    {
+      "code": "ABW",
+      "name": "Negotiation terms additional",
+      "description": "Negotiation terms additional Additional terms concerning negotiation."
+    },
+    {
+      "code": "ABX",
+      "name": "Document name and documentary requirements",
+      "description": "Document name and documentary requirements Document name and documentary requirements."
+    },
+    {
+      "code": "ABZ",
+      "name": "Instructions/information about revolving documentary credit",
+      "description": "Instructions/information about revolving documentary credit Instructions/information about a revolving documentary credit."
+    },
+    {
+      "code": "ACA",
+      "name": "Documentary requirements",
+      "description": "Documentary requirements Specification of the documentary requirements."
+    },
+    {
+      "code": "ACB",
+      "name": "Additional information",
+      "description": "Additional information The text contains additional information."
+    },
+    {
+      "code": "ACC",
+      "name": "Factor assignment clause",
+      "description": "Factor assignment clause Assignment based on an agreement between seller and factor."
+    },
+    {
+      "code": "ACD",
+      "name": "Reason",
+      "description": "Reason Reason for a request or response."
+    },
+    {
+      "code": "ACE",
+      "name": "Dispute",
+      "description": "Dispute A notice, usually from buyer to seller, that something was found wrong with goods delivered or the services rendered, or with the related invoice."
+    },
+    {
+      "code": "ACF",
+      "name": "Additional attribute information",
+      "description": "Additional attribute information The text refers to information about an additional attribute not otherwise specified."
+    },
+    {
+      "code": "ACG",
+      "name": "Absence declaration",
+      "description": "Absence declaration A declaration on the reason of the absence."
+    },
+    {
+      "code": "ACH",
+      "name": "Aggregation statement",
+      "description": "Aggregation statement A statement on the way a specific variable or set of variables has been aggregated."
+    },
+    {
+      "code": "ACI",
+      "name": "Compilation statement",
+      "description": "Compilation statement A statement on the compilation status of an array or other set of figures or calculations."
+    },
+    {
+      "code": "ACJ",
+      "name": "Definitional exception",
+      "description": "Definitional exception An exception to the agreed definition of a term, concept, formula or other object."
+    },
+    {
+      "code": "ACK",
+      "name": "Privacy statement",
+      "description": "Privacy statement A statement on the privacy or confidential nature of an object."
+    },
+    {
+      "code": "ACL",
+      "name": "Quality statement",
+      "description": "Quality statement A statement on the quality of an object."
+    },
+    {
+      "code": "ACM",
+      "name": "Statistical description",
+      "description": "Statistical description The description of a statistical object such as a value list, concept, or structure definition."
+    },
+    {
+      "code": "ACN",
+      "name": "Statistical definition",
+      "description": "Statistical definition The definition of a statistical object such as a value list, concept, or structure definition."
+    },
+    {
+      "code": "ACO",
+      "name": "Statistical name",
+      "description": "Statistical name The name of a statistical object such as a value list, concept or structure definition."
+    },
+    {
+      "code": "ACP",
+      "name": "Statistical title",
+      "description": "Statistical title The title of a statistical object such as a value list, concept, or structure definition."
+    },
+    {
+      "code": "ACQ",
+      "name": "Off-dimension information",
+      "description": "Off-dimension information Information relating to differences between the actual transport dimensions and the normally applicable dimensions."
+    },
+    {
+      "code": "ACR",
+      "name": "Unexpected stops information",
+      "description": "Unexpected stops information Information relating to unexpected stops during a conveyance."
+    },
+    {
+      "code": "ACS",
+      "name": "Principles",
+      "description": "Principles Text subject is principles section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ACT",
+      "name": "Terms and definition",
+      "description": "Terms and definition Text subject is terms and definition section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ACU",
+      "name": "Segment name",
+      "description": "Segment name Text subject is segment name."
+    },
+    {
+      "code": "ACV",
+      "name": "Simple data element name",
+      "description": "Simple data element name Text subject is name of simple data element."
+    },
+    {
+      "code": "ACW",
+      "name": "Scope",
+      "description": "Scope Text subject is scope section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ACX",
+      "name": "Message type name",
+      "description": "Message type name Text subject is name of message type."
+    },
+    {
+      "code": "ACY",
+      "name": "Introduction",
+      "description": "Introduction Text subject is introduction section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ACZ",
+      "name": "Glossary",
+      "description": "Glossary Text subject is glossary section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ADA",
+      "name": "Functional definition",
+      "description": "Functional definition Text subject is functional definition section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ADB",
+      "name": "Examples",
+      "description": "Examples Text subject is examples as given in the example(s) section of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ADC",
+      "name": "Cover page",
+      "description": "Cover page Text subject is cover page of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ADD",
+      "name": "Dependency (syntax) notes",
+      "description": "Dependency (syntax) notes Denotes that the associated text is a dependency (syntax) note."
+    },
+    {
+      "code": "ADE",
+      "name": "Code value name",
+      "description": "Code value name Text subject is name of code value."
+    },
+    {
+      "code": "ADF",
+      "name": "Code list name",
+      "description": "Code list name Text subject is name of code list."
+    },
+    {
+      "code": "ADG",
+      "name": "Clarification of usage",
+      "description": "Clarification of usage Text subject is an explanation of the intended usage of a segment or segment group."
+    },
+    {
+      "code": "ADH",
+      "name": "Composite data element name",
+      "description": "Composite data element name Text subject is name of composite data element."
+    },
+    {
+      "code": "ADI",
+      "name": "Field of application",
+      "description": "Field of application Text subject is field of application of the UN/EDIFACT rules for presentation of standardized message and directories documentation."
+    },
+    {
+      "code": "ADJ",
+      "name": "Type of assets and liabilities",
+      "description": "Type of assets and liabilities Information describing the type of assets and liabilities."
+    },
+    {
+      "code": "ADK",
+      "name": "Promotion information",
+      "description": "Promotion information The text contains information about a promotion."
+    },
+    {
+      "code": "ADL",
+      "name": "Meter condition",
+      "description": "Meter condition Description of the condition of a meter."
+    },
+    {
+      "code": "ADM",
+      "name": "Meter reading information",
+      "description": "Meter reading information Information related to a particular reading of a meter."
+    },
+    {
+      "code": "ADN",
+      "name": "Type of transaction reason",
+      "description": "Type of transaction reason Information describing the type of the reason of transaction."
+    },
+    {
+      "code": "ADO",
+      "name": "Type of survey question",
+      "description": "Type of survey question Type of survey question."
+    },
+    {
+      "code": "ADP",
+      "name": "Carrier's agent counter information",
+      "description": "Carrier's agent counter information Information for use at the counter of the carrier's agent."
+    },
+    {
+      "code": "ADQ",
+      "name": "Description of work item on equipment",
+      "description": "Description of work item on equipment Description or code for the operation to be executed on the equipment."
+    },
+    {
+      "code": "ADR",
+      "name": "Message definition",
+      "description": "Message definition Text subject is message definition."
+    },
+    {
+      "code": "ADS",
+      "name": "Booked item information",
+      "description": "Booked item information Information pertaining to a booked item."
+    },
+    {
+      "code": "ADT",
+      "name": "Source of document",
+      "description": "Source of document Text subject is source of document."
+    },
+    {
+      "code": "ADU",
+      "name": "Note",
+      "description": "Note Text subject is note."
+    },
+    {
+      "code": "ADV",
+      "name": "Fixed part of segment clarification text",
+      "description": "Fixed part of segment clarification text Text subject is fixed part of segment clarification text."
+    },
+    {
+      "code": "ADW",
+      "name": "Characteristics of goods",
+      "description": "Characteristics of goods Description of the characteristic of goods in addition to the description of the goods."
+    },
+    {
+      "code": "ADX",
+      "name": "Additional discharge instructions",
+      "description": "Additional discharge instructions Special discharge instructions concerning the goods."
+    },
+    {
+      "code": "ADY",
+      "name": "Container stripping instructions",
+      "description": "Container stripping instructions Instructions regarding the stripping of container(s)."
+    },
+    {
+      "code": "ADZ",
+      "name": "CSC (Container Safety Convention) plate information",
+      "description": "CSC (Container Safety Convention) plate information Information on the CSC (Container Safety Convention) plate that is attached to the container."
+    },
+    {
+      "code": "AEA",
+      "name": "Cargo remarks",
+      "description": "Cargo remarks Additional remarks concerning the cargo."
+    },
+    {
+      "code": "AEB",
+      "name": "Temperature control instructions",
+      "description": "Temperature control instructions Instruction regarding the temperature control of the cargo."
+    },
+    {
+      "code": "AEC",
+      "name": "Text refers to expected data",
+      "description": "Text refers to expected data Remarks refer to data that was expected."
+    },
+    {
+      "code": "AED",
+      "name": "Text refers to received data",
+      "description": "Text refers to received data Remarks refer to data that was received."
+    },
+    {
+      "code": "AEE",
+      "name": "Section clarification text",
+      "description": "Section clarification text Text subject is section clarification text."
+    },
+    {
+      "code": "AEF",
+      "name": "Information to the beneficiary",
+      "description": "Information to the beneficiary Information given to the beneficiary."
+    },
+    {
+      "code": "AEG",
+      "name": "Information to the applicant",
+      "description": "Information to the applicant Information given to the applicant."
+    },
+    {
+      "code": "AEH",
+      "name": "Instructions to the beneficiary",
+      "description": "Instructions to the beneficiary Instructions made to the beneficiary."
+    },
+    {
+      "code": "AEI",
+      "name": "Instructions to the applicant",
+      "description": "Instructions to the applicant Instructions given to the applicant."
+    },
+    {
+      "code": "AEJ",
+      "name": "Controlled atmosphere",
+      "description": "Controlled atmosphere Information about the controlled atmosphere."
+    },
+    {
+      "code": "AEK",
+      "name": "Take off annotation",
+      "description": "Take off annotation Additional information in plain text to support a take off annotation. Taking off is the process of assessing the quantity work from extracting the measurement from construction documentation."
+    },
+    {
+      "code": "AEL",
+      "name": "Price variation narrative",
+      "description": "Price variation narrative Additional information in plain language to support a price variation."
+    },
+    {
+      "code": "AEM",
+      "name": "Documentary credit amendment instructions",
+      "description": "Documentary credit amendment instructions Documentary credit amendment instructions."
+    },
+    {
+      "code": "AEN",
+      "name": "Standard method narrative",
+      "description": "Standard method narrative Additional information in plain language to support a standard method."
+    },
+    {
+      "code": "AEO",
+      "name": "Project narrative",
+      "description": "Project narrative Additional information in plain language to support the project."
+    },
+    {
+      "code": "AEP",
+      "name": "Radioactive goods, additional information",
+      "description": "Radioactive goods, additional information Additional information related to radioactive goods."
+    },
+    {
+      "code": "AEQ",
+      "name": "Bank-to-bank information",
+      "description": "Bank-to-bank information Information given from one bank to another."
+    },
+    {
+      "code": "AER",
+      "name": "Reimbursement instructions",
+      "description": "Reimbursement instructions Instructions given for reimbursement purposes."
+    },
+    {
+      "code": "AES",
+      "name": "Reason for amending a message",
+      "description": "Reason for amending a message Identification of the reason for amending a message."
+    },
+    {
+      "code": "AET",
+      "name": "Instructions to the paying and/or accepting and/or",
+      "description": "Instructions to the paying and/or accepting and/or negotiating bank Instructions to the paying and/or accepting and/or negotiating bank."
+    },
+    {
+      "code": "AEU",
+      "name": "Interest instructions",
+      "description": "Interest instructions Instructions given about the interest."
+    },
+    {
+      "code": "AEV",
+      "name": "Agent commission",
+      "description": "Agent commission Instructions about agent commission."
+    },
+    {
+      "code": "AEW",
+      "name": "Remitting bank instructions",
+      "description": "Remitting bank instructions Instructions to the remitting bank."
+    },
+    {
+      "code": "AEX",
+      "name": "Instructions to the collecting bank",
+      "description": "Instructions to the collecting bank Instructions to the bank, other than the remitting bank, involved in processing the collection."
+    },
+    {
+      "code": "AEY",
+      "name": "Collection amount instructions",
+      "description": "Collection amount instructions Instructions about the collection amount."
+    },
+    {
+      "code": "AEZ",
+      "name": "Internal auditing information",
+      "description": "Internal auditing information Text relating to internal auditing information."
+    },
+    {
+      "code": "AFA",
+      "name": "Constraint",
+      "description": "Constraint Denotes that the associated text is a constraint."
+    },
+    {
+      "code": "AFB",
+      "name": "Comment",
+      "description": "Comment Denotes that the associated text is a comment."
+    },
+    {
+      "code": "AFC",
+      "name": "Semantic note",
+      "description": "Semantic note Denotes that the associated text is a semantic note."
+    },
+    {
+      "code": "AFD",
+      "name": "Help text",
+      "description": "Help text Denotes that the associated text is an item of help text."
+    },
+    {
+      "code": "AFE",
+      "name": "Legend",
+      "description": "Legend Denotes that the associated text is a legend."
+    },
+    {
+      "code": "AFF",
+      "name": "Batch code structure",
+      "description": "Batch code structure A description of the structure of a batch code."
+    },
+    {
+      "code": "AFG",
+      "name": "Product application",
+      "description": "Product application A general description of the application of a product."
+    },
+    {
+      "code": "AFH",
+      "name": "Customer complaint",
+      "description": "Customer complaint Complaint of customer."
+    },
+    {
+      "code": "AFI",
+      "name": "Probable cause of fault",
+      "description": "Probable cause of fault The probable cause of fault."
+    },
+    {
+      "code": "AFJ",
+      "name": "Defect description",
+      "description": "Defect description Description of the defect."
+    },
+    {
+      "code": "AFK",
+      "name": "Repair description",
+      "description": "Repair description The description of the work performed during the repair."
+    },
+    {
+      "code": "AFL",
+      "name": "Review comments",
+      "description": "Review comments Comments relevant to a review."
+    },
+    {
+      "code": "AFM",
+      "name": "Title",
+      "description": "Title Denotes that the associated text is a title."
+    },
+    {
+      "code": "AFN",
+      "name": "Description of amount",
+      "description": "Description of amount An amount description in clear text."
+    },
+    {
+      "code": "AFO",
+      "name": "Responsibilities",
+      "description": "Responsibilities Information describing the responsibilities."
+    },
+    {
+      "code": "AFP",
+      "name": "Supplier",
+      "description": "Supplier Information concerning suppliers."
+    },
+    {
+      "code": "AFQ",
+      "name": "Purchase region",
+      "description": "Purchase region Information concerning the region(s) where purchases are made."
+    },
+    {
+      "code": "AFR",
+      "name": "Affiliation",
+      "description": "Affiliation Information concerning an association of one party with another party(ies)."
+    },
+    {
+      "code": "AFS",
+      "name": "Borrower",
+      "description": "Borrower Information concerning the borrower."
+    },
+    {
+      "code": "AFT",
+      "name": "Line of business",
+      "description": "Line of business Information concerning an entity's line of business."
+    },
+    {
+      "code": "AFU",
+      "name": "Financial institution",
+      "description": "Financial institution Description of financial institution(s) used by an entity."
+    },
+    {
+      "code": "AFV",
+      "name": "Business founder",
+      "description": "Business founder Information about the business founder."
+    },
+    {
+      "code": "AFW",
+      "name": "Business history",
+      "description": "Business history Description of the business history."
+    },
+    {
+      "code": "AFX",
+      "name": "Banking arrangements",
+      "description": "Banking arrangements Information concerning the general banking arrangements."
+    },
+    {
+      "code": "AFY",
+      "name": "Business origin",
+      "description": "Business origin Description of the business origin."
+    },
+    {
+      "code": "AFZ",
+      "name": "Brand names' description",
+      "description": "Brand names' description Description of the entity's brands."
+    },
+    {
+      "code": "AGA",
+      "name": "Business financing details",
+      "description": "Business financing details Details about the financing of the business."
+    },
+    {
+      "code": "AGB",
+      "name": "Competition",
+      "description": "Competition Information concerning an entity's competition."
+    },
+    {
+      "code": "AGC",
+      "name": "Construction process details",
+      "description": "Construction process details Details about the construction process."
+    },
+    {
+      "code": "AGD",
+      "name": "Construction specialty",
+      "description": "Construction specialty Information concerning the line of business of a construction entity."
+    },
+    {
+      "code": "AGE",
+      "name": "Contract information",
+      "description": "Contract information Details about contract(s)."
+    },
+    {
+      "code": "AGF",
+      "name": "Corporate filing",
+      "description": "Corporate filing Details about a corporate filing."
+    },
+    {
+      "code": "AGG",
+      "name": "Customer information",
+      "description": "Customer information Description of customers."
+    },
+    {
+      "code": "AGH",
+      "name": "Copyright notice",
+      "description": "Copyright notice Information concerning the copyright notice."
+    },
+    {
+      "code": "AGI",
+      "name": "Contingent debt",
+      "description": "Contingent debt Details about the contingent debt."
+    },
+    {
+      "code": "AGJ",
+      "name": "Conviction details",
+      "description": "Conviction details Details about the law or penal codes that resulted in conviction."
+    },
+    {
+      "code": "AGK",
+      "name": "Equipment",
+      "description": "Equipment Description of equipment."
+    },
+    {
+      "code": "AGL",
+      "name": "Workforce description",
+      "description": "Workforce description Comments about the workforce."
+    },
+    {
+      "code": "AGM",
+      "name": "Exemption",
+      "description": "Exemption Description about exemptions."
+    },
+    {
+      "code": "AGN",
+      "name": "Future plans",
+      "description": "Future plans Information on future plans."
+    },
+    {
+      "code": "AGO",
+      "name": "Interviewee conversation information",
+      "description": "Interviewee conversation information Information concerning the interviewee conversation."
+    },
+    {
+      "code": "AGP",
+      "name": "Intangible asset",
+      "description": "Intangible asset Description of intangible asset(s)."
+    },
+    {
+      "code": "AGQ",
+      "name": "Inventory",
+      "description": "Inventory Description of the inventory."
+    },
+    {
+      "code": "AGR",
+      "name": "Investment",
+      "description": "Investment Description of the investments."
+    },
+    {
+      "code": "AGS",
+      "name": "Intercompany relations information",
+      "description": "Intercompany relations information Description of the intercompany relations."
+    },
+    {
+      "code": "AGT",
+      "name": "Joint venture",
+      "description": "Joint venture Description of the joint venture."
+    },
+    {
+      "code": "AGU",
+      "name": "Loan",
+      "description": "Loan Description of a loan."
+    },
+    {
+      "code": "AGV",
+      "name": "Long term debt",
+      "description": "Long term debt Description of the long term debt."
+    },
+    {
+      "code": "AGW",
+      "name": "Location",
+      "description": "Location Description of a location."
+    },
+    {
+      "code": "AGX",
+      "name": "Current legal structure",
+      "description": "Current legal structure Details on the current legal structure."
+    },
+    {
+      "code": "AGY",
+      "name": "Marital contract",
+      "description": "Marital contract Details on a marital contract."
+    },
+    {
+      "code": "AGZ",
+      "name": "Marketing activities",
+      "description": "Marketing activities Information concerning marketing activities."
+    },
+    {
+      "code": "AHA",
+      "name": "Merger",
+      "description": "Merger Description of a merger."
+    },
+    {
+      "code": "AHB",
+      "name": "Marketable securities",
+      "description": "Marketable securities Description of the marketable securities."
+    },
+    {
+      "code": "AHC",
+      "name": "Business debt",
+      "description": "Business debt Description of the business debt(s)."
+    },
+    {
+      "code": "AHD",
+      "name": "Original legal structure",
+      "description": "Original legal structure Information concerning the original legal structure."
+    },
+    {
+      "code": "AHE",
+      "name": "Employee sharing arrangements",
+      "description": "Employee sharing arrangements Information describing how a company uses employees from another company."
+    },
+    {
+      "code": "AHF",
+      "name": "Organization details",
+      "description": "Organization details Description about the organization of a company."
+    },
+    {
+      "code": "AHG",
+      "name": "Public record details",
+      "description": "Public record details Information concerning public records."
+    },
+    {
+      "code": "AHH",
+      "name": "Price range",
+      "description": "Price range Information concerning the price range of products made or sold."
+    },
+    {
+      "code": "AHI",
+      "name": "Qualifications",
+      "description": "Qualifications Information on the accomplishments fitting a party for a position."
+    },
+    {
+      "code": "AHJ",
+      "name": "Registered activity",
+      "description": "Registered activity Information concerning the registered activity."
+    },
+    {
+      "code": "AHK",
+      "name": "Criminal sentence",
+      "description": "Criminal sentence Description of the sentence imposed in a criminal proceeding."
+    },
+    {
+      "code": "AHL",
+      "name": "Sales method",
+      "description": "Sales method Description of the selling means."
+    },
+    {
+      "code": "AHM",
+      "name": "Educational institution information",
+      "description": "Educational institution information Free form description relating to the school(s) attended."
+    },
+    {
+      "code": "AHN",
+      "name": "Status details",
+      "description": "Status details Describes the status details."
+    },
+    {
+      "code": "AHO",
+      "name": "Sales",
+      "description": "Sales Description of the sales."
+    },
+    {
+      "code": "AHP",
+      "name": "Spouse information",
+      "description": "Spouse information Information about the spouse."
+    },
+    {
+      "code": "AHQ",
+      "name": "Educational degree information",
+      "description": "Educational degree information Details about the educational degree received from a school."
+    },
+    {
+      "code": "AHR",
+      "name": "Shareholding information",
+      "description": "Shareholding information General description of shareholding."
+    },
+    {
+      "code": "AHS",
+      "name": "Sales territory",
+      "description": "Sales territory Information on the sales territory."
+    },
+    {
+      "code": "AHT",
+      "name": "Accountant's comments",
+      "description": "Accountant's comments Comments made by an accountant regarding a financial statement."
+    },
+    {
+      "code": "AHU",
+      "name": "Exemption law location",
+      "description": "Exemption law location Description of the exemption provided to a location by a law."
+    },
+    {
+      "code": "AHV",
+      "name": "Share classifications",
+      "description": "Share classifications Information about the classes or categories of shares."
+    },
+    {
+      "code": "AHW",
+      "name": "Forecast",
+      "description": "Forecast Description of a prediction."
+    },
+    {
+      "code": "AHX",
+      "name": "Event location",
+      "description": "Event location Description of the location of an event."
+    },
+    {
+      "code": "AHY",
+      "name": "Facility occupancy",
+      "description": "Facility occupancy Information related to occupancy of a facility."
+    },
+    {
+      "code": "AHZ",
+      "name": "Import and export details",
+      "description": "Import and export details Specific information provided about the importation and exportation of goods."
+    },
+    {
+      "code": "AIA",
+      "name": "Additional facility information",
+      "description": "Additional facility information Additional information about a facility."
+    },
+    {
+      "code": "AIB",
+      "name": "Inventory value",
+      "description": "Inventory value Description of the value of inventory."
+    },
+    {
+      "code": "AIC",
+      "name": "Education",
+      "description": "Education Description of the education of a person."
+    },
+    {
+      "code": "AID",
+      "name": "Event",
+      "description": "Event Description of a thing that happens or takes place."
+    },
+    {
+      "code": "AIE",
+      "name": "Agent",
+      "description": "Agent Information about agents the entity uses."
+    },
+    {
+      "code": "AIF",
+      "name": "Domestically agreed financial statement details",
+      "description": "Domestically agreed financial statement details Details of domestically agreed financial statement."
+    },
+    {
+      "code": "AIG",
+      "name": "Other current asset description",
+      "description": "Other current asset description Description of other current asset."
+    },
+    {
+      "code": "AIH",
+      "name": "Other current liability description",
+      "description": "Other current liability description Description of other current liability."
+    },
+    {
+      "code": "AII",
+      "name": "Former business activity",
+      "description": "Former business activity Description of the former line of business."
+    },
+    {
+      "code": "AIJ",
+      "name": "Trade name use",
+      "description": "Trade name use Description of how a trading name is used."
+    },
+    {
+      "code": "AIK",
+      "name": "Signing authority",
+      "description": "Signing authority Description of the authorized signatory."
+    },
+    {
+      "code": "AIL",
+      "name": "Guarantee",
+      "description": "Guarantee Description of guarantee."
+    },
+    {
+      "code": "AIM",
+      "name": "Holding company operation",
+      "description": "Holding company operation Description of the operation of a holding company."
+    },
+    {
+      "code": "AIN",
+      "name": "Consignment routing",
+      "description": "Consignment routing Information on routing of the consignment."
+    },
+    {
+      "code": "AIO",
+      "name": "Letter of protest",
+      "description": "Letter of protest A letter citing any condition in dispute."
+    },
+    {
+      "code": "AIP",
+      "name": "Question",
+      "description": "Question A free text question."
+    },
+    {
+      "code": "AIQ",
+      "name": "Party information",
+      "description": "Party information Free text information related to a party."
+    },
+    {
+      "code": "AIR",
+      "name": "Area boundaries description",
+      "description": "Area boundaries description Description of the boundaries of a geographical area."
+    },
+    {
+      "code": "AIS",
+      "name": "Advertisement information",
+      "description": "Advertisement information The free text contains advertisement information."
+    },
+    {
+      "code": "AIT",
+      "name": "Financial statement details",
+      "description": "Financial statement details Details regarding the financial statement in free text."
+    },
+    {
+      "code": "AIU",
+      "name": "Access instructions",
+      "description": "Access instructions Description of how to access an entity."
+    },
+    {
+      "code": "AIV",
+      "name": "Liquidity",
+      "description": "Liquidity Description of an entity's liquidity."
+    },
+    {
+      "code": "AIW",
+      "name": "Credit line",
+      "description": "Credit line Description of the line of credit available to an entity."
+    },
+    {
+      "code": "AIX",
+      "name": "Warranty terms",
+      "description": "Warranty terms Text describing the terms of warranty which apply to a product or service."
+    },
+    {
+      "code": "AIY",
+      "name": "Division description",
+      "description": "Division description Plain language description of a division of an entity."
+    },
+    {
+      "code": "AIZ",
+      "name": "Reporting instruction",
+      "description": "Reporting instruction Instruction on how to report."
+    },
+    {
+      "code": "AJA",
+      "name": "Examination result",
+      "description": "Examination result The result of an examination."
+    },
+    {
+      "code": "AJB",
+      "name": "Laboratory result",
+      "description": "Laboratory result The result of a laboratory investigation."
+    },
+    {
+      "code": "ALC",
+      "name": "Allowance/charge information",
+      "description": "Allowance/charge information Information referring to allowance/charge."
+    },
+    {
+      "code": "ALD",
+      "name": "X-ray result",
+      "description": "X-ray result The result of an X-ray examination."
+    },
+    {
+      "code": "ALE",
+      "name": "Pathology result",
+      "description": "Pathology result The result of a pathology investigation."
+    },
+    {
+      "code": "ALF",
+      "name": "Intervention description",
+      "description": "Intervention description Details of an intervention."
+    },
+    {
+      "code": "ALG",
+      "name": "Summary of admittance",
+      "description": "Summary of admittance Summary description of admittance."
+    },
+    {
+      "code": "ALH",
+      "name": "Medical treatment course detail",
+      "description": "Medical treatment course detail Details of a course of medical treatment."
+    },
+    {
+      "code": "ALI",
+      "name": "Prognosis",
+      "description": "Prognosis Details of a prognosis."
+    },
+    {
+      "code": "ALJ",
+      "name": "Instruction to patient",
+      "description": "Instruction to patient Instruction given to a patient."
+    },
+    {
+      "code": "ALK",
+      "name": "Instruction to physician",
+      "description": "Instruction to physician Instruction given to a physician."
+    },
+    {
+      "code": "ALL",
+      "name": "All documents",
+      "description": "All documents The note implies to all documents."
+    },
+    {
+      "code": "ALM",
+      "name": "Medicine treatment",
+      "description": "Medicine treatment Details of medicine treatment."
+    },
+    {
+      "code": "ALN",
+      "name": "Medicine dosage and administration",
+      "description": "Medicine dosage and administration Details of medicine dosage and method of administration."
+    },
+    {
+      "code": "ALO",
+      "name": "Availability of patient",
+      "description": "Availability of patient Details of when and/or where the patient is available."
+    },
+    {
+      "code": "ALP",
+      "name": "Reason for service request",
+      "description": "Reason for service request Details of the reason for a requested service."
+    },
+    {
+      "code": "ALQ",
+      "name": "Purpose of service",
+      "description": "Purpose of service Details of the purpose of a service."
+    },
+    {
+      "code": "ARR",
+      "name": "Arrival conditions",
+      "description": "Arrival conditions Conditions under which arrival takes place."
+    },
+    {
+      "code": "ARS",
+      "name": "Service requester's comment",
+      "description": "Service requester's comment Comment by the requester of a service."
+    },
+    {
+      "code": "AUT",
+      "name": "Authentication",
+      "description": "Authentication Name, code, password etc. given for authentication purposes."
+    },
+    {
+      "code": "AUU",
+      "name": "Requested location description",
+      "description": "Requested location description The description of the location requested."
+    },
+    {
+      "code": "AUV",
+      "name": "Medicine administration condition",
+      "description": "Medicine administration condition The event or condition that initiates the administration of a single dose of medicine or a period of treatment."
+    },
+    {
+      "code": "AUW",
+      "name": "Patient information",
+      "description": "Patient information Information concerning a patient."
+    },
+    {
+      "code": "AUX",
+      "name": "Precautionary measure",
+      "description": "Precautionary measure Action to be taken to avert possible harmful affects."
+    },
+    {
+      "code": "AUY",
+      "name": "Service characteristic",
+      "description": "Service characteristic Free text description is related to a service characteristic."
+    },
+    {
+      "code": "AUZ",
+      "name": "Planned event comment",
+      "description": "Planned event comment Comment about an event that is planned."
+    },
+    {
+      "code": "AVA",
+      "name": "Expected delay comment",
+      "description": "Expected delay comment Comment about the expected delay."
+    },
+    {
+      "code": "AVB",
+      "name": "Transport requirements comment",
+      "description": "Transport requirements comment Comment about the requirements for transport."
+    },
+    {
+      "code": "AVC",
+      "name": "Temporary approval condition",
+      "description": "Temporary approval condition The condition under which the approval is considered."
+    },
+    {
+      "code": "AVD",
+      "name": "Customs Valuation Information",
+      "description": "Customs Valuation Information Information provided in this category will be used by the trader to make certain declarations in relation to Customs Valuation."
+    },
+    {
+      "code": "BAG",
+      "name": "Passenger baggage information",
+      "description": "Passenger baggage information Information related to baggage tendered by a passenger, such as odd size indication, tag."
+    },
+    {
+      "code": "BLC",
+      "name": "Transport contract document clause",
+      "description": "Transport contract document clause [4180] Clause on a transport document regarding the cargo being consigned. Synonym: Bill of Lading clause."
+    },
+    {
+      "code": "BLD",
+      "name": "Instruction to prepare the patient",
+      "description": "Instruction to prepare the patient Instruction with the purpose of preparing the patient."
+    },
+    {
+      "code": "BLE",
+      "name": "Medicine treatment comment",
+      "description": "Medicine treatment comment Comment about treatment with medicine."
+    },
+    {
+      "code": "BLF",
+      "name": "Examination result comment",
+      "description": "Examination result comment Comment about the result of an examination."
+    },
+    {
+      "code": "BLG",
+      "name": "Service request comment",
+      "description": "Service request comment Comment about the requested service."
+    },
+    {
+      "code": "BLH",
+      "name": "Prescription reason",
+      "description": "Prescription reason Details of the reason for a prescription."
+    },
+    {
+      "code": "BLI",
+      "name": "Prescription comment",
+      "description": "Prescription comment Comment concerning a specified prescription."
+    },
+    {
+      "code": "BLJ",
+      "name": "Clinical investigation comment",
+      "description": "Clinical investigation comment Comment concerning a clinical investigation."
+    },
+    {
+      "code": "BLK",
+      "name": "Medicinal specification comment",
+      "description": "Medicinal specification comment Comment concerning the specification of a medicinal product."
+    },
+    {
+      "code": "BLL",
+      "name": "Economic contribution comment",
+      "description": "Economic contribution comment Comment concerning economic contribution."
+    },
+    {
+      "code": "BLM",
+      "name": "Status of a plan",
+      "description": "Status of a plan Comment about the status of a plan."
+    },
+    {
+      "code": "BLN",
+      "name": "Random sample test information",
+      "description": "Random sample test information Information regarding a random sample test."
+    },
+    {
+      "code": "BLO",
+      "name": "Period of time",
+      "description": "Period of time Text subject is a period of time."
+    },
+    {
+      "code": "BLP",
+      "name": "Legislation",
+      "description": "Legislation Information about legislation."
+    },
+    {
+      "code": "BLQ",
+      "name": "Security measures requested",
+      "description": "Security measures requested Text describing security measures that are requested to be executed (e.g. access controls, supervision of ship's stores)."
+    },
+    {
+      "code": "BLR",
+      "name": "Transport contract document remark",
+      "description": "Transport contract document remark [4244] Remarks concerning the complete consignment to be printed on the transport document. Synonym: Bill of Lading remark."
+    },
+    {
+      "code": "BLS",
+      "name": "Previous port of call security information",
+      "description": "Previous port of call security information Text describing the security information as applicable at the port facility in the previous port where a ship/port interface was conducted."
+    },
+    {
+      "code": "BLT",
+      "name": "Security information",
+      "description": "Security information Text describing security related information (e.g security measures currently in force on a vessel)."
+    },
+    {
+      "code": "BLU",
+      "name": "Waste information",
+      "description": "Waste information Text describing waste related information."
+    },
+    {
+      "code": "BLV",
+      "name": "B2C marketing information, short description",
+      "description": "B2C marketing information, short description Consumer marketing information, short description."
+    },
+    {
+      "code": "BLW",
+      "name": "B2B marketing information, long description",
+      "description": "B2B marketing information, long description Trading partner marketing information, long description."
+    },
+    {
+      "code": "BLX",
+      "name": "B2C marketing information, long description",
+      "description": "B2C marketing information, long description Consumer marketing information, long description."
+    },
+    {
+      "code": "BLY",
+      "name": "Product ingredients",
+      "description": "Product ingredients Information on the ingredient make up of the product."
+    },
+    {
+      "code": "BLZ",
+      "name": "Location short name",
+      "description": "Location short name Short name of a location e.g. for display or printing purposes."
+    },
+    {
+      "code": "BMA",
+      "name": "Packaging material information",
+      "description": "Packaging material information The text contains a description of the material used for packaging."
+    },
+    {
+      "code": "BMB",
+      "name": "Filler material information",
+      "description": "Filler material information Text contains information on the material used for stuffing."
+    },
+    {
+      "code": "BMC",
+      "name": "Ship-to-ship activity information",
+      "description": "Ship-to-ship activity information Text contains information on ship-to-ship activities."
+    },
+    {
+      "code": "BMD",
+      "name": "Package material description",
+      "description": "Package material description A description of the type of material for packaging beyond the level covered by standards such as UN Recommendation 21."
+    },
+    {
+      "code": "BME",
+      "name": "Consumer level package marking",
+      "description": "Consumer level package marking Textual representation of the markings on a consumer level package."
+    },
+    {
+      "code": "CCI",
+      "name": "Customs clearance instructions",
+      "description": "Customs clearance instructions Any coded or clear instruction agreed by customer and carrier regarding the declaration of the goods."
+    },
+    {
+      "code": "CEX",
+      "name": "Customs clearance instructions export",
+      "description": "Customs clearance instructions export Any coded or clear instruction agreed by customer and carrier regarding the export declaration of the goods."
+    },
+    {
+      "code": "CHG",
+      "name": "Change information",
+      "description": "Change information Note contains change information."
+    },
+    {
+      "code": "CIP",
+      "name": "Customs clearance instruction import",
+      "description": "Customs clearance instruction import Any coded or clear instruction agreed by customer and carrier regarding the import declaration of the goods."
+    },
+    {
+      "code": "CLP",
+      "name": "Clearance place requested",
+      "description": "Clearance place requested Name of the place where Customs clearance is asked to be executed as requested by the consignee/consignor."
+    },
+    {
+      "code": "CLR",
+      "name": "Loading remarks",
+      "description": "Loading remarks Instructions concerning the loading of the container."
+    },
+    {
+      "code": "COI",
+      "name": "Order information",
+      "description": "Order information Additional information related to an order."
+    },
+    {
+      "code": "CUR",
+      "name": "Customer remarks",
+      "description": "Customer remarks Remarks from or for a supplier of goods or services."
+    },
+    {
+      "code": "CUS",
+      "name": "Customs declaration information",
+      "description": "Customs declaration information Note contains customs declaration information."
+    },
+    {
+      "code": "DAR",
+      "name": "Damage remarks",
+      "description": "Damage remarks Remarks concerning damage on the cargo."
+    },
+    {
+      "code": "DCL",
+      "name": "Document issuer declaration",
+      "description": "Document issuer declaration [4020] Text of a declaration made by the issuer of a document."
+    },
+    {
+      "code": "DEL",
+      "name": "Delivery information",
+      "description": "Delivery information Information about delivery."
+    },
+    {
+      "code": "DIN",
+      "name": "Delivery instructions",
+      "description": "Delivery instructions Instructions regarding the delivery of the cargo."
+    },
+    {
+      "code": "DOC",
+      "name": "Documentation instructions",
+      "description": "Documentation instructions Instructions pertaining to the documentation."
+    },
+    {
+      "code": "DUT",
+      "name": "Duty declaration",
+      "description": "Duty declaration The text contains a statement constituting a duty declaration."
+    },
+    {
+      "code": "EUR",
+      "name": "Effective used routing",
+      "description": "Effective used routing Physical route effectively used for the movement of the means of transport."
+    },
+    {
+      "code": "FBC",
+      "name": "First block to be printed on the transport contract",
+      "description": "First block to be printed on the transport contract The first block of text to be printed on the transport contract."
+    },
+    {
+      "code": "GBL",
+      "name": "Government bill of lading information",
+      "description": "Government bill of lading information Free text information on a transport document to indicate payment information by Government Bill of Lading."
+    },
+    {
+      "code": "GEN",
+      "name": "Entire transaction set",
+      "description": "Entire transaction set Note is general in nature, applies to entire transaction segment."
+    },
+    {
+      "code": "GS7",
+      "name": "Further information concerning GGVS par. 7",
+      "description": "Further information concerning GGVS par. 7 Special permission for road transport of certain goods in the German dangerous goods regulation for road transport."
+    },
+    {
+      "code": "HAN",
+      "name": "Consignment handling instruction",
+      "description": "Consignment handling instruction [4078] Free form description of a set of handling instructions. For example how specified goods, packages or transport equipment (container) should be handled."
+    },
+    {
+      "code": "HAZ",
+      "name": "Hazard information",
+      "description": "Hazard information Information pertaining to a hazard."
+    },
+    {
+      "code": "ICN",
+      "name": "Consignment information for consignee",
+      "description": "Consignment information for consignee [4070] Any remarks given for the information of the consignee."
+    },
+    {
+      "code": "IIN",
+      "name": "Insurance instructions",
+      "description": "Insurance instructions Instructions regarding the cargo insurance."
+    },
+    {
+      "code": "IMI",
+      "name": "Invoice mailing instructions",
+      "description": "Invoice mailing instructions Instructions as to which freight and charges components have to be mailed to whom."
+    },
+    {
+      "code": "IND",
+      "name": "Commercial invoice item description",
+      "description": "Commercial invoice item description Free text describing goods on a commercial invoice line."
+    },
+    {
+      "code": "INS",
+      "name": "Insurance information",
+      "description": "Insurance information Specific note contains insurance information."
+    },
+    {
+      "code": "INV",
+      "name": "Invoice instruction",
+      "description": "Invoice instruction Note contains invoice instructions."
+    },
+    {
+      "code": "IRP",
+      "name": "Information for railway purpose",
+      "description": "Information for railway purpose Data entered by railway stations when required, e.g. specified trains, additional sheets for freight calculations, special measures, etc."
+    },
+    {
+      "code": "ITR",
+      "name": "Inland transport details",
+      "description": "Inland transport details Information concerning the pre-carriage to the port of discharge if by other means than a vessel."
+    },
+    {
+      "code": "ITS",
+      "name": "Testing instructions",
+      "description": "Testing instructions Instructions regarding the testing that is required to be carried out on the items in the transaction."
+    },
+    {
+      "code": "LAN",
+      "name": "Location Alias",
+      "description": "Location Alias Alternative name for a location."
+    },
+    {
+      "code": "LIN",
+      "name": "Line item",
+      "description": "Line item Note contains line item information."
+    },
+    {
+      "code": "LOI",
+      "name": "Loading instruction",
+      "description": "Loading instruction Instructions where specified packages or containers are to be loaded on a means of transport."
+    },
+    {
+      "code": "MCO",
+      "name": "Miscellaneous charge order",
+      "description": "Miscellaneous charge order Free text accounting information on an IATA Air Waybill to indicate payment information by Miscellaneous charge order."
+    },
+    {
+      "code": "MKS",
+      "name": "Additional marks/numbers information",
+      "description": "Additional marks/numbers information Additional information regarding the marks and numbers."
+    },
+    {
+      "code": "ORI",
+      "name": "Order instruction",
+      "description": "Order instruction Free text contains order instructions."
+    },
+    {
+      "code": "OSI",
+      "name": "Other service information",
+      "description": "Other service information General information created by the sender of general or specific value."
+    },
+    {
+      "code": "PAC",
+      "name": "Packing/marking information",
+      "description": "Packing/marking information Information regarding the packaging and/or marking of goods."
+    },
+    {
+      "code": "PAI",
+      "name": "Payment instructions information",
+      "description": "Payment instructions information The free text contains payment instructions information relevant to the message."
+    },
+    {
+      "code": "PAY",
+      "name": "Payables information",
+      "description": "Payables information Note contains payables information."
+    },
+    {
+      "code": "PKG",
+      "name": "Packaging information",
+      "description": "Packaging information Note contains packaging information."
+    },
+    {
+      "code": "PKT",
+      "name": "Packaging terms information",
+      "description": "Packaging terms information The text contains packaging terms information."
+    },
+    {
+      "code": "PMD",
+      "name": "Payment detail/remittance information",
+      "description": "Payment detail/remittance information The free text contains payment details."
+    },
+    {
+      "code": "PMT",
+      "name": "Payment information",
+      "description": "Payment information Note contains payments information."
+    },
+    {
+      "code": "PRD",
+      "name": "Product information",
+      "description": "Product information The text contains product information."
+    },
+    {
+      "code": "PRF",
+      "name": "Price calculation formula",
+      "description": "Price calculation formula Additional information regarding the price formula used for calculating the item price."
+    },
+    {
+      "code": "PRI",
+      "name": "Priority information",
+      "description": "Priority information Note contains priority information."
+    },
+    {
+      "code": "PUR",
+      "name": "Purchasing information",
+      "description": "Purchasing information Note contains purchasing information."
+    },
+    {
+      "code": "QIN",
+      "name": "Quarantine instructions",
+      "description": "Quarantine instructions Instructions regarding quarantine, i.e. the period during which an arriving vessel, including its equipment, cargo, crew or passengers, suspected to carry or carrying a contagious disease is detained in strict isolation to prevent the spread of such a disease."
+    },
+    {
+      "code": "QQD",
+      "name": "Quality demands/requirements",
+      "description": "Quality demands/requirements Specification of the quality/performance expectations or standards to which the items must conform."
+    },
+    {
+      "code": "QUT",
+      "name": "Quotation instruction/information",
+      "description": "Quotation instruction/information Note contains quotation information."
+    },
+    {
+      "code": "RAH",
+      "name": "Risk and handling information",
+      "description": "Risk and handling information Information concerning risks induced by the goods and/or handling instruction."
+    },
+    {
+      "code": "REG",
+      "name": "Regulatory information",
+      "description": "Regulatory information The free text contains information for regulatory authority."
+    },
+    {
+      "code": "RET",
+      "name": "Return to origin information",
+      "description": "Return to origin information Free text information on an IATA Air Waybill to indicate consignment returned because of non delivery."
+    },
+    {
+      "code": "REV",
+      "name": "Receivables",
+      "description": "Receivables The text contains receivables information."
+    },
+    {
+      "code": "RQR",
+      "name": "Consignment route",
+      "description": "Consignment route [3050] Description of a route to be used for the transport of goods."
+    },
+    {
+      "code": "SAF",
+      "name": "Safety information",
+      "description": "Safety information The text contains safety information."
+    },
+    {
+      "code": "SIC",
+      "name": "Consignment documentary instruction",
+      "description": "Consignment documentary instruction [4284] Instructions given and declarations made by the sender to the carrier concerning Customs, insurance, and other formalities."
+    },
+    {
+      "code": "SIN",
+      "name": "Special instructions",
+      "description": "Special instructions Special instructions like licence no, high value, handle with care, glass."
+    },
+    {
+      "code": "SLR",
+      "name": "Ship line requested",
+      "description": "Ship line requested Shipping line requested to be used for traffic between European continent and U.K. for Ireland."
+    },
+    {
+      "code": "SPA",
+      "name": "Special permission for transport, generally",
+      "description": "Special permission for transport, generally Statement that a special permission has been obtained for the transport (and/or routing) in general, and reference to such permission."
+    },
+    {
+      "code": "SPG",
+      "name": "Special permission concerning the goods to be transported",
+      "description": "Special permission concerning the goods to be transported Statement that a special permission has been obtained for the transport (and/or routing) of the goods specified, and reference to such permission."
+    },
+    {
+      "code": "SPH",
+      "name": "Special handling",
+      "description": "Special handling Note contains special handling information."
+    },
+    {
+      "code": "SPP",
+      "name": "Special permission concerning package",
+      "description": "Special permission concerning package Statement that a special permission has been obtained for the packaging, and reference to such permission."
+    },
+    {
+      "code": "SPT",
+      "name": "Special permission concerning transport means",
+      "description": "Special permission concerning transport means Statement that a special permission has been obtained for the use of the means transport, and reference to such permission."
+    },
+    {
+      "code": "SRN",
+      "name": "Subsidiary risk number (IATA/DGR)",
+      "description": "Subsidiary risk number (IATA/DGR) Number(s) of subsidiary risks, induced by the goods, according to the valid classification."
+    },
+    {
+      "code": "SSR",
+      "name": "Special service request",
+      "description": "Special service request Request for a special service concerning the transport of the goods."
+    },
+    {
+      "code": "SUR",
+      "name": "Supplier remarks",
+      "description": "Supplier remarks Remarks from or for a supplier of goods or services."
+    },
+    {
+      "code": "TCA",
+      "name": "Consignment tariff",
+      "description": "Consignment tariff [5430] Free text specification of tariff applied to a consignment."
+    },
+    {
+      "code": "TDT",
+      "name": "Consignment transport",
+      "description": "Consignment transport [8012] Transport information for commercial purposes (generic term)."
+    },
+    {
+      "code": "TRA",
+      "name": "Transportation information",
+      "description": "Transportation information General information regarding the transport of the cargo."
+    },
+    {
+      "code": "TRR",
+      "name": "Requested tariff",
+      "description": "Requested tariff Stipulation of the tariffs to be applied showing, where applicable, special agreement numbers or references."
+    },
+    {
+      "code": "TXD",
+      "name": "Tax declaration",
+      "description": "Tax declaration The text contains a statement constituting a tax declaration."
+    },
+    {
+      "code": "WHI",
+      "name": "Warehouse instruction/information",
+      "description": "Warehouse instruction/information Note contains warehouse information."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Note contains information mutually defined by trading partners."
+    }
+  ]
+}

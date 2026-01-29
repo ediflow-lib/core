@@ -1,0 +1,507 @@
+{
+  "code": "5189",
+  "name": "Allowance or charge identification code",
+  "description": "Code specifying the identification of an allowance or charge.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Handling commission",
+      "description": "Handling commission Fee for the processing of documentary credit, collection and payment which are charged to the customer."
+    },
+    {
+      "code": "2",
+      "name": "Amendment commission",
+      "description": "Amendment commission Fee for amendments in documentary credit and collection business (not extensions and increases of documentary credits)."
+    },
+    {
+      "code": "3",
+      "name": "Acceptance commission",
+      "description": "Acceptance commission Fee for the acceptance of draft in documentary credit and collection business which are drawn on us (also to be seen as a kind of 'guarantee commission')."
+    },
+    {
+      "code": "4",
+      "name": "Commission for obtaining acceptance",
+      "description": "Commission for obtaining acceptance Fee for obtaining an acceptance under collections on the basis of 'documents against acceptance'."
+    },
+    {
+      "code": "5",
+      "name": "Commission on delivery",
+      "description": "Commission on delivery Fee for delivery of documents without corresponding payment."
+    },
+    {
+      "code": "6",
+      "name": "Advising commission",
+      "description": "Advising commission Fee for advising documentary credits (charged also in case of confirmed credits)."
+    },
+    {
+      "code": "7",
+      "name": "Confirmation commission",
+      "description": "Confirmation commission Fee for confirmation of credit."
+    },
+    {
+      "code": "8",
+      "name": "Deferred payment commission",
+      "description": "Deferred payment commission Fee for the deferred payment period under documentary credits confirmed by bank. This fee are charges for the period from presentation of the document until due date of payment."
+    },
+    {
+      "code": "9",
+      "name": "Commission for taking up documents",
+      "description": "Commission for taking up documents Fee charged to the foreign bank for the processing of documentary credit."
+    },
+    {
+      "code": "10",
+      "name": "Opening commission",
+      "description": "Opening commission Fee for opening revocable documentary credit."
+    },
+    {
+      "code": "11",
+      "name": "Fee for payment under reserve",
+      "description": "Fee for payment under reserve Fee charged to the customer for discrepancies in credit documents in the case of which the bank have to stipulate payment under reserve."
+    },
+    {
+      "code": "12",
+      "name": "Discrepancy fee",
+      "description": "Discrepancy fee Fee charged to the foreign bank for discrepancies in credit documents."
+    },
+    {
+      "code": "13",
+      "name": "Domicilation commission",
+      "description": "Domicilation commission Fee for the domicilation of bills with the bank."
+    },
+    {
+      "code": "14",
+      "name": "Commission for release of goods",
+      "description": "Commission for release of goods Commission for the release of goods sent to the bank."
+    },
+    {
+      "code": "15",
+      "name": "Collection commission",
+      "description": "Collection commission Fee for settling collections on the basis of 'documents against payments'."
+    },
+    {
+      "code": "16",
+      "name": "Negotiation commission",
+      "description": "Negotiation commission Fee for the purchase of documents under sight credit for the first ten days."
+    },
+    {
+      "code": "17",
+      "name": "Return commission",
+      "description": "Return commission Fee for cheques, bills and collections returned unpaid and/or recalled."
+    },
+    {
+      "code": "18",
+      "name": "B/L splitting charges",
+      "description": "B/L splitting charges Fee for the splitting of bills of lading."
+    },
+    {
+      "code": "19",
+      "name": "Trust commission",
+      "description": "Trust commission Fee for the handling on a fiduciary basis of imported goods that have been warehoused."
+    },
+    {
+      "code": "20",
+      "name": "Transfer commission",
+      "description": "Transfer commission Fee for the transfer of transferable documentary credits."
+    },
+    {
+      "code": "21",
+      "name": "Commission for opening irrevocable documentary credits",
+      "description": "Commission for opening irrevocable documentary credits Fee for opening irrevocable documentary credits. This fee is a kind of 'Guarantee commission' as compensation for the commitment into which the bank have entered on the customers behalf; similar to confirmation commission, acceptance commission."
+    },
+    {
+      "code": "22",
+      "name": "Pre-advice commission",
+      "description": "Pre-advice commission Fee for the pre-advice of a documentary credit."
+    },
+    {
+      "code": "23",
+      "name": "Supervisory commission",
+      "description": "Supervisory commission Fee for the supervising unconfirmed documentary credits with a deferred payment period."
+    },
+    {
+      "code": "24",
+      "name": "Model charges",
+      "description": "Model charges Fee for decoding telex messages."
+    },
+    {
+      "code": "25",
+      "name": "Risk commission",
+      "description": "Risk commission Commission in addition to the confirmation commission for documentary credits from sensitive countries."
+    },
+    {
+      "code": "26",
+      "name": "Guarantee commission",
+      "description": "Guarantee commission Commission for drawing up guaranties."
+    },
+    {
+      "code": "27",
+      "name": "Reimbursement commission",
+      "description": "Reimbursement commission Fee for reimbursement of, for example, documentary credits."
+    },
+    {
+      "code": "28",
+      "name": "Stamp duty",
+      "description": "Stamp duty Tax payable on bills in accordance with national bill of exchange legislation."
+    },
+    {
+      "code": "29",
+      "name": "Brokerage",
+      "description": "Brokerage Brokers commission arising, in trade with foreign currencies."
+    },
+    {
+      "code": "30",
+      "name": "Bank charges",
+      "description": "Bank charges Charges deducted/claimed by other banks involved in the transaction."
+    },
+    {
+      "code": "31",
+      "name": "Bank charges information",
+      "description": "Bank charges information Charges not included in the total charge amount i.e. the charges are for information only."
+    },
+    {
+      "code": "32",
+      "name": "Courier fee",
+      "description": "Courier fee Fee for use of courier service."
+    },
+    {
+      "code": "33",
+      "name": "Phone fee",
+      "description": "Phone fee Fee for use of phone."
+    },
+    {
+      "code": "34",
+      "name": "Postage fee",
+      "description": "Postage fee Fee for postage."
+    },
+    {
+      "code": "35",
+      "name": "S.W.I.F.T. fee",
+      "description": "S.W.I.F.T. fee Fee for use of S.W.I.F.T."
+    },
+    {
+      "code": "36",
+      "name": "Telex fee",
+      "description": "Telex fee Fee for telex."
+    },
+    {
+      "code": "37",
+      "name": "Penalty for late delivery of documents",
+      "description": "Penalty for late delivery of documents Penalty imposed when documents are delivered late."
+    },
+    {
+      "code": "38",
+      "name": "Penalty for late delivery of valuation of works",
+      "description": "Penalty for late delivery of valuation of works Penalty imposed when valuation of works is delivered late."
+    },
+    {
+      "code": "39",
+      "name": "Penalty for execution of works behind schedule",
+      "description": "Penalty for execution of works behind schedule Penalty imposed when the execution of works is behind schedule."
+    },
+    {
+      "code": "40",
+      "name": "Other penalties",
+      "description": "Other penalties Penalty imposed for other reasons."
+    },
+    {
+      "code": "41",
+      "name": "Bonus for works ahead of schedule",
+      "description": "Bonus for works ahead of schedule Bonus for completing work ahead of schedule."
+    },
+    {
+      "code": "42",
+      "name": "Other bonus",
+      "description": "Other bonus Bonus earned for other reasons."
+    },
+    {
+      "code": "44",
+      "name": "Project management cost",
+      "description": "Project management cost Cost for project management."
+    },
+    {
+      "code": "45",
+      "name": "Pro rata retention",
+      "description": "Pro rata retention Proportional retention charge."
+    },
+    {
+      "code": "46",
+      "name": "Contractual retention",
+      "description": "Contractual retention Contractual retention charge."
+    },
+    {
+      "code": "47",
+      "name": "Other retentions",
+      "description": "Other retentions Retention charge not otherwise specified."
+    },
+    {
+      "code": "48",
+      "name": "Interest on arrears",
+      "description": "Interest on arrears Interest for late payment."
+    },
+    {
+      "code": "49",
+      "name": "Interest",
+      "description": "Interest Cost of using money."
+    },
+    {
+      "code": "50",
+      "name": "Charge per credit cover",
+      "description": "Charge per credit cover Unit charge per credit cover established."
+    },
+    {
+      "code": "51",
+      "name": "Charge per unused credit cover",
+      "description": "Charge per unused credit cover Unit charge per unused credit cover."
+    },
+    {
+      "code": "52",
+      "name": "Minimum commission",
+      "description": "Minimum commission Minimum commission charge."
+    },
+    {
+      "code": "53",
+      "name": "Factoring commission",
+      "description": "Factoring commission Commission charged for factoring services."
+    },
+    {
+      "code": "54",
+      "name": "Chamber of commerce charge",
+      "description": "Chamber of commerce charge Identifies the charges from the chamber of commerce."
+    },
+    {
+      "code": "55",
+      "name": "Transfer charges",
+      "description": "Transfer charges Charges for transfer."
+    },
+    {
+      "code": "56",
+      "name": "Repatriation charges",
+      "description": "Repatriation charges Charges for repatriation."
+    },
+    {
+      "code": "57",
+      "name": "Miscellaneous charges",
+      "description": "Miscellaneous charges Not specifically defined charges."
+    },
+    {
+      "code": "58",
+      "name": "Foreign exchange charges",
+      "description": "Foreign exchange charges Charges for foreign exchange."
+    },
+    {
+      "code": "59",
+      "name": "Agreed debit interest charge",
+      "description": "Agreed debit interest charge Charge for agreed debit interest"
+    },
+    {
+      "code": "60",
+      "name": "Manufacturer's consumer discount",
+      "description": "Manufacturer's consumer discount A discount given by the manufacturer which should be passed on to the consumer."
+    },
+    {
+      "code": "61",
+      "name": "Fax advice charge",
+      "description": "Fax advice charge Charge for fax advice."
+    },
+    {
+      "code": "62",
+      "name": "Due to military status",
+      "description": "Due to military status Allowance granted because of the military status."
+    },
+    {
+      "code": "63",
+      "name": "Due to work accident",
+      "description": "Due to work accident Allowance granted to a victim of a work accident."
+    },
+    {
+      "code": "64",
+      "name": "Special agreement",
+      "description": "Special agreement An allowance or charge as specified in a special agreement."
+    },
+    {
+      "code": "65",
+      "name": "Production error discount",
+      "description": "Production error discount A discount given for the purchase of a product with a production error."
+    },
+    {
+      "code": "66",
+      "name": "New outlet discount",
+      "description": "New outlet discount A discount given at the occasion of the opening of a new outlet."
+    },
+    {
+      "code": "67",
+      "name": "Sample discount",
+      "description": "Sample discount A discount given for the purchase of a sample of a product."
+    },
+    {
+      "code": "68",
+      "name": "End-of-range discount",
+      "description": "End-of-range discount A discount given for the purchase of an end-of-range product."
+    },
+    {
+      "code": "69",
+      "name": "Charge for a customer specific finish",
+      "description": "Charge for a customer specific finish A charge for the addition of a customer specific finish to a product."
+    },
+    {
+      "code": "70",
+      "name": "Incoterm discount",
+      "description": "Incoterm discount A discount given for a specified Incoterm."
+    },
+    {
+      "code": "71",
+      "name": "Point of sales threshold allowance",
+      "description": "Point of sales threshold allowance Allowance for reaching or exceeding an agreed sales threshold at the point of sales."
+    },
+    {
+      "code": "72",
+      "name": "Technical modification costs",
+      "description": "Technical modification costs Costs for technical modifications to a product."
+    },
+    {
+      "code": "73",
+      "name": "Job-order production costs",
+      "description": "Job-order production costs Costs of job-order production."
+    },
+    {
+      "code": "74",
+      "name": "Off-premises costs",
+      "description": "Off-premises costs Expenses for non-local activities."
+    },
+    {
+      "code": "75",
+      "name": "Additional processing costs",
+      "description": "Additional processing costs Costs of additional processing."
+    },
+    {
+      "code": "76",
+      "name": "Attesting charge",
+      "description": "Attesting charge Costs of official attestation."
+    },
+    {
+      "code": "77",
+      "name": "Rush delivery surcharge",
+      "description": "Rush delivery surcharge Charge for increased delivery speed."
+    },
+    {
+      "code": "78",
+      "name": "Special construction costs",
+      "description": "Special construction costs Charge for costs incurred as result of special constructions."
+    },
+    {
+      "code": "79",
+      "name": "Freight charges",
+      "description": "Freight charges Amount to be paid for moving goods, by whatever means, from one place to another."
+    },
+    {
+      "code": "80",
+      "name": "Packing charge",
+      "description": "Packing charge Charge for packing."
+    },
+    {
+      "code": "81",
+      "name": "Repair charge",
+      "description": "Repair charge Charge for repair."
+    },
+    {
+      "code": "82",
+      "name": "Loading charge",
+      "description": "Loading charge Charge for loading."
+    },
+    {
+      "code": "83",
+      "name": "Setup charge",
+      "description": "Setup charge Charge for setup."
+    },
+    {
+      "code": "84",
+      "name": "Testing charge",
+      "description": "Testing charge Charge for testing."
+    },
+    {
+      "code": "85",
+      "name": "Warehousing charge",
+      "description": "Warehousing charge Charge for storage and handling."
+    },
+    {
+      "code": "86",
+      "name": "Gold surcharge",
+      "description": "Gold surcharge Difference between current price and basic value contained in product price in relation to gold content."
+    },
+    {
+      "code": "87",
+      "name": "Copper surcharge",
+      "description": "Copper surcharge Difference between current price and basic value contained in product price in relation to copper content."
+    },
+    {
+      "code": "88",
+      "name": "Material surcharge/deduction",
+      "description": "Material surcharge/deduction Surcharge/deduction, calculated for higher/ lower material's consumption."
+    },
+    {
+      "code": "89",
+      "name": "Lead surcharge",
+      "description": "Lead surcharge Difference between current price and basic value contained in product price in relation to lead content."
+    },
+    {
+      "code": "90",
+      "name": "Price index surcharge",
+      "description": "Price index surcharge Higher/lower price, resulting from change in costs between the times of making offer and delivery."
+    },
+    {
+      "code": "91",
+      "name": "Platinum surcharge",
+      "description": "Platinum surcharge Difference between current price and basic value contained in product price in relation to platinum content."
+    },
+    {
+      "code": "92",
+      "name": "Silver surcharge",
+      "description": "Silver surcharge Difference between current price and basic value contained in product price in relation to silver content."
+    },
+    {
+      "code": "93",
+      "name": "Wolfram surcharge",
+      "description": "Wolfram surcharge Difference between current price and basic value contained in product price in relation to wolfram content."
+    },
+    {
+      "code": "94",
+      "name": "Aluminum surcharge",
+      "description": "Aluminum surcharge Difference between current price and basic value contained in product price in relation to aluminum content."
+    },
+    {
+      "code": "95",
+      "name": "Discount",
+      "description": "Discount A reduction from a usual or list price."
+    },
+    {
+      "code": "96",
+      "name": "Insurance",
+      "description": "Insurance Charge for insurance."
+    },
+    {
+      "code": "97",
+      "name": "Minimum order / minimum billing charge",
+      "description": "Minimum order / minimum billing charge Charge for minimum order or minimum billing."
+    },
+    {
+      "code": "98",
+      "name": "Material surcharge (special materials)",
+      "description": "Material surcharge (special materials) Surcharge for (special) materials."
+    },
+    {
+      "code": "99",
+      "name": "Surcharge",
+      "description": "Surcharge An additional amount added to the usual charge."
+    },
+    {
+      "code": "100",
+      "name": "Special rebate",
+      "description": "Special rebate A return of part of an amount paid for goods or services, serving as a reduction or discount."
+    },
+    {
+      "code": "101",
+      "name": "Carbon footprint charge",
+      "description": "Carbon footprint charge A monetary amount charged for carbon footprint related to a regulatory requirement."
+    }
+  ]
+}

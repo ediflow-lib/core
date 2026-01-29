@@ -1,0 +1,895 @@
+{
+  "code": "4183",
+  "name": "Special condition code",
+  "description": "Code specifying a special condition.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Item for national preference"
+    },
+    {
+      "code": "2",
+      "name": "Item qualifying for payment discount"
+    },
+    {
+      "code": "3",
+      "name": "Item not qualifying for payment discount"
+    },
+    {
+      "code": "4",
+      "name": "Urgent delivery of reserved goods"
+    },
+    {
+      "code": "5",
+      "name": "Item not to be included in bonus calculation"
+    },
+    {
+      "code": "6",
+      "name": "Subject to bonus"
+    },
+    {
+      "code": "7",
+      "name": "Subject to commission"
+    },
+    {
+      "code": "8",
+      "name": "Subject to discount"
+    },
+    {
+      "code": "9",
+      "name": "Freely available in EEC"
+    },
+    {
+      "code": "10",
+      "name": "Subject to settlement discount"
+    },
+    {
+      "code": "11",
+      "name": "Price includes excise"
+    },
+    {
+      "code": "12",
+      "name": "Price includes tax"
+    },
+    {
+      "code": "13",
+      "name": "Price include duty"
+    },
+    {
+      "code": "14",
+      "name": "Not subject to commission"
+    },
+    {
+      "code": "15",
+      "name": "Not subject to discount"
+    },
+    {
+      "code": "16",
+      "name": "Subject to embargo restriction"
+    },
+    {
+      "code": "17",
+      "name": "Item not subject to embargo restrictions"
+    },
+    {
+      "code": "18",
+      "name": "Item subject to national export restrictions"
+    },
+    {
+      "code": "19",
+      "name": "Item not subject to national export restrictions"
+    },
+    {
+      "code": "20",
+      "name": "Item subject to import restrictions"
+    },
+    {
+      "code": "21",
+      "name": "Item not subject to import restrictions"
+    },
+    {
+      "code": "22",
+      "name": "Signed"
+    },
+    {
+      "code": "23",
+      "name": "Authenticated"
+    },
+    {
+      "code": "24",
+      "name": "Original(s) to be certified"
+    },
+    {
+      "code": "25",
+      "name": "Original(s) to be legalized"
+    },
+    {
+      "code": "26",
+      "name": "Quote documentary credit number"
+    },
+    {
+      "code": "27",
+      "name": "Full set bill of lading"
+    },
+    {
+      "code": "28",
+      "name": "Full set bill of lading less one original"
+    },
+    {
+      "code": "29",
+      "name": "Full set bill of lading less two originals"
+    },
+    {
+      "code": "30",
+      "name": "Shipped on board"
+    },
+    {
+      "code": "31",
+      "name": "Freight prepaid to be marked"
+    },
+    {
+      "code": "32",
+      "name": "Freight collect to be marked"
+    },
+    {
+      "code": "33",
+      "name": "Issued to order and blank endorsed"
+    },
+    {
+      "code": "34",
+      "name": "Issued and/or endorsed to the order of"
+    },
+    {
+      "code": "35",
+      "name": "Consigned to"
+    },
+    {
+      "code": "36",
+      "name": "Notify"
+    },
+    {
+      "code": "37",
+      "name": "Issued by"
+    },
+    {
+      "code": "38",
+      "name": "Charter party allowed"
+    },
+    {
+      "code": "39",
+      "name": "Loading on deck allowed"
+    },
+    {
+      "code": "40",
+      "name": "Quote actual flight date and flight number"
+    },
+    {
+      "code": "41",
+      "name": "House AWB allowed"
+    },
+    {
+      "code": "42",
+      "name": "Express post receipt"
+    },
+    {
+      "code": "43",
+      "name": "Air parcel post receipt"
+    },
+    {
+      "code": "44",
+      "name": "Parcel post receipt"
+    },
+    {
+      "code": "45",
+      "name": "Issued to bearer"
+    },
+    {
+      "code": "46",
+      "name": "Full set of insurance certificate"
+    },
+    {
+      "code": "47",
+      "name": "Full set of insurance policy"
+    },
+    {
+      "code": "48",
+      "name": "Addressed to"
+    },
+    {
+      "code": "49",
+      "name": "Transmission by telecommunication"
+    },
+    {
+      "code": "50",
+      "name": "Bill of exchange drawn on"
+    },
+    {
+      "code": "51",
+      "name": "Bill of exchange in duplicate"
+    },
+    {
+      "code": "52",
+      "name": "Insurance certificate alternative"
+    },
+    {
+      "code": "53",
+      "name": "Insurance policy alternative"
+    },
+    {
+      "code": "54",
+      "name": "Original(s) and copies to be certified"
+    },
+    {
+      "code": "55",
+      "name": "Original(s) and copies to be legalized"
+    },
+    {
+      "code": "56",
+      "name": "Consolidators AWB allowed"
+    },
+    {
+      "code": "57",
+      "name": "Full set"
+    },
+    {
+      "code": "58",
+      "name": "Full set less one original"
+    },
+    {
+      "code": "59",
+      "name": "Full set less two originals"
+    },
+    {
+      "code": "60",
+      "name": "Goods despatched to"
+    },
+    {
+      "code": "61",
+      "name": "Insurance certificate allowed"
+    },
+    {
+      "code": "62",
+      "name": "Issued to"
+    },
+    {
+      "code": "63",
+      "name": "Original(s) and copy(ies) signed"
+    },
+    {
+      "code": "64",
+      "name": "Original(s) signed"
+    },
+    {
+      "code": "65",
+      "name": "No disposal clause"
+    },
+    {
+      "code": "66",
+      "name": "Delivery without change of ownership"
+    },
+    {
+      "code": "67",
+      "name": "Delivery with change of ownership"
+    },
+    {
+      "code": "68",
+      "name": "Supply for outright purchase/sale"
+    },
+    {
+      "code": "69",
+      "name": "Supply for consignment"
+    },
+    {
+      "code": "70",
+      "name": "Supply for sale 'on approval' or after trial"
+    },
+    {
+      "code": "71",
+      "name": "Exchange of goods compensated in kind"
+    },
+    {
+      "code": "72",
+      "name": "Sale for export by foreigner travelling in member state"
+    },
+    {
+      "code": "A",
+      "name": "cross border delivery of goods to be sold by a"
+    },
+    {
+      "code": "73",
+      "name": "Samples"
+    },
+    {
+      "code": "74",
+      "name": "Temporary export, loan or hire"
+    },
+    {
+      "code": "75",
+      "name": "Temporary export, leasing"
+    },
+    {
+      "code": "76",
+      "name": "Temporary export, operation for job processing"
+    },
+    {
+      "code": "77",
+      "name": "Temporary export, repair and maintenance against payment"
+    },
+    {
+      "code": "78",
+      "name": "Temporary export, repair and maintenance free of charge"
+    },
+    {
+      "code": "79",
+      "name": "Reimport following job processing"
+    },
+    {
+      "code": "80",
+      "name": "Reimport following repair and maintenance against payment"
+    },
+    {
+      "code": "81",
+      "name": "Reimport following repair and maintenance free of charge"
+    },
+    {
+      "code": "82",
+      "name": "Supply of goods under joint production contract for defence"
+    },
+    {
+      "code": "83",
+      "name": "Supply of goods under joint production contract for civil"
+    },
+    {
+      "code": "84",
+      "name": "Supply of goods for warehousing for foreign account"
+    },
+    {
+      "code": "85",
+      "name": "Supply of goods as gifts by country of despatch and food"
+    },
+    {
+      "code": "86",
+      "name": "Supply of goods for disaster relief equipment"
+    },
+    {
+      "code": "87",
+      "name": "Supply of goods as transactions without compensation"
+    },
+    {
+      "code": "88",
+      "name": "Supply of goods as returned consignment on which payment"
+    },
+    {
+      "code": "89",
+      "name": "Supply of goods as returned consignment on which no payment"
+    },
+    {
+      "code": "90",
+      "name": "Supply of goods in standard exchange giving rise to payment"
+    },
+    {
+      "code": "91",
+      "name": "Supply of goods in standard exchange not giving rise to"
+    },
+    {
+      "code": "92",
+      "name": "Supply of goods/services in standard exchange under"
+    },
+    {
+      "code": "93",
+      "name": "Goods"
+    },
+    {
+      "code": "94",
+      "name": "Service"
+    },
+    {
+      "code": "95",
+      "name": "Financial regulation"
+    },
+    {
+      "code": "96",
+      "name": "Promotional advertising"
+    },
+    {
+      "code": "A",
+      "name": "media press communication informing about a promotion."
+    },
+    {
+      "code": "97",
+      "name": "Promotional price"
+    },
+    {
+      "code": "98",
+      "name": "Promotional shelf display"
+    },
+    {
+      "code": "99",
+      "name": "Safety data sheet required to accompany goods when moved"
+    },
+    {
+      "code": "100",
+      "name": "Multiple delivery points"
+    },
+    {
+      "code": "101",
+      "name": "Provisional settlement"
+    },
+    {
+      "code": "102",
+      "name": "Hire purchase"
+    },
+    {
+      "code": "103",
+      "name": "Loan"
+    },
+    {
+      "code": "104",
+      "name": "Rental"
+    },
+    {
+      "code": "105",
+      "name": "Processing"
+    },
+    {
+      "code": "106",
+      "name": "Exchange"
+    },
+    {
+      "code": "107",
+      "name": "Sale on commission"
+    },
+    {
+      "code": "108",
+      "name": "Financial compensation"
+    },
+    {
+      "code": "109",
+      "name": "Sale or return"
+    },
+    {
+      "code": "110",
+      "name": "Final settlement"
+    },
+    {
+      "code": "111",
+      "name": "Requires national pricing authority agreement"
+    },
+    {
+      "code": "112",
+      "name": "National pricing authority approved price"
+    },
+    {
+      "code": "113",
+      "name": "Not subject to national pricing authority approval"
+    },
+    {
+      "code": "114",
+      "name": "Agency approved price"
+    },
+    {
+      "code": "115",
+      "name": "Exempt from tax"
+    },
+    {
+      "code": "116",
+      "name": "Subject to postponed discount"
+    },
+    {
+      "code": "117",
+      "name": "Repair"
+    },
+    {
+      "code": "118",
+      "name": "Illustration affected by provisioning change"
+    },
+    {
+      "code": "119",
+      "name": "Product genetically modified"
+    },
+    {
+      "code": "120",
+      "name": "Subject to price recalculation without negotiation"
+    },
+    {
+      "code": "121",
+      "name": "Not subject to price recalculation without negotiation"
+    },
+    {
+      "code": "122",
+      "name": "Bonded"
+    },
+    {
+      "code": "A",
+      "name": "code to indicate that the product is bonded."
+    },
+    {
+      "code": "123",
+      "name": "Pharmacy sales only"
+    },
+    {
+      "code": "A",
+      "name": "special condition limiting the sale of a product to a"
+    },
+    {
+      "code": "124",
+      "name": "Sale requires medical prescription"
+    },
+    {
+      "code": "125",
+      "name": "New item, not yet available"
+    },
+    {
+      "code": "126",
+      "name": "New, available"
+    },
+    {
+      "code": "127",
+      "name": "Obsolete"
+    },
+    {
+      "code": "128",
+      "name": "Prototype"
+    },
+    {
+      "code": "129",
+      "name": "Non-standard product"
+    },
+    {
+      "code": "130",
+      "name": "Discontinued"
+    },
+    {
+      "code": "131",
+      "name": "Expired catalogue prices provisionally allowed"
+    },
+    {
+      "code": "132",
+      "name": "Not subject to automated processing"
+    },
+    {
+      "code": "133",
+      "name": "Gift supplied with purchase"
+    },
+    {
+      "code": "134",
+      "name": "Sale from promotional stock"
+    },
+    {
+      "code": "135",
+      "name": "Sale from obsolete stock"
+    },
+    {
+      "code": "136",
+      "name": "Buying group conditions"
+    },
+    {
+      "code": "A",
+      "name": "code indicating that buying group conditions apply."
+    },
+    {
+      "code": "137",
+      "name": "Cancel order unless complete delivery possible on requested"
+    },
+    {
+      "code": "138",
+      "name": "Delivery subject to final authorisation from supplier"
+    },
+    {
+      "code": "139",
+      "name": "Special promotional conditions applicable to only this"
+    },
+    {
+      "code": "A",
+      "name": "code indicating that special promotional conditions"
+    },
+    {
+      "code": "140",
+      "name": "Return of goods"
+    },
+    {
+      "code": "141",
+      "name": "Subject to annual bonus"
+    },
+    {
+      "code": "142",
+      "name": "Invoiced but not replenished"
+    },
+    {
+      "code": "A",
+      "name": "special condition indicating the fact that goods which"
+    },
+    {
+      "code": "143",
+      "name": "Replenished but not invoiced"
+    },
+    {
+      "code": "A",
+      "name": "special condition indicating the fact that goods which"
+    },
+    {
+      "code": "144",
+      "name": "Deliver full order"
+    },
+    {
+      "code": "A",
+      "name": "special condition indicating that delivery of the"
+    },
+    {
+      "code": "145",
+      "name": "Roll pattern side out"
+    },
+    {
+      "code": "146",
+      "name": "Roll pattern side in"
+    },
+    {
+      "code": "147",
+      "name": "Special handling requirements at point of receipt"
+    },
+    {
+      "code": "148",
+      "name": "Supply direct delivery"
+    },
+    {
+      "code": "149",
+      "name": "Single item pallet"
+    },
+    {
+      "code": "150",
+      "name": "Mixed item pallet"
+    },
+    {
+      "code": "151",
+      "name": "Items from the same dye lot"
+    },
+    {
+      "code": "152",
+      "name": "Awaiting credit clearance"
+    },
+    {
+      "code": "153",
+      "name": "Return publication full copies"
+    },
+    {
+      "code": "154",
+      "name": "Return publication headings only"
+    },
+    {
+      "code": "155",
+      "name": "Destroy publication"
+    },
+    {
+      "code": "156",
+      "name": "Await further product instructions"
+    },
+    {
+      "code": "157",
+      "name": "Not subject to sale or return"
+    },
+    {
+      "code": "158",
+      "name": "Item to be sold in both domestic and export markets"
+    },
+    {
+      "code": "159",
+      "name": "Item to be sold only in export markets"
+    },
+    {
+      "code": "160",
+      "name": "No back orders"
+    },
+    {
+      "code": "161",
+      "name": "Back orders permitted"
+    },
+    {
+      "code": "162",
+      "name": "At home repair"
+    },
+    {
+      "code": "163",
+      "name": "At service centre repair"
+    },
+    {
+      "code": "164",
+      "name": "Shipment completes order"
+    },
+    {
+      "code": "165",
+      "name": "Split shipment"
+    },
+    {
+      "code": "166",
+      "name": "Include in continuous replenishment calculation"
+    },
+    {
+      "code": "167",
+      "name": "Remove from continuous replenishment calculation"
+    },
+    {
+      "code": "168",
+      "name": "Standard pack shipment"
+    },
+    {
+      "code": "169",
+      "name": "Pick pack shipment"
+    },
+    {
+      "code": "170",
+      "name": "Goods for retail outlet shelf"
+    },
+    {
+      "code": "171",
+      "name": "Security stock"
+    },
+    {
+      "code": "172",
+      "name": "Production batch number allocated"
+    },
+    {
+      "code": "A",
+      "name": "batch number is allocated by the manufacturer to the"
+    },
+    {
+      "code": "173",
+      "name": "Production batch number allocated as required by law"
+    },
+    {
+      "code": "A",
+      "name": "batch number is allocated by the manufacturer to the"
+    },
+    {
+      "code": "174",
+      "name": "Product not genetically modified"
+    },
+    {
+      "code": "175",
+      "name": "Suspended"
+    },
+    {
+      "code": "176",
+      "name": "No re-ordering"
+    },
+    {
+      "code": "177",
+      "name": "Product irradiated for preservation"
+    },
+    {
+      "code": "178",
+      "name": "Services taxable at customer location"
+    },
+    {
+      "code": "179",
+      "name": "Product gluten-free"
+    },
+    {
+      "code": "180",
+      "name": "Product contains gluten"
+    },
+    {
+      "code": "181",
+      "name": "Product lactose-free"
+    },
+    {
+      "code": "182",
+      "name": "Product contains lactose"
+    },
+    {
+      "code": "183",
+      "name": "CH, compliant with Genetically Modified Food law"
+    },
+    {
+      "code": "184",
+      "name": "CH, non-compliant with Genetically Modified Food law"
+    },
+    {
+      "code": "185",
+      "name": "CH, compliant with General Food law"
+    },
+    {
+      "code": "186",
+      "name": "CH, non-compliant with General Food law"
+    },
+    {
+      "code": "187",
+      "name": "Store may not order"
+    },
+    {
+      "code": "188",
+      "name": "Distribution centre may not order"
+    },
+    {
+      "code": "189",
+      "name": "Net content declaration indicated"
+    },
+    {
+      "code": "A",
+      "name": "declaration of a trade item's net content is on the"
+    },
+    {
+      "code": "190",
+      "name": "Net content declaration not indicated"
+    },
+    {
+      "code": "A",
+      "name": "declaration of a trade item's net content is not on"
+    },
+    {
+      "code": "191",
+      "name": "Not irradiated"
+    },
+    {
+      "code": "192",
+      "name": "Batch or lot number not allocated"
+    },
+    {
+      "code": "193",
+      "name": "Unsold trade item not returnable"
+    },
+    {
+      "code": "A",
+      "name": "trade item that is not sold cannot be returned."
+    },
+    {
+      "code": "194",
+      "name": "Ingredient irradiated"
+    },
+    {
+      "code": "195",
+      "name": "Ingredients not irradiated"
+    },
+    {
+      "code": "196",
+      "name": "Raw material irradiated"
+    },
+    {
+      "code": "197",
+      "name": "Raw material not irradiated"
+    },
+    {
+      "code": "198",
+      "name": "Re-orderable"
+    },
+    {
+      "code": "199",
+      "name": "Receipt advice, fully detailed"
+    },
+    {
+      "code": "200",
+      "name": "Receipt advice, only exceptions"
+    },
+    {
+      "code": "201",
+      "name": "Ingredient is irradiated not applicable"
+    },
+    {
+      "code": "202",
+      "name": "Raw material is irradiated not applicable"
+    },
+    {
+      "code": "203",
+      "name": "Trade item is genetically modified not applicable"
+    },
+    {
+      "code": "204",
+      "name": "Trade item is irradiated not applicable"
+    },
+    {
+      "code": "205",
+      "name": "Size dependent pricing"
+    },
+    {
+      "code": "206",
+      "name": "Size independent pricing"
+    },
+    {
+      "code": "207",
+      "name": "Only accepted products"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
+}

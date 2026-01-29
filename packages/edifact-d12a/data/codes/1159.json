@@ -1,0 +1,37 @@
+{
+  "code": "1159",
+  "name": "Sequence identifier source code",
+  "description": "Code specifying the source of a sequence identifier.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Broadcast 1",
+      "description": "Broadcast 1 Report from workstation 1."
+    },
+    {
+      "code": "2",
+      "name": "Broadcast 2",
+      "description": "Broadcast 2 Report from workstation 2."
+    },
+    {
+      "code": "3",
+      "name": "Manufacturer sequence number",
+      "description": "Manufacturer sequence number The manufacturer's plant requesting the delivery of the item has allocated the sequence number."
+    },
+    {
+      "code": "4",
+      "name": "Manufacturer production sequence number",
+      "description": "Manufacturer production sequence number The plant requesting the delivery of an item assigns a number indicating the sequence of the finished article."
+    },
+    {
+      "code": "5",
+      "name": "Transmission sequence",
+      "description": "Transmission sequence The positional sequence when transmitted."
+    },
+    {
+      "code": "6",
+      "name": "Structure sequence",
+      "description": "Structure sequence The positional sequence in a message structure as published in a particular UN directory."
+    }
+  ]
+}

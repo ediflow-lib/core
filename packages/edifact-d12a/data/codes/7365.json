@@ -1,0 +1,887 @@
+{
+  "code": "7365",
+  "name": "Processing indicator description code",
+  "description": "Code specifying a processing indicator.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Message content accepted",
+      "description": "Message content accepted Content of message is accepted."
+    },
+    {
+      "code": "2",
+      "name": "Message content rejected with comment",
+      "description": "Message content rejected with comment Content of message is rejected, with comment."
+    },
+    {
+      "code": "3",
+      "name": "Message content rejected without comment",
+      "description": "Message content rejected without comment Content of message is rejected, without comment."
+    },
+    {
+      "code": "4",
+      "name": "Goods released",
+      "description": "Goods released Specified goods have been released from Customs control."
+    },
+    {
+      "code": "5",
+      "name": "Goods required for examination",
+      "description": "Goods required for examination Specified goods are required for examination."
+    },
+    {
+      "code": "6",
+      "name": "All documents or as specified to be produced",
+      "description": "All documents or as specified to be produced All document, or documents as specified, to be produced."
+    },
+    {
+      "code": "7",
+      "name": "Goods detained",
+      "description": "Goods detained Specified goods are detained."
+    },
+    {
+      "code": "8",
+      "name": "Goods may move under Customs transfer",
+      "description": "Goods may move under Customs transfer Specified goods may move under Customs transfer."
+    },
+    {
+      "code": "9",
+      "name": "Declaration accepted awaiting goods arrival",
+      "description": "Declaration accepted awaiting goods arrival Goods declaration is accepted, awaiting goods arrival."
+    },
+    {
+      "code": "10",
+      "name": "Declaration requested",
+      "description": "Declaration requested Declaration is requested."
+    },
+    {
+      "code": "11",
+      "name": "Pre-entry information",
+      "description": "Pre-entry information Information for pre-entry of a goods declaration."
+    },
+    {
+      "code": "12",
+      "name": "Sender not allowed the message type",
+      "description": "Sender not allowed the message type The sender is not allowed to send the message type which was sent."
+    },
+    {
+      "code": "13",
+      "name": "Message type not supported",
+      "description": "Message type not supported The message type is not supported by the recipient."
+    },
+    {
+      "code": "14",
+      "name": "Error message",
+      "description": "Error message Message conveys information on an error."
+    },
+    {
+      "code": "15",
+      "name": "Response after correction, correction approved",
+      "description": "Response after correction, correction approved Response after correction; correction has been approved."
+    },
+    {
+      "code": "16",
+      "name": "Response after correction, correction non approved",
+      "description": "Response after correction, correction non approved Response after correction; correction has not been approved."
+    },
+    {
+      "code": "17",
+      "name": "Message received",
+      "description": "Message received Message has been received."
+    },
+    {
+      "code": "18",
+      "name": "Request for clearance",
+      "description": "Request for clearance Request for clearance of the goods."
+    },
+    {
+      "code": "19",
+      "name": "Bulk goods",
+      "description": "Bulk goods Goods are in bulk."
+    },
+    {
+      "code": "20",
+      "name": "Cash payment deferred",
+      "description": "Cash payment deferred Commercial transaction will be paid by cash within a prescribed time frame."
+    },
+    {
+      "code": "21",
+      "name": "Unsolicited text",
+      "description": "Unsolicited text Text is not solicited."
+    },
+    {
+      "code": "22",
+      "name": "Export",
+      "description": "Export Goods are being taken out of the Customs territory."
+    },
+    {
+      "code": "23",
+      "name": "Import",
+      "description": "Import Goods are being taken into a Customs territory."
+    },
+    {
+      "code": "24",
+      "name": "Transit",
+      "description": "Transit Goods are transported under Customs control from one Customs office to another."
+    },
+    {
+      "code": "25",
+      "name": "Prohibited/restricted goods",
+      "description": "Prohibited/restricted goods Goods are prohibited or restricted from import, export or transit by authority of Customs or another authority."
+    },
+    {
+      "code": "26",
+      "name": "Container quarantine",
+      "description": "Container quarantine (4412) Specification of the status of the goods and of the transport equipment (container) and any packaging/dunnage with respect to quarantine restrictions."
+    },
+    {
+      "code": "27",
+      "name": "Onward carriage: immediate export",
+      "description": "Onward carriage: immediate export Movement type indicator: goods are being immediately taken out of the Customs territory."
+    },
+    {
+      "code": "28",
+      "name": "Transhipment",
+      "description": "Transhipment Goods are / are not to be transhipped at place of discharge/transhipment place."
+    },
+    {
+      "code": "29",
+      "name": "Onward carriage: inland clearance",
+      "description": "Onward carriage: inland clearance Movement type indicator: goods are to move under Customs control to a Customs office where Customs formalities will be completed."
+    },
+    {
+      "code": "30",
+      "name": "Transaction will not be processed until action is taken by",
+      "description": "Transaction will not be processed until action is taken by sender The transaction will not be processed, awaiting action by the sender."
+    },
+    {
+      "code": "31",
+      "name": "Transaction cannot be processed by the recipient",
+      "description": "Transaction cannot be processed by the recipient Due to unknown reasons the transaction cannot be processed."
+    },
+    {
+      "code": "32",
+      "name": "Transaction accepted",
+      "description": "Transaction accepted This transaction is accepted by the recipient application and is a single transaction within a multiple transaction message."
+    },
+    {
+      "code": "33",
+      "name": "Transaction rejected",
+      "description": "Transaction rejected This transaction is rejected by the recipient application and is a single transaction within a multiple transaction message."
+    },
+    {
+      "code": "34",
+      "name": "Transaction awaiting processing",
+      "description": "Transaction awaiting processing This transaction is waiting to be processed by the recipient application and is a single transaction within a multiple transaction message."
+    },
+    {
+      "code": "35",
+      "name": "Transaction unknown",
+      "description": "Transaction unknown This transaction is unknown by the recipient application and is a single transaction within a multiple transaction message."
+    },
+    {
+      "code": "36",
+      "name": "Changed information",
+      "description": "Changed information Processing of information to note that only changes to existing data are transmitted."
+    },
+    {
+      "code": "37",
+      "name": "Complete information",
+      "description": "Complete information Processing of information to note that complete data details (not just changes) are transmitted."
+    },
+    {
+      "code": "38",
+      "name": "Manual procedures",
+      "description": "Manual procedures An automated process to revert to manual procedures."
+    },
+    {
+      "code": "39",
+      "name": "Unrestow",
+      "description": "Unrestow Reversal of a significant intentional restowage of cargo."
+    },
+    {
+      "code": "40",
+      "name": "Seal intact",
+      "description": "Seal intact Container seal is intact prior to unpacking."
+    },
+    {
+      "code": "41",
+      "name": "Seal not intact",
+      "description": "Seal not intact Container seal is not intact prior to unpacking."
+    },
+    {
+      "code": "42",
+      "name": "Container equipment not damaged",
+      "description": "Container equipment not damaged Container equipment is not damaged."
+    },
+    {
+      "code": "43",
+      "name": "Container equipment damaged",
+      "description": "Container equipment damaged Container equipment is damaged."
+    },
+    {
+      "code": "44",
+      "name": "Status of message",
+      "description": "Status of message Processing based on message status."
+    },
+    {
+      "code": "45",
+      "name": "Beneficiary's account number unknown",
+      "description": "Beneficiary's account number unknown The account number of the beneficiary is unknown."
+    },
+    {
+      "code": "46",
+      "name": "Payee's account number unknown",
+      "description": "Payee's account number unknown The account number of the payee is unknown."
+    },
+    {
+      "code": "47",
+      "name": "Payer's account number unknown",
+      "description": "Payer's account number unknown The account number of the payer is unknown."
+    },
+    {
+      "code": "48",
+      "name": "Correspondent bank not possible",
+      "description": "Correspondent bank not possible The correspondent bank is not a possible one."
+    },
+    {
+      "code": "49",
+      "name": "Execution date not possible",
+      "description": "Execution date not possible The execution date cannot be met."
+    },
+    {
+      "code": "50",
+      "name": "Value date not possible",
+      "description": "Value date not possible The value date cannot be met."
+    },
+    {
+      "code": "51",
+      "name": "Currency code not possible",
+      "description": "Currency code not possible The currency code does not exist."
+    },
+    {
+      "code": "52",
+      "name": "Invalid decimal number",
+      "description": "Invalid decimal number The decimal number is not valid."
+    },
+    {
+      "code": "53",
+      "name": "Orders executed (on)",
+      "description": "Orders executed (on) Confirmation that the orders have been executed."
+    },
+    {
+      "code": "54",
+      "name": "Transaction(s) effected and advised (on)",
+      "description": "Transaction(s) effected and advised (on) Confirmation that the transaction(s) has(ve) been effected and advised."
+    },
+    {
+      "code": "55",
+      "name": "Not yet debited",
+      "description": "Not yet debited The amount(s) has(ve) not yet been debited."
+    },
+    {
+      "code": "56",
+      "name": "Beneficiary is unable to identify the transaction",
+      "description": "Beneficiary is unable to identify the transaction The transaction cannot be identified by the beneficiary."
+    },
+    {
+      "code": "57",
+      "name": "Restowage of cargo",
+      "description": "Restowage of cargo Intentional or unintentional restowage of cargo."
+    },
+    {
+      "code": "58",
+      "name": "Onward carriage: sea clearance",
+      "description": "Onward carriage: sea clearance Movement type indicator: goods are to move under customs control, by sea, to a customs office where formalities will be completed."
+    },
+    {
+      "code": "59",
+      "name": "Perishable goods",
+      "description": "Perishable goods Cargo is perishable."
+    },
+    {
+      "code": "60",
+      "name": "Fumigation",
+      "description": "Fumigation Cargo has been fumigated."
+    },
+    {
+      "code": "61",
+      "name": "Transaction reason non reportable",
+      "description": "Transaction reason non reportable The reason for the transaction is non reportable (e.g. to the legal institution)."
+    },
+    {
+      "code": "62",
+      "name": "Reporting via a bank with forwarding abroad authorized",
+      "description": "Reporting via a bank with forwarding abroad authorized The reason for the transaction can be forwarded by the customer's bank to the abroad bank."
+    },
+    {
+      "code": "63",
+      "name": "Reporting via a bank with forwarding abroad denied",
+      "description": "Reporting via a bank with forwarding abroad denied The reason for the transaction cannot be forwarded by the customer's bank to the abroad bank."
+    },
+    {
+      "code": "64",
+      "name": "Balance Of Payments complementary information is requested",
+      "description": "Balance Of Payments complementary information is requested The message sender is requesting BOP (Balance Of Payments) complementary information to complete the BOP declaration to the legal institution."
+    },
+    {
+      "code": "65",
+      "name": "Direct reporting",
+      "description": "Direct reporting The report is made directly."
+    },
+    {
+      "code": "66",
+      "name": "Message content accepted, with comments",
+      "description": "Message content accepted, with comments The content of the message is accepted by the receiver, with comments."
+    },
+    {
+      "code": "67",
+      "name": "Message content partly accepted, with comments",
+      "description": "Message content partly accepted, with comments The content of the message is partly accepted by the receiver, with comments."
+    },
+    {
+      "code": "68",
+      "name": "Goods carried in container",
+      "description": "Goods carried in container The goods are carried in a container."
+    },
+    {
+      "code": "69",
+      "name": "Goods not carried in container",
+      "description": "Goods not carried in container The goods are not carried in a container."
+    },
+    {
+      "code": "70",
+      "name": "Ship's stores declaration",
+      "description": "Ship's stores declaration Indicates that the information to be processed as a ship's stores declaration."
+    },
+    {
+      "code": "71",
+      "name": "Unpack on premises",
+      "description": "Unpack on premises Indicator to identify that the unpacking will be done at the premises."
+    },
+    {
+      "code": "72",
+      "name": "Beneficiary's financial information incorrect",
+      "description": "Beneficiary's financial information incorrect Financial information regarding the beneficiary is incorrect."
+    },
+    {
+      "code": "73",
+      "name": "Charge(s) details not correct",
+      "description": "Charge(s) details not correct The charge(s) details are not correct."
+    },
+    {
+      "code": "74",
+      "name": "Date(s) not correct",
+      "description": "Date(s) not correct The date(s) are not correct."
+    },
+    {
+      "code": "75",
+      "name": "Currency details incorrect",
+      "description": "Currency details incorrect Currency details are not correct."
+    },
+    {
+      "code": "76",
+      "name": "Monetary amount incorrect",
+      "description": "Monetary amount incorrect The monetary amount specified is incorrect."
+    },
+    {
+      "code": "77",
+      "name": "Payments sent correctly",
+      "description": "Payments sent correctly Confirmation that the payments have been sent correctly."
+    },
+    {
+      "code": "78",
+      "name": "Beneficiary has not received the funds",
+      "description": "Beneficiary has not received the funds The beneficiary has not received the funds as specified."
+    },
+    {
+      "code": "79",
+      "name": "Beneficiary received the funds late",
+      "description": "Beneficiary received the funds late The beneficiary received the funds later than specified."
+    },
+    {
+      "code": "80",
+      "name": "Unjustified charges at beneficiary's side",
+      "description": "Unjustified charges at beneficiary's side The beneficiary has been charged unjustified fees."
+    },
+    {
+      "code": "81",
+      "name": "Confirmation of authorization",
+      "description": "Confirmation of authorization The authorization is confirmed."
+    },
+    {
+      "code": "82",
+      "name": "Beneficiary's account closed",
+      "description": "Beneficiary's account closed The account of the beneficiary is closed."
+    },
+    {
+      "code": "83",
+      "name": "Transaction execution pending",
+      "description": "Transaction execution pending The transaction is awaiting execution."
+    },
+    {
+      "code": "84",
+      "name": "Transaction rejected due to insufficient funds",
+      "description": "Transaction rejected due to insufficient funds The transaction is rejected because of insufficient funds."
+    },
+    {
+      "code": "85",
+      "name": "Party identification not known",
+      "description": "Party identification not known The identification of the party is unknown."
+    },
+    {
+      "code": "86",
+      "name": "Beneficiary unknown",
+      "description": "Beneficiary unknown The beneficiary indicated is unknown."
+    },
+    {
+      "code": "87",
+      "name": "Beneficiary's bank unknown",
+      "description": "Beneficiary's bank unknown The indicated beneficiary's bank is unknown."
+    },
+    {
+      "code": "88",
+      "name": "Precedence logic format",
+      "description": "Precedence logic format To specify that the data represents a precedence logic processing format."
+    },
+    {
+      "code": "89",
+      "name": "Arrow logic format",
+      "description": "Arrow logic format To specify that the data represents an arrow logic processing format."
+    },
+    {
+      "code": "90",
+      "name": "Bar-chart format",
+      "description": "Bar-chart format To specify that the data represents a barchart processing format."
+    },
+    {
+      "code": "91",
+      "name": "Milestone format",
+      "description": "Milestone format To specify that the data represents a milestone processing format."
+    },
+    {
+      "code": "92",
+      "name": "Line of balance format",
+      "description": "Line of balance format To specify that the data represents a line of balance processing format."
+    },
+    {
+      "code": "93",
+      "name": "Task list format",
+      "description": "Task list format To specify that the data represents a task list processing format."
+    },
+    {
+      "code": "94",
+      "name": "Delivery point driven scheduling method",
+      "description": "Delivery point driven scheduling method Scheduling method used when for a given delivery point a number of different products are to be delivered."
+    },
+    {
+      "code": "95",
+      "name": "Product driven scheduling method",
+      "description": "Product driven scheduling method Scheduling method used when a given product is to be delivered to a number of different delivery points."
+    },
+    {
+      "code": "96",
+      "name": "Confirmation, payment sent as instructed",
+      "description": "Confirmation, payment sent as instructed Confirmation that the payment has been sent as instructed."
+    },
+    {
+      "code": "97",
+      "name": "Beneficiary has received funds",
+      "description": "Beneficiary has received funds The beneficiary has received the funds."
+    },
+    {
+      "code": "98",
+      "name": "Individual transaction over credit limit",
+      "description": "Individual transaction over credit limit A transaction exceeds the credit limit for an individual transaction."
+    },
+    {
+      "code": "99",
+      "name": "Cumulative transactions exceed credit limit",
+      "description": "Cumulative transactions exceed credit limit The grouped transactions exceed the credit limit."
+    },
+    {
+      "code": "100",
+      "name": "Transaction exceeds default credit limit",
+      "description": "Transaction exceeds default credit limit The transaction exceeds a default credit limit."
+    },
+    {
+      "code": "101",
+      "name": "Transaction received and redirected to another bank and/or",
+      "description": "Transaction received and redirected to another bank and/or account The transaction has been received, but has been redirected to another bank and/or account."
+    },
+    {
+      "code": "102",
+      "name": "Potential duplicate of a previous payment",
+      "description": "Potential duplicate of a previous payment The payment is a potential duplicate of a previous one."
+    },
+    {
+      "code": "103",
+      "name": "Cancellation pending",
+      "description": "Cancellation pending A cancellation has been instructed but has not been actioned yet."
+    },
+    {
+      "code": "104",
+      "name": "Cancellation instruction too late to carry out",
+      "description": "Cancellation instruction too late to carry out An instruction to cancel has been received too late to be carried out."
+    },
+    {
+      "code": "105",
+      "name": "Invalid bank branch sort code",
+      "description": "Invalid bank branch sort code The bank branch sort code is invalid."
+    },
+    {
+      "code": "106",
+      "name": "Invalid account number",
+      "description": "Invalid account number The account number is invalid."
+    },
+    {
+      "code": "107",
+      "name": "Transaction duplicates previous transaction",
+      "description": "Transaction duplicates previous transaction The transaction duplicates a previous one."
+    },
+    {
+      "code": "108",
+      "name": "Transaction out of time limits",
+      "description": "Transaction out of time limits Transaction received outside agreed time window."
+    },
+    {
+      "code": "109",
+      "name": "Invalid and/or incomplete name and address",
+      "description": "Invalid and/or incomplete name and address Name and address are invalid and/or incomplete."
+    },
+    {
+      "code": "110",
+      "name": "No name and address specified",
+      "description": "No name and address specified No name and address has been specified."
+    },
+    {
+      "code": "111",
+      "name": "No communication number specified",
+      "description": "No communication number specified No communication number has been specified."
+    },
+    {
+      "code": "112",
+      "name": "Bank branch number and/or details invalid",
+      "description": "Bank branch number and/or details invalid The bank branch number and/or details are not valid."
+    },
+    {
+      "code": "113",
+      "name": "Message from ordering customer did not contain all data",
+      "description": "Message from ordering customer did not contain all data required The message received from the ordering customer did not contain all the required data."
+    },
+    {
+      "code": "114",
+      "name": "Date of cheque invalid",
+      "description": "Date of cheque invalid The date provided on a cheque is invalid."
+    },
+    {
+      "code": "115",
+      "name": "Totals for transaction do not match details",
+      "description": "Totals for transaction do not match details Figures for the total transaction do not match those provided for the individual lines of the transaction."
+    },
+    {
+      "code": "116",
+      "name": "Transaction different to normal",
+      "description": "Transaction different to normal A transaction whose details do not conform to the average details normally contained in the transaction."
+    },
+    {
+      "code": "117",
+      "name": "Method of payment invalid",
+      "description": "Method of payment invalid The method of payment is not valid."
+    },
+    {
+      "code": "118",
+      "name": "Ordering customer's payment order number invalid",
+      "description": "Ordering customer's payment order number invalid The payment order number issued by the ordering customer is invalid."
+    },
+    {
+      "code": "119",
+      "name": "Ordering customer's message control value invalid",
+      "description": "Ordering customer's message control value invalid The control value provided by the ordering customer in the control totals segment is invalid."
+    },
+    {
+      "code": "120",
+      "name": "Ordering customer's message control quantity invalid",
+      "description": "Ordering customer's message control quantity invalid The control quantity provided by the ordering customer in the control totals segment is invalid."
+    },
+    {
+      "code": "121",
+      "name": "Beneficiary's account frozen by legal authorities",
+      "description": "Beneficiary's account frozen by legal authorities The beneficiary's account has been frozen by legal authorities."
+    },
+    {
+      "code": "122",
+      "name": "Invalid cancellation request because transaction already",
+      "description": "Invalid cancellation request because transaction already executed The request to cancel a transaction is invalid because the transaction has already been executed."
+    },
+    {
+      "code": "123",
+      "name": "Account holder specified by ordering customer is deceased",
+      "description": "Account holder specified by ordering customer is deceased The account holder detailed by the ordering customer is deceased."
+    },
+    {
+      "code": "124",
+      "name": "Ordering customer's instruction is a duplicate",
+      "description": "Ordering customer's instruction is a duplicate The ordering customer's instruction duplicates an instruction."
+    },
+    {
+      "code": "125",
+      "name": "Unauthorized message version",
+      "description": "Unauthorized message version The message version is unauthorized."
+    },
+    {
+      "code": "126",
+      "name": "Debtor's account unknown",
+      "description": "Debtor's account unknown The debtor's account is not known."
+    },
+    {
+      "code": "127",
+      "name": "Health insurance exclusion condition may apply",
+      "description": "Health insurance exclusion condition may apply The patient's health insurance may not apply for certain services."
+    },
+    {
+      "code": "128",
+      "name": "Pre-existing condition warning indicator",
+      "description": "Pre-existing condition warning indicator The condition may predate an event."
+    },
+    {
+      "code": "129",
+      "name": "Cancellation executed",
+      "description": "Cancellation executed Cancellation has been executed."
+    },
+    {
+      "code": "130",
+      "name": "Bordereau ceded premium",
+      "description": "Bordereau ceded premium The bordereau should be processed as ceded premium."
+    },
+    {
+      "code": "131",
+      "name": "Bordereau open claims",
+      "description": "Bordereau open claims The bordereau items should be processed as open claims."
+    },
+    {
+      "code": "132",
+      "name": "Bordereau closed claims",
+      "description": "Bordereau closed claims The bordereau items should be processed as closed claims."
+    },
+    {
+      "code": "133",
+      "name": "Bordereau settled claims",
+      "description": "Bordereau settled claims The bordereau items should be processed as settled claims."
+    },
+    {
+      "code": "134",
+      "name": "Third party business",
+      "description": "Third party business Identification of a process associated with third party business."
+    },
+    {
+      "code": "135",
+      "name": "Parties are not related",
+      "description": "Parties are not related Indicates that the parties are not related."
+    },
+    {
+      "code": "136",
+      "name": "Parties related, affects price paid or payable",
+      "description": "Parties related, affects price paid or payable Indicates that the parties are related and that the relationship affects the price paid or payable."
+    },
+    {
+      "code": "137",
+      "name": "Parties related, does not affect price",
+      "description": "Parties related, does not affect price Indicates that the parties are related, but the relationship does not affect the price paid or payable."
+    },
+    {
+      "code": "138",
+      "name": "Valuation based on price paid or payable without",
+      "description": "Valuation based on price paid or payable without adjustments The valuation is to be based on the total payment made or to be made by the buyer to, or for the benefit of the seller for the imported goods, and includes all payments made as a condition of sale of the imported goods by the buyer to the seller, or by the buyer to a third party to satisfy an obligation of the seller."
+    },
+    {
+      "code": "139",
+      "name": "Valuation based on price paid or payable with adjustments",
+      "description": "Valuation based on price paid or payable with adjustments The valuation is to be based on the total payment made or to be made by the buyer to, or for the benefit of the seller for the imported goods, and includes all payments made as a condition of sale of the imported goods by the buyer to the seller, or by the buyer to a third party to satisfy an obligation of the seller but requiring applicable adjustments."
+    },
+    {
+      "code": "140",
+      "name": "Valuation based on transaction value of identical goods",
+      "description": "Valuation based on transaction value of identical goods Valuation is to be based on the transaction value of identical goods."
+    },
+    {
+      "code": "141",
+      "name": "Valuation based on transaction value of similar goods",
+      "description": "Valuation based on transaction value of similar goods The valuation is to be based on transaction value of similar goods that is goods closely resembling the goods being valued in terms of component materials and characteristics or goods which are capable of performing the same functions and are commercially interchangeable with the goods being valued or goods which are produced in the same country as and by the producer of the goods being valued."
+    },
+    {
+      "code": "142",
+      "name": "Valuation based on deductive value of imported goods",
+      "description": "Valuation based on deductive value of imported goods Valuation is to be based on the unit price at which the imported goods or identical or similar goods are sold to an unrelated buyer in the greatest aggregate quantity in the country of importation."
+    },
+    {
+      "code": "143",
+      "name": "Valuation based on computed value",
+      "description": "Valuation based on computed value The valuation is to be based on the cost of production of the goods being valued, plus an amount for profit and general expenses usually reflected in sales from the country of exportation to the country of importation of goods of the same class or kind."
+    },
+    {
+      "code": "144",
+      "name": "Valuation based on the residual method",
+      "description": "Valuation based on the residual method Valuation is to be based on reasonable means consistent with the principles and general provisions of the Agreement, Article VII GATT and on the basis of available data (fallback method)."
+    },
+    {
+      "code": "145",
+      "name": "Valuation adjustment for price influence",
+      "description": "Valuation adjustment for price influence Valuation to be adjusted for price influence on account of relationship between buyer and seller."
+    },
+    {
+      "code": "146",
+      "name": "Valuation adjustment for royalties",
+      "description": "Valuation adjustment for royalties Valuation to be adjusted for royalties and licence fees related to the goods being valued that the buyer must pay, either directly or indirectly, as a condition of sale of the goods being valued, to the extent that such royalties and fees are not included in the price actually paid or payable."
+    },
+    {
+      "code": "147",
+      "name": "Valuation adjustment for assists",
+      "description": "Valuation adjustment for assists Valuation to be adjusted for goods and services, where supplied directly or indirectly by the buyer free of charge or at reduced cost for use in connection with the production and sale for export of imported goods, to the extent that such value has not been included in the price actually paid or payable. E.g. tools, dies, moulds, design work, engineering services."
+    },
+    {
+      "code": "148",
+      "name": "Valuation adjustments for proceeds",
+      "description": "Valuation adjustments for proceeds Value to be adjusted on the basis of value of any part of the proceeds of any subsequent resale, disposal or use of the imported goods that accrues, directly or indirectly, to the seller."
+    },
+    {
+      "code": "149",
+      "name": "Valuation adjustments for commissions",
+      "description": "Valuation adjustments for commissions Valuation to be adjusted for commissions and brokerage, except buying commissions as per Article 8 WTO Valuation Agreement."
+    },
+    {
+      "code": "150",
+      "name": "Valuation adjustments for insurance",
+      "description": "Valuation adjustments for insurance Valuation to be adjusted for insurance charges."
+    },
+    {
+      "code": "151",
+      "name": "Valuation adjustment for freight charges",
+      "description": "Valuation adjustment for freight charges Value to be adjusted for the cost of transport of the imported goods to the place of importation."
+    },
+    {
+      "code": "152",
+      "name": "Valuation adjustment for handling charges",
+      "description": "Valuation adjustment for handling charges Value to be adjusted for the costs of loading, unloading and handling charges associated with the delivery of the imported goods at the place of importation."
+    },
+    {
+      "code": "153",
+      "name": "Valuation adjustments for allowances",
+      "description": "Valuation adjustments for allowances Valuation to be adjusted for allowances."
+    },
+    {
+      "code": "154",
+      "name": "Valuation adjustments for other buyer-incurred costs",
+      "description": "Valuation adjustments for other buyer-incurred costs Valuation to be adjusted for other reasons to the extent they are incurred by the buyer but are not included in the price actually paid or payable for the imported goods, such as the cost of containers which are treated as being one for customs purposes with the goods in question, the cost of packing whether for labour or materials, materials, components, parts and similar items incorporated in the imported goods."
+    },
+    {
+      "code": "155",
+      "name": "Mutually defined valuation adjustment",
+      "description": "Mutually defined valuation adjustment Valuation adjustments as mutually agreed between the interchanging parties."
+    },
+    {
+      "code": "156",
+      "name": "Carrier split consignment",
+      "description": "Carrier split consignment The consignment was split by the carrier."
+    },
+    {
+      "code": "157",
+      "name": "Not carrier split consignment",
+      "description": "Not carrier split consignment The consignment was not split by the carrier."
+    },
+    {
+      "code": "158",
+      "name": "Country of declaration within same customs or economic",
+      "description": "Country of declaration within same customs or economic union as country of contract performance Indication that the country specified for the performance of a (contractual) obligation is within the same economic or Customs union as the country where the declaration is made."
+    },
+    {
+      "code": "159",
+      "name": "Country of declaration not within same customs or economic",
+      "description": "Country of declaration not within same customs or economic union as country of contract performance Indication that the country specified for the performance of a (contractual) obligation is not within the same economic or Customs union as the country where the declaration is made."
+    },
+    {
+      "code": "160",
+      "name": "Freight charges apportioned by weight",
+      "description": "Freight charges apportioned by weight Method of the proportional allocation of freight charges for each consignment in a multi consignment declaration where freight is apportioned by weight."
+    },
+    {
+      "code": "161",
+      "name": "Freight charges apportioned by value",
+      "description": "Freight charges apportioned by value Method of the proportional allocation of freight charges for each consignment in a multi consignment declaration where freight is apportioned by value."
+    },
+    {
+      "code": "162",
+      "name": "Container compliant with the code of International",
+      "description": "Container compliant with the code of International Convention on Containers Indication that the container is compliant with the International Convention on Containers."
+    },
+    {
+      "code": "163",
+      "name": "Container not compliant with the code of International",
+      "description": "Container not compliant with the code of International Convention on Containers Indication that the container is not compliant with the International Convention on Containers."
+    },
+    {
+      "code": "164",
+      "name": "Consignment arrived under customs control",
+      "description": "Consignment arrived under customs control Indication that the consignment has arrived under customs control."
+    },
+    {
+      "code": "165",
+      "name": "Consignment not arrived under customs control",
+      "description": "Consignment not arrived under customs control Indication that the consignment has not arrived under customs control."
+    },
+    {
+      "code": "166",
+      "name": "Agent quality assurance level used",
+      "description": "Agent quality assurance level used Indicates that the agent quality assurance level is to be used."
+    },
+    {
+      "code": "167",
+      "name": "Agent quality assurance level not used",
+      "description": "Agent quality assurance level not used Indicates that the agent quality assurance level is not to be used."
+    },
+    {
+      "code": "168",
+      "name": "Constituent element is active ingredient",
+      "description": "Constituent element is active ingredient Indicates that the constituent element is one of the active ingredients."
+    },
+    {
+      "code": "169",
+      "name": "Constituent element is not an active ingredient",
+      "description": "Constituent element is not an active ingredient Indicates that the constituent element is not one of the active ingredients."
+    },
+    {
+      "code": "170",
+      "name": "Goods not susceptible to fraud",
+      "description": "Goods not susceptible to fraud Goods not presenting increased risks of fraud in the course of a transit procedure in accordance with national law."
+    },
+    {
+      "code": "171",
+      "name": "Goods susceptible to fraud",
+      "description": "Goods susceptible to fraud Goods presenting increased risks of fraud in the course of a transit procedure in accordance with national law."
+    },
+    {
+      "code": "172",
+      "name": "Goods conditionally susceptible to fraud",
+      "description": "Goods conditionally susceptible to fraud Goods, in certain cases, presenting increased risks of fraud in the course of a transit procedure in accordance with national law."
+    },
+    {
+      "code": "173",
+      "name": "Information, verified",
+      "description": "Information, verified The information has been verified."
+    },
+    {
+      "code": "174",
+      "name": "Information, not verified",
+      "description": "Information, not verified The information has not been verified."
+    },
+    {
+      "code": "175",
+      "name": "Freight charges apportioned by volume",
+      "description": "Freight charges apportioned by volume Method of the proportional allocation of freight charges for each consignment in a multi consignment declaration where freight is apportioned by volume."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Mutually defined indicator."
+    }
+  ]
+}

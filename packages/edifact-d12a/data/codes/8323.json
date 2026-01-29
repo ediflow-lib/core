@@ -1,0 +1,32 @@
+{
+  "code": "8323",
+  "name": "Transport movement code",
+  "description": "Code specifying the transport movement.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Export",
+      "description": "Export The transport movement is to export the goods from the country."
+    },
+    {
+      "code": "2",
+      "name": "Import",
+      "description": "Import The transport movement is to import the goods into the country."
+    },
+    {
+      "code": "3",
+      "name": "Transit",
+      "description": "Transit The cargo is moving in transit through a country and will not become part of the commerce of that country."
+    },
+    {
+      "code": "4",
+      "name": "Relay",
+      "description": "Relay The cargo is being moved by more than one transport means in succession under the responsibility of the same carrier."
+    },
+    {
+      "code": "5",
+      "name": "Transshipment",
+      "description": "Transshipment The cargo is being moved by more than one transport means in succession."
+    }
+  ]
+}

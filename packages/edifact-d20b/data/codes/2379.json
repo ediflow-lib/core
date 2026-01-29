@@ -1,0 +1,475 @@
+{
+  "code": "2379",
+  "name": "Date or time or period format code",
+  "description": "Code specifying the representation of a date, time or period.",
+  "values": [
+    {
+      "code": "2",
+      "name": "DDMMYY"
+    },
+    {
+      "code": "3",
+      "name": "MMDDYY"
+    },
+    {
+      "code": "4",
+      "name": "DDMMCCYY"
+    },
+    {
+      "code": "5",
+      "name": "DDMMCCYYHHMM"
+    },
+    {
+      "code": "6",
+      "name": "CCYYMMB"
+    },
+    {
+      "code": "7",
+      "name": "CCYYMMW"
+    },
+    {
+      "code": "8",
+      "name": "CCYYMMDDS"
+    },
+    {
+      "code": "9",
+      "name": "CCYYMMDDPP"
+    },
+    {
+      "code": "10",
+      "name": "CCYYMMDDTHHMM"
+    },
+    {
+      "code": "101",
+      "name": "YYMMDD"
+    },
+    {
+      "code": "102",
+      "name": "CCYYMMDD"
+    },
+    {
+      "code": "103",
+      "name": "YYWWD"
+    },
+    {
+      "code": "104",
+      "name": "MMWW-MMWW"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start week of a"
+    },
+    {
+      "code": "105",
+      "name": "YYDDD"
+    },
+    {
+      "code": "001",
+      "name": "Always start numbering the days of the year from"
+    },
+    {
+      "code": "106",
+      "name": "MMDD"
+    },
+    {
+      "code": "107",
+      "name": "DDD"
+    },
+    {
+      "code": "108",
+      "name": "WW"
+    },
+    {
+      "code": "109",
+      "name": "MM"
+    },
+    {
+      "code": "110",
+      "name": "DD"
+    },
+    {
+      "code": "201",
+      "name": "YYMMDDHHMM"
+    },
+    {
+      "code": "M",
+      "name": "= Month; D = Day; H = Hour; M = Minute."
+    },
+    {
+      "code": "202",
+      "name": "YYMMDDHHMMSS"
+    },
+    {
+      "code": "203",
+      "name": "CCYYMMDDHHMM"
+    },
+    {
+      "code": "204",
+      "name": "CCYYMMDDHHMMSS"
+    },
+    {
+      "code": "205",
+      "name": "CCYYMMDDHHMMZHHMM"
+    },
+    {
+      "code": "ZHHMM",
+      "name": "= time zone given as offset from Coordinated"
+    },
+    {
+      "code": "206",
+      "name": "YYMMDDHHMMZHHMM"
+    },
+    {
+      "code": "Y",
+      "name": "= Year; M = Month; D = Day; H = Hour; M = Minute,"
+    },
+    {
+      "code": "Z",
+      "name": "= leading plus/minus sign, HHMM = difference to UTC in"
+    },
+    {
+      "code": "207",
+      "name": "YYMMDDHHMMSSZHHMM"
+    },
+    {
+      "code": "Y",
+      "name": "= Year; M = Month; D = Day; H = Hour; M = Minute, S ="
+    },
+    {
+      "code": "Z",
+      "name": "= leading plus/minus sign, HHMM = difference to UTC in"
+    },
+    {
+      "code": "208",
+      "name": "CCYYMMDDHHMMSSZHHMM"
+    },
+    {
+      "code": "C",
+      "name": "= Century, Y = Year; M = Month; D = Day; H = Hour; M ="
+    },
+    {
+      "code": "209",
+      "name": "HHMMSSZHHMM"
+    },
+    {
+      "code": "H",
+      "name": "= Hour; M = Minute, S = Seconds, Z = leading"
+    },
+    {
+      "code": "210",
+      "name": "HHMMSSZHHMM-HHMMSSZHHMM"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start time"
+    },
+    {
+      "code": "301",
+      "name": "YYMMDDHHMMZZZ"
+    },
+    {
+      "code": "302",
+      "name": "YYMMDDHHMMSSZZZ"
+    },
+    {
+      "code": "303",
+      "name": "CCYYMMDDHHMMZZZ"
+    },
+    {
+      "code": "304",
+      "name": "CCYYMMDDHHMMSSZZZ"
+    },
+    {
+      "code": "305",
+      "name": "MMDDHHMM"
+    },
+    {
+      "code": "306",
+      "name": "DDHHMM"
+    },
+    {
+      "code": "307",
+      "name": "CCYYMMDDHHMMSSFFF"
+    },
+    {
+      "code": "C",
+      "name": "= century, Y = year, M = month, D = day, H = hour, M ="
+    },
+    {
+      "code": "308",
+      "name": "CCYYMMDDHHMMZZZ-CCYYMMDDHHMMZZZ"
+    },
+    {
+      "code": "A",
+      "name": "period of time which includes the century, year,"
+    },
+    {
+      "code": "401",
+      "name": "HHMM"
+    },
+    {
+      "code": "402",
+      "name": "HHMMSS"
+    },
+    {
+      "code": "404",
+      "name": "HHMMSSZZZ"
+    },
+    {
+      "code": "405",
+      "name": "MMMMSS"
+    },
+    {
+      "code": "406",
+      "name": "ZHHMM"
+    },
+    {
+      "code": "501",
+      "name": "HHMMHHMM"
+    },
+    {
+      "code": "502",
+      "name": "HHMMSS-HHMMSS"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start time"
+    },
+    {
+      "code": "503",
+      "name": "HHMMSSZZZ-HHMMSSZZZ"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start time"
+    },
+    {
+      "code": "600",
+      "name": "CC"
+    },
+    {
+      "code": "601",
+      "name": "YY"
+    },
+    {
+      "code": "602",
+      "name": "CCYY"
+    },
+    {
+      "code": "603",
+      "name": "YYS"
+    },
+    {
+      "code": "604",
+      "name": "CCYYS"
+    },
+    {
+      "code": "608",
+      "name": "CCYYQ"
+    },
+    {
+      "code": "609",
+      "name": "YYMM"
+    },
+    {
+      "code": "610",
+      "name": "CCYYMM"
+    },
+    {
+      "code": "613",
+      "name": "YYMMA"
+    },
+    {
+      "code": "614",
+      "name": "CCYYMMA"
+    },
+    {
+      "code": "615",
+      "name": "YYWW"
+    },
+    {
+      "code": "616",
+      "name": "CCYYWW"
+    },
+    {
+      "code": "701",
+      "name": "YY-YY"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start year"
+    },
+    {
+      "code": "702",
+      "name": "CCYY-CCYY"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start year"
+    },
+    {
+      "code": "703",
+      "name": "YYS-YYS"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start semester"
+    },
+    {
+      "code": "704",
+      "name": "CCYYS-CCYYS"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start semester"
+    },
+    {
+      "code": "705",
+      "name": "YYPYYP"
+    },
+    {
+      "code": "706",
+      "name": "CCYYP-CCYYP"
+    },
+    {
+      "code": "707",
+      "name": "YYQ-YYQ"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start quarter"
+    },
+    {
+      "code": "708",
+      "name": "CCYYQ-CCYYQ"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start quarter"
+    },
+    {
+      "code": "709",
+      "name": "YYMM-YYMM"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start month of"
+    },
+    {
+      "code": "710",
+      "name": "CCYYMM-CCYYMM"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start month of"
+    },
+    {
+      "code": "713",
+      "name": "YYMMDDHHMM-YYMMDDHHMM"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start time"
+    },
+    {
+      "code": "715",
+      "name": "YYWW-YYWW"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start week of a"
+    },
+    {
+      "code": "716",
+      "name": "CCYYWW-CCYYWW"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start week of a"
+    },
+    {
+      "code": "717",
+      "name": "YYMMDD-YYMMDD"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start date"
+    },
+    {
+      "code": "718",
+      "name": "CCYYMMDD-CCYYMMDD"
+    },
+    {
+      "code": "A",
+      "name": "period of time specified by giving the start date"
+    },
+    {
+      "code": "719",
+      "name": "CCYYMMDDHHMM-CCYYMMDDHHMM"
+    },
+    {
+      "code": "A",
+      "name": "period of time which includes the century, year,"
+    },
+    {
+      "code": "720",
+      "name": "DHHMM-DHHMM"
+    },
+    {
+      "code": "801",
+      "name": "Year"
+    },
+    {
+      "code": "802",
+      "name": "Month"
+    },
+    {
+      "code": "803",
+      "name": "Week"
+    },
+    {
+      "code": "804",
+      "name": "Day"
+    },
+    {
+      "code": "805",
+      "name": "Hour"
+    },
+    {
+      "code": "806",
+      "name": "Minute"
+    },
+    {
+      "code": "807",
+      "name": "Second"
+    },
+    {
+      "code": "808",
+      "name": "Semester"
+    },
+    {
+      "code": "809",
+      "name": "Four months period"
+    },
+    {
+      "code": "810",
+      "name": "Trimester"
+    },
+    {
+      "code": "811",
+      "name": "Half month"
+    },
+    {
+      "code": "812",
+      "name": "Ten days"
+    },
+    {
+      "code": "813",
+      "name": "Day of the week"
+    },
+    {
+      "code": "814",
+      "name": "Working days"
+    }
+  ]
+}

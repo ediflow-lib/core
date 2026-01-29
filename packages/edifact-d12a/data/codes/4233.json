@@ -1,0 +1,182 @@
+{
+  "code": "4233",
+  "name": "Marking instructions code",
+  "description": "Code specifying instructions for marking.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Do not mark suppliers company name",
+      "description": "Do not mark suppliers company name Packaging should not be marked with supplier's company name."
+    },
+    {
+      "code": "2",
+      "name": "Mark customers company name",
+      "description": "Mark customers company name Packaging should be marked with customer's company name."
+    },
+    {
+      "code": "3",
+      "name": "Mark customers references",
+      "description": "Mark customers references Packaging should be marked with customer's references."
+    },
+    {
+      "code": "4",
+      "name": "Mark additionally customers article description",
+      "description": "Mark additionally customers article description Packaging should also be marked with customer's article description."
+    },
+    {
+      "code": "5",
+      "name": "Mark exclusively customers article description",
+      "description": "Mark exclusively customers article description Packaging should be marked with customer's article description only."
+    },
+    {
+      "code": "6",
+      "name": "Mark packages dimensions",
+      "description": "Mark packages dimensions Packaging should be marked with package's dimensions."
+    },
+    {
+      "code": "7",
+      "name": "Mark net weight",
+      "description": "Mark net weight Packaging should be marked with net weight."
+    },
+    {
+      "code": "8",
+      "name": "Mark gross weight",
+      "description": "Mark gross weight Packaging should be marked with gross weight."
+    },
+    {
+      "code": "9",
+      "name": "Mark tare weight",
+      "description": "Mark tare weight Packaging should be marked with tare weight."
+    },
+    {
+      "code": "10",
+      "name": "Mark batch number",
+      "description": "Mark batch number Packaging should be marked with batch number."
+    },
+    {
+      "code": "11",
+      "name": "Mark article number customer",
+      "description": "Mark article number customer Packaging should be marked with customer's article number."
+    },
+    {
+      "code": "12",
+      "name": "Mark running number of packages",
+      "description": "Mark running number of packages Packaging should be marked with the running number of packages."
+    },
+    {
+      "code": "13",
+      "name": "Mark date of production",
+      "description": "Mark date of production Packaging should be marked with the date of production."
+    },
+    {
+      "code": "14",
+      "name": "Mark expiry date",
+      "description": "Mark expiry date Packaging should be marked with the expiry date."
+    },
+    {
+      "code": "15",
+      "name": "Mark supplier number",
+      "description": "Mark supplier number Packaging should be marked with the supplier number."
+    },
+    {
+      "code": "16",
+      "name": "Buyer's instructions",
+      "description": "Buyer's instructions Markings as specified by the buyer."
+    },
+    {
+      "code": "17",
+      "name": "Seller's instructions",
+      "description": "Seller's instructions Markings as specified by the seller."
+    },
+    {
+      "code": "18",
+      "name": "Carrier's instructions",
+      "description": "Carrier's instructions Markings as specified by carrier."
+    },
+    {
+      "code": "19",
+      "name": "Legal requirements",
+      "description": "Legal requirements Markings as specified by law."
+    },
+    {
+      "code": "20",
+      "name": "Industry instructions",
+      "description": "Industry instructions Markings as specified by industry."
+    },
+    {
+      "code": "21",
+      "name": "Line item only",
+      "description": "Line item only Exclusive reference markings for this line."
+    },
+    {
+      "code": "22",
+      "name": "Pre-marked by buyer",
+      "description": "Pre-marked by buyer Packaging should be pre-marked by buyer."
+    },
+    {
+      "code": "23",
+      "name": "Entire shipment",
+      "description": "Entire shipment Markings refer to the entire shipment."
+    },
+    {
+      "code": "24",
+      "name": "Shipper assigned",
+      "description": "Shipper assigned Markings to identify a shipment, package or carton as assigned by shipper."
+    },
+    {
+      "code": "25",
+      "name": "Shipper assigned roll number",
+      "description": "Shipper assigned roll number Markings to identify a roll as assigned by the shipper."
+    },
+    {
+      "code": "26",
+      "name": "Shipper assigned skid number",
+      "description": "Shipper assigned skid number Markings used to identify a skid as assigned by shipper."
+    },
+    {
+      "code": "27",
+      "name": "Uniform Code Council (UCC) format",
+      "description": "Uniform Code Council (UCC) format Markings according to UCC format are required. System of coding products where by each item/multipack case type is uniquely identified. A unique manufacturer Id is assigned by the UCC."
+    },
+    {
+      "code": "28",
+      "name": "Mark free text",
+      "description": "Mark free text Packaging should be marked with free text."
+    },
+    {
+      "code": "29",
+      "name": "Mark case number",
+      "description": "Mark case number Case numbers to be used for marking."
+    },
+    {
+      "code": "30",
+      "name": "Mark serial shipping container code",
+      "description": "Mark serial shipping container code Requests the marking of the serial shipping container code to the transport container or packaging."
+    },
+    {
+      "code": "31",
+      "name": "Marked with ISO 10374 (permanent container tag)",
+      "description": "Marked with ISO 10374 (permanent container tag) The container has been marked with a permanent container tag according to ISO 10374."
+    },
+    {
+      "code": "32",
+      "name": "Mark date of packaging",
+      "description": "Mark date of packaging Packaging must be marked with the packaging date."
+    },
+    {
+      "code": "33",
+      "name": "Mark reference to source entity",
+      "description": "Mark reference to source entity Packaging must be marked with the reference to source entity. The reference to source identifies that the trade item was derived from."
+    },
+    {
+      "code": "34",
+      "name": "Marked GS1 Global Individual Asset Identifier",
+      "description": "Marked GS1 Global Individual Asset Identifier Indication that the GS1 Global Individual Asset Identifier has been marked on the package."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# Git LFS (Large File Storage) - for large binary files
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+
+# Text files
+*.md text eol=lf
+*.json text eol=lf
+*.ts text eol=lf
+*.js text eol=lf
+
+# Scripts should never be pushed (backup protection)
+scripts/** export-ignore
+resources/** export-ignore
+docs/private/** export-ignore

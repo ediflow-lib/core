@@ -1,0 +1,651 @@
+{
+  "code": "4405",
+  "name": "Status description code",
+  "description": "Code specifying a status.",
+  "values": [
+    {
+      "code": "1",
+      "name": "To be done"
+    },
+    {
+      "code": "2",
+      "name": "Done"
+    },
+    {
+      "code": "3",
+      "name": "Passed on"
+    },
+    {
+      "code": "4",
+      "name": "Final"
+    },
+    {
+      "code": "5",
+      "name": "Subject to final payment"
+    },
+    {
+      "code": "6",
+      "name": "Minimum"
+    },
+    {
+      "code": "7",
+      "name": "Fixed"
+    },
+    {
+      "code": "8",
+      "name": "Maximum"
+    },
+    {
+      "code": "9",
+      "name": "Information"
+    },
+    {
+      "code": "10",
+      "name": "0 day available"
+    },
+    {
+      "code": "11",
+      "name": "1 day available"
+    },
+    {
+      "code": "12",
+      "name": "2 days available"
+    },
+    {
+      "code": "13",
+      "name": "3 days available"
+    },
+    {
+      "code": "14",
+      "name": "Uncollected funds"
+    },
+    {
+      "code": "15",
+      "name": "Nil"
+    },
+    {
+      "code": "16",
+      "name": "None advised"
+    },
+    {
+      "code": "17",
+      "name": "Requested"
+    },
+    {
+      "code": "A",
+      "name": "status or condition has been requested."
+    },
+    {
+      "code": "18",
+      "name": "Free of charge"
+    },
+    {
+      "code": "19",
+      "name": "Rounded"
+    },
+    {
+      "code": "20",
+      "name": "Permanent"
+    },
+    {
+      "code": "21",
+      "name": "Temporary"
+    },
+    {
+      "code": "22",
+      "name": "Subject to agreed condition"
+    },
+    {
+      "code": "23",
+      "name": "Added"
+    },
+    {
+      "code": "24",
+      "name": "Deducted"
+    },
+    {
+      "code": "A",
+      "name": "deduction from."
+    },
+    {
+      "code": "25",
+      "name": "Included"
+    },
+    {
+      "code": "26",
+      "name": "Subject to clearing"
+    },
+    {
+      "code": "27",
+      "name": "Subject to bilaterally agreed condition"
+    },
+    {
+      "code": "28",
+      "name": "Transaction expected to be executed"
+    },
+    {
+      "code": "29",
+      "name": "Debit"
+    },
+    {
+      "code": "30",
+      "name": "Credit"
+    },
+    {
+      "code": "31",
+      "name": "Positive debit"
+    },
+    {
+      "code": "32",
+      "name": "Negative debit"
+    },
+    {
+      "code": "33",
+      "name": "Positive credit"
+    },
+    {
+      "code": "34",
+      "name": "Negative credit"
+    },
+    {
+      "code": "35",
+      "name": "Started"
+    },
+    {
+      "code": "36",
+      "name": "Revised"
+    },
+    {
+      "code": "37",
+      "name": "Stolen"
+    },
+    {
+      "code": "A",
+      "name": "consignment or goods have been stolen."
+    },
+    {
+      "code": "38",
+      "name": "Assigned"
+    },
+    {
+      "code": "A",
+      "name": "value has been assigned to an item."
+    },
+    {
+      "code": "39",
+      "name": "Approved"
+    },
+    {
+      "code": "40",
+      "name": "Withdrawn"
+    },
+    {
+      "code": "41",
+      "name": "Rejected"
+    },
+    {
+      "code": "42",
+      "name": "Approval pending"
+    },
+    {
+      "code": "43",
+      "name": "Postponed"
+    },
+    {
+      "code": "44",
+      "name": "Replaced"
+    },
+    {
+      "code": "45",
+      "name": "No status"
+    },
+    {
+      "code": "46",
+      "name": "Does not exist"
+    },
+    {
+      "code": "47",
+      "name": "Draft version"
+    },
+    {
+      "code": "A",
+      "name": "preliminary version."
+    },
+    {
+      "code": "48",
+      "name": "Live version"
+    },
+    {
+      "code": "A",
+      "name": "version with a live status."
+    },
+    {
+      "code": "49",
+      "name": "Expired version"
+    },
+    {
+      "code": "A",
+      "name": "version which no longer has a live status."
+    },
+    {
+      "code": "50",
+      "name": "Part-time"
+    },
+    {
+      "code": "51",
+      "name": "Full-time"
+    },
+    {
+      "code": "52",
+      "name": "Not a student"
+    },
+    {
+      "code": "53",
+      "name": "To be extracted"
+    },
+    {
+      "code": "54",
+      "name": "Impacted tooth"
+    },
+    {
+      "code": "55",
+      "name": "Extracted"
+    },
+    {
+      "code": "56",
+      "name": "Estimated"
+    },
+    {
+      "code": "57",
+      "name": "Undefined incident"
+    },
+    {
+      "code": "58",
+      "name": "Quantity error"
+    },
+    {
+      "code": "59",
+      "name": "Monetary amount error"
+    },
+    {
+      "code": "60",
+      "name": "Product not ordered"
+    },
+    {
+      "code": "61",
+      "name": "Uncertain"
+    },
+    {
+      "code": "62",
+      "name": "Significant"
+    },
+    {
+      "code": "63",
+      "name": "Not accepted"
+    },
+    {
+      "code": "64",
+      "name": "Order or request cancelled"
+    },
+    {
+      "code": "65",
+      "name": "Negative"
+    },
+    {
+      "code": "66",
+      "name": "Unsigned amount"
+    },
+    {
+      "code": "67",
+      "name": "Preliminary"
+    },
+    {
+      "code": "68",
+      "name": "Split"
+    },
+    {
+      "code": "69",
+      "name": "Recommended"
+    },
+    {
+      "code": "70",
+      "name": "Issued"
+    },
+    {
+      "code": "71",
+      "name": "Available for ordering"
+    },
+    {
+      "code": "72",
+      "name": "Not available for ordering"
+    },
+    {
+      "code": "73",
+      "name": "Confirmed"
+    },
+    {
+      "code": "74",
+      "name": "Expiry date exceeded"
+    },
+    {
+      "code": "75",
+      "name": "Prescribed"
+    },
+    {
+      "code": "76",
+      "name": "All published issues since subscription start"
+    },
+    {
+      "code": "77",
+      "name": "All published issues since issue specified in claim"
+    },
+    {
+      "code": "78",
+      "name": "All published issues from and including issue specified in"
+    },
+    {
+      "code": "79",
+      "name": "Specified published issue only"
+    },
+    {
+      "code": "80",
+      "name": "Publication issue cancelled"
+    },
+    {
+      "code": "81",
+      "name": "Definitive"
+    },
+    {
+      "code": "82",
+      "name": "Supplementary"
+    },
+    {
+      "code": "83",
+      "name": "Under legal appeal"
+    },
+    {
+      "code": "84",
+      "name": "Legally assigned"
+    },
+    {
+      "code": "85",
+      "name": "Updated"
+    },
+    {
+      "code": "86",
+      "name": "Ratified"
+    },
+    {
+      "code": "87",
+      "name": "Under consideration"
+    },
+    {
+      "code": "88",
+      "name": "Countersued"
+    },
+    {
+      "code": "A",
+      "name": "response to institute legal proceedings in which an"
+    },
+    {
+      "code": "89",
+      "name": "Legal item dismissed"
+    },
+    {
+      "code": "90",
+      "name": "Disputed"
+    },
+    {
+      "code": "91",
+      "name": "Enforced"
+    },
+    {
+      "code": "92",
+      "name": "Legal documentation filed"
+    },
+    {
+      "code": "93",
+      "name": "Judgement for defendant"
+    },
+    {
+      "code": "A",
+      "name": "judgement for the defendant was rendered."
+    },
+    {
+      "code": "94",
+      "name": "Judgement for plaintiff"
+    },
+    {
+      "code": "A",
+      "name": "judgement for the plaintiff was rendered."
+    },
+    {
+      "code": "95",
+      "name": "Unchanged"
+    },
+    {
+      "code": "96",
+      "name": "Legal documentation not filed"
+    },
+    {
+      "code": "97",
+      "name": "Pending"
+    },
+    {
+      "code": "98",
+      "name": "Debt released"
+    },
+    {
+      "code": "99",
+      "name": "Law suit filed"
+    },
+    {
+      "code": "A",
+      "name": "law suit was filed."
+    },
+    {
+      "code": "100",
+      "name": "Satisfied"
+    },
+    {
+      "code": "101",
+      "name": "Set aside"
+    },
+    {
+      "code": "102",
+      "name": "Settled"
+    },
+    {
+      "code": "103",
+      "name": "Settled out of court"
+    },
+    {
+      "code": "104",
+      "name": "Stayed"
+    },
+    {
+      "code": "A",
+      "name": "stopping of the proceedings."
+    },
+    {
+      "code": "105",
+      "name": "Terminated"
+    },
+    {
+      "code": "106",
+      "name": "Arranged"
+    },
+    {
+      "code": "107",
+      "name": "Not arranged"
+    },
+    {
+      "code": "108",
+      "name": "Instructed to start"
+    },
+    {
+      "code": "109",
+      "name": "Instructed to stop"
+    },
+    {
+      "code": "110",
+      "name": "Stock quantity corrected"
+    },
+    {
+      "code": "A",
+      "name": "difference in quantity between stocks has been"
+    },
+    {
+      "code": "111",
+      "name": "Inactive"
+    },
+    {
+      "code": "112",
+      "name": "Active"
+    },
+    {
+      "code": "113",
+      "name": "Incomplete data"
+    },
+    {
+      "code": "114",
+      "name": "Booked when overbooked"
+    },
+    {
+      "code": "115",
+      "name": "Provisional"
+    },
+    {
+      "code": "116",
+      "name": "Ticketed"
+    },
+    {
+      "code": "117",
+      "name": "Washed"
+    },
+    {
+      "code": "118",
+      "name": "Unwashed"
+    },
+    {
+      "code": "119",
+      "name": "Out of date"
+    },
+    {
+      "code": "120",
+      "name": "Alternative"
+    },
+    {
+      "code": "121",
+      "name": "Complete"
+    },
+    {
+      "code": "122",
+      "name": "Partial"
+    },
+    {
+      "code": "123",
+      "name": "Contracted"
+    },
+    {
+      "code": "124",
+      "name": "Technically limited"
+    },
+    {
+      "code": "125",
+      "name": "Adjusted"
+    },
+    {
+      "code": "126",
+      "name": "Expected delivery"
+    },
+    {
+      "code": "127",
+      "name": "Measured"
+    },
+    {
+      "code": "128",
+      "name": "Ready for loading"
+    },
+    {
+      "code": "129",
+      "name": "Not heat treated"
+    },
+    {
+      "code": "130",
+      "name": "Heat treated"
+    },
+    {
+      "code": "131",
+      "name": "Fully cooked"
+    },
+    {
+      "code": "132",
+      "name": "Not fully cooked"
+    },
+    {
+      "code": "133",
+      "name": "Hothouse grown"
+    },
+    {
+      "code": "134",
+      "name": "Knocked down"
+    },
+    {
+      "code": "135",
+      "name": "Solid"
+    },
+    {
+      "code": "136",
+      "name": "Liquid"
+    },
+    {
+      "code": "137",
+      "name": "Gas"
+    },
+    {
+      "code": "138",
+      "name": "Sludge"
+    },
+    {
+      "code": "139",
+      "name": "Normal security measures required"
+    },
+    {
+      "code": "140",
+      "name": "Heightened security measures required"
+    },
+    {
+      "code": "141",
+      "name": "Exceptional security measures required"
+    },
+    {
+      "code": "142",
+      "name": "Ship security procedures not maintained during ship-to-ship"
+    },
+    {
+      "code": "143",
+      "name": "Ship security procedure maintained during ship-to-ship"
+    },
+    {
+      "code": "A",
+      "name": "confirmation that ship security procedures in terms of"
+    },
+    {
+      "code": "144",
+      "name": "Special or additional security measures taken"
+    },
+    {
+      "code": "145",
+      "name": "Security related matter to report"
+    },
+    {
+      "code": "A",
+      "name": "status indicating that there is a security related"
+    },
+    {
+      "code": "146",
+      "name": "Transhipped"
+    }
+  ]
+}

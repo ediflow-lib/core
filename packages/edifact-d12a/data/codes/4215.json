@@ -1,0 +1,152 @@
+{
+  "code": "4215",
+  "name": "Transport charges payment method code",
+  "description": "Code specifying the payment method for transport charges.",
+  "values": [
+    {
+      "code": "A",
+      "name": "Account",
+      "description": "Account The charges are to be charged to an account."
+    },
+    {
+      "code": "AA",
+      "name": "Cash on delivery service charge paid by consignor",
+      "description": "Cash on delivery service charge paid by consignor An indication that the consignor is responsible for the payment of the cash on delivery service charge."
+    },
+    {
+      "code": "AB",
+      "name": "Cash on delivery service charge paid by consignee",
+      "description": "Cash on delivery service charge paid by consignee An indication that the consignee is responsible for the payment of the cash on delivery service charge."
+    },
+    {
+      "code": "AC",
+      "name": "Insurance costs paid by consignor",
+      "description": "Insurance costs paid by consignor An indication that the consignor is responsible for the payment of the insurance costs."
+    },
+    {
+      "code": "AD",
+      "name": "Insurance costs paid by consignee",
+      "description": "Insurance costs paid by consignee An indication that the consignee is responsible for the payment of the insurance costs."
+    },
+    {
+      "code": "CA",
+      "name": "Advance collect",
+      "description": "Advance collect The amount of freight or other charge on a shipment advanced by one transportation line to another or to the shipper, to be collected from consignee."
+    },
+    {
+      "code": "CC",
+      "name": "Collect",
+      "description": "Collect A shipment on which freight charges will be paid by consignee."
+    },
+    {
+      "code": "CF",
+      "name": "Collect, freight credited to payment customer",
+      "description": "Collect, freight credited to payment customer The freight is collect but has been paid by the shipper and will be credited to that party."
+    },
+    {
+      "code": "DF",
+      "name": "Defined by buyer and seller",
+      "description": "Defined by buyer and seller The payment method for transport charges have been defined by the buyer and seller."
+    },
+    {
+      "code": "FO",
+      "name": "FOB port of call",
+      "description": "FOB port of call Title and control of goods pass to the buyer at port of call. Responsibility for export taxes and cost of documents for overseas shipments have not been specified."
+    },
+    {
+      "code": "IC",
+      "name": "Information copy, no payment due",
+      "description": "Information copy, no payment due Transaction set has been provided for information only."
+    },
+    {
+      "code": "MX",
+      "name": "Mixed",
+      "description": "Mixed The consignment is partially collect and partially prepaid."
+    },
+    {
+      "code": "NC",
+      "name": "Service freight, no charge",
+      "description": "Service freight, no charge The consignment is shipped on a service basis and there is no freight charge."
+    },
+    {
+      "code": "NS",
+      "name": "Not specified",
+      "description": "Not specified The payment method for transport charges have not been specified."
+    },
+    {
+      "code": "PA",
+      "name": "Advance prepaid",
+      "description": "Advance prepaid Costs have been paid in advance."
+    },
+    {
+      "code": "PB",
+      "name": "Customer pick-up/backhaul",
+      "description": "Customer pick-up/backhaul Buyer's private carriage picks up the goods as a return load to the buyer's facility."
+    },
+    {
+      "code": "PC",
+      "name": "Prepaid but charged to customer",
+      "description": "Prepaid but charged to customer shipping charges have been paid in advance of shipment but are charged back to consignee usually as line item on invoice for the purchased goods."
+    },
+    {
+      "code": "PE",
+      "name": "Payable elsewhere",
+      "description": "Payable elsewhere Place of payment not known at the begin of conveyance."
+    },
+    {
+      "code": "PO",
+      "name": "Prepaid only",
+      "description": "Prepaid only Payment in advance of freight and/or other charges prior to delivery of shipment at destination, usually by shipper at point of origin."
+    },
+    {
+      "code": "PP",
+      "name": "Prepaid (by seller)",
+      "description": "Prepaid (by seller) Seller of goods makes payment to carrier for freight charges prior to shipment."
+    },
+    {
+      "code": "PU",
+      "name": "Pickup",
+      "description": "Pickup Customer is responsible for payment of pickup charges at shipping point."
+    },
+    {
+      "code": "RC",
+      "name": "Return container freight paid by customer",
+      "description": "Return container freight paid by customer The freight for returning the container is paid by the customer."
+    },
+    {
+      "code": "RF",
+      "name": "Return container freight free",
+      "description": "Return container freight free There is no freight charge for returning the container."
+    },
+    {
+      "code": "RS",
+      "name": "Return container freight paid by supplier",
+      "description": "Return container freight paid by supplier The freight charge for returning the container is paid by the supplier."
+    },
+    {
+      "code": "TP",
+      "name": "Third party pay",
+      "description": "Third party pay A third party, someone other than buyer or seller, is identified as responsible for payment of shipping charges."
+    },
+    {
+      "code": "WC",
+      "name": "Weight condition",
+      "description": "Weight condition The payment method for transport charges are due to the weight."
+    },
+    {
+      "code": "WD",
+      "name": "Paid by supplier",
+      "description": "Paid by supplier Transport charges will be paid by the supplier."
+    },
+    {
+      "code": "WE",
+      "name": "Paid by buyer",
+      "description": "Paid by buyer Transport charges will be paid by the buyer."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
+}

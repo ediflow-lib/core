@@ -1,0 +1,132 @@
+{
+  "code": "4017",
+  "name": "Delivery plan commitment level code",
+  "description": "Code specifying the level of commitment to a delivery plan.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Firm",
+      "description": "Firm Indicates that the scheduling information is a firm commitment."
+    },
+    {
+      "code": "2",
+      "name": "Commitment for manufacturing and material",
+      "description": "Commitment for manufacturing and material Authorizes the supplier to start the manufacturing of goods."
+    },
+    {
+      "code": "3",
+      "name": "Commitment for material",
+      "description": "Commitment for material Authorizes the manufacturer to order material required for manufacturing specified goods."
+    },
+    {
+      "code": "4",
+      "name": "Planning/forecast",
+      "description": "Planning/forecast An estimate of future requirements based on trends and actual information."
+    },
+    {
+      "code": "5",
+      "name": "Short delivered on previous delivery",
+      "description": "Short delivered on previous delivery Part of a consignment which was not delivered when the original delivery was made."
+    },
+    {
+      "code": "6",
+      "name": "Capacity available",
+      "description": "Capacity available Capacity is available to meet the requested scheduling demands."
+    },
+    {
+      "code": "7",
+      "name": "Promotion",
+      "description": "Promotion All related schedule information refer to a promotion."
+    },
+    {
+      "code": "8",
+      "name": "Special demand",
+      "description": "Special demand All related schedule information refers to a special demand."
+    },
+    {
+      "code": "9",
+      "name": "User defined",
+      "description": "User defined The user can interpret the meaning of the values from information exchanged previously."
+    },
+    {
+      "code": "10",
+      "name": "Immediate",
+      "description": "Immediate Indicates that the scheduling information is for immediate execution."
+    },
+    {
+      "code": "11",
+      "name": "Pilot/Pre-volume",
+      "description": "Pilot/Pre-volume Initial products required in advance of the normal production process."
+    },
+    {
+      "code": "12",
+      "name": "Planning",
+      "description": "Planning An estimate of future requirements."
+    },
+    {
+      "code": "13",
+      "name": "Potential order increase",
+      "description": "Potential order increase The possibility and magnitude of a schedule fluctuation."
+    },
+    {
+      "code": "14",
+      "name": "Average plant usage",
+      "description": "Average plant usage The usual amount that a manufacturing facility will use over a specified duration."
+    },
+    {
+      "code": "15",
+      "name": "First time reported firm",
+      "description": "First time reported firm Initial confirmation of a material requirement."
+    },
+    {
+      "code": "16",
+      "name": "Maximum",
+      "description": "Maximum The highest attainable amount."
+    },
+    {
+      "code": "17",
+      "name": "Tooling capacity",
+      "description": "Tooling capacity The maximum amount that the process was designed to accommodate."
+    },
+    {
+      "code": "18",
+      "name": "Normal tooling capacity",
+      "description": "Normal tooling capacity The anticipated amount that the process was designed to accommodate over a specific period of time."
+    },
+    {
+      "code": "19",
+      "name": "Prototype",
+      "description": "Prototype The preliminary version of a product or service."
+    },
+    {
+      "code": "20",
+      "name": "Strike protection",
+      "description": "Strike protection Product level that is set aside as protection in the event of a work stoppage."
+    },
+    {
+      "code": "21",
+      "name": "Required tooling capacity",
+      "description": "Required tooling capacity The contracted amount that the process was designed to accommodate over a specific period of time."
+    },
+    {
+      "code": "22",
+      "name": "Deliver to schedule",
+      "description": "Deliver to schedule Deliver to schedule separately supplied."
+    },
+    {
+      "code": "23",
+      "name": "Await manual pull",
+      "description": "Await manual pull Await non-EDI instruction before shipping."
+    },
+    {
+      "code": "24",
+      "name": "Reference to commercial agreement between partners",
+      "description": "Reference to commercial agreement between partners The buyer's commitment is the one defined in the commercial agreement."
+    },
+    {
+      "code": "26",
+      "name": "Proposed",
+      "description": "Proposed Indicates that the scheduling information is a proposal."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "code": "5393",
+  "name": "Price multiplier type code qualifier",
+  "description": "Code qualifying the type of price multiplier.",
+  "values": [
+    {
+      "code": "A",
+      "name": "Price adjustment coefficient",
+      "description": "Price adjustment coefficient Coefficient to be used in the price adjustment formula to calculate the revaluated price."
+    },
+    {
+      "code": "B",
+      "name": "Escalation coefficient",
+      "description": "Escalation coefficient Coefficient to be used in the escalation formula to calculate the actual price."
+    },
+    {
+      "code": "C",
+      "name": "Timesing factor",
+      "description": "Timesing factor Factor to be used in calculating the number of times a particular piece of work is repeated."
+    },
+    {
+      "code": "CSD",
+      "name": "Cost markup multiplier - original cost",
+      "description": "Cost markup multiplier - original cost Code specifying the cost mark-up multiplier at original cost."
+    },
+    {
+      "code": "CSR",
+      "name": "Cost markup multiplier - retail cost",
+      "description": "Cost markup multiplier - retail cost Code specifying the cost mark-up multiplier at retail cost."
+    },
+    {
+      "code": "DIS",
+      "name": "Discount multiplier",
+      "description": "Discount multiplier Code specifying the discount multiplier."
+    },
+    {
+      "code": "SEL",
+      "name": "Selling multiplier",
+      "description": "Selling multiplier Code specifying the selling multiplier."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "ediflow-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EDIFlow - Modern EDIFACT Parser, Validator & Builder (Monorepo)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "test:watch": "npm run test:watch --workspaces --if-present",
+    "test:coverage": "npm run test:coverage --workspace=packages/core",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "publish:all": "npm publish --workspaces --access public",
+    "publish:core": "npm publish --workspace=packages/core --access public",
+    "publish:d96a": "npm publish --workspace=packages/edifact-d96a --access public",
+    "publish:d01b": "npm publish --workspace=packages/edifact-d01b --access public",
+    "publish:d20b": "npm publish --workspace=packages/edifact-d20b --access public",
+    "publish:d12a": "npm publish --workspace=packages/edifact-d12a --access public",
+    "release:check": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "edi",
+    "edifact",
+    "parser",
+    "validator",
+    "builder",
+    "typescript",
+    "clean-architecture",
+    "monorepo",
+    "d96a",
+    "d01b",
+    "d20b",
+    "d12a"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow#readme",
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/lru-cache": "^7.10.9",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "commander": "^14.0.2",
+    "js-yaml": "^4.1.1",
+    "lru-cache": "^11.2.4",
+    "yaml": "^2.8.2"
+  }
+}
