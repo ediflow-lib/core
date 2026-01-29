@@ -1,0 +1,3187 @@
+{
+  "1000": {
+    "code": "1000",
+    "name": "Document/message name",
+    "description": "Plain language identifier specifying the function of a document/message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1001": {
+    "code": "1001",
+    "name": "Document/message name, coded",
+    "description": "Document/message identifier expressed in code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1004": {
+    "code": "1004",
+    "name": "Document/message number",
+    "description": "Reference number assigned to the document/message by the issuer.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1049": {
+    "code": "1049",
+    "name": "Message section, coded",
+    "description": "Recognition of a particular part of a message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1050": {
+    "code": "1050",
+    "name": "Sequence number",
+    "description": "Number indicating the position in a sequence.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1052": {
+    "code": "1052",
+    "name": "Message item number",
+    "description": "The referenced number allocated to an identifiable item in a message. eg Customs item or invoice item.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1054": {
+    "code": "1054",
+    "name": "Message sub-item number",
+    "description": "The reference number allocated to an identifiable sub-item in a message. eg: invoice line number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1056": {
+    "code": "1056",
+    "name": "Version",
+    "description": "To specify the version number or name of an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1058": {
+    "code": "1058",
+    "name": "Release",
+    "description": "To specify the release number or release name of an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1060": {
+    "code": "1060",
+    "name": "Revision number",
+    "description": "To specify a revision number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1073": {
+    "code": "1073",
+    "name": "Document line indicator, coded",
+    "description": "Code indicating if a document line is included or excluded for processing purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1082": {
+    "code": "1082",
+    "name": "Line item number",
+    "description": "Serial number designating each separate item within a series of articles.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1131": {
+    "code": "1131",
+    "name": "Code list qualifier",
+    "description": "Identification of a code list.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1153": {
+    "code": "1153",
+    "name": "Reference qualifier",
+    "description": "Code giving specific meaning to a reference segment or a reference number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1154": {
+    "code": "1154",
+    "name": "Reference number",
+    "description": "Identification number the nature and function of which can be qualified by an entry in data element 1153 Reference qualifier.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1156": {
+    "code": "1156",
+    "name": "Line number",
+    "description": "Number of the line in the document/message referenced in 1154 Reference number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1159": {
+    "code": "1159",
+    "name": "Sequence number source, coded",
+    "description": "Specification of the source for a specified sequence number in a coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1218": {
+    "code": "1218",
+    "name": "Number of originals of document required",
+    "description": "Specification of the number of originals of a stipulated document that are required.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1220": {
+    "code": "1220",
+    "name": "Number of copies of document required",
+    "description": "Number of originals or copies of a document stipulated or referred to as being required.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1222": {
+    "code": "1222",
+    "name": "Configuration level",
+    "description": "Number indicating the level of an object which is in a hierarchy.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1225": {
+    "code": "1225",
+    "name": "Message function, coded",
+    "description": "Code indicating the function of the message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1227": {
+    "code": "1227",
+    "name": "Calculation sequence indicator, coded",
+    "description": "Code indicating the sequence of cumulated calculations to be agreed between interchange partners.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1228": {
+    "code": "1228",
+    "name": "Action request/notification",
+    "description": "Plain text specifying action taken or to be taken.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1229": {
+    "code": "1229",
+    "name": "Action request/notification, coded",
+    "description": "Code specifying the action to be taken or already taken.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1230": {
+    "code": "1230",
+    "name": "Allowance or charge number",
+    "description": "Number assigned by a party referencing an allowance, promotion, deal or charge.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1245": {
+    "code": "1245",
+    "name": "Status indicator, coded",
+    "description": "Specification of a status or disposition.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1312": {
+    "code": "1312",
+    "name": "Consignment load sequence number",
+    "description": "To indicate the sequence of loading in which the consignments are loaded in a piece of equipment or in a means of transport (e.g. truck).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1366": {
+    "code": "1366",
+    "name": "Document/message source",
+    "description": "Indication of the source from which the printed information is to be or has been obtained.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1373": {
+    "code": "1373",
+    "name": "Document/message status, coded",
+    "description": "To identify the status of a document/message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1475": {
+    "code": "1475",
+    "name": "Message type identifier",
+    "description": "Code identifying a type of message as assigned by its controlling agency.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1476": {
+    "code": "1476",
+    "name": "Control agency",
+    "description": "Identification of the agency controlling the specification, maintenance and publication of the message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1490": {
+    "code": "1490",
+    "name": "Consolidation item number",
+    "description": "Serial number differentiating each separate consignment included in the consolidation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1496": {
+    "code": "1496",
+    "name": "Goods item number",
+    "description": "Serial number differentiating each separate goods item entry of a consignment as contained in one document/declaration.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1501": {
+    "code": "1501",
+    "name": "Computer environment details qualifier",
+    "description": "A code to identify the computer environment details.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1502": {
+    "code": "1502",
+    "name": "Data format",
+    "description": "To describe a data format in free form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1503": {
+    "code": "1503",
+    "name": "Data format, coded",
+    "description": "A code to identify the data format.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1505": {
+    "code": "1505",
+    "name": "Value list type, coded",
+    "description": "A code indicating the type of value list.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1507": {
+    "code": "1507",
+    "name": "Class designator, coded",
+    "description": "To identify a designated class.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1508": {
+    "code": "1508",
+    "name": "File name",
+    "description": "Name assigned to a file.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1510": {
+    "code": "1510",
+    "name": "Computer environment",
+    "description": "To define the product name of the specified computer environment part.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1511": {
+    "code": "1511",
+    "name": "Computer environment, coded",
+    "description": "A code to identify the computer environment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1514": {
+    "code": "1514",
+    "name": "Value list name",
+    "description": "The name of a list of coded or non coded values.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1516": {
+    "code": "1516",
+    "name": "File format",
+    "description": "To give an identification of the file format.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1518": {
+    "code": "1518",
+    "name": "Value list identifier",
+    "description": "The identifier of a coded or non coded value list.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1520": {
+    "code": "1520",
+    "name": "Data set identifier",
+    "description": "The identifier of a data set.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "1523": {
+    "code": "1523",
+    "name": "Association assigned identification",
+    "description": "An association assigned code to further identify implementation of a message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2005": {
+    "code": "2005",
+    "name": "Date/time/period qualifier",
+    "description": "Code giving specific meaning to a date, time or period.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2009": {
+    "code": "2009",
+    "name": "Time relation, coded",
+    "description": "Code relating payment terms to a time before, on or after the reference date.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2013": {
+    "code": "2013",
+    "name": "Frequency, coded",
+    "description": "Code specifying interval grouping of the delivery, production, etc. of the schedule.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2015": {
+    "code": "2015",
+    "name": "Despatch pattern, coded",
+    "description": "Code specifying the days/periods for routine shipments or deliveries.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2017": {
+    "code": "2017",
+    "name": "Despatch pattern timing, coded",
+    "description": "Code specifying the detailed times for routine shipments or deliveries within data element 2015 Despatch pattern, coded.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2151": {
+    "code": "2151",
+    "name": "Type of period, coded",
+    "description": "Agreed or specified period of time (coded).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2152": {
+    "code": "2152",
+    "name": "Number of periods",
+    "description": "Number of periods of the type indicated in data element 2151 Type of period, coded.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2379": {
+    "code": "2379",
+    "name": "Date/time/period format qualifier",
+    "description": "Specification of the representation of a date, a date and time or of a period.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2380": {
+    "code": "2380",
+    "name": "Date/time/period",
+    "description": "The value of a date, a date and time, a time or of a period in a specified representation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "2475": {
+    "code": "2475",
+    "name": "Payment time reference, coded",
+    "description": "Code relating payment terms to the date of a specific event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3035": {
+    "code": "3035",
+    "name": "Party qualifier",
+    "description": "Code giving specific meaning to a party.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3036": {
+    "code": "3036",
+    "name": "Party name",
+    "description": "Name of a party involved in a transaction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3039": {
+    "code": "3039",
+    "name": "Party id. identification",
+    "description": "Code identifying a party involved in a transaction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3042": {
+    "code": "3042",
+    "name": "Street and number/p.o. box",
+    "description": "Street and number in plain language, or Post Office Box No.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3045": {
+    "code": "3045",
+    "name": "Party name format, coded",
+    "description": "Specification of the representation of a party name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3055": {
+    "code": "3055",
+    "name": "Code list responsible agency, coded",
+    "description": "Code identifying the agency responsible for a code list.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3077": {
+    "code": "3077",
+    "name": "Test media, coded",
+    "description": "Code specifying the medium on which the test was applied, e.g. animal, human.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3124": {
+    "code": "3124",
+    "name": "Name and address line",
+    "description": "Free form name and address description.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3127": {
+    "code": "3127",
+    "name": "Carrier identification",
+    "description": "Identification of party undertaking or arranging transport of goods between named points.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3128": {
+    "code": "3128",
+    "name": "Carrier name",
+    "description": "Name of party undertaking or arranging transport of goods between named points.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3131": {
+    "code": "3131",
+    "name": "Address type, coded",
+    "description": "To specify the type of address.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3139": {
+    "code": "3139",
+    "name": "Contact function, coded",
+    "description": "Code specifying the function of a contact (e.g. department or person).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3153": {
+    "code": "3153",
+    "name": "Communication channel identifier, coded",
+    "description": "Code identifying the type of communication channel being used.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3155": {
+    "code": "3155",
+    "name": "Communication channel qualifier",
+    "description": "Code identifying the type of communication channel being used.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3164": {
+    "code": "3164",
+    "name": "City name",
+    "description": "Name of a city (a town, a village) for addressing purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3192": {
+    "code": "3192",
+    "name": "Account holder name",
+    "description": "Name of the holder of the account.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3194": {
+    "code": "3194",
+    "name": "Account holder number",
+    "description": "Account number of the holder of the account.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3207": {
+    "code": "3207",
+    "name": "Country, coded",
+    "description": "Identification of the name of a country or other geographical entity as specified in ISO 3166.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3222": {
+    "code": "3222",
+    "name": "Related place/location one",
+    "description": "Specification of the first related place/location by name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3223": {
+    "code": "3223",
+    "name": "Related place/location one identification",
+    "description": "Specification of the first related place/location by code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3225": {
+    "code": "3225",
+    "name": "Place/location identification",
+    "description": "Identification of the name of place/location, other than 3164 City name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3227": {
+    "code": "3227",
+    "name": "Place/location qualifier",
+    "description": "Code identifying the function of a location.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3228": {
+    "code": "3228",
+    "name": "Country sub-entity",
+    "description": "Name of sub-entities (state, province) defined by appropriate governmental agencies.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3229": {
+    "code": "3229",
+    "name": "Country sub-entity identification",
+    "description": "Identification of the name of sub-entities (state, province) defined by appropriate governmental agencies.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3232": {
+    "code": "3232",
+    "name": "Related place/location two",
+    "description": "Specification of a second related place/location by name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3233": {
+    "code": "3233",
+    "name": "Related place/location two identification",
+    "description": "Specification of a second related place/location by code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3236": {
+    "code": "3236",
+    "name": "Sample location",
+    "description": "Free form description of the location within the specimen, from which the sample was taken.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3237": {
+    "code": "3237",
+    "name": "Sample location, coded",
+    "description": "Code specifying the location, within the specimen, from which the sample was taken.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3239": {
+    "code": "3239",
+    "name": "Country of origin, coded",
+    "description": "Country in which the goods have been produced or manufactured, according to criteria laid down for the purposes of application of the Customs tariff, of quantitative restrictions, or of any other measure related to trade.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3251": {
+    "code": "3251",
+    "name": "Postcode identification",
+    "description": "Code defining postal zones or addresses.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3279": {
+    "code": "3279",
+    "name": "Geographic environment, coded",
+    "description": "Describe the geographic area for message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3285": {
+    "code": "3285",
+    "name": "Recipient of the instruction identification",
+    "description": "Party to whom the instruction is directed for advice or action.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3286": {
+    "code": "3286",
+    "name": "Address component",
+    "description": "To specify a component of an address.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3289": {
+    "code": "3289",
+    "name": "Person characteristic qualifier",
+    "description": "To specify the type of specific person characteristic.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3292": {
+    "code": "3292",
+    "name": "Nationality",
+    "description": "Name of country of which an entity is the subject.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3293": {
+    "code": "3293",
+    "name": "Nationality, coded",
+    "description": "Code for country of which an entity is the subject.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3295": {
+    "code": "3295",
+    "name": "Name component original representation, coded",
+    "description": "To specify the alphabet originally used to represent the name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3299": {
+    "code": "3299",
+    "name": "Address purpose, coded",
+    "description": "To specify the purpose of the address.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3301": {
+    "code": "3301",
+    "name": "Party enacting instruction identification",
+    "description": "Party responsible for carrying out the instruction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3310": {
+    "code": "3310",
+    "name": "Person inherited characteristic",
+    "description": "To specify a person inherited characteristic as free text.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3311": {
+    "code": "3311",
+    "name": "Person inherited characteristic identification",
+    "description": "To specify a person inherited characteristic using a code value.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3397": {
+    "code": "3397",
+    "name": "Name status, coded",
+    "description": "To specify the status of a name (such as current name).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3398": {
+    "code": "3398",
+    "name": "Name component",
+    "description": "Part of party name such as family name or given name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3401": {
+    "code": "3401",
+    "name": "Name component status, coded",
+    "description": "To specify the status of a name component.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3403": {
+    "code": "3403",
+    "name": "Name type, coded",
+    "description": "Code for type of name such as official name, alias.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3405": {
+    "code": "3405",
+    "name": "Name component qualifier",
+    "description": "To indicate a part of the name such as family name or given name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3412": {
+    "code": "3412",
+    "name": "Department or employee",
+    "description": "The department or person within an organizational entity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3413": {
+    "code": "3413",
+    "name": "Department or employee identification",
+    "description": "Internal identification code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3432": {
+    "code": "3432",
+    "name": "Institution name",
+    "description": "Name of an institution.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3433": {
+    "code": "3433",
+    "name": "Institution name identification",
+    "description": "Code identifying an institution.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3434": {
+    "code": "3434",
+    "name": "Institution branch number",
+    "description": "Number identifying a branch of an institution.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3436": {
+    "code": "3436",
+    "name": "Institution branch place",
+    "description": "Official name of the place where the institution branch is situated.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3446": {
+    "code": "3446",
+    "name": "Party tax identification number",
+    "description": "Number assigned to a purchaser (buyer, orderer) by a tax jurisdiction (state, country, etc).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3452": {
+    "code": "3452",
+    "name": "Language",
+    "description": "Language as text (ISO 639-1988).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3453": {
+    "code": "3453",
+    "name": "Language, coded",
+    "description": "Code of language (ISO 639-1988).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3455": {
+    "code": "3455",
+    "name": "Language qualifier",
+    "description": "Type of language.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3475": {
+    "code": "3475",
+    "name": "Address status, coded",
+    "description": "To specify the status of the address.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3477": {
+    "code": "3477",
+    "name": "Address format, coded",
+    "description": "To specify the content of the various address components.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3478": {
+    "code": "3478",
+    "name": "Marital status",
+    "description": "Marital status of a person.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3479": {
+    "code": "3479",
+    "name": "Marital status, coded",
+    "description": "Code giving the marital status of a person.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3482": {
+    "code": "3482",
+    "name": "Religion",
+    "description": "To specify the religion of a person.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3483": {
+    "code": "3483",
+    "name": "Religion, coded",
+    "description": "To specify the religion of a person in a coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3493": {
+    "code": "3493",
+    "name": "Nationality qualifier",
+    "description": "To qualify a nationality.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3494": {
+    "code": "3494",
+    "name": "Job title",
+    "description": "Description of job classification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3496": {
+    "code": "3496",
+    "name": "Sales channel identifier",
+    "description": "Code identifying a sales channel for marketing information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "3499": {
+    "code": "3499",
+    "name": "Sex, coded",
+    "description": "Code giving the gender of a person, animal or plant.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4000": {
+    "code": "4000",
+    "name": "Reference version number",
+    "description": "To uniquely identify a reference by its revision number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4017": {
+    "code": "4017",
+    "name": "Delivery plan status indicator, coded",
+    "description": "Code indicating the level of commitment of schedule information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4022": {
+    "code": "4022",
+    "name": "Business description",
+    "description": "Description of a business.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4025": {
+    "code": "4025",
+    "name": "Business function, coded",
+    "description": "Code describing the specific business function.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4027": {
+    "code": "4027",
+    "name": "Business function qualifier",
+    "description": "Specification of the type of business function.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4035": {
+    "code": "4035",
+    "name": "Priority qualifier",
+    "description": "To indicate the type of a priority.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4036": {
+    "code": "4036",
+    "name": "Priority",
+    "description": "To indicate a priority.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4037": {
+    "code": "4037",
+    "name": "Priority, coded",
+    "description": "To indicate a priority in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4038": {
+    "code": "4038",
+    "name": "Additional safety information",
+    "description": "Element to enable additional safety information to be specified as free text.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4039": {
+    "code": "4039",
+    "name": "Additional safety information, coded",
+    "description": "Element to identify the additional safety information in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4043": {
+    "code": "4043",
+    "name": "Class of trade, coded",
+    "description": "Code identifying the class of trade.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4044": {
+    "code": "4044",
+    "name": "Safety section name",
+    "description": "To identify the safety section name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4046": {
+    "code": "4046",
+    "name": "Safety section",
+    "description": "To identify the safety section number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4052": {
+    "code": "4052",
+    "name": "Terms of delivery or transport",
+    "description": "Terms agreed between two parties (e.g. seller/buyer, shipper/carrier) under which a product or service is provided.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4053": {
+    "code": "4053",
+    "name": "Terms of delivery or transport, coded",
+    "description": "Identification of the terms agreed between two parties (e.g. seller/buyer, shipper/carrier) under which a product or service is provided.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4055": {
+    "code": "4055",
+    "name": "Terms of delivery or transport function, coded",
+    "description": "Indication whether the terms relate to e.g. price conditions, delivery conditions, transport conditions, or a combination of these.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4065": {
+    "code": "4065",
+    "name": "Contract and carriage condition, coded",
+    "description": "Code to identify the conditions of contract and carriage.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4078": {
+    "code": "4078",
+    "name": "Handling instructions",
+    "description": "Instructions on how specified goods, packages or containers should be handled.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4079": {
+    "code": "4079",
+    "name": "Handling instructions, coded",
+    "description": "Identification of the instructions on how specified goods, packages or containers should be handled.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4183": {
+    "code": "4183",
+    "name": "Special conditions, coded",
+    "description": "Indication of a specific condition.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4215": {
+    "code": "4215",
+    "name": "Transport charges method of payment, coded",
+    "description": "Identification of method of payment for transport charges.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4219": {
+    "code": "4219",
+    "name": "Transport priority, coded",
+    "description": "Coded priority of requested transport service.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4221": {
+    "code": "4221",
+    "name": "Discrepancy, coded",
+    "description": "Code defining the disposition of any difference between the quantity ordered and invoiced, or shipped and invoiced for a line item or transaction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4233": {
+    "code": "4233",
+    "name": "Marking instructions, coded",
+    "description": "Code indicating instructions on how specified packages or physical units should be marked.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4237": {
+    "code": "4237",
+    "name": "Prepaid/collect indicator, coded",
+    "description": "Code indicating whether freight item amount is prepaid or to be collected.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4276": {
+    "code": "4276",
+    "name": "Terms of payment",
+    "description": "Conditions of payment between the parties to a transaction (generic term).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4277": {
+    "code": "4277",
+    "name": "Terms of payment identification",
+    "description": "Identification of the terms of payment between the parties to a transaction (generic term).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4279": {
+    "code": "4279",
+    "name": "Payment terms type qualifier",
+    "description": "Identification of the type of payment terms.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4294": {
+    "code": "4294",
+    "name": "Change reason",
+    "description": "Description of the reason for a change.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4295": {
+    "code": "4295",
+    "name": "Change reason, coded",
+    "description": "Identification of the reason for a change.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4343": {
+    "code": "4343",
+    "name": "Response type, coded",
+    "description": "Code specifying the type of acknowledgement required or transmitted.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4347": {
+    "code": "4347",
+    "name": "Product id. function qualifier",
+    "description": "Indication of the function of the product code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4383": {
+    "code": "4383",
+    "name": "Bank operation, coded",
+    "description": "Describe the method to transfer funds in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4400": {
+    "code": "4400",
+    "name": "Instruction",
+    "description": "Description of an instruction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4401": {
+    "code": "4401",
+    "name": "Instruction, coded",
+    "description": "Specification of an action to be taken by the receiver of the message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4403": {
+    "code": "4403",
+    "name": "Instruction qualifier",
+    "description": "Code giving specific meaning to the type of instructions.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4405": {
+    "code": "4405",
+    "name": "Status, coded",
+    "description": "Provides information regarding a status.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4407": {
+    "code": "4407",
+    "name": "Sample process status, coded",
+    "description": "Code specifying the stage in the product development cycle at which the specimen was selected for testing.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4415": {
+    "code": "4415",
+    "name": "Test method identification",
+    "description": "Code to specify the test method employed.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4416": {
+    "code": "4416",
+    "name": "Test description",
+    "description": "Free form description of the test method and procedure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4419": {
+    "code": "4419",
+    "name": "Test route of administering, coded",
+    "description": "Code specifying the method of administering the test, e.g. oral, inhalation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4424": {
+    "code": "4424",
+    "name": "Test reason",
+    "description": "Reason for performing a test by name.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4425": {
+    "code": "4425",
+    "name": "Test reason identification",
+    "description": "Reason for performing a test by code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4431": {
+    "code": "4431",
+    "name": "Payment guarantee, coded",
+    "description": "Identification of the means of guarantee.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4435": {
+    "code": "4435",
+    "name": "Payment channel, coded",
+    "description": "Identification of the channel of payment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4439": {
+    "code": "4439",
+    "name": "Payment conditions, coded",
+    "description": "Identification of the method employed or to be employed in order that a payment may be made or regarded as made. The method may or may not be tied to a guarantee.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4440": {
+    "code": "4440",
+    "name": "Free text",
+    "description": "Free text field available to the message sender for information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4441": {
+    "code": "4441",
+    "name": "Free text, coded",
+    "description": "Free text in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4451": {
+    "code": "4451",
+    "name": "Text subject qualifier",
+    "description": "Code specifying subject of a free text.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4453": {
+    "code": "4453",
+    "name": "Text function, coded",
+    "description": "Code specifying how to handle the text.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4455": {
+    "code": "4455",
+    "name": "Back order, coded",
+    "description": "Code to identify the back order agreement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4457": {
+    "code": "4457",
+    "name": "Product/service substitution, coded",
+    "description": "Code indicating product or service substitution conditions.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4461": {
+    "code": "4461",
+    "name": "Payment means, coded",
+    "description": "Indication of the instrument of payment, which may include a guarantee.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4463": {
+    "code": "4463",
+    "name": "Intra-company payment, coded",
+    "description": "Indication that the payment is within one company.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4465": {
+    "code": "4465",
+    "name": "Adjustment reason, coded",
+    "description": "Indication of reason for adjustment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4471": {
+    "code": "4471",
+    "name": "Settlement, coded",
+    "description": "Indication of how allowances or charges are to be settled.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4487": {
+    "code": "4487",
+    "name": "Type of financial transaction, coded",
+    "description": "Specification of the type of a financial transaction in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4493": {
+    "code": "4493",
+    "name": "Delivery requirements, coded",
+    "description": "Indication of general instruction for delivery.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4494": {
+    "code": "4494",
+    "name": "Insurance cover",
+    "description": "Identification of the insurance cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4495": {
+    "code": "4495",
+    "name": "Insurance cover identification",
+    "description": "Coded identification of the insurance cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4497": {
+    "code": "4497",
+    "name": "Insurance cover type, coded",
+    "description": "Specification of the meaning of the insurance cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4499": {
+    "code": "4499",
+    "name": "Reason for inventory movement, coded",
+    "description": "To explain the reason for the inventory movement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4501": {
+    "code": "4501",
+    "name": "Inventory movement direction, coded",
+    "description": "To specify the direction of inventory movement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4503": {
+    "code": "4503",
+    "name": "Inventory balance method, coded",
+    "description": "To specify the method used to establish an inventory balance.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4505": {
+    "code": "4505",
+    "name": "Credit cover request, coded",
+    "description": "Request for a credit cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4507": {
+    "code": "4507",
+    "name": "Credit cover response, coded",
+    "description": "Reply to a request for credit cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4509": {
+    "code": "4509",
+    "name": "Credit cover reason, coded",
+    "description": "Reason of reply to a request for credit cover.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4510": {
+    "code": "4510",
+    "name": "Requested information",
+    "description": "To specify the information requested in a responding message in a clear text form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4511": {
+    "code": "4511",
+    "name": "Requested information, coded",
+    "description": "To specify the information requested in a responding message in a coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4513": {
+    "code": "4513",
+    "name": "Maintenance operation, coded",
+    "description": "To indicate the type of data maintenance operation for an object, such as add, delete, replace.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "4517": {
+    "code": "4517",
+    "name": "Seal condition, coded",
+    "description": "To indicate the condition of a seal.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5004": {
+    "code": "5004",
+    "name": "Monetary amount",
+    "description": "Number of monetary units.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5007": {
+    "code": "5007",
+    "name": "Monetary function, coded",
+    "description": "To specify the function of a related monetary amount.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5013": {
+    "code": "5013",
+    "name": "Index qualifier",
+    "description": "To identify the type of index being referred to.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5025": {
+    "code": "5025",
+    "name": "Monetary amount type qualifier",
+    "description": "Indication of type of amount.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5027": {
+    "code": "5027",
+    "name": "Index type, coded",
+    "description": "To identify the type of index.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5030": {
+    "code": "5030",
+    "name": "Index value",
+    "description": "To specify the value of an index.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5039": {
+    "code": "5039",
+    "name": "Index value representation, coded",
+    "description": "To identify the representation of an index value.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5047": {
+    "code": "5047",
+    "name": "Contribution qualifier",
+    "description": "Specification of the meaning of a financial contribution to a scheme or group.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5048": {
+    "code": "5048",
+    "name": "Contribution type",
+    "description": "Description of the type of a contribution to a scheme or group.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5049": {
+    "code": "5049",
+    "name": "Contribution type, coded",
+    "description": "Identification of the type of a contribution to a scheme or group.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5118": {
+    "code": "5118",
+    "name": "Price",
+    "description": "The monetary value associated with a purchase or sale of an article, product or service.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5125": {
+    "code": "5125",
+    "name": "Price qualifier",
+    "description": "Identification of a type of price.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5152": {
+    "code": "5152",
+    "name": "Duty/tax/fee type",
+    "description": "Type of duty or tax or fee applicable to commodities or of tax applicable to services.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5153": {
+    "code": "5153",
+    "name": "Duty/tax/fee type, coded",
+    "description": "Identification of the type of duty or tax or fee applicable to commodities or of tax applicable to services.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5189": {
+    "code": "5189",
+    "name": "Charge/allowance description, coded",
+    "description": "Identification of a charge or allowance.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5213": {
+    "code": "5213",
+    "name": "Sub-line price change, coded",
+    "description": "Code indicating disposition of the price change of a sub-line item.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5237": {
+    "code": "5237",
+    "name": "Charge category, coded",
+    "description": "To indicate the category or zone of charges.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5242": {
+    "code": "5242",
+    "name": "Rate/tariff class",
+    "description": "Description of applicable rate/tariff class.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5243": {
+    "code": "5243",
+    "name": "Rate/tariff class identification",
+    "description": "Identification of the rate/tariff class.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5245": {
+    "code": "5245",
+    "name": "Percentage qualifier",
+    "description": "Identification of the usage of a percentage.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5249": {
+    "code": "5249",
+    "name": "Percentage basis, coded",
+    "description": "Indication of the application of a percentage.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5273": {
+    "code": "5273",
+    "name": "Duty/tax/fee rate basis identification",
+    "description": "Identification of the various elements of tax combination to be attributed to a commodity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5275": {
+    "code": "5275",
+    "name": "Supplementary rate/tariff basis identification",
+    "description": "Code identifying supplementary rate/tariff.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5278": {
+    "code": "5278",
+    "name": "Duty/tax/fee rate",
+    "description": "Rate of duty or tax or fee applicable to commodities or of tax applicable to services.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5279": {
+    "code": "5279",
+    "name": "Duty/tax/fee rate identification",
+    "description": "Identification of the rate of duty or tax or fee applicable to commodities or of tax applicable to services.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5283": {
+    "code": "5283",
+    "name": "Duty/tax/fee function qualifier",
+    "description": "Code identifying the function of an duty, tax or fee information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5284": {
+    "code": "5284",
+    "name": "Unit price basis",
+    "description": "Basis on which the unit price/rate applies.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5286": {
+    "code": "5286",
+    "name": "Duty/tax/fee assessment basis",
+    "description": "Value or quantity on which a duty or tax will be assessed.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5289": {
+    "code": "5289",
+    "name": "Duty/tax/fee account identification",
+    "description": "Identification of a particular duty, tax or fee.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5305": {
+    "code": "5305",
+    "name": "Duty/tax/fee category, coded",
+    "description": "Code identifying a tax/duty/fee category within a tax/duty/fee type system.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5314": {
+    "code": "5314",
+    "name": "Remuneration type",
+    "description": "Name of remuneration type as free text.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5315": {
+    "code": "5315",
+    "name": "Remuneration type, coded",
+    "description": "Remuneration type in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5375": {
+    "code": "5375",
+    "name": "Price type, coded",
+    "description": "Code identifying the type of price of an item.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5377": {
+    "code": "5377",
+    "name": "Price change indicator, coded",
+    "description": "Indication of the type of price change for a line item (eg increased).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5379": {
+    "code": "5379",
+    "name": "Product group type, coded",
+    "description": "Specification of the type of product group used for products.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5387": {
+    "code": "5387",
+    "name": "Price type qualifier",
+    "description": "Code identifying pricing specification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5388": {
+    "code": "5388",
+    "name": "Product group",
+    "description": "Free form description allocated by the seller to identify uniquely his product group for a product or a series of products.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5389": {
+    "code": "5389",
+    "name": "Product group, coded",
+    "description": "Code allocated by the seller to identify uniquely his product group for a product or series of products.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5393": {
+    "code": "5393",
+    "name": "Price multiplier qualifier",
+    "description": "Type of price multiplier.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5394": {
+    "code": "5394",
+    "name": "Price multiplier",
+    "description": "Rate to be used to multiply a price.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5402": {
+    "code": "5402",
+    "name": "Rate of exchange",
+    "description": "The rate at which one specified currency is expressed in another specified currency.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5419": {
+    "code": "5419",
+    "name": "Rate type qualifier",
+    "description": "Identification of the type of rate.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5420": {
+    "code": "5420",
+    "name": "Rate per unit",
+    "description": "Rate per unit specified in the unit price basis.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5463": {
+    "code": "5463",
+    "name": "Allowance or charge qualifier",
+    "description": "Specification of an allowance or charge for the service specified.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5479": {
+    "code": "5479",
+    "name": "Relation, coded",
+    "description": "To specify the relationship between two or more items.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "5495": {
+    "code": "5495",
+    "name": "Sub-line indicator, coded",
+    "description": "Indication that the segment and/or segment group is used for sub-line item information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6008": {
+    "code": "6008",
+    "name": "Height dimension",
+    "description": "Height of pieces or packages stated for transport purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6060": {
+    "code": "6060",
+    "name": "Quantity",
+    "description": "Numeric value of a quantity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6063": {
+    "code": "6063",
+    "name": "Quantity qualifier",
+    "description": "Code giving specific meaning to a quantity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6064": {
+    "code": "6064",
+    "name": "Quantity difference",
+    "description": "Numeric value of variance between ordered/shipped/invoiced quantities.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6066": {
+    "code": "6066",
+    "name": "Control value",
+    "description": "Value obtained from summing the values specified by the Control Qualifier throughout the message (Hash total).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6069": {
+    "code": "6069",
+    "name": "Control qualifier",
+    "description": "Determines the source data elements in the message which forms the basis for 6066 Control value.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6071": {
+    "code": "6071",
+    "name": "Frequency qualifier",
+    "description": "Indication of the application of a frequency.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6072": {
+    "code": "6072",
+    "name": "Frequency value",
+    "description": "A value indicating a repetitive occurrence.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6074": {
+    "code": "6074",
+    "name": "Confidence limit",
+    "description": "A percent value expressing the confidence that a true value falls within a certain confidence interval.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6140": {
+    "code": "6140",
+    "name": "Width dimension",
+    "description": "Width of pieces or packages stated for transport purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6145": {
+    "code": "6145",
+    "name": "Dimension qualifier",
+    "description": "To specify the dimensions applicable to each of the transportable units.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6152": {
+    "code": "6152",
+    "name": "Range maximum",
+    "description": "Maximum of a range.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6154": {
+    "code": "6154",
+    "name": "Measurement attribute",
+    "description": "To specify non-discrete measurement values.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6155": {
+    "code": "6155",
+    "name": "Measurement attribute, coded",
+    "description": "Code used to specify non-discrete measurement values.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6162": {
+    "code": "6162",
+    "name": "Range minimum",
+    "description": "Minimum of a range.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6167": {
+    "code": "6167",
+    "name": "Range type qualifier",
+    "description": "Identification of the type of range.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6168": {
+    "code": "6168",
+    "name": "Length dimension",
+    "description": "Length of pieces or packages stated for transport purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6173": {
+    "code": "6173",
+    "name": "Size qualifier",
+    "description": "Indication of the type or application of a size.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6174": {
+    "code": "6174",
+    "name": "Size",
+    "description": "A specified magnitude.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6176": {
+    "code": "6176",
+    "name": "Maximum number of occurrences",
+    "description": "To specify the maximum number of occurrences.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6245": {
+    "code": "6245",
+    "name": "Temperature qualifier",
+    "description": "A code giving specific meaning to the temperature.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6246": {
+    "code": "6246",
+    "name": "Temperature setting",
+    "description": "The actual temperature value in degrees Celsius (e.g. 008, 020).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6311": {
+    "code": "6311",
+    "name": "Measurement application qualifier",
+    "description": "Specification of the application of the physical measurement used.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6313": {
+    "code": "6313",
+    "name": "Measurement dimension, coded",
+    "description": "Specification of the type of dimension to be measured.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6314": {
+    "code": "6314",
+    "name": "Measurement value",
+    "description": "Value of the measured unit.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6321": {
+    "code": "6321",
+    "name": "Measurement significance, coded",
+    "description": "Code specifying the significance of a measurement value.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6331": {
+    "code": "6331",
+    "name": "Statistic type, coded",
+    "description": "Specification of the specific statistic being reported.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6341": {
+    "code": "6341",
+    "name": "Currency market exchange, coded",
+    "description": "Code identifying the market upon which the currency exchange rate is based.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6343": {
+    "code": "6343",
+    "name": "Currency qualifier",
+    "description": "Code giving specific meaning to data element 6345 Currency.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6345": {
+    "code": "6345",
+    "name": "Currency, coded",
+    "description": "Identification of the name or symbol of the monetary unit involved in the transaction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6347": {
+    "code": "6347",
+    "name": "Currency details qualifier",
+    "description": "Specification of the usage to which the currency relates.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6348": {
+    "code": "6348",
+    "name": "Currency rate base",
+    "description": "Multiplying factor used in expressing the number of currency units.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6350": {
+    "code": "6350",
+    "name": "Number of units",
+    "description": "Number of units of a certain type.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6353": {
+    "code": "6353",
+    "name": "Number of units qualifier",
+    "description": "Indication of the objective of number of units information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6411": {
+    "code": "6411",
+    "name": "Measure unit qualifier",
+    "description": "Indication of the unit of measurement in which weight (mass), capacity, length, area, volume or other quantity is expressed.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6426": {
+    "code": "6426",
+    "name": "Number of stages",
+    "description": "Count of the number of stages that will be used in the process.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6428": {
+    "code": "6428",
+    "name": "Actual stage count",
+    "description": "Count of the actual number of stages agreed in a process.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6432": {
+    "code": "6432",
+    "name": "Significant digits",
+    "description": "To specify the number of significant digits.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "6434": {
+    "code": "6434",
+    "name": "Statistical concept identifier",
+    "description": "The identifier of a statistical concept.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7008": {
+    "code": "7008",
+    "name": "Item description",
+    "description": "Plain language description of articles or products.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7009": {
+    "code": "7009",
+    "name": "Item description identification",
+    "description": "Code from an industry code list which provides specific data about a product characteristic.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7011": {
+    "code": "7011",
+    "name": "Article availability, coded",
+    "description": "Code specifying the production status of an item.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7036": {
+    "code": "7036",
+    "name": "Characteristic",
+    "description": "Free form description of the product characteristic.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7037": {
+    "code": "7037",
+    "name": "Characteristic identification",
+    "description": "A code from an industry code list which provides specific data about a product characteristic.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7039": {
+    "code": "7039",
+    "name": "Sample selection method, coded",
+    "description": "Code denoting the method of selecting the test specimen.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7045": {
+    "code": "7045",
+    "name": "Sample description, coded",
+    "description": "Code describing the state of the specimen.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7047": {
+    "code": "7047",
+    "name": "Sample direction, coded",
+    "description": "Code specifying the direction in which the sample was taken.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7059": {
+    "code": "7059",
+    "name": "Property class, coded",
+    "description": "Specification of the type of class.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7064": {
+    "code": "7064",
+    "name": "Type of packages",
+    "description": "Description of the form in which goods are presented.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7065": {
+    "code": "7065",
+    "name": "Type of packages identification",
+    "description": "Coded description of the form in which goods are presented.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7073": {
+    "code": "7073",
+    "name": "Packaging terms and conditions, coded",
+    "description": "Code identifying packaging terms and conditions.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7075": {
+    "code": "7075",
+    "name": "Packaging level, coded",
+    "description": "Indication of level of packaging specified.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7077": {
+    "code": "7077",
+    "name": "Item description type, coded",
+    "description": "Code indicating the format of a description.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7081": {
+    "code": "7081",
+    "name": "Item characteristic, coded",
+    "description": "Code specifying the item characteristic being described.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7083": {
+    "code": "7083",
+    "name": "Configuration, coded",
+    "description": "Code indicating the status of the sub-line item in the configuration.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7085": {
+    "code": "7085",
+    "name": "Nature of cargo, coded",
+    "description": "Code indicating the type of cargo as a rough classification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7088": {
+    "code": "7088",
+    "name": "Dangerous goods flashpoint",
+    "description": "Lowest temperature, in the case of dangerous goods, at which vapour from an inflammable liquid forms an ignitable mixture with air.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7102": {
+    "code": "7102",
+    "name": "Shipping marks",
+    "description": "Marks and numbers identifying individual packages.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7106": {
+    "code": "7106",
+    "name": "Shipment flashpoint",
+    "description": "Temperature in centigrade determined by the closed cup test as per ISO 1523/73 where a vapour is given off that can be ignited.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7110": {
+    "code": "7110",
+    "name": "Characteristic value",
+    "description": "To identify the value of a characteristic.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7111": {
+    "code": "7111",
+    "name": "Characteristic value, coded",
+    "description": "To identify the value of a particular characteristic in coded form.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7124": {
+    "code": "7124",
+    "name": "UNDG number",
+    "description": "Unique serial number assigned within the United Nations to substances and articles contained in a list of the dangerous goods most commonly carried.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7130": {
+    "code": "7130",
+    "name": "Customer authorization number",
+    "description": "Customer provided authorization number to allow supplier to ship goods under specific freight conditions.  This number will be transmitted back to customer in the dispatch advice message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7140": {
+    "code": "7140",
+    "name": "Item number",
+    "description": "A number allocated to a group or item.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7143": {
+    "code": "7143",
+    "name": "Item number type, coded",
+    "description": "Identification of the type of item number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7160": {
+    "code": "7160",
+    "name": "Special service",
+    "description": "Description of a special service.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7161": {
+    "code": "7161",
+    "name": "Special services, coded",
+    "description": "Code identifying a special service.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7164": {
+    "code": "7164",
+    "name": "Hierarchical id. number",
+    "description": "A unique number assigned by the sender to identify a level within a hierarchical structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7166": {
+    "code": "7166",
+    "name": "Hierarchical parent id.",
+    "description": "Identification number of the next higher hierarchical data segment in a hierarchical structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7168": {
+    "code": "7168",
+    "name": "Level number",
+    "description": "Relative hierarchical position of a data segment within a message as expressed in a branching diagram.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7186": {
+    "code": "7186",
+    "name": "Process type",
+    "description": "Free form description of a process.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7187": {
+    "code": "7187",
+    "name": "Process type identification",
+    "description": "Specification of a process or subprocess.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7188": {
+    "code": "7188",
+    "name": "Test revision number",
+    "description": "Definition of the revision or of the change level of the specified test method employed.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7224": {
+    "code": "7224",
+    "name": "Number of packages",
+    "description": "Number of individual parts of a shipment either unpacked, or packed in such a way that they cannot be divided without first undoing the packing.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7233": {
+    "code": "7233",
+    "name": "Packaging related information, coded",
+    "description": "Code giving packaging, handling and marking related information.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7240": {
+    "code": "7240",
+    "name": "Total number of items",
+    "description": "Total number of items, having separate goods descriptions.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7293": {
+    "code": "7293",
+    "name": "Sector/subject identification qualifier",
+    "description": "Identification of the subject areas to which the specified conditions apply.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7294": {
+    "code": "7294",
+    "name": "Requirement or condition",
+    "description": "Plain text identifying a specific requirement or condition.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7295": {
+    "code": "7295",
+    "name": "Requirement/condition identification",
+    "description": "Code identifying a specific rule, regulation or condition.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7297": {
+    "code": "7297",
+    "name": "Set identification qualifier",
+    "description": "Identification of the type of set.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7299": {
+    "code": "7299",
+    "name": "Requirement designator, coded",
+    "description": "To specify the designated requirement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7357": {
+    "code": "7357",
+    "name": "Commodity/rate identification",
+    "description": "Code identifying goods for Customs, transport or statistical purposes (generic term).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7361": {
+    "code": "7361",
+    "name": "Customs code identification",
+    "description": "To specify goods in terms of customs identity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7365": {
+    "code": "7365",
+    "name": "Processing indicator, coded",
+    "description": "Identifies the value to be attributed to indicators required by the processing system.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7383": {
+    "code": "7383",
+    "name": "Surface/layer indicator, coded",
+    "description": "Code indicating the surface or layer of a product that is being described.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7402": {
+    "code": "7402",
+    "name": "Identity number",
+    "description": "A value given to an object for identification purposes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7405": {
+    "code": "7405",
+    "name": "Identity number qualifier",
+    "description": "Code specifying the type/source of identity number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7419": {
+    "code": "7419",
+    "name": "Hazardous material class code, identification",
+    "description": "Code specifying the kind of hazard for a material.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7429": {
+    "code": "7429",
+    "name": "Indexing structure qualifier",
+    "description": "To qualify the indexing structure established for a project.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7431": {
+    "code": "7431",
+    "name": "Agreement type qualifier",
+    "description": "Indication of the type of agreement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7433": {
+    "code": "7433",
+    "name": "Agreement type, coded",
+    "description": "Specification of the type of agreement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7434": {
+    "code": "7434",
+    "name": "Agreement type description",
+    "description": "Description of the type of agreement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7436": {
+    "code": "7436",
+    "name": "Level one id.",
+    "description": "The first facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7438": {
+    "code": "7438",
+    "name": "Level two id.",
+    "description": "The second facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7440": {
+    "code": "7440",
+    "name": "Level three id.",
+    "description": "The third facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7442": {
+    "code": "7442",
+    "name": "Level four id.",
+    "description": "The fourth facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7444": {
+    "code": "7444",
+    "name": "Level five id.",
+    "description": "The fifth facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7446": {
+    "code": "7446",
+    "name": "Level six id.",
+    "description": "The sixth facet of a sequencing mechanism used to position an item within an indexing structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7449": {
+    "code": "7449",
+    "name": "Membership qualifier",
+    "description": "Specification of the meaning of a code to qualify membership data.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7450": {
+    "code": "7450",
+    "name": "Membership category",
+    "description": "Description of a membership category.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7451": {
+    "code": "7451",
+    "name": "Membership category identification",
+    "description": "Identification of a membership category.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7452": {
+    "code": "7452",
+    "name": "Membership status",
+    "description": "Description of membership status.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7453": {
+    "code": "7453",
+    "name": "Membership status, coded",
+    "description": "Identification of the membership status.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7455": {
+    "code": "7455",
+    "name": "Membership level qualifier",
+    "description": "Specification of the meaning of a membership level.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7456": {
+    "code": "7456",
+    "name": "Membership level",
+    "description": "Description of a membership level.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7457": {
+    "code": "7457",
+    "name": "Membership level identification",
+    "description": "Identification of a membership level.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7491": {
+    "code": "7491",
+    "name": "Type of inventory affected, coded",
+    "description": "To specify the type of inventory which is affected by an inventory movement or expressed in an inventory balance.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7493": {
+    "code": "7493",
+    "name": "Damage details qualifier",
+    "description": "Code giving specific meaning to the damage details.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7495": {
+    "code": "7495",
+    "name": "Identification qualifier",
+    "description": "To identify a type of object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7497": {
+    "code": "7497",
+    "name": "Component function qualifier",
+    "description": "To identify the function of a structure component.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7500": {
+    "code": "7500",
+    "name": "Type of damage",
+    "description": "Description specifying the type of damage to an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7501": {
+    "code": "7501",
+    "name": "Type of damage, coded",
+    "description": "Code specifying the type of damage to an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7502": {
+    "code": "7502",
+    "name": "Damage area",
+    "description": "Description specifying where the damage is on an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7503": {
+    "code": "7503",
+    "name": "Damage area identification",
+    "description": "Code specifying where the damage is on an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7504": {
+    "code": "7504",
+    "name": "Type of unit/component",
+    "description": "Description identifying the type of unit/component of an object (e.g. lock, door, tyre).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7505": {
+    "code": "7505",
+    "name": "Type of unit/component, coded",
+    "description": "Code identifying the type of unit/component of an object (e.g. lock, door, tyre).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7506": {
+    "code": "7506",
+    "name": "Component material",
+    "description": "Description identifying the material of which a component is composed (e.g. steel, plastics).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7507": {
+    "code": "7507",
+    "name": "Component material, coded",
+    "description": "Code identifying the material of which a component is composed (e.g. steel, plastics).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7508": {
+    "code": "7508",
+    "name": "Damage severity",
+    "description": "Description specifying the severity of damage to an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7509": {
+    "code": "7509",
+    "name": "Damage severity, coded",
+    "description": "Code specifying the severity of damage to an object.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7511": {
+    "code": "7511",
+    "name": "Type of marking, coded",
+    "description": "To specify the type of marking that reflects the method and the conventions adhered to for marking.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "7512": {
+    "code": "7512",
+    "name": "Structure component identifier",
+    "description": "The identifier of a structure component.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8022": {
+    "code": "8022",
+    "name": "Freight and charges",
+    "description": "Plain language statement describing freight and other charges.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8023": {
+    "code": "8023",
+    "name": "Freight and charges identification",
+    "description": "Coded description of freight charges and other charges (used in combination with 1131/3055).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8028": {
+    "code": "8028",
+    "name": "Conveyance reference number",
+    "description": "Unique reference given by the carrier to a certain journey or departure of a means of transport (generic term).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8051": {
+    "code": "8051",
+    "name": "Transport stage qualifier",
+    "description": "Qualifier giving a specific meaning to the transport details.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8053": {
+    "code": "8053",
+    "name": "Equipment qualifier",
+    "description": "Code identifying type of equipment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8066": {
+    "code": "8066",
+    "name": "Mode of transport",
+    "description": "Method of transport used for the carriage of the goods.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8067": {
+    "code": "8067",
+    "name": "Mode of transport, coded",
+    "description": "Coded method of transport used for the carriage of the goods.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8077": {
+    "code": "8077",
+    "name": "Equipment supplier, coded",
+    "description": "To indicate the party that is the supplier of the equipment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8078": {
+    "code": "8078",
+    "name": "Hazard substance/item/page number",
+    "description": "Number giving additional hazard code classification of a goods item within the applicable dangerous goods regulation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8092": {
+    "code": "8092",
+    "name": "Hazard code version number",
+    "description": "The version/revision number of date of issuance of the code used.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8101": {
+    "code": "8101",
+    "name": "Transit direction, coded",
+    "description": "Identification of the point of origin and point of direction.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8126": {
+    "code": "8126",
+    "name": "Trem card number",
+    "description": "The identification of a transport emergency card giving advice for emergency actions.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8154": {
+    "code": "8154",
+    "name": "Equipment size and type",
+    "description": "Plain language description of the size and type of equipment e.g. unit load device.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8155": {
+    "code": "8155",
+    "name": "Equipment size and type identification",
+    "description": "Coded description of the size and type of equipment e.g. unit load device.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8158": {
+    "code": "8158",
+    "name": "Hazard identification number, upper part",
+    "description": "The id. number for the Orange Placard (upper part) required on the means of transport.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8169": {
+    "code": "8169",
+    "name": "Full/empty indicator, coded",
+    "description": "To indicate the extent to which the equipment is full or empty.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8178": {
+    "code": "8178",
+    "name": "Type of means of transport",
+    "description": "Description of the type of the means of transport being utilized.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8179": {
+    "code": "8179",
+    "name": "Type of means of transport identification",
+    "description": "Code defining the type of the means of transport being utilized.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8186": {
+    "code": "8186",
+    "name": "Substance identification number, lower part",
+    "description": "The number for the Orange Placard (lower part) required on the means of transport.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8211": {
+    "code": "8211",
+    "name": "Permission for transport, coded",
+    "description": "Code giving evidence that transportation of particular hazardous cargo is permitted and identifies the restrictions being put upon a particular transport.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8212": {
+    "code": "8212",
+    "name": "Id. of the means of transport",
+    "description": "Identification of the means of transport by name or number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8213": {
+    "code": "8213",
+    "name": "Id. of means of transport identification",
+    "description": "Identification of the means of transport by name or number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8246": {
+    "code": "8246",
+    "name": "Dangerous goods label marking",
+    "description": "Marking identifying the type of hazardous goods (substance), Loading/Unloading instructions and advising actions in case of emergency.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8249": {
+    "code": "8249",
+    "name": "Equipment status, coded",
+    "description": "Indication of the action related to the equipment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8255": {
+    "code": "8255",
+    "name": "Packing instruction, coded",
+    "description": "Code defining the quantity and the type of package in which a product is allowed to be shipped in a passenger or freight aircraft.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8260": {
+    "code": "8260",
+    "name": "Equipment identification number",
+    "description": "Marks (letters and/or numbers) which identify equipment e.g. unit load device.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8273": {
+    "code": "8273",
+    "name": "Dangerous goods regulations, coded",
+    "description": "Code indicating the regulation, international or national, applicable for a means of transport.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8275": {
+    "code": "8275",
+    "name": "Container/package status, coded",
+    "description": "Code to identify whether goods of separate description or comprising separate consignments are contained in the same external packaging or to indicate that a container or similar unit load device is empty.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8281": {
+    "code": "8281",
+    "name": "Transport ownership, coded",
+    "description": "Code indicating the ownership of the means of transport.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8323": {
+    "code": "8323",
+    "name": "Transport movement, coded",
+    "description": "Code indicating the movement of goods (e.g. import, export, transit).",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8325": {
+    "code": "8325",
+    "name": "Category of means of transport, coded",
+    "description": "Identification of the type of means of transport determined to carry particular goods, not necessarily being hazardous.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8332": {
+    "code": "8332",
+    "name": "Equipment plan",
+    "description": "Description indicating equipment plan, e.g. FCL or LCL.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8334": {
+    "code": "8334",
+    "name": "Movement type",
+    "description": "Description of the type of movement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8335": {
+    "code": "8335",
+    "name": "Movement type, coded",
+    "description": "Code indicating the type of movement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8339": {
+    "code": "8339",
+    "name": "Packing group, coded",
+    "description": "Identification of a packing group by code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8341": {
+    "code": "8341",
+    "name": "Haulage arrangements, coded",
+    "description": "Specification of the type of equipment haulage arrangements.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8351": {
+    "code": "8351",
+    "name": "Hazard code identification",
+    "description": "Dangerous goods code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8364": {
+    "code": "8364",
+    "name": "EMS number",
+    "description": "Emergency procedures for ships carrying dangerous goods.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8393": {
+    "code": "8393",
+    "name": "Returnable package load contents, coded",
+    "description": "To indicate the composition of goods loaded into a returnable package.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8395": {
+    "code": "8395",
+    "name": "Returnable package freight payment responsibility, coded",
+    "description": "To indicate responsibility for payment of return freight charges for packaging that is returnable.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8410": {
+    "code": "8410",
+    "name": "MFAG",
+    "description": "Medical first aid guide.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8453": {
+    "code": "8453",
+    "name": "Nationality of means of transport, coded",
+    "description": "Coded name of the country in which a means of transport is registered.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8457": {
+    "code": "8457",
+    "name": "Excess transportation reason, coded",
+    "description": "Indication of reason for excess transportation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "8459": {
+    "code": "8459",
+    "name": "Excess transportation responsibility, coded",
+    "description": "Indication of responsibility for excess transportation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9003": {
+    "code": "9003",
+    "name": "Employment qualifier",
+    "description": "Specification of the meaning of employment details.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9004": {
+    "code": "9004",
+    "name": "Employment category",
+    "description": "Description of employment category.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9005": {
+    "code": "9005",
+    "name": "Employment category, coded",
+    "description": "Identification of the employment category.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9006": {
+    "code": "9006",
+    "name": "Qualification classification",
+    "description": "Description of a qualification classification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9007": {
+    "code": "9007",
+    "name": "Qualification classification, coded",
+    "description": "Identification of a qualification classification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9008": {
+    "code": "9008",
+    "name": "Occupation",
+    "description": "Description of an occupation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9009": {
+    "code": "9009",
+    "name": "Occupation, coded",
+    "description": "Code identifying an occupation.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9010": {
+    "code": "9010",
+    "name": "Status event",
+    "description": "Description of a status event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9011": {
+    "code": "9011",
+    "name": "Status event, coded",
+    "description": "Code identifying a status event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9012": {
+    "code": "9012",
+    "name": "Status reason",
+    "description": "Provides the reason behind a status event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9013": {
+    "code": "9013",
+    "name": "Status reason, coded",
+    "description": "Code identifying the reason behind a status event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9015": {
+    "code": "9015",
+    "name": "Status type, coded",
+    "description": "Code identifying the type of status event.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9017": {
+    "code": "9017",
+    "name": "Attribute function qualifier",
+    "description": "Specification of the meaning of an attribute function.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9018": {
+    "code": "9018",
+    "name": "Attribute",
+    "description": "Description of an attribute of an entity.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9019": {
+    "code": "9019",
+    "name": "Attribute, coded",
+    "description": "Identification of an attribute.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9021": {
+    "code": "9021",
+    "name": "Attribute type, coded",
+    "description": "Coded specification of the type attribute.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9035": {
+    "code": "9035",
+    "name": "Qualification area, coded",
+    "description": "Code identifying the application area of a qualification.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9141": {
+    "code": "9141",
+    "name": "Relationship qualifier",
+    "description": "Specification of the meaning of a relationship.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9142": {
+    "code": "9142",
+    "name": "Relationship",
+    "description": "Description of a relationship.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9143": {
+    "code": "9143",
+    "name": "Relationship, coded",
+    "description": "Identification of a relationship.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9146": {
+    "code": "9146",
+    "name": "Composite data element tag",
+    "description": "Tag of a composite data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9148": {
+    "code": "9148",
+    "name": "Directory status",
+    "description": "The status of a directory set.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9150": {
+    "code": "9150",
+    "name": "Simple data element tag",
+    "description": "Tag of a simple data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9153": {
+    "code": "9153",
+    "name": "Simple data element character representation, coded",
+    "description": "To specify the character representation of a simple data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9155": {
+    "code": "9155",
+    "name": "Simple data element length type, coded",
+    "description": "Code identifying the length type of a simple data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9156": {
+    "code": "9156",
+    "name": "Simple data element maximum length",
+    "description": "To indicate the maximum length of a simple data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9158": {
+    "code": "9158",
+    "name": "Simple data element minimum length",
+    "description": "To indicate the minimum length of a simple data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9161": {
+    "code": "9161",
+    "name": "Code set indicator, coded",
+    "description": "To indicate if a data element has an associated code set.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9162": {
+    "code": "9162",
+    "name": "Data element tag",
+    "description": "Tag of a data element.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9164": {
+    "code": "9164",
+    "name": "Group identification",
+    "description": "To identify a group within a message type structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9166": {
+    "code": "9166",
+    "name": "Segment tag",
+    "description": "Tag of a segment.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9213": {
+    "code": "9213",
+    "name": "Type of duty regime, coded",
+    "description": "Identification of the statement of the full/preferential regime according to which duty is assessed.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9280": {
+    "code": "9280",
+    "name": "Validation result",
+    "description": "The result of the application of an algorithm to the content of data element in a message.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9282": {
+    "code": "9282",
+    "name": "Validation key identification",
+    "description": "Identifies the cryptographic key used to calculate the validation result.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9302": {
+    "code": "9302",
+    "name": "Sealing party",
+    "description": "Clear text, representing the name of the issuer of the seal number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9303": {
+    "code": "9303",
+    "name": "Sealing party, coded",
+    "description": "Identification of the issuer of the seal number.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9308": {
+    "code": "9308",
+    "name": "Seal number",
+    "description": "The number of a custom seal or another seal affixed to the containers or other transport unit.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9321": {
+    "code": "9321",
+    "name": "Application error identification",
+    "description": "The code assigned by the receiver of a message to the identification of a data validation error condition.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9353": {
+    "code": "9353",
+    "name": "Government procedure, coded",
+    "description": "Code identifying the treatment applied by the government to goods which are subject to a control.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9411": {
+    "code": "9411",
+    "name": "Government involvement, coded",
+    "description": "Indication of requirement and status of government involvement.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9415": {
+    "code": "9415",
+    "name": "Government agency, coded",
+    "description": "To indicate government agencies that are involved.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9417": {
+    "code": "9417",
+    "name": "Government action, coded",
+    "description": "To indicate type of government action such as inspection, detention, fumigation, security.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9419": {
+    "code": "9419",
+    "name": "Service layer, coded",
+    "description": "Subdivision of a service by code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9421": {
+    "code": "9421",
+    "name": "Stages qualifier",
+    "description": "Code identifying the kind of stage in a process.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9424": {
+    "code": "9424",
+    "name": "Array cell information",
+    "description": "Contains the data for a cell in an array.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9426": {
+    "code": "9426",
+    "name": "Code value",
+    "description": "Value of the code.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9428": {
+    "code": "9428",
+    "name": "Array structure identifier",
+    "description": "The identifier of an array structure.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9430": {
+    "code": "9430",
+    "name": "Footnote set identifier",
+    "description": "The identifier of a set of footnotes.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9432": {
+    "code": "9432",
+    "name": "Footnote identifier",
+    "description": "The identifier of a footnote.",
+    "dataType": "an",
+    "maxLength": 35
+  },
+  "9434": {
+    "code": "9434",
+    "name": "Code name",
+    "description": "Name of a code.",
+    "dataType": "an",
+    "maxLength": 35
+  }
+}

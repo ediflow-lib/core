@@ -1,0 +1,45 @@
+{
+  "code": "6245",
+  "name": "Temperature type code qualifier",
+  "description": "Code qualifying the type of a temperature.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Storage temperature",
+      "description": "Storage temperature [6240] The temperature at which the cargo is to be kept while it is in storage."
+    },
+    {
+      "code": "2",
+      "name": "Transport temperature",
+      "description": "Transport temperature [6242] The temperature at which cargo is to be kept while it is under transport."
+    },
+    {
+      "code": "3",
+      "name": "Cargo operating temperature",
+      "description": "Cargo operating temperature The temperature at which cargo is to be kept during cargo handling."
+    },
+    {
+      "code": "4",
+      "name": "Transport emergency temperature",
+      "description": "Transport emergency temperature The temperature at which emergency procedures apply for the disposal of temperature-controlled goods."
+    },
+    {
+      "code": "5",
+      "name": "Transport control temperature",
+      "description": "Transport control temperature The maximum temperature at which certain products can be safely transported."
+    },
+    {
+      "code": "6",
+      "name": "Boiling point"
+    },
+    {
+      "code": "The",
+      "name": "temperature at which a liquid begins to boil."
+    },
+    {
+      "code": "7",
+      "name": "Temperature, recorded",
+      "description": "Temperature, recorded The recorded temperature."
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "code": "6069",
+  "name": "Control total type code qualifier",
+  "description": "Code qualifying the type of control of hash total.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Total of line item quantities",
+      "description": "Total of line item quantities Algebraic total of the quantity values in line items in a message."
+    },
+    {
+      "code": "2",
+      "name": "Number of line items in message",
+      "description": "Number of line items in message Total number of line items in the message."
+    },
+    {
+      "code": "3",
+      "name": "Number of line and sub items in message",
+      "description": "Number of line and sub items in message Total number of line and sub items in the message."
+    },
+    {
+      "code": "4",
+      "name": "Number of invoice lines",
+      "description": "Number of invoice lines Number of lines on an invoice."
+    },
+    {
+      "code": "5",
+      "name": "Number of Customs item detail lines",
+      "description": "Number of Customs item detail lines Total number of occurrences of the Customs item detail section within a single Customs declaration message."
+    },
+    {
+      "code": "6",
+      "name": "Number of Customs entries",
+      "description": "Number of Customs entries Number of entries which are subject to the same Customs procedures, and have the same tariff or statistical heading, country and duty regime."
+    },
+    {
+      "code": "7",
+      "name": "Total gross weight",
+      "description": "Total gross weight Code to indicate total gross weight of a consignment."
+    },
+    {
+      "code": "8",
+      "name": "Total pieces",
+      "description": "Total pieces Total number of pieces."
+    },
+    {
+      "code": "9",
+      "name": "Total number of ULD (Unit Load Device)",
+      "description": "Total number of ULD (Unit Load Device) The total number of Unit Load Devices mentioned in the message."
+    },
+    {
+      "code": "10",
+      "name": "Total number of consignments",
+      "description": "Total number of consignments The total number of consignments."
+    },
+    {
+      "code": "11",
+      "name": "Consignment package quantity",
+      "description": "Consignment package quantity [7370] Count of total number of packages referred to as one consignment."
+    },
+    {
+      "code": "12",
+      "name": "Invoice total amount",
+      "description": "Invoice total amount [5214] Amount, debited by the seller and being the total of related article item amounts in a commercial invoice."
+    },
+    {
+      "code": "13",
+      "name": "Loading list document quantity",
+      "description": "Loading list document quantity [1166] The number of loading lists, manifests or similar documents."
+    },
+    {
+      "code": "14",
+      "name": "Number of Customs commercial detail lines",
+      "description": "Number of Customs commercial detail lines Commercial detail section within a single Customs declaration message."
+    },
+    {
+      "code": "15",
+      "name": "Total consignment, cube",
+      "description": "Total consignment, cube The total cube of consignment."
+    },
+    {
+      "code": "16",
+      "name": "Total number of equipment",
+      "description": "Total number of equipment (8046) Total number of equipment mentioned in the message."
+    },
+    {
+      "code": "17",
+      "name": "Consignment for customs total amount",
+      "description": "Consignment for customs total amount [5070] Total value declared for Customs purposes of all goods in a consignment, whether or not they are subject to the same Customs procedure, or have the same tariff/statistical heading, country information, and duty regime."
+    },
+    {
+      "code": "18",
+      "name": "Total reported quantity in net weight",
+      "description": "Total reported quantity in net weight Total reported quantity in net weight."
+    },
+    {
+      "code": "19",
+      "name": "Total reported quantity in supplementary units",
+      "description": "Total reported quantity in supplementary units Total reported quantity in supplementary units."
+    },
+    {
+      "code": "20",
+      "name": "Total reported invoice(s) value",
+      "description": "Total reported invoice(s) value Hash total of the total monetary amounts reported on the invoices."
+    },
+    {
+      "code": "21",
+      "name": "Total reported ancillary costs",
+      "description": "Total reported ancillary costs Hash total of the reported total extra costs (e.g. carriage, freight, insurance) of all invoices."
+    },
+    {
+      "code": "22",
+      "name": "Total reported statistical value",
+      "description": "Total reported statistical value The total reported statistical value."
+    },
+    {
+      "code": "23",
+      "name": "Total ordered quantity",
+      "description": "Total ordered quantity Total quantity ordered in this message."
+    },
+    {
+      "code": "24",
+      "name": "Number of orders referenced in this message",
+      "description": "Number of orders referenced in this message Total number of order messages or documents referenced in this message."
+    },
+    {
+      "code": "25",
+      "name": "Number of rejected order lines",
+      "description": "Number of rejected order lines Total number of rejected order lines in this message."
+    },
+    {
+      "code": "26",
+      "name": "Total gross measurement/cube",
+      "description": "Total gross measurement/cube Total gross cubic measurement of the goods, including packing but excluding transport equipment."
+    },
+    {
+      "code": "27",
+      "name": "Total number of credit items given for control purposes",
+      "description": "Total number of credit items given for control purposes Total number of credit items given for control purposes."
+    },
+    {
+      "code": "28",
+      "name": "Total number of debit items given for control purposes",
+      "description": "Total number of debit items given for control purposes Total number of debit items given for control purposes."
+    },
+    {
+      "code": "29",
+      "name": "Total net weight of consignment",
+      "description": "Total net weight of consignment A code to indicate the total net weight of a consignment."
+    },
+    {
+      "code": "30",
+      "name": "Total number of empty containers",
+      "description": "Total number of empty containers The total number of empty containers mentioned in the message."
+    },
+    {
+      "code": "31",
+      "name": "Number of messages",
+      "description": "Number of messages Control count of the number of messages referenced."
+    },
+    {
+      "code": "32",
+      "name": "Total gross weight of the goods within the means of",
+      "description": "Total gross weight of the goods within the means of transport Weight (mass) of the goods within the means of transport, including packing and excluding the carrier's equipment."
+    },
+    {
+      "code": "33",
+      "name": "Total number of original Bills of Lading",
+      "description": "Total number of original Bills of Lading Total number of the original Bills of Lading required for the consignment."
+    },
+    {
+      "code": "34",
+      "name": "Total number of copy Bills of Lading",
+      "description": "Total number of copy Bills of Lading Total number of copy Bills of Lading required for the consignment."
+    },
+    {
+      "code": "35",
+      "name": "Number of containers to be discharged",
+      "description": "Number of containers to be discharged Number of containers to be discharged from the means of transport."
+    },
+    {
+      "code": "36",
+      "name": "Number of containers to be loaded",
+      "description": "Number of containers to be loaded Number of containers to be loaded in or on the means of transport."
+    },
+    {
+      "code": "37",
+      "name": "Number of containers to be restowed",
+      "description": "Number of containers to be restowed Number of containers to be restowed from one cell position to another."
+    },
+    {
+      "code": "38",
+      "name": "Number of containers to be shifted",
+      "description": "Number of containers to be shifted Number of containers to be shifted from one cell position to another."
+    },
+    {
+      "code": "39",
+      "name": "Total number of individual transactions",
+      "description": "Total number of individual transactions The total number of individual transactions."
+    },
+    {
+      "code": "40",
+      "name": "Total number of sequence details in message",
+      "description": "Total number of sequence details in message The total number of sequence details in the message."
+    },
+    {
+      "code": "41",
+      "name": "Total number of crew",
+      "description": "Total number of crew The total number of crew."
+    },
+    {
+      "code": "42",
+      "name": "Total number of passengers",
+      "description": "Total number of passengers The total number of passengers aboard the conveyance."
+    },
+    {
+      "code": "43",
+      "name": "Total number of work tasks",
+      "description": "Total number of work tasks Total number of work tasks in the message."
+    },
+    {
+      "code": "44",
+      "name": "Total number of milestones",
+      "description": "Total number of milestones Total number of milestones in the message."
+    },
+    {
+      "code": "45",
+      "name": "Total number of available resources",
+      "description": "Total number of available resources Total number of available resources in the message."
+    },
+    {
+      "code": "46",
+      "name": "Total number of constraints",
+      "description": "Total number of constraints Total number of constraints in the message."
+    },
+    {
+      "code": "47",
+      "name": "Total wholesaler unsold quantity",
+      "description": "Total wholesaler unsold quantity Total quantity of unsold goods held by the wholesaler."
+    },
+    {
+      "code": "48",
+      "name": "Total quantity held by delivery vehicles",
+      "description": "Total quantity held by delivery vehicles Total quantity held by the delivery vehicles."
+    },
+    {
+      "code": "49",
+      "name": "Total quantity held by retail outlets",
+      "description": "Total quantity held by retail outlets Total quantity held by the retail outlets."
+    },
+    {
+      "code": "50",
+      "name": "Total rejected return quantity",
+      "description": "Total rejected return quantity The total quantity for return which have been rejected."
+    },
+    {
+      "code": "51",
+      "name": "Number of goods items in the message",
+      "description": "Number of goods items in the message The total number of goods items in a message."
+    },
+    {
+      "code": "52",
+      "name": "Number of patients",
+      "description": "Number of patients The number of patients reported in a message."
+    },
+    {
+      "code": "53",
+      "name": "Hash total of reported debit items",
+      "description": "Hash total of reported debit items Hash total of the values of all the debit item amounts reported in the message."
+    },
+    {
+      "code": "54",
+      "name": "Hash total of reported credit items",
+      "description": "Hash total of reported credit items Hash total of the values of all the credit item amounts reported in the message."
+    },
+    {
+      "code": "55",
+      "name": "Total number of errors reported",
+      "description": "Total number of errors reported Total number of errors reported."
+    },
+    {
+      "code": "56",
+      "name": "Total number of transport units",
+      "description": "Total number of transport units Number of separate units of cargo handled during transportation of a consignment."
+    },
+    {
+      "code": "57",
+      "name": "Total loading metres",
+      "description": "Total loading metres The total number of loading metres."
+    },
+    {
+      "code": "58",
+      "name": "Days under customs transit control",
+      "description": "Days under customs transit control The total number of days a consignment is under Customs transit control."
+    },
+    {
+      "code": "59",
+      "name": "Total gross weight of consignment, shipper measured",
+      "description": "Total gross weight of consignment, shipper measured Code to indicate the total gross weight of a consignment as measured by the shipper."
+    },
+    {
+      "code": "60",
+      "name": "Total pallet gross weight",
+      "description": "Total pallet gross weight Code to indicate the total weight of the goods and pallet."
+    },
+    {
+      "code": "61",
+      "name": "Number of affixed seals",
+      "description": "Number of affixed seals To specify the number of seals affixed."
+    }
+  ]
+}

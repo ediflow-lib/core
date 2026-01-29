@@ -1,0 +1,2722 @@
+{
+  "code": "5025",
+  "name": "Monetary amount type code qualifier",
+  "description": "Code qualifying the type of monetary amount.",
+  "values": [
+    {
+      "code": "1",
+      "name": "VAT, 1st value",
+      "description": "VAT, 1st value First VAT value if, for the same rate of VAT, there are 1 to 3 different ways to set this value."
+    },
+    {
+      "code": "2",
+      "name": "VAT, 2nd value",
+      "description": "VAT, 2nd value Second VAT value if, for the same rate of VAT, there are 2 or 3 different ways to set this value."
+    },
+    {
+      "code": "3",
+      "name": "VAT, 3rd value",
+      "description": "VAT, 3rd value Third VAT value if, for the same rate of VAT, there are 3 different ways to set this value."
+    },
+    {
+      "code": "4",
+      "name": "Additional royalties (Customs)",
+      "description": "Additional royalties (Customs) Royalties relating to the imported goods that the buyer must pay, either directly or indirectly, as a condition of sale, to the extent that they are not included in the price actually paid or payable."
+    },
+    {
+      "code": "5",
+      "name": "Adjusted amount",
+      "description": "Adjusted amount The amount specified is the adjusted amount."
+    },
+    {
+      "code": "6",
+      "name": "Amount reference currency",
+      "description": "Amount reference currency The owing amount in the currency used as reference in the transaction."
+    },
+    {
+      "code": "7",
+      "name": "Agreed charge",
+      "description": "Agreed charge Charges which parties agreed upon."
+    },
+    {
+      "code": "8",
+      "name": "Allowance or charge amount",
+      "description": "Allowance or charge amount Total amount of allowance or charge."
+    },
+    {
+      "code": "9",
+      "name": "Amount due/amount payable",
+      "description": "Amount due/amount payable Amount to be paid."
+    },
+    {
+      "code": "10",
+      "name": "Amount in charge currency",
+      "description": "Amount in charge currency Indicates that the amount is based on the charged currency."
+    },
+    {
+      "code": "11",
+      "name": "Amount paid",
+      "description": "Amount paid Amount that has been paid."
+    },
+    {
+      "code": "12",
+      "name": "Amount remitted",
+      "description": "Amount remitted Amount which was remitted (see remittance advice)."
+    },
+    {
+      "code": "13",
+      "name": "Amount subject to total monetary discount",
+      "description": "Amount subject to total monetary discount The amount is subject to a total monetary discount."
+    },
+    {
+      "code": "14",
+      "name": "Amount target currency",
+      "description": "Amount target currency The amount in the currency in which the amount is paid or has to be paid."
+    },
+    {
+      "code": "15",
+      "name": "Average ledger balance",
+      "description": "Average ledger balance The addition of the balance all accounts divided by the number of accounts."
+    },
+    {
+      "code": "16",
+      "name": "Bank release fee",
+      "description": "Bank release fee The fee that a bank charges for releasing monies."
+    },
+    {
+      "code": "17",
+      "name": "Batch total",
+      "description": "Batch total The complete quantity of anything needed for or made in one operation or lot."
+    },
+    {
+      "code": "18",
+      "name": "Brokerage",
+      "description": "Brokerage Fee charged by a broker for acting on behalf of a third party."
+    },
+    {
+      "code": "19",
+      "name": "Buying commission",
+      "description": "Buying commission Commission paid by the importer to his/her agent for the service of representing him/her in the purchase."
+    },
+    {
+      "code": "20",
+      "name": "Data value on carrier media (Customs)",
+      "description": "Data value on carrier media (Customs) Value of data contained on the carrier media (e.g. magnetic tape)."
+    },
+    {
+      "code": "21",
+      "name": "Cash discount",
+      "description": "Cash discount Cash discount given by the seller to the buyer."
+    },
+    {
+      "code": "22",
+      "name": "Consignment cash on delivery amount",
+      "description": "Consignment cash on delivery amount [5017] Monetary amount to be paid at time of delivery."
+    },
+    {
+      "code": "23",
+      "name": "Charge amount",
+      "description": "Charge amount The amount of money charged for the provision of a service or product."
+    },
+    {
+      "code": "24",
+      "name": "Charge summary total",
+      "description": "Charge summary total Code to indicate the total charges relating to a consignment."
+    },
+    {
+      "code": "25",
+      "name": "Charge/allowance basis",
+      "description": "Charge/allowance basis The amount specified is the basis for calculation of charges/allowance."
+    },
+    {
+      "code": "26",
+      "name": "Charges collect fee",
+      "description": "Charges collect fee The fee a party charges for collecting charges."
+    },
+    {
+      "code": "27",
+      "name": "Charges in destination currency",
+      "description": "Charges in destination currency Collect charges payable in the currency of the country of destination."
+    },
+    {
+      "code": "28",
+      "name": "Collect charge summary total",
+      "description": "Collect charge summary total A summary total of collection charges."
+    },
+    {
+      "code": "29",
+      "name": "Collect charges in destination currency",
+      "description": "Collect charges in destination currency Collect charges payable in the currency of the country of destination."
+    },
+    {
+      "code": "30",
+      "name": "Collect freight charge including VAT",
+      "description": "Collect freight charge including VAT This is the total amount that has to be collected from the consignee or other intermediary intervening party - Including VAT-."
+    },
+    {
+      "code": "31",
+      "name": "Collect freight charge without VAT",
+      "description": "Collect freight charge without VAT For legal accounting reasons the amount without VAT has to be announced, together with the amount of VAT."
+    },
+    {
+      "code": "32",
+      "name": "Collect other charges due agent total",
+      "description": "Collect other charges due agent total The total of other charges that are due to the agent."
+    },
+    {
+      "code": "33",
+      "name": "Collect taxes total",
+      "description": "Collect taxes total The total amount of taxes to be collected."
+    },
+    {
+      "code": "34",
+      "name": "Collected balance required",
+      "description": "Collected balance required A certain sum of money that must be kept in an account."
+    },
+    {
+      "code": "35",
+      "name": "Container cost",
+      "description": "Container cost The cost of providing a container."
+    },
+    {
+      "code": "36",
+      "name": "Converted amount",
+      "description": "Converted amount The amount is converted from another currency."
+    },
+    {
+      "code": "37",
+      "name": "Credit on consignment",
+      "description": "Credit on consignment Credit deducted from the total invoice amount for the value of goods not included in a consignment but included in the invoice."
+    },
+    {
+      "code": "39",
+      "name": "Invoice total amount",
+      "description": "Invoice total amount [5214] Amount, debited by the seller and being the total of related article item amounts in a commercial invoice."
+    },
+    {
+      "code": "40",
+      "name": "Goods item for customs declared value amount",
+      "description": "Goods item for customs declared value amount [5032] Amount declared for customs purposes of those goods in a consignment which are subject to the same customs procedure, and have the same tariff/statistical heading, country information and duty regime."
+    },
+    {
+      "code": "41",
+      "name": "Assigned Customs value",
+      "description": "Assigned Customs value Goods value assigned by Customs."
+    },
+    {
+      "code": "42",
+      "name": "Total cash payments received by factor",
+      "description": "Total cash payments received by factor Total allocated amount of cash payments received by a factor."
+    },
+    {
+      "code": "43",
+      "name": "Consignment for customs total amount",
+      "description": "Consignment for customs total amount [5070] Total amount for customs purposes of all goods in a consignment, whether or not they are subject to the same customs procedure, and have the same tariff/statistical heading, country information and duty regime."
+    },
+    {
+      "code": "44",
+      "name": "Goods item for carriage declared value amount",
+      "description": "Goods item for carriage declared value amount [5036] Value, declared by the shipper or his agent solely for the purpose of varying the carrier's level of liability from that provided in the contract of carriage, in case of loss or damage to goods or delayed delivery."
+    },
+    {
+      "code": "45",
+      "name": "Deductible after importation charges (Customs)",
+      "description": "Deductible after importation charges (Customs) Charges (e.g. construction, assembly, erection, maintenance or technical assistance) after importation, which are included in the total invoice price, that may be deducted to arrive at a Customs value."
+    },
+    {
+      "code": "46",
+      "name": "Customs allowable deduction basis amount",
+      "description": "Customs allowable deduction basis amount [5020] Allowable deductions from the price payable for calculating Customs value."
+    },
+    {
+      "code": "47",
+      "name": "Delivery fee",
+      "description": "Delivery fee Fees incurred by delivery."
+    },
+    {
+      "code": "48",
+      "name": "Deposit total",
+      "description": "Deposit total The whole amount of money that one entrusts for safekeeping."
+    },
+    {
+      "code": "49",
+      "name": "Development necessary for production of imported goods",
+      "description": "Development necessary for production of imported goods (Customs) Value of engineering, development, artwork, design work and plans and sketches carried out elsewhere than in the Customs territory and necessary for the production of the imported goods."
+    },
+    {
+      "code": "50",
+      "name": "Disbursements",
+      "description": "Disbursements Amount of disbursements to be collected by the carrier according to the order given by the shipper."
+    },
+    {
+      "code": "51",
+      "name": "Disbursements fee",
+      "description": "Disbursements fee Fee charged for the collection of disbursements."
+    },
+    {
+      "code": "52",
+      "name": "Discount amount",
+      "description": "Discount amount An amount deducted in advance, usually calculated based on a percentage."
+    },
+    {
+      "code": "53",
+      "name": "Discount amount due",
+      "description": "Discount amount due The amount of discount that is due."
+    },
+    {
+      "code": "54",
+      "name": "Distribution service fee",
+      "description": "Distribution service fee The fee charged for the provision of distribution services."
+    },
+    {
+      "code": "55",
+      "name": "Duty amount",
+      "description": "Duty amount The amount of duty."
+    },
+    {
+      "code": "56",
+      "name": "Duty/tax/fee basis amount",
+      "description": "Duty/tax/fee basis amount The amount specified is the basis for duty/tax or fee."
+    },
+    {
+      "code": "57",
+      "name": "Equivalent amount",
+      "description": "Equivalent amount This amount is equivalent to the amount to be transferred, but in another currency."
+    },
+    {
+      "code": "58",
+      "name": "Fee amount",
+      "description": "Fee amount The amount of a fee."
+    },
+    {
+      "code": "59",
+      "name": "Fees paid year to date",
+      "description": "Fees paid year to date Payments made for goods thus far."
+    },
+    {
+      "code": "60",
+      "name": "Final (posted) amount",
+      "description": "Final (posted) amount The amount posted to an account, finally, after charges/allowances."
+    },
+    {
+      "code": "61",
+      "name": "Float (e.g. \"cash float\")",
+      "description": "Float (e.g. \"cash float\") The status of funds in the process of collection."
+    },
+    {
+      "code": "62",
+      "name": "Total payments on account received by a factor",
+      "description": "Total payments on account received by a factor Total unallocated amount of payments received by a factor."
+    },
+    {
+      "code": "63",
+      "name": "FOB value",
+      "description": "FOB value Identifies the value of the shipment free on board, named port of shipment (see FOB Incoterm of ICC)."
+    },
+    {
+      "code": "64",
+      "name": "Freight charge",
+      "description": "Freight charge Amount to be paid for moving goods, by whatever means, from one place to another, inclusive discounts, allowances, rebates, adjustment factors and additional cost relating to freight costs (UN/ECE Recommendation no 23)."
+    },
+    {
+      "code": "65",
+      "name": "Total indirect amount payments made to a seller or his",
+      "description": "Total indirect amount payments made to a seller or his agent instead of to a factor Total indirect amount of payments made to a seller or his agent instead of to a factor."
+    },
+    {
+      "code": "66",
+      "name": "Goods item total",
+      "description": "Goods item total Net price x quantity for the line item."
+    },
+    {
+      "code": "67",
+      "name": "Insurance amount",
+      "description": "Insurance amount Amount of insurance."
+    },
+    {
+      "code": "68",
+      "name": "Insurance and transport charges (Customs)",
+      "description": "Insurance and transport charges (Customs) (5488)+(5290) Sum total of transport and insurance charges (CCC)."
+    },
+    {
+      "code": "69",
+      "name": "Insurance and transport charges incurred outside Customs",
+      "description": "Insurance and transport charges incurred outside Customs territory (5488)+(5290) Insurance and transport charges incurred outside a Customs territory (or a Customs union)."
+    },
+    {
+      "code": "70",
+      "name": "Consignment to importation location insurance amount",
+      "description": "Consignment to importation location insurance amount [5488] Amount of premium payable to the insurance company to insure the goods to the port or place of importation."
+    },
+    {
+      "code": "71",
+      "name": "Insurance charges incurred outside of Customs territory",
+      "description": "Insurance charges incurred outside of Customs territory (5488) Insurance charges incurred outside a Customs territory (or a Customs union)."
+    },
+    {
+      "code": "72",
+      "name": "Internal charges (Customs)",
+      "description": "Internal charges (Customs) Charges incurred within a Customs territory (or a Customs union)."
+    },
+    {
+      "code": "73",
+      "name": "Total amount of payments booked to the collateral account",
+      "description": "Total amount of payments booked to the collateral account Total amount of payments booked to the collateral account."
+    },
+    {
+      "code": "74",
+      "name": "Amount to be paid in advance",
+      "description": "Amount to be paid in advance Amount which is to be paid before goods are delivered or the service is rendered."
+    },
+    {
+      "code": "75",
+      "name": "Registered capital",
+      "description": "Registered capital Registered amount of equity of a company."
+    },
+    {
+      "code": "76",
+      "name": "Investable balance",
+      "description": "Investable balance To put left over money in something offering profitable returns."
+    },
+    {
+      "code": "77",
+      "name": "Invoice line item amount",
+      "description": "Invoice line item amount [5068] Total sum charged with respect to a single line item of an invoice."
+    },
+    {
+      "code": "78",
+      "name": "Landing charges",
+      "description": "Landing charges The charges incurred in landing the goods into store in the country of importation, excluding Customs duties and taxes."
+    },
+    {
+      "code": "79",
+      "name": "Total line items amount",
+      "description": "Total line items amount The sum of all the line item amounts."
+    },
+    {
+      "code": "80",
+      "name": "Licence fees related to imported goods (Customs)",
+      "description": "Licence fees related to imported goods (Customs) Licence fees relating to the imported goods that the buyer must pay, either directly or indirectly, as a condition of sale, to the extent that they are not included in the price actually paid or payable."
+    },
+    {
+      "code": "81",
+      "name": "Loading and handling cost",
+      "description": "Loading and handling cost Cost incurred by loading and handling."
+    },
+    {
+      "code": "82",
+      "name": "Lock box total",
+      "description": "Lock box total The complete amount of funds that customers mailed in to a specific location. Often times funds are sent to a post-office lock box in their city."
+    },
+    {
+      "code": "83",
+      "name": "Lumpsum",
+      "description": "Lumpsum An agreed sum of money, which is paid in full at one time. This term is often used in connection with charter parties."
+    },
+    {
+      "code": "84",
+      "name": "Material consumed in production of imported goods (Customs)",
+      "description": "Material consumed in production of imported goods (Customs) Value of materials consumed in the production of the imported goods."
+    },
+    {
+      "code": "85",
+      "name": "Maximum charge",
+      "description": "Maximum charge The maximum amount that can be charged for a service or product."
+    },
+    {
+      "code": "86",
+      "name": "Message total monetary amount",
+      "description": "Message total monetary amount The total of all monetary amounts contained within the message."
+    },
+    {
+      "code": "87",
+      "name": "Minimum charge",
+      "description": "Minimum charge The minimum amount that can be charged for a service or product."
+    },
+    {
+      "code": "88",
+      "name": "National preference basis amount",
+      "description": "National preference basis amount Amount giving the basis for national preference calculation."
+    },
+    {
+      "code": "89",
+      "name": "Negative collected balance",
+      "description": "Negative collected balance Having a quantity of less than zero in an account."
+    },
+    {
+      "code": "90",
+      "name": "Negative ledger balance",
+      "description": "Negative ledger balance For an asset account, this would be when the account had a credit balance. For liability and owner's equity accounts, it would be when the account had a debit balance."
+    },
+    {
+      "code": "91",
+      "name": "Net adjustment",
+      "description": "Net adjustment The end-of-the-period total amount which is left after recording appropriate adjusting entries."
+    },
+    {
+      "code": "92",
+      "name": "Net fee position",
+      "description": "Net fee position The payments left over after deductions or allowances have been made."
+    },
+    {
+      "code": "93",
+      "name": "Net year to date excess (deficit)",
+      "description": "Net year to date excess (deficit) A negative amount of an item."
+    },
+    {
+      "code": "94",
+      "name": "No amount of insurance",
+      "description": "No amount of insurance No amount of insurance has been declared for a consignment."
+    },
+    {
+      "code": "95",
+      "name": "No declared value for carriage",
+      "description": "No declared value for carriage No value has been declared for purposes of carriage."
+    },
+    {
+      "code": "96",
+      "name": "No declared value for Customs",
+      "description": "No declared value for Customs No value has been declared for Customs purposes."
+    },
+    {
+      "code": "97",
+      "name": "Quotation total amount",
+      "description": "Quotation total amount [5210] Total monetary amount of a quotation."
+    },
+    {
+      "code": "98",
+      "name": "Original amount",
+      "description": "Original amount Original amount, without charges, allowances or adjustment."
+    },
+    {
+      "code": "99",
+      "name": "Other charges at destination",
+      "description": "Other charges at destination Code to indicate charges levied at destination."
+    },
+    {
+      "code": "100",
+      "name": "Other charges due agent",
+      "description": "Other charges due agent Code to indicate that certain charges accrue to an agent."
+    },
+    {
+      "code": "101",
+      "name": "Other charges due carrier",
+      "description": "Other charges due carrier Code to indicate that certain charges accrue to a carrier."
+    },
+    {
+      "code": "102",
+      "name": "Other commissions",
+      "description": "Other commissions Other commissions paid by the importer to his/her agent in relation to the goods being imported."
+    },
+    {
+      "code": "103",
+      "name": "Other deductible charges",
+      "description": "Other deductible charges Other charges deducted from the total invoice value."
+    },
+    {
+      "code": "104",
+      "name": "Other transport charges",
+      "description": "Other transport charges (5290) Other charges paid for transport."
+    },
+    {
+      "code": "105",
+      "name": "Other valuation charges (Customs)",
+      "description": "Other valuation charges (Customs) Other valuation charges which are payable by reason of the importation or sale of the goods in the Customs territory."
+    },
+    {
+      "code": "106",
+      "name": "Packing cost",
+      "description": "Packing cost Cost for packing concerning labour and/or material."
+    },
+    {
+      "code": "107",
+      "name": "Transport equipment total for customs packing cost amount",
+      "description": "Transport equipment total for customs packing cost amount [5448] Costs incurred for all containers and coverings of whatever nature which are considered as being one for Customs purposes with the goods, and the cost of packing whether for labour or material."
+    },
+    {
+      "code": "108",
+      "name": "Parts incorporated in imported goods (Customs)",
+      "description": "Parts incorporated in imported goods (Customs) Materials, components, parts and similar items incorporated in the imported goods."
+    },
+    {
+      "code": "109",
+      "name": "Payment discount amount",
+      "description": "Payment discount amount Discount for paying early."
+    },
+    {
+      "code": "110",
+      "name": "Pick-up fee",
+      "description": "Pick-up fee Fee incurring if item has been or will be picked up."
+    },
+    {
+      "code": "111",
+      "name": "Positive collected balance",
+      "description": "Positive collected balance Having a quantity of greater than zero in an account."
+    },
+    {
+      "code": "112",
+      "name": "Positive ledger balance",
+      "description": "Positive ledger balance For an asset account, this would be when the account had a debit balance. For liability and owner's equity accounts, it would be when the account had a credit balance."
+    },
+    {
+      "code": "113",
+      "name": "Prepaid amount",
+      "description": "Prepaid amount (5302) Amount which has been prepaid in advance."
+    },
+    {
+      "code": "114",
+      "name": "Prepaid charge summary total",
+      "description": "Prepaid charge summary total Total of all prepaid charges."
+    },
+    {
+      "code": "115",
+      "name": "Prepaid taxes total",
+      "description": "Prepaid taxes total Total of all prepaid taxes."
+    },
+    {
+      "code": "116",
+      "name": "Purchase amount",
+      "description": "Purchase amount The cost of buying goods or services."
+    },
+    {
+      "code": "117",
+      "name": "Quantity discount",
+      "description": "Quantity discount Discount given for purchase of goods in bulk."
+    },
+    {
+      "code": "118",
+      "name": "Quota value",
+      "description": "Quota value The monetary value of a quota."
+    },
+    {
+      "code": "119",
+      "name": "Received amount",
+      "description": "Received amount The amount is what the bank received, and the one before charges/allowances."
+    },
+    {
+      "code": "120",
+      "name": "Sales tax",
+      "description": "Sales tax Identifies the amount of sales tax payable."
+    },
+    {
+      "code": "121",
+      "name": "Shipment value in domestic currency",
+      "description": "Shipment value in domestic currency The cost of transportation in domestic currency."
+    },
+    {
+      "code": "122",
+      "name": "Specific amount payable",
+      "description": "Specific amount payable Amount that the consignor agrees to be invoiced or to pay. This amount is part of the total charges applied to the consignment."
+    },
+    {
+      "code": "123",
+      "name": "Goods item for statistics declared value amount",
+      "description": "Goods item for statistics declared value amount [5218] Value declared for statistical purposes of those goods in a consignment which have the same statistical heading."
+    },
+    {
+      "code": "124",
+      "name": "Tax amount",
+      "description": "Tax amount Tax imposed by government or other official authority related to the weight/volume charge or valuation charge."
+    },
+    {
+      "code": "125",
+      "name": "Taxable amount",
+      "description": "Taxable amount Amount on which a tax has to be applied."
+    },
+    {
+      "code": "126",
+      "name": "To collect",
+      "description": "To collect Amount that has to be collected."
+    },
+    {
+      "code": "127",
+      "name": "Tools used in production of imported goods (Customs)",
+      "description": "Tools used in production of imported goods (Customs) Tools, dies, moulds and similar items used in the production of the imported goods."
+    },
+    {
+      "code": "128",
+      "name": "Total amount",
+      "description": "Total amount The amount specified is the total amount."
+    },
+    {
+      "code": "129",
+      "name": "Total amount subject to payment discount",
+      "description": "Total amount subject to payment discount Part of the invoice amount which is subject to payment discount."
+    },
+    {
+      "code": "130",
+      "name": "Total charge due",
+      "description": "Total charge due Total amount of charges payable to the carrier."
+    },
+    {
+      "code": "131",
+      "name": "Total charges/allowances",
+      "description": "Total charges/allowances The amount specified is the total of all charges/allowances."
+    },
+    {
+      "code": "132",
+      "name": "Total collect charges",
+      "description": "Total collect charges Total charges to be collected."
+    },
+    {
+      "code": "133",
+      "name": "Total collect charges at destination",
+      "description": "Total collect charges at destination Total charges to be collected at destination."
+    },
+    {
+      "code": "134",
+      "name": "Total declared",
+      "description": "Total declared The total value of declared amounts."
+    },
+    {
+      "code": "135",
+      "name": "Total freight due",
+      "description": "Total freight due Total amount of freight costs payable to the carrier."
+    },
+    {
+      "code": "136",
+      "name": "Total invoice additional amount",
+      "description": "Total invoice additional amount (5140) Amount to be added to the sum of invoice line amounts to arrive at the total invoice amount."
+    },
+    {
+      "code": "137",
+      "name": "Damage protection plan coverage",
+      "description": "Damage protection plan coverage Indicates the amount of damage coverage provided under the Damage Protection Plan (DPP)."
+    },
+    {
+      "code": "138",
+      "name": "Total monetary discount amount",
+      "description": "Total monetary discount amount Total of monetary discount amounts."
+    },
+    {
+      "code": "139",
+      "name": "Total payment amount",
+      "description": "Total payment amount A complete charge for goods or services rendered."
+    },
+    {
+      "code": "140",
+      "name": "Total service charge",
+      "description": "Total service charge The complete payment owed to one who has performed work for another."
+    },
+    {
+      "code": "141",
+      "name": "Cost, insurance and freight (CIF) value",
+      "description": "Cost, insurance and freight (CIF) value Identifies the value of cost, insurance and freight. (Refer to ICC Incoterm CIF for an expanded definition)."
+    },
+    {
+      "code": "142",
+      "name": "Trade discount",
+      "description": "Trade discount Discount given to any purchaser at a particular commercial level e.g. at wholesale or retail level."
+    },
+    {
+      "code": "143",
+      "name": "Transfer amount",
+      "description": "Transfer amount The amount which has been transferred from buyer to the sellers bank."
+    },
+    {
+      "code": "144",
+      "name": "Transport charges (Customs)",
+      "description": "Transport charges (Customs) (5290) Cost incurred by shipper in moving goods, by whatever means, from one place to another under the terms of the contract of carriage, see UN/ECE Recommendation No 23. Synonym: freight charges (Customs)."
+    },
+    {
+      "code": "145",
+      "name": "Transport charges incurred outside Customs territory",
+      "description": "Transport charges incurred outside Customs territory (5290) Transport charges incurred outside a Customs territory (or a Customs union)."
+    },
+    {
+      "code": "146",
+      "name": "Unit price",
+      "description": "Unit price (5110) Reporting monetary amount is a \"per unit\" amount."
+    },
+    {
+      "code": "147",
+      "name": "Acceptable quotation fluctuation amount",
+      "description": "Acceptable quotation fluctuation amount The maximum increase or decrease in constituent material fluctuation which will not result in an item price renegotiation."
+    },
+    {
+      "code": "148",
+      "name": "Total payments under guarantee",
+      "description": "Total payments under guarantee Total amount paid under guarantee, such as under a factor's guarantee."
+    },
+    {
+      "code": "149",
+      "name": "Valuation charge",
+      "description": "Valuation charge A charge based on the value of goods or cargo."
+    },
+    {
+      "code": "150",
+      "name": "Value added tax amount",
+      "description": "Value added tax amount [5490] Amount in national currency resulting from the application, at the appropriate rate, of value added tax (or similar tax) to the invoice amount subject to such tax."
+    },
+    {
+      "code": "151",
+      "name": "Consignment insured value amount",
+      "description": "Consignment insured value amount [5011] Representation in figures of the total sum covered by an insurance for a particular shipment."
+    },
+    {
+      "code": "152",
+      "name": "Subsequent resale of imported goods (Customs)",
+      "description": "Subsequent resale of imported goods (Customs) Value of any part of the proceeds of any subsequent resale, disposal or use of the imported goods that accrues, directly or indirectly, to the seller."
+    },
+    {
+      "code": "153",
+      "name": "Weight charge",
+      "description": "Weight charge A charge based on the weight of goods or cargo."
+    },
+    {
+      "code": "154",
+      "name": "Amount to be collected",
+      "description": "Amount to be collected The monetary amount that is to be collected."
+    },
+    {
+      "code": "155",
+      "name": "Standard duty",
+      "description": "Standard duty Standard Customs duty that would apply if special provisions did not apply."
+    },
+    {
+      "code": "156",
+      "name": "G-Amount",
+      "description": "G-Amount Amount out of total invoice amount being paid into a blocked account."
+    },
+    {
+      "code": "157",
+      "name": "Insurance value",
+      "description": "Insurance value (5010) Value for which the goods are insured."
+    },
+    {
+      "code": "158",
+      "name": "Insurance and transport charges incurred inside Customs",
+      "description": "Insurance and transport charges incurred inside Customs territory (5488)+(5290) Charges to be paid for moving goods, by whatever means, from the point of entry into the Customs territory (within a Customs union: to the point of entry in the final destination country)."
+    },
+    {
+      "code": "159",
+      "name": "Licence (value deducted)",
+      "description": "Licence (value deducted) Amount in the currency of the licence to be written off from the total licence value."
+    },
+    {
+      "code": "160",
+      "name": "Other costs",
+      "description": "Other costs (5346) Costs, other than packing, freight and insurance costs, specified separately."
+    },
+    {
+      "code": "161",
+      "name": "Duty, tax or fee amount",
+      "description": "Duty, tax or fee amount Amount of duty, tax or fee."
+    },
+    {
+      "code": "162",
+      "name": "Customs duty paid",
+      "description": "Customs duty paid Amount which can be deducted from the stated invoice price where that price includes the Customs duty amount."
+    },
+    {
+      "code": "163",
+      "name": "Wage tax share",
+      "description": "Wage tax share Wage tax share of total amount to be paid directly to tax collector."
+    },
+    {
+      "code": "164",
+      "name": "Social securities premiums share",
+      "description": "Social securities premiums share Social securities share of total amount to be paid directly to the social securities collector."
+    },
+    {
+      "code": "165",
+      "name": "Adjustment amount",
+      "description": "Adjustment amount Amount being the balance of the amount to be adjusted and the adjusted amount."
+    },
+    {
+      "code": "166",
+      "name": "Guarantee amount (Customs)",
+      "description": "Guarantee amount (Customs) Amount of the guarantee placed with Customs."
+    },
+    {
+      "code": "167",
+      "name": "Actual versus calculated price difference",
+      "description": "Actual versus calculated price difference Difference between actual and calculated price."
+    },
+    {
+      "code": "168",
+      "name": "Tax sub-totals",
+      "description": "Tax sub-totals A sub total of tax values."
+    },
+    {
+      "code": "169",
+      "name": "Alternate currency total amount",
+      "description": "Alternate currency total amount The total amount as expressed in an alternate currency."
+    },
+    {
+      "code": "170",
+      "name": "Document amount",
+      "description": "Document amount The monetary value stated within a related document."
+    },
+    {
+      "code": "171",
+      "name": "Total reassignments of factored invoices",
+      "description": "Total reassignments of factored invoices Total amount of factored invoices and credit notes reassigned to the seller or to another factor."
+    },
+    {
+      "code": "172",
+      "name": "Stated amount",
+      "description": "Stated amount The monetary amount that has been declared."
+    },
+    {
+      "code": "173",
+      "name": "Minimum amount",
+      "description": "Minimum amount Lowest possible value; minimum."
+    },
+    {
+      "code": "174",
+      "name": "Balance brought forward",
+      "description": "Balance brought forward [5190] Opening balance of the account brought forward from the prior accounting period."
+    },
+    {
+      "code": "175",
+      "name": "Message total additional amount",
+      "description": "Message total additional amount An amount in addition to the total message value."
+    },
+    {
+      "code": "176",
+      "name": "Message total duty/tax/fee amount",
+      "description": "Message total duty/tax/fee amount Total of all duty/tax/fee amounts."
+    },
+    {
+      "code": "177",
+      "name": "Message total amount prepaid",
+      "description": "Message total amount prepaid Total of all prepaid amounts within the message."
+    },
+    {
+      "code": "178",
+      "name": "Exact amount",
+      "description": "Exact amount Specific amount."
+    },
+    {
+      "code": "179",
+      "name": "Maximum amount",
+      "description": "Maximum amount Highest possible value; maximum."
+    },
+    {
+      "code": "180",
+      "name": "Amount up to",
+      "description": "Amount up to Highest possible value; up to."
+    },
+    {
+      "code": "181",
+      "name": "Amount not exceeding",
+      "description": "Amount not exceeding Highest possible value; not exceeding."
+    },
+    {
+      "code": "182",
+      "name": "Any other specification/tolerance",
+      "description": "Any other specification/tolerance Any further qualification of the amount."
+    },
+    {
+      "code": "183",
+      "name": "No specification/tolerance",
+      "description": "No specification/tolerance No further qualification of the amount."
+    },
+    {
+      "code": "184",
+      "name": "Final net acquisition cost",
+      "description": "Final net acquisition cost The final cost of acquisition, net of all add-ons and discounts."
+    },
+    {
+      "code": "185",
+      "name": "Labour cost",
+      "description": "Labour cost The cost of providing labour to complete a task."
+    },
+    {
+      "code": "186",
+      "name": "Material cost",
+      "description": "Material cost The cost of materials needed to complete a task."
+    },
+    {
+      "code": "187",
+      "name": "Other cost",
+      "description": "Other cost Non specific costs for an item in addition to those stated explicitly."
+    },
+    {
+      "code": "188",
+      "name": "Overhead cost",
+      "description": "Overhead cost The cost of overhead when completing a task."
+    },
+    {
+      "code": "189",
+      "name": "Packaging cost",
+      "description": "Packaging cost The cost of packaging an item."
+    },
+    {
+      "code": "190",
+      "name": "Prototype set up cost",
+      "description": "Prototype set up cost The cost of setting up a prototype."
+    },
+    {
+      "code": "191",
+      "name": "Authorized cleaning amount",
+      "description": "Authorized cleaning amount Amount of money authorized for cleaning services."
+    },
+    {
+      "code": "192",
+      "name": "Raw material per cart cost",
+      "description": "Raw material per cart cost The cost of raw material expressed per cart."
+    },
+    {
+      "code": "193",
+      "name": "Raw material per unit of measure cost",
+      "description": "Raw material per unit of measure cost The cost of raw material expressed per unit of measure."
+    },
+    {
+      "code": "194",
+      "name": "Total die model cost",
+      "description": "Total die model cost The total of costs for a die model."
+    },
+    {
+      "code": "195",
+      "name": "Total gauge cost",
+      "description": "Total gauge cost The total of costs for a gauge."
+    },
+    {
+      "code": "196",
+      "name": "Total material including purchased components cost",
+      "description": "Total material including purchased components cost The total cost of materials for an item, including components purchased externally."
+    },
+    {
+      "code": "197",
+      "name": "Total purchased components cost",
+      "description": "Total purchased components cost The total cost of components purchased externally."
+    },
+    {
+      "code": "198",
+      "name": "Total tooling cost",
+      "description": "Total tooling cost The total of costs relating to tooling."
+    },
+    {
+      "code": "199",
+      "name": "Delivery limitation amount",
+      "description": "Delivery limitation amount The monetary limitation amount for a delivery."
+    },
+    {
+      "code": "200",
+      "name": "Minimum amount due",
+      "description": "Minimum amount due The minimum amount that must be paid on an amount now due for payment."
+    },
+    {
+      "code": "201",
+      "name": "Penalty amount",
+      "description": "Penalty amount The penalty charge incurred if or because conditions are not met."
+    },
+    {
+      "code": "202",
+      "name": "Interest amount",
+      "description": "Interest amount The amount of interest charged or paid on a debit or credit balance."
+    },
+    {
+      "code": "203",
+      "name": "Line item amount",
+      "description": "Line item amount Goods item total minus allowances plus charges for line item. See also Code 66."
+    },
+    {
+      "code": "204",
+      "name": "Allowance amount",
+      "description": "Allowance amount An amount deducted in advance in consideration of some specified factor."
+    },
+    {
+      "code": "205",
+      "name": "Additional amount covered: freight costs",
+      "description": "Additional amount covered: freight costs Additional amount (freight costs) which is also covered under the documentary credit."
+    },
+    {
+      "code": "206",
+      "name": "Additional amount covered: inspection costs",
+      "description": "Additional amount covered: inspection costs Additional amount (inspection costs) which is also covered under the documentary credit."
+    },
+    {
+      "code": "207",
+      "name": "Additional amount covered: insurance costs",
+      "description": "Additional amount covered: insurance costs Additional amount (insurance costs) which is also covered under the documentary credit."
+    },
+    {
+      "code": "208",
+      "name": "Additional amount covered: interest",
+      "description": "Additional amount covered: interest Additional amount (interest) which is also covered under the documentary credit."
+    },
+    {
+      "code": "209",
+      "name": "Agent commission amount",
+      "description": "Agent commission amount Amount which has to be paid to an agent."
+    },
+    {
+      "code": "210",
+      "name": "Credit note amount",
+      "description": "Credit note amount Amount of a credit note."
+    },
+    {
+      "code": "211",
+      "name": "Debit note amount",
+      "description": "Debit note amount Amount of a debit note."
+    },
+    {
+      "code": "212",
+      "name": "Documentary credit amount",
+      "description": "Documentary credit amount Amount of the documentary credit."
+    },
+    {
+      "code": "213",
+      "name": "Part of documentary credit amount",
+      "description": "Part of documentary credit amount Part of documentary credit amount subject to sight payment, deferred payment or acceptance when the documentary credit is available by mixed payment."
+    },
+    {
+      "code": "214",
+      "name": "Advance payment at the beginning of works",
+      "description": "Advance payment at the beginning of works Amount paid to the contractor at the beginning of works in the construction to be deducted later."
+    },
+    {
+      "code": "215",
+      "name": "Deduction of advance payment amount at the beginning of",
+      "description": "Deduction of advance payment amount at the beginning of works Progressive deduction of advance payment, as works go on."
+    },
+    {
+      "code": "216",
+      "name": "Advance payment amount on building material",
+      "description": "Advance payment amount on building material An amount paid in advance for the purchase of building material."
+    },
+    {
+      "code": "217",
+      "name": "Deduction of the advance payment amount on building",
+      "description": "Deduction of the advance payment amount on building material The cost of building material less any monies paid in advance."
+    },
+    {
+      "code": "218",
+      "name": "Advance payment amount on stock",
+      "description": "Advance payment amount on stock An amount paid in advance for the purchase of stock."
+    },
+    {
+      "code": "219",
+      "name": "Deduction of the advance payment amount on stock",
+      "description": "Deduction of the advance payment amount on stock The cost of stock less any monies paid in advance."
+    },
+    {
+      "code": "220",
+      "name": "Amount subject to guarantee retention",
+      "description": "Amount subject to guarantee retention Amount participating in the assessment basis of a guarantee retention."
+    },
+    {
+      "code": "221",
+      "name": "Amount not subject of guarantee retention",
+      "description": "Amount not subject of guarantee retention Amount not participating in the assessment basis of a guarantee retention."
+    },
+    {
+      "code": "222",
+      "name": "Amount subject to contractual retention",
+      "description": "Amount subject to contractual retention Amount participating in the assessment basis of a contractual retention."
+    },
+    {
+      "code": "223",
+      "name": "Works amount, initial",
+      "description": "Works amount, initial Total amount of works in the initial contract."
+    },
+    {
+      "code": "224",
+      "name": "Works amount, variations",
+      "description": "Works amount, variations Total amount of contract variations, not including the amount planned on initial contract."
+    },
+    {
+      "code": "225",
+      "name": "Works amount, total",
+      "description": "Works amount, total Total amount of works, including initial contract and variations."
+    },
+    {
+      "code": "226",
+      "name": "Retention amount",
+      "description": "Retention amount The amount of money that has been or is to be retained."
+    },
+    {
+      "code": "227",
+      "name": "Deposit",
+      "description": "Deposit Part of the amount of retention, not covered by guarantee of retention, and thus deducted from the amount paid to the contractor until release of retention."
+    },
+    {
+      "code": "228",
+      "name": "Deposit refund",
+      "description": "Deposit refund Refund of deposit, due to an increase of the guarantee of retention amount, or a decrease of the amount of retention."
+    },
+    {
+      "code": "229",
+      "name": "Guarantee on retention refund",
+      "description": "Guarantee on retention refund Refund of deposit, due to partial or complete release of retention."
+    },
+    {
+      "code": "230",
+      "name": "Amount subject to escalation",
+      "description": "Amount subject to escalation Amount which is used as the basis for the calculation of the escalation."
+    },
+    {
+      "code": "231",
+      "name": "Amount subject to escalation, initial",
+      "description": "Amount subject to escalation, initial Amount in the initial contract which is used as the basis for the calculation of the escalation."
+    },
+    {
+      "code": "232",
+      "name": "Amount of variations subject to escalation",
+      "description": "Amount of variations subject to escalation Amount of variations which is used as the basis for the calculation of the escalation."
+    },
+    {
+      "code": "233",
+      "name": "Amount not subject to escalation",
+      "description": "Amount not subject to escalation Amount which is not included in the calculation of the escalation."
+    },
+    {
+      "code": "234",
+      "name": "Amount not subject to escalation, initial",
+      "description": "Amount not subject to escalation, initial Amount in the initial contract which is not included in the calculation of the escalation."
+    },
+    {
+      "code": "235",
+      "name": "Amount of variations not subject to escalation",
+      "description": "Amount of variations not subject to escalation Amount of variations which is not included in the calculation of the escalation."
+    },
+    {
+      "code": "236",
+      "name": "Amount subject to price adjustment",
+      "description": "Amount subject to price adjustment Amount which is used as the basis for price adjustment calculation."
+    },
+    {
+      "code": "237",
+      "name": "Amount subject to price adjustment, initial",
+      "description": "Amount subject to price adjustment, initial Amount in the initial contract which is used as the basis for the price adjustment calculation."
+    },
+    {
+      "code": "238",
+      "name": "Amount of variations subject to price adjustment",
+      "description": "Amount of variations subject to price adjustment Amount of variations which is used as the basis for price adjustment calculation."
+    },
+    {
+      "code": "239",
+      "name": "Amount not subject to price adjustment",
+      "description": "Amount not subject to price adjustment Amount which is not included in the calculation of the price adjustment."
+    },
+    {
+      "code": "240",
+      "name": "Amount not subject to price adjustment, initial",
+      "description": "Amount not subject to price adjustment, initial Amount in the initial contract which is not included in the calculation of the price adjustment."
+    },
+    {
+      "code": "241",
+      "name": "Amount of variations not subject to price adjustment",
+      "description": "Amount of variations not subject to price adjustment Amount of variations which is not included in the calculation of the price adjustment."
+    },
+    {
+      "code": "242",
+      "name": "Escalation amount",
+      "description": "Escalation amount Difference between initial amount and current amount."
+    },
+    {
+      "code": "243",
+      "name": "Provisional escalation amount",
+      "description": "Provisional escalation amount Difference between initial amount and provisional current amount."
+    },
+    {
+      "code": "244",
+      "name": "Price adjustment amount",
+      "description": "Price adjustment amount Difference between initial amount and revised amount."
+    },
+    {
+      "code": "245",
+      "name": "Provisional price adjustment amount",
+      "description": "Provisional price adjustment amount Difference between initial amount and provisional revised amount."
+    },
+    {
+      "code": "246",
+      "name": "Price revaluation amount",
+      "description": "Price revaluation amount Amount of escalation and price adjustment."
+    },
+    {
+      "code": "247",
+      "name": "Provisional price revaluation amount",
+      "description": "Provisional price revaluation amount Provisional amount of escalation and price adjustment."
+    },
+    {
+      "code": "248",
+      "name": "Contractual retention amount total",
+      "description": "Contractual retention amount total Retention on a basis contractually fixed."
+    },
+    {
+      "code": "249",
+      "name": "Valuation amount",
+      "description": "Valuation amount Amount of valuation."
+    },
+    {
+      "code": "250",
+      "name": "Deduction amount of direct payments to subcontractors",
+      "description": "Deduction amount of direct payments to subcontractors Deduction of amounts directly paid to subcontractors."
+    },
+    {
+      "code": "251",
+      "name": "Amortization total amount",
+      "description": "Amortization total amount Indication of final monetary amount for amortization."
+    },
+    {
+      "code": "252",
+      "name": "Amortization order amount",
+      "description": "Amortization order amount Indication of actual share of the monetary amount for amortization."
+    },
+    {
+      "code": "253",
+      "name": "Amortization cumulated amount",
+      "description": "Amortization cumulated amount Indication of actual cumulated monetary amount of previous and actual amortization order amount."
+    },
+    {
+      "code": "254",
+      "name": "Current credit cover",
+      "description": "Current credit cover Limit for current credit cover."
+    },
+    {
+      "code": "255",
+      "name": "New credit cover",
+      "description": "New credit cover Limit for new credit cover."
+    },
+    {
+      "code": "256",
+      "name": "Order cover",
+      "description": "Order cover Credit cover for an individual order or shipment."
+    },
+    {
+      "code": "257",
+      "name": "Amount subject to dispute",
+      "description": "Amount subject to dispute The amount that is being disputed."
+    },
+    {
+      "code": "258",
+      "name": "Charge amount for information",
+      "description": "Charge amount for information The stated charge amount is only for information. The amount will be debited due to agreement."
+    },
+    {
+      "code": "259",
+      "name": "Total charges",
+      "description": "Total charges The total amount of all the charges."
+    },
+    {
+      "code": "260",
+      "name": "Total allowances",
+      "description": "Total allowances The total amount of all the allowances."
+    },
+    {
+      "code": "261",
+      "name": "Alternate currency amount",
+      "description": "Alternate currency amount The amount as expressed in an alternate currency."
+    },
+    {
+      "code": "262",
+      "name": "Instalment amount",
+      "description": "Instalment amount Amount paid or due for a single instalment of an instalment payment scheme."
+    },
+    {
+      "code": "263",
+      "name": "Outstanding amount",
+      "description": "Outstanding amount Amount still remaining outstanding for payment."
+    },
+    {
+      "code": "264",
+      "name": "Gross contribution amount",
+      "description": "Gross contribution amount Gross amount contributed. This may include commissions or allowances."
+    },
+    {
+      "code": "265",
+      "name": "Commission amount",
+      "description": "Commission amount Amount of any commission."
+    },
+    {
+      "code": "266",
+      "name": "Net contribution amount",
+      "description": "Net contribution amount Amount contributed net of any commission or other allowances ."
+    },
+    {
+      "code": "267",
+      "name": "Regular contribution amount",
+      "description": "Regular contribution amount Specified contribution amount regularly paid."
+    },
+    {
+      "code": "268",
+      "name": "Previous regular contribution amount",
+      "description": "Previous regular contribution amount Specified contribution amount regularly paid before a change ."
+    },
+    {
+      "code": "269",
+      "name": "Variation amount",
+      "description": "Variation amount Difference from a nominated amount."
+    },
+    {
+      "code": "270",
+      "name": "Notional salary",
+      "description": "Notional salary A salary amount specified for a particular category of employees."
+    },
+    {
+      "code": "271",
+      "name": "Nominal salary",
+      "description": "Nominal salary The salary amount without special allowances or other cash benefits."
+    },
+    {
+      "code": "272",
+      "name": "Taxable salary",
+      "description": "Taxable salary The salary amount which is taxable."
+    },
+    {
+      "code": "273",
+      "name": "Superannuation salary",
+      "description": "Superannuation salary Salary used for superannuation benefit/contribution purposes ."
+    },
+    {
+      "code": "274",
+      "name": "Total remuneration",
+      "description": "Total remuneration The amount of the total value of a person's remuneration."
+    },
+    {
+      "code": "275",
+      "name": "Other salary",
+      "description": "Other salary The amount of other salary or allowances in addition to a base salary."
+    },
+    {
+      "code": "276",
+      "name": "Annual salary",
+      "description": "Annual salary The total amount of wages paid during a year."
+    },
+    {
+      "code": "277",
+      "name": "Total contributions amount",
+      "description": "Total contributions amount Sum of individual contributions."
+    },
+    {
+      "code": "278",
+      "name": "Voluntary contribution amount",
+      "description": "Voluntary contribution amount The amount is for a non-compulsory contribution."
+    },
+    {
+      "code": "279",
+      "name": "Instalment first amount",
+      "description": "Instalment first amount First of a number of due amounts if payment by instalment is agreed."
+    },
+    {
+      "code": "280",
+      "name": "Instalment current amount",
+      "description": "Instalment current amount Current amount of a number of due amounts if payment by instalment is agreed."
+    },
+    {
+      "code": "281",
+      "name": "Instalment last amount",
+      "description": "Instalment last amount Last of a number of due amounts if payment by instalment is agreed."
+    },
+    {
+      "code": "282",
+      "name": "Current maintenance fee",
+      "description": "Current maintenance fee Current amount of a number of amounts due on maintenance contract."
+    },
+    {
+      "code": "283",
+      "name": "Current leasing fee",
+      "description": "Current leasing fee Current amount of a number of amounts due on lease contracts."
+    },
+    {
+      "code": "284",
+      "name": "Day works amount",
+      "description": "Day works amount The amount of work calculated on the basis of manpower time and supply cost."
+    },
+    {
+      "code": "285",
+      "name": "Manufacturer's bonus",
+      "description": "Manufacturer's bonus Allowance given as a manufacturer's bonus."
+    },
+    {
+      "code": "286",
+      "name": "Administration charge",
+      "description": "Administration charge Charge made for an administration activity."
+    },
+    {
+      "code": "287",
+      "name": "Fuel charge",
+      "description": "Fuel charge Charge relating to fuel supplied."
+    },
+    {
+      "code": "288",
+      "name": "Registration plate charge",
+      "description": "Registration plate charge The charge relating to the normal supply of vehicle registration plates."
+    },
+    {
+      "code": "289",
+      "name": "Subtotal amount",
+      "description": "Subtotal amount Total amount of money that is part of a complete amount."
+    },
+    {
+      "code": "290",
+      "name": "Dumping export value",
+      "description": "Dumping export value The export value calculated for the purposes of assessing dumping duty."
+    },
+    {
+      "code": "291",
+      "name": "Foreign inland freight",
+      "description": "Foreign inland freight The amount of inland freight incurred in delivering the goods to the place of export."
+    },
+    {
+      "code": "292",
+      "name": "Concession amount",
+      "description": "Concession amount The amount of any concession. To allow the nomination of the difference between the amount of duty plus tax paid and the amount that would have been payable without an end-use security being applied."
+    },
+    {
+      "code": "293",
+      "name": "Chargeback",
+      "description": "Chargeback Invoice amount charged back to seller."
+    },
+    {
+      "code": "294",
+      "name": "Charge per credit cover",
+      "description": "Charge per credit cover Unit charge per credit cover established."
+    },
+    {
+      "code": "295",
+      "name": "Charge per unused credit cover",
+      "description": "Charge per unused credit cover Unit charge per unused credit cover."
+    },
+    {
+      "code": "296",
+      "name": "Total authorised deduction",
+      "description": "Total authorised deduction Total amount of authorised deductions."
+    },
+    {
+      "code": "297",
+      "name": "Total chargebacks",
+      "description": "Total chargebacks Total amount charged back to the seller."
+    },
+    {
+      "code": "298",
+      "name": "Total offsets",
+      "description": "Total offsets Total amount offset against other items on the seller's or buyer's account."
+    },
+    {
+      "code": "299",
+      "name": "Total special entries",
+      "description": "Total special entries Total amount to be treated as special booking entry by the beneficiary."
+    },
+    {
+      "code": "300",
+      "name": "Balance carried forward",
+      "description": "Balance carried forward Closing balance of the account to be carried forward to the next accounting period."
+    },
+    {
+      "code": "301",
+      "name": "Total outstanding invoices past due",
+      "description": "Total outstanding invoices past due Total amount of outstanding invoices past due."
+    },
+    {
+      "code": "302",
+      "name": "Off balance disputed items",
+      "description": "Off balance disputed items Total amount of disputed invoices/credit notes."
+    },
+    {
+      "code": "303",
+      "name": "Commission invoices",
+      "description": "Commission invoices Amount of commission invoices."
+    },
+    {
+      "code": "304",
+      "name": "Other charges",
+      "description": "Other charges Miscellaneous charges."
+    },
+    {
+      "code": "305",
+      "name": "Amount remittances",
+      "description": "Amount remittances Amount of money remitted."
+    },
+    {
+      "code": "306",
+      "name": "Total amount of payment commission invoices",
+      "description": "Total amount of payment commission invoices Total amount of commission invoices paid."
+    },
+    {
+      "code": "307",
+      "name": "Total amount of payment other charges invoices",
+      "description": "Total amount of payment other charges invoices Total amount of invoices for miscellaneous charges paid."
+    },
+    {
+      "code": "308",
+      "name": "Total amount credit notes",
+      "description": "Total amount credit notes Total amount of credit notes."
+    },
+    {
+      "code": "309",
+      "name": "Total adjustment invoices",
+      "description": "Total adjustment invoices Total amount of adjustments to invoices."
+    },
+    {
+      "code": "310",
+      "name": "Total adjustment credit notes",
+      "description": "Total adjustment credit notes Total amount of adjustments to credit notes."
+    },
+    {
+      "code": "311",
+      "name": "Total adjustment payments",
+      "description": "Total adjustment payments Total amount of adjustments to payments."
+    },
+    {
+      "code": "312",
+      "name": "Base unit value",
+      "description": "Base unit value Value per base unit."
+    },
+    {
+      "code": "313",
+      "name": "International freight",
+      "description": "International freight The amount of freight paid for moving goods between place of export and place of import."
+    },
+    {
+      "code": "314",
+      "name": "Own risk amount",
+      "description": "Own risk amount Amount for own credit risk, not covered by credit cover."
+    },
+    {
+      "code": "315",
+      "name": "Opening balance",
+      "description": "Opening balance The amount of the opening balance."
+    },
+    {
+      "code": "316",
+      "name": "Insurance premium",
+      "description": "Insurance premium Premium amount including commission without insurance tax and fees."
+    },
+    {
+      "code": "317",
+      "name": "Insurance commission",
+      "description": "Insurance commission Amount due to an intermediary to be chargeable to an insurer for obtaining insurance business."
+    },
+    {
+      "code": "318",
+      "name": "Insurance tax",
+      "description": "Insurance tax Insurance tax amount on insurance premium and fees."
+    },
+    {
+      "code": "319",
+      "name": "Fee of insurer",
+      "description": "Fee of insurer Amount to be paid to an insurer as a handling charge."
+    },
+    {
+      "code": "320",
+      "name": "Fee of intermediary",
+      "description": "Fee of intermediary Amount to be paid to an intermediary as a handling fee."
+    },
+    {
+      "code": "321",
+      "name": "Debit flow",
+      "description": "Debit flow Debit flow amount applying to an account."
+    },
+    {
+      "code": "322",
+      "name": "Closing balance payable",
+      "description": "Closing balance payable Outstanding payable amount of the account at the end of the reporting period."
+    },
+    {
+      "code": "323",
+      "name": "Opening balance payable",
+      "description": "Opening balance payable Outstanding payable amount of the account at the beginning of the reporting period."
+    },
+    {
+      "code": "324",
+      "name": "Opening balance receivable",
+      "description": "Opening balance receivable Outstanding receivable amount of the account at the beginning of the reporting period."
+    },
+    {
+      "code": "325",
+      "name": "Closing balance receivable",
+      "description": "Closing balance receivable Outstanding receivable payable amount of the account at the end of the reporting period."
+    },
+    {
+      "code": "326",
+      "name": "Net assets and liabilities",
+      "description": "Net assets and liabilities Position amount of the assets and liabilities at reporting date."
+    },
+    {
+      "code": "327",
+      "name": "Adjustment to debit flow",
+      "description": "Adjustment to debit flow Adjustment to debit flow amount."
+    },
+    {
+      "code": "328",
+      "name": "Adjustment to credit flow",
+      "description": "Adjustment to credit flow Adjustment to a credit flow amount."
+    },
+    {
+      "code": "329",
+      "name": "Credit flow",
+      "description": "Credit flow Credit flow amount applying to an account."
+    },
+    {
+      "code": "330",
+      "name": "Total prepaid other charges due carrier",
+      "description": "Total prepaid other charges due carrier The total of prepaid other charges due to carrier."
+    },
+    {
+      "code": "331",
+      "name": "Total collect weight charge",
+      "description": "Total collect weight charge The total collect charge based on weight."
+    },
+    {
+      "code": "332",
+      "name": "Total prepaid weight charge",
+      "description": "Total prepaid weight charge The total prepaid charge based on weight."
+    },
+    {
+      "code": "333",
+      "name": "Total collect other charges due carrier",
+      "description": "Total collect other charges due carrier The total of collect other charges due to carrier."
+    },
+    {
+      "code": "334",
+      "name": "Total prepaid other charges due agent",
+      "description": "Total prepaid other charges due agent The total of prepaid other charges due to agent."
+    },
+    {
+      "code": "335",
+      "name": "Total collect valuation charge",
+      "description": "Total collect valuation charge The total collect valuation charge."
+    },
+    {
+      "code": "336",
+      "name": "Total prepaid valuation charge",
+      "description": "Total prepaid valuation charge The total prepaid valuation charge."
+    },
+    {
+      "code": "337",
+      "name": "Authorized cleaning charges excluded from insurance",
+      "description": "Authorized cleaning charges excluded from insurance Indicates the amount of cleaning charges authorized which are not covered by insurance."
+    },
+    {
+      "code": "338",
+      "name": "Escalated value",
+      "description": "Escalated value Indicates the escalated value derived by application of an escalation factor to an original monetary value."
+    },
+    {
+      "code": "339",
+      "name": "Original invoice gross total value",
+      "description": "Original invoice gross total value Indicates the gross total value of an original invoice."
+    },
+    {
+      "code": "340",
+      "name": "Original total net invoice value",
+      "description": "Original total net invoice value Indicates the net value of an original invoice after deduction or addition of all allowances or charges."
+    },
+    {
+      "code": "341",
+      "name": "Offset value",
+      "description": "Offset value Indicates the value of an offset."
+    },
+    {
+      "code": "342",
+      "name": "Non-taxable amount",
+      "description": "Non-taxable amount Monetary amount which is not subject to taxation."
+    },
+    {
+      "code": "343",
+      "name": "Closing balance",
+      "description": "Closing balance The closing balance is the last balance for a reporting period."
+    },
+    {
+      "code": "344",
+      "name": "Value date balance",
+      "description": "Value date balance This is the balance on value date."
+    },
+    {
+      "code": "345",
+      "name": "Cost information for providing the statement",
+      "description": "Cost information for providing the statement Cost information for providing the statement."
+    },
+    {
+      "code": "346",
+      "name": "Total credits",
+      "description": "Total credits The total of all credit items reported."
+    },
+    {
+      "code": "347",
+      "name": "Total debits",
+      "description": "Total debits The total of all debit items reported."
+    },
+    {
+      "code": "348",
+      "name": "Booked amount on the account",
+      "description": "Booked amount on the account Booked amount on the account."
+    },
+    {
+      "code": "349",
+      "name": "Pending amount to be booked on the account",
+      "description": "Pending amount to be booked on the account Pending amount to be booked on the account."
+    },
+    {
+      "code": "350",
+      "name": "Damage repair cost",
+      "description": "Damage repair cost Cost incurred by repair of the damage."
+    },
+    {
+      "code": "351",
+      "name": "Labour rate per hour",
+      "description": "Labour rate per hour Amount of labour rate per hour."
+    },
+    {
+      "code": "352",
+      "name": "Total equipment labour costs for wear and tear",
+      "description": "Total equipment labour costs for wear and tear The total amount of the labour costs of the repair of the equipment damage due to normal wear and tear."
+    },
+    {
+      "code": "353",
+      "name": "Total equipment repair material costs for wear and tear",
+      "description": "Total equipment repair material costs for wear and tear The total of the material costs of the repair of the equipment damage due to normal wear and tear."
+    },
+    {
+      "code": "354",
+      "name": "Add to make market value",
+      "description": "Add to make market value Addition to the base value of an item for customs duty computation purposes."
+    },
+    {
+      "code": "355",
+      "name": "Pro-ratable value",
+      "description": "Pro-ratable value The value is pro-ratable."
+    },
+    {
+      "code": "356",
+      "name": "Deduct to make market value",
+      "description": "Deduct to make market value Deduction from the base value of an item for customs duty computation purposes."
+    },
+    {
+      "code": "357",
+      "name": "Interim opening balance",
+      "description": "Interim opening balance The opening balance of a consecutive statement."
+    },
+    {
+      "code": "358",
+      "name": "Interim closing balance",
+      "description": "Interim closing balance The closing balance of a consecutive statement."
+    },
+    {
+      "code": "359",
+      "name": "Balance to be confirmed for audit reasons",
+      "description": "Balance to be confirmed for audit reasons Balance to be confirmed for audit reasons."
+    },
+    {
+      "code": "360",
+      "name": "Accrued debit interest",
+      "description": "Accrued debit interest Accrued debit interest."
+    },
+    {
+      "code": "361",
+      "name": "Accrued credit interest",
+      "description": "Accrued credit interest Accrued credit interest."
+    },
+    {
+      "code": "362",
+      "name": "Part of booked amount",
+      "description": "Part of booked amount The amount is contained within the booked amount."
+    },
+    {
+      "code": "363",
+      "name": "Increase of documentary credit amount",
+      "description": "Increase of documentary credit amount Amount of increase of the documentary credit."
+    },
+    {
+      "code": "364",
+      "name": "Decrease of documentary credit amount",
+      "description": "Decrease of documentary credit amount Amount of decrease of the documentary credit."
+    },
+    {
+      "code": "365",
+      "name": "New documentary credit amount after amendment",
+      "description": "New documentary credit amount after amendment New amount of the documentary credit after an amendment."
+    },
+    {
+      "code": "366",
+      "name": "Rounding amount",
+      "description": "Rounding amount The amount by which an amount is being rounded."
+    },
+    {
+      "code": "367",
+      "name": "Labour sales tax",
+      "description": "Labour sales tax Amount of sales tax applicable to the cost of labour."
+    },
+    {
+      "code": "368",
+      "name": "Material sales tax",
+      "description": "Material sales tax Amount of sales tax applicable to the cost of materials."
+    },
+    {
+      "code": "369",
+      "name": "Goods and services tax",
+      "description": "Goods and services tax Amount charged as tax on goods and services."
+    },
+    {
+      "code": "370",
+      "name": "State or province sales tax",
+      "description": "State or province sales tax Amount charged as state or province sales tax."
+    },
+    {
+      "code": "371",
+      "name": "Amount to be transferred",
+      "description": "Amount to be transferred The exact amount payable after any adjustments."
+    },
+    {
+      "code": "372",
+      "name": "Direct debit transfer amount",
+      "description": "Direct debit transfer amount The transfer amount of a direct debit."
+    },
+    {
+      "code": "373",
+      "name": "Total amount of negative credit entries",
+      "description": "Total amount of negative credit entries Total amount of negative credit entries."
+    },
+    {
+      "code": "374",
+      "name": "Total amount of positive credit entries",
+      "description": "Total amount of positive credit entries Total amount of positive credit entries."
+    },
+    {
+      "code": "375",
+      "name": "Total amount of positive debit entries",
+      "description": "Total amount of positive debit entries Total amount of positive debit entries."
+    },
+    {
+      "code": "376",
+      "name": "Accounting entry amount",
+      "description": "Accounting entry amount Amount concerning an accounting entry."
+    },
+    {
+      "code": "377",
+      "name": "Entry's expected amount",
+      "description": "Entry's expected amount Expected amount of an entry."
+    },
+    {
+      "code": "378",
+      "name": "Closing date credit balance",
+      "description": "Closing date credit balance The credit balance to be carried forward at closing date."
+    },
+    {
+      "code": "379",
+      "name": "Closing date debit balance",
+      "description": "Closing date debit balance The debit balance to be carried forward at closing date."
+    },
+    {
+      "code": "380",
+      "name": "Total amount of negative debit entries",
+      "description": "Total amount of negative debit entries Total amount of negative debit entries."
+    },
+    {
+      "code": "381",
+      "name": "Budget cost",
+      "description": "Budget cost The amount specified is the budget cost."
+    },
+    {
+      "code": "382",
+      "name": "Actual cost",
+      "description": "Actual cost The amount specified is the actual cost."
+    },
+    {
+      "code": "383",
+      "name": "Estimate cost",
+      "description": "Estimate cost Amount specified is the estimate cost."
+    },
+    {
+      "code": "384",
+      "name": "Earned value cost",
+      "description": "Earned value cost Amount specified is the earned value cost."
+    },
+    {
+      "code": "385",
+      "name": "Warranty repair coverage",
+      "description": "Warranty repair coverage The amount of repair covered under warranty."
+    },
+    {
+      "code": "386",
+      "name": "Maximum amount including Value Added Tax (VAT)",
+      "description": "Maximum amount including Value Added Tax (VAT) The maximum monetary amount which includes the Value Added Tax (VAT)."
+    },
+    {
+      "code": "387",
+      "name": "Minimum amount including Value Added Tax (VAT)",
+      "description": "Minimum amount including Value Added Tax (VAT) The minimum monetary amount which includes the Value Added Tax (VAT)."
+    },
+    {
+      "code": "388",
+      "name": "Total amount including Value Added Tax (VAT)",
+      "description": "Total amount including Value Added Tax (VAT) The total monetary amount which includes the Value Added Tax (VAT)."
+    },
+    {
+      "code": "389",
+      "name": "Amount excluding Value Added Tax (VAT)",
+      "description": "Amount excluding Value Added Tax (VAT) The monetary amount which excludes the Value Added Tax (VAT)."
+    },
+    {
+      "code": "390",
+      "name": "Minimum amount excluding Value Added Tax (VAT)",
+      "description": "Minimum amount excluding Value Added Tax (VAT) The minimum monetary amount which excludes the Value Added Tax (VAT)."
+    },
+    {
+      "code": "391",
+      "name": "Indemnity amount",
+      "description": "Indemnity amount The monetary amount which is used as an indemnity."
+    },
+    {
+      "code": "392",
+      "name": "Sub-contracted amount",
+      "description": "Sub-contracted amount The monetary amount which will be sub-contracted."
+    },
+    {
+      "code": "393",
+      "name": "Amount due for work completed during a specified time",
+      "description": "Amount due for work completed during a specified time period Monetary amount due for work completed during a specified time period."
+    },
+    {
+      "code": "394",
+      "name": "Minimum order or contract amount permitting a fixed sum",
+      "description": "Minimum order or contract amount permitting a fixed sum advance The minimum monetary amount of an order or a contract which enables the payment of a fixed sum advance."
+    },
+    {
+      "code": "395",
+      "name": "Vending machine refund amount",
+      "description": "Vending machine refund amount An amount refunded by a vending machine as change in a purchase."
+    },
+    {
+      "code": "396",
+      "name": "Total price subsidy value",
+      "description": "Total price subsidy value The total value of all price subsidies."
+    },
+    {
+      "code": "397",
+      "name": "Advertising amount",
+      "description": "Advertising amount Amount related to advertising."
+    },
+    {
+      "code": "398",
+      "name": "Fixed sum advance base amount",
+      "description": "Fixed sum advance base amount The base amount on which a fixed sum advance is calculated."
+    },
+    {
+      "code": "399",
+      "name": "Optional advance amount",
+      "description": "Optional advance amount The monetary amount which may be advanced on a payment."
+    },
+    {
+      "code": "400",
+      "name": "Rebate amount",
+      "description": "Rebate amount An amount returned by the supplier to the buyer (or credited to the buyer�s account) in consideration of some specified factor."
+    },
+    {
+      "code": "401",
+      "name": "Penalty basis amount",
+      "description": "Penalty basis amount Amount used as the basis to calculate a penalty."
+    },
+    {
+      "code": "402",
+      "name": "Total retail value",
+      "description": "Total retail value The total retail value of all products."
+    },
+    {
+      "code": "403",
+      "name": "Exemption amount",
+      "description": "Exemption amount To specify an exempted amount."
+    },
+    {
+      "code": "404",
+      "name": "Budget amount",
+      "description": "Budget amount To specify the amount of a budget."
+    },
+    {
+      "code": "405",
+      "name": "Value of services remaining to be carried out",
+      "description": "Value of services remaining to be carried out To specify the monetary amount for which services remain to be carried out."
+    },
+    {
+      "code": "406",
+      "name": "Maximum amount excluding value added tax",
+      "description": "Maximum amount excluding value added tax The maximum amount without the addition of a value added tax."
+    },
+    {
+      "code": "407",
+      "name": "Annual revenue",
+      "description": "Annual revenue The amount of revenue received in a year."
+    },
+    {
+      "code": "408",
+      "name": "Co-insurance commission",
+      "description": "Co-insurance commission The commission paid to the lead insurer for co- insurance."
+    },
+    {
+      "code": "409",
+      "name": "Negotiated cost",
+      "description": "Negotiated cost The current cost value to which all parties have negotiated and agreed."
+    },
+    {
+      "code": "410",
+      "name": "Estimated cost, authorized unpriced work",
+      "description": "Estimated cost, authorized unpriced work The estimated cost for work for which written authorization has been received, but the work has not been priced."
+    },
+    {
+      "code": "411",
+      "name": "Contract target profit",
+      "description": "Contract target profit The profit that will be realised if a contract target is met."
+    },
+    {
+      "code": "412",
+      "name": "Contract target fee",
+      "description": "Contract target fee The incentive fee amount that will apply if the contract target is met."
+    },
+    {
+      "code": "413",
+      "name": "Contract target price",
+      "description": "Contract target price The negotiated contract cost, plus profit or incentive fees paid for meeting contract target objectives."
+    },
+    {
+      "code": "414",
+      "name": "Final contract price, estimated",
+      "description": "Final contract price, estimated The estimated final contract price based on the most likely estimate of cost at completion."
+    },
+    {
+      "code": "415",
+      "name": "Contract ceiling price",
+      "description": "Contract ceiling price The upper price limit on a contract."
+    },
+    {
+      "code": "416",
+      "name": "Contract ceiling price, estimated",
+      "description": "Contract ceiling price, estimated The estimated upper price limit on a contract."
+    },
+    {
+      "code": "417",
+      "name": "Contract cost to completion, estimated",
+      "description": "Contract cost to completion, estimated The estimated cost to complete the contract."
+    },
+    {
+      "code": "418",
+      "name": "Contract cost at contract completion, estimated",
+      "description": "Contract cost at contract completion, estimated The estimated cost of the contract when it is complete."
+    },
+    {
+      "code": "419",
+      "name": "Contract cost at completion, best case estimate",
+      "description": "Contract cost at completion, best case estimate The best case estimated cost of the contract when it is complete."
+    },
+    {
+      "code": "420",
+      "name": "Contract cost at completion, worst case estimate",
+      "description": "Contract cost at completion, worst case estimate The worst case estimated cost of the contract when it is complete."
+    },
+    {
+      "code": "421",
+      "name": "Contract cost at completion, most likely estimate",
+      "description": "Contract cost at completion, most likely estimate The most likely estimated cost of the contract when it is complete."
+    },
+    {
+      "code": "422",
+      "name": "Contract budget base",
+      "description": "Contract budget base The budget base cost for a contract."
+    },
+    {
+      "code": "423",
+      "name": "Contract cost of money",
+      "description": "Contract cost of money The cost of money applicable to a contract."
+    },
+    {
+      "code": "424",
+      "name": "General and administrative costs",
+      "description": "General and administrative costs Costs attributed to general and administrative activities."
+    },
+    {
+      "code": "425",
+      "name": "Contract undistributed budget cost",
+      "description": "Contract undistributed budget cost Budget cost not assigned or distributed to contract activities."
+    },
+    {
+      "code": "426",
+      "name": "Contract management reserve",
+      "description": "Contract management reserve Amount of the contract budget withheld for management purposes."
+    },
+    {
+      "code": "427",
+      "name": "Budget performance",
+      "description": "Budget performance The budget baseline amount against which performance is measured."
+    },
+    {
+      "code": "428",
+      "name": "Budget cost, cumulative to date",
+      "description": "Budget cost, cumulative to date The cumulative to date cost of planned work."
+    },
+    {
+      "code": "429",
+      "name": "Actual cost, cumulative to date",
+      "description": "Actual cost, cumulative to date Cumulative to date amount of actual costs."
+    },
+    {
+      "code": "430",
+      "name": "Earned value cost, cumulative to date",
+      "description": "Earned value cost, cumulative to date The cumulative to date value of costs earned as work is completed."
+    },
+    {
+      "code": "431",
+      "name": "Cost variance",
+      "description": "Cost variance The difference between the actual cost incurred to complete work and the budget cost of the work completed (earned value) for a given reporting period."
+    },
+    {
+      "code": "432",
+      "name": "Cost variance, cumulative to date",
+      "description": "Cost variance, cumulative to date The cumulative to date difference between the actual cost incurred to complete work and the budget cost of the work completed (earned value) for a given reporting period."
+    },
+    {
+      "code": "433",
+      "name": "Contract replanning adjustment, cost variance",
+      "description": "Contract replanning adjustment, cost variance The amount of adjustment made to cost variances when it is necessary to replan the remaining work on a contract."
+    },
+    {
+      "code": "434",
+      "name": "Contract replanning adjustment, budget",
+      "description": "Contract replanning adjustment, budget The amount of adjustments made to a budget baseline when it is necessary to replan the remaining work on a contract."
+    },
+    {
+      "code": "435",
+      "name": "Budget cost at completion",
+      "description": "Budget cost at completion The cost of the budget at the completion of a contract or project."
+    },
+    {
+      "code": "436",
+      "name": "Contract negotiated cost, original",
+      "description": "Contract negotiated cost, original The original cost value for a contract that all parties involved have negotiated and agreed to."
+    },
+    {
+      "code": "437",
+      "name": "Contract target price, initial",
+      "description": "Contract target price, initial The initial negotiated contract costs, plus profit or incentive fees, paid for meeting contract target objectives."
+    },
+    {
+      "code": "438",
+      "name": "Contract ceiling price, initial",
+      "description": "Contract ceiling price, initial The initial upper price limit on a contract."
+    },
+    {
+      "code": "439",
+      "name": "Contract target price, adjusted",
+      "description": "Contract target price, adjusted The adjusted negotiated contract cost plus target or incentive fees paid for meeting contract target objectives."
+    },
+    {
+      "code": "440",
+      "name": "Contract ceiling price, adjusted",
+      "description": "Contract ceiling price, adjusted The adjusted upper price limit on a contract."
+    },
+    {
+      "code": "441",
+      "name": "Open commitment amount",
+      "description": "Open commitment amount Estimated obligations to vendors."
+    },
+    {
+      "code": "442",
+      "name": "Accrued expenditure",
+      "description": "Accrued expenditure Recorded or incurred expenditures."
+    },
+    {
+      "code": "443",
+      "name": "Contract funds authorized, to date",
+      "description": "Contract funds authorized, to date Cost value of contract funds authorized from the beginning of the contract or from a specific fiscal year through the current reporting period."
+    },
+    {
+      "code": "444",
+      "name": "Contract billing, forecast",
+      "description": "Contract billing, forecast The amount expected to be billed for a contract."
+    },
+    {
+      "code": "445",
+      "name": "Contract termination costs, estimated",
+      "description": "Contract termination costs, estimated The estimate of the costs that would be incurred to liquidate all obligations if the contract were to be terminated."
+    },
+    {
+      "code": "446",
+      "name": "Contract funds forecast, unauthorized work",
+      "description": "Contract funds forecast, unauthorized work A forecast of the funds required for unauthorized work on a contract."
+    },
+    {
+      "code": "447",
+      "name": "Contract funds forecast, additional work",
+      "description": "Contract funds forecast, additional work A forecast of the funds required for additional work on a contract."
+    },
+    {
+      "code": "448",
+      "name": "Contract total funds required, estimated",
+      "description": "Contract total funds required, estimated Estimate of the total funds required for a contract."
+    },
+    {
+      "code": "449",
+      "name": "Contract funds carried forward",
+      "description": "Contract funds carried forward Amount of contract funds carried forward."
+    },
+    {
+      "code": "450",
+      "name": "Contract net funds required, estimated",
+      "description": "Contract net funds required, estimated Estimate of net funds required for a contract based on total funding requirements less any funds carried over from a previous year."
+    },
+    {
+      "code": "451",
+      "name": "Cost variance at completion",
+      "description": "Cost variance at completion The cost difference between budget at completion and estimate at completion."
+    },
+    {
+      "code": "452",
+      "name": "Harmonized tariff schedule mixture, composite or set value",
+      "description": "Harmonized tariff schedule mixture, composite or set value The value of a mixture, composite, or set as defined by the harmonized tariff schedule general rules of interpretation 3(b) or 3(c)."
+    },
+    {
+      "code": "453",
+      "name": "Agreed monetary amount debit line limit",
+      "description": "Agreed monetary amount debit line limit Limit of the agreed monetary amount debit line."
+    },
+    {
+      "code": "454",
+      "name": "Total debit charges, not included in debit amount",
+      "description": "Total debit charges, not included in debit amount Total debit related charges, not included in debit amount."
+    },
+    {
+      "code": "455",
+      "name": "Total debit allowances, not included in debit amount",
+      "description": "Total debit allowances, not included in debit amount Total debit related allowances, not included in debit amount."
+    },
+    {
+      "code": "456",
+      "name": "Total debit charges, included in debit amount",
+      "description": "Total debit charges, included in debit amount Total debit related charges, included in debit amount."
+    },
+    {
+      "code": "457",
+      "name": "Total debit allowances, included in debit amount",
+      "description": "Total debit allowances, included in debit amount Total debit related allowances, included in debit amount."
+    },
+    {
+      "code": "458",
+      "name": "Total debit charges, not included in debit amount, to be",
+      "description": "Total debit charges, not included in debit amount, to be booked simultaneously with debit amount Total debit related charges, not included in debit amount, to be booked at the same time as the debit amount."
+    },
+    {
+      "code": "459",
+      "name": "Total debit allowances, not included in debit amount, to be",
+      "description": "Total debit allowances, not included in debit amount, to be booked simultaneously with debit amount Total debit related allowances, not included in debit amount, to be booked at the same time as the debit amount."
+    },
+    {
+      "code": "460",
+      "name": "Total debit charges, not included in debit amount, to be",
+      "description": "Total debit charges, not included in debit amount, to be booked separately from debit amount Total debit related charges, not included in debit amount, not to be booked together with the debit amount."
+    },
+    {
+      "code": "461",
+      "name": "Total debit allowances, not included in debit amount, to be",
+      "description": "Total debit allowances, not included in debit amount, to be booked separately from debit amount Total debit related allowances, not included in debit amount, not to be booked together with the debit amount."
+    },
+    {
+      "code": "462",
+      "name": "Annual turnover",
+      "description": "Annual turnover The annual turnover."
+    },
+    {
+      "code": "463",
+      "name": "Dispensing fee",
+      "description": "Dispensing fee Fee for dispensing."
+    },
+    {
+      "code": "464",
+      "name": "Gross premium",
+      "description": "Gross premium The total premium including all commission and fees but excluding external taxes."
+    },
+    {
+      "code": "465",
+      "name": "Net premium",
+      "description": "Net premium The premium net of all additions."
+    },
+    {
+      "code": "466",
+      "name": "Engineering fee amount",
+      "description": "Engineering fee amount The amount of engineering fees."
+    },
+    {
+      "code": "467",
+      "name": "Insurer paid tax amount",
+      "description": "Insurer paid tax amount The amount of tax that is paid by the insurer and not included in the premium."
+    },
+    {
+      "code": "468",
+      "name": "Insurance fixed co-payment",
+      "description": "Insurance fixed co-payment The fixed contribution required to be paid by the insured person."
+    },
+    {
+      "code": "469",
+      "name": "Insurance variable co-payment",
+      "description": "Insurance variable co-payment The variable contribution required to be paid by the insured person."
+    },
+    {
+      "code": "470",
+      "name": "Negotiated contract changes",
+      "description": "Negotiated contract changes The cumulative cost, excluding any fee or profit, applicable to defined contract changes that have occurred since the beginning of the contract and have been negotiated and agreed to."
+    },
+    {
+      "code": "471",
+      "name": "Pre-invoiced amount",
+      "description": "Pre-invoiced amount Amount that is, or will be pre-invoiced."
+    },
+    {
+      "code": "472",
+      "name": "Amount accumulated to deductible",
+      "description": "Amount accumulated to deductible Amount paid toward the deductible amount."
+    },
+    {
+      "code": "473",
+      "name": "Deductible amount remaining",
+      "description": "Deductible amount remaining The amount of the deductible remaining."
+    },
+    {
+      "code": "474",
+      "name": "Postage",
+      "description": "Postage The amount for postage."
+    },
+    {
+      "code": "475",
+      "name": "Earlier debit amount",
+      "description": "Earlier debit amount Amount which has been debited earlier."
+    },
+    {
+      "code": "476",
+      "name": "Opening value date balance",
+      "description": "Opening value date balance Opening balance on the value date."
+    },
+    {
+      "code": "477",
+      "name": "Closing value date balance",
+      "description": "Closing value date balance Closing balance on the value date."
+    },
+    {
+      "code": "478",
+      "name": "Schedule variance amount",
+      "description": "Schedule variance amount The difference between the amount of work scheduled or planned (the budget) and the work completed (earned value) in cost terms for a given reporting period."
+    },
+    {
+      "code": "479",
+      "name": "Schedule variance amount, cumulative to date",
+      "description": "Schedule variance amount, cumulative to date The cumulative to date difference between the amount of work scheduled or planned (the budget) and the work completed (earned value) in cost terms."
+    },
+    {
+      "code": "480",
+      "name": "Total debit charges, not included in credit amount",
+      "description": "Total debit charges, not included in credit amount Total debit-related charges, not yet included in credit amount."
+    },
+    {
+      "code": "481",
+      "name": "Total credit allowances, not included in credit amount",
+      "description": "Total credit allowances, not included in credit amount Total credit-related allowances, not yet included in credit amount."
+    },
+    {
+      "code": "482",
+      "name": "Total debit charges, included in credit amount",
+      "description": "Total debit charges, included in credit amount Total debit-related charges, already included in credit amount."
+    },
+    {
+      "code": "483",
+      "name": "Total credit allowances, included in credit amount",
+      "description": "Total credit allowances, included in credit amount Total credit-related allowances, already included in credit amount."
+    },
+    {
+      "code": "484",
+      "name": "Total debit charges, not included in credit amount, to be",
+      "description": "Total debit charges, not included in credit amount, to be booked simultaneously with credit amount Total debit-related charges, not yet inlcuded in credit amount, will be booked at the same time as the credit amount."
+    },
+    {
+      "code": "485",
+      "name": "Total credit allowances, not included in credit amount, to",
+      "description": "Total credit allowances, not included in credit amount, to be booked simultaneously with credit amount Total credit-related allowances, not yet included in credit amount, will be booked at the same time as the credit amount."
+    },
+    {
+      "code": "486",
+      "name": "Total debit charges, not included in credit amount, to be",
+      "description": "Total debit charges, not included in credit amount, to be booked separately from credit amount Total debit-related charges, not yet included in credit amount, will not be booked together with the credit amount."
+    },
+    {
+      "code": "487",
+      "name": "Total credit allowances, not included in credit amount, to",
+      "description": "Total credit allowances, not included in credit amount, to be booked separately from credit amount Total credit-related allowances, not yet included in credit amount, will not be booked together with the credit amount."
+    },
+    {
+      "code": "488",
+      "name": "Total charges, not included in transaction amount",
+      "description": "Total charges, not included in transaction amount Total charges which are not included in the transaction amount."
+    },
+    {
+      "code": "489",
+      "name": "Total allowances, not included in transaction amount",
+      "description": "Total allowances, not included in transaction amount Total allowances which are not included in the transaction amount."
+    },
+    {
+      "code": "490",
+      "name": "Late delivery penalty",
+      "description": "Late delivery penalty Amount to be paid in case of late delivery."
+    },
+    {
+      "code": "491",
+      "name": "Debt financing charge",
+      "description": "Debt financing charge A charge amount related to the financing of a debt."
+    },
+    {
+      "code": "492",
+      "name": "Debt financing allowance",
+      "description": "Debt financing allowance An allowance amount related to the financing of a debt."
+    },
+    {
+      "code": "493",
+      "name": "Cancellation charge",
+      "description": "Cancellation charge The amount charged because of a cancellation."
+    },
+    {
+      "code": "494",
+      "name": "Incurred cost",
+      "description": "Incurred cost The amount which has been incurred."
+    },
+    {
+      "code": "495",
+      "name": "Accrued overdraft interest",
+      "description": "Accrued overdraft interest Interest amount accrued through overdraft."
+    },
+    {
+      "code": "496",
+      "name": "Total returnable packaging deposit amount",
+      "description": "Total returnable packaging deposit amount Total deposit amount for returnable packaging."
+    },
+    {
+      "code": "497",
+      "name": "Goods and services total amount excluding returnable goods",
+      "description": "Goods and services total amount excluding returnable goods deposits Total amount of goods and services excluding deposits for returnable goods."
+    },
+    {
+      "code": "498",
+      "name": "Waiting time indemnity amount",
+      "description": "Waiting time indemnity amount The monetary amount which is used as an indemnity for waiting."
+    },
+    {
+      "code": "499",
+      "name": "Total net amount excluding Value Added Tax (VAT)",
+      "description": "Total net amount excluding Value Added Tax (VAT) The total net monetary amount excluding Value Added Tax (VAT)."
+    },
+    {
+      "code": "500",
+      "name": "Interest on late payment of solidarity fund contribution",
+      "description": "Interest on late payment of solidarity fund contribution Interest to pay because payment date of contribution solidarity fund was exceeded."
+    },
+    {
+      "code": "501",
+      "name": "Interest on late payment of employee's additional",
+      "description": "Interest on late payment of employee's additional contribution to solidarity fund Interest to pay because payment date of employee's additional contribution is exceeded."
+    },
+    {
+      "code": "502",
+      "name": "Taxable disbursement amount",
+      "description": "Taxable disbursement amount Amount of disbursement on which tax must be applied."
+    },
+    {
+      "code": "503",
+      "name": "Contract total amount",
+      "description": "Contract total amount [5060] Total value of a contract."
+    },
+    {
+      "code": "504",
+      "name": "Daily contribution",
+      "description": "Daily contribution Amount paid on a daily basis."
+    },
+    {
+      "code": "505",
+      "name": "Rental amount",
+      "description": "Rental amount The amount to be paid for the right to use a place, product or service."
+    },
+    {
+      "code": "506",
+      "name": "Gross progress payment amount",
+      "description": "Gross progress payment amount Gross monetary amount paid or to be paid at intervals."
+    },
+    {
+      "code": "507",
+      "name": "Net progress payment amount",
+      "description": "Net progress payment amount Net monetary amount paid or to be paid at intervals."
+    },
+    {
+      "code": "508",
+      "name": "Value of returned product",
+      "description": "Value of returned product Value of product returned by the customer."
+    },
+    {
+      "code": "509",
+      "name": "Unit allowance amount",
+      "description": "Unit allowance amount The monetary amount of an allowance for each unit."
+    },
+    {
+      "code": "510",
+      "name": "Remaining available overdraft",
+      "description": "Remaining available overdraft The amount still available within the limit of the overdraft."
+    },
+    {
+      "code": "511",
+      "name": "Unit charge amount",
+      "description": "Unit charge amount The monetary amount of a charge for each unit."
+    },
+    {
+      "code": "512",
+      "name": "Agreed monetary amount credit line limit",
+      "description": "Agreed monetary amount credit line limit Limit of the agreed monetary amount credit line."
+    },
+    {
+      "code": "513",
+      "name": "Dossier amount",
+      "description": "Dossier amount The amount of the dossier."
+    },
+    {
+      "code": "514",
+      "name": "Amount for pre-advising",
+      "description": "Amount for pre-advising The amount is for pre-advising only."
+    },
+    {
+      "code": "515",
+      "name": "Supplement",
+      "description": "Supplement The monetary amount represents the price of extra cost to pay in addition to the normal price."
+    },
+    {
+      "code": "516",
+      "name": "Debit balance at closing date of accounting period under",
+      "description": "Debit balance at closing date of accounting period under review The monetary amonunt is the debit balance at the closing date of the accounting period under review."
+    },
+    {
+      "code": "517",
+      "name": "Credit balance at closing date of accounting period under",
+      "description": "Credit balance at closing date of accounting period under review The monetary amount is the credit balance at the closing date of the accounting period under review."
+    },
+    {
+      "code": "518",
+      "name": "Debit balance at starting date of accounting period under",
+      "description": "Debit balance at starting date of accounting period under review The monetary amount is the debit balance at the starting date of the accounting period under review."
+    },
+    {
+      "code": "519",
+      "name": "Credit balance at starting date of accounting period under",
+      "description": "Credit balance at starting date of accounting period under review The monetary amount is the credit balance at the starting date of the accounting period under review."
+    },
+    {
+      "code": "520",
+      "name": "Total of debit balances at closing date of accounting",
+      "description": "Total of debit balances at closing date of accounting period under review The monetary amount is the total of debit balances at the closing date of the accounting period under review."
+    },
+    {
+      "code": "521",
+      "name": "Total of credit balances at closing date of accounting",
+      "description": "Total of credit balances at closing date of accounting period under review The monetary amount is the total of credit balances at the closing date of the accounting period under review."
+    },
+    {
+      "code": "522",
+      "name": "Total of debit balances at starting date of accounting",
+      "description": "Total of debit balances at starting date of accounting period under review The monetary amount is the total of debit balances at the starting date of the accounting period under review."
+    },
+    {
+      "code": "523",
+      "name": "Total of credit balances at starting date of accounting",
+      "description": "Total of credit balances at starting date of accounting period under review The monetary amount is the total of credit balances at the starting date of the accounting period under review."
+    },
+    {
+      "code": "524",
+      "name": "Cost accounting entry amount",
+      "description": "Cost accounting entry amount Code identifying the amount of a cost accounting entry."
+    },
+    {
+      "code": "525",
+      "name": "Tariff",
+      "description": "Tariff The monetary amount represents the tariff."
+    },
+    {
+      "code": "526",
+      "name": "Volume discount",
+      "description": "Volume discount A discount for reaching or exceeding an agreed volume."
+    },
+    {
+      "code": "527",
+      "name": "Product range discount",
+      "description": "Product range discount Discount for the purchase of a whole range of products."
+    },
+    {
+      "code": "528",
+      "name": "Calculation basis excluding all taxes",
+      "description": "Calculation basis excluding all taxes The amount used as the basis for calculation excludes all taxes."
+    },
+    {
+      "code": "529",
+      "name": "Calculation basis which includes all taxes except VAT",
+      "description": "Calculation basis which includes all taxes except VAT The amount, used as the basis for calculation, which includes all taxes except Value Added Tax (VAT)."
+    },
+    {
+      "code": "530",
+      "name": "Refund",
+      "description": "Refund The monetary amount being reimbursed."
+    },
+    {
+      "code": "531",
+      "name": "Total returnable packaging rental amount",
+      "description": "Total returnable packaging rental amount Total rental amount for returnable packaging."
+    },
+    {
+      "code": "532",
+      "name": "Total Marine Diesel Oil on board amount, on arrival",
+      "description": "Total Marine Diesel Oil on board amount, on arrival Total amount of Marine Diesel Oil (MDO) on board when vessel arrives in port."
+    },
+    {
+      "code": "533",
+      "name": "Total Marine Diesel Oil amount, loaded",
+      "description": "Total Marine Diesel Oil amount, loaded Total amount of Marine Diesel Oil (MDO) taken on in the port."
+    },
+    {
+      "code": "534",
+      "name": "Total Intermediate Fuel Oil on board amount, on arrival",
+      "description": "Total Intermediate Fuel Oil on board amount, on arrival Total amount of Intermediate Fuel Oil (IFO) on board when vessel arrives in port."
+    },
+    {
+      "code": "535",
+      "name": "Total Intermediate Fuel Oil amount, loaded",
+      "description": "Total Intermediate Fuel Oil amount, loaded Total amount of Intermediate Fuel Oil (IFO) taken on in the port."
+    },
+    {
+      "code": "536",
+      "name": "Total Bunker C oil on board amount, on arrival",
+      "description": "Total Bunker C oil on board amount, on arrival Total amount of Bunker C, or Number 6 fuel oil on board when vessel arrives in port."
+    },
+    {
+      "code": "537",
+      "name": "Total Bunker C oil amount, loaded",
+      "description": "Total Bunker C oil amount, loaded Total amount of Bunker C or Number 6 fuel oil on board when vessel arrives in port."
+    },
+    {
+      "code": "538",
+      "name": "Government agency valuation commodity value",
+      "description": "Government agency valuation commodity value The value of the commodity for the purposes of a government agency valuation."
+    },
+    {
+      "code": "539",
+      "name": "Valuation adjustment amount",
+      "description": "Valuation adjustment amount Amount of adjustments to the valuation, e.g. price influence, royalties, assists, proceeds and commissions."
+    },
+    {
+      "code": "540",
+      "name": "Damage allowance",
+      "description": "Damage allowance An allowance made in the value to the extent of the damage or defect."
+    },
+    {
+      "code": "541",
+      "name": "Air transport freight cost",
+      "description": "Air transport freight cost Charges relating to the air transport of the goods which represent the freight charges only (i.e. not including the handling charges, agency fees etc.)."
+    },
+    {
+      "code": "542",
+      "name": "Unloading and handling cost",
+      "description": "Unloading and handling cost Cost incurred by unloading and handling."
+    },
+    {
+      "code": "543",
+      "name": "Commission and brokerage, except buying commission",
+      "description": "Commission and brokerage, except buying commission A monetary amount representing commissions and brokerage paid by or on behalf of the purchaser of goods excluding buying commission."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Mutually defined monetary amount."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.12A",
+  "messageType": "MEQPOS",
+  "name": "MEQPOS",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGM",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 20
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 30
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "QTY",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 40
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LOC",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 50
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG1",
+      "name": "Segment group 1",
+      "triggerSegment": "RFF",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 60,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "RFF",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 70
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 80
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG2",
+      "name": "Segment group 2",
+      "triggerSegment": "TDT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 90,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "TDT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 100
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 110
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG3",
+      "name": "Segment group 3",
+      "triggerSegment": "LOC",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 120,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LOC",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 130
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 140
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG4",
+      "name": "Segment group 4",
+      "triggerSegment": "NAD",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 150,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "NAD",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 160
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG5",
+      "name": "Segment group 5",
+      "triggerSegment": "CTA",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 170,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CTA",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 180
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "COM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 190
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG6",
+      "name": "Segment group 6",
+      "triggerSegment": "EQD",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 200,
+      "children": []
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "EQD",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 210
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LOC",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 220
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 230
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 240
+    }
+  ]
+}

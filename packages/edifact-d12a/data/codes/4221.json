@@ -1,0 +1,252 @@
+{
+  "code": "4221",
+  "name": "Discrepancy nature identification code",
+  "description": "Code specifying the identification used to define the nature of a discrepancy.",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Item discontinued by wholesaler",
+      "description": "Item discontinued by wholesaler The wholesaler no longer offers the ordered product."
+    },
+    {
+      "code": "AB",
+      "name": "Item no longer produced",
+      "description": "Item no longer produced The item ordered has been discontinued and is no longer in production."
+    },
+    {
+      "code": "AC",
+      "name": "Over-shipped",
+      "description": "Over-shipped Code indicating that there was an excess quantity of goods in a shipment relative to the order."
+    },
+    {
+      "code": "AD",
+      "name": "Item out of stock at manufacturer",
+      "description": "Item out of stock at manufacturer The item is out of stock at manufacturer."
+    },
+    {
+      "code": "AE",
+      "name": "Delivered but not advised",
+      "description": "Delivered but not advised Shipment or goods have been delivered without any advance notification of delivery."
+    },
+    {
+      "code": "AF",
+      "name": "Goods delivered damaged",
+      "description": "Goods delivered damaged Part or all of the goods in a shipment were delivered damaged."
+    },
+    {
+      "code": "AG",
+      "name": "Delivered too late",
+      "description": "Delivered too late Delivered but at a later date than the delivery date under the agreed conditions or stipulated in the order."
+    },
+    {
+      "code": "AH",
+      "name": "Next higher packaging quantity",
+      "description": "Next higher packaging quantity The ordered item has been, or is to be, packed to the next higher packaging quantity."
+    },
+    {
+      "code": "AN",
+      "name": "Available now - no shipping schedule",
+      "description": "Available now - no shipping schedule The material is available for shipment but there is no authorization for movement known."
+    },
+    {
+      "code": "AS",
+      "name": "Available now - scheduled to ship (date)",
+      "description": "Available now - scheduled to ship (date) The material is available for shipment and is committed for shipment/delivery at a future date."
+    },
+    {
+      "code": "BK",
+      "name": "Back ordered from previous order",
+      "description": "Back ordered from previous order An order is being held as no material is available to fulfil the requirement."
+    },
+    {
+      "code": "BP",
+      "name": "Shipment partial - back order to follow",
+      "description": "Shipment partial - back order to follow A portion of the previous order is being held as open, as enough material was not available to fulfil the requirement."
+    },
+    {
+      "code": "CA",
+      "name": "Customer inquiry - all items",
+      "description": "Customer inquiry - all items The response includes information concerning all of the issues included in the prior inquiry."
+    },
+    {
+      "code": "CC",
+      "name": "Shipment complete",
+      "description": "Shipment complete The quantity dispatched fulfilled the order quantity."
+    },
+    {
+      "code": "CE",
+      "name": "Shipment includes extra items to meet price break",
+      "description": "Shipment includes extra items to meet price break The quantity dispatched exceeds the order quantity to accommodate a quantity of scale price model opportunity."
+    },
+    {
+      "code": "CI",
+      "name": "Customer inquiry - shipped items only",
+      "description": "Customer inquiry - shipped items only The response includes information addressing only of the items dispatched that were included in the prior inquiry."
+    },
+    {
+      "code": "CK",
+      "name": "Cancelled from previous order",
+      "description": "Cancelled from previous order Amount deleted from the earlier schedule."
+    },
+    {
+      "code": "CM",
+      "name": "Shipment complete with additional quantity",
+      "description": "Shipment complete with additional quantity The quantity dispatched exceeds the ordered quantity."
+    },
+    {
+      "code": "CO",
+      "name": "Customer inquiry - unshipped items only",
+      "description": "Customer inquiry - unshipped items only The response includes information addressing only the items that have not been dispatched, that were included in the prior inquiry."
+    },
+    {
+      "code": "CP",
+      "name": "Shipment partial - considered complete, no backorder",
+      "description": "Shipment partial - considered complete, no backorder The quantity shipped is less than the amount authorized and there is no plan to ship the remaining amount."
+    },
+    {
+      "code": "CS",
+      "name": "Shipment complete with substitution",
+      "description": "Shipment complete with substitution The quantity and product shipped, though not exactly matching the original order, is compliant with and fulfils the expectation."
+    },
+    {
+      "code": "IC",
+      "name": "Item cancelled",
+      "description": "Item cancelled The material previously ordered is no longer needed."
+    },
+    {
+      "code": "IS",
+      "name": "Item represents substitution from original order",
+      "description": "Item represents substitution from original order The quantity and product shipped is compliant with the expectation."
+    },
+    {
+      "code": "LS",
+      "name": "Last shipment (date)",
+      "description": "Last shipment (date) The date that the most recent material dispatch was made."
+    },
+    {
+      "code": "NF",
+      "name": "Not yet published",
+      "description": "Not yet published The product requested is not publicly available at this time."
+    },
+    {
+      "code": "NN",
+      "name": "Not in process - no shipping schedule",
+      "description": "Not in process - no shipping schedule The product requested is neither available nor in process, as there is not an authorization to manufacture product."
+    },
+    {
+      "code": "NS",
+      "name": "Not in process - schedule to ship (date)",
+      "description": "Not in process - schedule to ship (date) The product requested is neither available nor in process. A planned dispatch date has been provided."
+    },
+    {
+      "code": "OF",
+      "name": "Order sent to factory for production (date)",
+      "description": "Order sent to factory for production (date) The product requested is not available. The schedule has been forwarded to manufacturing for inclusion on this date."
+    },
+    {
+      "code": "OM",
+      "name": "Item sent to factory for production (date)",
+      "description": "Item sent to factory for production (date) The product has been moved to the manufacturing area and scheduled for completion on the following date."
+    },
+    {
+      "code": "OP",
+      "name": "Out of print",
+      "description": "Out of print Item is no longer available."
+    },
+    {
+      "code": "OS",
+      "name": "Item out of stock because of strike or force majeure",
+      "description": "Item out of stock because of strike or force majeure Item is not available due to strike or an unforeseeable event."
+    },
+    {
+      "code": "OW",
+      "name": "Item out of stock at wholesaler",
+      "description": "Item out of stock at wholesaler Item is not available at the distribution point."
+    },
+    {
+      "code": "PA",
+      "name": "Purchase order inquiry - all items",
+      "description": "Purchase order inquiry - all items The response includes information concerning all of the articles included in the prior inquiry that had been requested by the contact initiator."
+    },
+    {
+      "code": "PD",
+      "name": "Purchase order complete",
+      "description": "Purchase order complete The amount fulfilling the requirements of the contract."
+    },
+    {
+      "code": "PI",
+      "name": "Purchase order inquiry - shipped items only",
+      "description": "Purchase order inquiry - shipped items only The response includes information concerning all of the articles that were dispatched and included in the prior inquiry that had been requested by the contact initiator."
+    },
+    {
+      "code": "PK",
+      "name": "Packed-to-date (date)",
+      "description": "Packed-to-date (date) Quantity represents the amount processed and ready for shipment at this date."
+    },
+    {
+      "code": "PN",
+      "name": "In process - no shipping schedule",
+      "description": "In process - no shipping schedule This amount is being manufactured in anticipation for a possible authorization for shipment."
+    },
+    {
+      "code": "PO",
+      "name": "Purchase order inquiry - unshipped items only",
+      "description": "Purchase order inquiry - unshipped items only The response includes information concerning all of the articles that were not dispatched and included in the prior inquiry that had been requested by the contact initiator."
+    },
+    {
+      "code": "PP",
+      "name": "Purchase order inquiry - specific items",
+      "description": "Purchase order inquiry - specific items The response includes information concerning a unique sub-set of the total list of articles that the contract initiator had requested information on."
+    },
+    {
+      "code": "PS",
+      "name": "In process - scheduled to ship (date)",
+      "description": "In process - scheduled to ship (date) This amount is being manufactured in anticipation for a possible authorization for shipment."
+    },
+    {
+      "code": "RA",
+      "name": "Item rationed",
+      "description": "Item rationed Product is restricted because of limited availability."
+    },
+    {
+      "code": "SL",
+      "name": "Shipped-to-date (date)",
+      "description": "Shipped-to-date (date) Cumulative amount shipped through this date."
+    },
+    {
+      "code": "SP",
+      "name": "Scheduled for production at factory",
+      "description": "Scheduled for production at factory Product is anticipated for manufacture on this date."
+    },
+    {
+      "code": "SS",
+      "name": "Split shipment",
+      "description": "Split shipment Shipment is only part of the ordered quantity."
+    },
+    {
+      "code": "TW",
+      "name": "Item temporary discontinued by wholesaler",
+      "description": "Item temporary discontinued by wholesaler Product is, for the time being, not available from the distribution point."
+    },
+    {
+      "code": "UR",
+      "name": "Unsolicited report",
+      "description": "Unsolicited report The product information was provided voluntarily."
+    },
+    {
+      "code": "US",
+      "name": "Pack to closest complete logistic packaging quantity",
+      "description": "Pack to closest complete logistic packaging quantity Pack to the closest complete logistic packaging quantity."
+    },
+    {
+      "code": "UT",
+      "name": "Pack to next lower complete logistic quantity",
+      "description": "Pack to next lower complete logistic quantity Pack to the next lower complete logistic packaging quantity."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
+}

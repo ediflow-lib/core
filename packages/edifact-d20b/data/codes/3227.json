@@ -1,0 +1,1403 @@
+{
+  "code": "3227",
+  "name": "Location function code qualifier",
+  "description": "Code identifying the function of a location.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Place of terms of delivery"
+    },
+    {
+      "code": "2",
+      "name": "Payment location"
+    },
+    {
+      "code": "3",
+      "name": "Tare check place"
+    },
+    {
+      "code": "4",
+      "name": "Goods receipt place"
+    },
+    {
+      "code": "5",
+      "name": "Place of departure"
+    },
+    {
+      "code": "6",
+      "name": "Ward bed"
+    },
+    {
+      "code": "A",
+      "name": "bed in a ward."
+    },
+    {
+      "code": "7",
+      "name": "Place of delivery"
+    },
+    {
+      "code": "8",
+      "name": "Place of destination"
+    },
+    {
+      "code": "9",
+      "name": "Place of loading"
+    },
+    {
+      "code": "10",
+      "name": "Place of acceptance"
+    },
+    {
+      "code": "11",
+      "name": "Place of discharge"
+    },
+    {
+      "code": "12",
+      "name": "Port of discharge"
+    },
+    {
+      "code": "13",
+      "name": "Place of transhipment"
+    },
+    {
+      "code": "14",
+      "name": "Goods item storage location"
+    },
+    {
+      "code": "15",
+      "name": "Place of transfer responsibility"
+    },
+    {
+      "code": "16",
+      "name": "Place of transfer of ownership"
+    },
+    {
+      "code": "17",
+      "name": "Border crossing place"
+    },
+    {
+      "code": "18",
+      "name": "Warehouse"
+    },
+    {
+      "code": "19",
+      "name": "Factory/plant"
+    },
+    {
+      "code": "20",
+      "name": "Place of ultimate destination of goods"
+    },
+    {
+      "code": "21",
+      "name": "Terms of sale place"
+    },
+    {
+      "code": "22",
+      "name": "Customs clearance location"
+    },
+    {
+      "code": "23",
+      "name": "Port of release"
+    },
+    {
+      "code": "24",
+      "name": "Port of entry"
+    },
+    {
+      "code": "25",
+      "name": "Country"
+    },
+    {
+      "code": "26",
+      "name": "City"
+    },
+    {
+      "code": "27",
+      "name": "Country of origin"
+    },
+    {
+      "code": "28",
+      "name": "Country of destination of goods"
+    },
+    {
+      "code": "29",
+      "name": "Railway station"
+    },
+    {
+      "code": "30",
+      "name": "Country of source"
+    },
+    {
+      "code": "31",
+      "name": "Building"
+    },
+    {
+      "code": "A",
+      "name": "building or part thereof relevant to a particular"
+    },
+    {
+      "code": "32",
+      "name": "Beginning of chargeable section"
+    },
+    {
+      "code": "33",
+      "name": "Baseport of discharge"
+    },
+    {
+      "code": "34",
+      "name": "Baseport of loading"
+    },
+    {
+      "code": "35",
+      "name": "Exportation country"
+    },
+    {
+      "code": "36",
+      "name": "Country of ultimate destination"
+    },
+    {
+      "code": "37",
+      "name": "Consignment final exportation country"
+    },
+    {
+      "code": "38",
+      "name": "Consignment first destination country"
+    },
+    {
+      "code": "39",
+      "name": "Country of production"
+    },
+    {
+      "code": "40",
+      "name": "Country of trading"
+    },
+    {
+      "code": "41",
+      "name": "Consignment entry customs office location"
+    },
+    {
+      "code": "42",
+      "name": "Consignment exit customs office location"
+    },
+    {
+      "code": "43",
+      "name": "Place of Customs examination"
+    },
+    {
+      "code": "44",
+      "name": "Place of authentication of document"
+    },
+    {
+      "code": "45",
+      "name": "Customs office of destination (transit)"
+    },
+    {
+      "code": "46",
+      "name": "Region of despatch"
+    },
+    {
+      "code": "47",
+      "name": "Region of destination"
+    },
+    {
+      "code": "48",
+      "name": "Region of production"
+    },
+    {
+      "code": "49",
+      "name": "Transit country"
+    },
+    {
+      "code": "50",
+      "name": "Transit customs office location"
+    },
+    {
+      "code": "51",
+      "name": "Country of invalid transit guarantee"
+    },
+    {
+      "code": "52",
+      "name": "Country of destination (transit)"
+    },
+    {
+      "code": "53",
+      "name": "Charge and freight due from"
+    },
+    {
+      "code": "54",
+      "name": "Manufacturing department"
+    },
+    {
+      "code": "A",
+      "name": "department within the manufacturing area (e.g."
+    },
+    {
+      "code": "55",
+      "name": "Freight charge payable to location"
+    },
+    {
+      "code": "56",
+      "name": "End of chargeable section"
+    },
+    {
+      "code": "57",
+      "name": "Place of payment"
+    },
+    {
+      "code": "58",
+      "name": "Full track loading or unloading"
+    },
+    {
+      "code": "59",
+      "name": "Place of loss"
+    },
+    {
+      "code": "60",
+      "name": "Place of arrival"
+    },
+    {
+      "code": "61",
+      "name": "Next port of call"
+    },
+    {
+      "code": "62",
+      "name": "On-carriage port"
+    },
+    {
+      "code": "63",
+      "name": "Sub-project location"
+    },
+    {
+      "code": "A",
+      "name": "place at which works occur referring to a sub-project."
+    },
+    {
+      "code": "64",
+      "name": "First optional place of discharge"
+    },
+    {
+      "code": "65",
+      "name": "Final port or place of discharge"
+    },
+    {
+      "code": "66",
+      "name": "Express railway station"
+    },
+    {
+      "code": "67",
+      "name": "Mixed cargo railway station"
+    },
+    {
+      "code": "68",
+      "name": "Second optional place of discharge"
+    },
+    {
+      "code": "69",
+      "name": "Next non-discharge port of call"
+    },
+    {
+      "code": "A",
+      "name": "code to identify the next port of call for a vessel"
+    },
+    {
+      "code": "70",
+      "name": "Third optional place of discharge"
+    },
+    {
+      "code": "71",
+      "name": "Reconsolidation point"
+    },
+    {
+      "code": "A",
+      "name": "place where cargo is reconsolidated."
+    },
+    {
+      "code": "72",
+      "name": "Fourth optional place of discharge"
+    },
+    {
+      "code": "73",
+      "name": "Bill of lading release office"
+    },
+    {
+      "code": "A",
+      "name": "location where bills of lading are released to"
+    },
+    {
+      "code": "74",
+      "name": "Transhipment excluding this place"
+    },
+    {
+      "code": "75",
+      "name": "Transhipment limited to this place"
+    },
+    {
+      "code": "76",
+      "name": "Original port of loading"
+    },
+    {
+      "code": "77",
+      "name": "First port of call - non-discharging"
+    },
+    {
+      "code": "78",
+      "name": "First port of call - discharging"
+    },
+    {
+      "code": "79",
+      "name": "Place/port of first entry"
+    },
+    {
+      "code": "80",
+      "name": "Place of despatch"
+    },
+    {
+      "code": "81",
+      "name": "Fifth optional place of discharge"
+    },
+    {
+      "code": "82",
+      "name": "Pre-carriage port"
+    },
+    {
+      "code": "83",
+      "name": "Place of delivery (by on carriage)"
+    },
+    {
+      "code": "84",
+      "name": "Transport contract place of acceptance"
+    },
+    {
+      "code": "85",
+      "name": "Transport contract place of destination"
+    },
+    {
+      "code": "86",
+      "name": "Country of valid transit guarantee"
+    },
+    {
+      "code": "87",
+      "name": "Place/port of conveyance initial arrival"
+    },
+    {
+      "code": "88",
+      "name": "Place of receipt"
+    },
+    {
+      "code": "89",
+      "name": "Place of registration"
+    },
+    {
+      "code": "90",
+      "name": "Special treatment place"
+    },
+    {
+      "code": "91",
+      "name": "Place of document issue"
+    },
+    {
+      "code": "92",
+      "name": "Routing"
+    },
+    {
+      "code": "93",
+      "name": "Station of application of additional costs"
+    },
+    {
+      "code": "94",
+      "name": "Previous port of call"
+    },
+    {
+      "code": "95",
+      "name": "Sailing destination area"
+    },
+    {
+      "code": "96",
+      "name": "Place of lodgement of documents"
+    },
+    {
+      "code": "97",
+      "name": "Optional place of discharge"
+    },
+    {
+      "code": "98",
+      "name": "Place of empty equipment despatch"
+    },
+    {
+      "code": "99",
+      "name": "Place of empty equipment return"
+    },
+    {
+      "code": "100",
+      "name": "Place/port of warehouse entry"
+    },
+    {
+      "code": "101",
+      "name": "Country of first sale"
+    },
+    {
+      "code": "103",
+      "name": "Place of transfer"
+    },
+    {
+      "code": "104",
+      "name": "Place of deconsolidation"
+    },
+    {
+      "code": "105",
+      "name": "Place of consumption"
+    },
+    {
+      "code": "106",
+      "name": "Region of origin"
+    },
+    {
+      "code": "107",
+      "name": "Place of consolidation"
+    },
+    {
+      "code": "108",
+      "name": "Rate combination point"
+    },
+    {
+      "code": "109",
+      "name": "Place of prolongation decision of delivery delay"
+    },
+    {
+      "code": "110",
+      "name": "Recharging place/location"
+    },
+    {
+      "code": "111",
+      "name": "Customs office of despatch"
+    },
+    {
+      "code": "112",
+      "name": "Region of equipment availability"
+    },
+    {
+      "code": "113",
+      "name": "Country of despatch"
+    },
+    {
+      "code": "114",
+      "name": "Customs office of export"
+    },
+    {
+      "code": "115",
+      "name": "Free zone of export"
+    },
+    {
+      "code": "116",
+      "name": "Region of export/despatch"
+    },
+    {
+      "code": "117",
+      "name": "Place of collection"
+    },
+    {
+      "code": "118",
+      "name": "Customs office of departure"
+    },
+    {
+      "code": "119",
+      "name": "Transit guarantee customs office location"
+    },
+    {
+      "code": "120",
+      "name": "Country of transhipment"
+    },
+    {
+      "code": "122",
+      "name": "Customs office of destination"
+    },
+    {
+      "code": "123",
+      "name": "Wagon-load railway station"
+    },
+    {
+      "code": "A",
+      "name": "railway station where rail wagons are loaded."
+    },
+    {
+      "code": "124",
+      "name": "Siding"
+    },
+    {
+      "code": "A",
+      "name": "short railway track for loading or unloading rail"
+    },
+    {
+      "code": "125",
+      "name": "Last place/port of call of conveyance"
+    },
+    {
+      "code": "126",
+      "name": "Country of previous Customs procedure"
+    },
+    {
+      "code": "127",
+      "name": "Customs office of registration of previous Customs"
+    },
+    {
+      "code": "128",
+      "name": "Participant sender location"
+    },
+    {
+      "code": "129",
+      "name": "Wage negotiation district"
+    },
+    {
+      "code": "130",
+      "name": "Place of ultimate destination of conveyance"
+    },
+    {
+      "code": "131",
+      "name": "Place of loading of empty equipment"
+    },
+    {
+      "code": "132",
+      "name": "Place of discharge of empty equipment"
+    },
+    {
+      "code": "133",
+      "name": "Region of delivery"
+    },
+    {
+      "code": "134",
+      "name": "Petroleum warehouse"
+    },
+    {
+      "code": "135",
+      "name": "Place of entry (Customs)"
+    },
+    {
+      "code": "136",
+      "name": "Living animals care place"
+    },
+    {
+      "code": "137",
+      "name": "Re-icing place"
+    },
+    {
+      "code": "138",
+      "name": "Weighting place"
+    },
+    {
+      "code": "139",
+      "name": "Marshalling yard"
+    },
+    {
+      "code": "140",
+      "name": "Stopping station"
+    },
+    {
+      "code": "141",
+      "name": "Loading dock"
+    },
+    {
+      "code": "142",
+      "name": "Port connection"
+    },
+    {
+      "code": "143",
+      "name": "Place of expiry"
+    },
+    {
+      "code": "144",
+      "name": "Place of negotiation"
+    },
+    {
+      "code": "145",
+      "name": "Claims payable place"
+    },
+    {
+      "code": "146",
+      "name": "Documentary credit available in"
+    },
+    {
+      "code": "147",
+      "name": "Transport means stowage location"
+    },
+    {
+      "code": "148",
+      "name": "For transportation to"
+    },
+    {
+      "code": "149",
+      "name": "Loading on board/despatch/taking in charge at/from"
+    },
+    {
+      "code": "150",
+      "name": "Container stack position"
+    },
+    {
+      "code": "151",
+      "name": "Private box"
+    },
+    {
+      "code": "A",
+      "name": "private box used for pick-up and delivery of packages,"
+    },
+    {
+      "code": "152",
+      "name": "Next port of discharge"
+    },
+    {
+      "code": "153",
+      "name": "Port of call"
+    },
+    {
+      "code": "154",
+      "name": "Place/location of on-hire"
+    },
+    {
+      "code": "155",
+      "name": "Place/location of off-hire"
+    },
+    {
+      "code": "156",
+      "name": "Other carriers terminal"
+    },
+    {
+      "code": "A",
+      "name": "carrier terminal belonging to a carrier other than the"
+    },
+    {
+      "code": "157",
+      "name": "Country of Value Added Tax (VAT) jurisdiction"
+    },
+    {
+      "code": "158",
+      "name": "Contact location"
+    },
+    {
+      "code": "159",
+      "name": "Additional internal destination"
+    },
+    {
+      "code": "160",
+      "name": "Foreign port of call"
+    },
+    {
+      "code": "A",
+      "name": "code to identify the foreign port where the vessel"
+    },
+    {
+      "code": "161",
+      "name": "Maintenance location"
+    },
+    {
+      "code": "A",
+      "name": "location where maintenance has been or will be"
+    },
+    {
+      "code": "162",
+      "name": "Place or location of sale"
+    },
+    {
+      "code": "163",
+      "name": "Direct investment country"
+    },
+    {
+      "code": "164",
+      "name": "Berth"
+    },
+    {
+      "code": "165",
+      "name": "Construction country"
+    },
+    {
+      "code": "166",
+      "name": "Donation acting country"
+    },
+    {
+      "code": "167",
+      "name": "Payment transaction country"
+    },
+    {
+      "code": "168",
+      "name": "Physical place of return of item"
+    },
+    {
+      "code": "169",
+      "name": "Relay port"
+    },
+    {
+      "code": "A",
+      "name": "location where cargo is transferred from one means of"
+    },
+    {
+      "code": "170",
+      "name": "Final port of discharge"
+    },
+    {
+      "code": "171",
+      "name": "Place of destination for pre-stacking prior to stowage"
+    },
+    {
+      "code": "172",
+      "name": "Reporting location"
+    },
+    {
+      "code": "173",
+      "name": "Transport contract place of despatch"
+    },
+    {
+      "code": "A",
+      "name": "place from which goods are despatched as per transport"
+    },
+    {
+      "code": "174",
+      "name": "Place of residence"
+    },
+    {
+      "code": "A",
+      "name": "place where a party lives."
+    },
+    {
+      "code": "175",
+      "name": "Activity location"
+    },
+    {
+      "code": "A",
+      "name": "place at which the activity occurs."
+    },
+    {
+      "code": "176",
+      "name": "Pick-up location"
+    },
+    {
+      "code": "177",
+      "name": "Construction site"
+    },
+    {
+      "code": "A",
+      "name": "place at which construction works occur."
+    },
+    {
+      "code": "178",
+      "name": "Place of embarkation"
+    },
+    {
+      "code": "179",
+      "name": "Place of disembarkation"
+    },
+    {
+      "code": "180",
+      "name": "Person birth location"
+    },
+    {
+      "code": "181",
+      "name": "Registered office"
+    },
+    {
+      "code": "182",
+      "name": "Place of incorporation"
+    },
+    {
+      "code": "183",
+      "name": "Place of business"
+    },
+    {
+      "code": "184",
+      "name": "Physical location"
+    },
+    {
+      "code": "185",
+      "name": "Location to send mail"
+    },
+    {
+      "code": "186",
+      "name": "Foreign registration location"
+    },
+    {
+      "code": "187",
+      "name": "Tax filed from location"
+    },
+    {
+      "code": "188",
+      "name": "Filing location"
+    },
+    {
+      "code": "189",
+      "name": "Former location"
+    },
+    {
+      "code": "190",
+      "name": "Head office"
+    },
+    {
+      "code": "191",
+      "name": "Property"
+    },
+    {
+      "code": "192",
+      "name": "Correct location"
+    },
+    {
+      "code": "193",
+      "name": "Branch location"
+    },
+    {
+      "code": "194",
+      "name": "Former registered location"
+    },
+    {
+      "code": "195",
+      "name": "Future location"
+    },
+    {
+      "code": "196",
+      "name": "Changed to location"
+    },
+    {
+      "code": "197",
+      "name": "Place of inquiry"
+    },
+    {
+      "code": "198",
+      "name": "Original location"
+    },
+    {
+      "code": "199",
+      "name": "Country of last source"
+    },
+    {
+      "code": "200",
+      "name": "Place of handling"
+    },
+    {
+      "code": "201",
+      "name": "Country of origin as defined by transportation agency"
+    },
+    {
+      "code": "202",
+      "name": "Terminal"
+    },
+    {
+      "code": "A",
+      "name": "terminus for transport vehicles."
+    },
+    {
+      "code": "203",
+      "name": "Sample location"
+    },
+    {
+      "code": "204",
+      "name": "Hospital Advanced Dependency Unit (ADU)"
+    },
+    {
+      "code": "A",
+      "name": "designated unit in a hospital for advanced dependency"
+    },
+    {
+      "code": "205",
+      "name": "Hospital Neonatal Intensive Care Unit (NICU)"
+    },
+    {
+      "code": "A",
+      "name": "designated unit in a hospital for the provision of"
+    },
+    {
+      "code": "206",
+      "name": "Hospital Paediatric Care Unit (PCU)"
+    },
+    {
+      "code": "A",
+      "name": "designated unit in a hospital for the provision of"
+    },
+    {
+      "code": "207",
+      "name": "Hospital Intensive Care Unit (ICU)"
+    },
+    {
+      "code": "208",
+      "name": "Hospital luxury room"
+    },
+    {
+      "code": "A",
+      "name": "room in a hospital for patient accommodation of"
+    },
+    {
+      "code": "209",
+      "name": "Hospital shared room"
+    },
+    {
+      "code": "A",
+      "name": "room in a hospital for shared accommodation of"
+    },
+    {
+      "code": "210",
+      "name": "Hospital private room"
+    },
+    {
+      "code": "A",
+      "name": "room in a hospital for private accommodation of a"
+    },
+    {
+      "code": "211",
+      "name": "Bidding area"
+    },
+    {
+      "code": "212",
+      "name": "Price area"
+    },
+    {
+      "code": "213",
+      "name": "Country of destination of equipment"
+    },
+    {
+      "code": "214",
+      "name": "Aircraft airport stand"
+    },
+    {
+      "code": "215",
+      "name": "Airport passenger terminal"
+    },
+    {
+      "code": "216",
+      "name": "Previous berth"
+    },
+    {
+      "code": "217",
+      "name": "Next berth"
+    },
+    {
+      "code": "218",
+      "name": "Entity location"
+    },
+    {
+      "code": "219",
+      "name": "Goods depot"
+    },
+    {
+      "code": "220",
+      "name": "Disinfecting place"
+    },
+    {
+      "code": "221",
+      "name": "Harbour rail station"
+    },
+    {
+      "code": "222",
+      "name": "Place of live animal care"
+    },
+    {
+      "code": "223",
+      "name": "Phytosanitary control place"
+    },
+    {
+      "code": "224",
+      "name": "Place for re-icing or de-icing"
+    },
+    {
+      "code": "225",
+      "name": "Place of refuelling"
+    },
+    {
+      "code": "226",
+      "name": "Place of provision of an unexpected service"
+    },
+    {
+      "code": "227",
+      "name": "Private container terminal"
+    },
+    {
+      "code": "228",
+      "name": "Railway container terminal"
+    },
+    {
+      "code": "229",
+      "name": "Inspection site"
+    },
+    {
+      "code": "230",
+      "name": "Request only stop"
+    },
+    {
+      "code": "A",
+      "name": "location where a stop is only made on request."
+    },
+    {
+      "code": "231",
+      "name": "Grid area"
+    },
+    {
+      "code": "A",
+      "name": "section of a grid."
+    },
+    {
+      "code": "232",
+      "name": "Source power area"
+    },
+    {
+      "code": "233",
+      "name": "Sink power area"
+    },
+    {
+      "code": "234",
+      "name": "Scheduled berth"
+    },
+    {
+      "code": "235",
+      "name": "Scheduled berth, bow"
+    },
+    {
+      "code": "236",
+      "name": "Scheduled berth, stern"
+    },
+    {
+      "code": "237",
+      "name": "Balance settlement area"
+    },
+    {
+      "code": "238",
+      "name": "Market area"
+    },
+    {
+      "code": "239",
+      "name": "Metering grid area"
+    },
+    {
+      "code": "A",
+      "name": "physical area where consumption, production and"
+    },
+    {
+      "code": "240",
+      "name": "Climate zone"
+    },
+    {
+      "code": "A",
+      "name": "geographical area where the climate has common"
+    },
+    {
+      "code": "241",
+      "name": "Country of birth"
+    },
+    {
+      "code": "242",
+      "name": "Country of fattening"
+    },
+    {
+      "code": "243",
+      "name": "Country of slaughter"
+    },
+    {
+      "code": "244",
+      "name": "Country of meat cutting"
+    },
+    {
+      "code": "245",
+      "name": "Meat cutting location"
+    },
+    {
+      "code": "A",
+      "name": "location where the meat is cut into pieces."
+    },
+    {
+      "code": "246",
+      "name": "Slaughterhouse"
+    },
+    {
+      "code": "247",
+      "name": "Country of meat mincing"
+    },
+    {
+      "code": "248",
+      "name": "Place of discharge and loading"
+    },
+    {
+      "code": "249",
+      "name": "Cargo facility location"
+    },
+    {
+      "code": "250",
+      "name": "Tourist point of interest"
+    },
+    {
+      "code": "251",
+      "name": "Customs office of payment"
+    },
+    {
+      "code": "252",
+      "name": "Conveyance facility location at departure"
+    },
+    {
+      "code": "253",
+      "name": "Conveyance facility location at arrival"
+    },
+    {
+      "code": "254",
+      "name": "Bus station"
+    },
+    {
+      "code": "255",
+      "name": "Ferry terminal"
+    },
+    {
+      "code": "256",
+      "name": "Place of packing"
+    },
+    {
+      "code": "257",
+      "name": "Country of assembly"
+    },
+    {
+      "code": "258",
+      "name": "Town sales office"
+    },
+    {
+      "code": "259",
+      "name": "Travel agency"
+    },
+    {
+      "code": "260",
+      "name": "Inland clearance depot"
+    },
+    {
+      "code": "261",
+      "name": "Place of final production"
+    },
+    {
+      "code": "262",
+      "name": "Place of growth"
+    },
+    {
+      "code": "263",
+      "name": "Place of intermediate production"
+    },
+    {
+      "code": "264",
+      "name": "Place of nutrient origin"
+    },
+    {
+      "code": "265",
+      "name": "Place of package material production"
+    },
+    {
+      "code": "266",
+      "name": "Place of processing"
+    },
+    {
+      "code": "267",
+      "name": "Place of species origin"
+    },
+    {
+      "code": "268",
+      "name": "Place of catch"
+    },
+    {
+      "code": "269",
+      "name": "Government appeal office"
+    },
+    {
+      "code": "270",
+      "name": "Regulatory office of cross-border goods entry"
+    },
+    {
+      "code": "271",
+      "name": "Regulatory office of cross-border goods exit"
+    },
+    {
+      "code": "272",
+      "name": "Government approved establishment"
+    },
+    {
+      "code": "273",
+      "name": "Free trade zone"
+    },
+    {
+      "code": "A",
+      "name": "special area of a country where some normal trade"
+    },
+    {
+      "code": "274",
+      "name": "Place of physical examination"
+    },
+    {
+      "code": "A",
+      "name": "place where goods are to be examined."
+    },
+    {
+      "code": "275",
+      "name": "Permitted location"
+    },
+    {
+      "code": "276",
+      "name": "Landing location"
+    },
+    {
+      "code": "277",
+      "name": "Place of loading on final means of transport"
+    },
+    {
+      "code": "278",
+      "name": "Place of regulatory declaration review"
+    },
+    {
+      "code": "279",
+      "name": "Travel document issuing country or political entity"
+    },
+    {
+      "code": "280",
+      "name": "Compliant facility, registered"
+    },
+    {
+      "code": "A",
+      "name": "facility that has been formally documented as"
+    },
+    {
+      "code": "281",
+      "name": "Bonded warehouse"
+    },
+    {
+      "code": "A",
+      "name": "building or other secured area in which dutiable goods"
+    },
+    {
+      "code": "282",
+      "name": "Goods destruction site, designated"
+    },
+    {
+      "code": "A",
+      "name": "place designated for the destruction of goods."
+    },
+    {
+      "code": "283",
+      "name": "Goods disposal location, designated"
+    },
+    {
+      "code": "A",
+      "name": "place designated for the disposal of goods."
+    },
+    {
+      "code": "284",
+      "name": "Incineration facility"
+    },
+    {
+      "code": "285",
+      "name": "Laboratory"
+    },
+    {
+      "code": "A",
+      "name": "facility equipped for scientific experimentation,"
+    },
+    {
+      "code": "286",
+      "name": "Place of assembly"
+    },
+    {
+      "code": "287",
+      "name": "Processing site"
+    },
+    {
+      "code": "288",
+      "name": "Quarantine facility"
+    },
+    {
+      "code": "A",
+      "name": "place or station where isolation is carried out."
+    },
+    {
+      "code": "289",
+      "name": "Reclamation facility"
+    },
+    {
+      "code": "A",
+      "name": "facility where desired substances are recovered from"
+    },
+    {
+      "code": "290",
+      "name": "Refinery"
+    },
+    {
+      "code": "291",
+      "name": "Smelter"
+    },
+    {
+      "code": "A",
+      "name": "facility where ores are fused or melted in order to"
+    },
+    {
+      "code": "292",
+      "name": "Prescribed treatment facility"
+    },
+    {
+      "code": "A",
+      "name": "facility where goods are subjected to a prescribed"
+    },
+    {
+      "code": "293",
+      "name": "Embassy"
+    },
+    {
+      "code": "294",
+      "name": "Region of source"
+    },
+    {
+      "code": "295",
+      "name": "Region of storage"
+    },
+    {
+      "code": "296",
+      "name": "Ship security incident location"
+    },
+    {
+      "code": "297",
+      "name": "Ship-to-ship activity location"
+    },
+    {
+      "code": "298",
+      "name": "Country of last processing"
+    },
+    {
+      "code": "299",
+      "name": "Fishing vessel"
+    },
+    {
+      "code": "300",
+      "name": "Location of status"
+    },
+    {
+      "code": "301",
+      "name": "Location of meter"
+    },
+    {
+      "code": "302",
+      "name": "Country of provenance"
+    },
+    {
+      "code": "303",
+      "name": "Meat mincing plant"
+    },
+    {
+      "code": "A",
+      "name": "place where the meat is cut into very small pieces"
+    },
+    {
+      "code": "304",
+      "name": "Place of fattening"
+    },
+    {
+      "code": "305",
+      "name": "Animal birth place"
+    },
+    {
+      "code": "306",
+      "name": "Global Good Agricultural Practice Number (GGN)"
+    },
+    {
+      "code": "307",
+      "name": "Port of last waste delivery"
+    },
+    {
+      "code": "308",
+      "name": "Port of next waste delivery"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
+}

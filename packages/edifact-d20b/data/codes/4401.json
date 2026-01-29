@@ -1,0 +1,427 @@
+{
+  "code": "4401",
+  "name": "Instruction description code",
+  "description": "Code specifying an instruction.",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Send credit note"
+    },
+    {
+      "code": "AB",
+      "name": "Change invoice"
+    },
+    {
+      "code": "AC",
+      "name": "Advise by airmail"
+    },
+    {
+      "code": "AD",
+      "name": "Advise"
+    },
+    {
+      "code": "AE",
+      "name": "Read meter at beginning of supply"
+    },
+    {
+      "code": "AF",
+      "name": "Stop delivery process"
+    },
+    {
+      "code": "AG",
+      "name": "Send replacement"
+    },
+    {
+      "code": "AH",
+      "name": "Pick-up"
+    },
+    {
+      "code": "AI",
+      "name": "Advise by telecommunication"
+    },
+    {
+      "code": "AJ",
+      "name": "Advise by fax"
+    },
+    {
+      "code": "AK",
+      "name": "By registered airmail"
+    },
+    {
+      "code": "AL",
+      "name": "By registered airmail in one set"
+    },
+    {
+      "code": "AM",
+      "name": "By registered airmail in two sets"
+    },
+    {
+      "code": "AN",
+      "name": "Authorized to debit our account when due"
+    },
+    {
+      "code": "AO",
+      "name": "Authorized to reimburse yourselves on the reimbursing bank"
+    },
+    {
+      "code": "AP",
+      "name": "Advise by phone"
+    },
+    {
+      "code": "AQ",
+      "name": "Upon receipt and verification of documents we shall credit"
+    },
+    {
+      "code": "AR",
+      "name": "Protest non-payment"
+    },
+    {
+      "code": "AS",
+      "name": "Protest non-acceptance"
+    },
+    {
+      "code": "AT",
+      "name": "Advise by telex"
+    },
+    {
+      "code": "AU",
+      "name": "Protest non-acceptance and non-payment"
+    },
+    {
+      "code": "AV",
+      "name": "May not be waived"
+    },
+    {
+      "code": "AW",
+      "name": "May be waived"
+    },
+    {
+      "code": "AX",
+      "name": "Acceptance and/or payment may be deferred until the arrival"
+    },
+    {
+      "code": "AY",
+      "name": "Acceptance and/or payment may not be deferred until the"
+    },
+    {
+      "code": "AZ",
+      "name": "If documents are not honoured on arrival of goods then"
+    },
+    {
+      "code": "BA",
+      "name": "If documents are not honoured on arrival of goods then"
+    },
+    {
+      "code": "BB",
+      "name": "If documents are not honoured on arrival of goods then"
+    },
+    {
+      "code": "BC",
+      "name": "Case of need party has power to give instructions"
+    },
+    {
+      "code": "BD",
+      "name": "Case of need party may advise only"
+    },
+    {
+      "code": "BE",
+      "name": "Draft must be returned after acceptance"
+    },
+    {
+      "code": "BF",
+      "name": "Advise by mail"
+    },
+    {
+      "code": "BG",
+      "name": "Release documents against acceptance"
+    },
+    {
+      "code": "BH",
+      "name": "Release documents against payment"
+    },
+    {
+      "code": "BI",
+      "name": "Release documents against issuance of drawee's undertaking"
+    },
+    {
+      "code": "BJ",
+      "name": "Release documents against issuance of presenting bank's"
+    },
+    {
+      "code": "BK",
+      "name": "Release documents against issuance of named bank's"
+    },
+    {
+      "code": "BL",
+      "name": "Release documents against issuance of drawee's signed"
+    },
+    {
+      "code": "BM",
+      "name": "Release documents against issuance of presenting bank's"
+    },
+    {
+      "code": "BN",
+      "name": "Release documents against issuance of named bank's signed"
+    },
+    {
+      "code": "BO",
+      "name": "Release documents against issuance of drawee's signed trust"
+    },
+    {
+      "code": "BP",
+      "name": "Release documents against acceptance and aval of presenting"
+    },
+    {
+      "code": "BQ",
+      "name": "Release documents against acceptance and aval of named bank"
+    },
+    {
+      "code": "BR",
+      "name": "Remit proceeds"
+    },
+    {
+      "code": "BS",
+      "name": "Remit proceeds to intermediary bank"
+    },
+    {
+      "code": "BT",
+      "name": "Accept provisional deposit if covered in local currency"
+    },
+    {
+      "code": "BU",
+      "name": "Read meter at end of supply"
+    },
+    {
+      "code": "BV",
+      "name": "Replace if necessary"
+    },
+    {
+      "code": "BW",
+      "name": "Replace"
+    },
+    {
+      "code": "BX",
+      "name": "Do not replace"
+    },
+    {
+      "code": "BY",
+      "name": "Remedial action for incorrect account number"
+    },
+    {
+      "code": "BZ",
+      "name": "Remedial action for unknown account"
+    },
+    {
+      "code": "CA",
+      "name": "Remedial action for account frozen by legal authorities"
+    },
+    {
+      "code": "CB",
+      "name": "Remedial action for deceased account holder"
+    },
+    {
+      "code": "CC",
+      "name": "Remedial action for refusal by account owner or ultimate"
+    },
+    {
+      "code": "CD",
+      "name": "Remedial action for unjustified charges claim on"
+    },
+    {
+      "code": "CE",
+      "name": "Remedial action for unrecognised destination bank or branch"
+    },
+    {
+      "code": "CF",
+      "name": "Remedial action for closed destination account"
+    },
+    {
+      "code": "CG",
+      "name": "Remedial action for transaction over credit limit"
+    },
+    {
+      "code": "CH",
+      "name": "Remedial action for disallowed transaction type"
+    },
+    {
+      "code": "CI",
+      "name": "Remedial action for insufficient funds"
+    },
+    {
+      "code": "CJ",
+      "name": "Remedial action for no prior mandate in place"
+    },
+    {
+      "code": "CK",
+      "name": "Remedial action for revoked mandate"
+    },
+    {
+      "code": "CL",
+      "name": "Remedial action for unknown party"
+    },
+    {
+      "code": "CM",
+      "name": "Remedial action for incorrect bank information"
+    },
+    {
+      "code": "CN",
+      "name": "Remedial action for duplicated transaction"
+    },
+    {
+      "code": "CO",
+      "name": "Convert"
+    },
+    {
+      "code": "CP",
+      "name": "Remedial action for transaction not completed for a reason"
+    },
+    {
+      "code": "CQ",
+      "name": "Return using only authorized transport"
+    },
+    {
+      "code": "CR",
+      "name": "Return using any transport"
+    },
+    {
+      "code": "CS",
+      "name": "Send by courier services"
+    },
+    {
+      "code": "CT",
+      "name": "Return by specified date"
+    },
+    {
+      "code": "CU",
+      "name": "Supplier to organize transport"
+    },
+    {
+      "code": "CV",
+      "name": "Buyer to organize transport"
+    },
+    {
+      "code": "CW",
+      "name": "Prepare for collection"
+    },
+    {
+      "code": "CX",
+      "name": "Prepare for collection on specified date"
+    },
+    {
+      "code": "CZ",
+      "name": "Specific clearing"
+    },
+    {
+      "code": "DA",
+      "name": "Without"
+    },
+    {
+      "code": "DB",
+      "name": "May add"
+    },
+    {
+      "code": "DC",
+      "name": "Confirm"
+    },
+    {
+      "code": "DD",
+      "name": "By registered mail"
+    },
+    {
+      "code": "DE",
+      "name": "By courier service"
+    },
+    {
+      "code": "DF",
+      "name": "By teletransmission"
+    },
+    {
+      "code": "DG",
+      "name": "Preadvice by teletransmission"
+    },
+    {
+      "code": "DH",
+      "name": "By courier service in one set"
+    },
+    {
+      "code": "DI",
+      "name": "By courier service in two sets"
+    },
+    {
+      "code": "DJ",
+      "name": "By registered mail in one set"
+    },
+    {
+      "code": "DK",
+      "name": "By registered mail in two sets"
+    },
+    {
+      "code": "DN",
+      "name": "Per teletransmission"
+    },
+    {
+      "code": "DO",
+      "name": "Advise beneficiary by phone"
+    },
+    {
+      "code": "DP",
+      "name": "Late presentation of documents within documentary credit"
+    },
+    {
+      "code": "EI",
+      "name": "EDI"
+    },
+    {
+      "code": "EM",
+      "name": "Electronic mail"
+    },
+    {
+      "code": "EX",
+      "name": "Expedite"
+    },
+    {
+      "code": "IM",
+      "name": "Send by regular mail"
+    },
+    {
+      "code": "PT",
+      "name": "Print"
+    },
+    {
+      "code": "QC",
+      "name": "Quality control held"
+    },
+    {
+      "code": "QE",
+      "name": "Quality control embargo"
+    },
+    {
+      "code": "RL",
+      "name": "Released"
+    },
+    {
+      "code": "RM",
+      "name": "Send by registered mail"
+    },
+    {
+      "code": "SW",
+      "name": "S.W.I.F.T."
+    },
+    {
+      "code": "SX",
+      "name": "Take once a day"
+    },
+    {
+      "code": "SY",
+      "name": "Take two times a day"
+    },
+    {
+      "code": "SZ",
+      "name": "Take three times a day"
+    },
+    {
+      "code": "TA",
+      "name": "Take four times a day"
+    }
+  ]
+}

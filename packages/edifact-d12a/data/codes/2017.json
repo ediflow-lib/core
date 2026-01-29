@@ -1,0 +1,57 @@
+{
+  "code": "2017",
+  "name": "Despatch pattern timing code",
+  "description": "Code specifying a set of dates/times within a despatch pattern.",
+  "values": [
+    {
+      "code": "A",
+      "name": "1st shift (normal working hours)",
+      "description": "1st shift (normal working hours) The first working period as defined by an entity."
+    },
+    {
+      "code": "B",
+      "name": "2nd shift",
+      "description": "2nd shift A subsequent working period as defined by an entity, that follows 1st shift."
+    },
+    {
+      "code": "C",
+      "name": "3rd shift",
+      "description": "3rd shift A subsequent working period as defined by an entity, that follows 2nd shift."
+    },
+    {
+      "code": "D",
+      "name": "A.M.",
+      "description": "A.M. Ante Meridiem (forenoon)."
+    },
+    {
+      "code": "E",
+      "name": "P.M.",
+      "description": "P.M. Post Meridiem (afternoon)."
+    },
+    {
+      "code": "F",
+      "name": "As directed",
+      "description": "As directed Shipment/delivery instruction will be provided in an independent communication session."
+    },
+    {
+      "code": "G",
+      "name": "Any shift",
+      "description": "Any shift The production period that a product will be built such as 1st shift or 3rd shift."
+    },
+    {
+      "code": "H",
+      "name": "24 hour clock",
+      "description": "24 hour clock Shipment/deliveries will be specified by a continuous time clock ."
+    },
+    {
+      "code": "Y",
+      "name": "None",
+      "description": "None Used to cancel or override a previous pattern."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined Despatch pattern timing according to agreement."
+    }
+  ]
+}

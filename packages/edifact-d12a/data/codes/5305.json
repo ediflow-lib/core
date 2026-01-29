@@ -1,0 +1,77 @@
+{
+  "code": "5305",
+  "name": "Duty or tax or fee category code",
+  "description": "Code specifying a duty or tax or fee category.",
+  "values": [
+    {
+      "code": "A",
+      "name": "Mixed tax rate",
+      "description": "Mixed tax rate Code specifying that the rate is based on mixed tax."
+    },
+    {
+      "code": "AA",
+      "name": "Lower rate",
+      "description": "Lower rate Tax rate is lower than standard rate."
+    },
+    {
+      "code": "AB",
+      "name": "Exempt for resale",
+      "description": "Exempt for resale A tax category code indicating the item is tax exempt when the item is bought for future resale."
+    },
+    {
+      "code": "AC",
+      "name": "Value Added Tax (VAT) not now due for payment",
+      "description": "Value Added Tax (VAT) not now due for payment A code to indicate that the Value Added Tax (VAT) amount which is due on the current invoice is to be paid on receipt of a separate VAT payment request."
+    },
+    {
+      "code": "AD",
+      "name": "Value Added Tax (VAT) due from a previous invoice",
+      "description": "Value Added Tax (VAT) due from a previous invoice A code to indicate that the Value Added Tax (VAT) amount of a previous invoice is to be paid."
+    },
+    {
+      "code": "AE",
+      "name": "VAT Reverse Charge",
+      "description": "VAT Reverse Charge Code specifying that the standard VAT rate is levied from the invoicee."
+    },
+    {
+      "code": "B",
+      "name": "Transferred (VAT)",
+      "description": "Transferred (VAT) VAT not to be paid to the issuer of the invoice but directly to relevant tax authority."
+    },
+    {
+      "code": "C",
+      "name": "Duty paid by supplier",
+      "description": "Duty paid by supplier Duty associated with shipment of goods is paid by the supplier; customer receives goods with duty paid."
+    },
+    {
+      "code": "E",
+      "name": "Exempt from tax",
+      "description": "Exempt from tax Code specifying that taxes are not applicable."
+    },
+    {
+      "code": "G",
+      "name": "Free export item, tax not charged",
+      "description": "Free export item, tax not charged Code specifying that the item is free export and taxes are not charged."
+    },
+    {
+      "code": "H",
+      "name": "Higher rate",
+      "description": "Higher rate Code specifying a higher rate of duty or tax or fee."
+    },
+    {
+      "code": "O",
+      "name": "Services outside scope of tax",
+      "description": "Services outside scope of tax Code specifying that taxes are not applicable to the services."
+    },
+    {
+      "code": "S",
+      "name": "Standard rate",
+      "description": "Standard rate Code specifying the standard rate."
+    },
+    {
+      "code": "Z",
+      "name": "Zero rated goods",
+      "description": "Zero rated goods Code specifying that the goods are at a zero rate."
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "code": "6311",
+  "name": "Measurement purpose code qualifier",
+  "description": "Code qualifying the purpose of the measurement.",
+  "values": [
+    {
+      "code": "AAA",
+      "name": "Line item measurement",
+      "description": "Line item measurement Line item measurement specified by the Food and Drug Administration."
+    },
+    {
+      "code": "AAB",
+      "name": "Transport conditions for delivery to distribution centre",
+      "description": "Transport conditions for delivery to distribution centre Specified measurements refer to transport conditions for delivery to a distribution centre."
+    },
+    {
+      "code": "AAC",
+      "name": "Retail container size",
+      "description": "Retail container size Size of a retail container in terms of volume."
+    },
+    {
+      "code": "AAD",
+      "name": "Other US Government agency application",
+      "description": "Other US Government agency application Measurement to be used by/for other United States government agencies."
+    },
+    {
+      "code": "AAE",
+      "name": "Measurement",
+      "description": "Measurement [6314] To specify the value of a measurement."
+    },
+    {
+      "code": "AAF",
+      "name": "Customs line item measurement",
+      "description": "Customs line item measurement The measurement of a consignment or part for customs purpose."
+    },
+    {
+      "code": "AAG",
+      "name": "Alcohol content",
+      "description": "Alcohol content The measurement of the alcohol content."
+    },
+    {
+      "code": "AAH",
+      "name": "Dimensions total weight",
+      "description": "Dimensions total weight The total weight of an identified dimension."
+    },
+    {
+      "code": "AAI",
+      "name": "Item weight",
+      "description": "Item weight Weight at line item level."
+    },
+    {
+      "code": "AAJ",
+      "name": "Visa quantity",
+      "description": "Visa quantity Measurement reportable for visaed merchandise."
+    },
+    {
+      "code": "AAK",
+      "name": "Licence (quantity deducted)",
+      "description": "Licence (quantity deducted) Quantity to be written off from the total license amount."
+    },
+    {
+      "code": "AAL",
+      "name": "Cargo loaded",
+      "description": "Cargo loaded Total tonnage of cargo loaded onto the conveyance."
+    },
+    {
+      "code": "AAM",
+      "name": "Cargo discharged",
+      "description": "Cargo discharged Total tonnage of cargo unloaded from the conveyance."
+    },
+    {
+      "code": "AAN",
+      "name": "Weight of conveyance",
+      "description": "Weight of conveyance Tonnage of conveyance."
+    },
+    {
+      "code": "AAO",
+      "name": "Conveyance summer dead weight",
+      "description": "Conveyance summer dead weight Registered summer dead weight total tonnage of the vessel."
+    },
+    {
+      "code": "AAP",
+      "name": "Containerized cargo on vessel's weight",
+      "description": "Containerized cargo on vessel's weight Total weight of containerized cargo on vessel."
+    },
+    {
+      "code": "AAQ",
+      "name": "Non-containerized cargo on vessel's weight",
+      "description": "Non-containerized cargo on vessel's weight Total weight of non-containerized cargo on vessel."
+    },
+    {
+      "code": "AAR",
+      "name": "1st specified tariff quantity",
+      "description": "1st specified tariff quantity Primary reportable quantity associated with a tariff number."
+    },
+    {
+      "code": "AAS",
+      "name": "2nd specified tariff quantity",
+      "description": "2nd specified tariff quantity Secondary reportable quantity associated with a tariff number."
+    },
+    {
+      "code": "AAT",
+      "name": "3rd specified tariff quantity",
+      "description": "3rd specified tariff quantity Third reportable quantity associated with a tariff number."
+    },
+    {
+      "code": "AAU",
+      "name": "Package",
+      "description": "Package Commodity/product shipped or sold in discrete individual containers which may be accumulated in a larger package."
+    },
+    {
+      "code": "AAV",
+      "name": "Person",
+      "description": "Person Physical measurement of a person."
+    },
+    {
+      "code": "AAW",
+      "name": "Accuracy",
+      "description": "Accuracy Accuracy of the measurements being sent."
+    },
+    {
+      "code": "AAX",
+      "name": "Consignment measurement",
+      "description": "Consignment measurement Measurement related to a consignment; to be specified by the measurement code dimension value."
+    },
+    {
+      "code": "AAY",
+      "name": "Package measurement",
+      "description": "Package measurement Measurements of package."
+    },
+    {
+      "code": "AAZ",
+      "name": "Handling unit measurement",
+      "description": "Handling unit measurement Measurements of handling unit."
+    },
+    {
+      "code": "ABA",
+      "name": "Unit of measure used for ordered quantities",
+      "description": "Unit of measure used for ordered quantities The unit of measure in which ordered quantities are expressed."
+    },
+    {
+      "code": "ABB",
+      "name": "Transport conditions for delivery to market",
+      "description": "Transport conditions for delivery to market Specified measurements refer to transport conditions for delivery to the market."
+    },
+    {
+      "code": "ABC",
+      "name": "Storage conditions to guarantee product freshness until",
+      "description": "Storage conditions to guarantee product freshness until best before date Specified measurements refer to storage conditions to guarantee the product freshness until best before date."
+    },
+    {
+      "code": "ABI",
+      "name": "Ventilation",
+      "description": "Ventilation The number of air exchanges per hour."
+    },
+    {
+      "code": "ABJ",
+      "name": "Original unit of issue",
+      "description": "Original unit of issue A code identifying the original unit of issue."
+    },
+    {
+      "code": "ABK",
+      "name": "External dimension",
+      "description": "External dimension The outer measurement of the referenced item or package."
+    },
+    {
+      "code": "ABL",
+      "name": "Internal dimension",
+      "description": "Internal dimension The inner measurement of the referenced item or package."
+    },
+    {
+      "code": "ABM",
+      "name": "Test piece dimensions",
+      "description": "Test piece dimensions The size of the test piece that was tested."
+    },
+    {
+      "code": "ABN",
+      "name": "Average reading",
+      "description": "Average reading Average reading of the test being reported on."
+    },
+    {
+      "code": "ABO",
+      "name": "Comparison price measurement",
+      "description": "Comparison price measurement A measurement used for comparison pricing purposes."
+    },
+    {
+      "code": "ABP",
+      "name": "Unit of measure per unit of issue",
+      "description": "Unit of measure per unit of issue Provides the unit of measurement which is to be used for a given unit of issue."
+    },
+    {
+      "code": "ABQ",
+      "name": "Air flow",
+      "description": "Air flow The movement of air."
+    },
+    {
+      "code": "ABS",
+      "name": "Velocity",
+      "description": "Velocity Speed."
+    },
+    {
+      "code": "ABT",
+      "name": "Supplementary unit",
+      "description": "Supplementary unit Supplementary unit referring to the measurement reported."
+    },
+    {
+      "code": "ABU",
+      "name": "Quota",
+      "description": "Quota Maximum number or amount."
+    },
+    {
+      "code": "ABV",
+      "name": "Unit of time",
+      "description": "Unit of time The specification of a specific unit of time."
+    },
+    {
+      "code": "ABW",
+      "name": "Unit of measure used for invoiced quantities",
+      "description": "Unit of measure used for invoiced quantities Unit of measure of invoiced quantity."
+    },
+    {
+      "code": "ABX",
+      "name": "Usable or consumable content",
+      "description": "Usable or consumable content Measurement of usable or consumable contents."
+    },
+    {
+      "code": "ABY",
+      "name": "Payment cycle",
+      "description": "Payment cycle Measurement of the period of time over which payment occurs."
+    },
+    {
+      "code": "ABZ",
+      "name": "Plot size",
+      "description": "Plot size The relative bigness of a plot or an allotment of land."
+    },
+    {
+      "code": "ACA",
+      "name": "Space occupied",
+      "description": "Space occupied Space taken up or filled."
+    },
+    {
+      "code": "ACB",
+      "name": "Building size",
+      "description": "Building size The relative bigness of a permanent fixed structure forming an enclosure."
+    },
+    {
+      "code": "ACC",
+      "name": "Office size",
+      "description": "Office size The relative bigness of a room or building used for clerical or similar work."
+    },
+    {
+      "code": "ACD",
+      "name": "Area damaged",
+      "description": "Area damaged The size of an area that was damaged."
+    },
+    {
+      "code": "ACE",
+      "name": "Land size",
+      "description": "Land size The relative bigness of an expanse of ground."
+    },
+    {
+      "code": "ACF",
+      "name": "Industrial plant size",
+      "description": "Industrial plant size The relative bigness of a factory or facility used in an industrial process."
+    },
+    {
+      "code": "ACG",
+      "name": "Installed capacity",
+      "description": "Installed capacity The maximum amount that can be contained or produced."
+    },
+    {
+      "code": "ACH",
+      "name": "Warehouse size",
+      "description": "Warehouse size The relative bigness of a structure in which things are temporarily stored."
+    },
+    {
+      "code": "ACI",
+      "name": "Volume to dispose",
+      "description": "Volume to dispose Volume to get rid of."
+    },
+    {
+      "code": "ACJ",
+      "name": "Volume to produce",
+      "description": "Volume to produce Volume which will be generated."
+    },
+    {
+      "code": "ACK",
+      "name": "Commodity size",
+      "description": "Commodity size The size name, dimensions, or weight of the commodity."
+    },
+    {
+      "code": "ACL",
+      "name": "Free surface moment",
+      "description": "Free surface moment Effects of force caused by free-surface effects in partly-filled tanks."
+    },
+    {
+      "code": "ASX",
+      "name": "Supplemental tariff classification quantity",
+      "description": "Supplemental tariff classification quantity Supplemental quantity reportable for a tariff number."
+    },
+    {
+      "code": "ASY",
+      "name": "1st specified tariff quantity, general rules of",
+      "description": "1st specified tariff quantity, general rules of interpretation 3(c) or 3(b) The first reportable quantity associated with a tariff number for goods classified under general rules of interpretation 3(b) or 3(c)."
+    },
+    {
+      "code": "ASZ",
+      "name": "2nd specified tariff quantity, general rules of",
+      "description": "2nd specified tariff quantity, general rules of interpretation 3(c) or 3(b) Secondary reportable quantity associated with a tariff classification for goods classified under harmonized tariff schedule general rules of interpretation 3(b) or 3(c)."
+    },
+    {
+      "code": "ATA",
+      "name": "3rd specified tariff quantity, general rules of",
+      "description": "3rd specified tariff quantity, general rules of interpretation 3(c) or 3(b) Third reportable quantity associated with a tariff classification for goods classified under harmonized tariff schedule general rules of interpretation 3(b) or 3(c)."
+    },
+    {
+      "code": "ATB",
+      "name": "Showroom size",
+      "description": "Showroom size The relative bigness of a room used for display."
+    },
+    {
+      "code": "ATC",
+      "name": "Reserves",
+      "description": "Reserves Measurement of reserves maintained."
+    },
+    {
+      "code": "ATD",
+      "name": "Height reference point",
+      "description": "Height reference point The point from which the reference height is determined."
+    },
+    {
+      "code": "ATE",
+      "name": "Available for cultivation",
+      "description": "Available for cultivation The purpose is to measure the availability for cultivation."
+    },
+    {
+      "code": "CH",
+      "name": "Chemistry",
+      "description": "Chemistry The given measurement value identifies the amount or percentage of a specific chemical within a substance."
+    },
+    {
+      "code": "CHW",
+      "name": "Chargeable weight",
+      "description": "Chargeable weight The weight on which charges are based."
+    },
+    {
+      "code": "CN",
+      "name": "Core notch dimensions",
+      "description": "Core notch dimensions The notch dimensions of a core."
+    },
+    {
+      "code": "CS",
+      "name": "Core size",
+      "description": "Core size The size of a core."
+    },
+    {
+      "code": "CT",
+      "name": "Counts",
+      "description": "Counts The measurement is counts."
+    },
+    {
+      "code": "DEN",
+      "name": "Density",
+      "description": "Density Code to indicate the mass of a commodity per unit of volume."
+    },
+    {
+      "code": "DT",
+      "name": "Dimensional tolerance",
+      "description": "Dimensional tolerance Possible range of values for a specified measurement dimension of a product, material or package."
+    },
+    {
+      "code": "DV",
+      "name": "Discrete measurement value",
+      "description": "Discrete measurement value The measurement specified is separate and distinct from other measurements."
+    },
+    {
+      "code": "DX",
+      "name": "Dimension used in price extension",
+      "description": "Dimension used in price extension Dimension will be used in conjunction with price extension."
+    },
+    {
+      "code": "EN",
+      "name": "Environmental conditions",
+      "description": "Environmental conditions The data values to be reported reflect the environmental conditions surrounding a situation including but not limited to test environments."
+    },
+    {
+      "code": "FO",
+      "name": "Footage",
+      "description": "Footage Length or distance in feet."
+    },
+    {
+      "code": "IV",
+      "name": "Interpolated value",
+      "description": "Interpolated value The value based on interpolation."
+    },
+    {
+      "code": "LAO",
+      "name": "Vessel overall length",
+      "description": "Vessel overall length Total overall length of the vessel."
+    },
+    {
+      "code": "LC",
+      "name": "Limited weight/size coils",
+      "description": "Limited weight/size coils Measurement identifying weight or size limit of coils."
+    },
+    {
+      "code": "LGL",
+      "name": "Length limitations",
+      "description": "Length limitations Indicates that value/range information is understood as length limitation."
+    },
+    {
+      "code": "LL",
+      "name": "Lift limitation",
+      "description": "Lift limitation A measurement indicating lift capacity limitations."
+    },
+    {
+      "code": "LMT",
+      "name": "Loading meters",
+      "description": "Loading meters The length in a vehicle, whereby the complete width and height over that length is needed for the goods."
+    },
+    {
+      "code": "PAL",
+      "name": "Payload",
+      "description": "Payload The revenue-producing load carried by a means of transport."
+    },
+    {
+      "code": "PC",
+      "name": "Parting cut (sawcut)",
+      "description": "Parting cut (sawcut) Cut identifying parts of an item probably for separation."
+    },
+    {
+      "code": "PD",
+      "name": "Physical dimensions (product ordered)",
+      "description": "Physical dimensions (product ordered) Specified measurement dimensions refer to physical dimensions of a product, material or package."
+    },
+    {
+      "code": "PL",
+      "name": "Package limitations",
+      "description": "Package limitations A measurement indicating limitations associated with the package."
+    },
+    {
+      "code": "PLL",
+      "name": "Platform limitation",
+      "description": "Platform limitation A measurement indicating limitations in relation to a platform."
+    },
+    {
+      "code": "RL",
+      "name": "Receiving facility limitations",
+      "description": "Receiving facility limitations Specified measurement dimensions are provided as a result of limitations or restrictions related to the physical dimensions of a product, material or package at the reception point."
+    },
+    {
+      "code": "SE",
+      "name": "Property specification",
+      "description": "Property specification Indicates that the data to follow are target specifications."
+    },
+    {
+      "code": "SH",
+      "name": "Shipping tolerance",
+      "description": "Shipping tolerance Tolerances related to shipping."
+    },
+    {
+      "code": "SM",
+      "name": "Shade",
+      "description": "Shade The degree to which a colour is mixed with black or is decreasingly illuminated."
+    },
+    {
+      "code": "SO",
+      "name": "Storage limitation",
+      "description": "Storage limitation A measurement indicating limitation in relation to storage."
+    },
+    {
+      "code": "SR",
+      "name": "Surface roughness",
+      "description": "Surface roughness The measurement of roughness of a surface."
+    },
+    {
+      "code": "ST",
+      "name": "Surface treatment",
+      "description": "Surface treatment The attribute being measured is the surface treatment."
+    },
+    {
+      "code": "SU",
+      "name": "Surface",
+      "description": "Surface Surface area of an object."
+    },
+    {
+      "code": "SV",
+      "name": "Specification value",
+      "description": "Specification value A measurable item characteristic specified by the buyer, seller or third party."
+    },
+    {
+      "code": "TE",
+      "name": "Temperature",
+      "description": "Temperature The measured attribute is temperature."
+    },
+    {
+      "code": "TL",
+      "name": "Transportation equipment limitations",
+      "description": "Transportation equipment limitations A measurement indicating limitations in relation to transportation equipment."
+    },
+    {
+      "code": "TR",
+      "name": "Test result",
+      "description": "Test result Indicates that the data to follow is the test result measurements."
+    },
+    {
+      "code": "VOL",
+      "name": "Volume",
+      "description": "Volume Size or measure of anything in three dimensions."
+    },
+    {
+      "code": "WT",
+      "name": "Weights",
+      "description": "Weights The measured attribute is weight."
+    },
+    {
+      "code": "WX",
+      "name": "Weight used in price extension",
+      "description": "Weight used in price extension Weight will be used in conjunction with price extension."
+    }
+  ]
+}

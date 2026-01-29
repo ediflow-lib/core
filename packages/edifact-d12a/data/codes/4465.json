@@ -1,0 +1,497 @@
+{
+  "code": "4465",
+  "name": "Adjustment reason description code",
+  "description": "Code specifying the adjustment reason.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Agreed settlement",
+      "description": "Agreed settlement An adjustment made based on an agreement between partners."
+    },
+    {
+      "code": "2",
+      "name": "Below specification goods",
+      "description": "Below specification goods Goods of inferior quality."
+    },
+    {
+      "code": "3",
+      "name": "Damaged goods",
+      "description": "Damaged goods An adjustment due to the damage of goods."
+    },
+    {
+      "code": "4",
+      "name": "Short delivery",
+      "description": "Short delivery An adjustment made because the delivered quantity was less than expected."
+    },
+    {
+      "code": "5",
+      "name": "Price query",
+      "description": "Price query An adjustment due to a price query."
+    },
+    {
+      "code": "6",
+      "name": "Proof of delivery required",
+      "description": "Proof of delivery required The buyer requires that proof of delivery be made before payment."
+    },
+    {
+      "code": "7",
+      "name": "Payment on account",
+      "description": "Payment on account Buyer is to make payment later."
+    },
+    {
+      "code": "8",
+      "name": "Returnable container charge included",
+      "description": "Returnable container charge included Adjustment made to deduct the returnable container charge."
+    },
+    {
+      "code": "9",
+      "name": "Invoice error",
+      "description": "Invoice error Invoice not in accordance with the order."
+    },
+    {
+      "code": "10",
+      "name": "Costs for draft",
+      "description": "Costs for draft Cost of draft has been deducted from payment."
+    },
+    {
+      "code": "11",
+      "name": "Bank charges",
+      "description": "Bank charges Bank charges have been deducted from payment."
+    },
+    {
+      "code": "12",
+      "name": "Agent commission",
+      "description": "Agent commission Agent commission has been deducted from payment."
+    },
+    {
+      "code": "13",
+      "name": "Counter claim",
+      "description": "Counter claim Buyer claims an existing (financial) obligation from seller which (partly) offsets the outstanding invoice(s)."
+    },
+    {
+      "code": "14",
+      "name": "Wrong delivery",
+      "description": "Wrong delivery Delivery not according to specifications."
+    },
+    {
+      "code": "15",
+      "name": "Goods returned to agent",
+      "description": "Goods returned to agent Goods returned to agent."
+    },
+    {
+      "code": "16",
+      "name": "Goods partly returned",
+      "description": "Goods partly returned Goods partly returned."
+    },
+    {
+      "code": "17",
+      "name": "Transport damage",
+      "description": "Transport damage Goods damaged in transit."
+    },
+    {
+      "code": "18",
+      "name": "Goods on consignment",
+      "description": "Goods on consignment Buyer does not accept invoice(s) charge as it relates to goods where the ownership remains with the seller until sold."
+    },
+    {
+      "code": "19",
+      "name": "Trade discount",
+      "description": "Trade discount Trade discount deducted from payment."
+    },
+    {
+      "code": "20",
+      "name": "Deduction for late delivery",
+      "description": "Deduction for late delivery Penalty amount deducted for later delivery."
+    },
+    {
+      "code": "21",
+      "name": "Advertising costs",
+      "description": "Advertising costs Advertising costs deducted from payment."
+    },
+    {
+      "code": "22",
+      "name": "Customs duties",
+      "description": "Customs duties Customs duties deducted from payment."
+    },
+    {
+      "code": "23",
+      "name": "Telephone and postal costs",
+      "description": "Telephone and postal costs Telephone and postal costs deducted from payment."
+    },
+    {
+      "code": "24",
+      "name": "Repair costs",
+      "description": "Repair costs Repair costs deducted from payment."
+    },
+    {
+      "code": "25",
+      "name": "Attorney fees",
+      "description": "Attorney fees Attorney fees deducted from payment."
+    },
+    {
+      "code": "26",
+      "name": "Taxes",
+      "description": "Taxes Taxes deducted from payment."
+    },
+    {
+      "code": "27",
+      "name": "Reclaimed deduction",
+      "description": "Reclaimed deduction Buyer reclaims an unspecified deduction from the invoice(s) (to be) paid."
+    },
+    {
+      "code": "28",
+      "name": "See separate advice",
+      "description": "See separate advice Buyer or seller refers to separate correspondence about a related shipment(s) and/or invoice(s) and/or a payment(s)."
+    },
+    {
+      "code": "29",
+      "name": "Buyer refused to take delivery",
+      "description": "Buyer refused to take delivery Buyer refused to take delivery."
+    },
+    {
+      "code": "30",
+      "name": "Direct payment to seller",
+      "description": "Direct payment to seller Buyer states to have paid to seller."
+    },
+    {
+      "code": "31",
+      "name": "Buyer disagrees with due date",
+      "description": "Buyer disagrees with due date Buyer disagrees with due date."
+    },
+    {
+      "code": "32",
+      "name": "Goods not delivered",
+      "description": "Goods not delivered Buyer has not received the goods."
+    },
+    {
+      "code": "33",
+      "name": "Late delivery",
+      "description": "Late delivery Goods delivered too late."
+    },
+    {
+      "code": "34",
+      "name": "Quoted as paid to you",
+      "description": "Quoted as paid to you Factor informs the seller that a certain invoice(s) was paid by the buyer directly to the seller."
+    },
+    {
+      "code": "35",
+      "name": "Goods returned",
+      "description": "Goods returned Buyer returned the goods to seller."
+    },
+    {
+      "code": "36",
+      "name": "Invoice not received",
+      "description": "Invoice not received Buyer claims he did not receive the invoice for which payment is requested."
+    },
+    {
+      "code": "37",
+      "name": "Credit note to debtor/not to us",
+      "description": "Credit note to debtor/not to us Factor informs the seller that he did not receive copy of a credit note sent to the buyer."
+    },
+    {
+      "code": "38",
+      "name": "Deducted bonus",
+      "description": "Deducted bonus Buyer has/will deduct a bonus he is entitled to from the payment."
+    },
+    {
+      "code": "39",
+      "name": "Deducted discount",
+      "description": "Deducted discount Buyer has/will deduct the discount he is entitled to from the payment."
+    },
+    {
+      "code": "40",
+      "name": "Deducted freight costs",
+      "description": "Deducted freight costs Buyer has/will deduct freight costs from the payment."
+    },
+    {
+      "code": "41",
+      "name": "Deduction against other invoices",
+      "description": "Deduction against other invoices Deduction against invoices already settled."
+    },
+    {
+      "code": "42",
+      "name": "Credit balance(s)",
+      "description": "Credit balance(s) Buyer makes use of existing credit balance(s) to offset (partly) the outstanding invoice(s)."
+    },
+    {
+      "code": "43",
+      "name": "Reason unknown",
+      "description": "Reason unknown Factor informs the seller that the reason of a commercial dispute raised by the buyer is unknown."
+    },
+    {
+      "code": "44",
+      "name": "Awaiting message from seller",
+      "description": "Awaiting message from seller Buyer or factor are waiting for a (reply) message from the seller before a commercial dispute can be settled."
+    },
+    {
+      "code": "45",
+      "name": "Debit note to seller",
+      "description": "Debit note to seller Buyer issued debit note to seller."
+    },
+    {
+      "code": "46",
+      "name": "Discount beyond terms",
+      "description": "Discount beyond terms Buyer has taken a discount larger than the discount terms agreed with the seller."
+    },
+    {
+      "code": "47",
+      "name": "See buyer's letter",
+      "description": "See buyer's letter See correspondence from buyer."
+    },
+    {
+      "code": "48",
+      "name": "Allowance/charge error",
+      "description": "Allowance/charge error Error made by seller in the amount of allowance/charge."
+    },
+    {
+      "code": "49",
+      "name": "Substitute product",
+      "description": "Substitute product Product delivered not fully according to specification."
+    },
+    {
+      "code": "50",
+      "name": "Terms of sale error",
+      "description": "Terms of sale error Terms of sale not according to purchase order."
+    },
+    {
+      "code": "51",
+      "name": "Required data missing",
+      "description": "Required data missing A message sent by buyer to seller or by seller to buyer did not contain data required to take action/decision."
+    },
+    {
+      "code": "52",
+      "name": "Wrong invoice",
+      "description": "Wrong invoice Invoice issued to wrong party."
+    },
+    {
+      "code": "53",
+      "name": "Duplicate invoice",
+      "description": "Duplicate invoice Invoice sent twice."
+    },
+    {
+      "code": "54",
+      "name": "Weight error",
+      "description": "Weight error Weight not in accordance with the order."
+    },
+    {
+      "code": "55",
+      "name": "Additional charge not authorized",
+      "description": "Additional charge not authorized Additional charge not authorised."
+    },
+    {
+      "code": "56",
+      "name": "Incorrect discount",
+      "description": "Incorrect discount Buyer states that calculated discount on the invoice(s) is wrongly calculated."
+    },
+    {
+      "code": "57",
+      "name": "Price change",
+      "description": "Price change Price has been changed."
+    },
+    {
+      "code": "58",
+      "name": "Variation",
+      "description": "Variation The adjustment is a variation from an agreed value."
+    },
+    {
+      "code": "59",
+      "name": "Chargeback",
+      "description": "Chargeback Balance of one or more items charged back to seller."
+    },
+    {
+      "code": "60",
+      "name": "Offset",
+      "description": "Offset Allocation of one or more debit items to one or more credit items or vice-versa."
+    },
+    {
+      "code": "61",
+      "name": "Indirect payment",
+      "description": "Indirect payment Payment in settlement of an invoice has been made to a party other than the designated creditor."
+    },
+    {
+      "code": "62",
+      "name": "Financial reassignment",
+      "description": "Financial reassignment Previously assigned invoice/credit note is being reassigned."
+    },
+    {
+      "code": "63",
+      "name": "Reinstatement of chargeback/offset",
+      "description": "Reinstatement of chargeback/offset Reversal or cancellation of a chargeback and/or offset relating to an incorrect balance."
+    },
+    {
+      "code": "64",
+      "name": "Expecting new terms",
+      "description": "Expecting new terms Buyer expects that seller revises the terms of payment of an invoice."
+    },
+    {
+      "code": "65",
+      "name": "Settlement to agent",
+      "description": "Settlement to agent Invoice has been/to be paid to seller's agent."
+    },
+    {
+      "code": "66",
+      "name": "Cash discount",
+      "description": "Cash discount An adjustment has been made due to the application of a cash discount."
+    },
+    {
+      "code": "67",
+      "name": "Delcredere costs",
+      "description": "Delcredere costs Costs deducted from a total amount to pay for the services of central payment."
+    },
+    {
+      "code": "68",
+      "name": "Early payment allowance adjustment",
+      "description": "Early payment allowance adjustment Adjustment results from the application of an early payment allowance."
+    },
+    {
+      "code": "69",
+      "name": "Incorrect due date for monetary amount",
+      "description": "Incorrect due date for monetary amount Adjustment has been made because an incorrect due date was referred to with regard to the monetary amount."
+    },
+    {
+      "code": "70",
+      "name": "Wrong monetary amount resulting from incorrect free goods",
+      "description": "Wrong monetary amount resulting from incorrect free goods quantity Adjustment has been made because of a wrong monetary amount resulting from an incorrect free goods quantity."
+    },
+    {
+      "code": "71",
+      "name": "Rack or shelf replenishment service by a supplier",
+      "description": "Rack or shelf replenishment service by a supplier Adjustment due to the replenishment of the racks or shelves by a supplier."
+    },
+    {
+      "code": "72",
+      "name": "Temporary special promotion",
+      "description": "Temporary special promotion Adjustment due to a temporary special promotion."
+    },
+    {
+      "code": "73",
+      "name": "Difference in tax rate",
+      "description": "Difference in tax rate Adjustment due to a difference in tax rate."
+    },
+    {
+      "code": "74",
+      "name": "Quantity discount",
+      "description": "Quantity discount Adjustment due to a quantity discount."
+    },
+    {
+      "code": "75",
+      "name": "Promotion discount",
+      "description": "Promotion discount Adjustment due to a promotion discount."
+    },
+    {
+      "code": "76",
+      "name": "Cancellation deadline passed",
+      "description": "Cancellation deadline passed The cancellation has occurred after the deadline."
+    },
+    {
+      "code": "77",
+      "name": "Pricing discount",
+      "description": "Pricing discount An adjustment has been made due to the application of a pricing discount."
+    },
+    {
+      "code": "78",
+      "name": "Volume discount",
+      "description": "Volume discount Discount for reaching or exceeding an agreed accumulated volume."
+    },
+    {
+      "code": "79",
+      "name": "Sundry discount",
+      "description": "Sundry discount Adjustment has been made due to the application of a sundry discount."
+    },
+    {
+      "code": "80",
+      "name": "Card holder signature missing",
+      "description": "Card holder signature missing The adjustment was made due to the card holder not signing the filing document."
+    },
+    {
+      "code": "81",
+      "name": "Card expiry date missing",
+      "description": "Card expiry date missing The adjustment was made due to the card acceptor not specifying the expiry date within the filing document."
+    },
+    {
+      "code": "82",
+      "name": "Card number error",
+      "description": "Card number error The adjustment was made due to the card acceptor specifying an erroneous card number within the filing document."
+    },
+    {
+      "code": "83",
+      "name": "Card expired",
+      "description": "Card expired The adjustment was made due to the card acceptor specifying an expired expiry date within the filing document or electronic data."
+    },
+    {
+      "code": "84",
+      "name": "Test card transaction",
+      "description": "Test card transaction The adjustment was made due to a test card transaction, used for installing, maintaining or debugging purposes."
+    },
+    {
+      "code": "85",
+      "name": "Permission limit exceeded",
+      "description": "Permission limit exceeded The adjustment was made due to the permission limit defined by card issuer or card company was exceeded without prior authorisation. Synonym: Floor limit."
+    },
+    {
+      "code": "86",
+      "name": "Wrong authorisation code",
+      "description": "Wrong authorisation code The adjustment was made due to the authorisation code provided did not fit to the specified transaction."
+    },
+    {
+      "code": "87",
+      "name": "Wrong authorised amount",
+      "description": "Wrong authorised amount The adjustment was made due to the specified amount not meeting the authorised amount for the transaction."
+    },
+    {
+      "code": "88",
+      "name": "Authorisation failed",
+      "description": "Authorisation failed The adjustment was made due to the authorisation needed had failed."
+    },
+    {
+      "code": "89",
+      "name": "Card acceptor data error",
+      "description": "Card acceptor data error The adjustment was made due to the data regarding the card acceptor is erroneous."
+    },
+    {
+      "code": "90",
+      "name": "Treasury management service charge",
+      "description": "Treasury management service charge Charge for the service of treasury management."
+    },
+    {
+      "code": "91",
+      "name": "Agreed discount",
+      "description": "Agreed discount The reason for the adjustment is that a mutually agreed discount has been applied."
+    },
+    {
+      "code": "92",
+      "name": "Expediting fee",
+      "description": "Expediting fee The reason for the adjustment is that a fee for expediting has been applied."
+    },
+    {
+      "code": "93",
+      "name": "Invoicing fee",
+      "description": "Invoicing fee The reason for the adjustment is that a fee for invoicing has been applied."
+    },
+    {
+      "code": "94",
+      "name": "Freight charge",
+      "description": "Freight charge The reason for the adjustment is that freight charges has been applied."
+    },
+    {
+      "code": "95",
+      "name": "Small order processing service charge",
+      "description": "Small order processing service charge The reason for the adjustment is that a fee for processing of a small order (an order below a defined threshold) has been applied."
+    },
+    {
+      "code": "96",
+      "name": "Currency exchange differences",
+      "description": "Currency exchange differences An adjustment made due to a change in a currency exchange rate."
+    },
+    {
+      "code": "97",
+      "name": "Insolvency",
+      "description": "Insolvency An adjustment made due to the partner's inability to pay open debts."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
+}

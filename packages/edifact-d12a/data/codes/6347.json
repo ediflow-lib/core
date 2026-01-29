@@ -1,0 +1,42 @@
+{
+  "code": "6347",
+  "name": "Currency usage code qualifier",
+  "description": "Code qualifying the usage of a currency.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Charge payment currency",
+      "description": "Charge payment currency The currency in which charges are to be paid."
+    },
+    {
+      "code": "2",
+      "name": "Reference currency",
+      "description": "Reference currency The currency applicable to amounts stated. It may have to be converted."
+    },
+    {
+      "code": "3",
+      "name": "Target currency",
+      "description": "Target currency The currency which should be used to the target destination of the transaction."
+    },
+    {
+      "code": "4",
+      "name": "Transport document currency",
+      "description": "Transport document currency Currency applicable to amounts stated in a transport document/message."
+    },
+    {
+      "code": "5",
+      "name": "Calculation base currency",
+      "description": "Calculation base currency Currency on which the calculation is based."
+    },
+    {
+      "code": "6",
+      "name": "Information Currency",
+      "description": "Information Currency Additional currency the message recipient needs for information purposes. The actual message amount(s) is/are not based upon this currency."
+    },
+    {
+      "code": "7",
+      "name": "Currency of the account",
+      "description": "Currency of the account Currency in which the account is held."
+    }
+  ]
+}

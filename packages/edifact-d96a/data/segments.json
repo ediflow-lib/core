@@ -1,0 +1,1058 @@
+{
+  "ADR": {
+    "tag": "ADR",
+    "name": "ADDRESS",
+    "description": "To specify an address.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C817",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C090",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C819",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C517",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "ARD": {
+    "tag": "ARD",
+    "name": "AMOUNTS RELATIONSHIP DETAILS",
+    "description": "To provide details of the function of a monetary",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C549",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "ASI": {
+    "tag": "ASI",
+    "name": "ARRAY STRUCTURE IDENTIFICATION",
+    "description": "To identify the structure of an array.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C779",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "BII": {
+    "tag": "BII",
+    "name": "STRUCTURE IDENTIFICATION",
+    "description": "A segment used to convey an indexing structure",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C045",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "CAV": {
+    "tag": "CAV",
+    "name": "CHARACTERISTIC VALUE",
+    "description": "To provide the value of a characteristic.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C889",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "CCI": {
+    "tag": "CCI",
+    "name": "CHARACTERISTIC/CLASS ID",
+    "description": "To identify and describe a specific characteristic.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C502",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C564",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "CNT": {
+    "tag": "CNT",
+    "name": "CONTROL TOTAL",
+    "description": "To provide control total.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C270",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "COM": {
+    "tag": "COM",
+    "name": "COMMUNICATION CONTACT",
+    "description": "To identify a communication number of a department or",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C076",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "CPI": {
+    "tag": "CPI",
+    "name": "CHARGE PAYMENT INSTRUCTIONS",
+    "description": "To identify a charge.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C231",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "CST": {
+    "tag": "CST",
+    "name": "CUSTOMS STATUS OF GOODS",
+    "description": "To specify goods in terms of customs identities,",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C246",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "CUX": {
+    "tag": "CUX",
+    "name": "CURRENCIES",
+    "description": "To specify currencies used in the transaction and",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C504",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C504",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "DGS": {
+    "tag": "DGS",
+    "name": "DANGEROUS GOODS",
+    "description": "To identify dangerous goods.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C205",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C234",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C223",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C235",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C236",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "DIM": {
+    "tag": "DIM",
+    "name": "DIMENSIONS",
+    "description": "To specify dimensions.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C211",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "DLM": {
+    "tag": "DLM",
+    "name": "DELIVERY LIMITATIONS",
+    "description": "To specify limitations on deliveries.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C214",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "DOC": {
+    "tag": "DOC",
+    "name": "DOCUMENT/MESSAGE DETAILS",
+    "description": "To identify documents, either printed, electronically",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C503",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "DTM": {
+    "tag": "DTM",
+    "name": "DATE/TIME/PERIOD",
+    "description": "To specify date, and/or time, or period.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C507",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "EMP": {
+    "tag": "EMP",
+    "name": "EMPLOYMENT DETAILS",
+    "description": "To specify employment details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C948",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C951",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C950",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "EQD": {
+    "tag": "EQD",
+    "name": "EQUIPMENT DETAILS",
+    "description": "To identify a unit of equipment.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C224",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "ERC": {
+    "tag": "ERC",
+    "name": "APPLICATION ERROR INFORMATION",
+    "description": "To identify the type of application error within a",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C901",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "FCA": {
+    "tag": "FCA",
+    "name": "FINANCIAL CHARGES ALLOCATION",
+    "description": "Description of allocation of charges.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C878",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "FNS": {
+    "tag": "FNS",
+    "name": "FOOTNOTE SET",
+    "description": "To identify a set of footnotes.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C783",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "FTX": {
+    "tag": "FTX",
+    "name": "FREE TEXT",
+    "description": "To provide free form or coded text information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C107",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C108",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "GID": {
+    "tag": "GID",
+    "name": "GOODS ITEM DETAILS",
+    "description": "To indicate totals of a goods item.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C213",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "GIR": {
+    "tag": "GIR",
+    "name": "RELATED IDENTIFICATION NUMBERS",
+    "description": "To specify a related set of identification numbers.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "GOR": {
+    "tag": "GOR",
+    "name": "GOVERNMENTAL REQUIREMENTS",
+    "description": "To indicate the requirement for a specific govermental",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C232",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "HAN": {
+    "tag": "HAN",
+    "name": "HANDLING INSTRUCTIONS",
+    "description": "To specify handling and where necessary, notify",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C524",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C218",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "IDE": {
+    "tag": "IDE",
+    "name": "IDENTITY",
+    "description": "To identify an object.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "IMD": {
+    "tag": "IMD",
+    "name": "ITEM DESCRIPTION",
+    "description": "To describe an item in either an industry or free",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C273",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "INP": {
+    "tag": "INP",
+    "name": "PARTIES TO INSTRUCTION",
+    "description": "To specify parties to an instruction and where",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C849",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C850",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "IRQ": {
+    "tag": "IRQ",
+    "name": "INFORMATION REQUIRED",
+    "description": "To indicate which information is requested in a",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C333",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "LIN": {
+    "tag": "LIN",
+    "name": "LINE ITEM",
+    "description": "To identify a line item and configuration.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C829",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "MEA": {
+    "tag": "MEA",
+    "name": "MEASUREMENTS",
+    "description": "To specify physical measurements, including dimension",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C502",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C174",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "MKS": {
+    "tag": "MKS",
+    "name": "MARKET/SALES CHANNEL INFORMATION",
+    "description": "To specify to which market and/or through which sales",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C332",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "MSG": {
+    "tag": "MSG",
+    "name": "MESSAGE TYPE IDENTIFICATION",
+    "description": "To identify a message type and to give its class and",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C709",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "NAT": {
+    "tag": "NAT",
+    "name": "NATIONALITY",
+    "description": "To specify a nationality.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PAI": {
+    "tag": "PAI",
+    "name": "PAYMENT INSTRUCTIONS",
+    "description": "To specify the instructions for payment.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C534",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PCD": {
+    "tag": "PCD",
+    "name": "PERCENTAGE DETAILS",
+    "description": "To specify percentage information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C501",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PDI": {
+    "tag": "PDI",
+    "name": "PERSON DEMOGRAPHIC INFORMATION",
+    "description": "To specify items of person demographic information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C085",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C101",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "PIA": {
+    "tag": "PIA",
+    "name": "ADDITIONAL PRODUCT ID",
+    "description": "To specify additional or substitutional item",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C212",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C292",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "PRC": {
+    "tag": "PRC",
+    "name": "PROCESS IDENTIFICATION",
+    "description": "To identify a process.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C242",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PTY": {
+    "tag": "PTY",
+    "name": "PRIORITY",
+    "description": "The segment is used to communicate priority",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C585",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "QVR": {
+    "tag": "QVR",
+    "name": "QUANTITY VARIANCES",
+    "description": "To specify item details relating to quantity",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C279",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "REL": {
+    "tag": "REL",
+    "name": "RELATIONSHIP",
+    "description": "To identify the direct relationship between the",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C941",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "RNG": {
+    "tag": "RNG",
+    "name": "RANGE DETAILS",
+    "description": "To identify a range.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C280",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SAL": {
+    "tag": "SAL",
+    "name": "REMUNERATION TYPE IDENTIFICATION",
+    "description": "Identification of a remuneration type.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C049",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "SCD": {
+    "tag": "SCD",
+    "name": "STRUCTURE COMPONENT DEFINITION",
+    "description": "To specify a component of a data structure (e.g. an",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C786",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "SEL": {
+    "tag": "SEL",
+    "name": "SEAL NUMBER",
+    "description": "To specify a seal number related to equipment.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C215",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SFI": {
+    "tag": "SFI",
+    "name": "SAFETY INFORMATION",
+    "description": "To identify regulatory safety information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C814",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C815",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "STA": {
+    "tag": "STA",
+    "name": "STATISTICS",
+    "description": "To transmit summary statistics related to a specified",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C527",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "TAX": {
+    "tag": "TAX",
+    "name": "DUTY/TAX/FEE DETAILS",
+    "description": "To specify relevant duty/tax/fee information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C241",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C533",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C243",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "TDT": {
+    "tag": "TDT",
+    "name": "DETAILS OF TRANSPORT",
+    "description": "To specify the transport details such as mode of",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C220",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C228",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C040",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C401",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C222",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "TMP": {
+    "tag": "TMP",
+    "name": "TEMPERATURE",
+    "description": "To specify the temperature setting.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C239",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "TPL": {
+    "tag": "TPL",
+    "name": "TRANSPORT PLACEMENT",
+    "description": "To specify placement of goods or equipment in relation",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C222",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "VLI": {
+    "tag": "VLI",
+    "name": "VALUE LIST IDENTIFICATION",
+    "description": "To identify a coded or non coded value list.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C780",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C240",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  }
+}

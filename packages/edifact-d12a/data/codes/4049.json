@@ -1,0 +1,22 @@
+{
+  "code": "4049",
+  "name": "Certainty description code",
+  "description": "Code specifying a certainty.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Connection guaranteed",
+      "description": "Connection guaranteed The connection is guaranteed under any circumstances."
+    },
+    {
+      "code": "2",
+      "name": "Connection normally guaranteed",
+      "description": "Connection normally guaranteed The connection is normally guaranteed, although the connection time available is shorter than the location connection time."
+    },
+    {
+      "code": "3",
+      "name": "Connection not guaranteed",
+      "description": "Connection not guaranteed The connetion is not guaranteed, although the connection time available is longer than the location connection time."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "code": "7139",
+  "name": "Product characteristic identification code",
+  "description": "Code specifying the identification of a product characteristic.",
+  "values": [
+    {
+      "code": "1",
+      "name": "TCV",
+      "description": "TCV TCV tariff is applicable for the given travel service (TCV = Tarif Commun Voyageurs, ordinary tariff for travellers)."
+    },
+    {
+      "code": "2",
+      "name": "Global tariff",
+      "description": "Global tariff All inclusive tariff is applicable for the given travel service."
+    },
+    {
+      "code": "3",
+      "name": "East - West tariff",
+      "description": "East - West tariff Tariff used for traffic from east to west or vice versa."
+    },
+    {
+      "code": "4",
+      "name": "No published tariff",
+      "description": "No published tariff There is no published tariff for the service."
+    },
+    {
+      "code": "5",
+      "name": "Train with TCV or Market Price",
+      "description": "Train with TCV or Market Price Train running with service that can be sold at TCV (Tarif Commun Voyageurs - ordinary tariff for travellers) or Market Price."
+    }
+  ]
+}

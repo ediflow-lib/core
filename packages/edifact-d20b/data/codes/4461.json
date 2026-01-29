@@ -1,0 +1,479 @@
+{
+  "code": "4461",
+  "name": "Payment means code",
+  "description": "Code identifying a means of payment.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Instrument not defined"
+    },
+    {
+      "code": "2",
+      "name": "Automated clearing house credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the automated clearing"
+    },
+    {
+      "code": "3",
+      "name": "Automated clearing house debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the automated clearing"
+    },
+    {
+      "code": "4",
+      "name": "ACH demand debit reversal"
+    },
+    {
+      "code": "A",
+      "name": "request to reverse an ACH debit transaction to a"
+    },
+    {
+      "code": "5",
+      "name": "ACH demand credit reversal"
+    },
+    {
+      "code": "A",
+      "name": "request to reverse a credit transaction to a demand"
+    },
+    {
+      "code": "6",
+      "name": "ACH demand credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "7",
+      "name": "ACH demand debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "8",
+      "name": "Hold"
+    },
+    {
+      "code": "9",
+      "name": "National or regional clearing"
+    },
+    {
+      "code": "10",
+      "name": "In cash"
+    },
+    {
+      "code": "11",
+      "name": "ACH savings credit reversal"
+    },
+    {
+      "code": "A",
+      "name": "request to reverse an ACH credit transaction to a"
+    },
+    {
+      "code": "12",
+      "name": "ACH savings debit reversal"
+    },
+    {
+      "code": "A",
+      "name": "request to reverse an ACH debit transaction to a"
+    },
+    {
+      "code": "13",
+      "name": "ACH savings credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "14",
+      "name": "ACH savings debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "15",
+      "name": "Bookentry credit"
+    },
+    {
+      "code": "A",
+      "name": "credit entry between two accounts at the same bank"
+    },
+    {
+      "code": "16",
+      "name": "Bookentry debit"
+    },
+    {
+      "code": "A",
+      "name": "debit entry between two accounts at the same bank"
+    },
+    {
+      "code": "17",
+      "name": "ACH demand cash concentration/disbursement (CCD) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "18",
+      "name": "ACH demand cash concentration/disbursement (CCD) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "19",
+      "name": "ACH demand corporate trade payment (CTP) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "20",
+      "name": "Cheque"
+    },
+    {
+      "code": "21",
+      "name": "Banker's draft"
+    },
+    {
+      "code": "22",
+      "name": "Certified banker's draft"
+    },
+    {
+      "code": "23",
+      "name": "Bank cheque (issued by a banking or similar establishment)"
+    },
+    {
+      "code": "24",
+      "name": "Bill of exchange awaiting acceptance"
+    },
+    {
+      "code": "25",
+      "name": "Certified cheque"
+    },
+    {
+      "code": "26",
+      "name": "Local cheque"
+    },
+    {
+      "code": "27",
+      "name": "ACH demand corporate trade payment (CTP) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "28",
+      "name": "ACH demand corporate trade exchange (CTX) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "29",
+      "name": "ACH demand corporate trade exchange (CTX) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "30",
+      "name": "Credit transfer"
+    },
+    {
+      "code": "31",
+      "name": "Debit transfer"
+    },
+    {
+      "code": "32",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+)"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "33",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+)"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "34",
+      "name": "ACH prearranged payment and deposit (PPD)"
+    },
+    {
+      "code": "A",
+      "name": "consumer credit transaction made through the ACH"
+    },
+    {
+      "code": "35",
+      "name": "ACH savings cash concentration/disbursement (CCD) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "36",
+      "name": "ACH savings cash concentration/disbursement (CCD) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "37",
+      "name": "ACH savings corporate trade payment (CTP) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "38",
+      "name": "ACH savings corporate trade payment (CTP) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "39",
+      "name": "ACH savings corporate trade exchange (CTX) credit"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "40",
+      "name": "ACH savings corporate trade exchange (CTX) debit"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "41",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+)"
+    },
+    {
+      "code": "A",
+      "name": "credit transaction made through the ACH system to a"
+    },
+    {
+      "code": "42",
+      "name": "Payment to bank account"
+    },
+    {
+      "code": "43",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+)"
+    },
+    {
+      "code": "A",
+      "name": "debit transaction made through the ACH system to a"
+    },
+    {
+      "code": "44",
+      "name": "Accepted bill of exchange"
+    },
+    {
+      "code": "45",
+      "name": "Referenced home-banking credit transfer"
+    },
+    {
+      "code": "A",
+      "name": "referenced credit transfer initiated through home-"
+    },
+    {
+      "code": "46",
+      "name": "Interbank debit transfer"
+    },
+    {
+      "code": "A",
+      "name": "debit transfer via interbank means."
+    },
+    {
+      "code": "47",
+      "name": "Home-banking debit transfer"
+    },
+    {
+      "code": "A",
+      "name": "debit transfer initiated through home-banking."
+    },
+    {
+      "code": "48",
+      "name": "Bank card"
+    },
+    {
+      "code": "49",
+      "name": "Direct debit"
+    },
+    {
+      "code": "50",
+      "name": "Payment by postgiro"
+    },
+    {
+      "code": "A",
+      "name": "method for the transmission of funds through the"
+    },
+    {
+      "code": "51",
+      "name": "FR, norme 6 97-Telereglement CFONB (French Organisation for"
+    },
+    {
+      "code": "A",
+      "name": "French standard procedure that allows a debtor to pay"
+    },
+    {
+      "code": "52",
+      "name": "Urgent commercial payment"
+    },
+    {
+      "code": "53",
+      "name": "Urgent Treasury Payment"
+    },
+    {
+      "code": "54",
+      "name": "Credit card"
+    },
+    {
+      "code": "55",
+      "name": "Debit card"
+    },
+    {
+      "code": "56",
+      "name": "Bankgiro"
+    },
+    {
+      "code": "57",
+      "name": "Standing agreement"
+    },
+    {
+      "code": "58",
+      "name": "SEPA credit transfer"
+    },
+    {
+      "code": "59",
+      "name": "SEPA direct debit"
+    },
+    {
+      "code": "60",
+      "name": "Promissory note"
+    },
+    {
+      "code": "61",
+      "name": "Promissory note signed by the debtor"
+    },
+    {
+      "code": "62",
+      "name": "Promissory note signed by the debtor and endorsed by a bank"
+    },
+    {
+      "code": "63",
+      "name": "Promissory note signed by the debtor and endorsed by a"
+    },
+    {
+      "code": "64",
+      "name": "Promissory note signed by a bank"
+    },
+    {
+      "code": "65",
+      "name": "Promissory note signed by a bank and endorsed by another"
+    },
+    {
+      "code": "66",
+      "name": "Promissory note signed by a third party"
+    },
+    {
+      "code": "67",
+      "name": "Promissory note signed by a third party and endorsed by a"
+    },
+    {
+      "code": "68",
+      "name": "Online payment service"
+    },
+    {
+      "code": "69",
+      "name": "Transfer Advice"
+    },
+    {
+      "code": "70",
+      "name": "Bill drawn by the creditor on the debtor"
+    },
+    {
+      "code": "74",
+      "name": "Bill drawn by the creditor on a bank"
+    },
+    {
+      "code": "75",
+      "name": "Bill drawn by the creditor, endorsed by another bank"
+    },
+    {
+      "code": "76",
+      "name": "Bill drawn by the creditor on a bank and endorsed by a"
+    },
+    {
+      "code": "77",
+      "name": "Bill drawn by the creditor on a third party"
+    },
+    {
+      "code": "78",
+      "name": "Bill drawn by creditor on third party, accepted and"
+    },
+    {
+      "code": "91",
+      "name": "Not transferable banker's draft"
+    },
+    {
+      "code": "92",
+      "name": "Not transferable local cheque"
+    },
+    {
+      "code": "93",
+      "name": "Reference giro"
+    },
+    {
+      "code": "94",
+      "name": "Urgent giro"
+    },
+    {
+      "code": "95",
+      "name": "Free format giro"
+    },
+    {
+      "code": "96",
+      "name": "Requested method for payment was not used"
+    },
+    {
+      "code": "97",
+      "name": "Clearing between partners"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    },
+    {
+      "code": "A",
+      "name": "code assigned within a code list to be used on an"
+    }
+  ]
+}

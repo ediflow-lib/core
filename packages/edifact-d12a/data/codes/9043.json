@@ -1,0 +1,47 @@
+{
+  "code": "9043",
+  "name": "Reservation identifier code qualifier",
+  "description": "Code qualifying the reservation identifier.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Confirmation number",
+      "description": "Confirmation number Number issued by the provider system by which they reference the reservation."
+    },
+    {
+      "code": "2",
+      "name": "Cancellation number",
+      "description": "Cancellation number Number issued by the provider system by which they reference the reservation marked as cancelled."
+    },
+    {
+      "code": "3",
+      "name": "Dossier",
+      "description": "Dossier The reservation identifier refers to a dossier."
+    },
+    {
+      "code": "4",
+      "name": "Booking",
+      "description": "Booking The reservation identifier refers to a booking."
+    },
+    {
+      "code": "5",
+      "name": "Breakfast",
+      "description": "Breakfast The reservation identifier refers to a breakfast reservation."
+    },
+    {
+      "code": "6",
+      "name": "Lunch",
+      "description": "Lunch The reservation identifier refers to a lunch reservation."
+    },
+    {
+      "code": "7",
+      "name": "Dinner",
+      "description": "Dinner The reservation identifier refers to a dinner reservation."
+    },
+    {
+      "code": "8",
+      "name": "Composite booking",
+      "description": "Composite booking The reservation identifier refers to a booking including several reservations."
+    }
+  ]
+}

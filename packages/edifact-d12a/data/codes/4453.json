@@ -1,0 +1,42 @@
+{
+  "code": "4453",
+  "name": "Free text function code",
+  "description": "Code specifying the function of free text.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Text for subsequent use",
+      "description": "Text for subsequent use The occurrence of this text does not affect message processing."
+    },
+    {
+      "code": "2",
+      "name": "Text replacing missing code",
+      "description": "Text replacing missing code Text description of a coded data item for which there is no currently available code."
+    },
+    {
+      "code": "3",
+      "name": "Text for immediate use",
+      "description": "Text for immediate use Text must be read before actioning message."
+    },
+    {
+      "code": "4",
+      "name": "No action required",
+      "description": "No action required Pass text on to later recipient."
+    },
+    {
+      "code": "5",
+      "name": "Header",
+      "description": "Header Indicates that the text is to be taken as a header."
+    },
+    {
+      "code": "6",
+      "name": "Numbered paragraph",
+      "description": "Numbered paragraph Indicates that the text starts a new numbered paragraph."
+    },
+    {
+      "code": "7",
+      "name": "Paragraph",
+      "description": "Paragraph Indicates that the text is a paragraph."
+    }
+  ]
+}

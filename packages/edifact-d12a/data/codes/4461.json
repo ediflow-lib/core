@@ -1,0 +1,382 @@
+{
+  "code": "4461",
+  "name": "Payment means code",
+  "description": "Code identifying a means of payment.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Instrument not defined",
+      "description": "Instrument not defined Not defined legally enforceable agreement between two or more parties (expressing a contractual right or a right to the payment of money)."
+    },
+    {
+      "code": "2",
+      "name": "Automated clearing house credit",
+      "description": "Automated clearing house credit A credit transaction made through the automated clearing house system."
+    },
+    {
+      "code": "3",
+      "name": "Automated clearing house debit",
+      "description": "Automated clearing house debit A debit transaction made through the automated clearing house system."
+    },
+    {
+      "code": "4",
+      "name": "ACH demand debit reversal",
+      "description": "ACH demand debit reversal A request to reverse an ACH debit transaction to a demand deposit account."
+    },
+    {
+      "code": "5",
+      "name": "ACH demand credit reversal",
+      "description": "ACH demand credit reversal A request to reverse a credit transaction to a demand deposit account."
+    },
+    {
+      "code": "6",
+      "name": "ACH demand credit",
+      "description": "ACH demand credit A credit transaction made through the ACH system to a demand deposit account."
+    },
+    {
+      "code": "7",
+      "name": "ACH demand debit",
+      "description": "ACH demand debit A debit transaction made through the ACH system to a demand deposit account."
+    },
+    {
+      "code": "8",
+      "name": "Hold",
+      "description": "Hold Indicates that the bank should hold the payment for collection by the beneficiary or other instructions."
+    },
+    {
+      "code": "9",
+      "name": "National or regional clearing",
+      "description": "National or regional clearing Indicates that the payment should be made using the national or regional clearing."
+    },
+    {
+      "code": "10",
+      "name": "In cash",
+      "description": "In cash Payment by currency (including bills and coins) in circulation, including checking account deposits."
+    },
+    {
+      "code": "11",
+      "name": "ACH savings credit reversal",
+      "description": "ACH savings credit reversal A request to reverse an ACH credit transaction to a savings account."
+    },
+    {
+      "code": "12",
+      "name": "ACH savings debit reversal",
+      "description": "ACH savings debit reversal A request to reverse an ACH debit transaction to a savings account."
+    },
+    {
+      "code": "13",
+      "name": "ACH savings credit",
+      "description": "ACH savings credit A credit transaction made through the ACH system to a savings account."
+    },
+    {
+      "code": "14",
+      "name": "ACH savings debit",
+      "description": "ACH savings debit A debit transaction made through the ACH system to a savings account."
+    },
+    {
+      "code": "15",
+      "name": "Bookentry credit",
+      "description": "Bookentry credit A credit entry between two accounts at the same bank branch. Synonym: house credit."
+    },
+    {
+      "code": "16",
+      "name": "Bookentry debit",
+      "description": "Bookentry debit A debit entry between two accounts at the same bank branch. Synonym: house debit."
+    },
+    {
+      "code": "17",
+      "name": "ACH demand cash concentration/disbursement (CCD) credit",
+      "description": "ACH demand cash concentration/disbursement (CCD) credit A credit transaction made through the ACH system to a demand deposit account using the CCD payment format."
+    },
+    {
+      "code": "18",
+      "name": "ACH demand cash concentration/disbursement (CCD) debit",
+      "description": "ACH demand cash concentration/disbursement (CCD) debit A debit transaction made through the ACH system to a demand deposit account using the CCD payment format."
+    },
+    {
+      "code": "19",
+      "name": "ACH demand corporate trade payment (CTP) credit",
+      "description": "ACH demand corporate trade payment (CTP) credit A credit transaction made through the ACH system to a demand deposit account using the CTP payment format."
+    },
+    {
+      "code": "20",
+      "name": "Cheque",
+      "description": "Cheque Payment by a pre-printed form on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient."
+    },
+    {
+      "code": "21",
+      "name": "Banker's draft",
+      "description": "Banker's draft Issue of a banker's draft in payment of the funds."
+    },
+    {
+      "code": "22",
+      "name": "Certified banker's draft",
+      "description": "Certified banker's draft Cheque drawn by a bank on itself or its agent. A person who owes money to another buys the draft from a bank for cash and hands it to the creditor who need have no fear that it might be dishonoured."
+    },
+    {
+      "code": "23",
+      "name": "Bank cheque (issued by a banking or similar establishment)",
+      "description": "Bank cheque (issued by a banking or similar establishment) Payment by a pre-printed form, which has been completed by a financial institution, on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient."
+    },
+    {
+      "code": "24",
+      "name": "Bill of exchange awaiting acceptance",
+      "description": "Bill of exchange awaiting acceptance Bill drawn by the creditor on the debtor but not yet accepted by the debtor."
+    },
+    {
+      "code": "25",
+      "name": "Certified cheque",
+      "description": "Certified cheque Payment by a pre-printed form stamped with the paying bank's certification on which instructions are given to an account holder (a bank or building society) to pay a stated sum to a named recipient ."
+    },
+    {
+      "code": "26",
+      "name": "Local cheque",
+      "description": "Local cheque Indicates that the cheque is given local to the recipient."
+    },
+    {
+      "code": "27",
+      "name": "ACH demand corporate trade payment (CTP) debit",
+      "description": "ACH demand corporate trade payment (CTP) debit A debit transaction made through the ACH system to a demand deposit account using the CTP payment format."
+    },
+    {
+      "code": "28",
+      "name": "ACH demand corporate trade exchange (CTX) credit",
+      "description": "ACH demand corporate trade exchange (CTX) credit A credit transaction made through the ACH system to a demand deposit account using the CTX payment format."
+    },
+    {
+      "code": "29",
+      "name": "ACH demand corporate trade exchange (CTX) debit",
+      "description": "ACH demand corporate trade exchange (CTX) debit A debit transaction made through the ACH system to a demand account using the CTX payment format."
+    },
+    {
+      "code": "30",
+      "name": "Credit transfer",
+      "description": "Credit transfer Payment by credit movement of funds from one account to another."
+    },
+    {
+      "code": "31",
+      "name": "Debit transfer",
+      "description": "Debit transfer Payment by debit movement of funds from one account to another."
+    },
+    {
+      "code": "32",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+)",
+      "description": "ACH demand cash concentration/disbursement plus (CCD+) credit A credit transaction made through the ACH system to a demand deposit account using the CCD+ payment format."
+    },
+    {
+      "code": "33",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+)",
+      "description": "ACH demand cash concentration/disbursement plus (CCD+) debit A debit transaction made through the ACH system to a demand deposit account using the CCD+ payment format."
+    },
+    {
+      "code": "34",
+      "name": "ACH prearranged payment and deposit (PPD)",
+      "description": "ACH prearranged payment and deposit (PPD) A consumer credit transaction made through the ACH system to a demand deposit or savings account."
+    },
+    {
+      "code": "35",
+      "name": "ACH savings cash concentration/disbursement (CCD) credit",
+      "description": "ACH savings cash concentration/disbursement (CCD) credit A credit transaction made through the ACH system to a demand deposit or savings account."
+    },
+    {
+      "code": "36",
+      "name": "ACH savings cash concentration/disbursement (CCD) debit",
+      "description": "ACH savings cash concentration/disbursement (CCD) debit A debit transaction made through the ACH system to a savings account using the CCD payment format."
+    },
+    {
+      "code": "37",
+      "name": "ACH savings corporate trade payment (CTP) credit",
+      "description": "ACH savings corporate trade payment (CTP) credit A credit transaction made through the ACH system to a savings account using the CTP payment format."
+    },
+    {
+      "code": "38",
+      "name": "ACH savings corporate trade payment (CTP) debit",
+      "description": "ACH savings corporate trade payment (CTP) debit A debit transaction made through the ACH system to a savings account using the CTP payment format."
+    },
+    {
+      "code": "39",
+      "name": "ACH savings corporate trade exchange (CTX) credit",
+      "description": "ACH savings corporate trade exchange (CTX) credit A credit transaction made through the ACH system to a savings account using the CTX payment format."
+    },
+    {
+      "code": "40",
+      "name": "ACH savings corporate trade exchange (CTX) debit",
+      "description": "ACH savings corporate trade exchange (CTX) debit A debit transaction made through the ACH system to a savings account using the CTX payment format."
+    },
+    {
+      "code": "41",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+)",
+      "description": "ACH savings cash concentration/disbursement plus (CCD+) credit A credit transaction made through the ACH system to a savings account using the CCD+ payment format."
+    },
+    {
+      "code": "42",
+      "name": "Payment to bank account",
+      "description": "Payment to bank account Payment by an arrangement for settling debts that is operated by the Post Office."
+    },
+    {
+      "code": "43",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+)",
+      "description": "ACH savings cash concentration/disbursement plus (CCD+) debit A debit transaction made through the ACH system to a savings account using the CCD+ payment format."
+    },
+    {
+      "code": "44",
+      "name": "Accepted bill of exchange",
+      "description": "Accepted bill of exchange Bill drawn by the creditor on the debtor and accepted by the debtor."
+    },
+    {
+      "code": "45",
+      "name": "Referenced home-banking credit transfer",
+      "description": "Referenced home-banking credit transfer A referenced credit transfer initiated through home- banking."
+    },
+    {
+      "code": "46",
+      "name": "Interbank debit transfer",
+      "description": "Interbank debit transfer A debit transfer via interbank means."
+    },
+    {
+      "code": "47",
+      "name": "Home-banking debit transfer",
+      "description": "Home-banking debit transfer A debit transfer initiated through home-banking."
+    },
+    {
+      "code": "48",
+      "name": "Bank card",
+      "description": "Bank card Payment by means of a card issued by a bank or other financial institution."
+    },
+    {
+      "code": "49",
+      "name": "Direct debit",
+      "description": "Direct debit The amount is to be, or has been, directly debited to the customer's bank account."
+    },
+    {
+      "code": "50",
+      "name": "Payment by postgiro",
+      "description": "Payment by postgiro A method for the transmission of funds through the postal system rather than through the banking system."
+    },
+    {
+      "code": "51",
+      "name": "FR, norme 6 97-Telereglement CFONB (French Organisation for",
+      "description": "FR, norme 6 97-Telereglement CFONB (French Organisation for Banking Standards)  - Option A A French standard procedure that allows a debtor to pay an amount due to a creditor. The creditor will forward it to its bank, which will collect the money on the bank account of the debtor."
+    },
+    {
+      "code": "52",
+      "name": "Urgent commercial payment",
+      "description": "Urgent commercial payment Payment order which requires guaranteed processing by the most appropriate means to ensure it occurs on the requested execution date, provided that it is issued to the ordered bank before the agreed cut-off time."
+    },
+    {
+      "code": "53",
+      "name": "Urgent Treasury Payment",
+      "description": "Urgent Treasury Payment Payment order or transfer which must be executed, by the most appropriate means, as urgently as possible and before urgent commercial payments."
+    },
+    {
+      "code": "60",
+      "name": "Promissory note",
+      "description": "Promissory note Payment by an unconditional promise in writing made by one person to another, signed by the maker, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "61",
+      "name": "Promissory note signed by the debtor",
+      "description": "Promissory note signed by the debtor Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "62",
+      "name": "Promissory note signed by the debtor and endorsed by a bank",
+      "description": "Promissory note signed by the debtor and endorsed by a bank Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "63",
+      "name": "Promissory note signed by the debtor and endorsed by a",
+      "description": "Promissory note signed by the debtor and endorsed by a third party Payment by an unconditional promise in writing made by the debtor to another person, signed by the debtor and endorsed by a third party, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "64",
+      "name": "Promissory note signed by a bank",
+      "description": "Promissory note signed by a bank Payment by an unconditional promise in writing made by the bank to another person, signed by the bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "65",
+      "name": "Promissory note signed by a bank and endorsed by another",
+      "description": "Promissory note signed by a bank and endorsed by another bank Payment by an unconditional promise in writing made by the bank to another person, signed by the bank and endorsed by another bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "66",
+      "name": "Promissory note signed by a third party",
+      "description": "Promissory note signed by a third party Payment by an unconditional promise in writing made by a third party to another person, signed by the third party, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "67",
+      "name": "Promissory note signed by a third party and endorsed by a",
+      "description": "Promissory note signed by a third party and endorsed by a bank Payment by an unconditional promise in writing made by a third party to another person, signed by the third party and endorsed by a bank, engaging to pay on demand or at a fixed or determinable future time a sum certain in money, to order or to bearer."
+    },
+    {
+      "code": "70",
+      "name": "Bill drawn by the creditor on the debtor",
+      "description": "Bill drawn by the creditor on the debtor Bill drawn by the creditor on the debtor."
+    },
+    {
+      "code": "74",
+      "name": "Bill drawn by the creditor on a bank",
+      "description": "Bill drawn by the creditor on a bank Bill drawn by the creditor on a bank."
+    },
+    {
+      "code": "75",
+      "name": "Bill drawn by the creditor, endorsed by another bank",
+      "description": "Bill drawn by the creditor, endorsed by another bank Bill drawn by the creditor, endorsed by another bank."
+    },
+    {
+      "code": "76",
+      "name": "Bill drawn by the creditor on a bank and endorsed by a",
+      "description": "Bill drawn by the creditor on a bank and endorsed by a third party Bill drawn by the creditor on a bank and endorsed by a third party."
+    },
+    {
+      "code": "77",
+      "name": "Bill drawn by the creditor on a third party",
+      "description": "Bill drawn by the creditor on a third party Bill drawn by the creditor on a third party."
+    },
+    {
+      "code": "78",
+      "name": "Bill drawn by creditor on third party, accepted and",
+      "description": "Bill drawn by creditor on third party, accepted and endorsed by bank Bill drawn by creditor on third party, accepted and endorsed by bank."
+    },
+    {
+      "code": "91",
+      "name": "Not transferable banker's draft",
+      "description": "Not transferable banker's draft Issue a bankers draft not endorsable."
+    },
+    {
+      "code": "92",
+      "name": "Not transferable local cheque",
+      "description": "Not transferable local cheque Issue a cheque not endorsable in payment of the funds."
+    },
+    {
+      "code": "93",
+      "name": "Reference giro",
+      "description": "Reference giro Ordering customer tells the bank to use the payment system 'Reference giro'. Used in the Finnish national banking system."
+    },
+    {
+      "code": "94",
+      "name": "Urgent giro",
+      "description": "Urgent giro Ordering customer tells the bank to use the bank service 'Urgent Giro' when transferring the payment. Used in Finnish national banking system."
+    },
+    {
+      "code": "95",
+      "name": "Free format giro",
+      "description": "Free format giro Ordering customer tells the ordering bank to use the bank service 'Free Format Giro' when transferring the payment. Used in Finnish national banking system."
+    },
+    {
+      "code": "96",
+      "name": "Requested method for payment was not used",
+      "description": "Requested method for payment was not used If the requested method for payment was or could not be used, this code indicates that."
+    },
+    {
+      "code": "97",
+      "name": "Clearing between partners",
+      "description": "Clearing between partners Amounts which two partners owe to each other to be compensated in order to avoid useless payments."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
+}

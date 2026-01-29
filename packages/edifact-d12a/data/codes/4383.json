@@ -1,0 +1,322 @@
+{
+  "code": "4383",
+  "name": "Bank operation code",
+  "description": "Code specifying a bank operation.",
+  "values": [
+    {
+      "code": "AAA",
+      "name": "Transfer according to bilaterally agreed standards",
+      "description": "Transfer according to bilaterally agreed standards The transfer is to be executed according to bilaterally agreed standards."
+    },
+    {
+      "code": "AAB",
+      "name": "Incoming international payment",
+      "description": "Incoming international payment International payment that is incoming."
+    },
+    {
+      "code": "AAC",
+      "name": "Outgoing international payment",
+      "description": "Outgoing international payment International payment that is outgoing."
+    },
+    {
+      "code": "AAD",
+      "name": "Tax payment",
+      "description": "Tax payment Payment of tax."
+    },
+    {
+      "code": "AAE",
+      "name": "Incoming OCR (Optical Character Recognition) payment",
+      "description": "Incoming OCR (Optical Character Recognition) payment OCR (Optical Character Recognition) payment that is incoming."
+    },
+    {
+      "code": "AAF",
+      "name": "Incoming retail direct debit",
+      "description": "Incoming retail direct debit Retail direct debit that is incoming."
+    },
+    {
+      "code": "AAG",
+      "name": "Incoming corporate direct debit",
+      "description": "Incoming corporate direct debit Corporate direct debit that is incoming."
+    },
+    {
+      "code": "AAH",
+      "name": "Incoming paper-based payment",
+      "description": "Incoming paper-based payment Paper-based payment that is incoming."
+    },
+    {
+      "code": "AAI",
+      "name": "Zero-balancing transaction",
+      "description": "Zero-balancing transaction Transaction that is zero-balancing."
+    },
+    {
+      "code": "AAJ",
+      "name": "Safe deposit box",
+      "description": "Safe deposit box To identify a bank operation as relating to a safe deposit box."
+    },
+    {
+      "code": "AAK",
+      "name": "Domestic money market",
+      "description": "Domestic money market To identify a bank operation as being a money market transaction effected on a domestic exchange."
+    },
+    {
+      "code": "AAL",
+      "name": "Foreign money market",
+      "description": "Foreign money market To identify a bank operation as being a money market transaction effected on a foreign exchange."
+    },
+    {
+      "code": "AAM",
+      "name": "Domestic bond market",
+      "description": "Domestic bond market To identify a bank operation as being a bond transaction effected in a domestic market."
+    },
+    {
+      "code": "AAN",
+      "name": "International bond market",
+      "description": "International bond market To identify a bank operation as being a bond transaction effected in a international market."
+    },
+    {
+      "code": "AAO",
+      "name": "Funds",
+      "description": "Funds To identify a bank operation as being for funds."
+    },
+    {
+      "code": "AAP",
+      "name": "Safe custody",
+      "description": "Safe custody To identify a bank operation relating to safe custody."
+    },
+    {
+      "code": "AAQ",
+      "name": "Guarantee",
+      "description": "Guarantee To identify a bank operation related to a guarantee."
+    },
+    {
+      "code": "AAR",
+      "name": "Short foreign credits",
+      "description": "Short foreign credits To identify a bank operation as being for short credits granted to parties outside the bank's country."
+    },
+    {
+      "code": "AAS",
+      "name": "Long foreign credits",
+      "description": "Long foreign credits To identify a bank operation as being for long credits granted to parties outside the bank's country."
+    },
+    {
+      "code": "AAT",
+      "name": "Promissory note loan",
+      "description": "Promissory note loan Promissory note type of loan."
+    },
+    {
+      "code": "AAU",
+      "name": "Mortgage loan",
+      "description": "Mortgage loan Mortgage type of loan."
+    },
+    {
+      "code": "AAV",
+      "name": "Salary",
+      "description": "Salary To identify a bank operation as being for salary payments."
+    },
+    {
+      "code": "AAW",
+      "name": "Incoming bankgiro",
+      "description": "Incoming bankgiro Bankgiro that is incoming."
+    },
+    {
+      "code": "ABX",
+      "name": "Automated bills of exchange",
+      "description": "Automated bills of exchange The payment has been done by automated bills of exchange."
+    },
+    {
+      "code": "ABY",
+      "name": "Returned direct debit",
+      "description": "Returned direct debit To identify a bank operation as being for returning a direct debit. This is the refusal for technical reasons by a collecting bank to execute one or more transactions in a direct debit transfer request received from a creditor's bank."
+    },
+    {
+      "code": "ABZ",
+      "name": "Truncated paper based payment",
+      "description": "Truncated paper based payment Truncated paper based payment is the financial operation of extracting data from a paper based payment."
+    },
+    {
+      "code": "BEX",
+      "name": "Bills of exchange",
+      "description": "Bills of exchange The payment has been done by bills of exchange."
+    },
+    {
+      "code": "BGI",
+      "name": "Bankgiro",
+      "description": "Bankgiro The payment was originally made by bankgiro."
+    },
+    {
+      "code": "BKD",
+      "name": "Bank draft",
+      "description": "Bank draft Original payment was made by bank draft."
+    },
+    {
+      "code": "BKI",
+      "name": "Bank initiated",
+      "description": "Bank initiated The fund transfer is initiated by a bank."
+    },
+    {
+      "code": "CAL",
+      "name": "Cash letter",
+      "description": "Cash letter The payment has been done by a cash letter."
+    },
+    {
+      "code": "CHG",
+      "name": "Charges",
+      "description": "Charges The fund transfer represents charges."
+    },
+    {
+      "code": "CHI",
+      "name": "Cheque international",
+      "description": "Cheque international The financial operation has been done by international cheque."
+    },
+    {
+      "code": "CHN",
+      "name": "Cheque national",
+      "description": "Cheque national The financial operation has been done by national cheque."
+    },
+    {
+      "code": "CLR",
+      "name": "Clearing",
+      "description": "Clearing The financial operation has been done by a clearing system."
+    },
+    {
+      "code": "COL",
+      "name": "Collection",
+      "description": "Collection The financial operation is collection."
+    },
+    {
+      "code": "COM",
+      "name": "Commission",
+      "description": "Commission The fund transfer represents commission."
+    },
+    {
+      "code": "CON",
+      "name": "Cash concentration",
+      "description": "Cash concentration An aggregation of funds from different accounts into a single account."
+    },
+    {
+      "code": "CPP",
+      "name": "Cash payment by post",
+      "description": "Cash payment by post The financial operation has been done by cash payment by post."
+    },
+    {
+      "code": "CUX",
+      "name": "Currencies",
+      "description": "Currencies Buying or selling of foreign notes."
+    },
+    {
+      "code": "DDT",
+      "name": "Direct debit",
+      "description": "Direct debit The financial operation is direct debit."
+    },
+    {
+      "code": "DEP",
+      "name": "Deposit cash operation",
+      "description": "Deposit cash operation The financial operation is by deposit cash."
+    },
+    {
+      "code": "FEX",
+      "name": "Foreign exchange",
+      "description": "Foreign exchange The financial operation is by foreign exchange."
+    },
+    {
+      "code": "FGI",
+      "name": "Free format giro",
+      "description": "Free format giro System of credit transfer between banks, Post Offices, etc."
+    },
+    {
+      "code": "INT",
+      "name": "Interest",
+      "description": "Interest The fund transfer represents usury."
+    },
+    {
+      "code": "LOC",
+      "name": "Letter of credit",
+      "description": "Letter of credit The financial operation is a letter of credit."
+    },
+    {
+      "code": "LOK",
+      "name": "Lockbox",
+      "description": "Lockbox Type of cash management system offered by financial institutions to provide for collection of customers 'receivables'."
+    },
+    {
+      "code": "MSC",
+      "name": "Miscellaneous",
+      "description": "Miscellaneous The fund transfer is miscellaneous."
+    },
+    {
+      "code": "PAC",
+      "name": "Payment card",
+      "description": "Payment card Relating to credit, debit, guarantee or charge card."
+    },
+    {
+      "code": "PGI",
+      "name": "Postgiro",
+      "description": "Postgiro The financial operation has been done by postgiro."
+    },
+    {
+      "code": "POS",
+      "name": "Point of sale",
+      "description": "Point of sale The financial operation is point of sale."
+    },
+    {
+      "code": "REC",
+      "name": "Returned cheques",
+      "description": "Returned cheques The fund transfer represents returned cheques."
+    },
+    {
+      "code": "RET",
+      "name": "Returned items",
+      "description": "Returned items The fund transfer represents returned items."
+    },
+    {
+      "code": "RGI",
+      "name": "Reference giro",
+      "description": "Reference giro Payments was done by a special service, for low priority payments. Finnish national bank service."
+    },
+    {
+      "code": "RTR",
+      "name": "Returned transfers",
+      "description": "Returned transfers The financial operation has been done by returned transfers."
+    },
+    {
+      "code": "SEC",
+      "name": "Securities",
+      "description": "Securities The fund transfer represents securities."
+    },
+    {
+      "code": "STO",
+      "name": "Standing order",
+      "description": "Standing order The financial operation is done by a standing order."
+    },
+    {
+      "code": "TCK",
+      "name": "Traveller's cheque",
+      "description": "Traveller's cheque The financial operation is done by traveller's cheque."
+    },
+    {
+      "code": "TRF",
+      "name": "Transfer",
+      "description": "Transfer The financial operation is done by transfer."
+    },
+    {
+      "code": "UGI",
+      "name": "Urgent giro",
+      "description": "Urgent giro Payment was made by special bank service, for high priority payments. Finnish national bank service."
+    },
+    {
+      "code": "VDA",
+      "name": "Value date adjustment",
+      "description": "Value date adjustment The financial operation has adjusted value date."
+    },
+    {
+      "code": "WDL",
+      "name": "Withdrawal cash operation",
+      "description": "Withdrawal cash operation The financial operation is a withdrawal cash operation."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined A temporary code which may be used between trading partners to describe a fund transfer whilst approval for a formal code value is being sought."
+    }
+  ]
+}

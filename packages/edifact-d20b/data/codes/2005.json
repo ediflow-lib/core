@@ -1,0 +1,3315 @@
+{
+  "code": "2005",
+  "name": "Date or time or period function code qualifier",
+  "description": "Code qualifying the function of a date, time or period.",
+  "values": [
+    {
+      "code": "1",
+      "name": "Service completion date/time, actual"
+    },
+    {
+      "code": "2",
+      "name": "Delivery date/time, requested"
+    },
+    {
+      "code": "3",
+      "name": "Invoice document issue date time"
+    },
+    {
+      "code": "4",
+      "name": "Order document issue date time"
+    },
+    {
+      "code": "5",
+      "name": "Saleable stock demand cover period, expected"
+    },
+    {
+      "code": "A",
+      "name": "period of time when saleable stocks are expected to"
+    },
+    {
+      "code": "6",
+      "name": "Moved from location date"
+    },
+    {
+      "code": "7",
+      "name": "Effective from date/time"
+    },
+    {
+      "code": "8",
+      "name": "Order received date/time"
+    },
+    {
+      "code": "9",
+      "name": "Processing date/time"
+    },
+    {
+      "code": "10",
+      "name": "Shipment date/time, requested"
+    },
+    {
+      "code": "11",
+      "name": "Despatch date and or time"
+    },
+    {
+      "code": "12",
+      "name": "Terms discount due date/time"
+    },
+    {
+      "code": "13",
+      "name": "Terms net due date"
+    },
+    {
+      "code": "14",
+      "name": "Payment date/time, deferred"
+    },
+    {
+      "code": "15",
+      "name": "Promotion start date/time"
+    },
+    {
+      "code": "16",
+      "name": "Promotion end date/time"
+    },
+    {
+      "code": "17",
+      "name": "Delivery date/time, estimated"
+    },
+    {
+      "code": "18",
+      "name": "Installation date/time/period"
+    },
+    {
+      "code": "19",
+      "name": "Meat ageing period"
+    },
+    {
+      "code": "20",
+      "name": "Cheque date/time"
+    },
+    {
+      "code": "21",
+      "name": "Charge back date/time"
+    },
+    {
+      "code": "22",
+      "name": "Freight bill date/time"
+    },
+    {
+      "code": "23",
+      "name": "Equipment reconditioning date/time, actual"
+    },
+    {
+      "code": "24",
+      "name": "Transfer note acceptance date and time"
+    },
+    {
+      "code": "35",
+      "name": "Delivery date/time, actual"
+    },
+    {
+      "code": "36",
+      "name": "Expiry date"
+    },
+    {
+      "code": "37",
+      "name": "Ship not before date/time"
+    },
+    {
+      "code": "38",
+      "name": "Ship not later than date/time"
+    },
+    {
+      "code": "39",
+      "name": "Ship week of date"
+    },
+    {
+      "code": "40",
+      "name": "Clinical information issue date and/or time"
+    },
+    {
+      "code": "41",
+      "name": "Event duration, expected"
+    },
+    {
+      "code": "42",
+      "name": "Superseded date/time"
+    },
+    {
+      "code": "43",
+      "name": "Event duration, intended"
+    },
+    {
+      "code": "44",
+      "name": "Availability"
+    },
+    {
+      "code": "45",
+      "name": "Compilation date and time"
+    },
+    {
+      "code": "46",
+      "name": "Cancellation date"
+    },
+    {
+      "code": "47",
+      "name": "Statistical time series date"
+    },
+    {
+      "code": "48",
+      "name": "Duration"
+    },
+    {
+      "code": "49",
+      "name": "Deliver not before and not after dates"
+    },
+    {
+      "code": "50",
+      "name": "Goods receipt date/time"
+    },
+    {
+      "code": "51",
+      "name": "Cumulative quantity start date"
+    },
+    {
+      "code": "52",
+      "name": "Cumulative quantity end date"
+    },
+    {
+      "code": "53",
+      "name": "Buyer's local time"
+    },
+    {
+      "code": "54",
+      "name": "Seller's local time"
+    },
+    {
+      "code": "55",
+      "name": "Confirmed date/time"
+    },
+    {
+      "code": "56",
+      "name": "Original authorisation date and/or time"
+    },
+    {
+      "code": "57",
+      "name": "Precaution relevant period"
+    },
+    {
+      "code": "58",
+      "name": "Clearance date (Customs)"
+    },
+    {
+      "code": "59",
+      "name": "Inbound movement authorization date"
+    },
+    {
+      "code": "60",
+      "name": "Engineering change level date"
+    },
+    {
+      "code": "61",
+      "name": "Cancel if not delivered by this date"
+    },
+    {
+      "code": "62",
+      "name": "Excluded date"
+    },
+    {
+      "code": "63",
+      "name": "Delivery date time, last"
+    },
+    {
+      "code": "64",
+      "name": "Delivery date/time, earliest"
+    },
+    {
+      "code": "65",
+      "name": "Delivery date/time, 1st schedule"
+    },
+    {
+      "code": "66",
+      "name": "Excluded period"
+    },
+    {
+      "code": "67",
+      "name": "Delivery date/time, current schedule"
+    },
+    {
+      "code": "68",
+      "name": "Additional period"
+    },
+    {
+      "code": "69",
+      "name": "Delivery date time, promised before"
+    },
+    {
+      "code": "70",
+      "name": "Additional date"
+    },
+    {
+      "code": "71",
+      "name": "Delivery date/time, requested for (after and including)"
+    },
+    {
+      "code": "72",
+      "name": "Delivery date/time, promised for (after and including)"
+    },
+    {
+      "code": "73",
+      "name": "Guarantee period"
+    },
+    {
+      "code": "74",
+      "name": "Delivery date/time, requested for (prior to and including)"
+    },
+    {
+      "code": "75",
+      "name": "Delivery date/time, promised for (prior to and including)"
+    },
+    {
+      "code": "76",
+      "name": "Delivery date/time, scheduled for"
+    },
+    {
+      "code": "77",
+      "name": "Specification revision date"
+    },
+    {
+      "code": "78",
+      "name": "Event date/time/period, actual"
+    },
+    {
+      "code": "79",
+      "name": "Shipment date/time, promised for"
+    },
+    {
+      "code": "80",
+      "name": "Planning end date and/or time, actual"
+    },
+    {
+      "code": "81",
+      "name": "Shipment date/time, requested for (after and including)"
+    },
+    {
+      "code": "82",
+      "name": "Medicine administration time"
+    },
+    {
+      "code": "83",
+      "name": "Dispensing interval, minimum"
+    },
+    {
+      "code": "84",
+      "name": "Shipment date/time, requested for (prior to and including)"
+    },
+    {
+      "code": "85",
+      "name": "Shipment date/time, promised for (prior to and including)"
+    },
+    {
+      "code": "86",
+      "name": "Medication date/time, start"
+    },
+    {
+      "code": "87",
+      "name": "Travel service connection time"
+    },
+    {
+      "code": "88",
+      "name": "Summer time, start"
+    },
+    {
+      "code": "89",
+      "name": "Inquiry date"
+    },
+    {
+      "code": "90",
+      "name": "Report start date"
+    },
+    {
+      "code": "91",
+      "name": "Report end date"
+    },
+    {
+      "code": "92",
+      "name": "Contract effective date"
+    },
+    {
+      "code": "93",
+      "name": "Contract expiry date"
+    },
+    {
+      "code": "94",
+      "name": "Production/manufacture date"
+    },
+    {
+      "code": "95",
+      "name": "Bill of lading date"
+    },
+    {
+      "code": "96",
+      "name": "Discharge date/time"
+    },
+    {
+      "code": "97",
+      "name": "Transaction creation date"
+    },
+    {
+      "code": "98",
+      "name": "Winter time, start"
+    },
+    {
+      "code": "99",
+      "name": "Quotation opening date"
+    },
+    {
+      "code": "100",
+      "name": "Product ageing period before delivery"
+    },
+    {
+      "code": "101",
+      "name": "Production date, no schedule established as of"
+    },
+    {
+      "code": "102",
+      "name": "Health problem period"
+    },
+    {
+      "code": "103",
+      "name": "Closing date/time for breakbulk STORO"
+    },
+    {
+      "code": "104",
+      "name": "Closing date/time for container RO-RO"
+    },
+    {
+      "code": "105",
+      "name": "Starting date/time for breakbulk STORO"
+    },
+    {
+      "code": "106",
+      "name": "Starting date/time for container RO-RO"
+    },
+    {
+      "code": "107",
+      "name": "Deposit date/time"
+    },
+    {
+      "code": "108",
+      "name": "Postmark date/time"
+    },
+    {
+      "code": "109",
+      "name": "Receive at lockbox date"
+    },
+    {
+      "code": "110",
+      "name": "Ship date, originally scheduled"
+    },
+    {
+      "code": "111",
+      "name": "Manifest/ship notice date"
+    },
+    {
+      "code": "112",
+      "name": "First interest-bearing date"
+    },
+    {
+      "code": "113",
+      "name": "Sample required date"
+    },
+    {
+      "code": "114",
+      "name": "Tooling required date"
+    },
+    {
+      "code": "115",
+      "name": "Sample available date"
+    },
+    {
+      "code": "116",
+      "name": "Equipment return period, expected"
+    },
+    {
+      "code": "117",
+      "name": "Delivery date/time, first"
+    },
+    {
+      "code": "118",
+      "name": "Cargo booking confirmed date/time"
+    },
+    {
+      "code": "119",
+      "name": "Test completion date"
+    },
+    {
+      "code": "120",
+      "name": "Last interest-bearing date"
+    },
+    {
+      "code": "121",
+      "name": "Entry date"
+    },
+    {
+      "code": "122",
+      "name": "Contract completion date"
+    },
+    {
+      "code": "123",
+      "name": "Documentary credit expiry date/time"
+    },
+    {
+      "code": "124",
+      "name": "Despatch note document issue date time"
+    },
+    {
+      "code": "125",
+      "name": "Import permit issue date time"
+    },
+    {
+      "code": "126",
+      "name": "Contract document issue date time"
+    },
+    {
+      "code": "127",
+      "name": "Previous report date"
+    },
+    {
+      "code": "128",
+      "name": "Delivery date/time, last"
+    },
+    {
+      "code": "129",
+      "name": "Exportation date"
+    },
+    {
+      "code": "130",
+      "name": "Current report date"
+    },
+    {
+      "code": "131",
+      "name": "Tax point date time"
+    },
+    {
+      "code": "132",
+      "name": "Transport means arrival date time, estimated"
+    },
+    {
+      "code": "133",
+      "name": "Transport means departure date/time, estimated"
+    },
+    {
+      "code": "134",
+      "name": "Rate of exchange date/time"
+    },
+    {
+      "code": "135",
+      "name": "Telex date"
+    },
+    {
+      "code": "136",
+      "name": "Transport means departure date time, actual"
+    },
+    {
+      "code": "137",
+      "name": "Document issue date time"
+    },
+    {
+      "code": "138",
+      "name": "Payment availability date time"
+    },
+    {
+      "code": "139",
+      "name": "Property mortgage date, start"
+    },
+    {
+      "code": "140",
+      "name": "Payment due date"
+    },
+    {
+      "code": "141",
+      "name": "Customs declaration document lodgement date time"
+    },
+    {
+      "code": "142",
+      "name": "Labour wage determination date"
+    },
+    {
+      "code": "143",
+      "name": "Consignment acceptance date time, actual"
+    },
+    {
+      "code": "144",
+      "name": "Quota date"
+    },
+    {
+      "code": "145",
+      "name": "Event date"
+    },
+    {
+      "code": "A",
+      "name": "date specifying an event."
+    },
+    {
+      "code": "146",
+      "name": "Entry date, estimated (Customs)"
+    },
+    {
+      "code": "147",
+      "name": "Export permit effective end date time"
+    },
+    {
+      "code": "148",
+      "name": "Goods declaration document acceptance date time"
+    },
+    {
+      "code": "149",
+      "name": "Invoice date, required"
+    },
+    {
+      "code": "150",
+      "name": "Declaration/presentation date"
+    },
+    {
+      "code": "151",
+      "name": "Importation date"
+    },
+    {
+      "code": "152",
+      "name": "Exportation date for textiles"
+    },
+    {
+      "code": "153",
+      "name": "Cancellation date/time, latest"
+    },
+    {
+      "code": "154",
+      "name": "Acceptance date of document"
+    },
+    {
+      "code": "155",
+      "name": "Accounting period start date"
+    },
+    {
+      "code": "156",
+      "name": "Accounting period end date"
+    },
+    {
+      "code": "157",
+      "name": "Validity start date"
+    },
+    {
+      "code": "158",
+      "name": "Horizon start date"
+    },
+    {
+      "code": "159",
+      "name": "Horizon end date"
+    },
+    {
+      "code": "160",
+      "name": "Authorization date"
+    },
+    {
+      "code": "161",
+      "name": "Release date of customer"
+    },
+    {
+      "code": "162",
+      "name": "Release date of supplier"
+    },
+    {
+      "code": "163",
+      "name": "Processing start date/time"
+    },
+    {
+      "code": "164",
+      "name": "Processing end date/time"
+    },
+    {
+      "code": "165",
+      "name": "Tax period start date"
+    },
+    {
+      "code": "166",
+      "name": "Tax period end date"
+    },
+    {
+      "code": "167",
+      "name": "Charge period start date"
+    },
+    {
+      "code": "168",
+      "name": "Charge period end date"
+    },
+    {
+      "code": "169",
+      "name": "Lead time"
+    },
+    {
+      "code": "170",
+      "name": "Settlement due date"
+    },
+    {
+      "code": "171",
+      "name": "Reference date/time"
+    },
+    {
+      "code": "172",
+      "name": "Hired from date"
+    },
+    {
+      "code": "173",
+      "name": "Hired until date"
+    },
+    {
+      "code": "174",
+      "name": "Advise after date/time"
+    },
+    {
+      "code": "175",
+      "name": "Advise before date/time"
+    },
+    {
+      "code": "176",
+      "name": "Advise completed date/time"
+    },
+    {
+      "code": "177",
+      "name": "Advise on date/time"
+    },
+    {
+      "code": "178",
+      "name": "Transport means arrival date time, actual"
+    },
+    {
+      "code": "179",
+      "name": "Booking date/time"
+    },
+    {
+      "code": "180",
+      "name": "Closing date/time"
+    },
+    {
+      "code": "181",
+      "name": "Positioning date/time of equipment"
+    },
+    {
+      "code": "182",
+      "name": "Issue date"
+    },
+    {
+      "code": "183",
+      "name": "Date, as at"
+    },
+    {
+      "code": "184",
+      "name": "Notification date/time"
+    },
+    {
+      "code": "185",
+      "name": "Commenced tank cleaning date/time"
+    },
+    {
+      "code": "186",
+      "name": "Transport means departure date/time, actual"
+    },
+    {
+      "code": "187",
+      "name": "Authentication date/time of document"
+    },
+    {
+      "code": "188",
+      "name": "Previous current account date"
+    },
+    {
+      "code": "189",
+      "name": "Transport means departure date/time, scheduled"
+    },
+    {
+      "code": "190",
+      "name": "Transhipment date/time"
+    },
+    {
+      "code": "191",
+      "name": "Delivery date/time, expected"
+    },
+    {
+      "code": "192",
+      "name": "Expiration date/time of customs document"
+    },
+    {
+      "code": "193",
+      "name": "Execution date"
+    },
+    {
+      "code": "194",
+      "name": "Start date/time"
+    },
+    {
+      "code": "195",
+      "name": "Import permit effective end date time"
+    },
+    {
+      "code": "196",
+      "name": "Transport means departure date/time, earliest"
+    },
+    {
+      "code": "197",
+      "name": "Lay-time first day"
+    },
+    {
+      "code": "198",
+      "name": "Lay-time last day"
+    },
+    {
+      "code": "199",
+      "name": "Positioning date/time of goods"
+    },
+    {
+      "code": "200",
+      "name": "Cargo pick-up date / time"
+    },
+    {
+      "code": "201",
+      "name": "Equipment pick-up date / time"
+    },
+    {
+      "code": "202",
+      "name": "Posting date"
+    },
+    {
+      "code": "203",
+      "name": "Execution date/time, requested"
+    },
+    {
+      "code": "204",
+      "name": "Release date (Customs)"
+    },
+    {
+      "code": "205",
+      "name": "Settlement date"
+    },
+    {
+      "code": "206",
+      "name": "End date/time"
+    },
+    {
+      "code": "207",
+      "name": "Commenced pumping ballast date/time"
+    },
+    {
+      "code": "208",
+      "name": "Transport means departure date/time, ultimate"
+    },
+    {
+      "code": "209",
+      "name": "Value date"
+    },
+    {
+      "code": "210",
+      "name": "Reinsurance current account period"
+    },
+    {
+      "code": "211",
+      "name": "360/30"
+    },
+    {
+      "code": "212",
+      "name": "360/28-31"
+    },
+    {
+      "code": "213",
+      "name": "365-6/30"
+    },
+    {
+      "code": "214",
+      "name": "365-6/28-31"
+    },
+    {
+      "code": "31",
+      "name": "days."
+    },
+    {
+      "code": "215",
+      "name": "365/28-31"
+    },
+    {
+      "code": "216",
+      "name": "365/30"
+    },
+    {
+      "code": "217",
+      "name": "From date of award to latest delivery"
+    },
+    {
+      "code": "218",
+      "name": "Authentication/validation date/time"
+    },
+    {
+      "code": "219",
+      "name": "Crossborder date/time"
+    },
+    {
+      "code": "220",
+      "name": "Property mortgage scheduled date, end"
+    },
+    {
+      "code": "221",
+      "name": "Interest period"
+    },
+    {
+      "code": "222",
+      "name": "Presentation date, latest"
+    },
+    {
+      "code": "223",
+      "name": "Delivery date/time, deferred"
+    },
+    {
+      "code": "224",
+      "name": "Permit to admit date"
+    },
+    {
+      "code": "225",
+      "name": "Certification of weight date/time"
+    },
+    {
+      "code": "226",
+      "name": "Discrepancy date/time"
+    },
+    {
+      "code": "227",
+      "name": "Beneficiary's banks due date"
+    },
+    {
+      "code": "228",
+      "name": "Debit value date, requested"
+    },
+    {
+      "code": "229",
+      "name": "Hoses connected date/time"
+    },
+    {
+      "code": "230",
+      "name": "Hoses disconnected date/time"
+    },
+    {
+      "code": "231",
+      "name": "Transport means arrival date/time, earliest"
+    },
+    {
+      "code": "232",
+      "name": "Transport means arrival date/time, scheduled"
+    },
+    {
+      "code": "233",
+      "name": "Transport means arrival date/time, ultimate"
+    },
+    {
+      "code": "234",
+      "name": "Collection date/time, earliest"
+    },
+    {
+      "code": "235",
+      "name": "Collection date/time, latest"
+    },
+    {
+      "code": "236",
+      "name": "Completed pumping ballast date/time"
+    },
+    {
+      "code": "237",
+      "name": "Completed tank cleaning date/time"
+    },
+    {
+      "code": "238",
+      "name": "Tanks accepted date/time"
+    },
+    {
+      "code": "239",
+      "name": "Tanks inspected date/time"
+    },
+    {
+      "code": "240",
+      "name": "Reinsurance accounting period"
+    },
+    {
+      "code": "241",
+      "name": "From date of award to earliest delivery"
+    },
+    {
+      "code": "242",
+      "name": "Preparation date/time of document"
+    },
+    {
+      "code": "243",
+      "name": "Transmission date/time of document"
+    },
+    {
+      "code": "244",
+      "name": "Settlement date, planned"
+    },
+    {
+      "code": "245",
+      "name": "Underwriting year"
+    },
+    {
+      "code": "246",
+      "name": "Accounting year"
+    },
+    {
+      "code": "247",
+      "name": "Year of occurrence"
+    },
+    {
+      "code": "248",
+      "name": "Loss"
+    },
+    {
+      "code": "249",
+      "name": "Cash call date"
+    },
+    {
+      "code": "250",
+      "name": "Re-exportation date"
+    },
+    {
+      "code": "251",
+      "name": "Re-importation date"
+    },
+    {
+      "code": "252",
+      "name": "Arrival date/time at initial port"
+    },
+    {
+      "code": "253",
+      "name": "Departure date/time from last port of call"
+    },
+    {
+      "code": "254",
+      "name": "Registration date of previous Customs declaration"
+    },
+    {
+      "code": "255",
+      "name": "Availability due date"
+    },
+    {
+      "code": "256",
+      "name": "From date of award to completion"
+    },
+    {
+      "code": "257",
+      "name": "Calculation date time"
+    },
+    {
+      "code": "258",
+      "name": "Guarantee date"
+    },
+    {
+      "code": "259",
+      "name": "Conveyance registration date"
+    },
+    {
+      "code": "260",
+      "name": "Valuation date (Customs)"
+    },
+    {
+      "code": "261",
+      "name": "Release date/time"
+    },
+    {
+      "code": "262",
+      "name": "Closure date/time/period"
+    },
+    {
+      "code": "263",
+      "name": "Invoicing period"
+    },
+    {
+      "code": "264",
+      "name": "Release frequency"
+    },
+    {
+      "code": "265",
+      "name": "Due date"
+    },
+    {
+      "code": "266",
+      "name": "Validation date"
+    },
+    {
+      "code": "267",
+      "name": "Rate/price date/time"
+    },
+    {
+      "code": "268",
+      "name": "Transit time/limits"
+    },
+    {
+      "code": "269",
+      "name": "Discharge date/time, started"
+    },
+    {
+      "code": "270",
+      "name": "Ship during date"
+    },
+    {
+      "code": "271",
+      "name": "Ship on or about date"
+    },
+    {
+      "code": "272",
+      "name": "Documentary credit presentation period"
+    },
+    {
+      "code": "273",
+      "name": "Validity period"
+    },
+    {
+      "code": "274",
+      "name": "From date of order receipt to sample ready"
+    },
+    {
+      "code": "275",
+      "name": "From date of tooling authorization to sample ready"
+    },
+    {
+      "code": "276",
+      "name": "From date of receipt of tooling aids to sample ready"
+    },
+    {
+      "code": "277",
+      "name": "From date of sample approval to first product shipment"
+    },
+    {
+      "code": "278",
+      "name": "From date of order receipt to shipment"
+    },
+    {
+      "code": "279",
+      "name": "From date of order receipt to delivery"
+    },
+    {
+      "code": "280",
+      "name": "From last booked order to delivery"
+    },
+    {
+      "code": "281",
+      "name": "Date of order lead time"
+    },
+    {
+      "code": "282",
+      "name": "Confirmation date lead time"
+    },
+    {
+      "code": "283",
+      "name": "Arrival date/time of transport lead time"
+    },
+    {
+      "code": "284",
+      "name": "Before inventory is replenished based on stock check lead"
+    },
+    {
+      "code": "285",
+      "name": "Invitation to tender date/time"
+    },
+    {
+      "code": "286",
+      "name": "Tender submission date/time"
+    },
+    {
+      "code": "287",
+      "name": "Contract award date/time"
+    },
+    {
+      "code": "288",
+      "name": "Price base date/time"
+    },
+    {
+      "code": "289",
+      "name": "Interest rate validity period"
+    },
+    {
+      "code": "290",
+      "name": "Contractual start date/time"
+    },
+    {
+      "code": "291",
+      "name": "Start date/time, planned"
+    },
+    {
+      "code": "292",
+      "name": "Works completion date/time, planned"
+    },
+    {
+      "code": "293",
+      "name": "Works completion date/time, actual"
+    },
+    {
+      "code": "294",
+      "name": "Hand over date/time, planned"
+    },
+    {
+      "code": "295",
+      "name": "Hand over date/time, actual"
+    },
+    {
+      "code": "296",
+      "name": "Retention release date/time"
+    },
+    {
+      "code": "297",
+      "name": "Retention release date/time, partial"
+    },
+    {
+      "code": "298",
+      "name": "Goods pick-up date / time, planned"
+    },
+    {
+      "code": "299",
+      "name": "Price adjustment start date"
+    },
+    {
+      "code": "300",
+      "name": "Price adjustment limit date"
+    },
+    {
+      "code": "301",
+      "name": "Value date of index"
+    },
+    {
+      "code": "302",
+      "name": "Publication date"
+    },
+    {
+      "code": "303",
+      "name": "Escalation date"
+    },
+    {
+      "code": "304",
+      "name": "Price adjustment date"
+    },
+    {
+      "code": "305",
+      "name": "Latest price adjustment date"
+    },
+    {
+      "code": "306",
+      "name": "Work period"
+    },
+    {
+      "code": "307",
+      "name": "Payment instruction date/time"
+    },
+    {
+      "code": "308",
+      "name": "Payment valuation presentation date/time"
+    },
+    {
+      "code": "309",
+      "name": "Banks' value date"
+    },
+    {
+      "code": "310",
+      "name": "Received date/time"
+    },
+    {
+      "code": "311",
+      "name": "On"
+    },
+    {
+      "code": "312",
+      "name": "Ship not before and not after date/time"
+    },
+    {
+      "code": "313",
+      "name": "Order to proceed date"
+    },
+    {
+      "code": "314",
+      "name": "Planned duration of works"
+    },
+    {
+      "code": "315",
+      "name": "Agreement to pay date"
+    },
+    {
+      "code": "316",
+      "name": "Valuation date/time"
+    },
+    {
+      "code": "317",
+      "name": "Reply date"
+    },
+    {
+      "code": "318",
+      "name": "Request date"
+    },
+    {
+      "code": "319",
+      "name": "Customer value date"
+    },
+    {
+      "code": "320",
+      "name": "Declaration reference period"
+    },
+    {
+      "code": "321",
+      "name": "Promotion date/period"
+    },
+    {
+      "code": "322",
+      "name": "Accounting period"
+    },
+    {
+      "code": "A",
+      "name": "period of time for the recording of financial"
+    },
+    {
+      "code": "323",
+      "name": "Horizon period"
+    },
+    {
+      "code": "324",
+      "name": "Processing date/period"
+    },
+    {
+      "code": "325",
+      "name": "Tax period"
+    },
+    {
+      "code": "326",
+      "name": "Charge period"
+    },
+    {
+      "code": "327",
+      "name": "Instalment payment due date"
+    },
+    {
+      "code": "328",
+      "name": "Payroll deduction date/time"
+    },
+    {
+      "code": "329",
+      "name": "Person birth date time"
+    },
+    {
+      "code": "330",
+      "name": "Joined employer date"
+    },
+    {
+      "code": "331",
+      "name": "Contributions ceasing date/time"
+    },
+    {
+      "code": "332",
+      "name": "Contribution period end date/time"
+    },
+    {
+      "code": "333",
+      "name": "Part-time working change date/time"
+    },
+    {
+      "code": "334",
+      "name": "Status change date/time"
+    },
+    {
+      "code": "335",
+      "name": "Contribution period start date/time"
+    },
+    {
+      "code": "336",
+      "name": "Salary change effective date"
+    },
+    {
+      "code": "337",
+      "name": "Left employer date"
+    },
+    {
+      "code": "338",
+      "name": "Benefit change date/time"
+    },
+    {
+      "code": "339",
+      "name": "Category change date/time"
+    },
+    {
+      "code": "340",
+      "name": "Joined fund date/time"
+    },
+    {
+      "code": "341",
+      "name": "Waiting time"
+    },
+    {
+      "code": "342",
+      "name": "Consignment loading date time"
+    },
+    {
+      "code": "343",
+      "name": "Date/time of discount termination"
+    },
+    {
+      "code": "344",
+      "name": "Date/time of interest due"
+    },
+    {
+      "code": "345",
+      "name": "Days of operation"
+    },
+    {
+      "code": "346",
+      "name": "Latest check-in time"
+    },
+    {
+      "code": "347",
+      "name": "Slaughtering start date"
+    },
+    {
+      "code": "348",
+      "name": "Packing start date"
+    },
+    {
+      "code": "349",
+      "name": "Packing end date"
+    },
+    {
+      "code": "350",
+      "name": "Test start date"
+    },
+    {
+      "code": "351",
+      "name": "Inspection date"
+    },
+    {
+      "code": "352",
+      "name": "Slaughtering end date"
+    },
+    {
+      "code": "353",
+      "name": "Accounting transaction date"
+    },
+    {
+      "code": "354",
+      "name": "Activity period date range"
+    },
+    {
+      "code": "A",
+      "name": "specific date range associated with an activity."
+    },
+    {
+      "code": "355",
+      "name": "Contractual delivery date"
+    },
+    {
+      "code": "356",
+      "name": "Sales date, and or time, and or period"
+    },
+    {
+      "code": "357",
+      "name": "Cancel if not published by this date"
+    },
+    {
+      "code": "358",
+      "name": "Scheduled for delivery on or after"
+    },
+    {
+      "code": "359",
+      "name": "Scheduled for delivery on or before"
+    },
+    {
+      "code": "360",
+      "name": "Sell by date"
+    },
+    {
+      "code": "361",
+      "name": "Product best before date time"
+    },
+    {
+      "code": "362",
+      "name": "End availability date"
+    },
+    {
+      "code": "363",
+      "name": "Total shelf life period"
+    },
+    {
+      "code": "A",
+      "name": "period indicating the total shelf life of a product."
+    },
+    {
+      "code": "364",
+      "name": "Minimum shelf life remaining at time of despatch period"
+    },
+    {
+      "code": "365",
+      "name": "Packaging date"
+    },
+    {
+      "code": "366",
+      "name": "Inventory report date"
+    },
+    {
+      "code": "367",
+      "name": "Meter reading date, previous"
+    },
+    {
+      "code": "368",
+      "name": "Meter reading date, latest"
+    },
+    {
+      "code": "369",
+      "name": "Date and or time of handling, estimated"
+    },
+    {
+      "code": "370",
+      "name": "Date when container equipment becomes domestic"
+    },
+    {
+      "code": "371",
+      "name": "Hydrotest date"
+    },
+    {
+      "code": "372",
+      "name": "Equipment pre-trip date"
+    },
+    {
+      "code": "373",
+      "name": "Mooring, date and time"
+    },
+    {
+      "code": "374",
+      "name": "Road fund tax expiry date"
+    },
+    {
+      "code": "375",
+      "name": "Date of first registration"
+    },
+    {
+      "code": "376",
+      "name": "Biannual terminal inspection date"
+    },
+    {
+      "code": "377",
+      "name": "Federal HighWay Administration (FHWA) inspection date"
+    },
+    {
+      "code": "378",
+      "name": "Container Safety Convention (CSC) inspection date"
+    },
+    {
+      "code": "379",
+      "name": "Periodic inspection date"
+    },
+    {
+      "code": "380",
+      "name": "Drawing revision date"
+    },
+    {
+      "code": "381",
+      "name": "Product lifespan at time of production"
+    },
+    {
+      "code": "382",
+      "name": "Earliest sale date"
+    },
+    {
+      "code": "383",
+      "name": "Cancel if not shipped by this date"
+    },
+    {
+      "code": "384",
+      "name": "Previous invoice date"
+    },
+    {
+      "code": "385",
+      "name": "Payment cancelled, violation of agreement"
+    },
+    {
+      "code": "386",
+      "name": "Payment cancelled due to administrative error"
+    },
+    {
+      "code": "387",
+      "name": "Repair turnaround time"
+    },
+    {
+      "code": "388",
+      "name": "Order amendment binding date"
+    },
+    {
+      "code": "389",
+      "name": "Cure time"
+    },
+    {
+      "code": "390",
+      "name": "From date of award to delivery"
+    },
+    {
+      "code": "391",
+      "name": "From date of receipt of item to approval"
+    },
+    {
+      "code": "392",
+      "name": "Equipment pick-up date / time, earliest"
+    },
+    {
+      "code": "393",
+      "name": "Equipment pick-up date / time, planned"
+    },
+    {
+      "code": "394",
+      "name": "Equipment positioning date/time, actual"
+    },
+    {
+      "code": "395",
+      "name": "Equipment positioning date/time, estimated"
+    },
+    {
+      "code": "396",
+      "name": "Equipment positioning date/time, requested"
+    },
+    {
+      "code": "397",
+      "name": "Equipment positioning date/time, ultimate"
+    },
+    {
+      "code": "398",
+      "name": "Goods collection or pick-up date/time, planned"
+    },
+    {
+      "code": "399",
+      "name": "Goods positioning date/time, expected"
+    },
+    {
+      "code": "400",
+      "name": "Cargo release date/time, ultimate"
+    },
+    {
+      "code": "401",
+      "name": "Container Safety Convention (CSC) plate expiration date"
+    },
+    {
+      "code": "402",
+      "name": "Document received date/time"
+    },
+    {
+      "code": "403",
+      "name": "Discharge date/time, actual"
+    },
+    {
+      "code": "404",
+      "name": "Transport means loading date/time, actual"
+    },
+    {
+      "code": "405",
+      "name": "Equipment pick-up date / time, actual"
+    },
+    {
+      "code": "406",
+      "name": "Goods positioning date/time, planned"
+    },
+    {
+      "code": "407",
+      "name": "Document requested date/time"
+    },
+    {
+      "code": "408",
+      "name": "Expected container hire from date/time"
+    },
+    {
+      "code": "409",
+      "name": "Order completion date/time, ultimate"
+    },
+    {
+      "code": "410",
+      "name": "Equipment repair ready date/time, ultimate"
+    },
+    {
+      "code": "411",
+      "name": "Container stuffing date/time, ultimate"
+    },
+    {
+      "code": "412",
+      "name": "Container stripping date/time, ultimate"
+    },
+    {
+      "code": "413",
+      "name": "Discharge and loading completed date/time"
+    },
+    {
+      "code": "414",
+      "name": "Equipment stock check date/time"
+    },
+    {
+      "code": "415",
+      "name": "Activity reporting date"
+    },
+    {
+      "code": "416",
+      "name": "Submission date"
+    },
+    {
+      "code": "417",
+      "name": "Previous booking date/time"
+    },
+    {
+      "code": "418",
+      "name": "Minimum shelf life remaining at time of receipt"
+    },
+    {
+      "code": "419",
+      "name": "Forecast period"
+    },
+    {
+      "code": "A",
+      "name": "period for which a forecast applies."
+    },
+    {
+      "code": "420",
+      "name": "Unloaded, date and time"
+    },
+    {
+      "code": "421",
+      "name": "Estimated acceptance date"
+    },
+    {
+      "code": "422",
+      "name": "Documentary credit issue date"
+    },
+    {
+      "code": "423",
+      "name": "First date of ordering"
+    },
+    {
+      "code": "424",
+      "name": "Last date of ordering"
+    },
+    {
+      "code": "425",
+      "name": "Original posting date"
+    },
+    {
+      "code": "426",
+      "name": "Reinsurance payment frequency"
+    },
+    {
+      "code": "427",
+      "name": "Adjusted age"
+    },
+    {
+      "code": "428",
+      "name": "Original issue age"
+    },
+    {
+      "code": "429",
+      "name": "Coverage duration"
+    },
+    {
+      "code": "430",
+      "name": "Coverage issue date"
+    },
+    {
+      "code": "431",
+      "name": "Flat extra period"
+    },
+    {
+      "code": "432",
+      "name": "Paid to date"
+    },
+    {
+      "code": "433",
+      "name": "Reinsurance coverage duration"
+    },
+    {
+      "code": "434",
+      "name": "Maturity date"
+    },
+    {
+      "code": "435",
+      "name": "Reinsurance issue age"
+    },
+    {
+      "code": "436",
+      "name": "Reinsurance paid-up date"
+    },
+    {
+      "code": "437",
+      "name": "Benefit period"
+    },
+    {
+      "code": "438",
+      "name": "Disability wait period"
+    },
+    {
+      "code": "439",
+      "name": "Deferred Period"
+    },
+    {
+      "code": "440",
+      "name": "Documentary credit amendment date"
+    },
+    {
+      "code": "441",
+      "name": "Last on hire date"
+    },
+    {
+      "code": "442",
+      "name": "Last off hire date"
+    },
+    {
+      "code": "443",
+      "name": "Direct interchange date"
+    },
+    {
+      "code": "444",
+      "name": "Approval date"
+    },
+    {
+      "code": "445",
+      "name": "Original estimate date"
+    },
+    {
+      "code": "446",
+      "name": "Revised estimate date"
+    },
+    {
+      "code": "447",
+      "name": "Creditor's requested value date"
+    },
+    {
+      "code": "448",
+      "name": "Referenced item creation date"
+    },
+    {
+      "code": "449",
+      "name": "Date for the last update"
+    },
+    {
+      "code": "450",
+      "name": "Opening date"
+    },
+    {
+      "code": "451",
+      "name": "Source document capture date"
+    },
+    {
+      "code": "452",
+      "name": "Trial balance period"
+    },
+    {
+      "code": "453",
+      "name": "Date of source document"
+    },
+    {
+      "code": "454",
+      "name": "Accounting value date"
+    },
+    {
+      "code": "455",
+      "name": "Expected value date"
+    },
+    {
+      "code": "456",
+      "name": "Chart of account period"
+    },
+    {
+      "code": "457",
+      "name": "Date of separation"
+    },
+    {
+      "code": "458",
+      "name": "Date of divorce"
+    },
+    {
+      "code": "459",
+      "name": "Date of marriage"
+    },
+    {
+      "code": "460",
+      "name": "Wage period, start date"
+    },
+    {
+      "code": "461",
+      "name": "Wage period, end date"
+    },
+    {
+      "code": "462",
+      "name": "Working period, start date"
+    },
+    {
+      "code": "463",
+      "name": "Working period, end date"
+    },
+    {
+      "code": "464",
+      "name": "Embarkation date and time"
+    },
+    {
+      "code": "465",
+      "name": "Disembarkation date and time"
+    },
+    {
+      "code": "466",
+      "name": "Time now date"
+    },
+    {
+      "code": "A",
+      "name": "time now date used for planning and scheduling"
+    },
+    {
+      "code": "467",
+      "name": "Holiday"
+    },
+    {
+      "code": "A",
+      "name": "date or period that is a break from work."
+    },
+    {
+      "code": "468",
+      "name": "Non working"
+    },
+    {
+      "code": "469",
+      "name": "Start date or time, earliest"
+    },
+    {
+      "code": "470",
+      "name": "Start date or time, latest"
+    },
+    {
+      "code": "471",
+      "name": "Finish date or time, earliest"
+    },
+    {
+      "code": "472",
+      "name": "Finish date or time, latest"
+    },
+    {
+      "code": "473",
+      "name": "Start date or time, mandatory"
+    },
+    {
+      "code": "474",
+      "name": "Finish date or time, mandatory"
+    },
+    {
+      "code": "475",
+      "name": "Start date or time, actual"
+    },
+    {
+      "code": "476",
+      "name": "Start date or time, estimated"
+    },
+    {
+      "code": "477",
+      "name": "Completion date or time, estimated"
+    },
+    {
+      "code": "478",
+      "name": "Start date or time, scheduled"
+    },
+    {
+      "code": "479",
+      "name": "Completion date or time, scheduled"
+    },
+    {
+      "code": "480",
+      "name": "Start date or time, not before"
+    },
+    {
+      "code": "481",
+      "name": "Start date or time, not after"
+    },
+    {
+      "code": "482",
+      "name": "Completion date or time, not before"
+    },
+    {
+      "code": "483",
+      "name": "Completion date or time, not after"
+    },
+    {
+      "code": "484",
+      "name": "Illness recovery date, expected"
+    },
+    {
+      "code": "485",
+      "name": "Period of illness, start date"
+    },
+    {
+      "code": "486",
+      "name": "Period of illness, end date"
+    },
+    {
+      "code": "487",
+      "name": "Decease date"
+    },
+    {
+      "code": "488",
+      "name": "Benefit period, start date"
+    },
+    {
+      "code": "489",
+      "name": "Benefit period, end date"
+    },
+    {
+      "code": "490",
+      "name": "Selection period, start date"
+    },
+    {
+      "code": "491",
+      "name": "Selection period, end date"
+    },
+    {
+      "code": "492",
+      "name": "Balance date/time/period"
+    },
+    {
+      "code": "493",
+      "name": "Benefit payments termination date"
+    },
+    {
+      "code": "494",
+      "name": "Covered income period"
+    },
+    {
+      "code": "495",
+      "name": "Current income period"
+    },
+    {
+      "code": "496",
+      "name": "Reinstatement date"
+    },
+    {
+      "code": "497",
+      "name": "Definition of disability duration"
+    },
+    {
+      "code": "498",
+      "name": "Previous termination date"
+    },
+    {
+      "code": "499",
+      "name": "Premium change period"
+    },
+    {
+      "code": "500",
+      "name": "Off-hire survey date"
+    },
+    {
+      "code": "501",
+      "name": "In service survey date"
+    },
+    {
+      "code": "502",
+      "name": "On hire survey date"
+    },
+    {
+      "code": "503",
+      "name": "Production inspection date"
+    },
+    {
+      "code": "504",
+      "name": "Overtime, start date"
+    },
+    {
+      "code": "505",
+      "name": "Overtime, end date"
+    },
+    {
+      "code": "506",
+      "name": "Back order delivery date/time/period"
+    },
+    {
+      "code": "507",
+      "name": "Negotiations start date"
+    },
+    {
+      "code": "508",
+      "name": "Work effective start date"
+    },
+    {
+      "code": "510",
+      "name": "Notification time limit"
+    },
+    {
+      "code": "511",
+      "name": "Time limit"
+    },
+    {
+      "code": "512",
+      "name": "Attendance date and or time and or period"
+    },
+    {
+      "code": "513",
+      "name": "Accident date and or time"
+    },
+    {
+      "code": "514",
+      "name": "Adoption date, actual"
+    },
+    {
+      "code": "515",
+      "name": "Reimbursement claim issue date and or time"
+    },
+    {
+      "code": "516",
+      "name": "Hospital admission date and or time"
+    },
+    {
+      "code": "517",
+      "name": "Hospital discharge date and or time"
+    },
+    {
+      "code": "518",
+      "name": "Period of care start date and or time"
+    },
+    {
+      "code": "519",
+      "name": "Period of care end date and or time"
+    },
+    {
+      "code": "520",
+      "name": "Department admission date and or time"
+    },
+    {
+      "code": "521",
+      "name": "Department discharge date and or time"
+    },
+    {
+      "code": "522",
+      "name": "Childbirth date and or time, actual"
+    },
+    {
+      "code": "523",
+      "name": "Prescription issue date and or time"
+    },
+    {
+      "code": "524",
+      "name": "Prescription dispensing date and or time"
+    },
+    {
+      "code": "525",
+      "name": "Clinical examination date and or time"
+    },
+    {
+      "code": "526",
+      "name": "Death date and or time"
+    },
+    {
+      "code": "527",
+      "name": "Childbirth date, estimated"
+    },
+    {
+      "code": "528",
+      "name": "Last menstrual cycle, start date"
+    },
+    {
+      "code": "529",
+      "name": "Pregnancy duration, actual"
+    },
+    {
+      "code": "530",
+      "name": "Fumigation date and/or time"
+    },
+    {
+      "code": "531",
+      "name": "Payment period"
+    },
+    {
+      "code": "A",
+      "name": "period of time in which a payment has been or will be"
+    },
+    {
+      "code": "532",
+      "name": "Average delivery delay"
+    },
+    {
+      "code": "533",
+      "name": "Budget line application date"
+    },
+    {
+      "code": "534",
+      "name": "Date of repair or service"
+    },
+    {
+      "code": "535",
+      "name": "Date of product failure"
+    },
+    {
+      "code": "536",
+      "name": "Review date"
+    },
+    {
+      "code": "537",
+      "name": "International review cycle start date"
+    },
+    {
+      "code": "538",
+      "name": "International assessment approval for publication date"
+    },
+    {
+      "code": "539",
+      "name": "Status assignment date"
+    },
+    {
+      "code": "540",
+      "name": "Instruction's original execution date"
+    },
+    {
+      "code": "541",
+      "name": "First published date"
+    },
+    {
+      "code": "542",
+      "name": "Last published date"
+    },
+    {
+      "code": "543",
+      "name": "Balance sheet date, latest"
+    },
+    {
+      "code": "544",
+      "name": "Security share price as of given date"
+    },
+    {
+      "code": "545",
+      "name": "Assigned date"
+    },
+    {
+      "code": "546",
+      "name": "Business opened date"
+    },
+    {
+      "code": "547",
+      "name": "Initial financial accounts filed date"
+    },
+    {
+      "code": "548",
+      "name": "Stop work as of given date"
+    },
+    {
+      "code": "549",
+      "name": "Completion date"
+    },
+    {
+      "code": "550",
+      "name": "Lease term, start date"
+    },
+    {
+      "code": "551",
+      "name": "Lease term, end date"
+    },
+    {
+      "code": "552",
+      "name": "Start date, actual"
+    },
+    {
+      "code": "553",
+      "name": "Start date, estimated"
+    },
+    {
+      "code": "554",
+      "name": "Filed date"
+    },
+    {
+      "code": "555",
+      "name": "Return to work date"
+    },
+    {
+      "code": "556",
+      "name": "Purchased date"
+    },
+    {
+      "code": "557",
+      "name": "Returned date"
+    },
+    {
+      "code": "558",
+      "name": "Changed date"
+    },
+    {
+      "code": "559",
+      "name": "Terminated date"
+    },
+    {
+      "code": "560",
+      "name": "Evaluation date"
+    },
+    {
+      "code": "561",
+      "name": "Business termination date"
+    },
+    {
+      "code": "562",
+      "name": "Release from bankruptcy date"
+    },
+    {
+      "code": "563",
+      "name": "Placement date, initial"
+    },
+    {
+      "code": "564",
+      "name": "Signature date"
+    },
+    {
+      "code": "565",
+      "name": "Bankruptcy filed date"
+    },
+    {
+      "code": "566",
+      "name": "End date, scheduled"
+    },
+    {
+      "code": "567",
+      "name": "Report period"
+    },
+    {
+      "code": "568",
+      "name": "Suspended date"
+    },
+    {
+      "code": "569",
+      "name": "Renewal date"
+    },
+    {
+      "code": "570",
+      "name": "Reported date"
+    },
+    {
+      "code": "571",
+      "name": "Checked date"
+    },
+    {
+      "code": "572",
+      "name": "Present residence, start date"
+    },
+    {
+      "code": "573",
+      "name": "Employment position, start date"
+    },
+    {
+      "code": "574",
+      "name": "Account closed date"
+    },
+    {
+      "code": "575",
+      "name": "Construction date, actual"
+    },
+    {
+      "code": "576",
+      "name": "Employment profession start date"
+    },
+    {
+      "code": "577",
+      "name": "Next review date"
+    },
+    {
+      "code": "578",
+      "name": "Meeting date"
+    },
+    {
+      "code": "579",
+      "name": "Administrator ordered date"
+    },
+    {
+      "code": "580",
+      "name": "Last date to file a claim"
+    },
+    {
+      "code": "581",
+      "name": "Convicted date"
+    },
+    {
+      "code": "582",
+      "name": "Interviewed date"
+    },
+    {
+      "code": "583",
+      "name": "Last visit date"
+    },
+    {
+      "code": "584",
+      "name": "Future period"
+    },
+    {
+      "code": "585",
+      "name": "Preceding period"
+    },
+    {
+      "code": "586",
+      "name": "Expected problem resolution date"
+    },
+    {
+      "code": "587",
+      "name": "Action date"
+    },
+    {
+      "code": "588",
+      "name": "Accountant's opinion date"
+    },
+    {
+      "code": "589",
+      "name": "Last activity date"
+    },
+    {
+      "code": "590",
+      "name": "Resolved date"
+    },
+    {
+      "code": "591",
+      "name": "Recorded date"
+    },
+    {
+      "code": "592",
+      "name": "Date of birth, estimated"
+    },
+    {
+      "code": "593",
+      "name": "Last annual report date"
+    },
+    {
+      "code": "594",
+      "name": "Net worth date"
+    },
+    {
+      "code": "595",
+      "name": "Payment cancellation rejected"
+    },
+    {
+      "code": "596",
+      "name": "Profit period"
+    },
+    {
+      "code": "597",
+      "name": "Registration date"
+    },
+    {
+      "code": "598",
+      "name": "Consolidation date"
+    },
+    {
+      "code": "599",
+      "name": "Board of directors not authorised as of given date"
+    },
+    {
+      "code": "600",
+      "name": "Board of directors not complete as of given date"
+    },
+    {
+      "code": "601",
+      "name": "Manager not registered as of given date"
+    },
+    {
+      "code": "602",
+      "name": "Citizenship change date"
+    },
+    {
+      "code": "603",
+      "name": "Participation date"
+    },
+    {
+      "code": "604",
+      "name": "Capitalisation date"
+    },
+    {
+      "code": "605",
+      "name": "Board of directors registration date"
+    },
+    {
+      "code": "606",
+      "name": "Operations ceased date"
+    },
+    {
+      "code": "607",
+      "name": "Satisfaction date"
+    },
+    {
+      "code": "608",
+      "name": "Legal settlement terms met date"
+    },
+    {
+      "code": "609",
+      "name": "Business control change date"
+    },
+    {
+      "code": "610",
+      "name": "Court registration date"
+    },
+    {
+      "code": "611",
+      "name": "Annual report due date"
+    },
+    {
+      "code": "612",
+      "name": "Asset and liability schedule date"
+    },
+    {
+      "code": "613",
+      "name": "Annual report mailing date"
+    },
+    {
+      "code": "614",
+      "name": "Annual report filing date"
+    },
+    {
+      "code": "615",
+      "name": "Annual report delinquent on date"
+    },
+    {
+      "code": "616",
+      "name": "Accounting methodology change date"
+    },
+    {
+      "code": "617",
+      "name": "Closed until date"
+    },
+    {
+      "code": "618",
+      "name": "Conversion into holding company date"
+    },
+    {
+      "code": "619",
+      "name": "Deed not available as of given date"
+    },
+    {
+      "code": "620",
+      "name": "Detrimental information receipt date"
+    },
+    {
+      "code": "621",
+      "name": "Construction date, estimated"
+    },
+    {
+      "code": "622",
+      "name": "Financial information date"
+    },
+    {
+      "code": "623",
+      "name": "Graduation date"
+    },
+    {
+      "code": "624",
+      "name": "Insolvency discharge granted date"
+    },
+    {
+      "code": "625",
+      "name": "Incorporation date"
+    },
+    {
+      "code": "626",
+      "name": "Inactivity end date"
+    },
+    {
+      "code": "627",
+      "name": "Last check for balance sheet update date"
+    },
+    {
+      "code": "628",
+      "name": "Last capital change date"
+    },
+    {
+      "code": "629",
+      "name": "Letter of agreement date"
+    },
+    {
+      "code": "630",
+      "name": "Letter of liability date"
+    },
+    {
+      "code": "631",
+      "name": "Liquidation date"
+    },
+    {
+      "code": "632",
+      "name": "Lowest activity period"
+    },
+    {
+      "code": "633",
+      "name": "Legal structure change date"
+    },
+    {
+      "code": "634",
+      "name": "Current name effective date"
+    },
+    {
+      "code": "635",
+      "name": "Not registered as of given date"
+    },
+    {
+      "code": "636",
+      "name": "Current authority control start date"
+    },
+    {
+      "code": "637",
+      "name": "Privilege details verification date"
+    },
+    {
+      "code": "638",
+      "name": "Current legal structure effective date"
+    },
+    {
+      "code": "639",
+      "name": "Peak activity period"
+    },
+    {
+      "code": "640",
+      "name": "Presentation to bankruptcy receivers date"
+    },
+    {
+      "code": "641",
+      "name": "Resignation date"
+    },
+    {
+      "code": "642",
+      "name": "Legal action closed date"
+    },
+    {
+      "code": "643",
+      "name": "Mail receipt date"
+    },
+    {
+      "code": "644",
+      "name": "Social security claims verification date"
+    },
+    {
+      "code": "645",
+      "name": "Sole directorship registration date"
+    },
+    {
+      "code": "646",
+      "name": "Trade style registration date"
+    },
+    {
+      "code": "647",
+      "name": "Trial start date, scheduled"
+    },
+    {
+      "code": "648",
+      "name": "Trial start date, actual"
+    },
+    {
+      "code": "649",
+      "name": "Value Added Tax (VAT) claims verification date"
+    },
+    {
+      "code": "650",
+      "name": "Receivership result date"
+    },
+    {
+      "code": "651",
+      "name": "Investigation end date"
+    },
+    {
+      "code": "652",
+      "name": "Employee temporary laid-off period end date"
+    },
+    {
+      "code": "653",
+      "name": "Investigation start date"
+    },
+    {
+      "code": "654",
+      "name": "Income period"
+    },
+    {
+      "code": "655",
+      "name": "Criminal sentence duration"
+    },
+    {
+      "code": "656",
+      "name": "Age"
+    },
+    {
+      "code": "657",
+      "name": "Receivables collection period"
+    },
+    {
+      "code": "658",
+      "name": "Comparison period"
+    },
+    {
+      "code": "659",
+      "name": "Adjournment"
+    },
+    {
+      "code": "660",
+      "name": "Court dismissal date"
+    },
+    {
+      "code": "661",
+      "name": "Insufficient assets judgement date"
+    },
+    {
+      "code": "662",
+      "name": "Average payment period"
+    },
+    {
+      "code": "663",
+      "name": "Forecast period start"
+    },
+    {
+      "code": "664",
+      "name": "Period extended"
+    },
+    {
+      "code": "665",
+      "name": "Employee temporary laid-off period start date"
+    },
+    {
+      "code": "666",
+      "name": "Management available date"
+    },
+    {
+      "code": "667",
+      "name": "Withdrawn date"
+    },
+    {
+      "code": "668",
+      "name": "Claim incurred date"
+    },
+    {
+      "code": "669",
+      "name": "Financial coverage period"
+    },
+    {
+      "code": "670",
+      "name": "Claim made date"
+    },
+    {
+      "code": "671",
+      "name": "Stop distribution date"
+    },
+    {
+      "code": "672",
+      "name": "Period assigned"
+    },
+    {
+      "code": "673",
+      "name": "Lease period"
+    },
+    {
+      "code": "674",
+      "name": "Forecast period end date"
+    },
+    {
+      "code": "675",
+      "name": "Judgement date"
+    },
+    {
+      "code": "676",
+      "name": "Period worked for the company"
+    },
+    {
+      "code": "677",
+      "name": "Transport equipment stuffing date and/or time"
+    },
+    {
+      "code": "678",
+      "name": "Transport equipment stripping date and/or time"
+    },
+    {
+      "code": "679",
+      "name": "Initial request date"
+    },
+    {
+      "code": "680",
+      "name": "Period overdue"
+    },
+    {
+      "code": "681",
+      "name": "Implementation date/time/period"
+    },
+    {
+      "code": "A",
+      "name": "date/time/period within which an implementation is to"
+    },
+    {
+      "code": "682",
+      "name": "Refusal period"
+    },
+    {
+      "code": "683",
+      "name": "Suspension period"
+    },
+    {
+      "code": "684",
+      "name": "Deletion date"
+    },
+    {
+      "code": "685",
+      "name": "First sale date and/or time and/or period"
+    },
+    {
+      "code": "686",
+      "name": "Last sale date and/or time and/or period"
+    },
+    {
+      "code": "687",
+      "name": "Date ready for collection"
+    },
+    {
+      "code": "A",
+      "name": "date on which an object is ready for collection."
+    },
+    {
+      "code": "688",
+      "name": "Shipping date, no schedule established as of"
+    },
+    {
+      "code": "689",
+      "name": "Shipping date and/or time, current schedule"
+    },
+    {
+      "code": "690",
+      "name": "Suppliers' average credit period"
+    },
+    {
+      "code": "691",
+      "name": "Advising date"
+    },
+    {
+      "code": "692",
+      "name": "Project over target baseline date"
+    },
+    {
+      "code": "693",
+      "name": "Established date"
+    },
+    {
+      "code": "694",
+      "name": "Latest filing period"
+    },
+    {
+      "code": "695",
+      "name": "Mailing date"
+    },
+    {
+      "code": "696",
+      "name": "Date/time of latest accounts filing at public registry"
+    },
+    {
+      "code": "697",
+      "name": "Date placed in disfavour"
+    },
+    {
+      "code": "698",
+      "name": "Employment position start date, estimated"
+    },
+    {
+      "code": "699",
+      "name": "Registered contractor number assignment date, original"
+    },
+    {
+      "code": "700",
+      "name": "Ownership change date"
+    },
+    {
+      "code": "701",
+      "name": "Original duration"
+    },
+    {
+      "code": "702",
+      "name": "Period between changes"
+    },
+    {
+      "code": "703",
+      "name": "From date of notice to proceed to commencement of"
+    },
+    {
+      "code": "704",
+      "name": "From date of notice to proceed to completion"
+    },
+    {
+      "code": "705",
+      "name": "Period an event is late due to customer"
+    },
+    {
+      "code": "706",
+      "name": "File generation date and/or time"
+    },
+    {
+      "code": "707",
+      "name": "Endorsed certificate issue date"
+    },
+    {
+      "code": "708",
+      "name": "Patient first visit for condition"
+    },
+    {
+      "code": "709",
+      "name": "Admission date and/or time, expected"
+    },
+    {
+      "code": "710",
+      "name": "Symptoms onset, patient alleged"
+    },
+    {
+      "code": "711",
+      "name": "Accident benefit period"
+    },
+    {
+      "code": "712",
+      "name": "Accident benefit age limit"
+    },
+    {
+      "code": "713",
+      "name": "Accident lifetime benefit qualification age"
+    },
+    {
+      "code": "714",
+      "name": "Sickness benefit period"
+    },
+    {
+      "code": "715",
+      "name": "Sickness benefit age limit"
+    },
+    {
+      "code": "716",
+      "name": "Sickness lifetime benefit qualification age"
+    },
+    {
+      "code": "717",
+      "name": "Accident insurance elimination period"
+    },
+    {
+      "code": "718",
+      "name": "Sickness insurance elimination period"
+    },
+    {
+      "code": "719",
+      "name": "Provider signature date"
+    },
+    {
+      "code": "720",
+      "name": "Condition initial treatment date"
+    },
+    {
+      "code": "721",
+      "name": "Information release authorization date"
+    },
+    {
+      "code": "722",
+      "name": "Benefit release authorization date"
+    },
+    {
+      "code": "723",
+      "name": "Last seen date"
+    },
+    {
+      "code": "724",
+      "name": "Acute manifestation date"
+    },
+    {
+      "code": "725",
+      "name": "Similar illness onset date"
+    },
+    {
+      "code": "726",
+      "name": "Last X-ray date"
+    },
+    {
+      "code": "727",
+      "name": "Placement date, previous"
+    },
+    {
+      "code": "728",
+      "name": "Placement date"
+    },
+    {
+      "code": "729",
+      "name": "Temporary prosthesis date"
+    },
+    {
+      "code": "730",
+      "name": "Orthodontic treatment period, remaining"
+    },
+    {
+      "code": "731",
+      "name": "Orthodontic treatment period, total"
+    },
+    {
+      "code": "732",
+      "name": "Maximum credit granted date"
+    },
+    {
+      "code": "733",
+      "name": "Last date of accounts filed at public register"
+    },
+    {
+      "code": "734",
+      "name": "Allowed renewal duration period"
+    },
+    {
+      "code": "735",
+      "name": "Offset from Coordinated Universal Time (UTC)"
+    },
+    {
+      "code": "736",
+      "name": "Appointment expiry date"
+    },
+    {
+      "code": "737",
+      "name": "Earliest filing period"
+    },
+    {
+      "code": "738",
+      "name": "Original name change date"
+    },
+    {
+      "code": "739",
+      "name": "Education start date"
+    },
+    {
+      "code": "740",
+      "name": "Education end date"
+    },
+    {
+      "code": "741",
+      "name": "Receivership period"
+    },
+    {
+      "code": "742",
+      "name": "Financial information submission date/time"
+    },
+    {
+      "code": "743",
+      "name": "Purchase order latest possible change date"
+    },
+    {
+      "code": "744",
+      "name": "Investment number allocation date"
+    },
+    {
+      "code": "745",
+      "name": "Payment impossible"
+    },
+    {
+      "code": "746",
+      "name": "Record extraction period"
+    },
+    {
+      "code": "747",
+      "name": "Cost accounting value date"
+    },
+    {
+      "code": "748",
+      "name": "Open period"
+    },
+    {
+      "code": "749",
+      "name": "Period between issue date and maturity date"
+    },
+    {
+      "code": "750",
+      "name": "Before date"
+    },
+    {
+      "code": "751",
+      "name": "After date"
+    },
+    {
+      "code": "752",
+      "name": "Meter reading date, next scheduled"
+    },
+    {
+      "code": "753",
+      "name": "Maturity date, optimal"
+    },
+    {
+      "code": "754",
+      "name": "Product ageing duration, maximum"
+    },
+    {
+      "code": "755",
+      "name": "Product ageing duration, minimum"
+    },
+    {
+      "code": "756",
+      "name": "Ultimate documentation date/time for 24-hour rule"
+    },
+    {
+      "code": "757",
+      "name": "Departure date/time from place of loading"
+    },
+    {
+      "code": "758",
+      "name": "Trade item ship date/time, earliest possible"
+    },
+    {
+      "code": "759",
+      "name": "Trade item ship date/time, latest possible"
+    },
+    {
+      "code": "760",
+      "name": "Start date/time, maximum buying quantity"
+    },
+    {
+      "code": "761",
+      "name": "Start date/time, minimum buying quantity"
+    },
+    {
+      "code": "762",
+      "name": "Marketing campaign end date/time, suggested"
+    },
+    {
+      "code": "763",
+      "name": "Marketing campaign start date/time, suggested"
+    },
+    {
+      "code": "764",
+      "name": "Start availability date"
+    },
+    {
+      "code": "765",
+      "name": "Seasonal availabilty calendar year"
+    },
+    {
+      "code": "766",
+      "name": "Goods pickup lead time"
+    },
+    {
+      "code": "767",
+      "name": "Change date/time, latest"
+    },
+    {
+      "code": "768",
+      "name": "End date/time, maximum buying quantity"
+    },
+    {
+      "code": "769",
+      "name": "End dat/time, minimum buying quantity"
+    },
+    {
+      "code": "770",
+      "name": "End date/time of exclusivity"
+    },
+    {
+      "code": "771",
+      "name": "Data release date"
+    },
+    {
+      "code": "772",
+      "name": "Handling start date and/or time, actual"
+    },
+    {
+      "code": "773",
+      "name": "Handling end date and/or time, estimated"
+    },
+    {
+      "code": "774",
+      "name": "Handling end date and/or time, actual"
+    },
+    {
+      "code": "775",
+      "name": "Minimum product lifespan for consumer"
+    },
+    {
+      "code": "776",
+      "name": "Entry date, elected"
+    },
+    {
+      "code": "777",
+      "name": "Arrival date/time at initial port with the intent to unload"
+    },
+    {
+      "code": "778",
+      "name": "Conveyance port activity date/ time"
+    },
+    {
+      "code": "779",
+      "name": "Date and time of importation into port limits"
+    },
+    {
+      "code": "780",
+      "name": "Free trade zone commodity status assignment date"
+    },
+    {
+      "code": "781",
+      "name": "Jurisdiction entry date/time, actual"
+    },
+    {
+      "code": "782",
+      "name": "Inspection start date/time"
+    },
+    {
+      "code": "783",
+      "name": "Inspection end date/time"
+    },
+    {
+      "code": "784",
+      "name": "Document/message rejection date/time"
+    },
+    {
+      "code": "785",
+      "name": "Government service date/time, requested"
+    },
+    {
+      "code": "786",
+      "name": "Crop year"
+    },
+    {
+      "code": "787",
+      "name": "Date of original manufacture"
+    },
+    {
+      "code": "788",
+      "name": "Model year"
+    },
+    {
+      "code": "789",
+      "name": "Opened trade item life span"
+    },
+    {
+      "code": "790",
+      "name": "Unmooring, date and time"
+    },
+    {
+      "code": "791",
+      "name": "First crane lift"
+    },
+    {
+      "code": "792",
+      "name": "Last crane lift"
+    },
+    {
+      "code": "793",
+      "name": "Reprocessing date/time"
+    },
+    {
+      "code": "794",
+      "name": "First returnable date/time"
+    },
+    {
+      "code": "795",
+      "name": "Community visibility date/time"
+    },
+    {
+      "code": "796",
+      "name": "Catch date/time"
+    },
+    {
+      "code": "797",
+      "name": "First freezing date"
+    },
+    {
+      "code": "798",
+      "name": "Verified gross mass determination date/time"
+    },
+    {
+      "code": "799",
+      "name": "Validity end date"
+    },
+    {
+      "code": "800",
+      "name": "Next status report date"
+    },
+    {
+      "code": "801",
+      "name": "Service connection date/time, actual"
+    },
+    {
+      "code": "802",
+      "name": "Service disconnection date/time, actual"
+    },
+    {
+      "code": "803",
+      "name": "Empty equipment required date/time/period"
+    },
+    {
+      "code": "804",
+      "name": "Product sterilisation date"
+    },
+    {
+      "code": "805",
+      "name": "Stock demand cover period, expected"
+    },
+    {
+      "code": "A",
+      "name": "period of time when all stocks are expected to cover"
+    },
+    {
+      "code": "806",
+      "name": "Shipment date/time, expected"
+    },
+    {
+      "code": "807",
+      "name": "Slaughtering date/time"
+    },
+    {
+      "code": "808",
+      "name": "Animal birth date/time"
+    },
+    {
+      "code": "809",
+      "name": "Seasonal availability end date"
+    },
+    {
+      "code": "810",
+      "name": "Verified gross mass cut-off date/time"
+    },
+    {
+      "code": "811",
+      "name": "Dangerous goods acceptance cut-off date/time"
+    },
+    {
+      "code": "812",
+      "name": "Out of gauge or break bulk acceptance cut-off date/time"
+    },
+    {
+      "code": "813",
+      "name": "Reefer acceptance cut-off date/time"
+    },
+    {
+      "code": "814",
+      "name": "Laden transport equipment acceptance cut-off date/time"
+    },
+    {
+      "code": "815",
+      "name": "Transshipment booking acceptance cut-off date/time"
+    },
+    {
+      "code": "816",
+      "name": "Ordered labour team start time"
+    },
+    {
+      "code": "817",
+      "name": "Ordered labour team end time"
+    },
+    {
+      "code": "818",
+      "name": "Means of transport ready for cargo operations date/time"
+    },
+    {
+      "code": "819",
+      "name": "Means of transport ready for departure date/time"
+    },
+    {
+      "code": "820",
+      "name": "Vessel arrival at pilot area date/time, estimated"
+    },
+    {
+      "code": "821",
+      "name": "Vessel arrival at pilot area date/time, actual"
+    },
+    {
+      "code": "822",
+      "name": "Delivery place booking date/time"
+    },
+    {
+      "code": "823",
+      "name": "Pickup place booking date/time"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    },
+    {
+      "code": "A",
+      "name": "code assigned within a code list to be used on an"
+    }
+  ]
+}
