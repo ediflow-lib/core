@@ -1,0 +1,40 @@
+{
+  "name": "@ediflow/edifact-d20b",
+  "version": "0.1.0",
+  "description": "EDIFACT D.20B (2020) Standard Definitions - Latest Standard - 7 Message Types",
+  "main": "./data/index.json",
+  "files": [
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "edi",
+    "edifact",
+    "d20b",
+    "edifact-d20b",
+    "standard-definitions",
+    "message-structures",
+    "orders",
+    "invoic",
+    "desadv",
+    "iftmin",
+    "recadv",
+    "ordrsp",
+    "aperak",
+    "latest-standard"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git",
+    "directory": "packages/edifact-d20b"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow/tree/main/packages/edifact-d20b#readme",
+  "peerDependencies": {
+    "@ediflow/core": "^0.1.0"
+  }
+}

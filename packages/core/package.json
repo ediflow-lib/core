@@ -1,0 +1,84 @@
+{
+  "name": "@ediflow/core",
+  "version": "0.1.0",
+  "description": "Modern EDIFACT Parser, Validator & Builder - Core Library",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./infrastructure": {
+      "types": "./dist/infrastructure/index.d.ts",
+      "require": "./dist/infrastructure/index.cjs",
+      "import": "./dist/infrastructure/index.js"
+    },
+    "./cli": {
+      "types": "./dist/presentation/cli/index.d.ts",
+      "require": "./dist/presentation/cli/index.cjs",
+      "import": "./dist/presentation/cli/index.js"
+    }
+  },
+  "bin": {
+    "ediflow": "./dist/presentation/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "edi",
+    "edifact",
+    "parser",
+    "validator",
+    "builder",
+    "typescript",
+    "clean-architecture",
+    "edi-parser",
+    "edi-validator",
+    "edi-builder"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow/tree/main/packages/core#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "commander": "^14.0.2",
+    "js-yaml": "^4.1.1",
+    "lru-cache": "^11.2.4",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/lru-cache": "^7.10.9",
+    "@types/node": "^20.11.5",
+    "@vitest/coverage-v8": "^1.2.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  }
+}

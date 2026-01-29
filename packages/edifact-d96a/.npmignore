@@ -1,0 +1,22 @@
+# Source files (only publish data/)
+*.ts
+*.test.ts
+*.spec.ts
+
+# Development
+.github/
+.vscode/
+node_modules/
+
+# Documentation (except README)
+docs/
+*.md
+!README.md
+
+# Config files
+tsconfig.json
+.gitignore
+
+# Other
+.DS_Store
+*.log

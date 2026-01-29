@@ -1,0 +1,59 @@
+# Source files (we publish dist/ only)
+src/
+*.ts
+!*.d.ts
+
+# Tests
+test/
+*.test.ts
+*.spec.ts
+__tests__/
+coverage/
+.nyc_output/
+
+# Documentation (except README)
+docs/
+
+# Development files
+.github/
+.vscode/
+.idea/
+node_modules/
+
+# Config files
+tsconfig.json
+tsconfig.*.json
+tsup.config.ts
+vitest.config.ts
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# Build artifacts
+*.tsbuildinfo
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Scripts
+scripts/
+
+# Directories (published separately)
+directories/
+
+# Resources (schema generation sources)
+resources/
+
+# Private docs
+docs/private/
+
+# Other
+*.map
+!dist/**/*.map

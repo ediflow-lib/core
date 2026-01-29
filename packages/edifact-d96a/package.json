@@ -1,0 +1,36 @@
+{
+  "name": "@ediflow/edifact-d96a",
+  "version": "0.1.0",
+  "description": "EDIFACT D.96A (1996) Standard Definitions - 7 Message Types",
+  "main": "./data/index.json",
+  "files": [
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "edi",
+    "edifact",
+    "d96a",
+    "edifact-d96a",
+    "standard-definitions",
+    "message-structures",
+    "orders",
+    "invoic",
+    "desadv",
+    "pricat"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git",
+    "directory": "packages/edifact-d96a"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow/tree/main/packages/edifact-d96a#readme",
+  "peerDependencies": {
+    "@ediflow/core": "^0.1.0"
+  }
+}

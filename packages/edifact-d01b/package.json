@@ -1,0 +1,38 @@
+{
+  "name": "@ediflow/edifact-d01b",
+  "version": "0.1.0",
+  "description": "EDIFACT D.01B (2001) Standard Definitions - 4 Message Types",
+  "main": "./data/index.json",
+  "files": [
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "edi",
+    "edifact",
+    "d01b",
+    "edifact-d01b",
+    "standard-definitions",
+    "message-structures",
+    "iftmin",
+    "iftsta",
+    "ifcsum",
+    "invoic",
+    "transport",
+    "logistics"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git",
+    "directory": "packages/edifact-d01b"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow/tree/main/packages/edifact-d01b#readme",
+  "peerDependencies": {
+    "@ediflow/core": "^0.1.0"
+  }
+}

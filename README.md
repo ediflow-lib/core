@@ -1,180 +1,332 @@
-# EDIFlow
+# EDIFlow 🚀
 
-> The Modern EDI Flow Platform
+> Modern EDIFACT Parser, Validator & Builder for TypeScript/JavaScript
 
-Parse, Validate, and Build any EDI standard with a modern, type-safe API.
-
+[![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
+[![Tests](https://img.shields.io/badge/tests-590%20passing-brightgreen)](https://github.com/ediflow-lib/ediflow)
+[![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
-> **⚠️ Note for Contributors:** Some directories (`scripts/`, `resources/`) are not included in the public repository. See [PRIVATE_RESOURCES.md](PRIVATE_RESOURCES.md) for details.
+**Clean Architecture** • **Type-Safe** • **Zero Config** • **Battle-Tested**
 
-## 🚧 In Active Development
-
-EDIFlow is a next-generation EDI library for TypeScript/JavaScript, designed to make EDI integration simple and enjoyable.
-
-### 🎯 Supported Standards
-
-**EDI Standards:**
-- ✅ **EDIFACT** (UN/EDIFACT) - Q2 2026
-  - D.96A, D.01B, D.20B, D.23A
-  - 10+ message types (DESADV, INVOIC, ORDERS, etc.)
-  - **Effort:** 12 weeks
-  
-- 🚧 **X12** (ANSI ASC X12) - Q4 2026
-  - 004010, 005010, 008020
-  - Healthcare (837, 835, 270, 271) + Logistics (850, 810, 856, 204)
-  - **Effort:** 12 weeks
-  
-- 🚧 **IDOC** (SAP Intermediate Document) - Q2 2027
-  - SAP ECC, SAP S/4HANA
-  - Flat File + XML support
-  - 8+ IDOC types (ORDERS05, INVOIC02, MATMAS05)
-  - **Effort:** 9 weeks
-  
-- 🚧 **VDA** (German Automotive) - End 2027
-  - VDA 4905, 4906, 4908, 4913
-  - Fixed-width + CSV formats
-  - **Effort:** 5 weeks
-
-**Healthcare Standards:**
-- 🔮 **HL7 v2.x** (Health Level Seven) - Q2 2028
-  - 2.3, 2.5.1, 2.7
-  - ADT, ORM, ORU, MDM messages
-  - **Effort:** 8 weeks
-  
-- 🔮 **HL7 v3** (XML-based) - Q4 2028
-  - CDA (Clinical Document Architecture)
-  - **Effort:** 4 weeks
-  
-- 🔮 **FHIR** (Fast Healthcare Interoperability Resources) - Q2 2029
-  - REST API based
-  - JSON/XML
-  - **Effort:** 6 weeks
-
-**See [MULTI_STANDARD_SCOPE.md](docs/private/MULTI_STANDARD_SCOPE.md) for detailed analysis.**
-
-## ✨ Features
-
-- 🔒 **Type-Safe** - Full TypeScript support with advanced type inference
-- 🌍 **Multi-Standard** - One unified API for EDIFACT, X12, IDOC, and more
-- 🎯 **Zero Dependencies** - Core library has no external dependencies
-- 📦 **Modular** - Use only what you need
-- ⚡ **Fast** - Optimized for performance
-- 🧪 **Well-Tested** - Comprehensive test coverage with TDD approach
-
-## 🚀 Quick Start
-
-```typescript
-import { parse } from '@ediflow/core';
-
-// Parse any EDI standard
-const result = parse('EDIFACT', 'DESADV', 'D.20B', edifactString);
-
-if (result.success) {
-  console.log(result.data); // Fully typed message object
-  console.log(result.data.documentNumber);
-  console.log(result.data.parties);
-}
-```
-
-## 📊 Standards Comparison
-
-| Standard | Complexity | Market | Use Cases | Timeline |
-|----------|-----------|--------|-----------|----------|
-| **EDIFACT** | Medium | Europe, Global | Logistics, Retail, Manufacturing | Q2 2026 ✅ |
-| **X12** | Medium-High | North America | Healthcare, Retail, Logistics | Q4 2026 |
-| **IDOC** | Medium-High | SAP Customers | ERP Integration, Master Data | Q2 2027 |
-| **VDA** | Low-Medium | German Automotive | JIT, Kanban, Quality | End 2027 |
-| **HL7 v2** | Medium-High | Healthcare | Hospital Systems, Labs, Pharmacy | Q2 2028 |
-| **HL7 v3** | High | Healthcare | Clinical Documents | Q4 2028 |
-| **FHIR** | Medium | Healthcare | Modern APIs, Mobile Health | Q2 2029 |
-
-**Total Development Time:** ~56 weeks (13 months focused development)
-
-## 📚 Documentation
-
-- **Website:** [ediflow.org](https://ediflow.org) (coming soon)
-- **API Documentation:** Coming soon
-- **GitHub:** [github.com/ediflow-lib](https://github.com/ediflow-lib)
-
-## 🏗️ Architecture
-
-EDIFlow follows Clean Architecture principles with multi-standard support from the ground up:
-
-- **Domain Layer:** Standard-agnostic entities (EDIMessage, EDISegment, EDIElement)
-- **Application Layer:** Use cases for parsing, validation, and building
-- **Infrastructure Layer:** Standard-specific implementations (EDIFACT, X12, IDOC parsers)
-- **Repository System:** External definition repositories per standard and version
-
-## 🗺️ Roadmap
-
-### Q2 2026: EDIFACT Support (Phase 1)
-- ✅ Parser, Validator, Builder
-- ✅ D.20B Repository (DESADV, INVOIC, ORDERS, IFTMIN, IFCSUM, IFTSTA, RECADV)
-- ✅ Full TypeScript definitions
-- ✅ Comprehensive test coverage (>80%)
-- ✅ CLI tool
-- 📦 **Release:** @ediflow/core@1.0.0
-
-### Q4 2026: X12 Support (Phase 2)
-- X12 Parser & Validator
-- Version 005010 (current standard)
-- Healthcare: 837, 835, 270, 271, 834
-- Logistics: 850, 810, 856, 204, 214
-- 📦 **Release:** @ediflow/x12-005010@1.0.0
-
-### Q2 2027: IDOC Support (Phase 3)
-- SAP Integration
-- Flat File + XML format support
-- Common IDOC types: ORDERS05, INVOIC02, DESADV01, MATMAS05
-- 📦 **Release:** @ediflow/idoc-sap-ecc@1.0.0
-
-### End 2027: VDA Support (Phase 4)
-- German Automotive standard
-- VDA 4905, 4906, 4908, 4913
-- Fixed-width + CSV formats
-- 📦 **Release:** @ediflow/vda-4905@1.0.0
-
-### 2028-2029: Healthcare Standards (Phase 5-7)
-**Q2 2028: HL7 v2.x**
-- ADT, ORM, ORU, MDM messages
-- Versions 2.3, 2.5.1, 2.7
-- 📦 **Release:** @ediflow/hl7-v2@1.0.0
-
-**Q4 2028: HL7 v3**
-- XML-based Clinical Document Architecture (CDA)
-- 📦 **Release:** @ediflow/hl7-v3@1.0.0
-
-**Q2 2029: FHIR**
-- REST API client
-- JSON/XML resources
-- Patient, Observation, Condition, etc.
-- 📦 **Release:** @ediflow/fhir@1.0.0
-
-### Future: SaaS Platform
-- Cloud-based parsing & validation
-- REST API
-- Web UI
-- Multi-language support (DE, EN, ES, RU, FR, PT, CN, JP)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-## 📧 Contact
-
-- **Email:** hello.ediflow@gmail.com
-- **Website:** [ediflow.org](https://ediflow.org)
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) for details.
+EDIFlow is a modern, enterprise-grade EDIFACT library built with **Clean Architecture** principles. Parse, validate, and build EDIFACT messages with full TypeScript support and comprehensive validation.
 
 ---
 
-**Status:** 🚧 In Active Development  
-**Version:** 0.1.0-alpha  
-**Last Updated:** January 2026
+## ✨ Why EDIFlow?
 
-Made with ❤️ for the EDI community
+✅ **Type-Safe** - Full TypeScript support with advanced type inference  
+✅ **Clean Architecture** - SOLID principles, testable, maintainable  
+✅ **Complete EDIFACT Support** - 214 message types across 4 versions  
+✅ **3-Phase Validation** - Syntax → Structure → Business Logic  
+✅ **Phase 2 Mapping** - Auto-convert to/from business objects  
+✅ **Envelope Support** - UNH/UNT/UNB/UNZ generation & parsing  
+✅ **Well-Tested** - 590 tests, 100% coverage goal  
+✅ **Zero Config** - Works out of the box  
+
+---
+
+---
+
+## 🚀 Quick Start
+
+### Installation
+
+EDIFlow is published as **5 separate NPM packages** (all MIT licensed):
+
+```bash
+# 1. Install core library (required)
+npm install @ediflow/core
+
+# 2. Install EDIFACT standard(s) you need (choose one or more)
+npm install @ediflow/edifact-d20b   # Latest (2020) - 7 message types
+npm install @ediflow/edifact-d12a   # Comprehensive (2012) - 196 message types
+npm install @ediflow/edifact-d01b   # Legacy (2001) - 4 message types
+npm install @ediflow/edifact-d96a   # Classic (1996) - 7 message types
+```
+
+### Parse EDIFACT Message
+
+```typescript
+import { DIContainer } from '@ediflow/core';
+
+const container = DIContainer.getInstance();
+const parseUseCase = container.resolve('ParseEDIUseCase');
+
+// Parse EDIFACT string to structured message
+const result = parseUseCase.execute({
+  message: edifactString,
+  standard: 'EDIFACT'
+});
+
+if (result.success) {
+  console.log(result.message.header);      // UNH segment
+  console.log(result.message.segments);    // All segments
+  console.log(result.message.trailer);     // UNT segment
+}
+```
+
+### Validate Message
+
+```typescript
+const validateUseCase = container.resolve('ValidateMessageUseCase');
+
+const validation = validateUseCase.execute({
+  message: result.message,
+  messageType: 'ORDERS',
+  version: 'D20B',
+  repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
+});
+
+if (validation.success) {
+  console.log('✅ Message is valid!');
+} else {
+  console.log('❌ Validation errors:', validation.errors);
+}
+```
+
+### Build EDIFACT Message
+
+```typescript
+const buildUseCase = container.resolve('BuildEDIUseCase');
+
+const ediString = buildUseCase.execute({
+  message: ediMessage,
+  standard: 'EDIFACT',
+  // Optional: Add envelope (UNH/UNT/UNB/UNZ)
+  envelope: {
+    sender: { id: 'SENDER123', qualifier: '14' },
+    receiver: { id: 'RECEIVER456', qualifier: '14' }
+  }
+});
+
+console.log(ediString); // Ready to send!
+```
+
+---
+
+## 📦 Package Overview
+
+| Package | Size | Messages | Use Case |
+|---------|------|----------|----------|
+| **[@ediflow/core](packages/core)** | 120 KB | - | Parser, Validator, Builder engine |
+| **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 7 | D.96A (1996) - Early adopters |
+| **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 4 | D.01B (2001) - Legacy systems |
+| **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 7 | D.20B (2020) - Latest standard |
+| **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | D.12A (2012) - Full coverage |
+
+**Total if all installed:** 6.6 MB • **214 message types** • **All MIT licensed**
+
+💡 **Tip:** Install only what you need! Most projects need only `core` + one standard.
+
+---
+
+---
+
+## 🎯 Features
+
+### Core Features
+- **Parse** - EDIFACT string → Structured EDIMessage
+- **Validate** - 3-phase validation (Syntax → Structure → Business)
+- **Build** - EDIMessage → EDIFACT string
+- **Map** - Auto-convert to/from business objects (Phase 2)
+- **Envelopes** - UNH/UNT/UNB/UNZ generation & parsing
+
+### EDIFACT Versions Supported
+- **D.96A** (1996) - 7 message types
+- **D.01B** (2001) - 4 message types  
+- **D.20B** (2020) - 7 message types
+- **D.12A** (2012) - 196 message types (Full Coverage!)
+
+### Message Types (214 total)
+**Logistics:** DESADV, ORDERS, ORDRSP, RECADV, IFTMIN, IFTSTA, IFCSUM  
+**Financial:** INVOIC, REMADV, FINSTA, PAYMUL  
+**Catalog:** PRICAT, SLSRPT  
+**Plus:** 200+ more message types in D.12A
+
+---
+
+## 🏗️ Architecture
+
+EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
+
+```
+┌─────────────────────────────────────┐
+│      Presentation Layer             │  CLI, Future: API
+│      (packages/core/src/presentation)│
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│      Application Layer              │  Use Cases, DTOs
+│      (packages/core/src/application)│  ParseEDI, ValidateMessage, BuildEDI
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│      Domain Layer                   │  Entities, Value Objects
+│      (packages/core/src/domain)     │  EDIMessage, ValidationRules
+└──────────────┬──────────────────────┘
+               │
+┌──────────────▼──────────────────────┐
+│      Infrastructure Layer           │  Parsers, Repositories
+│      (packages/core/src/infrastructure)│  EdifactParser, FileBasedRepo
+└─────────────────────────────────────┘
+```
+
+**Key Principles:**
+- ✅ Dependencies point **inward** (Domain has zero deps)
+- ✅ Domain Layer is **framework-agnostic**
+- ✅ Use Cases orchestrate business logic
+- ✅ Dependency Injection via DIContainer
+- ✅ Repository Pattern for standard definitions
+
+**Read more:** [Architecture Documentation](docs/ARCHITECTURE.md)
+
+---
+
+## 📚 Documentation
+
+- **[Quick Start Guide](docs/QUICK_START.md)** - Get started in 5 minutes
+- **[Architecture](docs/ARCHITECTURE.md)** - Clean Architecture explained
+- **[Developer Guide](docs/DEVELOPER_GUIDE.md)** - Contributing, testing, development
+- **[API Reference](docs/API.md)** - Complete API documentation
+- **[Release Process](docs/RELEASE_PROCESS.md)** - How we release
+
+### Package Documentation
+- **[@ediflow/core](packages/core/README.md)** - Core library
+- **[@ediflow/edifact-d96a](packages/edifact-d96a/README.md)** - D.96A standard
+- **[@ediflow/edifact-d01b](packages/edifact-d01b/README.md)** - D.01B standard
+- **[@ediflow/edifact-d20b](packages/edifact-d20b/README.md)** - D.20B standard
+- **[@ediflow/edifact-d12a](packages/edifact-d12a/README.md)** - D.12A standard
+
+---
+
+## 🗺️ Roadmap
+
+### ✅ M1 - EDIFACT Foundation (February 2026)
+- EDIFACT parsing, validation, building
+- 4 EDIFACT versions (D.96A, D.01B, D.20B, D.12A)
+- 214 message types
+- Clean Architecture
+- 590 tests
+
+### 🚀 M2 - Enhanced Features (Q2 2026)
+- UNG/UNE functional groups
+- More message types
+- Performance optimizations
+- SaaS Platform (EDIFlow Cloud)
+
+### 🌍 M3 - Multi-Standard (Q4 2026 - 2027)
+- X12 support (ANSI ASC X12)
+- IDOC support (SAP)
+- VDA support (Automotive)
+- Unified API for all standards
+
+---
+
+## 🧪 Testing
+
+EDIFlow is extensively tested with **TDD (Test-Driven Development)**:
+
+- **590 tests** passing (Unit + Integration + E2E)
+- **100% coverage goal** for critical paths
+- **E2E roundtrip tests** across 3 EDIFACT versions
+- **Performance tests** (< 200ms parse-build-parse cycle)
+
+```bash
+npm test                    # Run all tests
+npm run test:watch          # Watch mode
+npm run test:coverage       # Coverage report
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! EDIFlow is **MIT licensed** and built by the community.
+
+**Ways to contribute:**
+- 🐛 Report bugs via [GitHub Issues](https://github.com/ediflow-lib/ediflow/issues)
+- 💡 Suggest features
+- 📖 Improve documentation
+- 🔧 Submit pull requests
+
+**Getting started:**
+1. Read [Contributing Guide](CONTRIBUTING.md)
+2. Check [Developer Guide](docs/DEVELOPER_GUIDE.md)
+3. Fork, develop, test, submit PR
+
+---
+
+## 👥 Community & Support
+
+- **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/ediflow/discussions)
+- **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/ediflow/issues)
+- **Email:** hello.ediflow@gmail.com
+- **Website:** [ediflow.org](https://ediflow.org) (coming soon)
+
+### Enterprise Support
+
+Need professional support? We offer:
+- 💼 **Enterprise Support** - SLA-based support (€5.000 - €25.000/year)
+- 🔧 **Professional Services** - Custom repositories, integration (€2.000 - €15.000/project)
+- 🎓 **Training & Workshops** - EDI fundamentals, Clean Architecture
+- ☁️ **EDIFlow Cloud** - Parsing/Validation as a Service (coming Q2 2026)
+
+**Contact:** hello.ediflow@gmail.com
+
+---
+
+## 📊 Stats
+
+![Stars](https://img.shields.io/github/stars/ediflow-lib/ediflow?style=social)
+![Forks](https://img.shields.io/github/forks/ediflow-lib/ediflow?style=social)
+![Issues](https://img.shields.io/github/issues/ediflow-lib/ediflow)
+![PRs](https://img.shields.io/github/issues-pr/ediflow-lib/ediflow)
+
+- **Downloads:** Check [NPM stats](https://www.npmjs.com/package/@ediflow/core)
+- **Repository:** [github.com/ediflow-lib/ediflow](https://github.com/ediflow-lib/ediflow)
+- **Releases:** [See all releases](https://github.com/ediflow-lib/ediflow/releases)
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+**Summary:**
+- ✅ Commercial use allowed
+- ✅ Modification allowed
+- ✅ Distribution allowed
+- ✅ Private use allowed
+- ℹ️ License and copyright notice required
+
+---
+
+## 🙏 Acknowledgments
+
+EDIFlow is built with:
+- **TypeScript** - Type safety
+- **Vitest** - Testing framework
+- **Clean Architecture** - Architecture pattern by Robert C. Martin (Uncle Bob)
+- **UN/EDIFACT** - Standards by United Nations
+
+Special thanks to the EDI community for feedback and contributions.
+
+---
+
+**Made with ❤️ for the EDI community**
+
+**Status:** 🚀 Production Ready  
+**Version:** 0.1.0  
+**Released:** February 2026  
+**Maintained by:** [EDIFlow Contributors](https://github.com/ediflow-lib/ediflow/graphs/contributors)
+
+---
+
+<p align="center">
+  <a href="https://github.com/ediflow-lib/ediflow">⭐ Star us on GitHub</a> •
+  <a href="https://www.npmjs.com/package/@ediflow/core">📦 View on NPM</a> •
+  <a href="docs/QUICK_START.md">🚀 Quick Start</a> •
+  <a href="https://github.com/ediflow-lib/ediflow/issues">🐛 Report Bug</a>
+</p>

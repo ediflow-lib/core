@@ -1,0 +1,39 @@
+{
+  "name": "@ediflow/edifact-d12a",
+  "version": "0.1.0",
+  "description": "EDIFACT D.12A (2012) Standard Definitions - Full Coverage - 196 Message Types",
+  "main": "./data/index.json",
+  "files": [
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "edi",
+    "edifact",
+    "d12a",
+    "edifact-d12a",
+    "standard-definitions",
+    "message-structures",
+    "full-coverage",
+    "comprehensive",
+    "196-messages",
+    "logistics",
+    "financial",
+    "healthcare",
+    "customs"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/ediflow.git",
+    "directory": "packages/edifact-d12a"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/ediflow/tree/main/packages/edifact-d12a#readme",
+  "peerDependencies": {
+    "@ediflow/core": "^0.1.0"
+  }
+}

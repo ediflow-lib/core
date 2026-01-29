@@ -1,59 +1,50 @@
 {
-  "name": "@ediflow/core",
-  "version": "0.0.0",
-  "description": "Modern EDI parsing and building library for EDIFACT, X12, IDOC, VDA, and HL7",
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    }
-  },
-  "bin": {
-    "ediflow": "./dist/presentation/cli/index.js"
-  },
-  "files": [
-    "dist"
+  "name": "ediflow-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EDIFlow - Modern EDIFACT Parser, Validator & Builder (Monorepo)",
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "build": "tsup",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "test:integration": "vitest run --testPathPattern=integration",
-    "test:smoke": "vitest run --testNamePattern=\"Smoke\"",
-    "typecheck": "tsc --noEmit",
-    "lint": "echo \"Lint check - to be configured\"",
-    "generate:d20b": "tsx scripts/generate-d20b.ts",
-    "dev": "tsup --watch",
-    "release:check": "npm run typecheck && npm test && npm run test:coverage && npm run build",
-    "prepublishOnly": "npm run release:check"
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "test:watch": "npm run test:watch --workspaces --if-present",
+    "test:coverage": "npm run test:coverage --workspace=packages/core",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "publish:all": "npm publish --workspaces --access public",
+    "publish:core": "npm publish --workspace=packages/core --access public",
+    "publish:d96a": "npm publish --workspace=packages/edifact-d96a --access public",
+    "publish:d01b": "npm publish --workspace=packages/edifact-d01b --access public",
+    "publish:d20b": "npm publish --workspace=packages/edifact-d20b --access public",
+    "publish:d12a": "npm publish --workspace=packages/edifact-d12a --access public",
+    "release:check": "npm run typecheck && npm test && npm run build"
   },
   "keywords": [
     "edi",
     "edifact",
-    "x12",
-    "idoc",
-    "vda",
-    "hl7",
     "parser",
+    "validator",
     "builder",
-    "typescript"
+    "typescript",
+    "clean-architecture",
+    "monorepo",
+    "d96a",
+    "d01b",
+    "d20b",
+    "d12a"
   ],
-  "author": "Your Name",
+  "author": "EDIFlow Contributors",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ediflow.git"
+    "url": "https://github.com/ediflow-lib/ediflow.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/ediflow/issues"
+    "url": "https://github.com/ediflow-lib/ediflow/issues"
   },
-  "homepage": "https://github.com/yourusername/ediflow#readme",
+  "homepage": "https://github.com/ediflow-lib/ediflow#readme",
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/lru-cache": "^7.10.9",
