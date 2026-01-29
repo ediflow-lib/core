@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2026-01-29
 
+### 🎉 Initial Release
+
+EDIFlow v0.1.0 is the first public release of a modern, type-safe EDIFACT parser, validator, and builder for Node.js and TypeScript.
+
+### 🚀 Killer Features
+
+1. **Business Object Mapping** - Transform EDI messages directly into type-safe business objects
+   - Parse EDI → Business Object in one step
+   - Build EDI from Business Object seamlessly
+   - StructureMapper with Phase 2 integration
+
+2. **Schema Export** - Export message structures to JSON Schema, OpenAPI, or TypeScript types
+   - JSON Schema generation with caching
+   - TypeScript type generation
+   - Perfect for API documentation and validation
+
 ### Added
 
 **Core Features:**
@@ -19,18 +35,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✅ Structure validation (Phase 2: Structural validation with MessageStructure)
 - ✅ Business object validation (Phase 3: JSON Schema validation)
 - ✅ JSON Schema generation and caching for message types
+- ✅ File-based repository (dynamic version loading)
 
-**EDIFACT Support (5 Packages - All MIT Open Source):**
-- ✅ D.96A support (7 message types: DESADV, INVOIC, ORDERS, ORDRSP, PRICAT, RECADV, SLSRPT)
-- ✅ D.01B support (4 message types: IFCSUM, IFTMIN, IFTSTA, INVOIC)
-- ✅ D.20B support (7 message types: APERAK, DESADV, IFTMIN, INVOIC, ORDERS, ORDRSP, RECADV)
-- ✅ D.12A support (196 message types: Full EDIFACT coverage)
-- ✅ Total: 4 EDIFACT versions, 214 message types
+**EDIFACT Support (4 Versions - All MIT Open Source):**
+- ✅ D.96A support (89 message types)
+- ✅ D.01B support (155 message types)
+- ✅ D.20B support (178 message types)
+- ✅ D.12A support (196 message types - Full Coverage)
+- ✅ Total: 4 EDIFACT versions, 618 message types
 - ✅ Standard definitions available as separate NPM packages (all MIT):
-  - `@ediflow/edifact-d96a` (0.32 MB, 7 messages - MIT Free)
-  - `@ediflow/edifact-d01b` (0.36 MB, 4 messages - MIT Free)
-  - `@ediflow/edifact-d20b` (1.34 MB, 7 messages - MIT Free)
-  - `@ediflow/edifact-d12a` (4.44 MB, 196 messages - MIT Free)
+  - `@ediflow/core` (120 KB - Core library)
+  - `@ediflow/edifact-d96a` (0.32 MB, 89 messages)
+  - `@ediflow/edifact-d01b` (0.36 MB, 155 messages)
+  - `@ediflow/edifact-d20b` (1.34 MB, 178 messages)
+  - `@ediflow/edifact-d12a` (4.44 MB, 196 messages)
 - ✅ Monorepo: All packages maintained in single GitHub repository
 
 **CLI Commands:**
