@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-01-30
+
+### Fixed
+- Fixed repository URLs in package.json (all 5 packages)
+- Fixed homepage URLs to point to correct GitHub repository
+- Changed from incorrect monorepo paths to correct single repository structure
+
+### Technical Details
+- Repository: https://github.com/ediflow-lib/core (was: ediflow-lib/ediflow)
+- Homepage: https://github.com/ediflow-lib/core#readme
+- No code changes, only metadata fix in package.json files
+
+### Affected Packages
+- @ediflow/core@0.1.1
+- @ediflow/edifact-d96a@0.1.1
+- @ediflow/edifact-d01b@0.1.1
+- @ediflow/edifact-d20b@0.1.1
+- @ediflow/edifact-d12a@0.1.1
+
+### Migration
+Users who installed v0.1.0 can update with:
+```bash
+npm update @ediflow/core @ediflow/edifact-d96a @ediflow/edifact-d01b @ediflow/edifact-d20b @ediflow/edifact-d12a
+```
+
 ## [0.1.0] - 2026-01-29
 
 ### 🎉 Initial Release
