@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-01-31
+
+### Fixed
+- Fixed repository URLs in root package.json
+- Corrected monorepo metadata to point to correct GitHub repository
+- Added package-lock.json to version control for reproducible builds
+
+### Technical Details
+- Root package.json now correctly references: https://github.com/ediflow-lib/core
+- All workspace packages already had correct URLs (fixed in v0.1.1)
+- This is a metadata-only fix for the monorepo root
+- No NPM publish needed (all packages remain at v0.1.1)
+
+### Note
+This fix only affects the monorepo root metadata. All published NPM packages 
+(@ediflow/core, @ediflow/edifact-*) already have correct URLs since v0.1.1.
+
 ## [0.1.1] - 2026-01-30
 
 ### Fixed
