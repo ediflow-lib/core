@@ -127,29 +127,29 @@ if (validation.success) {
 
 ## 📚 Documentation
 
-- **[Quick Start Guide](https://github.com/ediflow-lib/ediflow/blob/main/docs/QUICK_START.md)**
-- **[Main README](https://github.com/ediflow-lib/ediflow/blob/main/README.md)**
-- **[Architecture](https://github.com/ediflow-lib/ediflow/blob/main/docs/ARCHITECTURE.md)**
+- **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)**
+- **[Main README](https://github.com/ediflow-lib/core/blob/main/README.md)**
+- **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)**
 
 ---
 
 ## 🤝 Contributing
 
 Data corrections or additional message types? We welcome contributions!
-- [Report issues](https://github.com/ediflow-lib/ediflow/issues)
-- [Contribute](https://github.com/ediflow-lib/ediflow/blob/main/CONTRIBUTING.md)
+- [Report issues](https://github.com/ediflow-lib/core/issues)
+- [Contribute](https://github.com/ediflow-lib/core/blob/main/CONTRIBUTING.md)
 
 ---
 
 ## 📄 License
 
-MIT License - see [LICENSE](https://github.com/ediflow-lib/ediflow/blob/main/LICENSE)
+MIT License - see [LICENSE](https://github.com/ediflow-lib/core/blob/main/LICENSE)
 
 ---
 
 ## 🔗 Links
 
-- **GitHub:** [ediflow-lib/ediflow](https://github.com/ediflow-lib/ediflow)
+- **GitHub:** [ediflow-lib/core](https://github.com/ediflow-lib/core)
 - **NPM:** [@ediflow/edifact-d01b](https://www.npmjs.com/package/@ediflow/edifact-d01b)
 - **Core Package:** [@ediflow/core](https://www.npmjs.com/package/@ediflow/core)
 

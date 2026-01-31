@@ -8,19 +8,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.2] - 2026-01-31
 
 ### Fixed
-- Fixed repository URLs in root package.json
-- Corrected monorepo metadata to point to correct GitHub repository
-- Added package-lock.json to version control for reproducible builds
+- Fixed GitHub repository URLs in all README files (all 5 packages)
+- Fixed documentation links from `ediflow-lib/ediflow` to `ediflow-lib/core`
+- Fixed Contributing, License, and Issues links in all package READMEs
 
 ### Technical Details
-- Root package.json now correctly references: https://github.com/ediflow-lib/core
-- All workspace packages already had correct URLs (fixed in v0.1.1)
-- This is a metadata-only fix for the monorepo root
-- No NPM publish needed (all packages remain at v0.1.1)
+- Updated README.md files in all packages:
+  - @ediflow/core
+  - @ediflow/edifact-d96a
+  - @ediflow/edifact-d01b
+  - @ediflow/edifact-d20b
+  - @ediflow/edifact-d12a
+- All documentation links now point to correct repository: https://github.com/ediflow-lib/core
+- NPM will display correct URLs in package documentation
 
-### Note
-This fix only affects the monorepo root metadata. All published NPM packages 
-(@ediflow/core, @ediflow/edifact-*) already have correct URLs since v0.1.1.
+### Why This Fix?
+- v0.1.1 fixed package.json URLs but README files still had old URLs
+- NPM displays README from the package tarball, not from GitHub
+- Users clicking documentation links were directed to wrong repository
+
+### Affected Packages
+All 5 packages updated and published:
+- @ediflow/core@0.1.2
+- @ediflow/edifact-d96a@0.1.2
+- @ediflow/edifact-d01b@0.1.2
+- @ediflow/edifact-d20b@0.1.2
+- @ediflow/edifact-d12a@0.1.2
+
+### Migration
+Users who installed v0.1.0 or v0.1.1 can update with:
+```bash
+npm update @ediflow/core @ediflow/edifact-d96a @ediflow/edifact-d01b @ediflow/edifact-d20b @ediflow/edifact-d12a
+```
 
 ## [0.1.1] - 2026-01-30
 

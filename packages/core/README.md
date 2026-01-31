@@ -180,16 +180,16 @@ console.log(ediString); // BGM+220+PO12345'
 └─────────────────────────────────────┘
 ```
 
-**Read more:** [Architecture Documentation](https://github.com/ediflow-lib/ediflow/blob/main/docs/ARCHITECTURE.md)
+**Read more:** [Architecture Documentation](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)
 
 ---
 
 ## 📚 Documentation
 
-- **[Quick Start Guide](https://github.com/ediflow-lib/ediflow/blob/main/docs/QUICK_START.md)** - Get started in 5 minutes
-- **[Architecture](https://github.com/ediflow-lib/ediflow/blob/main/docs/ARCHITECTURE.md)** - Clean Architecture explained
-- **[Developer Guide](https://github.com/ediflow-lib/ediflow/blob/main/docs/DEVELOPER_GUIDE.md)** - Contributing
-- **[API Reference](https://github.com/ediflow-lib/ediflow/blob/main/docs/API.md)** - Complete API docs
+- **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)** - Get started in 5 minutes
+- **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)** - Clean Architecture explained
+- **[Developer Guide](https://github.com/ediflow-lib/core/blob/main/docs/DEVELOPER_GUIDE.md)** - Contributing
+- **[API Reference](https://github.com/ediflow-lib/core/blob/main/docs/API.md)** - Complete API docs
 
 ---
 
@@ -212,23 +212,23 @@ npm run test:coverage
 ## 🤝 Contributing
 
 We welcome contributions! See:
-- [Contributing Guide](https://github.com/ediflow-lib/ediflow/blob/main/CONTRIBUTING.md)
-- [Developer Guide](https://github.com/ediflow-lib/ediflow/blob/main/docs/DEVELOPER_GUIDE.md)
+- [Contributing Guide](https://github.com/ediflow-lib/core/blob/main/CONTRIBUTING.md)
+- [Developer Guide](https://github.com/ediflow-lib/core/blob/main/docs/DEVELOPER_GUIDE.md)
 
 ---
 
 ## 📄 License
 
-MIT License - see [LICENSE](https://github.com/ediflow-lib/ediflow/blob/main/LICENSE)
+MIT License - see [LICENSE](https://github.com/ediflow-lib/core/blob/main/LICENSE)
 
 ---
 
 ## 🔗 Links
 
-- **GitHub:** [ediflow-lib/ediflow](https://github.com/ediflow-lib/ediflow)
+- **GitHub:** [ediflow-lib/core](https://github.com/ediflow-lib/core)
 - **NPM:** [@ediflow/core](https://www.npmjs.com/package/@ediflow/core)
-- **Issues:** [Report bugs](https://github.com/ediflow-lib/ediflow/issues)
-- **Discussions:** [Ask questions](https://github.com/ediflow-lib/ediflow/discussions)
+- **Issues:** [Report bugs](https://github.com/ediflow-lib/core/issues)
+- **Discussions:** [Ask questions](https://github.com/ediflow-lib/core/discussions)
 
 ---
 
