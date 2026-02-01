@@ -314,10 +314,11 @@ We welcome contributions! EDIFlow is **MIT licensed** and built by the community
 
 ---
 
-## 👥 Community & Support
+## 💬 Community
 
-- **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/core/discussions)
-- **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/core/issues)
+- 💬 **Discord:** [Join our community](https://discord.gg/S5npqcv8Zu) - Real-time chat & support
+- 📣 **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/core/discussions)
+- 🐛 **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/core/issues)
 - **Email:** hello.ediflow@gmail.com
 - **Website:** [ediflow.org](https://ediflow.org) (coming soon)
 

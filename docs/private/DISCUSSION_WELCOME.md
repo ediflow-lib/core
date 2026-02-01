@@ -25,12 +25,13 @@ We're excited to have you here! This is the place to:
 
 - **🐛 Found a Bug?** → [Open an Issue](https://github.com/ediflow-lib/core/issues/new/choose)
 
-## 🎉 Week 1 Success!
+## 🎉 Amazing Start!
 
-We just launched v0.1.0 and achieved:
+We just launched v0.1.0 on **Friday (Jan 29)** and in just **3 days** we achieved:
 - **1,400+ total downloads** across all packages
 - **~342 unique users** (based on core installs)
 - **80% adoption rate** for directory packages
+- **~114 users per day!** 🚀
 
 Thank you for being part of this journey! 🙏
 
@@ -97,10 +98,9 @@ Want to contribute to EDIFlow?
 
 ## 📞 Other Ways to Connect
 
-- **Discord** - (Coming soon! 🎮)
-- **Dev.to** - Technical articles and deep dives (Coming soon! 📝)
-- **GitHub Issues** - Bug reports & feature requests
-- **Twitter/X** - Updates and announcements (Coming soon! 🐦)
+- **💬 Discord** - [Join our community](https://discord.gg/S5npqcv8Zu) - Real-time chat & support!
+- **📝 Dev.to** - Technical articles and deep dives (Coming soon!)
+- **🐛 GitHub Issues** - Bug reports & feature requests
 
 ## 🎯 What's Next?
 
