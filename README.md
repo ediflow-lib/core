@@ -318,19 +318,11 @@ We welcome contributions! EDIFlow is **MIT licensed** and built by the community
 
 - 💬 **Discord:** [Join our community](https://discord.gg/S5npqcv8Zu) - Real-time chat & support
 - 📣 **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/core/discussions)
+- 📝 **Dev.to:** [Technical articles & deep dives](https://dev.to/helloediflow)
 - 🐛 **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/core/issues)
 - **Email:** hello.ediflow@gmail.com
 - **Website:** [ediflow.org](https://ediflow.org) (coming soon)
 
-### Enterprise Support
-
-Need professional support? We offer:
-- 💼 **Enterprise Support** - SLA-based support (€5.000 - €25.000/year)
-- 🔧 **Professional Services** - Custom repositories, integration (€2.000 - €15.000/project)
-- 🎓 **Training & Workshops** - EDI fundamentals, Clean Architecture
-- ☁️ **EDIFlow Cloud** - Parsing/Validation as a Service (coming Q2 2026)
-
-**Contact:** hello.ediflow@gmail.com
 
 ---
 
