@@ -37,7 +37,7 @@ git clone https://github.com/YOUR_USERNAME/ediflow.git
 cd ediflow
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/ediflow-lib/ediflow.git
+git remote add upstream https://github.com/ediflow-lib/core.git
 
 # 4. Install dependencies
 npm install
@@ -603,8 +603,8 @@ npx tsc --noEmit
 
 ## 🤝 Getting Help
 
-- **GitHub Discussions:** [Ask questions](https://github.com/ediflow-lib/ediflow/discussions)
-- **GitHub Issues:** [Report bugs](https://github.com/ediflow-lib/ediflow/issues)
+- **GitHub Discussions:** [Ask questions](https://github.com/ediflow-lib/core/discussions)
+- **GitHub Issues:** [Report bugs](https://github.com/ediflow-lib/core/issues)
 - **Email:** hello.ediflow@gmail.com
 
 ---

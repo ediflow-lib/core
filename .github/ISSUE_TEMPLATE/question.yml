@@ -1,0 +1,63 @@
+name: ❓ Question
+description: Ask a question about using EDIFlow
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help! 🙋
+        
+        **💡 Tip:** Check our [documentation](https://github.com/ediflow-lib/ediflow/tree/main/docs) first!
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: How do I...?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to achieve?
+      placeholder: I'm building a system that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What I've Tried
+      description: What have you already tried?
+      placeholder: I tried...
+
+  - type: textarea
+    id: code
+    attributes:
+      label: Code Sample (Optional)
+      description: Show us what you're working on
+      placeholder: |
+        ```typescript
+        import { EDIFlowParser } from '@ediflow/core';
+        // your code here
+        ```
+      render: typescript
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Which package?
+      description: Which package is your question about?
+      options:
+        - "@ediflow/core"
+        - "@ediflow/edifact-d96a"
+        - "@ediflow/edifact-d01b"
+        - "@ediflow/edifact-d20b"
+        - "@ediflow/edifact-d12a"
+        - "General question"
+    validations:
+      required: true

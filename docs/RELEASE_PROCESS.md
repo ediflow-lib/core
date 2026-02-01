@@ -214,7 +214,7 @@ Visit package pages:
 
 ### 5. Create GitHub Release
 
-1. Go to: https://github.com/ediflow-lib/ediflow/releases
+1. Go to: https://github.com/ediflow-lib/core/releases
 2. Click "Create new release"
 3. Configure release:
    - **Tag:** v0.2.0 (select existing tag)
@@ -328,7 +328,7 @@ node --input-type=module -e "import('@ediflow/core').then(x => console.log('ESM:
 ### 4. Monitor NPM Stats
 
 - Check download stats: https://npm-stat.com/charts.html?package=@ediflow/core
-- Monitor for issues: https://github.com/ediflow-lib/ediflow/issues
+- Monitor for issues: https://github.com/ediflow-lib/core/issues
 
 ### 5. Announce Release (Optional)
 
@@ -563,7 +563,7 @@ Copy this for each release:
 
 ## 🤝 Questions?
 
-- **GitHub Discussions:** [Ask questions](https://github.com/ediflow-lib/ediflow/discussions)
+- **GitHub Discussions:** [Ask questions](https://github.com/ediflow-lib/core/discussions)
 - **Email:** hello.ediflow@gmail.com
 
 ---

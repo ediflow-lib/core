@@ -187,13 +187,13 @@ MIT - See [LICENSE](./LICENSE) for details
 
 ---
 
-**Full Changelog**: https://github.com/ediflow-lib/ediflow/commits/v0.1.0
+**Full Changelog**: https://github.com/ediflow-lib/core/commits/v0.1.0
 ```
 
 ---
 
 **Next Steps:**
-1. Go to https://github.com/ediflow-lib/ediflow/releases
+1. Go to https://github.com/ediflow-lib/core/releases
 2. Click "Draft a new release"
 3. Select tag: `v0.1.0`
 4. Copy the template above

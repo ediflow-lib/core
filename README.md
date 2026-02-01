@@ -5,7 +5,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
-[![Tests](https://img.shields.io/badge/tests-599%20passing-brightgreen)](https://github.com/ediflow-lib/ediflow)
+[![Tests](https://img.shields.io/badge/tests-599%20passing-brightgreen)](https://github.com/ediflow-lib/core)
 [![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
 **Clean Architecture** • **Type-Safe** • **Business Object Mapping** • **Schema Export** • **Battle-Tested**
@@ -302,7 +302,7 @@ npm run test:coverage       # Coverage report
 We welcome contributions! EDIFlow is **MIT licensed** and built by the community.
 
 **Ways to contribute:**
-- 🐛 Report bugs via [GitHub Issues](https://github.com/ediflow-lib/ediflow/issues)
+- 🐛 Report bugs via [GitHub Issues](https://github.com/ediflow-lib/core/issues)
 - 💡 Suggest features
 - 📖 Improve documentation
 - 🔧 Submit pull requests
@@ -316,8 +316,8 @@ We welcome contributions! EDIFlow is **MIT licensed** and built by the community
 
 ## 👥 Community & Support
 
-- **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/ediflow/discussions)
-- **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/ediflow/issues)
+- **GitHub Discussions:** [Ask questions, share ideas](https://github.com/ediflow-lib/core/discussions)
+- **Issues:** [Bug reports & feature requests](https://github.com/ediflow-lib/core/issues)
 - **Email:** hello.ediflow@gmail.com
 - **Website:** [ediflow.org](https://ediflow.org) (coming soon)
 
@@ -335,14 +335,14 @@ Need professional support? We offer:
 
 ## 📊 Stats
 
-![Stars](https://img.shields.io/github/stars/ediflow-lib/ediflow?style=social)
-![Forks](https://img.shields.io/github/forks/ediflow-lib/ediflow?style=social)
-![Issues](https://img.shields.io/github/issues/ediflow-lib/ediflow)
-![PRs](https://img.shields.io/github/issues-pr/ediflow-lib/ediflow)
+![Stars](https://img.shields.io/github/stars/ediflow-lib/core?style=social)
+![Forks](https://img.shields.io/github/forks/ediflow-lib/core?style=social)
+![Issues](https://img.shields.io/github/issues/ediflow-lib/core)
+![PRs](https://img.shields.io/github/issues-pr/ediflow-lib/core)
 
 - **Downloads:** Check [NPM stats](https://www.npmjs.com/package/@ediflow/core)
-- **Repository:** [github.com/ediflow-lib/ediflow](https://github.com/ediflow-lib/ediflow)
-- **Releases:** [See all releases](https://github.com/ediflow-lib/ediflow/releases)
+- **Repository:** [github.com/ediflow-lib/core](https://github.com/ediflow-lib/core)
+- **Releases:** [See all releases](https://github.com/ediflow-lib/core/releases)
 
 ---
 
@@ -376,13 +376,13 @@ Special thanks to the EDI community for feedback and contributions.
 **Status:** 🚀 Production Ready  
 **Version:** 0.1.0  
 **Released:** February 2026  
-**Maintained by:** [EDIFlow Contributors](https://github.com/ediflow-lib/ediflow/graphs/contributors)
+**Maintained by:** [EDIFlow Contributors](https://github.com/ediflow-lib/core/graphs/contributors)
 
 ---
 
 <p align="center">
-  <a href="https://github.com/ediflow-lib/ediflow">⭐ Star us on GitHub</a> •
+  <a href="https://github.com/ediflow-lib/core">⭐ Star us on GitHub</a> •
   <a href="https://www.npmjs.com/package/@ediflow/core">📦 View on NPM</a> •
   <a href="docs/QUICK_START.md">🚀 Quick Start</a> •
-  <a href="https://github.com/ediflow-lib/ediflow/issues">🐛 Report Bug</a>
+  <a href="https://github.com/ediflow-lib/core/issues">🐛 Report Bug</a>
 </p>
