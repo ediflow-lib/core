@@ -3,30 +3,33 @@
  *
  * Tests US-6.2: StructureMapper integration with ParseEDIUseCase
  * Demonstrates the "Definition of Done" code from US-6.2 spec
+ *
+ * Phase 2 Refactoring: Tests now use IMessageParser interface.
  */
 
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { Standard } from '@domain';
 import type { MessageStructure } from '@domain/repositories';
-import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
-import { EdifactDelimiterDetector } from '@infrastructure/parsers/edifact/EdifactDelimiterDetector';
-import { EdifactTokenizer } from '@infrastructure/parsers/edifact/EdifactTokenizer';
-import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';
+import type { IMessageParser } from '@application';
 import { StructureMapper } from '@domain/mapping';
 
 describe('Integration: ParseEDIUseCase - Phase 2 (Structure Mapping)', () => {
-  function createParser() {
-    const delimiterDetector = new EdifactDelimiterDetector();
-    const tokenizer = new EdifactTokenizer();
-    const segmentParser = new EdifactSegmentParser();
-    return new EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
-  }
+  let parser: IMessageParser;
+
+  beforeAll(async () => {
+    // Dynamic import: Core tests don't depend on EDIFACT at build time
+    const edifact = await import('@infrastructure/parsers/edifact');
+
+    const delimiterDetector = new edifact.EdifactDelimiterDetector();
+    const tokenizer = new edifact.EdifactTokenizer();
+    const segmentParser = new edifact.EdifactSegmentParser();
+    parser = new edifact.EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
+  });
 
   function createUseCase() {
-    const parser = createParser();
     const structureMapper = new StructureMapper();
     return new ParseEDIUseCase(parser, structureMapper);
   }
@@ -194,7 +197,7 @@ describe('Integration: ParseEDIUseCase - Phase 2 (Structure Mapping)', () => {
         'utf-8'
       );
 
-      const parser = createParser();
+      // parser is now defined in beforeAll
       const useCase = new ParseEDIUseCase(parser);  // No StructureMapper!
 
       const result = useCase.execute({
@@ -216,7 +219,7 @@ describe('Integration: ParseEDIUseCase - Phase 2 (Structure Mapping)', () => {
         'utf-8'
       );
 
-      const parser = createParser();
+      // parser is now defined in beforeAll
       const useCase = new ParseEDIUseCase(parser);  // No StructureMapper!
 
       const structure: MessageStructure = {

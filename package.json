@@ -19,7 +19,9 @@
     "publish:d01b": "npm publish --workspace=packages/edifact-d01b --access public",
     "publish:d20b": "npm publish --workspace=packages/edifact-d20b --access public",
     "publish:d12a": "npm publish --workspace=packages/edifact-d12a --access public",
-    "release:check": "npm run typecheck && npm test && npm run build"
+    "release:check": "npm run typecheck && npm test && npm run build",
+    "import-sprint-stories": "tsx scripts/import-sprint-stories.ts",
+    "delete-duplicate-issues": "tsx scripts/delete-duplicate-issues.ts"
   },
   "keywords": [
     "edi",
@@ -46,11 +48,14 @@
   },
   "homepage": "https://github.com/ediflow-lib/core#readme",
   "devDependencies": {
+    "@octokit/rest": "^20.0.2",
     "@types/js-yaml": "^4.0.9",
     "@types/lru-cache": "^7.10.9",
     "@types/node": "^20.11.5",
     "@vitest/coverage-v8": "^1.2.1",
+    "dotenv": "^17.2.3",
     "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vitest": "^1.2.1"
   },

@@ -2,29 +2,30 @@
  * Integration Tests for StructureMapper with Real EDIFACT Messages
  *
  * Tests Phase 2 Parsing: EDIMessage → Business Object
+ *
+ * Phase 2 Refactoring: Tests now use IMessageParser interface.
  */
 
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { StructureMapper } from '@domain/mapping';
 import type { MessageStructure } from '@domain/repositories';
-import {
-  EdifactMessageParser,
-  EdifactDelimiterDetector,
-  EdifactTokenizer,
-  EdifactSegmentParser,
-} from '@infrastructure/parsers/edifact';
+import type { IMessageParser } from '@application';
 
 describe('StructureMapper Integration Tests', () => {
   const mapper = new StructureMapper();
+  let parser: IMessageParser;
 
-  function createParser() {
-    const delimiterDetector = new EdifactDelimiterDetector();
-    const tokenizer = new EdifactTokenizer();
-    const segmentParser = new EdifactSegmentParser();
-    return new EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
-  }
+  beforeAll(async () => {
+    // Dynamic import: Core tests don't depend on EDIFACT at build time
+    const edifact = await import('@infrastructure/parsers/edifact');
+
+    const delimiterDetector = new edifact.EdifactDelimiterDetector();
+    const tokenizer = new edifact.EdifactTokenizer();
+    const segmentParser = new edifact.EdifactSegmentParser();
+    parser = new edifact.EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
+  });
 
   it('should map real ORDERS message to business object', () => {
     const ediString = readFileSync(
@@ -32,7 +33,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -69,7 +70,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -104,7 +105,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -139,7 +140,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -195,7 +196,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -234,7 +235,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -307,7 +308,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -345,7 +346,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {
@@ -383,7 +384,7 @@ describe('StructureMapper Integration Tests', () => {
       'utf-8'
     );
 
-    const parser = createParser();
+    // parser is now defined in beforeAll
     const ediMessage = parser.parse(ediString);
 
     const structure: MessageStructure = {

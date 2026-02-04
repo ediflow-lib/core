@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- **NEW PACKAGE:** `@ediflow/x12@0.1.0` - X12 EDI parser infrastructure
+  - X12-specific parsers (Sprint 9: Stories #45, #47, #48, #49)
+  - Clean architecture: format-specific code separated from core
+  - Tree-shakeable: only install parsers you need
+- **NEW PACKAGE:** `@ediflow/edifact@0.1.0` - EDIFACT EDI parser infrastructure
+  - EDIFACT-specific parsers moved from core (no breaking change - parallel support)
+  - Recommended way to use EDIFACT parsers going forward
+  - Fully tested and production-ready
+
+### Deprecated
+- **EDIFACT parsers in @ediflow/core** - Use `@ediflow/edifact` package instead
+  - Affected exports: `EdifactMessageParser`, `EdifactTokenizer`, `EdifactSegmentParser`, `EdifactDelimiterDetector`
+  - Your code will keep working until v1.0.0
+  - Both locations work simultaneously (parallel support)
+  - Migration guide: See `@ediflow/edifact` README
+
+### Changed
+- Architecture refactoring: Format-specific parsers separated from core
+  - Core stays format-agnostic (domain + application + generic infrastructure)
+  - Format-specific parsers in separate packages (`@ediflow/x12`, `@ediflow/edifact`)
+  - Clean architecture principles applied
+
 ## [0.1.2] - 2026-01-31
 
 ### Fixed

@@ -1,0 +1,69 @@
+{
+  "name": "@ediflow/x12",
+  "version": "0.1.0",
+  "description": "X12 EDI Parser - Format-specific infrastructure for ANSI ASC X12 standard",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "edi",
+    "x12",
+    "ansi",
+    "asc-x12",
+    "parser",
+    "validator",
+    "typescript",
+    "edi-parser",
+    "x12-parser",
+    "healthcare",
+    "837",
+    "835",
+    "850",
+    "810"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/core.git",
+    "directory": "packages/x12"
+  },
+  "homepage": "https://github.com/ediflow-lib/core#readme",
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/core/issues"
+  },
+  "author": "EdiFlow Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@ediflow/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "^2.1.8",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

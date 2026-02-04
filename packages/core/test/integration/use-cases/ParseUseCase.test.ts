@@ -1,25 +1,33 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { loadValidFixture } from '../FixtureLoader';
 import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { Standard } from '@domain';
-import { EdifactMessageParser } from '@infrastructure/parsers/edifact/EdifactMessageParser';
-import { EdifactSegmentParser } from '@infrastructure/parsers/edifact/EdifactSegmentParser';
-import { EdifactTokenizer } from '@infrastructure/parsers/edifact/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '@infrastructure/parsers/edifact/EdifactDelimiterDetector';
+import type { IMessageParser } from '@application';
 
+/**
+ * Integration tests for ParseEDIUseCase
+ *
+ * Phase 2 Refactoring: Tests now use IMessageParser interface instead of concrete EDIFACT implementation.
+ * This allows testing with different parser implementations (EDIFACT, X12, etc.) without changing core tests.
+ */
 describe('Integration: ParseEDIUseCase (Application Layer)', () => {
-  function createUseCase(): ParseEDIUseCase {
-    // Create complete infrastructure
-    const delimiterDetector = new EdifactDelimiterDetector();
-    const tokenizer = new EdifactTokenizer();
-    const segmentParser = new EdifactSegmentParser();
+  describe('with EDIFACT parser', () => {
+    let parser: IMessageParser;
 
-    // EdifactMessageParser is now IMessageParser
-    const messageParser = new EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
+    beforeAll(async () => {
+      // Dynamic import: Core tests don't depend on EDIFACT at build time
+      const edifact = await import('@infrastructure/parsers/edifact');
 
-    // Use Case takes IMessageParser (Clean Architecture!)
-    return new ParseEDIUseCase(messageParser);
-  }
+      const delimiterDetector = new edifact.EdifactDelimiterDetector();
+      const tokenizer = new edifact.EdifactTokenizer();
+      const segmentParser = new edifact.EdifactSegmentParser();
+      parser = new edifact.EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
+    });
+
+    function createUseCase(): ParseEDIUseCase {
+      // Use Case takes IMessageParser (Clean Architecture!)
+      return new ParseEDIUseCase(parser);
+    }
 
   describe('Happy Path', () => {
     it('should parse EDIFACT ORDERS via Use Case (Application Layer entry point)', () => {
@@ -98,24 +106,28 @@ describe('Integration: ParseEDIUseCase (Application Layer)', () => {
       expect(result.errors[0]).toHaveProperty('message');
     });
 
-    it('should handle empty string', () => {
-      // GIVEN
-      const useCase = createUseCase();
+      it('should handle empty string', () => {
+        // GIVEN
+        const useCase = createUseCase();
 
-      // WHEN
-      const result = useCase.execute({
-        message: '',
-        standard: Standard.EDIFACT
+        // WHEN
+        const result = useCase.execute({
+          message: '',
+          standard: Standard.EDIFACT
+        });
+
+        // THEN
+        // Type guard
+        if (result.success) {
+          throw new Error('Expected failure but got success');
+        }
+
+        expect(result.errors.length).toBeGreaterThan(0);
+        expect(result.errors[0]?.code).toBe('EMPTY_MESSAGE');
       });
-
-      // THEN
-      // Type guard
-      if (result.success) {
-        throw new Error('Expected failure but got success');
-      }
-
-      expect(result.errors.length).toBeGreaterThan(0);
-      expect(result.errors[0]?.code).toBe('EMPTY_MESSAGE');
     });
   });
+
+  // TODO: Add X12 parser tests in Sprint 10
+  // describe('with X12 parser', () => { ... });
 });
