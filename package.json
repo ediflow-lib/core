@@ -21,7 +21,8 @@
     "publish:d12a": "npm publish --workspace=packages/edifact-d12a --access public",
     "release:check": "npm run typecheck && npm test && npm run build",
     "import-sprint-stories": "tsx scripts/import-sprint-stories.ts",
-    "delete-duplicate-issues": "tsx scripts/delete-duplicate-issues.ts"
+    "delete-duplicate-issues": "tsx scripts/delete-duplicate-issues.ts",
+    "fetch-story": "tsx scripts/fetch-story.ts"
   },
   "keywords": [
     "edi",
