@@ -3,7 +3,7 @@ import { RepositoryManager } from '@application/services/RepositoryManager';
 import { Standard } from '@domain/value-objects/Standard';
 import { Version } from '@domain/value-objects/Version';
 import { MessageType } from '@domain/value-objects/MessageType';
-import { MessageDefinition } from '@domain/repositories/MessageDefinition';
+import type { MessageDefinitionDTO } from './dtos/MessageDefinitionDTO';
 import { DefinitionNotFoundError } from '@domain/errors/DefinitionNotFoundError';
 import { CacheManager } from '../cache/CacheManager';
 
@@ -16,7 +16,7 @@ import { CacheManager } from '../cache/CacheManager';
  * - With cache: ~0.01ms (100x faster!)
  */
 export class DefinitionLoader implements IDefinitionLoader {
-  private readonly cache: CacheManager<MessageDefinition>;
+  private readonly cache: CacheManager<MessageDefinitionDTO>;
 
   constructor(
     private readonly repositoryManager: RepositoryManager,
@@ -33,7 +33,7 @@ export class DefinitionLoader implements IDefinitionLoader {
     standard: Standard,
     version: Version,
     messageType: MessageType
-  ): MessageDefinition {
+  ): MessageDefinitionDTO {
     // Create cache key
     const cacheKey = this.createCacheKey(standard, version, messageType);
 
@@ -59,7 +59,7 @@ export class DefinitionLoader implements IDefinitionLoader {
     standard: Standard,
     version: Version,
     messageType: MessageType
-  ): MessageDefinition {
+  ): MessageDefinitionDTO {
     const repository = this.repositoryManager.findRepository(standard, version);
 
     if (!repository) {
