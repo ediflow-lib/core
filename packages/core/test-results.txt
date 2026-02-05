@@ -1,0 +1,230 @@
+﻿
+> @ediflow/core@0.1.2 test
+> vitest run
+
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mC:/Users/z003wbfu/WebstormProjects/ediflow/packages/core[39m
+
+ [33mΓ¥»[39m test/integration/validation/BusinessObjectValidation.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/StructuralValidationService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/StructureMappingService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/use-cases/validate/ValidateMessageUseCase.integration.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/domain/value-objects/MessageType.test.ts [2m ([22m[2m17 tests[22m[2m)[22m[90m 22[2mms[22m[39m
+ [32mΓ£ô[39m src/domain/services/EnvelopeGenerator.test.ts [2m ([22m[2m14 tests[22m[2m)[22m[90m 15[2mms[22m[39m
+ [32mΓ£ô[39m src/domain/entities/EDIMessage.test.ts [2m ([22m[2m13 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+ [32mΓ£ô[39m src/domain/validation/EDIMessageValidator.test.ts [2m ([22m[2m15 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+ [32mΓ£ô[39m src/presentation/cli/commands/ParseCommand.test.ts [2m ([22m[2m27 tests[22m[2m)[22m[90m 38[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/presentation/cli/ValidateCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/presentation/cli/commands/ValidateCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/use-cases/BuildUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/RepositoryManager.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/infrastructure/repositories/DefinitionLoader.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/infrastructure/repositories/InMemoryRepository.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/presentation/cli/ParseCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/EDIMessageValidationService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/use-cases/build/BuildEDIUseCase.envelope.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/infrastructure/parsers/edifact/EdifactMessageParser.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/mapping/StructureMapper.integration.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/presentation/cli/BuildCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/use-cases/ParseUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/infrastructure/parsers/edifact/EdifactDelimiterDetector.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/presentation/cli/commands/BuildCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/SchemaGenerationService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/BusinessObjectValidationService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/use-cases/build/BuildEDIUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m src/application/services/ComposableValidationService.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/domain/value-objects/Version.test.ts [2m ([22m[2m17 tests[22m[2m)[22m[90m 30[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/edifact/roundtrip/RoundtripD96A.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/edifact/roundtrip/RoundtripD20B.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/presentation/cli/utils/ErrorHandler.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/cli/ExportSchemaCommand.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/infrastructure/repositories/InMemoryMessageStructureRepository.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32mΓ£ô[39m src/presentation/cli/commands/ExportSchemaCommand.test.ts [2m ([22m[2m10 tests[22m[2m)[22m[90m 29[2mms[22m[39m
+ [33mΓ¥»[39m src/application/use-cases/validate/ValidateMessageUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m test/integration/repositories/FileBasedMessageStructureRepository.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 87[2mms[22m[39m
+ [33mΓ¥»[39m src/infrastructure/parsers/edifact/EdifactSegmentParser.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/use-cases/ParseUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/domain/value-objects/Delimiters.test.ts [2m ([22m[2m10 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32mΓ£ô[39m src/infrastructure/parsers/edifact/EdifactTokenizer.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 29[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/use-cases/ValidateUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/infrastructure/cache/CacheManager.test.ts [2m ([22m[2m11 tests[22m[2m)[22m[90m 25[2mms[22m[39m
+ [33mΓ¥»[39m src/application/use-cases/parse/ParseEDIUseCase.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/domain/validation/ValidationResult.test.ts [2m ([22m[2m11 tests[22m[2m)[22m[90m 36[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/edifact/roundtrip/RoundtripD01B.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [33mΓ¥»[39m test/integration/edifact/performance/PerformanceTests.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/application/services/StructuralValidationContext.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 10[2mms[22m[39m
+ [32mΓ£ô[39m src/application/services/MessageStructureService.test.ts [2m ([22m[2m5 tests[22m[2m)[22m[90m 15[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/edifact/happy-path/OrdersD96a.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/application/services/SchemaCache.test.ts [2m ([22m[2m7 tests[22m[2m)[22m[90m 14[2mms[22m[39m
+ [33mΓ¥»[39m test/integration/edifact/negative/NegativeTests.test.ts [2m ([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m src/application/services/mapping/MappingRule.test.ts [2m ([22m[2m6 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32mΓ£ô[39m src/domain/constants/StandardDelimiters.test.ts [2m ([22m[2m9 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32mΓ£ô[39m src/domain/validation/ValidationError.test.ts [2m ([22m[2m4 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32mΓ£ô[39m src/application/configuration/ParserConfig.test.ts [2m ([22m[2m5 tests[22m[2m)[22m[90m 7[2mms[22m[39m
+
+node.exe : [31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1m[7m Failed Suites 35 [27m[22mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31mΓÄ»ΓÄ»ΓÄ»Γ...»ΓÄ»ΓÄ»ΓÄ»[39m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+[31m[1m[7m FAIL [27m[22m[39m test/integration/cli/ExportSchemaCommand.test.ts [2m[ test/integration/cli/ExportSchemaCommand.test.ts ][22m
+[31m[1mError[22m: Cannot find module '@domain/validation/BusinessObjectSchemaGenerator' imported from 'C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/test/integration/cli/ExportSchemaCommand.test.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors[39m
+[36m [2mΓ¥»[22m test/integration/cli/ExportSchemaCommand.test.ts:[2m3:31[22m[39m
+    [90m  1| [39m[35mimport[39m { describe[33m,[39m it[33m,[39m expect[33m,[39m beforeEach[33m,[39m vi } [35mfrom[39m [32m'vitest'[39m[33m;[39m
+    [90m  2| [39m[35mimport[39m { [33mExportSchemaCommand[39m } [35mfrom[39m [32m'@presentation/cli/commands/Export[39mΓÇª
+    [90m  3| [39m[35mimport[39m { [33mBusinessObjectSchemaGenerator[39m } [35mfrom[39m [32m'@domain/validation/Busi[39mΓÇª
+    [90m   | [39m                              [31m^[39m
+    [90m  4| [39m[35mimport[39m { [33mSchemaCache[39m } [35mfrom[39m [32m'@domain/validation/SchemaCache'[39m[33m;[39m
+    [90m  5| [39m[35mimport[39m type { [33mIMessageStructureRepository[39m } [35mfrom[39m [32m'@domain/repositories[39mΓÇª
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_MODULE_NOT_FOUND' }[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m test/integration/mapping/StructureMapper.integration.test.ts [2m[ test/integration/mapping/StructureMapper.integration.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/use-cases/BuildUseCase.test.ts [2m[ test/integration/use-cases/BuildUseCase.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/use-cases/ParseUseCase.test.ts [2m[ test/integration/use-cases/ParseUseCase.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/use-cases/ParseUseCase.test.ts [2m[ test/integration/use-cases/ParseUseCase.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/EDIMessageValidationService.test.ts [2m[ src/application/services/EDIMessageValidationService.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/RepositoryManager.test.ts [2m[ src/application/services/RepositoryManager.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/infrastructure/repositories/DefinitionLoader.test.ts [2m[ src/infrastructure/repositories/DefinitionLoader.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/infrastructure/repositories/InMemoryRepository.test.ts [2m[ src/infrastructure/repositories/InMemoryRepository.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/presentation/cli/BuildCommand.test.ts [2m[ test/integration/presentation/cli/BuildCommand.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/presentation/cli/ParseCommand.test.ts [2m[ test/integration/presentation/cli/ParseCommand.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/presentation/cli/ValidateCommand.test.ts [2m[ test/integration/presentation/cli/ValidateCommand.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/application/use-cases/build/BuildEDIUseCase.envelope.test.ts [2m[ src/application/use-cases/build/BuildEDIUseCase.envelope.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/infrastructure/parsers/edifact/EdifactDelimiterDetector.test.ts [2m[ src/infrastructure/parsers/edifact/EdifactDelimiterDetector.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/infrastructure/parsers/edifact/EdifactMessageParser.test.ts [2m[ src/infrastructure/parsers/edifact/EdifactMessageParser.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/infrastructure/parsers/edifact/EdifactSegmentParser.test.ts [2m[ src/infrastructure/parsers/edifact/EdifactSegmentParser.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/presentation/cli/commands/ValidateCommand.test.ts [2m[ src/presentation/cli/commands/ValidateCommand.test.ts ][22m
+[31m[1mError[22m: Failed to load url ./ValidationResult (resolved id: ./ValidationResult) in C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/BusinessObjectValidationService.ts. Does the 
+file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m test/integration/use-cases/ValidateUseCase.test.ts [2m[ test/integration/use-cases/ValidateUseCase.test.ts ][22m
+[31m[1mError[22m: Cannot find module '@domain/validation/StructuralValidator' imported from 'C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/use-cases/validate/ValidateMessageUseCase.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors[39m
+[36m [2mΓ¥»[22m src/application/use-cases/validate/ValidateMessageUseCase.ts:[2m1:1[22m[39m
+    [90m  1| [39m[35mimport[39m { [33mValidateMessageInputDTO[39m } [35mfrom[39m [32m'./ValidateMessageInputDTO'[39m[33m;[39m
+    [90m   | [39m[31m^[39m
+    [90m  2| [39m[35mimport[39m { [33mValidateMessageOutputDTO[39m } [35mfrom[39m [32m'./ValidateMessageOutputDTO'[39m[33m;[39m
+    [90m  3| [39m[35mimport[39m type { [33mIValidationService[39m } [35mfrom[39m [32m'@domain/services/IValidationS[39mΓÇª
+[90m [2mΓ¥»[22m test/integration/use-cases/ValidateUseCase.test.ts:[2m2:31[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_MODULE_NOT_FOUND' }[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[3/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m test/integration/validation/BusinessObjectValidation.test.ts [2m[ test/integration/validation/BusinessObjectValidation.test.ts ][22m
+[31m[1mError[22m: Cannot find module '@domain/validation/BusinessObjectSchemaGenerator' imported from 'C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/test/integration/validation/BusinessObjectValidation.test.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors[39m
+[36m [2mΓ¥»[22m test/integration/validation/BusinessObjectValidation.test.ts:[2m2:31[22m[39m
+    [90m  1| [39m[35mimport[39m { describe[33m,[39m it[33m,[39m expect[33m,[39m beforeAll } [35mfrom[39m [32m'vitest'[39m[33m;[39m
+    [90m  2| [39m[35mimport[39m { [33mBusinessObjectSchemaGenerator[39m } [35mfrom[39m [32m'@domain/validation/Busi[39mΓÇª
+    [90m   | [39m                              [31m^[39m
+    [90m  3| [39m[35mimport[39m { [33mBusinessObjectValidator[39m } [35mfrom[39m [32m'@domain/validation/BusinessOb[39mΓÇª
+    [90m  4| [39m[35mimport[39m { [33mSchemaCache[39m } [35mfrom[39m [32m'@domain/validation/SchemaCache'[39m[33m;[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_MODULE_NOT_FOUND' }[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[4/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/BusinessObjectValidationService.test.ts [2m[ src/application/services/BusinessObjectValidationService.test.ts ][22m
+[31m[1mError[22m: Failed to load url ./BusinessObjectValidator (resolved id: ./BusinessObjectValidator) in 
+C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/BusinessObjectValidationService.test.ts. Does the file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[5/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/ComposableValidationService.test.ts [2m[ src/application/services/ComposableValidationService.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/negative/NegativeTests.test.ts [2m[ test/integration/edifact/negative/NegativeTests.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/happy-path/OrdersD96a.test.ts [2m[ test/integration/edifact/happy-path/OrdersD96a.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/performance/PerformanceTests.test.ts [2m[ test/integration/edifact/performance/PerformanceTests.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/roundtrip/RoundtripD01B.test.ts [2m[ test/integration/edifact/roundtrip/RoundtripD01B.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/roundtrip/RoundtripD20B.test.ts [2m[ test/integration/edifact/roundtrip/RoundtripD20B.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m test/integration/edifact/roundtrip/RoundtripD96A.test.ts [2m[ test/integration/edifact/roundtrip/RoundtripD96A.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/application/use-cases/parse/ParseEDIUseCase.test.ts [2m[ src/application/use-cases/parse/ParseEDIUseCase.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/application/use-cases/build/BuildEDIUseCase.test.ts [2m[ src/application/use-cases/build/BuildEDIUseCase.test.ts ][22m
+[31m[1m[7m FAIL [27m[22m[39m src/presentation/cli/commands/BuildCommand.test.ts [2m[ src/presentation/cli/commands/BuildCommand.test.ts ][22m
+[31m[1mError[22m: Failed to load url ./ValidationResult (resolved id: ./ValidationResult) in C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/BusinessObjectValidationService.ts. Does the 
+file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[6/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/SchemaGenerationService.test.ts [2m[ src/application/services/SchemaGenerationService.test.ts ][22m
+[31m[1mError[22m: Failed to load url ./BusinessObjectSchemaGenerator (resolved id: ./BusinessObjectSchemaGenerator) in 
+C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/SchemaGenerationService.test.ts. Does the file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[7/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/StructuralValidationService.test.ts [2m[ src/application/services/StructuralValidationService.test.ts ][22m
+[31m[1mError[22m: Failed to load url ./StructuralValidator (resolved id: ./StructuralValidator) in C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/StructuralValidationService.test.ts. Does 
+the file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[8/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/services/StructureMappingService.test.ts [2m[ src/application/services/StructureMappingService.test.ts ][22m
+[31m[1mError[22m: Failed to load url ../entities (resolved id: ../entities) in C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/services/StructureMappingService.test.ts. Does the file exist?[39m
+[90m [2mΓ¥»[22m loadAndTransform ../../node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51969:17[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[9/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/use-cases/validate/ValidateMessageUseCase.integration.test.ts [2m[ src/application/use-cases/validate/ValidateMessageUseCase.integration.test.ts ][22m
+[31m[1mError[22m: Cannot find module '@domain/validation/StructuralValidator' imported from 'C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/use-cases/validate/ValidateMessageUseCase.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors[39m
+[36m [2mΓ¥»[22m src/application/use-cases/validate/ValidateMessageUseCase.ts:[2m1:1[22m[39m
+    [90m  1| [39m[35mimport[39m { [33mValidateMessageInputDTO[39m } [35mfrom[39m [32m'./ValidateMessageInputDTO'[39m[33m;[39m
+    [90m   | [39m[31m^[39m
+    [90m  2| [39m[35mimport[39m { [33mValidateMessageOutputDTO[39m } [35mfrom[39m [32m'./ValidateMessageOutputDTO'[39m[33m;[39m
+    [90m  3| [39m[35mimport[39m type { [33mIValidationService[39m } [35mfrom[39m [32m'@domain/services/IValidationS[39mΓÇª
+[90m [2mΓ¥»[22m src/application/use-cases/validate/ValidateMessageUseCase.integration.test.ts:[2m2:31[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_MODULE_NOT_FOUND' }[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[10/35]ΓÄ»[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/application/use-cases/validate/ValidateMessageUseCase.test.ts [2m[ src/application/use-cases/validate/ValidateMessageUseCase.test.ts ][22m
+[31m[1mError[22m: Cannot find module '@domain/validation/StructuralValidator' imported from 'C:/Users/z003wbfu/WebstormProjects/ediflow/packages/core/src/application/use-cases/validate/ValidateMessageUseCase.ts'.
+
+- If you rely on tsconfig.json's "paths" to resolve modules, please install "vite-tsconfig-paths" plugin to handle module resolution.
+- Make sure you don't have relative aliases in your Vitest config. Use absolute paths instead. Read more: https://vitest.dev/guide/common-errors[39m
+[36m [2mΓ¥»[22m src/application/use-cases/validate/ValidateMessageUseCase.ts:[2m1:1[22m[39m
+    [90m  1| [39m[35mimport[39m { [33mValidateMessageInputDTO[39m } [35mfrom[39m [32m'./ValidateMessageInputDTO'[39m[33m;[39m
+    [90m   | [39m[31m^[39m
+    [90m  2| [39m[35mimport[39m { [33mValidateMessageOutputDTO[39m } [35mfrom[39m [32m'./ValidateMessageOutputDTO'[39m[33m;[39m
+    [90m  3| [39m[35mimport[39m type { [33mIValidationService[39m } [35mfrom[39m [32m'@domain/services/IValidationS[39mΓÇª
+[90m [2mΓ¥»[22m src/application/use-cases/validate/ValidateMessageUseCase.test.ts:[2m2:31[22m[39m
+
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22m[39m
+[31m[1mSerialized Error:[22m[39m [90m{ code: 'ERR_MODULE_NOT_FOUND' }[39m
+[31m[2mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[11/35]ΓÄ»[22m[39m
+
+[2m Test Files [22m [1m[31m35 failed[39m[22m[2m | [22m[1m[32m21 passed[39m[22m[90m (56)[39m
+[2m      Tests [22m [1m[32m226 passed[39m[22m[90m (226)[39m
+[2m   Start at [22m 06:26:02
+[2m   Duration [22m 7.32s[2m (transform 30.97s, setup 8ms, collect 10.84s, tests 456ms, environment 27ms, prepare 62.41s)[22m
+
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path C:\Users\z003wbfu\WebstormProjects\ediflow\packages\core
+npm error workspace @ediflow/core@0.1.2
+npm error location C:\Users\z003wbfu\WebstormProjects\ediflow\packages\core
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c vitest run

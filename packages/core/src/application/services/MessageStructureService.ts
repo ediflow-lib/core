@@ -1,5 +1,5 @@
-import { IMessageStructureRepository } from '@domain/repositories/IMessageStructureRepository';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+import { IMessageStructureRepository } from '@application/ports/output/IMessageStructureRepository';
+import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
 
 export class MessageStructureService {
   constructor(private readonly repository: IMessageStructureRepository) {}
@@ -8,7 +8,7 @@ export class MessageStructureService {
     standard: string,
     version: string,
     messageType: string
-  ): Promise<MessageStructure> {
+  ): Promise<MessageStructureDTO | null> {
     const definition = await this.repository.getMessageDefinition(
       standard,
       version,

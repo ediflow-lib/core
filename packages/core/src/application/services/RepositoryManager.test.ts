@@ -1,184 +1,160 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { RepositoryManager } from './RepositoryManager';
-import { InMemoryRepository } from '../../infrastructure/repositories/InMemoryRepository';
-import { MessageType, Version, Standard } from '../../domain';
-import type { MessageDefinition } from '../../domain';
+import { RepositoryManager } from '@application';
+import { InMemoryMessageStructureRepository } from '@infrastructure/repositories';
+import { Standard } from '@domain/value-objects/Standard';
+import { Version } from '@domain/value-objects/Version';
+import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
 
 describe('RepositoryManager', () => {
   let manager: RepositoryManager;
-  let repository1: InMemoryRepository;
-  let repository2: InMemoryRepository;
+  let edifactRepository: InMemoryMessageStructureRepository;
+  let x12Repository: InMemoryMessageStructureRepository;
 
-  let ordersDefinition: MessageDefinition;
-  let invoicDefinition: MessageDefinition;
-  let desadvDefinition: MessageDefinition;
+  let ordersStructure: MessageStructureDTO;
+  let invoicStructure: MessageStructureDTO;
+  let desadvStructure: MessageStructureDTO;
 
   beforeEach(() => {
     manager = new RepositoryManager();
-    repository1 = new InMemoryRepository();
-    repository2 = new InMemoryRepository();
+    edifactRepository = new InMemoryMessageStructureRepository();
+    x12Repository = new InMemoryMessageStructureRepository();
 
-    // Create sample definitions
-    ordersDefinition = {
+    // Create sample EDIFACT structures
+    ordersStructure = {
       messageType: 'ORDERS',
       version: 'D.96A',
-      standard: Standard.EDIFACT,
+      standard: 'EDIFACT',
       name: 'Purchase Order',
-      segments: [
-        { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
-        { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
-        { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 3 },
-      ],
+      structure: [],
     };
 
-    invoicDefinition = {
+    invoicStructure = {
       messageType: 'INVOIC',
       version: 'D.96A',
-      standard: Standard.EDIFACT,
+      standard: 'EDIFACT',
       name: 'Invoice',
-      segments: [
-        { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
-        { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
-        { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 3 },
-      ],
+      structure: [],
     };
 
-    desadvDefinition = {
+    desadvStructure = {
       messageType: 'DESADV',
       version: 'D.01B',
-      standard: Standard.EDIFACT,
+      standard: 'EDIFACT',
       name: 'Despatch Advice',
-      segments: [
-        { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
-        { tag: 'BGM', name: 'Beginning of Message', mandatory: true, maxOccurrences: 1, position: 2 },
-        { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 3 },
-      ],
+      structure: [],
     };
   });
 
   describe('addRepository', () => {
-    it('should add a repository to the manager', () => {
-      repository1.register(ordersDefinition);
-      manager.addRepository(repository1);
+    it('should add a repository to the manager', async () => {
+      edifactRepository.register(ordersStructure);
+      manager.addRepository(edifactRepository);
 
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version));
-      expect(result).toBe(ordersDefinition);
+      const repository = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'));
+      expect(repository).toBe(edifactRepository);
     });
 
-    it('should allow adding multiple repositories', () => {
-      repository1.register(ordersDefinition);
-      repository2.register(invoicDefinition);
+    it('should allow adding multiple repositories', async () => {
+      edifactRepository.register(ordersStructure);
+      x12Repository.register({
+        messageType: '850',
+        version: '005010',
+        standard: 'X12',
+        name: 'Purchase Order',
+        structure: [],
+      });
 
-      manager.addRepository(repository1);
-      manager.addRepository(repository2);
+      manager.addRepository(edifactRepository);
+      manager.addRepository(x12Repository);
 
-      expect(manager.findDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version))).toBe(ordersDefinition);
-      expect(manager.findDefinition(new MessageType(Standard.EDIFACT, invoicDefinition.messageType), new Version(Standard.EDIFACT, invoicDefinition.version))).toBe(invoicDefinition);
+      expect(await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'))).toBe(edifactRepository);
+      expect(await manager.findRepository(Standard.X12, new Version(Standard.X12, '005010'))).toBe(x12Repository);
+    });
+  });
+
+  describe('findRepository', () => {
+    it('should return null when no repositories are registered', async () => {
+      const result = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'));
+      expect(result).toBeNull();
+    });
+
+    it('should return null when repository for standard/version is not found', async () => {
+      edifactRepository.register(ordersStructure);
+      manager.addRepository(edifactRepository);
+
+      const result = await manager.findRepository(Standard.X12, new Version(Standard.X12, '005010'));
+      expect(result).toBeNull();
+    });
+
+    it('should find repository by standard and version', async () => {
+      edifactRepository.register(ordersStructure);
+      manager.addRepository(edifactRepository);
+
+      const result = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'));
+      expect(result).toBe(edifactRepository);
+    });
+
+    it('should search repositories in order and return first match', async () => {
+      const edifactRepo1 = new InMemoryMessageStructureRepository();
+      const edifactRepo2 = new InMemoryMessageStructureRepository();
+
+      edifactRepo1.register(ordersStructure);
+      edifactRepo2.register(invoicStructure);
+
+      manager.addRepository(edifactRepo1);
+      manager.addRepository(edifactRepo2);
+
+      const result = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'));
+      // Should return the first one added
+      expect(result).toBe(edifactRepo1);
+    });
+
+    it('should handle multiple versions in same repository', async () => {
+      edifactRepository.register(ordersStructure); // D.96A
+      edifactRepository.register(desadvStructure); // D.01B
+
+      manager.addRepository(edifactRepository);
+
+      const result96A = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'));
+      const result01B = await manager.findRepository(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.01B'));
+
+      expect(result96A).toBe(edifactRepository);
+      expect(result01B).toBe(edifactRepository);
     });
   });
 
   describe('findDefinition', () => {
-    it('should return null when no repositories are registered', () => {
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version));
+    it('should return null when no repositories are registered', async () => {
+      const result = await manager.findDefinition(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), 'ORDERS');
       expect(result).toBeNull();
     });
 
-    it('should return null when definition is not found in any repository', () => {
-      repository1.register(ordersDefinition);
-      manager.addRepository(repository1);
+    it('should return null when definition is not found in any repository', async () => {
+      edifactRepository.register(ordersStructure);
+      manager.addRepository(edifactRepository);
 
-      const nonExistent = new MessageType(Standard.EDIFACT, 'PRICAT');
-      const result = manager.findDefinition(nonExistent, new Version(Standard.EDIFACT, ordersDefinition.version));
-
+      const result = await manager.findDefinition(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), 'PRICAT');
       expect(result).toBeNull();
     });
 
-    it('should find definition from first repository', () => {
-      repository1.register(ordersDefinition);
-      manager.addRepository(repository1);
+    it('should find definition from repository', async () => {
+      edifactRepository.register(ordersStructure);
+      manager.addRepository(edifactRepository);
 
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version));
-      expect(result).toBe(ordersDefinition);
+      const result = await manager.findDefinition(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), 'ORDERS');
+      expect(result).toEqual(ordersStructure);
     });
 
-    it('should find definition from second repository if not in first', () => {
-      repository1.register(ordersDefinition);
-      repository2.register(invoicDefinition);
+    it('should find definition from correct repository', async () => {
+      edifactRepository.register(ordersStructure);
+      edifactRepository.register(invoicStructure);
 
-      manager.addRepository(repository1);
-      manager.addRepository(repository2);
+      manager.addRepository(edifactRepository);
 
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, invoicDefinition.messageType), new Version(Standard.EDIFACT, invoicDefinition.version));
-      expect(result).toBe(invoicDefinition);
-    });
-
-    it('should search repositories in order and return first match', () => {
-      // Both repositories have ORDERS, but different definitions
-      const ordersV1 = ordersDefinition;
-      const ordersV2: MessageDefinition = {
-        messageType: 'ORDERS',
-        version: 'D.96A',
-        standard: Standard.EDIFACT,
-        name: 'Purchase Order v2',
-        segments: [
-          { tag: 'UNH', name: 'Message Header', mandatory: true, maxOccurrences: 1, position: 1 },
-          { tag: 'UNT', name: 'Message Trailer', mandatory: true, maxOccurrences: 1, position: 2 },
-        ],
-      };
-
-      repository1.register(ordersV1);
-      repository2.register(ordersV2);
-
-      manager.addRepository(repository1);
-      manager.addRepository(repository2);
-
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version));
-      // Should return the one from repository1 (first in order)
-      expect(result).toBe(ordersV1);
-      expect(result?.segments.length).toBe(3);
-    });
-
-    it('should search all repositories until finding a match', () => {
-      repository1.register(ordersDefinition);
-      repository2.register(desadvDefinition);
-
-      manager.addRepository(repository1);
-      manager.addRepository(repository2);
-
-      // DESADV should be found in repository2
-      const result = manager.findDefinition(new MessageType(Standard.EDIFACT, desadvDefinition.messageType), new Version(Standard.EDIFACT, desadvDefinition.version));
-      expect(result).toBe(desadvDefinition);
-    });
-  });
-
-  describe('hasDefinition', () => {
-    it('should return false when no repositories are registered', () => {
-      expect(manager.hasDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version))).toBe(false);
-    });
-
-    it('should return false when definition is not found', () => {
-      repository1.register(ordersDefinition);
-      manager.addRepository(repository1);
-
-      const nonExistent = new MessageType(Standard.EDIFACT, 'PRICAT');
-      expect(manager.hasDefinition(nonExistent, new Version(Standard.EDIFACT, ordersDefinition.version))).toBe(false);
-    });
-
-    it('should return true when definition exists in first repository', () => {
-      repository1.register(ordersDefinition);
-      manager.addRepository(repository1);
-
-      expect(manager.hasDefinition(new MessageType(Standard.EDIFACT, ordersDefinition.messageType), new Version(Standard.EDIFACT, ordersDefinition.version))).toBe(true);
-    });
-
-    it('should return true when definition exists in second repository', () => {
-      repository1.register(ordersDefinition);
-      repository2.register(invoicDefinition);
-
-      manager.addRepository(repository1);
-      manager.addRepository(repository2);
-
-      expect(manager.hasDefinition(new MessageType(Standard.EDIFACT, invoicDefinition.messageType), new Version(Standard.EDIFACT, invoicDefinition.version))).toBe(true);
+      const result = await manager.findDefinition(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), 'INVOIC');
+      expect(result).toEqual(invoicStructure);
     });
   });
 });
+
+

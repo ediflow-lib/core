@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MessageStructureService } from './MessageStructureService';
 import { InMemoryMessageStructureRepository } from '@infrastructure/repositories/InMemoryMessageStructureRepository';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
 import { Standard } from '@domain/value-objects/Standard';
 
 describe('MessageStructureService', () => {
@@ -15,7 +15,7 @@ describe('MessageStructureService', () => {
 
   describe('getMessageDefinition', () => {
     it('should return message definition when it exists', async () => {
-      const definition: MessageStructure = {
+      const definition: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -31,7 +31,7 @@ describe('MessageStructureService', () => {
     });
 
     it('should throw error when message definition not found', async () => {
-      await expect(
+      expect(
         service.getMessageDefinition('EDIFACT', 'D.20B', 'UNKNOWN')
       ).rejects.toThrow('Message definition not found: EDIFACT D.20B UNKNOWN');
     });

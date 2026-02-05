@@ -1,4 +1,5 @@
-import type { Standard } from '../value-objects';
+import {Standard} from "@domain/value-objects";
+
 
 export interface DataElementDefinition {
   code: string;
@@ -59,7 +60,12 @@ export interface MessageSegmentReference {
   position: number;
 }
 
-export interface MessageDefinition {
+/**
+ * Infrastructure DTO: Message Definition
+ *
+ * Represents message definition metadata from external source.
+ */
+export interface MessageDefinitionDTO {
   standard: Standard;
   version: string;
   messageType: string;
@@ -68,6 +74,9 @@ export interface MessageDefinition {
   segments: MessageSegmentReference[];
   segmentGroups?: SegmentGroupDefinition[];
 }
+
+// Alias for backward compatibility
+export type MessageDefinition = MessageDefinitionDTO;
 
 export interface CodeListDefinition {
   code: string;

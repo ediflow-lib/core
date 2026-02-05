@@ -16,8 +16,7 @@
  *
  * Order is preserved through array sequence.
  */
-
-import type { MappingRule } from '@domain/mapping/MappingRule';
+import {MappingRule} from "@application/services/mapping/MappingRule";
 
 
 // ============================================================================

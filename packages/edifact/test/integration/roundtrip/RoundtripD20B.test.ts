@@ -1,3 +1,7 @@
+import { Delimiters } from '@ediflow/core';
+
+const edifactDelimiters = Delimiters.custom({ component: ':', element: '+', decimal: '.', escape: '?', segment: "'" });
+
 import { describe, it, expect } from 'vitest';
 import { ParseEDIUseCase } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
@@ -45,7 +49,7 @@ describe('E2E Roundtrip Tests - D.20B (US-8.2)', () => {
       expect(originalMessage.version.toString()).toBe('D.20B');
       expect(originalMessage.messageType.value).toBe('ORDERS');
 
-      const buildResult = buildUseCase.execute({ message: originalMessage });
+      const buildResult = buildUseCase.execute({ message: originalMessage, delimiters: edifactDelimiters });
       expect(buildResult.success).toBe(true);
       if (!buildResult.success) return;
 
@@ -71,7 +75,7 @@ describe('E2E Roundtrip Tests - D.20B (US-8.2)', () => {
       expect(originalMessage.version.toString()).toBe('D.20B');
       expect(originalMessage.messageType.value).toBe('DESADV');
 
-      const buildResult = buildUseCase.execute({ message: originalMessage });
+      const buildResult = buildUseCase.execute({ message: originalMessage, delimiters: edifactDelimiters });
       expect(buildResult.success).toBe(true);
       if (!buildResult.success) return;
 
@@ -95,7 +99,7 @@ describe('E2E Roundtrip Tests - D.20B (US-8.2)', () => {
       expect(originalMessage.version.toString()).toBe('D.20B');
       expect(originalMessage.messageType.value).toBe('INVOIC');
 
-      const buildResult = buildUseCase.execute({ message: originalMessage });
+      const buildResult = buildUseCase.execute({ message: originalMessage, delimiters: edifactDelimiters });
       expect(buildResult.success).toBe(true);
       if (!buildResult.success) return;
 
@@ -117,7 +121,7 @@ describe('E2E Roundtrip Tests - D.20B (US-8.2)', () => {
       const firstParseResult = parseUseCase.execute({ message: ediString, standard: Standard.EDIFACT });
       if (!firstParseResult.success) return;
 
-      const buildResult = buildUseCase.execute({ message: firstParseResult.message });
+      const buildResult = buildUseCase.execute({ message: firstParseResult.message, delimiters: edifactDelimiters });
       if (!buildResult.success) return;
 
       parseUseCase.execute({ message: buildResult.ediString, standard: Standard.EDIFACT });
@@ -127,3 +131,5 @@ describe('E2E Roundtrip Tests - D.20B (US-8.2)', () => {
     });
   });
 });
+
+

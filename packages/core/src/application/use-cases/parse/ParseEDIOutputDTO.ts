@@ -32,7 +32,7 @@ export type ParseEDIOutputDTO =
         version: Version;
         messageType: MessageType;
         segmentCount: number;
-        delimiters: Delimiters;
+        delimiters?: Delimiters;  // Optional: detected delimiters
       };
     }
   | {
@@ -44,6 +44,6 @@ export type ParseEDIOutputDTO =
         version?: Version;
         messageType?: MessageType;
         segmentCount: number;
-        delimiters: Delimiters;
+        delimiters?: Delimiters;  // Optional: unknown on error
       };
     };

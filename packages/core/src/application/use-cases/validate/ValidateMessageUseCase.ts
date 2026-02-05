@@ -2,23 +2,23 @@ import { ValidateMessageInputDTO } from './ValidateMessageInputDTO';
 import { ValidateMessageOutputDTO } from './ValidateMessageOutputDTO';
 import type { IValidationService } from '@domain/services/IValidationService';
 import type { EDIMessage } from '@domain';
-import { StructuralValidator } from '@domain/validation/StructuralValidator';
+import { StructuralValidationService } from '@application/services/StructuralValidationService';
 import { ValidationResult } from '@domain/validation';
 
 /**
  * Use Case for validating EDI messages.
  *
  * Phase 1: Syntax Validation (via IValidationService)
- * Phase 2: Structure Validation (via StructuralValidator) - optional
+ * Phase 2: Structure Validation (via StructuralValidationService) - optional
  *
  * Clean Architecture: This Use Case depends on IValidationService (interface),
  * not on concrete implementations.
  */
 export class ValidateMessageUseCase {
-  private readonly structuralValidator: StructuralValidator;
+  private readonly structuralValidator: StructuralValidationService;
 
   constructor(private readonly validationService: IValidationService<EDIMessage>) {
-    this.structuralValidator = new StructuralValidator();
+    this.structuralValidator = new StructuralValidationService();
   }
 
   execute(input: ValidateMessageInputDTO): ValidateMessageOutputDTO {

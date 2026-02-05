@@ -3,20 +3,27 @@ import { RepositoryManager } from '@application/services/RepositoryManager';
 import { Standard } from '@domain/value-objects/Standard';
 import { Version } from '@domain/value-objects/Version';
 import { MessageType } from '@domain/value-objects/MessageType';
-import type { MessageDefinitionDTO } from './dtos/MessageDefinitionDTO';
+import type { MessageStructureDTO } from './dtos/MessageStructureDTO';
 import { DefinitionNotFoundError } from '@domain/errors/DefinitionNotFoundError';
 import { CacheManager } from '../cache/CacheManager';
 
 /**
- * Loads message definitions from registered repositories with LRU caching.
+ * DefinitionLoader
+ *
+ * Loads message structure definitions from registered repositories with LRU caching.
  *
  * Caching significantly improves performance when the same definitions
  * are loaded repeatedly (e.g., processing 1000 ORDERS messages).
  * - Without cache: ~1-5ms per load
  * - With cache: ~0.01ms (100x faster!)
+ *
+ * Clean Architecture:
+ * - Infrastructure Service
+ * - Uses RepositoryManager to find definitions
+ * - Provides caching layer for performance
  */
 export class DefinitionLoader implements IDefinitionLoader {
-  private readonly cache: CacheManager<MessageDefinitionDTO>;
+  private readonly cache: CacheManager<MessageStructureDTO>;
 
   constructor(
     private readonly repositoryManager: RepositoryManager,
@@ -26,14 +33,14 @@ export class DefinitionLoader implements IDefinitionLoader {
   }
 
   /**
-   * Loads a message definition for the given parameters.
+   * Loads a message structure definition for the given parameters.
    * Checks cache first, then loads from repository if not cached.
    */
-  loadDefinition(
+  async loadDefinition(
     standard: Standard,
     version: Version,
     messageType: MessageType
-  ): MessageDefinitionDTO {
+  ): Promise<MessageStructureDTO> {
     // Create cache key
     const cacheKey = this.createCacheKey(standard, version, messageType);
 
@@ -44,7 +51,7 @@ export class DefinitionLoader implements IDefinitionLoader {
     }
 
     // Cache miss - load from repository
-    const definition = this.loadFromRepository(standard, version, messageType);
+    const definition = await this.loadFromRepository(standard, version, messageType);
 
     // Store in cache for future requests
     this.cache.set(cacheKey, definition);
@@ -55,18 +62,16 @@ export class DefinitionLoader implements IDefinitionLoader {
   /**
    * Loads definition from repository (no caching).
    */
-  private loadFromRepository(
+  private async loadFromRepository(
     standard: Standard,
     version: Version,
     messageType: MessageType
-  ): MessageDefinitionDTO {
-    const repository = this.repositoryManager.findRepository(standard, version);
-
-    if (!repository) {
-      throw new DefinitionNotFoundError(standard, version, messageType);
-    }
-
-    const definition = repository.getMessageDefinition(messageType, version);
+  ): Promise<MessageStructureDTO> {
+    const definition = await this.repositoryManager.findDefinition(
+      standard,
+      version,
+      messageType.value
+    );
 
     if (!definition) {
       throw new DefinitionNotFoundError(standard, version, messageType);
@@ -79,11 +84,11 @@ export class DefinitionLoader implements IDefinitionLoader {
    * Checks if a definition exists without throwing an error.
    * Checks cache first for performance.
    */
-  hasDefinition(
+  async hasDefinition(
     standard: Standard,
     version: Version,
     messageType: MessageType
-  ): boolean {
+  ): Promise<boolean> {
     // Check cache first
     const cacheKey = this.createCacheKey(standard, version, messageType);
     if (this.cache.has(cacheKey)) {
@@ -91,17 +96,11 @@ export class DefinitionLoader implements IDefinitionLoader {
     }
 
     // Not in cache - check repository
-    try {
-      const repository = this.repositoryManager.findRepository(standard, version);
-
-      if (!repository) {
-        return false;
-      }
-
-      return repository.hasMessageDefinition(messageType, version);
-    } catch {
-      return false;
-    }
+    return await this.repositoryManager.hasDefinition(
+      standard,
+      version,
+      messageType.value
+    );
   }
 
   /**

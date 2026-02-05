@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ValidateMessageUseCase } from './ValidateMessageUseCase';
+import { ValidateMessageUseCase } from '@application';
 import { EDIMessageValidationService } from '@application/services/EDIMessageValidationService';
 import { EDIMessage } from '@domain/entities/EDIMessage';
 import { EDISegment } from '@domain/entities/EDISegment';
 import { Standard } from '@domain/value-objects/Standard';
 import { Version } from '@domain/value-objects/Version';
 import { MessageType } from '@domain/value-objects/MessageType';
-import { MessageStructure, SegmentNode, SegmentGroupNode } from '@domain/repositories/MessageStructure';
+import {SegmentNode, SegmentGroupNode, MessageStructureDTO} from '@infrastructure/repositories/dtos';
 
 describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', () => {
   let useCase: ValidateMessageUseCase;
@@ -58,7 +58,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
 
   describe('Phase 2 - Structure Validation', () => {
     it('should validate against MessageStructure when enabled', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -104,7 +104,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
     });
 
     it('should detect missing mandatory segments', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -152,7 +152,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
     });
 
     it('should detect max occurrences exceeded', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -191,7 +191,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
     });
 
     it('should validate segment groups', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -238,7 +238,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
     });
 
     it('should detect missing mandatory groups', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -286,7 +286,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
 
   describe('Strict Mode with Structure Validation', () => {
     it('should stop at syntax errors in strict mode', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -324,7 +324,7 @@ describe('ValidateMessageUseCase - Phase 2 Structure Validation Integration', ()
 
   describe('Combined Syntax + Structure Validation', () => {
     it('should merge errors from both phases', () => {
-      const structure: MessageStructure = {
+      const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
         messageType: 'ORDERS',

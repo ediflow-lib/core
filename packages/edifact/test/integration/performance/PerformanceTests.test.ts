@@ -1,3 +1,7 @@
+import { Delimiters } from '@ediflow/core';
+
+const edifactDelimiters = Delimiters.custom({ component: ':', element: '+', decimal: '.', escape: '?', segment: "'" });
+
 import { describe, it, expect } from 'vitest';
 import { generateLargeOrdersMessage } from '../FixtureLoader';
 import { ValidationServiceBuilder } from '@ediflow/core';
@@ -36,7 +40,7 @@ describe('Integration: EDIFACT Performance Tests', () => {
     const message = createParser().parse(largeMessage);
     const buildUseCase = new BuildEDIUseCase();
     const start = performance.now();
-    const result = buildUseCase.execute({ message });
+    const result = buildUseCase.execute({ message, delimiters: edifactDelimiters });
     const duration = performance.now() - start;
 
     expect(duration).toBeLessThan(100);
@@ -53,7 +57,7 @@ describe('Integration: EDIFACT Performance Tests', () => {
     const buildUseCase = new BuildEDIUseCase();
     const start = performance.now();
     const parsed1 = parser.parse(largeMessage);
-    const built = buildUseCase.execute({ message: parsed1 });
+    const built = buildUseCase.execute({ message: parsed1, delimiters: edifactDelimiters });
     if (built.success) {
       const parsed2 = parser.parse(built.ediString!); // Non-null assertion: ediString is guaranteed when success=true
       const duration = performance.now() - start;
@@ -64,3 +68,4 @@ describe('Integration: EDIFACT Performance Tests', () => {
     }
   });
 });
+

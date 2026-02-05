@@ -8,6 +8,6 @@
  * Infrastructure DTO = MessageStructureDTO (the external definition)
  */
 
-export { MessageStructureDTO } from './MessageStructureDTO';
-export { MessageDefinitionDTO } from './MessageDefinitionDTO';
-export type { SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite } from './MessageStructureDTO';
+export type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite } from './MessageStructureDTO';
+export type { MessageDefinitionDTO, MessageDefinition } from './MessageDefinitionDTO';
+export * from './RepositoryDefinitions';

@@ -1,7 +1,8 @@
-import { IMessageStructureRepository } from '@domain/repositories/IMessageStructureRepository';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import {IMessageStructureRepository} from "@application";
+import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
 
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
   constructor(private readonly basePath: string) {}
@@ -10,11 +11,11 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
     standard: string,
     version: string,
     messageType: string
-  ): Promise<MessageStructure | null> {
+  ): Promise<MessageStructureDTO | null> {
     try {
       const filePath = this.getMessageFilePath(standard, version, messageType);
       const content = await fs.readFile(filePath, 'utf-8');
-      return JSON.parse(content) as MessageStructure;
+      return JSON.parse(content) as MessageStructureDTO;
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
         return null;

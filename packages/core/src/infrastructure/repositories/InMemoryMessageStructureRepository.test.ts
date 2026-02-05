@@ -1,7 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { InMemoryMessageStructureRepository } from './InMemoryMessageStructureRepository';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+
 import { Standard } from '@domain/value-objects/Standard';
+import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
 
 describe('InMemoryMessageStructureRepository', () => {
   let repository: InMemoryMessageStructureRepository;
@@ -12,7 +13,7 @@ describe('InMemoryMessageStructureRepository', () => {
 
   describe('register and getMessageDefinition', () => {
     it('should register and retrieve message definition', async () => {
-      const definition: MessageStructure = {
+      const definition: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -34,7 +35,7 @@ describe('InMemoryMessageStructureRepository', () => {
     });
 
     it('should be case-insensitive for standard and version', async () => {
-      const definition: MessageStructure = {
+      const definition: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -50,7 +51,7 @@ describe('InMemoryMessageStructureRepository', () => {
     });
 
     it('should normalize message type to uppercase', async () => {
-      const definition: MessageStructure = {
+      const definition: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -108,7 +109,7 @@ describe('InMemoryMessageStructureRepository', () => {
 
   describe('hasMessageDefinition', () => {
     it('should return true for existing message', async () => {
-      const definition: MessageStructure = {
+      const definition: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',

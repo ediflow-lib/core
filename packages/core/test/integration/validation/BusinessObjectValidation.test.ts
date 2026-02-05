@@ -1,18 +1,24 @@
 import { describe, it, expect, beforeAll } from 'vitest';
-import { BusinessObjectSchemaGenerator } from '@domain/validation/BusinessObjectSchemaGenerator';
-import { BusinessObjectValidator } from '@domain/validation/BusinessObjectValidator';
-import { SchemaCache } from '@domain/validation/SchemaCache';
-import type { MessageStructure, SegmentNode, SegmentGroupNode, ElementNode } from '@domain/repositories/MessageStructure';
+
+import type {
+  SegmentNode,
+  SegmentGroupNode,
+  ElementNode,
+  MessageStructureDTO
+} from '@infrastructure/repositories/dtos';
+import { SchemaGenerationService } from "@application/services/SchemaGenerationService";
+import { BusinessObjectValidationService } from "@application/services/BusinessObjectValidationService";
+import { SchemaCache } from "@application/services/SchemaCache";
 
 describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
-  let generator: BusinessObjectSchemaGenerator;
-  let validator: BusinessObjectValidator;
-  let desadvStructure: MessageStructure;
+  let generator: SchemaGenerationService;
+  let validator: BusinessObjectValidationService;
+  let desadvStructure: MessageStructureDTO;
 
   beforeAll(() => {
     const cache = new SchemaCache();
-    generator = new BusinessObjectSchemaGenerator(cache);
-    validator = new BusinessObjectValidator();
+    generator = new SchemaGenerationService(cache);
+    validator = new BusinessObjectValidationService();
 
     desadvStructure = {
       standard: 'EDIFACT',

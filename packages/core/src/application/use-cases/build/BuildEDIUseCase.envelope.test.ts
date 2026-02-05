@@ -1,17 +1,27 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { BuildEDIUseCase } from './BuildEDIUseCase';
+import { BuildEDIUseCase } from '@application';
 import { EDIMessage, EDISegment, EDIElement } from '@domain/entities';
 import { Standard } from '@domain/value-objects/Standard';
 import { Version } from '@domain/value-objects/Version';
 import { MessageType } from '@domain/value-objects/MessageType';
-import { StructureMapper } from '@domain/mapping';
+import { Delimiters } from '@domain/value-objects/Delimiters';
+import { StructureMappingService } from '@application/services/StructureMappingService';
 
-describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
+// EDIFACT standard delimiters
+const edifactDelimiters = Delimiters.custom({
+  component: ':',
+  element: '+',
+  decimal: '.',
+  escape: '?',
+  segment: "'",
+});
+
+describe('BuildEDIUseCase - Envelope Support', () => {
   let useCase: BuildEDIUseCase;
-  let mapper: StructureMapper;
+  let mapper: StructureMappingService;
 
   beforeEach(() => {
-    mapper = new StructureMapper();
+    mapper = new StructureMappingService();
     useCase = new BuildEDIUseCase(mapper);
   });
 
@@ -23,6 +33,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         messageType: 'ORDERS',
         version: 'D.96A',
@@ -48,6 +59,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         includeInterchange: true,
         messageType: 'ORDERS',
@@ -74,6 +86,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         messageType: 'ORDERS',
         version: 'D.96A'
@@ -91,6 +104,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         includeInterchange: true,
         messageType: 'ORDERS',
@@ -114,6 +128,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         messageType: 'ORDERS',
         version: 'D.96A',
@@ -134,6 +149,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: false
       });
 
@@ -150,7 +166,8 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
       message.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
 
       const result = useCase.execute({
-        message
+        message,
+        delimiters: edifactDelimiters
       });
 
       expect(result.success).toBe(true);
@@ -168,6 +185,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         version: 'D.96A'
       });
@@ -184,6 +202,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         includeInterchange: true,
         messageType: 'ORDERS',
@@ -205,6 +224,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         messageType: 'DESADV',
         version: 'D.20B',
@@ -223,6 +243,7 @@ describe('BuildEDIUseCase - Envelope Support (US-8.1)', () => {
 
       const result = useCase.execute({
         message,
+        delimiters: edifactDelimiters,
         includeEnvelope: true,
         messageType: 'INVOIC',
         version: 'D.01B',

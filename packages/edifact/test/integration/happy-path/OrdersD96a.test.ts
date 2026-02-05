@@ -1,12 +1,21 @@
 import { describe, it, expect } from 'vitest';
 import { loadValidFixture } from '../FixtureLoader';
-import { ValidationServiceBuilder } from '@ediflow/core';
+import { ValidationServiceBuilder, Delimiters } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
-import { EdifactMessageParser } from '../../../src/infrastructure/parsers/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../src/infrastructure/parsers/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../src/infrastructure/parsers/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../src/infrastructure/parsers/EdifactDelimiterDetector';
+import { EdifactMessageParser } from '../../../src';
+import { EdifactSegmentParser } from '../../../src';
+import { EdifactTokenizer } from '../../../src';
+import { EdifactDelimiterDetector } from '../../../src';
+
+const edifactDelimiters = Delimiters.custom({
+  component: ':',
+  element: '+',
+  decimal: '.',
+  escape: '?',
+  segment: "'",
+});
+
 describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   const ordersFixture = loadValidFixture('orders-valid-d96a.edi');
   function createParser(): EdifactMessageParser {
@@ -41,7 +50,7 @@ describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   describe('Build', () => {
     it('should build to EDI string', () => {
       const message = createParser().parse(ordersFixture);
-      const result = new BuildEDIUseCase().execute({ message });
+      const result = new BuildEDIUseCase().execute({ message, delimiters: edifactDelimiters });
       expect(result.success).toBe(true);
       if (result.success) expect(result.ediString).toContain('ORDERS');
     });
@@ -49,7 +58,7 @@ describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   describe('Roundtrip', () => {
     it('should maintain integrity', () => {
       const p1 = createParser().parse(ordersFixture);
-      const built = new BuildEDIUseCase().execute({ message: p1 });
+      const built = new BuildEDIUseCase().execute({ message: p1, delimiters: edifactDelimiters });
       if (!built.success) return;
       const p2 = createParser().parse(built.ediString);
       expect(p2.messageType.value).toBe(p1.messageType.value);

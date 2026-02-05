@@ -18,6 +18,11 @@ import type { EdifactSegmentParser } from './EdifactSegmentParser';
  * to create EDIMessage objects from EDIFACT strings.
  */
 export class EdifactMessageParser implements IMessageParser {
+  private lastParserConfig: ParserConfig = {
+    propertyParseMode: 'code',
+    codeListValueParseMode: 'code',
+  };
+
   constructor(
     private readonly delimiterDetector: IDelimiterDetector,
     private readonly tokenizer: ITokenizer,
@@ -38,13 +43,23 @@ export class EdifactMessageParser implements IMessageParser {
    * // message.version === "D.96A"
    * // message.segments.length === 3
    */
-  parse(ediString: string, _config?: ParserConfig): EDIMessage {
-    // TODO: Use _config for controlling parsing behavior (propertyParseMode, codeListValueParseMode)
+  parse(ediString: string, config?: ParserConfig): EDIMessage {
+    // TODO: Use config for controlling parsing behavior (propertyParseMode, codeListValueParseMode)
     // Currently not used but will be needed for advanced parsing features
 
     this.validateMessage(ediString);
 
-    const delimiters = this.delimiterDetector.detect(ediString);
+    // Detect delimiters from message (or use provided ones from config)
+    const delimiters = config?.delimiters || this.delimiterDetector.detect(ediString);
+
+    // Store configuration for later retrieval
+    this.lastParserConfig = {
+      propertyParseMode: config?.propertyParseMode || 'code',
+      codeListValueParseMode: config?.codeListValueParseMode || 'code',
+      delimiters
+    };
+
+
     const segmentStrings = this.tokenizer.tokenize(ediString, delimiters);
 
     const segments = this.parseAllSegments(segmentStrings, delimiters);
@@ -151,5 +166,13 @@ export class EdifactMessageParser implements IMessageParser {
     }
     // Simple check: EDIFACT messages should contain 'UNH'
     return ediString.includes('UNH');
+  }
+
+  /**
+   * Returns the parser configuration used in the last parse operation.
+   * Contains detected delimiters and other parsing metadata.
+   */
+  getConfiguration(): ParserConfig {
+    return this.lastParserConfig;
   }
 }

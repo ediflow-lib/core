@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { FileBasedMessageStructureRepository } from '@infrastructure/repositories/FileBasedMessageStructureRepository';
-import { SegmentOrGroup } from '@domain/repositories/MessageStructure';
+import { SegmentOrGroup } from '@infrastructure/repositories/dtos';
 import * as path from 'path';
 
 describe('FileBasedMessageStructureRepository Integration', () => {

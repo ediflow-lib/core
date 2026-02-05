@@ -1,4 +1,4 @@
-import { Delimiters, Standard, StandardDelimiters, IDelimiterDetector } from '@ediflow/core';
+import { Delimiters, Standard, IDelimiterDetector } from '@ediflow/core';
 
 export class EdifactDelimiterDetector implements IDelimiterDetector {
   private static readonly UNA_PREFIX = 'UNA';
@@ -9,11 +9,23 @@ export class EdifactDelimiterDetector implements IDelimiterDetector {
   private static readonly UNA_ESCAPE_POSITION = 6;
   private static readonly UNA_SEGMENT_POSITION = 8;
 
+  /**
+   * EDIFACT Default Delimiters (UN/EDIFACT Standard)
+   * Used when UNA segment is not present in the message
+   */
+  private static readonly DEFAULT_DELIMITERS = Delimiters.custom({
+    component: ':',
+    element: '+',
+    decimal: '.',
+    escape: '?',
+    segment: "'",
+  });
+
   detect(message: string): Delimiters {
     if (this.hasUNA(message)) {
       return this.extractFromUNA(message);
     }
-    return StandardDelimiters.getDefault(Standard.EDIFACT);
+    return EdifactDelimiterDetector.DEFAULT_DELIMITERS;
   }
 
   getMessageWithoutFormatSpecificHeader(message: string): string {

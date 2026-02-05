@@ -1,5 +1,6 @@
 import { EDIMessage, Delimiters } from '@domain';
-import type { MessageStructure } from '@domain/repositories';
+import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+
 
 export interface BuildEDIInputDTO {
   message?: EDIMessage;
@@ -7,7 +8,7 @@ export interface BuildEDIInputDTO {
   validateBeforeBuild?: boolean;
 
   businessObject?: any;
-  messageStructure?: MessageStructure;
+  messageStructure?: MessageStructureDTO;
 
   includeEnvelope?: boolean;
   includeInterchange?: boolean;

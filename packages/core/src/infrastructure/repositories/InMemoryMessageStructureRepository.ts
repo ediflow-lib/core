@@ -1,14 +1,15 @@
-import { IMessageStructureRepository } from '@domain/repositories/IMessageStructureRepository';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+import {IMessageStructureRepository} from "@application";
+import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+
 
 export class InMemoryMessageStructureRepository implements IMessageStructureRepository {
-  private definitions = new Map<string, MessageStructure>();
+  private definitions = new Map<string, MessageStructureDTO>();
 
   async getMessageDefinition(
     standard: string,
     version: string,
     messageType: string
-  ): Promise<MessageStructure | null> {
+  ): Promise<MessageStructureDTO | null> {
     const key = this.createKey(standard, version, messageType);
     return this.definitions.get(key) || null;
   }
@@ -38,7 +39,7 @@ export class InMemoryMessageStructureRepository implements IMessageStructureRepo
     return this.definitions.has(key);
   }
 
-  register(definition: MessageStructure): void {
+  register(definition: MessageStructureDTO): void {
     const key = this.createKey(
       definition.standard,
       definition.version,

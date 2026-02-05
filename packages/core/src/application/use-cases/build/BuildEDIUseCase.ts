@@ -1,11 +1,11 @@
 import { BuildEDIInputDTO } from './BuildEDIInputDTO';
 import { BuildEDIOutputDTO, BuildError } from './BuildEDIOutputDTO';
-import { StandardDelimiters, EDIMessage, Delimiters } from '@domain';
+import { EDIMessage, Delimiters } from '@domain';
 import { EDISegment } from '@domain/entities/EDISegment';
 import { EDIElement } from '@domain/entities/EDIElement';
 import { EDIMessageValidationService } from '@application/services';
-import { StructureMapper } from '@domain/mapping';
 import { EnvelopeGenerator } from '@domain/services';
+import { StructureMappingService } from '@application/services/StructureMappingService';
 
 /**
  * Use Case for building EDI messages.
@@ -17,7 +17,7 @@ export class BuildEDIUseCase {
   private readonly envelopeGenerator: EnvelopeGenerator;
 
   constructor(
-    private readonly structureMapper?: StructureMapper
+    private readonly structureMappingService?: StructureMappingService
   ) {
     this.envelopeGenerator = new EnvelopeGenerator();
   }
@@ -26,8 +26,8 @@ export class BuildEDIUseCase {
     try {
       let message: EDIMessage;
 
-      if (input.businessObject && input.messageStructure && this.structureMapper) {
-        message = this.structureMapper.unmap(input.businessObject, input.messageStructure);
+      if (input.businessObject && input.messageStructure && this.structureMappingService) {
+        message = this.structureMappingService.unmap(input.businessObject, input.messageStructure);
       } else if (input.message) {
         message = input.message;
       } else {
@@ -67,8 +67,18 @@ export class BuildEDIUseCase {
         }
       }
 
-      const delimiters = input.delimiters || StandardDelimiters.getDefault(message.standard);
-      const ediString = this.buildString(message, delimiters);
+      // Delimiters are REQUIRED - caller must provide them
+      if (!input.delimiters) {
+        return {
+          success: false,
+          errors: [{
+            code: 'MISSING_DELIMITERS',
+            message: 'Delimiters must be provided for building EDI message',
+          }],
+        };
+      }
+
+      const ediString = this.buildString(message, input.delimiters);
 
       return {
         success: true,

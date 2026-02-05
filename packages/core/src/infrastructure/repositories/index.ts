@@ -1,5 +1,9 @@
-export { InMemoryRepository } from './InMemoryRepository';
-export { DefinitionLoader } from './DefinitionLoader';
-export { InMemoryMessageStructureRepository } from './InMemoryMessageStructureRepository';
-export { FileBasedMessageStructureRepository } from './FileBasedMessageStructureRepository';
+/**
+ * Infrastructure Repositories
+ *
+ * Adapter implementations for the IMessageStructureRepository port.
+ */
 
+export { FileBasedMessageStructureRepository } from './FileBasedMessageStructureRepository';
+export { InMemoryMessageStructureRepository } from './InMemoryMessageStructureRepository';
+export { DefinitionLoader } from './DefinitionLoader';
