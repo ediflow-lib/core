@@ -1,7 +1,13 @@
 /**
- * Composite Pattern for EDI Message Structure
+ * Infrastructure DTO: Message Structure
  *
- * This design allows flexible hierarchical structures for any EDI standard:
+ * Represents the external message structure definition (from JSON files, DB, API).
+ * This is NOT a domain entity!
+ *
+ * Domain Entity = EDIMessage (the parsed result with segments)
+ * Infrastructure DTO = MessageStructureDTO (the external definition/schema)
+ *
+ * Composite Pattern for EDI Message Structure:
  * - Elements (leaf)
  * - Composite Elements (composite of elements)
  * - Segments (contain elements/composites)
@@ -11,7 +17,7 @@
  * Order is preserved through array sequence.
  */
 
-import type { MappingRule } from '../mapping/MappingRule';
+import type { MappingRule } from '@domain/mapping/MappingRule';
 
 
 // ============================================================================
@@ -73,7 +79,12 @@ export type SegmentOrGroup = SegmentNode | SegmentGroupNode;
 // MESSAGE LEVEL (Top Level - Composite Pattern Root)
 // ============================================================================
 
-export interface MessageStructure {
+/**
+ * MessageStructureDTO
+ *
+ * Infrastructure DTO representing message structure definition from external source.
+ */
+export interface MessageStructureDTO {
   standard: string;
   version: string;
   messageType: string;
@@ -98,6 +109,7 @@ export interface MessageStructureVisitor {
 export function traverseMessageStructure(
   structure: SegmentOrGroup[],
   visitor: MessageStructureVisitor
+) {
 ): void {
   for (const node of structure) {
     if (isSegmentNode(node)) {
