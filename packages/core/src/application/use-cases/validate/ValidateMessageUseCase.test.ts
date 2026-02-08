@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ValidateMessageUseCase } from '@application';
 import { EDIMessage, Standard, Version, MessageType, EDISegment } from '@domain';
 import { EDIMessageFactory } from '@application/factories';
-import type { IValidationService } from '@application/validation/IValidationService';
+import type { IValidationService } from '@application/ports';
 import { ValidationResult, ValidationError } from '@application/validation';
 
 describe('ValidateMessageUseCase', () => {

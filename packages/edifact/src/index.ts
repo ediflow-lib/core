@@ -18,3 +18,10 @@ export { EdifactMessageBuilder } from './infrastructure/builders/EdifactMessageB
 export { EdifactEnvelopeBuilder } from './infrastructure/builders/EdifactEnvelopeBuilder';
 export { EdifactDelimiters } from './infrastructure/builders/EdifactDelimiters';
 
+// Export EDIFACT validation
+export {
+  UNBMustBeFirstRule,
+  UNZMustBeLastRule,
+  EDIFACTSegmentTagFormatRule,
+  EdifactValidationServiceBuilder
+} from './infrastructure/validation';

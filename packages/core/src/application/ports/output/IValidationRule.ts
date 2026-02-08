@@ -1,13 +1,16 @@
-import type { ValidationError } from './ValidationError';
+import type { ValidationError } from '@application/validation';
 
 /**
- * Validation Rule Interface
+ * Validation Rule Interface (Port)
  *
  * Represents a single validation rule that can be applied to an entity.
  * Follows Single Responsibility Principle - each rule checks ONE thing.
  *
+ * This is a Port in Clean Architecture - defines the contract that
+ * validation rule implementations must follow.
+ *
  * Example Rules:
- * - SegmentOrderRule (EDIFACT: UNH must be first)
+ * - SegmentOrderRule (EDIFACT: UNB must be first)
  * - MandatorySegmentRule (BGM is required in ORDERS)
  * - CustomerSpecificRule (Retailer X requires additional fields)
  */

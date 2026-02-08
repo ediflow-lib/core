@@ -1,6 +1,6 @@
 import { ValidateMessageInputDTO } from './ValidateMessageInputDTO';
 import { ValidateMessageOutputDTO } from './ValidateMessageOutputDTO';
-import type { IValidationService } from '@application/validation/IValidationService';
+import type { IValidationService } from '@application/ports';
 import type { EDIMessage } from '@domain';
 import { StructuralValidationService } from '@application/services/StructuralValidationService';
 import { ValidationResult } from '@application/validation';

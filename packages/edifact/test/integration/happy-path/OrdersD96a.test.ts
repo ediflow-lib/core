@@ -1,9 +1,11 @@
+// noinspection NestedFunctionJS
+
 import { describe, it, expect } from 'vitest';
 import { loadValidFixture } from '../FixtureLoader';
-import { ValidationServiceBuilder, Delimiters } from '@ediflow/core';
+import { Delimiters } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
-import { EdifactMessageParser } from '@edifact';
+import { EdifactMessageParser, EdifactValidationServiceBuilder } from '@edifact';
 import { EdifactSegmentParser } from '@edifact';
 import { EdifactTokenizer } from '@edifact';
 import { EdifactDelimiterDetector } from '@edifact';
@@ -44,7 +46,7 @@ describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   describe('Validate', () => {
     it('should validate successfully', () => {
       const message = createParser().parse(ordersFixture);
-      const result = ValidationServiceBuilder.forEDIFACT().validate(message);
+      const result = EdifactValidationServiceBuilder.forEDIFACT().validate(message);
       expect(result.isValid).toBe(true);
     });
   });

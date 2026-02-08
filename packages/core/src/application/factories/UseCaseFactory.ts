@@ -1,8 +1,7 @@
 import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
 import { ValidateMessageUseCase } from '@application/use-cases/validate/ValidateMessageUseCase';
-import { IMessageParser, IMessageBuilder } from '@application/ports';
-import { IValidationService } from '@application/validation/IValidationService';
+import { IMessageParser, IMessageBuilder, IValidationService } from '@application/ports';
 import { EDIMessage } from '@domain/entities/EDIMessage';
 
 /**
@@ -65,6 +64,7 @@ export class UseCaseFactory {
     return new ValidateMessageUseCase(this.validationService);
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Gets list of supported standards.
    *

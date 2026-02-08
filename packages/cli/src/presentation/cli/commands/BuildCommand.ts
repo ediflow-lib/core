@@ -81,7 +81,8 @@ export class BuildCommand {
     const version = this.resolveVersion(standard, json.version);
     const messageType = this.resolveMessageType(standard, json.messageType);
 
-    const message = new EDIMessage(standard, version, messageType);
+    const messageId = json.id || `msg-${Date.now()}`;
+    const message = new EDIMessage(messageId, standard, version, messageType);
 
     for (const segmentData of json.segments) {
       const segment = this.parseSegment(segmentData);

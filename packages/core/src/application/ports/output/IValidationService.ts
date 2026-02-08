@@ -1,4 +1,4 @@
-import type { ValidationResult } from './ValidationResult';
+import type { ValidationResult } from '@application/validation';
 
 /**
  * Validation Context
@@ -17,10 +17,11 @@ export interface ValidationContext {
 }
 
 /**
- * Domain Service Interface for Validation
+ * Validation Service Interface (Port)
  *
  * Defines the contract for validating domain entities.
- * This is a Domain Service Interface (Port in Domain Layer).
+ * This is a Port in Clean Architecture - defines the contract that
+ * validation service implementations must follow.
  *
  * Pattern: Strategy Pattern + Chain of Responsibility
  * - Different validators can be swapped (Strategy)

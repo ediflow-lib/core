@@ -6,7 +6,7 @@ import { ValidationError } from '@application/validation';
  * Basic Validation Rules for EDI Messages
  *
  * These are GENERIC rules that apply to all EDI standards.
- * Format-specific rules (EDIFACT, X12) should be in separate files.
+ * Format-specific rules (EDIFACT, X12) are in format-specific packages.
  */
 
 /**
