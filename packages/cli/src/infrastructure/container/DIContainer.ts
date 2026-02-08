@@ -3,21 +3,15 @@ import {
   EdifactMessageParser,
   EdifactDelimiterDetector,
   EdifactTokenizer,
-  EdifactSegmentParser
+  EdifactSegmentParser,
+  EdifactMessageBuilder
 } from '@ediflow/edifact';
 
-/**
- * Dependency Injection Container for CLI Package
- *
- * Infrastructure Layer - Wires concrete implementations from format packages
- * into the Application Layer (Use Cases from Core)
- */
 export class DIContainer {
   private static instance: DIContainer;
-  private readonly useCaseFactory: UseCaseFactory;
+  public readonly useCaseFactory: UseCaseFactory;
 
   private constructor() {
-    // Create EDIFACT parser with all dependencies
     const edifactDelimiterDetector = new EdifactDelimiterDetector();
     const edifactTokenizer = new EdifactTokenizer();
     const edifactSegmentParser = new EdifactSegmentParser();
@@ -27,16 +21,17 @@ export class DIContainer {
       edifactSegmentParser
     );
 
-    // Create parsers map (strategy pattern for multi-format support)
+    const edifactMessageBuilder = new EdifactMessageBuilder();
+
     const parsers = new Map();
     parsers.set('EDIFACT', edifactParser);
-    // Future: parsers.set('X12', x12Parser);
 
-    // Create validation service
+    const builders = new Map();
+    builders.set('EDIFACT', edifactMessageBuilder);
+
     const validationService = new EDIMessageValidationService();
 
-    // Initialize Use Case Factory with parsers map and validation service
-    this.useCaseFactory = new UseCaseFactory(parsers, validationService);
+    this.useCaseFactory = new UseCaseFactory(parsers, builders, validationService);
   }
 
   static getInstance(): DIContainer {

@@ -1,4 +1,4 @@
-interface DelimitersConfig {
+export interface DelimitersConfig {
   component: string;
   element: string;
   decimal: string;
@@ -15,7 +15,7 @@ export class Delimiters {
   readonly segment: string;
   readonly repetition?: string;
 
-  private constructor(config: DelimitersConfig) {
+  protected constructor(config: DelimitersConfig) {
     this.component = config.component;
     this.element = config.element;
     this.decimal = config.decimal;
@@ -46,9 +46,6 @@ export class Delimiters {
     return this.escape !== '';
   }
 
-  toUNA(): string {
-    return `UNA${this.component}${this.element}${this.decimal}${this.escape} ${this.segment}`;
-  }
 
   private validate(): void {
     this.validateMandatoryDelimiters();

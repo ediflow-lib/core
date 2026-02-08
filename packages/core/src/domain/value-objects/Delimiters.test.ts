@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Delimiters } from './Delimiters';
+import { Delimiters } from '@domain';
 
 describe('Delimiters', () => {
   describe('custom', () => {
@@ -56,31 +56,6 @@ describe('Delimiters', () => {
     });
   });
 
-  describe('toUNA', () => {
-    it('should generate UNA string for custom delimiters', () => {
-      const delimiters = Delimiters.custom({
-        component: ';',
-        element: '|',
-        decimal: '.',
-        escape: '!',
-        segment: '~',
-      });
-
-      expect(delimiters.toUNA()).toBe('UNA;|.! ~');
-    });
-
-    it('should generate UNA string for EDIFACT-style delimiters', () => {
-      const delimiters = Delimiters.custom({
-        component: ':',
-        element: '+',
-        decimal: '.',
-        escape: '?',
-        segment: "'",
-      });
-
-      expect(delimiters.toUNA()).toBe("UNA:+.? '");
-    });
-  });
 
   describe('equals', () => {
     it('should return true for identical delimiters', () => {

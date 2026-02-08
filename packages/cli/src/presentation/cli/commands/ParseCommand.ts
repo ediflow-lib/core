@@ -38,7 +38,7 @@ export class ParseCommand {
       });
   }
 
-  private async execute(file: string, options: any): Promise<void> {
+  async execute(file: string, options: any): Promise<void> {
     const content = readEDIFile(file);
     const standardStr = options.standard || this.detectStandard(content);
     const standardEnum = this.parseStandard(standardStr);

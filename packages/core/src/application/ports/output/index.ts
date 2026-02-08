@@ -5,3 +5,13 @@ export { IParser } from './IParser';
 export { IMessageParser } from './IMessageParser';
 export { IDefinitionLoader } from './IDefinitionLoader';
 export { IMessageStructureRepository } from './IMessageStructureRepository';
+export {
+  IMessageBuilder,
+  MessageBuilderOptions,
+  OutputFormat
+} from './IMessageBuilder';
+export {
+  IEnvelopeBuilder,
+  MessageEnvelopeOptions,
+  InterchangeEnvelopeOptions
+} from './IEnvelopeBuilder';

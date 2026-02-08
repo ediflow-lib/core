@@ -8,10 +8,10 @@
  */
 
 import { Command } from 'commander';
-import { DIContainer } from './infrastructure/container/DIContainer.js';
-import { ParseCommand } from './presentation/cli/commands/ParseCommand.js';
-import { BuildCommand } from './presentation/cli/commands/BuildCommand.js';
-import { ValidateCommand } from './presentation/cli/commands/ValidateCommand.js';
+import { DIContainer } from '@infrastructure/container';
+import { ParseCommand } from '@presentation/cli/commands';
+import { BuildCommand } from '@presentation/cli/commands';
+import { ValidateCommand } from '@presentation/cli/commands';
 
 const program = new Command();
 const container = DIContainer.getInstance();
@@ -21,35 +21,14 @@ program
   .description('EDIFlow - Modern EDI Parser, Builder & Validator')
   .version('0.1.0');
 
-// Parse Command
-const parseCommand = new ParseCommand(container.getUseCaseFactory());
-program
-  .command('parse')
-  .description('Parse EDI message from file or stdin')
-  .option('-f, --file <path>', 'Input EDI file')
-  .option('-s, --standard <standard>', 'EDI Standard (EDIFACT, X12)', 'EDIFACT')
-  .option('-o, --output <path>', 'Output JSON file')
-  .option('--strict', 'Enable strict validation', false)
-  .action((options) => parseCommand.execute(options));
+// Register commands with dependency injection
+const parseCommand = new ParseCommand(container.useCaseFactory);
+parseCommand.register(program);
 
-// Build Command
-const buildCommand = new BuildCommand(container.getUseCaseFactory());
-program
-  .command('build')
-  .description('Build EDI message from JSON')
-  .option('-f, --file <path>', 'Input JSON file')
-  .option('-o, --output <path>', 'Output EDI file')
-  .option('--validate', 'Validate before building', false)
-  .action((options) => buildCommand.execute(options));
+const buildCommand = new BuildCommand(container.useCaseFactory);
+buildCommand.register(program);
 
-// Validate Command
-const validateCommand = new ValidateCommand(container.getUseCaseFactory());
-program
-  .command('validate')
-  .description('Validate EDI message')
-  .option('-f, --file <path>', 'Input EDI file')
-  .option('-s, --standard <standard>', 'EDI Standard (EDIFACT, X12)', 'EDIFACT')
-  .option('--strict', 'Enable strict validation', true)
-  .action((options) => validateCommand.execute(options));
+const validateCommand = new ValidateCommand(container.useCaseFactory);
+validateCommand.register(program);
 
 program.parse(process.argv);

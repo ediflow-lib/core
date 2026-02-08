@@ -1,15 +1,18 @@
-import { IValidationService, ValidationResult, ValidationError, EDIMessage, EDISegment, EDIElement } from '../../domain';
+import { IValidationService, ValidationResult, ValidationError, EDIMessage, EDISegment, EDIElement } from '@domain';
 
 /**
  * EDIMessageValidationService
  *
- * Application Service that validates EDI messages, segments, and elements.
- * Implements Domain Service Interface (IValidationService).
+ * Application Service that provides basic format-agnostic EDI validation.
+ *
+ * Validates:
+ * - Message has segments
+ * - Standard consistency (message.standard === version.standard)
+ *
+ * Format-specific validation (segment tag formats, element rules, etc.)
+ * should be implemented in format packages (packages/edifact, packages/x12).
  */
 export class EDIMessageValidationService implements IValidationService<EDIMessage> {
-  private static readonly MAX_SEGMENT_TAG_LENGTH = 6;
-  private static readonly SEGMENT_TAG_PATTERN = /^[A-Z0-9]+$/;
-
   validate(message: EDIMessage): ValidationResult {
     const errors: ValidationError[] = [];
 
@@ -45,22 +48,6 @@ export class EDIMessageValidationService implements IValidationService<EDIMessag
 
     if (!segment.tag || segment.tag.trim() === '') {
       errors.push(new ValidationError('tag', 'Segment tag cannot be empty', 'EMPTY_TAG'));
-    } else {
-      if (segment.tag.length > EDIMessageValidationService.MAX_SEGMENT_TAG_LENGTH) {
-        errors.push(
-          new ValidationError(
-            'tag',
-            `Segment tag length exceeds maximum of ${EDIMessageValidationService.MAX_SEGMENT_TAG_LENGTH}`,
-            'TAG_TOO_LONG'
-          )
-        );
-      }
-
-      if (!EDIMessageValidationService.SEGMENT_TAG_PATTERN.test(segment.tag)) {
-        errors.push(
-          new ValidationError('tag', 'Segment tag must contain only alphanumeric characters', 'INVALID_TAG_FORMAT')
-        );
-      }
     }
 
     return errors.length === 0 ? ValidationResult.success() : ValidationResult.failure(...errors);
@@ -74,10 +61,6 @@ export class EDIMessageValidationService implements IValidationService<EDIMessag
         errors.push(
           new ValidationError('components', 'Composite element cannot have all empty components', 'EMPTY_COMPOSITE')
         );
-      }
-    } else {
-      if (!element.value || element.value.trim() === '') {
-        errors.push(new ValidationError('value', 'Simple element value cannot be empty', 'EMPTY_ELEMENT'));
       }
     }
 

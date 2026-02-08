@@ -33,7 +33,7 @@ export class ValidateCommand {
       });
   }
 
-  private async execute(file: string, options: any): Promise<any> {
+  async execute(file: string, options: any): Promise<any> {
     const content = readEDIFile(file);
     const standardStr = options.standard || this.detectStandard(content);
     const standardEnum = this.parseStandard(standardStr);

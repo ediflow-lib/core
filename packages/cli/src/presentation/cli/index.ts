@@ -24,7 +24,7 @@ const packageJsonPath = join(__dirname, '../../../package.json');
 const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
 
 // Create DI Container (Infrastructure bootstraps everything)
-const container = new DIContainer();
+const container = DIContainer.getInstance();
 const factory = container.useCaseFactory;
 
 // Create CLI program

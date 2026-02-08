@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { FileBasedMessageStructureRepository } from '@infrastructure/repositories/FileBasedMessageStructureRepository';
-import { SegmentOrGroup } from '@infrastructure/repositories/dtos';
+import { FileBasedMessageStructureRepository, SegmentOrGroup } from '@ediflow/core';
 import * as path from 'path';
 
 describe('FileBasedMessageStructureRepository Integration', () => {

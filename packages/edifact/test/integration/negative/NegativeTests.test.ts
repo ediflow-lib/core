@@ -2,10 +2,12 @@ import { describe, it, expect } from 'vitest';
 import { loadInvalidFixture } from '../FixtureLoader';
 import { ValidationServiceBuilder } from '@ediflow/core';
 import { EDIMessage, EDISegment, Standard, Version, MessageType } from '@ediflow/core';
-import { EdifactMessageParser } from '../../../src/infrastructure/parsers/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../src/infrastructure/parsers/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../src/infrastructure/parsers/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../src/infrastructure/parsers/EdifactDelimiterDetector';
+import {
+  EdifactMessageParser,
+  EdifactSegmentParser,
+  EdifactTokenizer,
+  EdifactDelimiterDetector
+} from '@edifact';
 
 describe('Integration: EDIFACT Negative Tests', () => {
   function createParser(): EdifactMessageParser {

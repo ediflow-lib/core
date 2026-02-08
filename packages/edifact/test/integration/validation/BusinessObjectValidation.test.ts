@@ -5,7 +5,7 @@ import type {
   SegmentGroupNode,
   ElementNode,
   MessageStructureDTO
-} from '@infrastructure/repositories/dtos';
+} from '@ediflow/core';
 import { SchemaGenerationService } from "@application/services/SchemaGenerationService";
 import { BusinessObjectValidationService } from "@application/services/BusinessObjectValidationService";
 import { SchemaCache } from "@application/services/SchemaCache";

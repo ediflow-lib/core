@@ -3,10 +3,11 @@ import { loadValidFixture } from '../FixtureLoader';
 import { ValidationServiceBuilder, Delimiters } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
-import { EdifactMessageParser } from '../../../src';
-import { EdifactSegmentParser } from '../../../src';
-import { EdifactTokenizer } from '../../../src';
-import { EdifactDelimiterDetector } from '../../../src';
+import { EdifactMessageParser } from '@edifact';
+import { EdifactSegmentParser } from '@edifact';
+import { EdifactTokenizer } from '@edifact';
+import { EdifactDelimiterDetector } from '@edifact';
+import { EdifactMessageBuilder } from '@edifact/infrastructure/builders/EdifactMessageBuilder';
 
 const edifactDelimiters = Delimiters.custom({
   component: ':',
@@ -50,7 +51,8 @@ describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   describe('Build', () => {
     it('should build to EDI string', () => {
       const message = createParser().parse(ordersFixture);
-      const result = new BuildEDIUseCase().execute({ message, delimiters: edifactDelimiters });
+      const messageBuilder = new EdifactMessageBuilder();
+      const result = new BuildEDIUseCase(messageBuilder).execute({ message, delimiters: edifactDelimiters });
       expect(result.success).toBe(true);
       if (result.success) expect(result.ediString).toContain('ORDERS');
     });
@@ -58,7 +60,8 @@ describe('Integration: EDIFACT ORDERS D.96A (Happy Path)', () => {
   describe('Roundtrip', () => {
     it('should maintain integrity', () => {
       const p1 = createParser().parse(ordersFixture);
-      const built = new BuildEDIUseCase().execute({ message: p1, delimiters: edifactDelimiters });
+      const messageBuilder = new EdifactMessageBuilder();
+      const built = new BuildEDIUseCase(messageBuilder).execute({ message: p1, delimiters: edifactDelimiters });
       if (!built.success) return;
       const p2 = createParser().parse(built.ediString);
       expect(p2.messageType.value).toBe(p1.messageType.value);

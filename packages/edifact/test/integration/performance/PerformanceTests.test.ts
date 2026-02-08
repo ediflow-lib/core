@@ -6,10 +6,11 @@ import { describe, it, expect } from 'vitest';
 import { generateLargeOrdersMessage } from '../FixtureLoader';
 import { ValidationServiceBuilder } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
-import { EdifactMessageParser } from '../../../src/infrastructure/parsers/EdifactMessageParser';
-import { EdifactSegmentParser } from '../../../src/infrastructure/parsers/EdifactSegmentParser';
-import { EdifactTokenizer } from '../../../src/infrastructure/parsers/EdifactTokenizer';
-import { EdifactDelimiterDetector } from '../../../src/infrastructure/parsers/EdifactDelimiterDetector';
+import { EdifactMessageParser } from '@edifact/infrastructure/parsers/EdifactMessageParser';
+import { EdifactSegmentParser } from '@edifact/infrastructure/parsers/EdifactSegmentParser';
+import { EdifactTokenizer } from '@edifact/infrastructure/parsers/EdifactTokenizer';
+import { EdifactDelimiterDetector } from '@edifact/infrastructure/parsers/EdifactDelimiterDetector';
+import { EdifactMessageBuilder } from '@edifact/infrastructure/builders/EdifactMessageBuilder';
 describe('Integration: EDIFACT Performance Tests', () => {
   function createParser(): EdifactMessageParser {
     const delimiterDetector = new EdifactDelimiterDetector();
@@ -38,7 +39,8 @@ describe('Integration: EDIFACT Performance Tests', () => {
   it('should build 1000 segments in < 100ms', () => {
     const largeMessage = generateLargeOrdersMessage(1000);
     const message = createParser().parse(largeMessage);
-    const buildUseCase = new BuildEDIUseCase();
+    const messageBuilder = new EdifactMessageBuilder();
+    const buildUseCase = new BuildEDIUseCase(messageBuilder);
     const start = performance.now();
     const result = buildUseCase.execute({ message, delimiters: edifactDelimiters });
     const duration = performance.now() - start;
@@ -54,7 +56,8 @@ describe('Integration: EDIFACT Performance Tests', () => {
   it('should roundtrip 1000 segments in < 200ms', () => {
     const largeMessage = generateLargeOrdersMessage(1000);
     const parser = createParser();
-    const buildUseCase = new BuildEDIUseCase();
+    const messageBuilder = new EdifactMessageBuilder();
+    const buildUseCase = new BuildEDIUseCase(messageBuilder);
     const start = performance.now();
     const parsed1 = parser.parse(largeMessage);
     const built = buildUseCase.execute({ message: parsed1, delimiters: edifactDelimiters });

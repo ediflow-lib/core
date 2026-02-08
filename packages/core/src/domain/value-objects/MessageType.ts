@@ -4,7 +4,7 @@ import { Standard } from './Standard';
  * MessageType Value Object
  *
  * Validates EDI message types with format rules per standard.
- * EDIFACT: DESADV | X12: 850 | IDOC: ORDERS05 | VDA: 4905 | HL7v2: ADT
+ * EDIFACT: DESADV | X12: 850 | IDOC: ORDERS05 | VDA: 4905 | HL7v2: ADT | INHOUSE: Custom
  */
 export class MessageType {
   private static readonly PATTERNS: Record<Standard, RegExp> = {
@@ -13,6 +13,7 @@ export class MessageType {
     [Standard.IDOC]: /^[A-Z]+\d{2}$/,
     [Standard.VDA]: /^\d{4}$/,
     [Standard.HL7v2]: /^[A-Z]{3}$/,
+    [Standard.INHOUSE]: /^.+$/,  // Flexible: any non-empty string for custom formats
   };
 
   constructor(
@@ -20,6 +21,23 @@ export class MessageType {
     public readonly value: string
   ) {
     this.validate();
+  }
+
+  static from(value: string, standard?: Standard): MessageType {
+    const detectedStandard = standard || this.detectStandard(value);
+    return new MessageType(detectedStandard, value);
+  }
+
+  private static detectStandard(value: string): Standard {
+    for (const [standard, pattern] of Object.entries(this.PATTERNS)) {
+      if (pattern.test(value)) {
+        return standard as Standard;
+      }
+    }
+    throw new Error(
+      `Cannot detect standard for message type "${value}". ` +
+      `Please provide standard explicitly or use a recognized format.`
+    );
   }
 
   private validate(): void {
@@ -43,6 +61,7 @@ export class MessageType {
       [Standard.IDOC]: 'Uppercase letters + 2 digits (e.g., ORDERS05, INVOIC02)',
       [Standard.VDA]: '4 digits (e.g., 4905, 4906, 4908)',
       [Standard.HL7v2]: '3 uppercase letters (e.g., ADT, ORM, ORU)',
+      [Standard.INHOUSE]: 'Custom message type (e.g., CUSTOM_ORDER, PO_2024)',
     };
     return formats[this.standard];
   }

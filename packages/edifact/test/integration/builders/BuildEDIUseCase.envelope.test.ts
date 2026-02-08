@@ -1,11 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { BuildEDIUseCase } from '@application';
-import { EDIMessage, EDISegment, EDIElement } from '@domain/entities';
-import { Standard } from '@domain/value-objects/Standard';
-import { Version } from '@domain/value-objects/Version';
-import { MessageType } from '@domain/value-objects/MessageType';
-import { Delimiters } from '@domain/value-objects/Delimiters';
-import { StructureMappingService } from '@application/services/StructureMappingService';
+import { BuildEDIUseCase, StructureMappingService } from '@ediflow/core';
+import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType, Delimiters } from '@ediflow/core';
+import { EdifactMessageBuilder } from '@edifact/infrastructure/builders/EdifactMessageBuilder';
+import { EdifactEnvelopeBuilder } from '@edifact/infrastructure/builders/EdifactEnvelopeBuilder';
 
 // EDIFACT standard delimiters
 const edifactDelimiters = Delimiters.custom({
@@ -21,8 +18,10 @@ describe('BuildEDIUseCase - Envelope Support', () => {
   let mapper: StructureMappingService;
 
   beforeEach(() => {
+    const messageBuilder = new EdifactMessageBuilder();
+    const envelopeBuilder = new EdifactEnvelopeBuilder();
     mapper = new StructureMappingService();
-    useCase = new BuildEDIUseCase(mapper);
+    useCase = new BuildEDIUseCase(messageBuilder, envelopeBuilder, mapper);
   });
 
   describe('Envelope Generation', () => {
@@ -72,7 +71,7 @@ describe('BuildEDIUseCase - Envelope Support', () => {
 
       expect(result.success).toBe(true);
       if (result.success) {
-        expect(result.ediString).toContain("UNB+UNOC:3+SENDER123:ZZ+RECEIVER456:ZZ");
+        expect(result.ediString).toContain("UNB+UNOC:3+SENDER123+RECEIVER456");
         expect(result.ediString).toContain("UNH+1+ORDERS:D:96A:UN'");
         expect(result.ediString).toContain("BGM+220'");
         expect(result.ediString).toContain("UNT+4+1'");
@@ -115,7 +114,7 @@ describe('BuildEDIUseCase - Envelope Support', () => {
 
       expect(result.success).toBe(true);
       if (result.success) {
-        expect(result.ediString).toMatch(/UNB\+UNOC:3\+SENDER:ZZ\+RECEIVER:ZZ/);
+        expect(result.ediString).toMatch(/UNB\+UNOC:3\+SENDER\+RECEIVER/);
         expect(result.ediString).toMatch(/UNZ\+1\+\w+'$/);
       }
     });

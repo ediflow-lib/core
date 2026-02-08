@@ -8,3 +8,4 @@ export { SchemaGenerationService } from './SchemaGenerationService';
 export { ValidationServiceBuilder } from './validation/ValidationServiceBuilder';
 export * from './validation/BasicValidationRules';
 export * from './validation/EDIFACTValidationRules';
+export type { JSONSchema, JSONSchemaType } from './JSONSchema';

@@ -3,13 +3,15 @@ import path from 'path';
 
 export default defineConfig({
   resolve: {
-    alias: {
-      '@domain': path.resolve(__dirname, '../core/src/domain'),
-      '@application': path.resolve(__dirname, '../core/src/application'),
-      '@infrastructure': path.resolve(__dirname, './src/infrastructure'),
-      '@test': path.resolve(__dirname, './test'),
-      '@ediflow/core': path.resolve(__dirname, '../core/src'),
-    },
+    alias: [
+      { find: '@domain', replacement: path.resolve(__dirname, '../core/src/domain') },
+      { find: '@application', replacement: path.resolve(__dirname, '../core/src/application') },
+      { find: '@infrastructure', replacement: path.resolve(__dirname, './src/infrastructure') },
+      { find: '@test', replacement: path.resolve(__dirname, './test') },
+      { find: '@ediflow/core', replacement: path.resolve(__dirname, '../core/src') },
+      { find: /^@edifact\/(.*)$/, replacement: path.resolve(__dirname, './src/$1') },
+      { find: '@edifact', replacement: path.resolve(__dirname, './src/index.ts') },
+    ],
   },
   test: {
     globals: true,

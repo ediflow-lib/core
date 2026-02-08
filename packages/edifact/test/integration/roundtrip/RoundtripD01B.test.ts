@@ -6,10 +6,11 @@ import { describe, it, expect } from 'vitest';
 import { ParseEDIUseCase } from '@ediflow/core';
 import { BuildEDIUseCase } from '@ediflow/core';
 import { StructureMapper } from '@ediflow/core';
-import { EdifactMessageParser } from '../../../src/infrastructure/parsers/EdifactMessageParser';
-import { EdifactDelimiterDetector } from '../../../src/infrastructure/parsers/EdifactDelimiterDetector';
-import { EdifactTokenizer } from '../../../src/infrastructure/parsers/EdifactTokenizer';
-import { EdifactSegmentParser } from '../../../src/infrastructure/parsers/EdifactSegmentParser';
+import { EdifactMessageParser } from '@edifact/infrastructure/parsers/EdifactMessageParser';
+import { EdifactDelimiterDetector } from '@edifact/infrastructure/parsers/EdifactDelimiterDetector';
+import { EdifactTokenizer } from '@edifact/infrastructure/parsers/EdifactTokenizer';
+import { EdifactSegmentParser } from '@edifact/infrastructure/parsers/EdifactSegmentParser';
+import { EdifactMessageBuilder } from '@edifact/infrastructure/builders/EdifactMessageBuilder';
 import { Standard } from '@ediflow/core';
 import { loadValidFixture } from '../FixtureLoader';
 
@@ -34,7 +35,8 @@ describe('E2E Roundtrip Tests - D.01B (US-8.2)', () => {
   const edifactParser = new EdifactMessageParser(delimiterDetector, tokenizer, segmentParser);
 
   const parseUseCase = new ParseEDIUseCase(edifactParser, mapper);
-  const buildUseCase = new BuildEDIUseCase(mapper);
+  const messageBuilder = new EdifactMessageBuilder();
+  const buildUseCase = new BuildEDIUseCase(messageBuilder, undefined, mapper);
 
   describe('INVOIC D.01B - Complete Roundtrip', () => {
     it('should parse, map, build, and parse again with identical result', () => {

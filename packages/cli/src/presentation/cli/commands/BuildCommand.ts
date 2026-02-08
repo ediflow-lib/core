@@ -37,7 +37,7 @@ export class BuildCommand {
       });
   }
 
-  private async execute(file: string, options: any): Promise<string> {
+  async execute(file: string, options: any): Promise<string> {
     const jsonContent = this.readJSON(file);
     const jsonData = JSON.parse(jsonContent);
     const message = this.parseJSON(jsonData);
@@ -78,14 +78,8 @@ export class BuildCommand {
     }
 
     const standard = this.parseStandard(json.standard);
-
-    const version = json.version
-      ? new Version(standard, json.version)
-      : new Version(standard, standard === Standard.EDIFACT ? 'D.96A' : '004010');
-
-    const messageType = json.messageType
-      ? new MessageType(standard, json.messageType)
-      : new MessageType(standard, standard === Standard.EDIFACT ? 'ORDERS' : '850');
+    const version = this.resolveVersion(standard, json.version);
+    const messageType = this.resolveMessageType(standard, json.messageType);
 
     const message = new EDIMessage(standard, version, messageType);
 
@@ -95,6 +89,24 @@ export class BuildCommand {
     }
 
     return message;
+  }
+
+  private resolveVersion(standard: Standard, versionStr?: string): Version {
+    if (versionStr) {
+      return new Version(standard, versionStr);
+    }
+
+    const defaultVersion = standard === Standard.EDIFACT ? 'D.96A' : '004010';
+    return new Version(standard, defaultVersion);
+  }
+
+  private resolveMessageType(standard: Standard, messageTypeStr?: string): MessageType {
+    if (messageTypeStr) {
+      return new MessageType(standard, messageTypeStr);
+    }
+
+    const defaultMessageType = standard === Standard.EDIFACT ? 'ORDERS' : '850';
+    return new MessageType(standard, defaultMessageType);
   }
 
   private parseSegment(segmentData: any): EDISegment {

@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { EDIMessageValidationService } from './EDIMessageValidationService';
-import { EDIMessage } from '../../domain/entities/EDIMessage';
-import { EDISegment } from '../../domain/entities/EDISegment';
-import { EDIElement } from '../../domain/entities/EDIElement';
-import { Standard } from '../../domain/value-objects/Standard';
-import { Version } from '../../domain/value-objects/Version';
-import { MessageType } from '../../domain/value-objects/MessageType';
+import { EDIMessageValidationService } from '@application';
+import { EDIMessage } from '@domain';
+import { EDISegment } from '@domain';
+import { EDIElement } from '@domain';
+import { Standard } from '@domain';
+import { Version } from '@domain';
+import { MessageType } from '@domain';
 
 describe('EDIMessageValidationService', () => {
   describe('validate', () => {
@@ -113,26 +113,6 @@ describe('EDIMessageValidationService', () => {
       expect(result.errors).toHaveLength(1);
       expect(result.errors[0]?.message).toContain('tag');
     });
-
-    it('should fail if segment tag has invalid characters', () => {
-      const segment = new EDISegment('BG@M', []);
-
-      const validator = new EDIMessageValidationService();
-      const result = validator.validateSegment(segment);
-
-      expect(result.isValid).toBe(false);
-      expect(result.errors[0]?.message).toContain('alphanumeric');
-    });
-
-    it('should fail if segment tag is too long', () => {
-      const segment = new EDISegment('TOOLONGTAG', []);
-
-      const validator = new EDIMessageValidationService();
-      const result = validator.validateSegment(segment);
-
-      expect(result.isValid).toBe(false);
-      expect(result.errors[0]?.message).toContain('length');
-    });
   });
 
   describe('validateElement', () => {
@@ -156,16 +136,6 @@ describe('EDIMessageValidationService', () => {
       expect(result.errors).toHaveLength(0);
     });
 
-    it('should fail if element value and components are both empty', () => {
-      const element = new EDIElement('', []);
-
-      const validator = new EDIMessageValidationService();
-      const result = validator.validateElement(element);
-
-      expect(result.isValid).toBe(false);
-      expect(result.errors).toHaveLength(1);
-      expect(result.errors[0]?.message).toContain('empty');
-    });
 
     it('should fail if composite element has empty components', () => {
       const element = new EDIElement('', ['', '']);

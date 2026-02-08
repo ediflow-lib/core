@@ -1,16 +1,14 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ExportSchemaCommand } from './ExportSchemaCommand';
-import type { BusinessObjectSchemaGenerator } from '@domain/validation/BusinessObjectSchemaGenerator';
-import type { IMessageStructureRepository } from '@domain/repositories/IMessageStructureRepository';
-import type { MessageStructure } from '@domain/repositories/MessageStructure';
-import type { JSONSchema } from '@domain/validation/JSONSchema';
+import {IMessageStructureRepository, MessageStructureDTO, SchemaGenerationService, JSONSchema} from "@ediflow/core";
+
 
 describe('ExportSchemaCommand', () => {
   let command: ExportSchemaCommand;
-  let mockGenerator: BusinessObjectSchemaGenerator;
+  let mockGenerator: SchemaGenerationService;
   let mockRepository: IMessageStructureRepository;
 
-  const mockMessageStructure: MessageStructure = {
+  const mockMessageStructure: MessageStructureDTO = {
     standard: 'EDIFACT',
     version: 'D.20B',
     messageType: 'DESADV',
