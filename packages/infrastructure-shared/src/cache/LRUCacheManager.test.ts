@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { CacheManager } from './CacheManager';
+import { LRUCacheManager } from './LRUCacheManager';
 
-describe('CacheManager', () => {
-  let cache: CacheManager<string>;
+describe('LRUCacheManager', () => {
+  let cache: LRUCacheManager<string>;
 
   beforeEach(() => {
-    cache = new CacheManager<string>(3); // Small size for testing eviction
+    cache = new LRUCacheManager<string>(3); // Small size for testing eviction
   });
 
   describe('get and set', () => {
@@ -112,7 +112,7 @@ describe('CacheManager', () => {
 
   describe('default cache size', () => {
     it('should use default size of 100 when not specified', () => {
-      const defaultCache = new CacheManager<string>();
+      const defaultCache = new LRUCacheManager<string>();
 
       // Fill with 100 items
       for (let i = 0; i < 100; i++) {

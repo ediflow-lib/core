@@ -1,11 +1,11 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { StructuralValidationService } from './StructuralValidationService';
 import { EDIMessage } from '@domain/entities/EDIMessage';
-import { EDISegment } from '@domain/entities/EDISegment';
+import { EDISegment } from '@domain/value-objects/EDISegment';
 import { Standard } from '@domain/value-objects/Standard';
 import { Version } from '@domain/value-objects/Version';
 import { MessageType } from '@domain/value-objects/MessageType';
-import type { MessageStructureDTO, SegmentNode, SegmentGroupNode } from '@infrastructure/repositories/dtos';
+import type { MessageStructureDTO, SegmentNode, SegmentGroupNode } from '@application/dtos';
 
 describe('StructuralValidationService', () => {
   let validator: StructuralValidationService;

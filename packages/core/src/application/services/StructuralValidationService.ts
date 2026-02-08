@@ -1,7 +1,7 @@
 import { EDIMessage } from '@domain/entities/EDIMessage';
-import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '@infrastructure/repositories/dtos';
-import { ValidationResult } from '@domain/validation/ValidationResult';
-import { ValidationError } from '@domain/validation/ValidationError';
+import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '@application/dtos';
+import { ValidationResult } from '@application/validation/ValidationResult';
+import { ValidationError } from '@application/validation/ValidationError';
 import { StructuralValidationContext } from './StructuralValidationContext';
 
 /**

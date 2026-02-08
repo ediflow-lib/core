@@ -1,4 +1,5 @@
-import { IValidationService, ValidationResult, ValidationError, EDIMessage, EDISegment, EDIElement } from '@domain';
+import { IValidationService, ValidationResult, ValidationError } from '../validation';
+import { EDIMessage, EDISegment, EDIElement } from '@domain';
 
 /**
  * EDIMessageValidationService

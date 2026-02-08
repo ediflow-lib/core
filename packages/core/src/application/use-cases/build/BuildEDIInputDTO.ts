@@ -1,5 +1,5 @@
 import { EDIMessage, Delimiters } from '@domain';
-import { MessageStructureDTO } from "@infrastructure/repositories/dtos";
+import { MessageStructureDTO } from "@application/dtos";
 import { OutputFormat } from '@application/ports/output';
 
 export interface BuildEDIInputDTO {

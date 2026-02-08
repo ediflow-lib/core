@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ComposableValidationService } from './ComposableValidationService';
-import { ValidationServiceBuilder } from './validation/ValidationServiceBuilder';
-import { EDIMessage, Standard, Version, MessageType, EDISegment } from '../../domain';
+import { ComposableValidationService } from '@application';
+import { ValidationServiceBuilder } from '@application';
+import { EDIMessage, Standard, Version, MessageType, EDISegment } from '@domain';
 
 describe('ComposableValidationService', () => {
   let service: ComposableValidationService<EDIMessage>;
@@ -65,8 +65,7 @@ describe('ComposableValidationService', () => {
 
   describe('validate', () => {
     it('should return success when no rules are registered', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
       );
@@ -76,8 +75,7 @@ describe('ComposableValidationService', () => {
     });
 
     it('should apply all registered rules', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
       );
@@ -110,8 +108,7 @@ describe('ComposableValidationService', () => {
     });
 
     it('should collect errors from all rules', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
       );
@@ -180,8 +177,7 @@ describe('ValidationServiceBuilder', () => {
       const validator = ValidationServiceBuilder.forEDIFACT();
 
       // Invalid: doesn't start with UNB
-      const invalidMessage = new EDIMessage(
-        Standard.EDIFACT,
+      const invalidMessage = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
       );
@@ -196,8 +192,7 @@ describe('ValidationServiceBuilder', () => {
     it('should accept valid EDIFACT message', () => {
       const validator = ValidationServiceBuilder.forEDIFACT();
 
-      const validMessage = new EDIMessage(
-        Standard.EDIFACT,
+      const validMessage = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
       );

@@ -10,7 +10,7 @@ import { LRUCache } from 'lru-cache';
  *
  * @example
  * ```typescript
- * const cache = new CacheManager<MessageDefinition>(100);
+ * const cache = new LRUCacheManager<MessageDefinition>(100);
  *
  * // Store value
  * cache.set('EDIFACT:D.96A:ORDERS', definition);
@@ -19,7 +19,7 @@ import { LRUCache } from 'lru-cache';
  * const cached = cache.get('EDIFACT:D.96A:ORDERS');
  * ```
  */
-export class CacheManager<T extends {} = {}> {
+export class LRUCacheManager<T extends {} = {}> {
   private readonly cache: LRUCache<string, T>;
 
   /**

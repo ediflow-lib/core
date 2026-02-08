@@ -1,8 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { InMemoryMessageStructureRepository } from './InMemoryMessageStructureRepository';
-
-import { Standard } from '@domain/value-objects/Standard';
-import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+import { Standard } from '@ediflow/core';
+import type { MessageStructureDTO } from '@ediflow/core';
 
 describe('InMemoryMessageStructureRepository', () => {
   let repository: InMemoryMessageStructureRepository;

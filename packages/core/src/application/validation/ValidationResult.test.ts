@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { ValidationResult } from './ValidationResult';
-import { ValidationError } from './ValidationError';
+import { ValidationResult } from '@application';
+import { ValidationError } from '@application';
 
 describe('ValidationResult', () => {
   describe('success', () => {

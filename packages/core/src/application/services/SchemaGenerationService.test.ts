@@ -1,7 +1,7 @@
 import {beforeEach, describe, expect, it} from 'vitest';
-import { SchemaGenerationService} from './SchemaGenerationService';
+import { SchemaGenerationService} from '@application';
 import {SchemaCache} from './SchemaCache';
-import type {ElementNode, MessageStructureDTO, SegmentNode} from '@infrastructure/repositories/dtos';
+import type {ElementNode, MessageStructureDTO, SegmentNode} from '@application/dtos';
 
 describe('SchemaGenerationService', () => {
   let generator: SchemaGenerationService;

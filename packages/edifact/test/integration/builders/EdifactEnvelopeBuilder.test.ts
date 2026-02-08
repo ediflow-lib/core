@@ -14,7 +14,7 @@ describe('EdifactEnvelopeBuilder', () => {
   describe('wrapMessage - UNH/UNT Envelope', () => {
     it('should add UNH and UNT segments around business message', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -43,7 +43,7 @@ describe('EdifactEnvelopeBuilder', () => {
 
     it('should create correct UNH segment with message reference', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -66,7 +66,7 @@ describe('EdifactEnvelopeBuilder', () => {
 
     it('should create correct UNT segment with segment count', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -89,7 +89,7 @@ describe('EdifactEnvelopeBuilder', () => {
 
     it('should handle empty business message', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -111,7 +111,7 @@ describe('EdifactEnvelopeBuilder', () => {
     it('should add UNB and UNZ segments around messages', () => {
       const builder = new EdifactEnvelopeBuilder();
 
-      const message1 = new EDIMessage(
+      const message1 = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -134,7 +134,7 @@ describe('EdifactEnvelopeBuilder', () => {
     it('should create correct UNB segment', () => {
       const builder = new EdifactEnvelopeBuilder();
 
-      const message1 = new EDIMessage(
+      const message1 = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -162,7 +162,7 @@ describe('EdifactEnvelopeBuilder', () => {
     it('should create correct UNZ segment with message count', () => {
       const builder = new EdifactEnvelopeBuilder();
 
-      const message1 = new EDIMessage(
+      const message1 = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -170,7 +170,7 @@ describe('EdifactEnvelopeBuilder', () => {
       message1.addSegment(new EDISegment('UNH', [new EDIElement('1')]));
       message1.addSegment(new EDISegment('UNT', [new EDIElement('2'), new EDIElement('1')]));
 
-      const message2 = new EDIMessage(
+      const message2 = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('ORDERS')
@@ -195,7 +195,7 @@ describe('EdifactEnvelopeBuilder', () => {
       const builder = new EdifactEnvelopeBuilder();
 
       const messages = [1, 2, 3]?.map(i => {
-        const msg = new EDIMessage(
+        const msg = new EDIMessage('test-id', 
           Standard.EDIFACT,
           Version.from('D.96A'),
           MessageType.from('INVOIC')
@@ -228,7 +228,7 @@ describe('EdifactEnvelopeBuilder', () => {
     it('should format datetime correctly in UNB', () => {
       const builder = new EdifactEnvelopeBuilder();
 
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -252,7 +252,7 @@ describe('EdifactEnvelopeBuilder', () => {
   describe('Edge Cases', () => {
     it('should handle message with special characters in reference', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -272,7 +272,7 @@ describe('EdifactEnvelopeBuilder', () => {
 
     it('should preserve original message metadata', () => {
       const builder = new EdifactEnvelopeBuilder();
-      const businessMessage = new EDIMessage(
+      const businessMessage = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')

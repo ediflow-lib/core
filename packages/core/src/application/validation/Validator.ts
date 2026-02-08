@@ -1,4 +1,4 @@
-import { ValidationResult } from '@domain';
+import { ValidationResult } from './ValidationResult';
 
 /**
  * Validator Interface

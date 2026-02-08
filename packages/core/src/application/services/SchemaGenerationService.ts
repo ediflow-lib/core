@@ -4,7 +4,7 @@ import type {
   SegmentGroupNode,
   SegmentNode,
   SegmentOrGroup
-} from '@infrastructure/repositories/dtos';
+} from '@application/dtos';
 import type {JSONSchema, JSONSchemaType} from './JSONSchema';
 import {SchemaCache} from './SchemaCache';
 

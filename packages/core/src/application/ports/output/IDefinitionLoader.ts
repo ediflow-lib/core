@@ -1,5 +1,5 @@
 import type {Standard, Version, MessageType} from '@domain';
-import type {MessageStructureDTO} from '@infrastructure/repositories/dtos';
+import type {MessageStructureDTO} from '@application/dtos';
 
 /**
  * Port for loading message structure definitions from repositories.

@@ -1,6 +1,6 @@
 import type { JSONSchema } from './JSONSchema';
-import { ValidationResult } from '@domain/validation/ValidationResult';
-import { ValidationError } from '@domain/validation/ValidationError';
+import { ValidationResult } from '@application/validation/ValidationResult';
+import { ValidationError } from '@application/validation/ValidationError';
 
 /**
  * BusinessObjectValidationService

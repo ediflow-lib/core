@@ -1,9 +1,10 @@
 // noinspection MagicNumberJS
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { StructureMappingService } from './StructureMappingService';
-import {EDIElement, EDIMessage, EDISegment, MessageType, Standard, Version} from "@domain";
-import {MessageStructureDTO, SegmentNode} from "@infrastructure/repositories/dtos";
+import { StructureMappingService } from '@application';
+import { EDIElement, EDISegment, MessageType, Standard, Version } from '@domain';
+import { EDIMessageFactory } from '@application/factories';
+import type { MessageStructureDTO, SegmentNode } from '@application/dtos';
 
 describe('StructureMappingService', () => {
   let mapper: StructureMappingService;
@@ -15,11 +16,7 @@ describe('StructureMappingService', () => {
   describe('map() - EDIMessage to Business Object', () => {
     it('should map a simple segment to a simple object field', () => {
       // Arrange: Create EDIMessage with one segment
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('BGM', [
         new EDIElement('220', []),  // Document type
@@ -60,11 +57,7 @@ describe('StructureMappingService', () => {
 
     it('should map multiple segments to multiple object fields', () => {
       // Arrange
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const bgmSegment = new EDISegment('BGM', [
         new EDIElement('220', []),
@@ -131,11 +124,7 @@ describe('StructureMappingService', () => {
 
     it('should handle missing optional segments', () => {
       // Arrange
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const bgmSegment = new EDISegment('BGM', [
         new EDIElement('220', []),
@@ -193,11 +182,7 @@ describe('StructureMappingService', () => {
 
     it('should map multiple segment occurrences to array', () => {
       // Arrange: Multiple NAD segments
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const nad1 = new EDISegment('NAD', [
         new EDIElement('SU', []),  // Supplier
@@ -246,11 +231,7 @@ describe('StructureMappingService', () => {
 
     it('should convert string to number', () => {
       // Arrange
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const qtySegment = new EDISegment('QTY', [
         new EDIElement('21', []),
@@ -291,11 +272,7 @@ describe('StructureMappingService', () => {
 
     it('should handle segments without mapping rules', () => {
       // Arrange
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const unhSegment = new EDISegment('UNH', [
         new EDIElement('1', []),
@@ -351,11 +328,7 @@ describe('StructureMappingService', () => {
 
   describe('Type Conversions', () => {
     it('should parse date in YYYYMMDD format', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const dtm = new EDISegment('DTM', [
         new EDIElement('20260126', []),
@@ -393,11 +366,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should parse date in YYMMDD format', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const dtm = new EDISegment('DTM', [
         new EDIElement('260126', []),
@@ -435,11 +404,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should convert string to boolean', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const seg = new EDISegment('TST', [
         new EDIElement('1', []),
@@ -479,11 +444,7 @@ describe('StructureMappingService', () => {
   describe('Composite Elements', () => {
     it('should extract value from composite element using componentIndex', () => {
       // Arrange: UNH segment with S009 composite (Message identifier)
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // UNH has composite element at position 1 with components
       const compositeElement = new EDIElement('', ['ORDERS', 'D', '96A', 'UN']);
@@ -525,11 +486,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should map multiple components from same composite to different fields', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const compositeElement = new EDIElement('', ['ORDERS', 'D', '96A', 'UN']);
 
@@ -591,11 +548,7 @@ describe('StructureMappingService', () => {
   describe('Nested Objects (Segment Groups)', () => {
     it('should map segment group to nested object', () => {
       // Arrange: NAD segment group with nested structure
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // NAD segment (party)
       const nadSegment = new EDISegment('NAD', [
@@ -674,11 +627,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should map multiple segment groups to array of nested objects', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // First party group
       const nad1 = new EDISegment('NAD', [
@@ -773,11 +722,7 @@ describe('StructureMappingService', () => {
 
   describe('Error Handling', () => {
     it('should return empty object when no mapping rules defined', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('BGM', [
         new EDIElement('DOC123', []),
@@ -809,11 +754,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle missing element gracefully', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // Segment with only 1 element
       const segment = new EDISegment('BGM', [
@@ -849,11 +790,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle missing component in composite element', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // Composite with only 2 components
       const composite = new EDIElement('', ['ORDERS', 'D']);
@@ -892,11 +829,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle empty string values', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('BGM', [
         new EDIElement('', []),  // Empty string
@@ -931,11 +864,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle invalid date format gracefully', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('DTM', [
         new EDIElement('INVALID', []),
@@ -973,11 +902,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle non-numeric string in number conversion', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('QTY', [
         new EDIElement('ABC', []),  // Non-numeric
@@ -1013,11 +938,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle empty segments array', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
       // No segments added!
 
       const structure: MessageStructureDTO = {
@@ -1048,11 +969,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle segment group with no trigger segment', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
       // No NAD segment!
 
       const structure: MessageStructureDTO = {
@@ -1100,11 +1017,7 @@ describe('StructureMappingService', () => {
 
   describe('Edge Cases', () => {
     it('should handle message with only technical segments (no business data)', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const unh = new EDISegment('UNH', [new EDIElement('1', [])]);
       const unt = new EDISegment('UNT', [new EDIElement('2', [])]);
@@ -1146,11 +1059,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle time values as strings', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('DTM', [
         new EDIElement('1430', []),
@@ -1185,11 +1094,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle decimal numbers with type conversion', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('PRI', [
         new EDIElement('99.99', []),
@@ -1226,11 +1131,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle boolean false values', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('TST', [
         new EDIElement('0', []),
@@ -1267,11 +1168,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle negative numbers', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('QTY', [
         new EDIElement('-50', []),
@@ -1307,11 +1204,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle zero as valid number', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('QTY', [
         new EDIElement('0', []),
@@ -1347,11 +1240,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle multiple occurrences with maxOccurrences = 1 (take first)', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       // Add multiple BGM segments (violates spec but test mapper behavior)
       const bgm1 = new EDISegment('BGM', [new EDIElement('DOC1', [])]);
@@ -1389,11 +1278,7 @@ describe('StructureMappingService', () => {
     });
 
     it('should handle deeply nested segment groups', () => {
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const nad = new EDISegment('NAD', [new EDIElement('SU', [])]);
       const cta = new EDISegment('CTA', [new EDIElement('John', [])]);
@@ -1713,11 +1598,7 @@ describe('StructureMappingService', () => {
 
     it('should handle roundtrip: map → unmap', () => {
       // Start with EDI message
-      const ediMessage = new EDIMessage(
-        Standard.EDIFACT,
-        new Version(Standard.EDIFACT, 'D.20B'),
-        new MessageType(Standard.EDIFACT, 'ORDERS')
-      );
+      const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const bgmSegment = new EDISegment('BGM', [
         new EDIElement('220', []),

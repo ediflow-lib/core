@@ -8,7 +8,8 @@ import {
   IDelimiterDetector,
   ITokenizer,
   IMessageParser,
-  ParserConfig
+  ParserConfig,
+  EDIMessageFactory
 } from '@ediflow/core';
 import type { EdifactSegmentParser } from './EdifactSegmentParser';
 
@@ -67,7 +68,11 @@ export class EdifactMessageParser implements IMessageParser {
     const unhSegment = this.findUNHSegment(segments);
     const { version, messageType } = this.extractMetadata(unhSegment, delimiters);
 
-    const message = new EDIMessage(Standard.EDIFACT, version, messageType);
+    const message = EDIMessageFactory.create({
+      standard: Standard.EDIFACT,
+      version,
+      messageType
+    });
 
     segments.forEach(segment => message.addSegment(segment));
 

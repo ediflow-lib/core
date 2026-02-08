@@ -1,7 +1,16 @@
-import {describe, expect, it} from 'vitest';
-import {BuildEDIUseCase, StructureMappingService} from '@ediflow/core';
-import {EDIElement, EDIMessage, EDISegment, MessageType, Standard, Version, Delimiters} from '@ediflow/core';
-import {MessageStructureDTO} from '@ediflow/core';
+import {beforeEach, describe, expect, it} from 'vitest';
+import {
+  BuildEDIUseCase,
+  Delimiters,
+  EDIElement,
+  EDIMessage,
+  EDISegment,
+  MessageStructureDTO,
+  MessageType,
+  Standard,
+  StructureMappingService,
+  Version
+} from '@ediflow/core';
 import {EdifactMessageBuilder} from '@edifact/infrastructure/builders/EdifactMessageBuilder';
 import {EdifactEnvelopeBuilder} from '@edifact/infrastructure/builders/EdifactEnvelopeBuilder';
 
@@ -14,12 +23,14 @@ const edifactDelimiters = Delimiters.custom({
 });
 
 describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
-  function createUseCase() {
+  let useCase: BuildEDIUseCase;
+
+  beforeEach(() => {
     const messageBuilder = new EdifactMessageBuilder();
     const envelopeBuilder = new EdifactEnvelopeBuilder();
     const mapper = new StructureMappingService();
-    return new BuildEDIUseCase(messageBuilder, envelopeBuilder, mapper);
-  }
+    useCase = new BuildEDIUseCase(messageBuilder, envelopeBuilder, mapper);
+  });
 
   describe('Build from Business Object', () => {
     it('should build EDI message from business object', () => {
@@ -49,7 +60,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         ],
       };
 
-      const useCase = createUseCase();
+      
       const result = useCase.execute({
         businessObject,        delimiters: edifactDelimiters,
         messageStructure: structure,
@@ -107,7 +118,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         ],
       };
 
-      const useCase = createUseCase();
+      
       const result = useCase.execute({
         businessObject,        delimiters: edifactDelimiters,
         messageStructure: structure,
@@ -151,7 +162,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         ],
       };
 
-      const useCase = createUseCase();
+      
       const result = useCase.execute({
         businessObject,        delimiters: edifactDelimiters,
         messageStructure: structure,
@@ -171,7 +182,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
     });
 
     it('should return error if neither message nor businessObject provided', () => {
-      const useCase = createUseCase();
+      
       const result = useCase.execute({});
 
       expect(result.success).toBe(false);
@@ -186,7 +197,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         documentNumber: 'PO123',
       };
 
-      const useCase = createUseCase();
+      
       const result = useCase.execute({
         businessObject,
       });
@@ -201,7 +212,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
 
   describe('Backward Compatibility (Direct EDIMessage)', () => {
     it('should still work with direct EDIMessage input (legacy behavior)', () => {
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
@@ -213,7 +224,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
       ]);
       message.addSegment(bgm);
 
-      const useCase = createUseCase();
+      
       const result = useCase.execute({
         message,
         delimiters: edifactDelimiters,
@@ -228,7 +239,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
     });
 
     it('should work without StructureMappingService (legacy)', () => {
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
@@ -299,8 +310,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         ],
       };
 
-      const buildUseCase = createUseCase();
-      const buildResult = buildUseCase.execute({
+      const buildResult = useCase.execute({
         businessObject,        delimiters: edifactDelimiters,
         messageStructure: structure,
       });
@@ -353,8 +363,7 @@ describe('Integration: BuildEDIUseCase - Phase 2 (Structure Unmapping)', () => {
         ],
       };
 
-      const buildUseCase = createUseCase();
-      const result = buildUseCase.execute({
+      const result = useCase.execute({
         businessObject,        delimiters: edifactDelimiters,
         messageStructure: structure,
       });

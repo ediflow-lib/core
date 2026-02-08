@@ -1,5 +1,5 @@
 import type { EDIMessage } from '@domain';
-import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
+import type { MessageStructureDTO } from '@application/dtos';
 
 export interface ValidateMessageInputDTO {
   message: EDIMessage;

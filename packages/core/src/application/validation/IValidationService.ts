@@ -1,4 +1,4 @@
-import type { ValidationResult } from '../validation';
+import type { ValidationResult } from './ValidationResult';
 
 /**
  * Validation Context

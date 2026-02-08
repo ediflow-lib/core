@@ -15,7 +15,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - Simple Message', () => {
     it('should build EDI string with default delimiters', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -34,7 +34,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should build EDI string with multiple segments', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -56,7 +56,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should handle composite elements with component delimiter', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -76,7 +76,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - Custom Delimiters', () => {
     it('should use custom delimiters when provided', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -104,7 +104,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - OutputFormat', () => {
     it('should build compact format by default', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -121,7 +121,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should build readable format with line breaks', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -140,7 +140,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should handle COMPACT format explicitly', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -160,7 +160,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - EDIFACT-specific: includeUNA', () => {
     it('should include UNA segment when requested', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -178,7 +178,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should not include UNA by default', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -193,7 +193,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should build UNA with custom delimiters', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -219,7 +219,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - Empty Message', () => {
     it('should handle message with no segments', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -234,7 +234,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - Complex Composites', () => {
     it('should handle nested composite elements', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -252,7 +252,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should handle empty composite components', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -271,7 +271,7 @@ describe('EdifactMessageBuilder', () => {
   describe('build - Edge Cases', () => {
     it('should handle segment with single element', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')
@@ -288,7 +288,7 @@ describe('EdifactMessageBuilder', () => {
 
     it('should handle segment with empty elements', () => {
       const builder = new EdifactMessageBuilder();
-      const message = new EDIMessage(
+      const message = new EDIMessage('test-id', 
         Standard.EDIFACT,
         Version.from('D.96A'),
         MessageType.from('INVOIC')

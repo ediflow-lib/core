@@ -1,6 +1,7 @@
 import { ComposableValidationService } from '@application/services';
 import type { EDIMessage } from '@domain';
 import { Standard } from '@domain';
+import type { IValidationRule } from '@application/validation';
 import {
   MessageMustHaveSegmentsRule,
   VersionStandardMustMatchRule,
@@ -76,7 +77,7 @@ export class ValidationServiceBuilder {
    *
    * @param rule - Custom validation rule (e.g., customer-specific)
    */
-  withCustomRule(rule: import('../../../domain').IValidationRule<EDIMessage>): this {
+  withCustomRule(rule: IValidationRule<EDIMessage>): this {
     this.service.addRule(rule);
     return this;
   }

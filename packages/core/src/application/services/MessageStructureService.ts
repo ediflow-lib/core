@@ -1,5 +1,5 @@
 import { IMessageStructureRepository } from '@application/ports/output/IMessageStructureRepository';
-import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
+import type { MessageStructureDTO } from '@application/dtos';
 
 export class MessageStructureService {
   constructor(private readonly repository: IMessageStructureRepository) {}

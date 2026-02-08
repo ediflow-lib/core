@@ -1,6 +1,6 @@
 import { Standard } from '@domain';
 import type { ParserConfig } from '@application/configuration';
-import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+import {MessageStructureDTO} from "@application/dtos";
 
 
 export interface ParseEDIInputDTO {

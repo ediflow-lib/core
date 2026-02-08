@@ -1,35 +1,37 @@
-import { IDefinitionLoader } from '@application/ports/output/IDefinitionLoader';
-import { RepositoryManager } from '@application/services/RepositoryManager';
-import { Standard } from '@domain/value-objects/Standard';
-import { Version } from '@domain/value-objects/Version';
-import { MessageType } from '@domain/value-objects/MessageType';
-import type { MessageStructureDTO } from './dtos/MessageStructureDTO';
-import { DefinitionNotFoundError } from '@domain/errors/DefinitionNotFoundError';
-import { CacheManager } from '../cache/CacheManager';
+import type {
+  IDefinitionLoader,
+  IMessageStructureRepository,
+  Standard,
+  Version,
+  MessageType,
+  MessageStructureDTO
+} from '@ediflow/core';
+import { DefinitionNotFoundError } from '@ediflow/core';
+import { LRUCacheManager } from '../cache/LRUCacheManager';
 
 /**
- * DefinitionLoader
+ * CachedDefinitionLoader
  *
- * Loads message structure definitions from registered repositories with LRU caching.
+ * Loads message structure definitions from a repository with LRU caching.
  *
  * Caching significantly improves performance when the same definitions
  * are loaded repeatedly (e.g., processing 1000 ORDERS messages).
  * - Without cache: ~1-5ms per load
  * - With cache: ~0.01ms (100x faster!)
  *
- * Clean Architecture:
- * - Infrastructure Service
- * - Uses RepositoryManager to find definitions
- * - Provides caching layer for performance
+ * Shared Infrastructure:
+ * - Used by EDIFACT and X12 packages
+ * - Generic cache implementation (LRU)
+ * - Works with any IMessageStructureRepository
  */
-export class DefinitionLoader implements IDefinitionLoader {
-  private readonly cache: CacheManager<MessageStructureDTO>;
+export class CachedDefinitionLoader implements IDefinitionLoader {
+  private readonly cache: LRUCacheManager<MessageStructureDTO>;
 
   constructor(
-    private readonly repositoryManager: RepositoryManager,
+    private readonly repository: IMessageStructureRepository,
     cacheSize: number = 100
   ) {
-    this.cache = new CacheManager(cacheSize);
+    this.cache = new LRUCacheManager(cacheSize);
   }
 
   /**
@@ -67,9 +69,9 @@ export class DefinitionLoader implements IDefinitionLoader {
     version: Version,
     messageType: MessageType
   ): Promise<MessageStructureDTO> {
-    const definition = await this.repositoryManager.findDefinition(
-      standard,
-      version,
+    const definition = await this.repository.getMessageDefinition(
+      standard.toString(),
+      version.value,
       messageType.value
     );
 
@@ -96,9 +98,9 @@ export class DefinitionLoader implements IDefinitionLoader {
     }
 
     // Not in cache - check repository
-    return await this.repositoryManager.hasDefinition(
-      standard,
-      version,
+    return await this.repository.hasMessageDefinition(
+      standard.toString(),
+      version.value,
       messageType.value
     );
   }

@@ -1,5 +1,4 @@
-import {IMessageStructureRepository} from "@application";
-import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/core';
 
 
 export class InMemoryMessageStructureRepository implements IMessageStructureRepository {

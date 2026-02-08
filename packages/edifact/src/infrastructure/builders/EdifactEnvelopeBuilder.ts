@@ -2,7 +2,8 @@ import {
   EDIMessage, EDISegment, EDIElement, Standard,
   IEnvelopeBuilder,
   MessageEnvelopeOptions,
-  InterchangeEnvelopeOptions
+  InterchangeEnvelopeOptions,
+  EDIMessageFactory
 }  from '@ediflow/core';
 
 export class EdifactEnvelopeBuilder implements IEnvelopeBuilder {
@@ -84,7 +85,11 @@ export class EdifactEnvelopeBuilder implements IEnvelopeBuilder {
     businessSegments: EDISegment[],
     unt: EDISegment
   ): EDIMessage {
-    const wrapped = new EDIMessage(original.standard, original.version, original.messageType);
+    const wrapped = EDIMessageFactory.create({
+      standard: original.standard,
+      version: original.version,
+      messageType: original.messageType
+    });
 
     wrapped.addSegment(unh);
     businessSegments.forEach(seg => wrapped.addSegment(seg));
@@ -103,11 +108,11 @@ export class EdifactEnvelopeBuilder implements IEnvelopeBuilder {
     }
 
     const firstMessage = messages[0]!;
-    const interchange = new EDIMessage(
-      firstMessage.standard,
-      firstMessage.version,
-      firstMessage.messageType
-    );
+    const interchange = EDIMessageFactory.create({
+      standard: firstMessage.standard,
+      version: firstMessage.version,
+      messageType: firstMessage.messageType
+    });
 
     interchange.addSegment(unb);
     this.addAllMessageSegments(interchange, messages);

@@ -2,7 +2,7 @@ import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
 import { ValidateMessageUseCase } from '@application/use-cases/validate/ValidateMessageUseCase';
 import { IMessageParser, IMessageBuilder } from '@application/ports';
-import { IValidationService } from '@domain/services/IValidationService';
+import { IValidationService } from '@application/validation/IValidationService';
 import { EDIMessage } from '@domain/entities/EDIMessage';
 
 /**

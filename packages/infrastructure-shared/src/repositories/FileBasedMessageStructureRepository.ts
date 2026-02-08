@@ -1,8 +1,7 @@
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import {IMessageStructureRepository} from "@application";
-import {MessageStructureDTO} from "@infrastructure/repositories/dtos";
+import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/core';
 
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
   constructor(private readonly basePath: string) {}

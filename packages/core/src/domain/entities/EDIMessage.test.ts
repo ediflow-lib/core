@@ -1,22 +1,23 @@
 import { describe, it, expect } from 'vitest';
-import { EDIMessage } from './EDIMessage';
-import { Standard } from '../value-objects/Standard';
-import { Version } from '../value-objects/Version';
-import { MessageType } from '../value-objects/MessageType';
-import { EDISegment } from './EDISegment';
-
+import { EDIMessage } from '@domain';
+import { Standard } from '@domain';
+import { Version } from '@domain';
+import { MessageType } from '@domain';
+import { EDISegment } from '@domain';
 describe('EDIMessage', () => {
   describe('constructor', () => {
     it('should create an EDIMessage with required properties', () => {
       // Arrange
+      const id = 'test-message-1';
       const standard = Standard.EDIFACT;
       const version = new Version(Standard.EDIFACT, 'D.20B');
       const messageType = new MessageType(Standard.EDIFACT, 'DESADV');
 
       // Act
-      const message = new EDIMessage(standard, version, messageType);
+      const message = new EDIMessage(id, standard, version, messageType);
 
       // Assert
+      expect(message.id).toBe(id);
       expect(message.standard).toBe(standard);
       expect(message.version).toBe(version);
       expect(message.messageType).toBe(messageType);
@@ -25,8 +26,7 @@ describe('EDIMessage', () => {
 
     it('should initialize with empty segments array', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -41,8 +41,7 @@ describe('EDIMessage', () => {
   describe('addSegment', () => {
     it('should add a segment to the message', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -58,8 +57,7 @@ describe('EDIMessage', () => {
 
     it('should add multiple segments in order', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -83,8 +81,7 @@ describe('EDIMessage', () => {
   describe('getSegmentsByTag', () => {
     it('should return segments with matching tag', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -107,8 +104,7 @@ describe('EDIMessage', () => {
 
     it('should return empty array if no segments match', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -125,8 +121,7 @@ describe('EDIMessage', () => {
   describe('addToGroup', () => {
     it('should add a segment to a specified group', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -143,8 +138,7 @@ describe('EDIMessage', () => {
 
     it('should support multiple segments in one group', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -164,8 +158,7 @@ describe('EDIMessage', () => {
 
     it('should support multiple groups', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -185,8 +178,7 @@ describe('EDIMessage', () => {
   describe('getSegmentsByGroup', () => {
     it('should return empty array if group does not exist', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -202,8 +194,7 @@ describe('EDIMessage', () => {
   describe('isValid', () => {
     it('should return true for a valid message with segments', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -219,8 +210,7 @@ describe('EDIMessage', () => {
 
     it('should return false for an empty message', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -236,8 +226,7 @@ describe('EDIMessage', () => {
   describe('getSegmentCount', () => {
     it('should return the number of segments', () => {
       // Arrange
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );

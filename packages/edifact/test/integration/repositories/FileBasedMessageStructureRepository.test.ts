@@ -1,12 +1,9 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { FileBasedMessageStructureRepository, SegmentOrGroup } from '@ediflow/core';
+import { SegmentOrGroup } from '@ediflow/core';
 import * as path from 'path';
-
+import {FileBasedMessageStructureRepository} from "@ediflow/infrastructure-shared";
 describe('FileBasedMessageStructureRepository Integration', () => {
-  // Path from: packages/core/test/integration/repositories/
-  // To:        packages/ (parent of core)
-  // = ../../../ (up 3 levels from test/integration/repositories/)
-  // Then walk to: ../../../../packages/ (up 4 from core)
+
   const basePath = path.resolve(__dirname, '../../../../');
   let repository: FileBasedMessageStructureRepository;
 

@@ -1,4 +1,4 @@
-import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
+import type { MessageStructureDTO } from '@application/dtos';
 
 /**
  * Port: Message Structure Repository

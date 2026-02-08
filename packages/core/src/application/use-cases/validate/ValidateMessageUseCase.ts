@@ -1,9 +1,9 @@
 import { ValidateMessageInputDTO } from './ValidateMessageInputDTO';
 import { ValidateMessageOutputDTO } from './ValidateMessageOutputDTO';
-import type { IValidationService } from '@domain/services/IValidationService';
+import type { IValidationService } from '@application/validation/IValidationService';
 import type { EDIMessage } from '@domain';
 import { StructuralValidationService } from '@application/services/StructuralValidationService';
-import { ValidationResult } from '@domain/validation';
+import { ValidationResult } from '@application/validation';
 
 /**
  * Use Case for validating EDI messages.

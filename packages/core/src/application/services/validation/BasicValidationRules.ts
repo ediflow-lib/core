@@ -1,6 +1,6 @@
-import type { IValidationRule } from '@domain';
+import type { IValidationRule } from '@application/validation';
 import type { EDIMessage } from '@domain';
-import { ValidationError } from '@domain';
+import { ValidationError } from '@application/validation';
 
 /**
  * Basic Validation Rules for EDI Messages

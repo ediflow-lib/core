@@ -13,7 +13,8 @@
  */
 
 import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType } from '@domain';
-import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '@infrastructure/repositories/dtos';
+import { EDIMessageFactory } from '@application/factories';
+import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '@application/dtos';
 import type { MappingRule } from './mapping/MappingRule';
 
 export class StructureMappingService {
@@ -46,7 +47,7 @@ export class StructureMappingService {
     const version = new Version(standard, structure.version);
     const messageType = new MessageType(standard, structure.messageType);
 
-    const ediMessage = new EDIMessage(standard, version, messageType);
+    const ediMessage = EDIMessageFactory.create({ standard, version, messageType });
 
     // Process each node in the structure
     for (const node of structure.structure) {

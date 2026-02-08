@@ -10,8 +10,7 @@ import { MessageType } from '@domain';
 describe('EDIMessageValidationService', () => {
   describe('validate', () => {
     it('should return success for a valid message', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -27,8 +26,7 @@ describe('EDIMessageValidationService', () => {
     });
 
     it('should fail if message has no segments', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -42,8 +40,7 @@ describe('EDIMessageValidationService', () => {
     });
 
     it('should fail if standard/version mismatch', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.X12, '005010'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -58,8 +55,7 @@ describe('EDIMessageValidationService', () => {
     });
 
     it('should fail if standard/messageType mismatch', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.X12, '850')
       );
@@ -74,8 +70,7 @@ describe('EDIMessageValidationService', () => {
     });
 
     it('should collect multiple validation errors', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.X12, '005010'),
         new MessageType(Standard.X12, '850')
       );
@@ -150,8 +145,7 @@ describe('EDIMessageValidationService', () => {
 
   describe('getErrorMessages', () => {
     it('should return array of error messages', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );
@@ -168,8 +162,7 @@ describe('EDIMessageValidationService', () => {
 
   describe('getErrorsByField', () => {
     it('should return errors for specific field', () => {
-      const message = new EDIMessage(
-        Standard.EDIFACT,
+      const message = new EDIMessage('test-id', Standard.EDIFACT,
         new Version(Standard.X12, '005010'),
         new MessageType(Standard.EDIFACT, 'DESADV')
       );

@@ -1,4 +1,4 @@
-export { RepositoryManager } from './RepositoryManager';
+export { EntityIdGenerator } from './EntityIdGenerator';
 export { EDIMessageValidationService } from './EDIMessageValidationService';
 export { ComposableValidationService } from './ComposableValidationService';
 export { MessageStructureService } from './MessageStructureService';

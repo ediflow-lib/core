@@ -1,4 +1,4 @@
-import type { ValidationError } from '../validation';
+import type { ValidationError } from './ValidationError';
 
 /**
  * Validation Rule Interface

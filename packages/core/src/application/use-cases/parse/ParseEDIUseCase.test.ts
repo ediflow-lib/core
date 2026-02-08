@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { ParseEDIUseCase } from '@application';
 import { ParseEDIInputDTO } from './ParseEDIInputDTO';
 import { IMessageParser } from '@application/ports';

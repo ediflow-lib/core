@@ -1,5 +1,5 @@
 import { Standard, Version, MessageType } from '@domain';
-import { ValidationResult } from '@domain/validation';
+import { ValidationResult } from '@application/validation';
 
 /**
  * Discriminated union for Validate Message output.

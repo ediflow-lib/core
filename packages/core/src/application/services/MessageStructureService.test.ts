@@ -1,17 +1,42 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { MessageStructureService } from './MessageStructureService';
-import { InMemoryMessageStructureRepository } from '@infrastructure/repositories/InMemoryMessageStructureRepository';
-import type { MessageStructureDTO } from '@infrastructure/repositories/dtos';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { MessageStructureService } from '@application';
+import type { IMessageStructureRepository } from '@application/ports/output/IMessageStructureRepository';
+import type { MessageStructureDTO } from '@application/dtos';
 import { Standard } from '@domain/value-objects/Standard';
 
 describe('MessageStructureService', () => {
   let service: MessageStructureService;
-  let repository: InMemoryMessageStructureRepository;
+  let mockRepository: IMessageStructureRepository;
+  const definitions = new Map<string, MessageStructureDTO>();
 
   beforeEach(() => {
-    repository = new InMemoryMessageStructureRepository();
-    service = new MessageStructureService(repository);
+    definitions.clear();
+
+    mockRepository = {
+      getMessageDefinition: vi.fn(async (standard: string, version: string, messageType: string) => {
+        const key = `${standard}:${version}:${messageType}`;
+        return definitions.get(key) || null;
+      }),
+      getAllMessageTypes: vi.fn(async (standard: string, version: string) => {
+        const prefix = `${standard}:${version}:`;
+        return Array.from(definitions.keys())
+          .filter(key => key.startsWith(prefix))
+          .map(key => key.split(':')[2])
+          .filter((type): type is string => type !== undefined);
+      }),
+      hasMessageDefinition: vi.fn(async (standard: string, version: string, messageType: string) => {
+        const key = `${standard}:${version}:${messageType}`;
+        return definitions.has(key);
+      })
+    };
+
+    service = new MessageStructureService(mockRepository);
   });
+
+  const registerDefinition = (definition: MessageStructureDTO) => {
+    const key = `${definition.standard}:${definition.version}:${definition.messageType}`;
+    definitions.set(key, definition);
+  };
 
   describe('getMessageDefinition', () => {
     it('should return message definition when it exists', async () => {
@@ -23,7 +48,7 @@ describe('MessageStructureService', () => {
         structure: []
       };
 
-      repository.register(definition);
+      registerDefinition(definition);
 
       const result = await service.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
 
@@ -39,7 +64,7 @@ describe('MessageStructureService', () => {
 
   describe('getAllMessageTypes', () => {
     it('should return all message types', async () => {
-      repository.register({
+      registerDefinition({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -47,7 +72,7 @@ describe('MessageStructureService', () => {
         structure: []
       });
 
-      repository.register({
+      registerDefinition({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'INVOIC',
@@ -65,7 +90,7 @@ describe('MessageStructureService', () => {
 
   describe('hasMessageDefinition', () => {
     it('should return true when message exists', async () => {
-      repository.register({
+      registerDefinition({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',

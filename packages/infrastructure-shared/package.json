@@ -1,0 +1,40 @@
+{
+  "name": "@ediflow/infrastructure-shared",
+  "version": "0.1.0",
+  "description": "Shared infrastructure utilities for EDIFlow packages (EDIFACT, X12)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ediflow/core": "*",
+    "lru-cache": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "keywords": [
+    "edi",
+    "infrastructure",
+    "cache",
+    "repository",
+    "shared"
+  ],
+  "author": "EDIFlow Team",
+  "license": "MIT"
+}
