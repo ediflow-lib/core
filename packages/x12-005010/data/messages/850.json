@@ -1,0 +1,82 @@
+{
+  "messageType": "850",
+  "standard": "X12",
+  "version": "005010",
+  "name": "Purchase Order",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Purchase Order Transaction Set (850) for use within the context of an Electronic Data Interchange (EDI) environment.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "tag": "ST",
+      "name": "Transaction Set Header",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "BEG",
+      "name": "Beginning Segment for Purchase Order",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 20,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "REF",
+      "name": "Reference Identification",
+      "mandatory": false,
+      "maxOccurrences": 12,
+      "position": 40,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "DTM",
+      "name": "Date/Time Reference",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 70,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "N1",
+      "name": "Name",
+      "mandatory": false,
+      "maxOccurrences": 200,
+      "position": 130,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "PO1",
+      "name": "Baseline Item Data",
+      "mandatory": false,
+      "maxOccurrences": 100000,
+      "position": 180,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "PID",
+      "name": "Product/Item Description",
+      "mandatory": false,
+      "maxOccurrences": 200,
+      "position": 200,
+      "elements": []
+    },
+    {
+      "nodeType": "segment",
+      "tag": "SE",
+      "name": "Transaction Set Trailer",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 550,
+      "elements": []
+    }
+  ]
+}
+
