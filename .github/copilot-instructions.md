@@ -333,4 +333,201 @@ const useCase = new ParseEDIUseCase(parser);
 
 ---
 
+---
+
+## 📦 NPM Release Process (Git Flow)
+
+### When to Release
+
+**Trigger:** After Sprint complete OR major feature ready
+
+**Version Strategy:**
+- **MAJOR (x.0.0):** Breaking changes
+- **MINOR (0.x.0):** New features, no breaking changes
+- **PATCH (0.0.x):** Bug fixes only
+
+---
+
+### Release Checklist (Complete Process)
+
+#### Step 1: Prepare Release Branch
+```bash
+# From develop (with all changes committed and pushed)
+git checkout develop
+git pull origin develop
+git checkout -b release/X.Y.Z
+```
+
+#### Step 2: Update Documentation
+- [ ] Update `CHANGELOG.md` with all changes
+- [ ] Update `ARCHITECTURE.md` if structure changed
+- [ ] Update `DEVELOPER_GUIDE.md` if workflow changed
+- [ ] Update `QUICK_START.md` if API changed
+- [ ] Add v0.2.0 banners to package READMEs:
+  ```markdown
+  ## 🆕 What's New in vX.Y.Z
+  - Feature 1
+  - Feature 2
+  ⚠️ Migrating from vX.Y-1? [Migration guide]
+  ```
+
+#### Step 3: Bump Versions
+```bash
+# Update ALL package.json files to new version
+# packages/core/package.json
+# packages/edifact/package.json
+# packages/infrastructure-shared/package.json
+# packages/cli/package.json
+# packages/edifact-d96a/package.json
+# packages/edifact-d01b/package.json
+# packages/edifact-d12a/package.json
+# packages/edifact-d20b/package.json
+# packages/x12/package.json (internal)
+# packages/x12-004010/package.json (internal)
+# packages/x12-005010/package.json (internal)
+```
+
+#### Step 4: Commit and Push Release Branch
+```bash
+git add -A
+git commit -m "chore: bump all package versions to X.Y.Z"
+git push origin release/X.Y.Z
+```
+
+#### Step 5: Merge to Main (Git Flow)
+```bash
+git checkout main
+git pull origin main
+git merge release/X.Y.Z --no-ff -m "release: vX.Y.Z - [Title]
+
+[Short description]
+
+Released Packages:
+- @ediflow/core@X.Y.Z
+- @ediflow/edifact@X.Y.Z
+- [... list all]
+
+See CHANGELOG.md for full details."
+
+git tag -a vX.Y.Z -m "Release vX.Y.Z - [Title]
+
+[Release notes summary]"
+
+git push origin main
+git push origin vX.Y.Z
+```
+
+#### Step 6: Build and Publish to NPM
+```bash
+# Build all packages
+cd packages/core && npm run build
+cd ../edifact && npm run build
+cd ../infrastructure-shared && npm run build
+cd ../cli && npm run build
+
+# Publish to NPM (in order!)
+cd packages/core && npm publish --access public
+cd ../infrastructure-shared && npm publish --access public
+cd ../edifact && npm publish --access public
+cd ../cli && npm publish --access public
+cd ../edifact-d96a && npm publish --access public
+cd ../edifact-d01b && npm publish --access public
+cd ../edifact-d12a && npm publish --access public
+cd ../edifact-d20b && npm publish --access public
+
+# DO NOT publish internal packages:
+# - @ediflow/x12
+# - @ediflow/x12-004010
+# - @ediflow/x12-005010
+```
+
+#### Step 7: Create GitHub Release
+1. Go to: https://github.com/ediflow-lib/core/releases/new
+2. Tag: `vX.Y.Z` (already exists)
+3. Title: `vX.Y.Z - [Feature Name]`
+4. Description: Copy from `docs/private/business/GITHUB_RELEASE_vX.Y.Z.md`
+5. ✅ "Set as latest release"
+6. Click "Publish release"
+
+#### Step 8: Marketing & Communication
+
+**GitHub Discussions (5 min):**
+```markdown
+Category: Announcements
+Title: 📢 vX.Y.Z Released - [Feature Name]
+
+Body:
+We just released vX.Y.Z with [key features]!
+
+🔥 What's New:
+- Feature 1
+- Feature 2
+
+⚠️ Breaking Changes: [None/List]
+
+📝 Full changelog: [link to release]
+💬 Questions? Ask below!
+```
+
+**Discord Announcement (if we have Discord):**
+```markdown
+Channel: #announcements
+
+@everyone 🚀 **EDIFlow vX.Y.Z Released!**
+
+What's new:
+✨ Feature 1
+✨ Feature 2
+
+📦 Upgrade: `npm install @ediflow/core@X.Y.Z`
+📝 Changelog: [link]
+
+Questions? Head to #support!
+```
+
+**Dev.to Article (1-2h, optional for major releases):**
+- Technical deep dive
+- Before/After examples
+- Lessons learned
+- Link to GitHub
+
+**Reddit/LinkedIn (optional):**
+- r/typescript or r/javascript
+- LinkedIn professional network
+- Focus on technical achievement
+
+#### Step 9: Merge Back to Develop
+```bash
+git checkout develop
+git pull origin develop
+git merge main --no-ff -m "chore: merge main back to develop after vX.Y.Z release"
+git push origin develop
+```
+
+#### Step 10: Clean Up
+```bash
+# Delete release branch (optional)
+git branch -d release/X.Y.Z
+git push origin --delete release/X.Y.Z
+```
+
+---
+
+### ⚠️ Important Notes
+
+**README Updates on NPM:**
+- README changes require NEW version (NPM doesn't allow re-publishing)
+- For README-only updates: Bump PATCH version (0.2.0 → 0.2.1)
+- Document in CHANGELOG as "docs: update package READMEs"
+
+**Internal Packages:**
+- NEVER publish @ediflow/x12, x12-004010, x12-005010 until ready
+- Mark in package.json: `"private": true` to prevent accidental publish
+
+**Version Sync:**
+- Keep ALL packages in sync (easier to track)
+- Even internal packages should have same version number
+
+---
+
 **"Leave the code cleaner than you found it!" - Boy Scout Rule ✅**
