@@ -2,6 +2,17 @@
 
 > Shared infrastructure utilities for EDIFlow packages (EDIFACT, X12)
 
+## 🆕 NEW in v0.2.0!
+
+This package is **brand new** in v0.2.0! It contains reusable infrastructure components shared across all EDI format packages.
+
+**Why this matters:**
+- ✅ **DRY Principle** - No code duplication between EDIFACT/X12
+- ✅ **Single source of truth** - Bug fix once, benefits all formats
+- ✅ **Consistency** - Same repository/cache logic everywhere
+
+---
+
 ## 📦 What's This Package?
 
 This package provides **shared infrastructure components** used by multiple EDIFlow format packages (EDIFACT, X12).

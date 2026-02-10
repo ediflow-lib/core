@@ -4,7 +4,19 @@
 
 Part of the [EdiFlow](https://github.com/ediflow-lib/core) ecosystem - Modern, type-safe EDI parsing for TypeScript/JavaScript.
 
-## 📦 What's This Package?
+---
+
+## 🆕 NEW in v0.2.0!
+
+This package is **brand new** in v0.2.0! It contains all EDIFACT-specific parsing, building, and validation logic.
+
+**Why a separate package?**
+- ✅ **Clean Architecture** - Infrastructure separated from domain
+- ✅ **Tree-shakeable** - Only install formats you need
+- ✅ **Extensible** - Easy to add X12, IDOC, VDA support
+- ✅ **Smaller bundles** - Better for browser usage
+
+---
 
 This package provides **EDIFACT-specific parsers** for the UN/EDIFACT EDI standard. It works with `@ediflow/core` to parse EDIFACT messages (ORDERS, INVOIC, DESADV, etc.).
 

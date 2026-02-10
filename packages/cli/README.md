@@ -2,6 +2,17 @@
 
 **EDIFlow Command Line Interface** - Parse, Build & Validate EDI messages from the command line.
 
+## 🆕 NEW in v0.2.0!
+
+This is a **brand new dedicated CLI package** in v0.2.0!
+
+**What changed:**
+- ✨ **Dedicated package** - CLI separated from core
+- ✨ **Better architecture** - Clean separation of concerns
+- ✨ **Extensible** - Easy to add X12 support (coming v0.3.0)
+
+---
+
 ## 🎯 Overview
 
 This package provides a CLI wrapper around `@ediflow/core` with support for multiple EDI formats (EDIFACT, X12).

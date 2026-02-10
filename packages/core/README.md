@@ -11,6 +11,25 @@
 
 ---
 
+## 🆕 What's New in v0.2.0
+
+🔥 **Major Architecture Refactoring** - Complete Clean Architecture enforcement!
+
+**Key Changes:**
+- ✨ **New modular structure** - Better tree-shaking, smaller bundles
+- ✨ **New packages** - `@ediflow/edifact`, `@ediflow/infrastructure-shared`, `@ediflow/cli`
+- ✨ **Pure domain layer** - No infrastructure code in core anymore
+- 🇺🇸 **X12 foundation** - USA market support coming in v0.3.0
+
+⚠️ **Migrating from v0.1.x?** **Zero code changes needed!** Just upgrade:
+```bash
+npm install @ediflow/core@0.2.0 @ediflow/edifact@0.2.0
+```
+
+📝 [See full changelog →](https://github.com/ediflow-lib/core/releases/tag/v0.2.0)
+
+---
+
 ## 📦 What is @ediflow/core?
 
 `@ediflow/core` is the **core engine** for EDIFlow - a modern EDIFACT library built with Clean Architecture principles.
