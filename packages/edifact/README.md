@@ -6,15 +6,24 @@ Part of the [EdiFlow](https://github.com/ediflow-lib/core) ecosystem - Modern, t
 
 ---
 
-## 🆕 NEW in v0.2.0!
+## 🆕 Updated in v0.2.0!
 
-This package is **brand new** in v0.2.0! It contains all EDIFACT-specific parsing, building, and validation logic.
+This package has been **restructured** in v0.2.0 for Clean Architecture!
 
-**Why a separate package?**
+**What changed:**
 - ✅ **Clean Architecture** - Infrastructure separated from domain
-- ✅ **Tree-shakeable** - Only install formats you need
-- ✅ **Extensible** - Easy to add X12, IDOC, VDA support
-- ✅ **Smaller bundles** - Better for browser usage
+- ✅ **Same functionality** - All parsers/builders still work
+- ✅ **Better organized** - Clearer code structure
+
+**Migration:**
+If you used `@ediflow/core` parsers before, now use `@ediflow/edifact`:
+```typescript
+// Before (v0.1.x)
+import { EdifactMessageParser } from '@ediflow/core';
+
+// After (v0.2.0) - Recommended
+import { EdifactMessageParser } from '@ediflow/edifact';
+```
 
 ---
 
