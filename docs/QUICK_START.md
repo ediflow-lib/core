@@ -9,22 +9,61 @@ Get started with **EDIFlow** in 5 minutes! Learn how to work with **type-safe Ty
 
 ## 📦 Installation
 
-### Step 1: Install Core Library
+### Step 1: Install Core Packages
 
 ```bash
+# Core domain + application layer
 npm install @ediflow/core
+
+# EDIFACT parser (format-specific infrastructure)
+npm install @ediflow/edifact
+
+# Shared infrastructure (repositories, loaders)
+npm install @ediflow/infrastructure-shared
 ```
 
 ### Step 2: Install EDIFACT Standard(s)
 
 ```bash
-# Community Packages (MIT License)
+# Data packages - install the versions you need
 npm install @ediflow/edifact-d96a  # D.96A - 89 messages
 npm install @ediflow/edifact-d01b  # D.01B - 155 messages  
-npm install @ediflow/edifact-d20b  # D.20B - 178 messages
+npm install @ediflow/edifact-d20b  # D.20B - 178 messages (latest)
+npm install @ediflow/edifact-d12a  # D.12A - 196 messages (most complete)
 ```
 
-**💡 Tip:** Install only what you need. Each package is ~5-15 MB.
+### Step 3 (Optional): Install CLI
+
+```bash
+# Command-line interface for parsing/validation
+npm install --global @ediflow/cli
+
+# Or use locally
+npm install --save-dev @ediflow/cli
+```
+
+**💡 Tip:** Install only what you need. Each data package is ~5-15 MB.
+
+---
+
+## 📦 Package Overview (v0.2.0)
+
+**Core Packages** (required):
+- `@ediflow/core` - Domain entities, use cases, interfaces
+- `@ediflow/edifact` - EDIFACT parsers and builders
+- `@ediflow/infrastructure-shared` - Repositories, loaders, cache
+
+**Data Packages** (install versions you need):
+- `@ediflow/edifact-d96a` - D.96A standard definitions
+- `@ediflow/edifact-d01b` - D.01B standard definitions
+- `@ediflow/edifact-d12a` - D.12A standard definitions
+- `@ediflow/edifact-d20b` - D.20B standard definitions
+
+**Optional**:
+- `@ediflow/cli` - Command-line interface
+
+**Coming in v0.3.0**:
+- `@ediflow/x12` - X12 parser (USA market)
 
 ---
 

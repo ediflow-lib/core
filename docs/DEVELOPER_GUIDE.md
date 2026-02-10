@@ -50,8 +50,22 @@ npm install
 ### Install Dependencies
 
 ```bash
+# Install all dependencies (workspace)
 npm install
 ```
+
+This installs dependencies for **all packages**:
+- `@ediflow/core` - Domain + Application
+- `@ediflow/edifact` - EDIFACT infrastructure
+- `@ediflow/x12` - X12 infrastructure (internal)
+- `@ediflow/infrastructure-shared` - Shared repositories/loaders
+- `@ediflow/cli` - Command-line interface
+- Data packages (edifact-d96a, edifact-d01b, etc.)
+
+**Workspace Benefits:**
+- Single `npm install` for entire monorepo
+- Packages can depend on each other
+- Shared dependencies (TypeScript, Vitest, etc.)
 
 ### Build Project
 
@@ -89,54 +103,57 @@ npm run dev -- build ./output.edi --type ORDERS --version D20B
 
 ## 📁 Project Structure
 
-```
-ediflow/
-├── packages/                    # Monorepo packages
-│   ├── core/                   # @ediflow/core
-│   │   ├── src/
-│   │   │   ├── domain/         # Entities, Value Objects
-│   │   │   ├── application/    # Use Cases, DTOs
-│   │   │   ├── infrastructure/ # Parsers, Repositories
-│   │   │   └── presentation/   # CLI
-│   │   ├── dist/               # Build output
-│   │   ├── package.json
-│   │   └── README.md
-│   │
-│   ├── edifact-d96a/           # @ediflow/edifact-d96a
-│   ├── edifact-d01b/           # @ediflow/edifact-d01b
-│   ├── edifact-d20b/           # @ediflow/edifact-d20b
-│   └── edifact-d12a/           # @ediflow/edifact-d12a
-│
-├── scripts/                     # Build & generation scripts
-├── docs/                        # Documentation
-├── test/                        # Integration & E2E tests
-├── coverage/                    # Test coverage reports
-├── package.json                 # Workspace config
-└── tsconfig.json                # TypeScript config
-```
-
-## 📁 Project Structure
+> **📢 Updated for v0.2.0** - Complete architecture refactoring in Sprint 9!
 
 ```
 ediflow/ (Monorepo)
 ├── packages/                    # NPM packages
-│   ├── core/                   # @ediflow/core
+│   ├── core/                   # @ediflow/core - Domain + Application ONLY
 │   │   ├── src/
-│   │   │   ├── domain/         # Entities, Value Objects
-│   │   │   ├── application/    # Use Cases, DTOs
-│   │   │   ├── infrastructure/ # Parsers, Repositories
-│   │   │   └── presentation/   # CLI
-│   │   ├── test/               # Integration & E2E tests
+│   │   │   ├── domain/         # Entities, Value Objects, Services
+│   │   │   └── application/    # Use Cases, Ports, DTOs
+│   │   ├── test/               # Unit tests
 │   │   ├── dist/               # Build output
 │   │   ├── package.json
 │   │   ├── tsconfig.json
 │   │   ├── tsup.config.ts
 │   │   └── vitest.config.ts
 │   │
-│   ├── edifact-d96a/           # @ediflow/edifact-d96a
-│   ├── edifact-d01b/           # @ediflow/edifact-d01b
-│   ├── edifact-d20b/           # @ediflow/edifact-d20b
-│   └── edifact-d12a/           # @ediflow/edifact-d12a
+│   ├── edifact/                # @ediflow/edifact - EDIFACT Infrastructure
+│   │   ├── src/
+│   │   │   ├── infrastructure/
+│   │   │   │   ├── parsers/   # EdifactMessageParser, etc.
+│   │   │   │   ├── builders/  # EdifactMessageBuilder
+│   │   │   │   └── validation/
+│   │   │   └── index.ts
+│   │   └── test/              # Integration tests
+│   │
+│   ├── x12/                    # @ediflow/x12 - X12 Infrastructure (internal)
+│   │   ├── src/
+│   │   │   ├── infrastructure/
+│   │   │   │   └── parsers/   # X12MessageParser, etc.
+│   │   │   └── index.ts
+│   │   └── test/              # Integration tests
+│   │
+│   ├── infrastructure-shared/  # @ediflow/infrastructure-shared
+│   │   ├── src/
+│   │   │   ├── repositories/  # FileBasedMessageStructureRepository
+│   │   │   ├── loaders/       # CachedDefinitionLoader
+│   │   │   └── cache/         # CacheService
+│   │   └── test/
+│   │
+│   ├── cli/                    # @ediflow/cli - Presentation Layer
+│   │   ├── src/
+│   │   │   ├── presentation/cli/  # Commands
+│   │   │   └── infrastructure/    # DIContainer
+│   │   └── test/
+│   │
+│   ├── edifact-d96a/           # @ediflow/edifact-d96a (Data)
+│   ├── edifact-d01b/           # @ediflow/edifact-d01b (Data)
+│   ├── edifact-d20b/           # @ediflow/edifact-d20b (Data)
+│   ├── edifact-d12a/           # @ediflow/edifact-d12a (Data)
+│   ├── x12-004010/             # @ediflow/x12-004010 (Data, internal)
+│   └── x12-005010/             # @ediflow/x12-005010 (Data, internal)
 │
 ├── scripts/                     # Build & generation scripts
 ├── docs/                        # Documentation
@@ -145,35 +162,144 @@ ediflow/ (Monorepo)
 └── tsconfig.json                # Root TypeScript config
 ```
 
+### Package Responsibilities (v0.2.0)
+
+**Core Package** (`@ediflow/core`)
+- ✅ Domain entities (EDIMessage, EDISegment)
+- ✅ Application use cases (ParseEDI, ValidateMessage, BuildEDI)
+- ✅ Ports (interfaces)
+- ❌ NO infrastructure code
+- ❌ NO format-specific code
+
+**Format Packages** (`@ediflow/edifact`, `@ediflow/x12`)
+- ✅ Format-specific parsers
+- ✅ Format-specific builders
+- ✅ Format-specific validation
+- ✅ Implements core interfaces
+
+**Shared Infrastructure** (`@ediflow/infrastructure-shared`)
+- ✅ FileBasedMessageStructureRepository (works for all formats)
+- ✅ CachedDefinitionLoader (works for all formats)
+- ✅ CacheService
+
+**CLI Package** (`@ediflow/cli`)
+- ✅ Commands (parse, validate, build)
+- ✅ DIContainer
+- ✅ User interaction
+
+**Data Packages** (`@ediflow/edifact-d96a`, etc.)
+- ✅ Message structure definitions (JSON)
+- ✅ Segment definitions
+- ✅ Element definitions
+
 ### Source Code Structure (`packages/core/src/`)
 
 ```
 src/
-├── domain/                      # Domain Layer
+├── domain/                      # Domain Layer (Pure Business Logic)
 │   ├── entities/               # EDIMessage, EDISegment, EDIElement
-│   ├── value-objects/          # Standard, ValidationError
+│   ├── value-objects/          # Standard, Version, MessageType
 │   ├── services/               # EnvelopeGenerator, StructureMapper
-│   └── validation/             # ValidationRules
+│   └── validation/             # ValidationRules (business rules)
 │
-├── application/                 # Application Layer
-│   ├── use-cases/              # ParseEDI, ValidateMessage, BuildEDI
-│   │   ├── parse/
-│   │   ├── validate/
-│   │   └── build/
-│   ├── ports/                  # Interfaces (IMessageParser, IRepository)
-│   ├── factories/              # Object creation
-│   └── configuration/          # DIContainer
-│
-├── infrastructure/              # Infrastructure Layer
-│   ├── parsers/                # EdifactMessageParser, EdifactTokenizer
-│   │   └── edifact/
-│   ├── repositories/           # FileBasedRepository, InMemoryRepository
-│   └── generators/             # JsonSchemaGenerator
-│
-└── presentation/                # Presentation Layer
-    └── cli/                    # CLI commands
-        ├── commands/
-        └── index.ts
+└── application/                 # Application Layer (Use Cases)
+    ├── use-cases/              # ParseEDI, ValidateMessage, BuildEDI
+    │   ├── parse/
+    │   ├── validate/
+    │   └── build/
+    ├── ports/                  # Interfaces (IMessageParser, IRepository)
+    │   ├── input/              # Use case inputs
+    │   └── output/             # Infrastructure interfaces
+    ├── dtos/                   # Data Transfer Objects
+    ├── services/               # Application services
+    └── configuration/          # UseCaseFactory
+```
+
+### Source Code Structure (`packages/edifact/src/`)
+
+```
+src/
+└── infrastructure/              # Infrastructure Layer (EDIFACT)
+    ├── parsers/                # EDIFACT-specific parsing
+    │   ├── EdifactMessageParser.ts
+    │   ├── EdifactTokenizer.ts
+    │   ├── EdifactSegmentParser.ts
+    │   └── EdifactDelimiterDetector.ts
+    ├── builders/               # EDIFACT-specific building
+    │   └── EdifactMessageBuilder.ts
+    └── validation/             # EDIFACT-specific validation
+        └── EdifactMessageValidator.ts
+```
+
+### Source Code Structure (`packages/x12/src/`)
+
+```
+src/
+└── infrastructure/              # Infrastructure Layer (X12)
+    └── parsers/                # X12-specific parsing
+        ├── X12MessageParser.ts
+        ├── X12Tokenizer.ts
+        ├── X12SegmentParser.ts
+        ├── X12EnvelopeParser.ts
+        └── X12DelimiterDetector.ts
+```
+
+### Package Dependencies (v0.2.0)
+
+Understanding how packages depend on each other:
+
+```
+Data Packages (edifact-d96a, x12-004010, etc.)
+    ↑ (used by)
+infrastructure-shared (repositories, loaders)
+    ↑ (used by)
+Format Packages (edifact, x12)
+    ↑ (implements)
+core (domain + application)
+    ↑ (used by)
+cli (presentation)
+```
+
+**Dependency Rules:**
+- ✅ CLI depends on core + format packages
+- ✅ Format packages (edifact, x12) depend on core
+- ✅ infrastructure-shared depends on core
+- ✅ Data packages have NO dependencies
+- ❌ Core NEVER depends on format packages
+- ❌ Core NEVER depends on infrastructure-shared
+
+**Example package.json dependencies:**
+
+```json
+// packages/core/package.json
+{
+  "dependencies": {
+    // NO dependencies on other EDIFlow packages!
+  }
+}
+
+// packages/edifact/package.json
+{
+  "dependencies": {
+    "@ediflow/core": "*"  // Only core!
+  }
+}
+
+// packages/infrastructure-shared/package.json
+{
+  "dependencies": {
+    "@ediflow/core": "*"  // Only core!
+  }
+}
+
+// packages/cli/package.json
+{
+  "dependencies": {
+    "@ediflow/core": "*",
+    "@ediflow/edifact": "*",
+    "@ediflow/infrastructure-shared": "*"  // Needed for repositories
+  }
+}
 ```
 
 ---
@@ -386,11 +512,16 @@ function doEverything() {
 **Path Aliases:**
 
 ```typescript
-// ✅ Use path aliases
+// ✅ Use path aliases (in core package)
 import { EDIMessage } from '@domain/entities';
 import { ParseEDIUseCase } from '@application/use-cases/parse';
 
-// ❌ Relative imports
+// ✅ Import from other packages
+import { EdifactMessageParser } from '@ediflow/edifact';
+import { X12MessageParser } from '@ediflow/x12';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
+
+// ❌ Relative imports (avoid when possible)
 import { EDIMessage } from '../../../domain/entities/EDIMessage';
 ```
 

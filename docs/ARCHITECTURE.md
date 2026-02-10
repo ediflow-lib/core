@@ -2,6 +2,8 @@
 
 This guide explains the **Clean Architecture** design of EDIFlow and how all components work together.
 
+> **📢 Updated for v0.2.0** - Complete monorepo architecture refactoring completed in Sprint 9!
+
 ---
 
 ## 🎯 Architecture Overview
@@ -14,6 +16,144 @@ EDIFlow follows **Clean Architecture** principles (by Robert C. Martin "Uncle Bo
 2. **Testability** - Every layer can be tested independently
 3. **Maintainability** - Easy to understand and modify
 4. **Scalability** - Easy to add new standards (X12, IDOC, etc.)
+
+---
+
+## 📦 Package Structure (v0.2.0)
+
+**Complete refactoring in Sprint 9** - Infrastructure now separated by format!
+
+```
+packages/
+├── core/                        # ✅ PURE Domain + Application
+│   ├── src/
+│   │   ├── domain/             # Entities, Value Objects, Rules
+│   │   └── application/        # Use Cases, Ports, DTOs, Services
+│   └── test/                   # Unit tests
+│
+├── edifact/                    # ✅ EDIFACT Infrastructure
+│   ├── src/
+│   │   ├── infrastructure/
+│   │   │   ├── parsers/        # EdifactMessageParser, Tokenizer, etc.
+│   │   │   ├── builders/       # EdifactMessageBuilder
+│   │   │   └── validation/     # EDIFACT-specific validation
+│   │   └── index.ts
+│   └── test/                   # Integration tests
+│
+├── x12/                        # ✅ X12 Infrastructure (internal, not published)
+│   ├── src/
+│   │   ├── infrastructure/
+│   │   │   └── parsers/        # X12MessageParser, Tokenizer, etc.
+│   │   └── index.ts
+│   └── test/                   # Integration tests
+│
+├── infrastructure-shared/      # ✅ Reusable Infrastructure
+│   ├── src/
+│   │   ├── repositories/       # FileBasedMessageStructureRepository
+│   │   ├── loaders/           # CachedDefinitionLoader
+│   │   └── cache/             # CacheService
+│   └── test/
+│
+├── cli/                        # ✅ Presentation Layer
+│   └── src/
+│       ├── presentation/cli/   # Commands (parse, validate, build, etc.)
+│       └── infrastructure/     # DIContainer
+│
+├── edifact-d96a/              # ✅ Data Package (EDIFACT D.96A)
+├── edifact-d01b/              # ✅ Data Package (EDIFACT D.01B)
+├── edifact-d12a/              # ✅ Data Package (EDIFACT D.12A)
+├── edifact-d20b/              # ✅ Data Package (EDIFACT D.20B)
+├── x12-004010/                # ✅ Data Package (X12 004010, internal)
+└── x12-005010/                # ✅ Data Package (X12 005010, internal)
+```
+
+### Key Changes in v0.2.0:
+
+**Before Sprint 9 (v0.1.x):**
+```
+packages/
+├── core/                          # ❌ Mixed everything together!
+│   ├── src/
+│   │   ├── domain/               # ✅ OK
+│   │   ├── application/          # ✅ OK
+│   │   ├── infrastructure/       # ❌ EDIFACT parsers were HERE!
+│   │   │   ├── parsers/
+│   │   │   │   ├── edifact/     # ❌ Format-specific in core!
+│   │   │   │   │   ├── EdifactMessageParser.ts
+│   │   │   │   │   ├── EdifactTokenizer.ts
+│   │   │   │   │   └── ...
+│   │   │   ├── repositories/     # ❌ Mixed in core!
+│   │   │   └── generators/       # ❌ Mixed in core!
+│   │   └── presentation/         # ❌ CLI also in core!
+│   └── test/
+├── cli/                          # Separate but small
+├── edifact-d96a/                # Data packages
+├── edifact-d01b/
+└── ...
+```
+
+**Problem:** 
+- Core package had EDIFACT-specific parsers mixed in
+- Infrastructure layer violated Clean Architecture
+- Hard to add X12 or other formats
+- Core was format-dependent
+
+**After Sprint 9 (v0.2.0):**
+```
+packages/
+├── core/                        # ✅ PURE Domain + Application!
+│   ├── src/
+│   │   ├── domain/             # ✅ Entities, Value Objects
+│   │   └── application/        # ✅ Use Cases, Ports, DTOs
+│   └── test/
+│
+├── edifact/                    # ✅ EDIFACT Infrastructure (NEW!)
+│   ├── src/
+│   │   └── infrastructure/
+│       │   ├── parsers/
+│       │   │   ├── EdifactMessageParser.ts
+│       │   │   ├── EdifactTokenizer.ts
+│       │   │   └── ...
+│       │   ├── builders/
+│       │   └── validation/
+│   └── test/
+│
+├── x12/                        # ✅ X12 Infrastructure (NEW!)
+│   ├── src/
+│   │   └── infrastructure/
+│   │       └── parsers/
+│   └── test/
+│
+├── infrastructure-shared/      # ✅ Reusable Infrastructure (NEW!)
+│   ├── src/
+│   │   ├── repositories/       # Moved from core!
+│   │   ├── loaders/
+│   │   └── cache/             # CacheService
+│   └── test/
+│
+├── cli/                        # ✅ Presentation Layer (cleaned)
+│   └── src/
+│       └── presentation/cli/
+│
+├── edifact-d96a/              # Data packages
+├── edifact-d01b/
+├── x12-004010/                # ✅ NEW!
+└── x12-005010/                # ✅ NEW!
+```
+
+**Solution:**
+- ✅ Core is now PURE (only domain + application)
+- ✅ EDIFACT parsers moved to `@ediflow/edifact` package
+- ✅ X12 parsers in separate `@ediflow/x12` package
+- ✅ Shared infrastructure extracted to `@ediflow/infrastructure-shared`
+- ✅ Clean Architecture strictly enforced!
+
+**Benefits:**
+- ✅ Clean Architecture strictly enforced
+- ✅ Format-specific code properly separated
+- ✅ Infrastructure reusable across formats
+- ✅ Easy to add new standards (IDOC, VDA, HL7v2)
+- ✅ Tree-shakeable packages
 
 ---
 
@@ -171,33 +311,110 @@ export interface IMessageStructureRepository {
 
 ---
 
-### 3. Infrastructure Layer (`src/infrastructure/`)
+### 3. Infrastructure Layer (Separated by Format)
 
-**Purpose:** Implements technical details (parsers, databases, APIs)
+**Purpose:** Implements technical details (parsers, repositories, adapters)
+
+**NEW in v0.2.0:** Infrastructure is now **separated into format-specific packages**!
+
+**Package Structure:**
+```
+packages/
+├── edifact/                    # EDIFACT-specific infrastructure
+│   └── infrastructure/
+│       ├── parsers/
+│       │   ├── EdifactMessageParser.ts
+│       │   ├── EdifactTokenizer.ts
+│       │   ├── EdifactSegmentParser.ts
+│       │   └── EdifactDelimiterDetector.ts
+│       ├── builders/
+│       │   └── EdifactMessageBuilder.ts
+│       └── validation/
+│           └── EdifactMessageValidator.ts
+│
+├── x12/                        # X12-specific infrastructure
+│   └── infrastructure/
+│       └── parsers/
+│           ├── X12MessageParser.ts
+│           ├── X12Tokenizer.ts
+│           ├── X12SegmentParser.ts
+│           ├── X12EnvelopeParser.ts
+│           └── X12DelimiterDetector.ts
+│
+└── infrastructure-shared/      # Reusable infrastructure
+    ├── repositories/
+    │   ├── FileBasedMessageStructureRepository.ts
+    │   └── InMemoryMessageStructureRepository.ts
+    ├── loaders/
+    │   └── CachedDefinitionLoader.ts
+    └── cache/
+        └── CacheService.ts
+```
 
 **Contains:**
-- **Parsers:** `EdifactMessageParser`, `EdifactTokenizer`
-- **Repositories:** `FileBasedMessageStructureRepository`, `InMemoryRepository`
-- **Adapters:** External integrations
-- **Generators:** `JsonSchemaGenerator`
+- **Format-Specific Parsers:** EDIFACT, X12 (each in own package)
+- **Format-Specific Builders:** EdifactMessageBuilder
+- **Format-Specific Validation:** EDIFACT validation rules
+- **Shared Repositories:** FileBasedMessageStructureRepository
+- **Shared Loaders:** CachedDefinitionLoader
+- **Shared Cache:** CacheService
 
 **Characteristics:**
-- ✅ **Implements Application Ports**
+- ✅ **Implements Application Ports** (IMessageParser, IMessageStructureRepository)
 - ✅ **Contains all external dependencies**
 - ✅ **Can be replaced without changing Domain/Application**
+- ✅ **Format-specific code isolated** (EDIFACT ≠ X12)
 
 **Example:**
 
 ```typescript
-// src/infrastructure/parsers/edifact/EdifactMessageParser.ts
+// packages/edifact/src/infrastructure/parsers/EdifactMessageParser.ts
+import { IMessageParser, EDIMessage } from '@ediflow/core';
+
 export class EdifactMessageParser implements IMessageParser {
   constructor(
-    private readonly tokenizer: EdifactTokenizer,
-    private readonly segmentParser: EdifactSegmentParser
+    private readonly delimiterDetector: IDelimiterDetector,
+    private readonly tokenizer: ITokenizer,
+    private readonly segmentParser: ISegmentParser
   ) {}
 
   parse(message: string): EDIMessage {
-    // 1. Tokenize (split by segments)
+    // EDIFACT-specific parsing logic
+  }
+  
+  getSupportedStandard(): Standard {
+    return Standard.EDIFACT;
+  }
+}
+```
+
+```typescript
+// packages/x12/src/infrastructure/parsers/X12MessageParser.ts
+import { IMessageParser, EDIMessage } from '@ediflow/core';
+
+export class X12MessageParser implements IMessageParser {
+  constructor(
+    private readonly delimiterDetector: IDelimiterDetector,
+    private readonly segmentParser: X12SegmentParser,
+    private readonly envelopeParser: X12EnvelopeParser
+  ) {}
+
+  parse(message: string): EDIMessage {
+    // X12-specific parsing logic
+  }
+  
+  getSupportedStandard(): Standard {
+    return Standard.X12;
+  }
+}
+```
+
+**Why Separate Packages?**
+- Different formats have different parsing rules
+- EDIFACT uses `'` for segments, X12 uses `~`
+- X12 has complex envelope structure (ISA/GS/ST)
+- Each format can evolve independently
+- Users only install formats they need
     const tokens = this.tokenizer.tokenize(message);
     
     // 2. Parse segments
