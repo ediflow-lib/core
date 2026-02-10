@@ -1,8 +1,7 @@
 import { ParseEDIInputDTO } from './ParseEDIInputDTO';
 import { ParseEDIOutputDTO, ParseError } from './ParseEDIOutputDTO';
 import { IMessageParser } from '@application/ports';
-import { StandardDelimiters } from '@domain';
-import { StructureMapper } from '@domain/mapping';
+import { StructureMappingService } from '@application/services/StructureMappingService';
 
 /**
  * Use Case for parsing EDI messages.
@@ -17,7 +16,7 @@ import { StructureMapper } from '@domain/mapping';
 export class ParseEDIUseCase {
   constructor(
     private readonly messageParser: IMessageParser,
-    private readonly structureMapper?: StructureMapper  // Optional: for Phase 2
+    private readonly structureMappingService?: StructureMappingService  // Optional: for Phase 2
   ) {}
 
   execute(input: ParseEDIInputDTO): ParseEDIOutputDTO {
@@ -45,9 +44,12 @@ export class ParseEDIUseCase {
       // NOTE: Requires explicit messageStructure in input (cannot use async repository in sync method)
       let businessObject: any | undefined;
 
-      if (input.returnTypedObject && input.messageStructure && this.structureMapper) {
-        businessObject = this.structureMapper.map(message, input.messageStructure);
+      if (input.returnTypedObject && input.messageStructure && this.structureMappingService) {
+        businessObject = this.structureMappingService.map(message, input.messageStructure);
       }
+
+      // Get parser configuration (includes detected delimiters)
+      const parserConfig = this.messageParser.getConfiguration();
 
       // Return success result
       return {
@@ -59,7 +61,7 @@ export class ParseEDIUseCase {
           version: message.version,
           messageType: message.messageType,
           segmentCount: message.segments.length,
-          delimiters: StandardDelimiters.getDefault(message.standard),
+          delimiters: parserConfig.delimiters,  // Delimiters detected by parser
         },
       };
     } catch (error) {
@@ -77,7 +79,7 @@ export class ParseEDIUseCase {
       metadata: {
         standard: input.standard,
         segmentCount: 0,
-        delimiters: StandardDelimiters.getDefault(input.standard),
+        delimiters: input.parserConfig?.delimiters,  // From parser config if provided
       },
     };
   }

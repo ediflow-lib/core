@@ -1,6 +1,7 @@
-import type { IValidationService, ValidationContext, IValidationRule } from '../../domain';
-import { ValidationResult, ValidationError } from '../../domain';
+import type { IValidationService, ValidationContext, IValidationRule } from '../validation';
+import { ValidationResult, ValidationError } from '../validation';
 
+// noinspection ParameterNamingConventionJS
 /**
  * Composable Validation Service
  *
@@ -59,10 +60,10 @@ export class ComposableValidationService<T> implements IValidationService<T> {
    * Validates an entity by applying all registered rules.
    *
    * @param entity - The entity to validate
-   * @param _context - Optional validation context (unused in base implementation)
+   * @param _validationContext - Optional validation context (unused in base implementation)
    * @returns Validation result with all errors from all rules
    */
-  validate(entity: T, _context?: ValidationContext): ValidationResult {
+  validate(entity: T, _validationContext?: ValidationContext): ValidationResult {
     const allErrors: ValidationError[] = [];
 
     // Apply all rules

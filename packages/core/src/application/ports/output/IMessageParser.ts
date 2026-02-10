@@ -28,4 +28,10 @@ export interface IMessageParser {
    * @returns true if this parser can handle the message, false otherwise
    */
   canParse(ediString: string): boolean;
+
+  /**
+   * Returns the parser configuration used in the last parse operation.
+   * Contains detected delimiters and other parsing metadata.
+   */
+  getConfiguration(): ParserConfig;
 }

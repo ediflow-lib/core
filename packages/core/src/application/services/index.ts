@@ -1,7 +1,8 @@
-export { RepositoryManager } from './RepositoryManager';
+export { EntityIdGenerator } from './EntityIdGenerator';
 export { EDIMessageValidationService } from './EDIMessageValidationService';
 export { ComposableValidationService } from './ComposableValidationService';
 export { MessageStructureService } from './MessageStructureService';
-export { ValidationServiceBuilder } from './validation/ValidationServiceBuilder';
-export * from './validation/BasicValidationRules';
-export * from './validation/EDIFACTValidationRules';
+export { StructureMappingService } from './StructureMappingService';
+export { StructureMappingService as StructureMapper } from './StructureMappingService';
+export { SchemaGenerationService } from './SchemaGenerationService';
+export type { JSONSchema, JSONSchemaType } from './JSONSchema';

@@ -1,8 +1,7 @@
 import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
 import { ValidateMessageUseCase } from '@application/use-cases/validate/ValidateMessageUseCase';
-import { IMessageParser } from '@application/ports';
-import { IValidationService } from '@domain/services/IValidationService';
+import { IMessageParser, IMessageBuilder, IValidationService } from '@application/ports';
 import { EDIMessage } from '@domain/entities/EDIMessage';
 
 /**
@@ -14,13 +13,15 @@ import { EDIMessage } from '@domain/entities/EDIMessage';
  *
  * @example
  * ```typescript
- * const factory = new UseCaseFactory(parsers, validationService);
+ * const factory = new UseCaseFactory(parsers, builders, validationService);
  * const parseUseCase = factory.createParseUseCase('EDIFACT');
+ * const buildUseCase = factory.createBuildUseCase('EDIFACT');
  * ```
  */
 export class UseCaseFactory {
   constructor(
     private readonly parsers: Map<string, IMessageParser>,
+    private readonly builders: Map<string, IMessageBuilder>,
     private readonly validationService: IValidationService<EDIMessage>
   ) {}
 
@@ -40,18 +41,18 @@ export class UseCaseFactory {
   }
 
   /**
-   * Creates a BuildEDIUseCase with the appropriate parser.
+   * Creates a BuildEDIUseCase with the appropriate builder.
    *
    * @param standard - EDI standard (e.g., 'EDIFACT', 'X12')
    * @returns Configured BuildEDIUseCase
    * @throws Error if standard is not supported
    */
   createBuildUseCase(standard: string): BuildEDIUseCase {
-    const parser = this.parsers.get(standard.toUpperCase());
-    if (!parser) {
-      throw new Error(`No parser registered for standard: ${standard}`);
+    const builder = this.builders.get(standard.toUpperCase());
+    if (!builder) {
+      throw new Error(`No builder registered for standard: ${standard}`);
     }
-    return new BuildEDIUseCase();
+    return new BuildEDIUseCase(builder);
   }
 
   /**
@@ -63,6 +64,7 @@ export class UseCaseFactory {
     return new ValidateMessageUseCase(this.validationService);
   }
 
+  // noinspection JSUnusedGlobalSymbols
   /**
    * Gets list of supported standards.
    *

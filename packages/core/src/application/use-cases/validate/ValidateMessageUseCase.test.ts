@@ -1,19 +1,20 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { ValidateMessageUseCase } from './ValidateMessageUseCase';
+import { ValidateMessageUseCase } from '@application';
 import { EDIMessage, Standard, Version, MessageType, EDISegment } from '@domain';
-import type { IValidationService } from '@domain/services/IValidationService';
-import { ValidationResult, ValidationError } from '@domain/validation';
+import { EDIMessageFactory } from '@application/factories';
+import type { IValidationService } from '@application/ports';
+import { ValidationResult, ValidationError } from '@application/validation';
 
 describe('ValidateMessageUseCase', () => {
   let useCase: ValidateMessageUseCase;
   let mockValidationService: IValidationService<EDIMessage>;
 
   const createMessage = (standard: Standard, versionValue: string, messageTypeValue: string): EDIMessage => {
-    const message = new EDIMessage(
+    const message = EDIMessageFactory.create({
       standard,
-      new Version(standard, versionValue),
-      new MessageType(standard, messageTypeValue)
-    );
+      version: new Version(standard, versionValue),
+      messageType: new MessageType(standard, messageTypeValue)
+    });
     message.addSegment(new EDISegment('TEST', []));
     return message;
   };

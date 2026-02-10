@@ -1,3 +1,12 @@
+export interface DelimitersConfig {
+  component: string;
+  element: string;
+  decimal: string;
+  escape: string;
+  segment: string;
+  repetition?: string;
+}
+
 export class Delimiters {
   readonly component: string;
   readonly element: string;
@@ -6,60 +15,37 @@ export class Delimiters {
   readonly segment: string;
   readonly repetition?: string;
 
-  private constructor(
-    component: string,
-    element: string,
-    decimal: string,
-    escape: string,
-    segment: string,
-    repetition?: string
-  ) {
-    this.component = component;
-    this.element = element;
-    this.decimal = decimal;
-    this.escape = escape;
-    this.segment = segment;
-    this.repetition = repetition;
+  protected constructor(config: DelimitersConfig) {
+    this.component = config.component;
+    this.element = config.element;
+    this.decimal = config.decimal;
+    this.escape = config.escape;
+    this.segment = config.segment;
+    this.repetition = config.repetition;
 
     this.validate();
   }
 
-  static custom(config: {
-    component: string;
-    element: string;
-    decimal: string;
-    escape: string;
-    segment: string;
-    repetition?: string;
-  }): Delimiters {
-    return new Delimiters(
-      config.component,
-      config.element,
-      config.decimal,
-      config.escape,
-      config.segment,
-      config.repetition
-    );
+  static custom(config: DelimitersConfig): Delimiters {
+    return new Delimiters(config);
   }
 
   equals(other: Delimiters): boolean {
-    return (
-      this.component === other.component &&
-      this.element === other.element &&
-      this.decimal === other.decimal &&
-      this.escape === other.escape &&
-      this.segment === other.segment &&
+    const coreMatches = [
+      this.component === other.component,
+      this.element === other.element,
+      this.decimal === other.decimal,
+      this.escape === other.escape,
+      this.segment === other.segment,
       this.repetition === other.repetition
-    );
+    ];
+    return coreMatches.every(match => match);
   }
 
   hasEscape(): boolean {
     return this.escape !== '';
   }
 
-  toUNA(): string {
-    return `UNA${this.component}${this.element}${this.decimal}${this.escape} ${this.segment}`;
-  }
 
   private validate(): void {
     this.validateMandatoryDelimiters();

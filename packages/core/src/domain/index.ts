@@ -1,14 +1,18 @@
-export { EDIMessage } from './entities/EDIMessage';
-export { EDISegment } from './entities/EDISegment';
-export { EDIElement } from './entities/EDIElement';
+/**
+ * Domain Layer Exports
+ *
+ * Pure business logic - no external dependencies.
+ * Contains entities, value objects - no technical services.
+ */
 
-export { Standard } from './value-objects/Standard';
-export { Version } from './value-objects/Version';
-export { MessageType } from './value-objects/MessageType';
-export { Delimiters } from './value-objects/Delimiters';
+// Entities
+export * from './entities/EDIMessage';
 
-export * from './constants';
-export * from './errors';
-export { ValidationError, ValidationResult, StructuralValidationContext, StructuralValidator } from './validation';
-export * from './repositories';
-export * from './services';
+// Value Objects
+export * from './value-objects/Standard';
+export * from './value-objects/Version';
+export * from './value-objects/MessageType';
+export * from './value-objects/Delimiters';
+export * from './value-objects/EDISegment';
+export * from './value-objects/EDIElement';
+

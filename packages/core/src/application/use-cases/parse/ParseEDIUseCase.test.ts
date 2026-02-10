@@ -1,5 +1,5 @@
-﻿import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { ParseEDIUseCase } from './ParseEDIUseCase';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { ParseEDIUseCase } from '@application';
 import { ParseEDIInputDTO } from './ParseEDIInputDTO';
 import { IMessageParser } from '@application/ports';
 import type { ParserConfig } from '@application/configuration';
@@ -12,6 +12,7 @@ describe('ParseEDIUseCase', () => {
       parse: vi.fn(),
       getSupportedStandard: vi.fn().mockReturnValue(Standard.EDIFACT),
       canParse: vi.fn().mockReturnValue(true),
+      getConfiguration: vi.fn().mockReturnValue({}),
     };
     useCase = new ParseEDIUseCase(mockMessageParser);
   });

@@ -5,6 +5,111 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-02-10
+
+### 🔥 BREAKING CHANGES
+
+#### Complete Monorepo Architecture Refactoring
+This release includes a fundamental restructuring of the monorepo architecture to enforce Clean Architecture principles.
+
+**Package Structure Changes:**
+```diff
+Before:
+- packages/core/infrastructure/  ❌ (mixed concerns)
+
+After:
++ packages/core/                 ✅ (pure domain + application)
++ packages/edifact/              ✅ (EDIFACT infrastructure)
++ packages/x12/                  ✅ (X12 infrastructure - internal)
++ packages/infrastructure-shared/ ✅ (reusable components)
+```
+
+**Migration Impact:**
+- ✅ **No code changes required for users!**
+- ✅ All public APIs remain unchanged
+- ✅ Import paths unchanged
+- ✅ Architecture changes are internal only
+
+---
+
+### ✨ Added
+
+#### Core
+- Enhanced `MessageStructureDTO` with proper composite pattern
+- Improved type definitions across all interfaces
+- Better error messages and validation
+
+#### Infrastructure
+- **NEW Package:** `@ediflow/infrastructure-shared@0.2.0`
+  - `FileBasedMessageStructureRepository` (reusable across formats)
+  - `CachedDefinitionLoader` (performance optimization)
+  - `SchemaGenerationService` (for all formats)
+
+#### EDIFACT
+- Package `@ediflow/edifact@0.2.0` aligned with Clean Architecture
+- Performance improvements in segment parsing
+- Better delimiter detection
+
+#### Internal (Not Published)
+- Complete X12 parser foundation implemented
+- 90 tests passing for X12
+- X12 will be published in v0.3.0
+
+---
+
+### 🔧 Changed
+
+- Restructured 8+ packages for Clean Architecture
+- Moved ~150 files to proper locations
+- ~5,000 lines of code reorganized
+- Zero breaking changes for end users
+
+---
+
+### 📦 Packages Released
+
+**Released:**
+- `@ediflow/core@0.2.0`
+- `@ediflow/edifact@0.2.0`
+- `@ediflow/edifact-d96a@0.2.0`
+- `@ediflow/edifact-d01b@0.2.0`
+- `@ediflow/edifact-d12a@0.2.0`
+- `@ediflow/edifact-d20b@0.2.0`
+- `@ediflow/infrastructure-shared@0.2.0`
+- `@ediflow/cli@0.2.0`
+
+**Not Published (Internal):**
+- `@ediflow/x12` (coming in v0.3.0)
+- `@ediflow/x12-004010` (coming in v0.3.0)
+- `@ediflow/x12-005010` (coming in v0.3.0)
+
+---
+
+### ⚠️ Important Notes
+
+#### EDIFACT Status
+EDIFACT implementation is **functional and tested** but should be considered **beta/preview**. While we have comprehensive test coverage and real-world message parsing works, there may be edge cases or format variations not yet covered. **Breaking changes are possible in future releases** as we refine the APIs.
+
+**Recommendation:** Use in development/testing environments. Production use at your own discretion.
+
+---
+
+### 📊 Statistics
+
+- **Tests:** 500+ passing
+- **TypeScript Errors:** 0
+- **Sprint:** 9 Complete (44 Story Points, 113%)
+
+---
+
+## [Unreleased]
+
+### Planned for v0.3.0
+- X12 public release (810, 856, 997 message types)
+- X12 validation rules
+- X12 documentation and examples
+- CLI support for X12
+
 ## [0.1.2] - 2026-01-31
 
 ### Fixed

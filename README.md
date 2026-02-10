@@ -1,4 +1,4 @@
-# EDIFlow 🚀
+# EDIFlow 🌊
 
 > Modern EDIFACT Parser, Validator & Builder for TypeScript/JavaScript
 
@@ -9,6 +9,19 @@
 [![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
 **Clean Architecture** • **Type-Safe** • **Business Object Mapping** • **Schema Export** • **Battle-Tested**
+
+---
+
+## 🌊 The Way of Water
+
+*"Like water finding its path, EDIFlow seamlessly processes EDI data across any standard, any system, any scale."*
+
+Inspired by Taoist philosophy, EDIFlow embodies four principles:
+
+- 💧 **Water finds its way** — Intelligent parsing that elegantly solves problems
+- 🌊 **Water adapts to any form** — Supports EDIFACT, X12, and more with flexible architecture  
+- 💪 **Water is powerful but gentle** — Enterprise-grade performance, developer-friendly API
+- 🔄 **Water connects everything** — Bridges between systems and standards seamlessly
 
 ---
 

@@ -4,7 +4,7 @@ import { Standard } from './Standard';
  * Version Value Object
  *
  * Validates EDI standard versions with format rules per standard.
- * EDIFACT: D.20B | X12: 005010 | IDOC: SAP-ECC | VDA: 4905 | HL7v2: 2.5.1
+ * EDIFACT: D.20B | X12: 005010 | IDOC: SAP-ECC | VDA: 4905 | HL7v2: 2.5.1 | INHOUSE: Custom
  */
 export class Version {
   private static readonly PATTERNS: Record<Standard, RegExp> = {
@@ -13,6 +13,7 @@ export class Version {
     [Standard.IDOC]: /^.+$/,
     [Standard.VDA]: /^\d{4}$/,
     [Standard.HL7v2]: /^2\.\d+(\.\d+)?$/,
+    [Standard.INHOUSE]: /^.+$/,  // Flexible: any non-empty string for custom formats
   };
 
   constructor(
@@ -20,6 +21,23 @@ export class Version {
     public readonly value: string
   ) {
     this.validate();
+  }
+
+  static from(value: string, standard?: Standard): Version {
+    const detectedStandard = standard || this.detectStandard(value);
+    return new Version(detectedStandard, value);
+  }
+
+  private static detectStandard(value: string): Standard {
+    for (const [standard, pattern] of Object.entries(this.PATTERNS)) {
+      if (pattern.test(value)) {
+        return standard as Standard;
+      }
+    }
+    throw new Error(
+      `Cannot detect standard for version "${value}". ` +
+      `Please provide standard explicitly or use a recognized format.`
+    );
   }
 
   private validate(): void {
@@ -43,6 +61,7 @@ export class Version {
       [Standard.IDOC]: 'SAP release version (e.g., SAP-ECC, SAP-S4HANA)',
       [Standard.VDA]: '4 digits (e.g., 4905, 4906)',
       [Standard.HL7v2]: '2.# or 2.#.# (e.g., 2.3, 2.5.1)',
+      [Standard.INHOUSE]: 'Custom version string (e.g., v1.0, 2024-Q1)',
     };
     return formats[this.standard];
   }

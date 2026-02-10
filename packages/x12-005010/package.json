@@ -1,0 +1,37 @@
+{
+  "name": "@ediflow/x12-005010",
+  "version": "0.2.0",
+  "description": "X12 005010 Standard Definitions - Common Transaction Sets",
+  "main": "./data/index.json",
+  "files": [
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "edi",
+    "x12",
+    "005010",
+    "ansi",
+    "standard-definitions",
+    "message-structures",
+    "850",
+    "810",
+    "856",
+    "997"
+  ],
+  "author": "EDIFlow Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/core.git",
+    "directory": "packages/x12-005010"
+  },
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/core/issues"
+  },
+  "homepage": "https://github.com/ediflow-lib/core#readme",
+  "peerDependencies": {
+    "@ediflow/core": "^0.1.0"
+  }
+}
+

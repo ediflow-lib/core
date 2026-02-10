@@ -1,10 +1,10 @@
-import { EDIMessage } from '@domain';
-import { MessageStructure } from '@domain/repositories/MessageStructure';
+import type { EDIMessage } from '@domain';
+import type { MessageStructureDTO } from '@application/dtos';
 
 export interface ValidateMessageInputDTO {
   message: EDIMessage;
   strictMode?: boolean;
-  // Phase 2: Structure Validation (optional)
-  messageStructure?: MessageStructure;
+
+  messageStructure?: MessageStructureDTO;
   enableStructuralValidation?: boolean;
 }

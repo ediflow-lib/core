@@ -1,6 +1,7 @@
 import { Standard } from '@domain';
 import type { ParserConfig } from '@application/configuration';
-import type { MessageStructure } from '@domain/repositories';
+import {MessageStructureDTO} from "@application/dtos";
+
 
 export interface ParseEDIInputDTO {
   message: string;
@@ -8,7 +9,7 @@ export interface ParseEDIInputDTO {
   strictMode?: boolean;
   parserConfig?: ParserConfig;
 
-  // Phase 2 Support (US-6.2)
+
   returnTypedObject?: boolean;      // If true, returns business object instead of EDIMessage
-  messageStructure?: MessageStructure;  // Optional: provide structure directly (bypass repository)
+  messageStructure?: MessageStructureDTO;  // Optional: provide structure directly (bypass repository)
 }

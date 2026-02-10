@@ -1,0 +1,68 @@
+{
+  "name": "@ediflow/edifact",
+  "version": "0.2.0",
+  "description": "EDIFACT EDI Parser - Format-specific infrastructure for UN/EDIFACT standard",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "edi",
+    "edifact",
+    "un-edifact",
+    "parser",
+    "validator",
+    "typescript",
+    "edi-parser",
+    "edifact-parser",
+    "orders",
+    "invoic",
+    "desadv",
+    "logistics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/core.git",
+    "directory": "packages/edifact"
+  },
+  "homepage": "https://github.com/ediflow-lib/core#readme",
+  "bugs": {
+    "url": "https://github.com/ediflow-lib/core/issues"
+  },
+  "author": "EdiFlow Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@ediflow/core": "*",
+    "@ediflow/infrastructure-shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@vitest/coverage-v8": "^2.1.8",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
