@@ -134,12 +134,15 @@ Link: https://github.com/ediflow-lib/core/releases/tag/vX.Y.Z
 ### Tier 2: SHOULD DO (1-3 hours, within 1 week)
 
 #### 5. Dev.to Article (2-3 hours)
-**URL:** https://dev.to/
+**Account:** https://dev.to/helloediflow
+
+**Existing Content:**
+- [Part 1: Why Clean Architecture](https://dev.to/helloediflow/building-ediflow-in-typescript-part-1-why-clean-architecture-1hhm) ✅
 
 **Template:** Create based on release
 
 **Article Types:**
-- **Major releases:** Technical deep dive
+- **Major releases:** Technical deep dive (new article in series)
 - **Minor releases:** Quick update post
 - **Patch releases:** Skip
 
@@ -150,6 +153,7 @@ title: "[Catchy Title] - EDIFlow vX.Y.Z"
 published: true
 description: [One-liner]
 tags: typescript, opensource, architecture, edi
+series: Building EDIFlow in TypeScript
 cover_image: [optional]
 ---
 
@@ -174,9 +178,26 @@ cover_image: [optional]
 
 ---
 
+Previous articles:
+- [Part 1: Why Clean Architecture](https://dev.to/helloediflow/building-ediflow-in-typescript-part-1-why-clean-architecture-1hhm)
+
 GitHub: https://github.com/ediflow-lib/core
 NPM: https://www.npmjs.com/package/@ediflow/core
 ```
+
+**Suggested Articles for v0.2.0:**
+- Quick update post: "EDIFlow v0.2.0 - Clean Architecture Refactoring"
+- OR: Wait for Part 2-6 series to continue (Domain Layer already planned!)
+
+**Planned Series Structure:**
+- Part 1: Why Clean Architecture ✅ (Published)
+- Part 2: Domain Layer Deep-Dive (Planned)
+- Part 3: Application Layer - Use Cases & Services (Planned)
+- Part 4: Infrastructure Layer & Monorepo (Planned)
+- Part 5: Presentation Layer - CLI (Planned)
+- Part 6: Lessons Learned (Planned)
+
+See: `docs/private/business/marketing/devto-series/` for detailed planning
 
 **Tips:**
 - Include code examples
