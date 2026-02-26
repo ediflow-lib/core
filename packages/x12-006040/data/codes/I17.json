@@ -1,0 +1,18 @@
+{
+  "code": "I17",
+  "name": "Code indicating the status of the receipt of the interchange control structure",
+  "values": [
+    {
+      "code": "A",
+      "name": "The Transmitted Interchange Control Structure Header and Trailer Have Been Received and Have No Errors."
+    },
+    {
+      "code": "E",
+      "name": "The Transmitted Interchange Control Structure Header and Trailer Have Been Received and Are Accepted But Errors Are Noted. This Means the Sender Must Not Resend This Data."
+    },
+    {
+      "code": "R",
+      "name": "The Transmitted Interchange Control Structure Header and Trailer are Rejected Because of Errors."
+    }
+  ]
+}

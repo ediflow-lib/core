@@ -1,0 +1,73 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "357",
+  "name": "U.S. Customs In-Bond Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the U.S. Customs In-Bond Information Transaction Set (357) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by transportation carriers, terminal operators, port authorities, and service centers to request authorization for in-bond movements and to add additional legs on to pre-existing in-bond movements.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopP4",
+      "name": "LoopP4",
+      "triggerSegment": "P4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "P4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopM21",
+          "name": "LoopM21",
+          "triggerSegment": "M21",
+          "mandatory": true,
+          "maxOccurrences": 999,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "M21",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "M12",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

@@ -171,10 +171,11 @@ CUSCAR, CUSDEC, CUSREP, CUSRES, and more
 - [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) - 7 messages
 - [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) - 4 messages
 - [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 messages
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 - 50 messages (GS1 Retail)
 
 ---
 
-## 💡 Why 196 Message Types?
+## 💡 Why 198 Message Types?
 
 D.12A represents the **mature EDIFACT standard** (2012) with extensive industry coverage:
 

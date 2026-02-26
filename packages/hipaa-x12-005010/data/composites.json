@@ -1,0 +1,480 @@
+{
+  "C040": {
+    "code": "C040",
+    "name": "Reference Identifier",
+    "components": [
+      {
+        "elementCode": "128",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C035": {
+    "code": "C035",
+    "name": "Provider Specialty Information",
+    "components": [
+      {
+        "elementCode": "1222",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "559",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C056": {
+    "code": "C056",
+    "name": "Composite Race or Ethnicity Information",
+    "components": [
+      {
+        "elementCode": "1109",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C052": {
+    "code": "C052",
+    "name": "Medicare Status Code",
+    "components": [
+      {
+        "elementCode": "1218",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1701",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C022": {
+    "code": "C022",
+    "name": "Health Care Code Information",
+    "components": [
+      {
+        "elementCode": "1270",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1271",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "799",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "C003": {
+    "code": "C003",
+    "name": "Composite Medical Procedure Identifier",
+    "components": [
+      {
+        "elementCode": "235",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "234",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "1339",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "C001": {
+    "code": "C001",
+    "name": "Composite Unit of Measure",
+    "components": [
+      {
+        "elementCode": "355",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1018",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1018",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "1018",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "1018",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "elementCode": "1018",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 15
+      }
+    ]
+  },
+  "C043": {
+    "code": "C043",
+    "name": "Health Care Claim Status",
+    "components": [
+      {
+        "elementCode": "1271",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1271",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C023": {
+    "code": "C023",
+    "name": "Health Care Service Location Information",
+    "components": [
+      {
+        "elementCode": "1331",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1332",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1325",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C024": {
+    "code": "C024",
+    "name": "Related Causes Information",
+    "components": [
+      {
+        "elementCode": "1362",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "156",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "26",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C002": {
+    "code": "C002",
+    "name": "Actions Indicated",
+    "components": [
+      {
+        "elementCode": "704",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "C006": {
+    "code": "C006",
+    "name": "Oral Cavity Designation",
+    "components": [
+      {
+        "elementCode": "1361",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "C005": {
+    "code": "C005",
+    "name": "Tooth Surface",
+    "components": [
+      {
+        "elementCode": "1369",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "C061": {
+    "code": "C061",
+    "name": "Member Health and Treatment Information",
+    "components": [
+      {
+        "elementCode": "1212",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C042": {
+    "code": "C042",
+    "name": "Adjustment Identifier",
+    "components": [
+      {
+        "elementCode": "1271",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C998": {
+    "code": "C998",
+    "name": "Context Identification",
+    "components": [
+      {
+        "elementCode": "9999",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "9998",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C030": {
+    "code": "C030",
+    "name": "Position in Segment",
+    "components": [
+      {
+        "elementCode": "722",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1528",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1686",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C999": {
+    "code": "C999",
+    "name": "Reference in Segment",
+    "components": [
+      {
+        "elementCode": "725",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "725",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  }
+}

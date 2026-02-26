@@ -110,13 +110,15 @@ if (validation.success) {
 - ✅ Starting new EDIFACT integration (recommended!)
 - ✅ Need latest standard features
 - ✅ Modern logistics & retail
+- ✅ Comprehensive message coverage (196 types)
 - ✅ No legacy system constraints
 
 **This is the recommended version for new projects!** ⭐
 
 **Consider other versions if:**
-- 🔄 **D.12A** - Need more message types (196 total)
-- 🔄 **D.96A** or **D.01B** - Legacy partner requirements
+- 🔄 **D.01B** - Most comprehensive (226 message types)
+- 🔄 **D.12A** - Alternative comprehensive version (198 messages)
+- 🔄 **D.96A** - Legacy partner requirements (126 messages)
 
 ---
 
@@ -129,6 +131,7 @@ if (validation.success) {
 - [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) - 7 messages
 - [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) - 4 messages
 - [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) - 196 messages
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 - 50 messages (GS1 Retail)
 
 ---
 

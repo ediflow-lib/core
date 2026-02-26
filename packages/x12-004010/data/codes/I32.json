@@ -1,0 +1,18 @@
+{
+  "code": "I32",
+  "name": "Code indicating the status of receipt by the interconnect entity receiver of the interconnect mailbag and the actions to be taken, if any",
+  "values": [
+    {
+      "code": "A",
+      "name": "Accept; the Interconnect Mailbag Containing at Least One Interchange is Received in Full, Safely Stored and Accepted"
+    },
+    {
+      "code": "C",
+      "name": "Reject/Contact; One or More Problems Have Been Detected with the Interconnect Mailbag; the Data Contents (If Any) of the Rejected Interconnect Mailbag Will Not Be Processed As Is; the Interconnect Administrator from the Interconnect Entity Issuing the Reject Notice Will Contact the Interconnect Administrator from the Interconnect Entity Receiving the Reject Notice to Resolve the Problems Found in the Interconnect Mailbag"
+    },
+    {
+      "code": "R",
+      "name": "Reject/Retransmit; One or More Problems Have Been Detected with the Interconnect Mailbag; the Data Contents of the Rejected Interconnect Mailbag Will Not be Processed; the Interconnect Entity Sender of the Rejected Interconnect Mailbag Should Retransmit the Mailbag"
+    }
+  ]
+}

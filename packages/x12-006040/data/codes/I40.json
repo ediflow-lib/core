@@ -1,0 +1,42 @@
+{
+  "code": "I40",
+  "name": "Code indicating the action taken on the interchange or functional group by the service request handler or the receiver",
+  "values": [
+    {
+      "code": "AK",
+      "name": "Transfer to the Next Service Request Handler has been Acknowledged"
+    },
+    {
+      "code": "BH",
+      "name": "Transfer to Service Request Handler not Capable of Reporting Further Status"
+    },
+    {
+      "code": "DL",
+      "name": "Delivered Interchange by Service Request Handler"
+    },
+    {
+      "code": "PU",
+      "name": "Purged by Interchange Receiver"
+    },
+    {
+      "code": "RD",
+      "name": "Redirected by Service Request Handler to an Alternate Receiver as Identified in the Reference Code"
+    },
+    {
+      "code": "RF",
+      "name": "Refused by Interchange Receiver"
+    },
+    {
+      "code": "RJ",
+      "name": "Rejected by Service Request Handler; See Error Reason Code for Cause"
+    },
+    {
+      "code": "RT",
+      "name": "Retrieved Interchange by Receiver"
+    },
+    {
+      "code": "TR",
+      "name": "Transferred to Next Service Request Handler by Service Request Handler, but not yet Acknowledged"
+    }
+  ]
+}

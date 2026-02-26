@@ -1,0 +1,86 @@
+{
+  "standard": "EANCOM",
+  "version": "2002",
+  "messageType": "KEYMAN",
+  "name": "Security key and certificate management message",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNA",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNB",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG4",
+      "name": "SG4",
+      "triggerSegment": "USL",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "USL",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "SG5",
+          "name": "SG5",
+          "triggerSegment": "USC",
+          "mandatory": true,
+          "maxOccurrences": 9999,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "USC",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "USA",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNZ",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    }
+  ]
+}

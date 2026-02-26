@@ -1,5 +1,112 @@
 {
-  "code": "4215",
-  "name": "Transport charges method of payment, coded",
-  "values": []
+  "elementCode": "4215",
+  "elementName": "Transport charges method of payment, coded",
+  "values": [
+    {
+      "code": "A",
+      "name": "Account",
+      "description": "The charges are to be charged to an account."
+    },
+    {
+      "code": "CA",
+      "name": "Advance collect",
+      "description": "The amount of freight or other charge on a shipment advanced by one transportation line to another or to the shipper, to be collected from consignee."
+    },
+    {
+      "code": "CC",
+      "name": "Collect",
+      "description": "A shipment on which freight charges will be paid by consignee."
+    },
+    {
+      "code": "CF",
+      "name": "Collect, freight credited to payment customer"
+    },
+    {
+      "code": "DF",
+      "name": "Defined by buyer and seller"
+    },
+    {
+      "code": "FO",
+      "name": "FOB port of call",
+      "description": "Title and control of goods pass to the buyer at port of call. Responsibility for export taxes and cost of documents for overseas shipments have not been specified."
+    },
+    {
+      "code": "IC",
+      "name": "Information copy, no payment due",
+      "description": "Transaction set has been provided for information only."
+    },
+    {
+      "code": "MX",
+      "name": "Mixed"
+    },
+    {
+      "code": "NC",
+      "name": "Service freight, no charge"
+    },
+    {
+      "code": "NS",
+      "name": "Not specified"
+    },
+    {
+      "code": "PA",
+      "name": "Advance prepaid",
+      "description": "Costs have been paid in advance."
+    },
+    {
+      "code": "PB",
+      "name": "Customer pick-up/backhaul",
+      "description": "Buyer's private carriage picks up the goods as a return load to the buyer's facility."
+    },
+    {
+      "code": "PC",
+      "name": "Prepaid but charged to customer",
+      "description": "shipping charges have been paid in advance of shipment but are charged back to consignee usually as line item on invoice for the purchased goods."
+    },
+    {
+      "code": "PE",
+      "name": "Payable elsewhere",
+      "description": "Place of payment not known at the begin of conveyance."
+    },
+    {
+      "code": "PO",
+      "name": "Prepaid only",
+      "description": "Payment in advance of freight and/or other charges prior to delivery of shipment at destination, usually by shipper at point of origin."
+    },
+    {
+      "code": "PP",
+      "name": "Prepaid (by seller)",
+      "description": "Seller of goods makes payment to carrier for freight charges prior to shipment."
+    },
+    {
+      "code": "PU",
+      "name": "Pickup",
+      "description": "Customer is responsible for payment of pickup charges at shipping point."
+    },
+    {
+      "code": "RC",
+      "name": "Return container freight paid by customer"
+    },
+    {
+      "code": "RF",
+      "name": "Return container freight free"
+    },
+    {
+      "code": "RS",
+      "name": "Return container freight paid by supplier"
+    },
+    {
+      "code": "TP",
+      "name": "Third party pay",
+      "description": "A third party, someone other than buyer or seller, is identified as responsible for payment of shipping charges."
+    },
+    {
+      "code": "WC",
+      "name": "Weight condition",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
 }

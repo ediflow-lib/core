@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "354",
+  "name": "Customs Automated Manifest Archive Status",
+  "description": "Customs Automated Manifest Archive Status",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopP4",
+      "name": "LoopP4",
+      "triggerSegment": "P4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "P4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "X01",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "X02",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

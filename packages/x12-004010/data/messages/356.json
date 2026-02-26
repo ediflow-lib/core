@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "356",
+  "name": "U.S. Customs Permit to Transfer Request",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the U.S. Customs Permit to Transfer Request Transaction Set (356) for use within the context of an Electronic Data Interchange (EDI) environment.\nIt is sent by requesting trade entities to U.S. Customs to request a Permit To Transfer (PTT).",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopP4",
+      "name": "LoopP4",
+      "triggerSegment": "P4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "P4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "M20",
+          "mandatory": true,
+          "maxOccurrences": 9999,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

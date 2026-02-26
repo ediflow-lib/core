@@ -1,0 +1,119 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "485",
+  "name": "Ratemaking Action",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Ratemaking Action Transaction Set (485) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to transmit ratemaking activities related to concurrence, factor change, publisher change, or proposal rejection or trace.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DK",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PRI",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SA",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "SC",
+      "mandatory": false,
+      "maxOccurrences": 8,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "SC",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "Loop0110",
+          "name": "Loop0110",
+          "triggerSegment": "RA",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "RA",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "FK",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "Loop0111",
+              "name": "Loop0111",
+              "triggerSegment": "MC",
+              "mandatory": false,
+              "maxOccurrences": 64,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "MC",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "FK",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "SW",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    }
+  ]
+}

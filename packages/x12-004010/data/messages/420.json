@@ -1,0 +1,48 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "420",
+  "name": "Car Handling Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Car Handling Information Transaction Set (420) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide a carrier which is going to receive a rail car from another rail carrier the means to redirect a home route or pre-block a rail car prior to actual interchange.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopE6",
+      "name": "LoopE6",
+      "triggerSegment": "E6",
+      "mandatory": true,
+      "maxOccurrences": 150,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "E6",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "E8",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

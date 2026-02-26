@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "361",
+  "name": "Carrier Interchange Agreement (Ocean)",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Carrier Interchange Agreement (Ocean) Transaction Set (361) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide all the information necessary for an ocean carrier to tell a terminal operator if motor carriers are authorized to carry its cargo.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopCI",
+      "name": "LoopCI",
+      "triggerSegment": "CI",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "CI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

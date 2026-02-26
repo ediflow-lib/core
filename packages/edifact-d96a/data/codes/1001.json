@@ -1,5 +1,1677 @@
 {
-  "code": "1001",
-  "name": "= 271.",
-  "values": []
+  "elementCode": "1001",
+  "elementName": "Document/message name, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Certificate of analysis",
+      "description": "Certificate providing the values of an analysis."
+    },
+    {
+      "code": "2",
+      "name": "Certificate of conformity",
+      "description": "Certificate certifying the conformity to predefined definitions."
+    },
+    {
+      "code": "3",
+      "name": "Certificate of quality",
+      "description": "Certificate certifying the quality of goods, services etc."
+    },
+    {
+      "code": "4",
+      "name": "Test report",
+      "description": "Report providing the results of a test session."
+    },
+    {
+      "code": "5",
+      "name": "Product performance report",
+      "description": "Report specifying the performance values of products."
+    },
+    {
+      "code": "6",
+      "name": "Product specification report",
+      "description": "Report providing specification values of products."
+    },
+    {
+      "code": "7",
+      "name": "Process data report",
+      "description": "Reports on events during production process."
+    },
+    {
+      "code": "8",
+      "name": "First sample test report"
+    },
+    {
+      "code": "9",
+      "name": "Price/sales catalogue"
+    },
+    {
+      "code": "10",
+      "name": "Party information",
+      "description": "Document/message providing basic data concerning a party."
+    },
+    {
+      "code": "11",
+      "name": "Federal label approval",
+      "description": "A pre-approved document relating to federal label approval requirements."
+    },
+    {
+      "code": "12",
+      "name": "Mill certificate",
+      "description": "Certificate certifying a specific quality of agricultural products."
+    },
+    {
+      "code": "13",
+      "name": "Post receipt",
+      "description": "Document/message which evidences the transport of goods by post (e.g. mail, parcel, etc.)."
+    },
+    {
+      "code": "14",
+      "name": "Weight certificate",
+      "description": "Certificate certifying the weight of goods."
+    },
+    {
+      "code": "15",
+      "name": "Weight list",
+      "description": "Document/message specifying the weight of goods."
+    },
+    {
+      "code": "16",
+      "name": "Certificate",
+      "description": "Document by means of which the documentary credit applicant specifies the conditions for the certificate and by whom the certificate is to be issued."
+    },
+    {
+      "code": "17",
+      "name": "Combined certificate of value and origin",
+      "description": "Document identifying goods, in which the authority empowered to issue it certifies expressly that the goods to which the respective goods originate in a specific (part of or group of) country(ies). It also states the price and/or costs of the goods with the purpose of determining the Customs value."
+    },
+    {
+      "code": "18",
+      "name": "Movement certificate A.TR.1",
+      "description": "Specific form of transit declaration issued by the exporter (movement certificate)."
+    },
+    {
+      "code": "19",
+      "name": "Certificate of quantity",
+      "description": "Certificate certifying the quantity of goods, services etc."
+    },
+    {
+      "code": "20",
+      "name": "Quality data  message",
+      "description": "Usage of QALITY-message."
+    },
+    {
+      "code": "21",
+      "name": "Query",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "22",
+      "name": "Response to query",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "23",
+      "name": "Status information",
+      "description": "Information regarding the status of a related message."
+    },
+    {
+      "code": "24",
+      "name": "Restow",
+      "description": "Message/document identifying containers that have been unloaded and then reloaded onto the same means of transport."
+    },
+    {
+      "code": "25",
+      "name": "Container discharger list",
+      "description": "Message/document itemising containers to be discharged from vessel."
+    },
+    {
+      "code": "26",
+      "name": "Corporate superannuation contributions advice",
+      "description": "Document/message providing contributions advice used for corporate superannuation schemes."
+    },
+    {
+      "code": "27",
+      "name": "Industry superannuation contributions advice",
+      "description": "Document/message providing contributions advice used for superannuation schemes which are industry wide."
+    },
+    {
+      "code": "28",
+      "name": "Corporate superannuation member maintenance message",
+      "description": "Member maintenance message used for corporate superannuation schemes."
+    },
+    {
+      "code": "29",
+      "name": "Industry superannuation member maintenance message",
+      "description": "Member maintenance message used for industry wide superannuation schemes."
+    },
+    {
+      "code": "30",
+      "name": "Life insurance payroll deductions advice",
+      "description": "Payroll deductions advice used in the life insurance industry."
+    },
+    {
+      "code": "31",
+      "name": "Underbond request",
+      "description": "A Message/document requesting to move cargo from one Customs control point to another."
+    },
+    {
+      "code": "32",
+      "name": "Underbond approval",
+      "description": "A message/document issuing Customs approval to move cargo from one Customs control point to another."
+    },
+    {
+      "code": "33",
+      "name": "Certificate of sealing of export meat lockers",
+      "description": "Document / message issued by the authority in the exporting country evidencing the sealing of export meat lockers."
+    },
+    {
+      "code": "34",
+      "name": "Cargo status",
+      "description": "Message identifying the status of cargo."
+    },
+    {
+      "code": "35",
+      "name": "Inventory report",
+      "description": "A message specifying information relating to held inventories."
+    },
+    {
+      "code": "36",
+      "name": "Identity card",
+      "description": "Official document to identify a person."
+    },
+    {
+      "code": "37",
+      "name": "Response to a trade statistics message",
+      "description": "Document/message in which the competent national authorities provide a declarant with an acceptance or a rejection about a received declaration for European statistical purposes."
+    },
+    {
+      "code": "38",
+      "name": "Vaccination certificate",
+      "description": "Official document proving immunisation against certain diseases."
+    },
+    {
+      "code": "39",
+      "name": "Passport",
+      "description": "An official document giving permission to travel in foreign countries."
+    },
+    {
+      "code": "40",
+      "name": "Driving licence (national)",
+      "description": "An official document giving permission to drive a car in a given country."
+    },
+    {
+      "code": "41",
+      "name": "Driving licence (international)",
+      "description": "An official document giving a native of one country permission to drive a vehicle in certain other countries."
+    },
+    {
+      "code": "42",
+      "name": "Free pass",
+      "description": "A document giving free access to a service."
+    },
+    {
+      "code": "43",
+      "name": "Season ticket",
+      "description": "A document giving access to a service for a determined period of time."
+    },
+    {
+      "code": "59",
+      "name": "Treatment - nil outturn",
+      "description": "No shortage, surplus or damaged outturn resulting from container vessel unpacking."
+    },
+    {
+      "code": "60",
+      "name": "Treatment - time-up underbond",
+      "description": "Movement type indicator: goods are moved under customs control for warehousing due to being time-up."
+    },
+    {
+      "code": "61",
+      "name": "Treatment - underbond by sea",
+      "description": "Movement type indicator: goods are to move by sea under customs control to a customs office where formalities will be completed."
+    },
+    {
+      "code": "62",
+      "name": "Treatment - personal effect",
+      "description": "Cargo consists of personal effects."
+    },
+    {
+      "code": "63",
+      "name": "Treatment - timber",
+      "description": "Cargo consists of timber."
+    },
+    {
+      "code": "64",
+      "name": "Preliminary credit assessment",
+      "description": "Document/message issued either by a factor to indicate his preliminary credit assessment on a buyer, or by a seller to request a factor's preliminary credit assessment on a buyer."
+    },
+    {
+      "code": "65",
+      "name": "Credit cover",
+      "description": "Document/message issued either by a factor to give a credit cover on a buyer, or by a seller to request a factor's credit cover."
+    },
+    {
+      "code": "66",
+      "name": "Current account",
+      "description": "Document/message issued by a factor to indicate the money movements of a seller's or another factor's account with him."
+    },
+    {
+      "code": "67",
+      "name": "Commercial dispute",
+      "description": "Document/message issued by a party (usually the buyer) to indicate that one or more invoices or one or more credit notes are disputed for payment."
+    },
+    {
+      "code": "68",
+      "name": "Chargeback",
+      "description": "Document/message issued by a factor to a seller or to another factor to indicate that the rest of the amounts of one or more invoices uncollectable from buyers are charged back to clear the invoice(s) off the ledger."
+    },
+    {
+      "code": "69",
+      "name": "Reassignment",
+      "description": "Document/message issued by a factor to a seller or to another factor to reassign an invoice or credit note previously assigned to him."
+    },
+    {
+      "code": "70",
+      "name": "Collateral account",
+      "description": "Document message issued by a factor to indicate the movements of invoices, credit notes and payments of a seller's account."
+    },
+    {
+      "code": "71",
+      "name": "Request for payment",
+      "description": "Document/message issued by a creditor to a debtor to request payment of one or more invoices past due."
+    },
+    {
+      "code": "72",
+      "name": "Unship permit",
+      "description": "A message or document issuing permission to unship cargo."
+    },
+    {
+      "code": "73",
+      "name": "Statistical definitions",
+      "description": "Transmission of one or more statistical definitions."
+    },
+    {
+      "code": "74",
+      "name": "Statistical data",
+      "description": "Transmission of one or more items of data or data sets."
+    },
+    {
+      "code": "75",
+      "name": "Request for statistical data",
+      "description": "Request for one or more items or data sets of statistical data."
+    },
+    {
+      "code": "76",
+      "name": "Call-off delivery",
+      "description": "Document/message to provide split quantities and delivery dates referring to a previous delivery instruction."
+    },
+    {
+      "code": "77",
+      "name": "Status report",
+      "description": "Message covers information about the consignment status."
+    },
+    {
+      "code": "78",
+      "name": "Inventory movement advice",
+      "description": "Advice of inventory movements."
+    },
+    {
+      "code": "79",
+      "name": "Inventory status advice",
+      "description": "Advice of stock on hand."
+    },
+    {
+      "code": "80",
+      "name": "Debit note related to goods or services",
+      "description": "Debit information related to a transaction for goods or services to the relevant party."
+    },
+    {
+      "code": "81",
+      "name": "Credit note related to goods or services",
+      "description": "Document message used to provide credit information related to a transaction for goods or services to the relevant party."
+    },
+    {
+      "code": "82",
+      "name": "Metered services invoice",
+      "description": "Document/message claiming payment for the supply of metered services (e.g., gas, electricity, etc.) supplied to a fixed meter whose consumption is measured over a period of time."
+    },
+    {
+      "code": "83",
+      "name": "Credit note related to financial adjustments",
+      "description": "Document message for providing credit information related to financial adjustments to the relevant party, e.g., bonuses."
+    },
+    {
+      "code": "84",
+      "name": "Debit note related to financial adjustments",
+      "description": "Document/message for providing debit information related to financial adjustments to the relevant party."
+    },
+    {
+      "code": "85",
+      "name": "Customs manifest",
+      "description": "Message/document identifying a customs manifest. The document itemises a list of cargo prepared by shipping companies from bills of landing and presented to customs for formal report of cargo."
+    },
+    {
+      "code": "86",
+      "name": "Vessel unpack report",
+      "description": "A document code to indicate that the message being transmitted identifies all short and surplus cargoes off- loaded from a vessel at a specified discharging port."
+    },
+    {
+      "code": "87",
+      "name": "General cargo summary manifest report",
+      "description": "A document code to indicate that the message being transmitted is summary manifest information for general cargo."
+    },
+    {
+      "code": "88",
+      "name": "Consignment unpack report",
+      "description": "A document code to indicate that the message being transmitted is a consignment unpack report only."
+    },
+    {
+      "code": "89",
+      "name": "Meat and meat by-products sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that meat or meat by- products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "90",
+      "name": "Meat food products sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that meat food products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "91",
+      "name": "Poultry sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that poultry products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "92",
+      "name": "Horsemeat sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that horsemeat products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "93",
+      "name": "Casing sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that casing products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "94",
+      "name": "Pharmaceutical sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that pharmaceutical products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "95",
+      "name": "Inedible sanitary certificate",
+      "description": "Document or message issued by the competent authority in the exporting country evidencing that inedible products comply with the requirements set by the importing country."
+    },
+    {
+      "code": "96",
+      "name": "Impending arrival",
+      "description": "Notification of impending arrival details for vessel."
+    },
+    {
+      "code": "97",
+      "name": "Means of transport advice",
+      "description": "Message reporting the means of transport used to carry goods or cargo."
+    },
+    {
+      "code": "98",
+      "name": "Arrival information",
+      "description": "Message reporting the arrival details of goods or cargo."
+    },
+    {
+      "code": "99",
+      "name": "Cargo release notification",
+      "description": "Message/document sent by the cargo handler indicating that the cargo has moved from a Customs controlled premise."
+    },
+    {
+      "code": "100",
+      "name": "Excise certificate",
+      "description": "Certificate asserting that the goods have been submitted to the excise authorities before departure from the exporting country or before delivery in case of import traffic."
+    },
+    {
+      "code": "101",
+      "name": "Registration document",
+      "description": "An official document providing registration details."
+    },
+    {
+      "code": "105",
+      "name": "Purchase order",
+      "description": "Document/message issued within an enterprise to initiate the purchase of articles, materials or services required for the production or manufacture of goods to be offered for sale or otherwise supplied to customers."
+    },
+    {
+      "code": "110",
+      "name": "Manufacturing instructions",
+      "description": "Document/message issued within an enterprise to initiate the manufacture of goods to be offered for sale."
+    },
+    {
+      "code": "120",
+      "name": "Stores requisition",
+      "description": "Document/message issued within an enterprise ordering the taking out of stock of goods."
+    },
+    {
+      "code": "130",
+      "name": "Invoicing data sheet",
+      "description": "Document/message issued within an enterprise containing data about goods sold, to be used as the basis for the preparation of an invoice."
+    },
+    {
+      "code": "140",
+      "name": "Packing instructions",
+      "description": "Document/message within an enterprise giving instructions on how goods are to be packed."
+    },
+    {
+      "code": "150",
+      "name": "Internal transport order",
+      "description": "Document/message giving instructions about the transport of goods within an enterprise."
+    },
+    {
+      "code": "190",
+      "name": "Statistical and other administrative internal documents",
+      "description": "Documents/messages issued within an enterprise for the for the purpose of collection of production and other internal statistics, and for other administration purposes."
+    },
+    {
+      "code": "201",
+      "name": "Direct payment valuation request",
+      "description": "Request to establish a direct payment valuation."
+    },
+    {
+      "code": "202",
+      "name": "Direct payment valuation",
+      "description": "Document/message addressed, for instance, by a general contractor to the owner, in order that a direct payment be made to a subcontractor."
+    },
+    {
+      "code": "203",
+      "name": "Provisional payment valuation",
+      "description": "Document/message establishing a provisional payment valuation."
+    },
+    {
+      "code": "204",
+      "name": "Payment valuation",
+      "description": "Document/message establishing the financial elements of a situation of works."
+    },
+    {
+      "code": "205",
+      "name": "Quantity valuation",
+      "description": "Document/message providing a confirmed assessment, by quantity, of the completed work for a construction contract."
+    },
+    {
+      "code": "206",
+      "name": "Quantity valuation request",
+      "description": "Document/message providing an initial assessment, by quantity, of the completed work for a construction contract."
+    },
+    {
+      "code": "207",
+      "name": "Contract bill of quantities - BOQ",
+      "description": "Document/message providing a formal specification identifying quantities and prices that are the basis of a contract for a construction project. BOQ means: Bill of quantity."
+    },
+    {
+      "code": "208",
+      "name": "Unpriced tender BOQ",
+      "description": "Document/message providing a detailed, quantity based specification, issued in an unpriced form to invite tender prices. BOQ means: Bill of quantity."
+    },
+    {
+      "code": "209",
+      "name": "Priced tender BOQ",
+      "description": "Document/message providing a detailed, quantity based specification, updated with prices to form a tender submission for a construction contract. BOQ means: Bill of quantity."
+    },
+    {
+      "code": "210",
+      "name": "Enquiry",
+      "description": "Document/message issued by a party interested in the purchase of goods specified therein and indicating particular, desirable conditions regarding delivery terms, etc., addressed to a prospective supplier with a view to obtaining an offer."
+    },
+    {
+      "code": "211",
+      "name": "Interim application for payment",
+      "description": "Document/message containing a provisional assessment in support of a request for payment for completed work for a construction contract."
+    },
+    {
+      "code": "212",
+      "name": "Agreement to pay",
+      "description": "Document/message in which the debtor expresses the intention to pay."
+    },
+    {
+      "code": "215",
+      "name": "Letter of intent",
+      "description": "Document/message by means of which a buyer informs a seller that the buyer intends to enter into contractual negotiations."
+    },
+    {
+      "code": "220",
+      "name": "Order",
+      "description": "Document/message by means of which a buyer initiates a transaction with a seller involving the supply of goods or services as specified, according to conditions set out in an offer, or otherwise known to the buyer."
+    },
+    {
+      "code": "221",
+      "name": "Blanket order",
+      "description": "Usage of document/message for general order purposes with later split into quantities and delivery dates and maybe delivery locations."
+    },
+    {
+      "code": "222",
+      "name": "Spot order",
+      "description": "Document/message ordering the remainder of a production's batch."
+    },
+    {
+      "code": "223",
+      "name": "Lease order",
+      "description": "Document/message for goods in leasing contracts."
+    },
+    {
+      "code": "224",
+      "name": "Rush order",
+      "description": "Document/message for urgent ordering."
+    },
+    {
+      "code": "225",
+      "name": "Repair order",
+      "description": "Document/message to order repair of goods."
+    },
+    {
+      "code": "226",
+      "name": "Call off order",
+      "description": "Document/message to provide split quantities and delivery dates referring to a previous blanket order."
+    },
+    {
+      "code": "227",
+      "name": "Consignment order",
+      "description": "Order to deliver goods into stock with agreement on payment when goods are sold out of this stock."
+    },
+    {
+      "code": "228",
+      "name": "Sample order",
+      "description": "Document/message to order samples."
+    },
+    {
+      "code": "229",
+      "name": "Swap order",
+      "description": "Document/message informing buyer or seller of the replacement of goods previously ordered."
+    },
+    {
+      "code": "230",
+      "name": "Purchase order change request",
+      "description": "Change to an purchase order already sent."
+    },
+    {
+      "code": "231",
+      "name": "Purchase order response",
+      "description": "Response to an purchase order already received."
+    },
+    {
+      "code": "232",
+      "name": "Hire order",
+      "description": "Document/message for hiring human resources or renting goods or equipment."
+    },
+    {
+      "code": "233",
+      "name": "Spare parts order",
+      "description": "Document/message to order spare parts."
+    },
+    {
+      "code": "240",
+      "name": "Delivery instructions",
+      "description": "Document/message issued by a buyer giving instructions regarding the details of the delivery of goods ordered."
+    },
+    {
+      "code": "241",
+      "name": "Delivery schedule",
+      "description": "Usage of DELFOR-message."
+    },
+    {
+      "code": "242",
+      "name": "Delivery just-in-time",
+      "description": "Usage of DELJIT-message."
+    },
+    {
+      "code": "245",
+      "name": "Delivery release",
+      "description": "Document/message issued by a buyer releasing the despatch of goods after receipt of the Ready for despatch advice from the seller."
+    },
+    {
+      "code": "270",
+      "name": "Delivery note",
+      "description": "Paper document attached to a consignment informing the receiving party about contents of this consignment."
+    },
+    {
+      "code": "271",
+      "name": "Packing list",
+      "description": "Document/message specifying the distribution of goods in individual packages (in trade environment the despatch advice message is used for the packing list)."
+    },
+    {
+      "code": "310",
+      "name": "Offer/quotation",
+      "description": "Document/message which , with a view to concluding a contract, sets out the conditions under which the goods are offered."
+    },
+    {
+      "code": "311",
+      "name": "Request for quote",
+      "description": "Document/message requesting a quote on specified goods or services."
+    },
+    {
+      "code": "315",
+      "name": "Contract",
+      "description": "Document/message evidencing an agreement between the seller and the buyer for the supply of goods or services; its effects are equivalent to those of an order followed by an acknowledgement of order."
+    },
+    {
+      "code": "320",
+      "name": "Acknowledgement of order",
+      "description": "Document/message acknowledging an undertaking to fulfil an order and confirming conditions or acceptance of conditions."
+    },
+    {
+      "code": "325",
+      "name": "Proforma invoice",
+      "description": "Document/message serving as a preliminary invoice, containing - on the whole - the same information as the final invoice, but not actually claiming payment."
+    },
+    {
+      "code": "326",
+      "name": "Partial invoice"
+    },
+    {
+      "code": "327",
+      "name": "Operating instructions"
+    },
+    {
+      "code": "328",
+      "name": "Name/product plate",
+      "description": "Plates on goods identifying and describing an article."
+    },
+    {
+      "code": "330",
+      "name": "Request for delivery instructions",
+      "description": "Document/message issued by a supplier requesting instructions from the buyer regarding the details of the delivery of goods ordered."
+    },
+    {
+      "code": "335",
+      "name": "Booking request",
+      "description": "Document/message issued by a supplier to a carrier requesting space to be reserved for a specified consignment, indicating desirable conveyance, despatch time, etc."
+    },
+    {
+      "code": "340",
+      "name": "Shipping instructions",
+      "description": "Document/message advising details of cargo and exporter's requirements for its physical movement."
+    },
+    {
+      "code": "341",
+      "name": "Shipper's letter of instructions (air)",
+      "description": "Document/message issued by a consignor in which he gives details of a consignment of goods that enables an airline or its agent to prepare an air waybill."
+    },
+    {
+      "code": "343",
+      "name": "Cartage order (local transport)",
+      "description": "Document/message giving instructions regarding local transport of goods, e.g. from the premises of an enterprise to those of a carrier undertaking further transport."
+    },
+    {
+      "code": "345",
+      "name": "Ready for despatch advice",
+      "description": "Document/message issued by a supplier informing a buyer that goods ordered are ready for despatch."
+    },
+    {
+      "code": "350",
+      "name": "Despatch order",
+      "description": "Document/message issued by a supplier initiating the despatch of goods to a buyer (consignee)."
+    },
+    {
+      "code": "351",
+      "name": "Despatch advice",
+      "description": "Document/message by means of which the seller or consignor informs the consignee about the despatch of goods."
+    },
+    {
+      "code": "370",
+      "name": "Advice of distribution of documents",
+      "description": "Document/message in which the party responsible for the issue of a set of trade documents specifies the various recipients of originals and copies of these documents, with an indication of the number of copies distributed to each of them."
+    },
+    {
+      "code": "380",
+      "name": "Commercial invoice",
+      "description": "Document/message claiming payment for goods or services supplied under conditions agreed between seller and buyer."
+    },
+    {
+      "code": "381",
+      "name": "Credit note",
+      "description": "Document/message for providing credit information to the relevant party."
+    },
+    {
+      "code": "382",
+      "name": "Commission note",
+      "description": "Document/message in which a seller specifies the amount of commission, the percentage of the invoice amount, or some other basis for the calculation of the commission to which a sales agent is entitled."
+    },
+    {
+      "code": "383",
+      "name": "Debit note",
+      "description": "Document/message for providing debit information to the relevant party."
+    },
+    {
+      "code": "384",
+      "name": "Corrected invoice",
+      "description": "Commercial invoice that includes revised information differing from an earlier submission of the same invoice."
+    },
+    {
+      "code": "385",
+      "name": "Consolidated invoice",
+      "description": "Commercial invoice that covers multiple transactions involving more than one vendor."
+    },
+    {
+      "code": "386",
+      "name": "Prepayment invoice",
+      "description": "An invoice to pay amounts for goods and services in advance; these amounts will be subtracted from the final invoice."
+    },
+    {
+      "code": "387",
+      "name": "Hire invoice",
+      "description": "Document/message for invoicing the hiring of human resources or renting goods or equipment."
+    },
+    {
+      "code": "388",
+      "name": "Tax invoice",
+      "description": "An invoice for tax purposes."
+    },
+    {
+      "code": "389",
+      "name": "Self-billed invoice",
+      "description": "An invoice the invoicee is producing instead of the seller."
+    },
+    {
+      "code": "390",
+      "name": "Delcredere invoice",
+      "description": "An invoice sent to the party paying for a number of buyers."
+    },
+    {
+      "code": "393",
+      "name": "Factored invoice",
+      "description": "Invoice assigned to a third party for collection."
+    },
+    {
+      "code": "394",
+      "name": "Lease invoice",
+      "description": "Usage of INVOIC-message for goods in leasing contracts."
+    },
+    {
+      "code": "395",
+      "name": "Consignment invoice",
+      "description": "Commercial invoice that covers a transaction other than one involving a sale."
+    },
+    {
+      "code": "396",
+      "name": "Factored credit note",
+      "description": "Credit note related to assigned invoice(s)."
+    },
+    {
+      "code": "409",
+      "name": "Instructions for bank transfer",
+      "description": "Document/message containing instructions from a customer to his bank to pay an amount in a specified currency to a nominated party in another country by a method either specified (e.g. teletransmission, air mail) or left to the discretion of the bank."
+    },
+    {
+      "code": "412",
+      "name": "Application for banker's draft",
+      "description": "Application by a customer to his bank to issue a banker's draft stating the amount and currency of the draft, the name of the payee and the place and country of payment."
+    },
+    {
+      "code": "425",
+      "name": "Collection payment advice",
+      "description": "Document/message whereby a bank advises that a collection has been paid, giving details and methods of funds disposal."
+    },
+    {
+      "code": "426",
+      "name": "Documentary credit payment advice",
+      "description": "Document/message whereby a bank advises payment under a documentary credit."
+    },
+    {
+      "code": "427",
+      "name": "Documentary credit acceptance advice",
+      "description": "Document/message whereby a bank advises acceptance under a documentary credit."
+    },
+    {
+      "code": "428",
+      "name": "Documentary credit negotiation advice",
+      "description": "Document/message whereby a bank advises negotiation under a documentary credit."
+    },
+    {
+      "code": "429",
+      "name": "Application for banker's guarantee",
+      "description": "Document/message whereby a customer requests his bank to issue a guarantee in favour of a nominated party in another country, stating the amount and currency and the specific conditions of the guarantee."
+    },
+    {
+      "code": "430",
+      "name": "Banker's guarantee",
+      "description": "Document/message in which a bank undertakes to pay out a limited amount of money to a designated party, on conditions stated therein (other than those laid down in the Uniform Customs Practice)."
+    },
+    {
+      "code": "431",
+      "name": "Documentary credit letter of indemnity",
+      "description": "Document/message in which a beneficiary of a documentary credit accepts responsibility for non-compliance with the terms and conditions of the credit, and undertakes to refund the money received under the credit, with interest and charges accrued."
+    },
+    {
+      "code": "435",
+      "name": "Preadvice of a credit",
+      "description": "Preadvice indicating a credit to happen in the future."
+    },
+    {
+      "code": "447",
+      "name": "Collection order",
+      "description": "Document/message whereby a bank is instructed (or requested) to handle financial and/or commercial documents in order to obtain acceptance and/or payment, or to deliver documents on such other terms and conditions as may be specified."
+    },
+    {
+      "code": "448",
+      "name": "Documents presentation form",
+      "description": "Document/message whereby a draft or similar instrument and/or commercial documents are presented to a bank for acceptance, discounting, negotiation, payment or collection, whether or not against a documentary credit."
+    },
+    {
+      "code": "450",
+      "name": "Payment order",
+      "description": "Document/message containing information needed to initiate the payment. It may cover the financial settlement for one or more commercial trade transactions. A payment order is an instruction to the ordered bank to arrange for the payment of one specified amount to the beneficiary."
+    },
+    {
+      "code": "451",
+      "name": "Extended payment order",
+      "description": "Document/message containing information needed to initiate the payment. It may cover the financial settlement for several commercial trade transactions, which it is possible to specify in a special payments detail part. It is an instruction to the ordered bank to arrange for the payment of one specified amount to the beneficiary."
+    },
+    {
+      "code": "452",
+      "name": "Multiple payment order",
+      "description": "Document/message containing a payment order with one debit account and several credit accounts."
+    },
+    {
+      "code": "454",
+      "name": "Credit advice",
+      "description": "Document/message sent by an account servicing institution to one of its account owners, to inform the account owner of an entry which has been or will be credited to its account for a specified amount on the date indicated."
+    },
+    {
+      "code": "455",
+      "name": "Extended credit advice",
+      "description": "Document/message sent by an account servicing institution to one of its account owners, to inform the account owner of an entry that has been or will be credited to its account for a specified amount on the date indicated. It provides extended commercial information concerning the relevant remittance advice."
+    },
+    {
+      "code": "456",
+      "name": "Debit advice",
+      "description": "Advice on a debit."
+    },
+    {
+      "code": "457",
+      "name": "Reversal of debit",
+      "description": "Reversal of debit accounting entry by bank."
+    },
+    {
+      "code": "458",
+      "name": "Reversal of credit",
+      "description": "Reversal of credit accounting entry by bank."
+    },
+    {
+      "code": "460",
+      "name": "Documentary credit application",
+      "description": "Document/message whereby a bank is requested to issue a documentary credit on the conditions specified therein."
+    },
+    {
+      "code": "465",
+      "name": "Documentary credit",
+      "description": "Document/message in which a bank states that it has issued a documentary credit under which the beneficiary is to obtain payment, acceptance or negotiation on compliance with certain terms and conditions and against presentation of stipulated documents and such drafts as may be specified. The credit may or may not be confirmed by another bank."
+    },
+    {
+      "code": "466",
+      "name": "Documentary credit notification",
+      "description": "Document/message issued by an advising bank in order to transmit a documentary credit to a beneficiary, or to another advising bank."
+    },
+    {
+      "code": "467",
+      "name": "Documentary credit transfer advice",
+      "description": "Document/message whereby a bank advises that (part of) a documentary credit is being or has been transferred in favour of a second beneficiary."
+    },
+    {
+      "code": "468",
+      "name": "Documentary credit amendment notification",
+      "description": "Document/message whereby a bank advises that the terms and conditions of a documentary credit have been amended."
+    },
+    {
+      "code": "469",
+      "name": "Documentary credit amendment",
+      "description": "Document/message whereby a bank notifies a beneficiary of the details of an amendment to the terms and conditions of a documentary credit."
+    },
+    {
+      "code": "481",
+      "name": "Remittance advice",
+      "description": "Document/message advising of the remittance of payment."
+    },
+    {
+      "code": "485",
+      "name": "Banker's draft",
+      "description": "Draft drawn in favour of a third party either by one bank on another bank, or by a branch of a bank on its head office (or vice versa) or upon another branch of the same bank. In either case, the draft should comply with the specifications laid down for cheques in the country in which it is to be payable."
+    },
+    {
+      "code": "490",
+      "name": "Bill of exchange",
+      "description": "Document/message, issued and signed in conformity with the applicable legislation, which contains an unconditional order whereby the drawer directs the drawee to pay a definite sum of money to the payee or to his order, on demand or at a definite time, against the surrender of the document itself."
+    },
+    {
+      "code": "491",
+      "name": "Promissory note",
+      "description": "Document/message, issued and signed in conformity with the applicable legislation, which contains an unconditional promise whereby the maker undertakes to pay a definite sum of money to the payee or to his order, on demand or at a definite time, against the surrender of the document itself."
+    },
+    {
+      "code": "492",
+      "name": "Financial statement of account",
+      "description": "Statement giving the status of a financial account."
+    },
+    {
+      "code": "493",
+      "name": "Statement of account message",
+      "description": "Usage of STATAC-message."
+    },
+    {
+      "code": "520",
+      "name": "Insurance certificate",
+      "description": "Document/message issued to the insured certifying that insurance has been effected and that a policy has been issued. Such a certificate for a particular cargo is primarily used when good are insured under the terms of a floating or an open policy; at the request of the insured it can be exchanged for a policy."
+    },
+    {
+      "code": "530",
+      "name": "Insurance policy",
+      "description": "Document/message issued by the insurer evidencing an agreement to insure and containing the conditions of the agreement concluded whereby the insurer undertakes for a specific fee to indemnify the insured for the losses arising out of the perils and accidents specified in the contract."
+    },
+    {
+      "code": "550",
+      "name": "Insurance declaration sheet (bordereau)",
+      "description": "A document/message used when an insured reports to his insurer details of individual shipments which are covered by an insurance contract - an open cover or a floating policy - between the parties."
+    },
+    {
+      "code": "575",
+      "name": "Insurer's invoice",
+      "description": "Document/message issued by an insurer specifying the cost of an insurance which has been effected and claiming payment therefore."
+    },
+    {
+      "code": "580",
+      "name": "Cover note",
+      "description": "Document/message issued by an insurer (insurance broker, agent, etc.) to notify the insured that his insurance have been carried out."
+    },
+    {
+      "code": "610",
+      "name": "Forwarding instructions",
+      "description": "Document/message issued to a freight forwarder, giving instructions regarding the action to be taken by the forwarder for the forwarding of goods described therein."
+    },
+    {
+      "code": "621",
+      "name": "Forwarder's advice to import agent",
+      "description": "Document/message issued by a freight forwarder in an exporting country advising his counterpart in an importing country about the forwarding of goods described therein."
+    },
+    {
+      "code": "622",
+      "name": "Forwarder's advice to exporter",
+      "description": "Document/message issued by a freight forwarder informing an exporter of the action taken in fulfilment of instructions received."
+    },
+    {
+      "code": "623",
+      "name": "Forwarder's invoice",
+      "description": "Invoice issued by a freight forwarder specifying services rendered and costs incurred and claiming payment therefore."
+    },
+    {
+      "code": "624",
+      "name": "Forwarder's certificate of receipt",
+      "description": "Non-negotiable document issued by a forwarder to certify that he has assumed control of a specified consignment, with irrevocable instructions to send it to the consignee indicated in the document or to hold it at his disposal. E.g. FIATA-FCR."
+    },
+    {
+      "code": "630",
+      "name": "Shipping note",
+      "description": "Document/message provided by the shipper or his agent to the carrier, multimodal transport operator, terminal or other receiving authority, giving information about export consignments offered for transport, and providing for the necessary receipts and declarations of liability. (Sometimes a multipurpose cargo handling document also fulfilling the functions of document 632, 633, 650 and 655)."
+    },
+    {
+      "code": "631",
+      "name": "Forwarder's warehouse receipt",
+      "description": "Document/message issued by a forwarder acting as Warehouse Keeper acknowledging receipt of goods placed in a warehouse, and stating or referring to the conditions which govern the warehousing and the release of goods. The document contains detailed provisions regarding the rights of holders-by-endorsement, transfer of ownership, etc. E.g. FIATA-FWR."
+    },
+    {
+      "code": "632",
+      "name": "Goods receipt",
+      "description": "Document/message issued by a port, warehouse/shed, or terminal operator acknowledging receipt of goods specified therein on conditions stated or referred to in the document."
+    },
+    {
+      "code": "633",
+      "name": "Port charges documents",
+      "description": "Documents/messages specifying services rendered, storage and handling costs, demurrage and other charges due to the owner of goods described therein."
+    },
+    {
+      "code": "635",
+      "name": "Warehouse warrant",
+      "description": "Negotiable receipt document, issued by a Warehouse Keeper to a person placing goods in a warehouse and conferring title to the goods stored."
+    },
+    {
+      "code": "640",
+      "name": "Delivery order",
+      "description": "Document/message issued by a party entitled to authorize the release of goods specified therein to a named consignee, to be retained by the custodian of the goods."
+    },
+    {
+      "code": "650",
+      "name": "Handling order",
+      "description": "Document/message issued by a cargo handling organization (port administration, terminal operator, etc.) for the removal or other handling of goods under their care."
+    },
+    {
+      "code": "655",
+      "name": "Gate pass",
+      "description": "Document/message authorizing goods specified therein to be brought out of a fenced-in port or terminal area."
+    },
+    {
+      "code": "700",
+      "name": "Waybill",
+      "description": "Non-negotiable document evidencing the contract for the transport of cargo."
+    },
+    {
+      "code": "701",
+      "name": "Universal (multipurpose) transport document",
+      "description": "Document/message evidencing a contract of carriage covering the movement of goods by any mode of transport, or combination of modes, for national as well as international transport, under any applicable international convention or national law and under the conditions of carriage of any carrier or transport operator undertaking or arranging the transport referred to in the document."
+    },
+    {
+      "code": "702",
+      "name": "Goods receipt, carriage",
+      "description": "Document/message issued by a carrier or a carrier's agent, acknowledging receipt for carriage of goods specified therein on conditions stated or referred to in the document, enabling the carrier to issue a transport document."
+    },
+    {
+      "code": "703",
+      "name": "House waybill",
+      "description": "The document made out by an agent/consolidator which evidences the contract between the shipper and the agent/consolidator for the arrangement of carriage of goods."
+    },
+    {
+      "code": "704",
+      "name": "Master bill of lading",
+      "description": "A bill of lading issued by the master of a vessel (in actuality the owner or charterer of the vessel). It could cover a number of house bills."
+    },
+    {
+      "code": "705",
+      "name": "Bill of lading",
+      "description": "Negotiable document/message which evidences a contract of carriage by sea and the taking over or loading of goods by carrier, and by which carrier undertakes to deliver goods against surrender of the document. A provision in the document that goods are to be delivered to the order of a named person, or to order, or to bearer, constitutes such an undertaking."
+    },
+    {
+      "code": "706",
+      "name": "Bill of lading original",
+      "description": "The original of the bill of lading issued by a transport company. When issued by the maritime industry it could signify ownership of the cargo."
+    },
+    {
+      "code": "707",
+      "name": "Bill of lading copy",
+      "description": "A copy of the bill of lading issued by a transport company."
+    },
+    {
+      "code": "708",
+      "name": "Empty container bill",
+      "description": "Bill of lading indicating an empty container."
+    },
+    {
+      "code": "709",
+      "name": "Tanker bill of lading",
+      "description": "Document which evidences a transport of liquid bulk cargo."
+    },
+    {
+      "code": "710",
+      "name": "Sea waybill",
+      "description": "Non-negotiable document which evidences a contract for the carriage of goods by sea and the taking over of the goods by the carrier, and by which the carrier undertakes to deliver the goods to the consignee named in the document."
+    },
+    {
+      "code": "711",
+      "name": "Inland waterway bill of lading",
+      "description": "Negotiable transport document made out to a named person, to order or to bearer, signed by the carrier and handed to the sender after receipt of the goods."
+    },
+    {
+      "code": "712",
+      "name": "Non-negotiable maritime transport document (generic)",
+      "description": "Non-negotiable document which evidences a contract for the carriage of goods by sea and the taking over or loading of the goods by the carrier, and by which the carrier undertakes to deliver the goods to the consignee named in the document. E.g. Sea waybill. Remark: Synonymous with \"straight\" or \"non-negotiable Bill of lading\" used in certain countries, e.g. Canada."
+    },
+    {
+      "code": "713",
+      "name": "Mate's receipt",
+      "description": "Document/message issued by a ship's officer to acknowledge that a specified consignment has been received on board a vessel, and the apparent condition of the goods; enabling the carrier to issue a Bill of lading."
+    },
+    {
+      "code": "714",
+      "name": "House bill of lading",
+      "description": "The bill of lading issued not by the carrier but by the freight forwarder/consolidator known by the carrier."
+    },
+    {
+      "code": "715",
+      "name": "Letter of indemnity for non-surrender of bill of lading",
+      "description": "Document/message issued by a commercial party or a bank of an insurance company accepting responsibility to the beneficiary of the indemnity in accordance with the terms thereof."
+    },
+    {
+      "code": "716",
+      "name": "Forwarder's bill of lading",
+      "description": "Non-negotiable document issued by a freight forwarder evidencing a contract for the carriage of goods by sea and the taking over or loading of the goods by the freight forwarder, and by which the freight forwarder undertakes to deliver the goods to the consignee named in the document."
+    },
+    {
+      "code": "720",
+      "name": "Rail consignment note (generic term)",
+      "description": "Transport document constituting a contract for the carriage of goods between the sender and the carrier (the railway). For international rail traffic, this document must conform to the model prescribed by the international conventions concerning carriage of goods by rail, e.g. CIM Convention, SMGS Convention."
+    },
+    {
+      "code": "722",
+      "name": "Road list-SMGS",
+      "description": "Accounting document, one copy of which is drawn up for each consignment note; it accompanies the consignment over the whole route and is a rail transport document."
+    },
+    {
+      "code": "723",
+      "name": "Escort official recognition",
+      "description": "Document/message which gives right to the owner to exert all functions normally transferred to a guard in a train by which an escorted consignment is transported."
+    },
+    {
+      "code": "724",
+      "name": "Recharging document",
+      "description": "Fictitious transport document regarding a previous transport, enabling a carrier's agent to give to another carrier's agent (in a different country) the possibility to collect charges relating to the original transport (rail environment)."
+    },
+    {
+      "code": "730",
+      "name": "Road consignment note",
+      "description": "Transport document/message which evidences a contract between a carrier and a sender for the carriage of goods by road (generic term). Remark: For international road traffic, this document must contain at least the particulars prescribed by the convention on the contract for the international carriage of goods by road (CMR)."
+    },
+    {
+      "code": "740",
+      "name": "Air waybill",
+      "description": "Document/message made out by or on behalf of the shipper which evidences the contract between the shipper and carrier(s) for carriage of goods over routes of the carrier(s) and which is identified by the airline prefix issuing the document plus a serial (IATA)."
+    },
+    {
+      "code": "741",
+      "name": "Master air waybill",
+      "description": "Document/message made out by or on behalf of the agent/consolidator which evidences the contract between the agent/consolidator and carrier(s) for carriage of goods over routes of the carrier(s) for a consignment consisting of goods originated by more than one shipper (IATA)."
+    },
+    {
+      "code": "743",
+      "name": "Substitute air waybill",
+      "description": "A temporary air waybill which contains only limited information because of the absence of the original."
+    },
+    {
+      "code": "744",
+      "name": "Crew's effects declaration",
+      "description": "Declaration to Customs regarding the personal effects of crew members aboard the conveyance; equivalent to IMO FAL 4."
+    },
+    {
+      "code": "745",
+      "name": "Passenger list",
+      "description": "Declaration to Customs regarding passengers aboard the conveyance; equivalent to IMO FAL 6."
+    },
+    {
+      "code": "746",
+      "name": "Delivery notice (rail transport)",
+      "description": "Document/message created by the consignor or by the departure station, joined to the transport or sent to the consignee, giving the possibility to the consignee or the arrival station to attest the delivery of the goods. The document must be returned to the consignor or to the departure station."
+    },
+    {
+      "code": "750",
+      "name": "Despatch note (post parcels)",
+      "description": "Document/message which, according to Article 106 of the \"Agreement concerning Postal Parcels\" under the UPU convention, is to accompany post parcels."
+    },
+    {
+      "code": "760",
+      "name": "Multimodal/combined transport document (generic)",
+      "description": "A transport document used when more than one mode of transportation is involved in the movement of cargo. It is a contract of carriage and receipt of the cargo for a multimodal transport. It indicates the place where the responsible transport company in the move takes responsibility for the cargo, the place where the responsibility of this transport company in the move ends and the conveyances involved."
+    },
+    {
+      "code": "761",
+      "name": "Through bill of lading",
+      "description": "Bill of lading which evidences a contract of carriage from one place to another in separate stages of which at least one stage is a sea transit, and by which the issuing carrier accepts responsibility for the carriage as set forth in the Through bill of lading."
+    },
+    {
+      "code": "763",
+      "name": "Forwarder's certificate of transport",
+      "description": "Negotiable document/message issued by a forwarder to certify that he has taken charge of a specified consignment for despatch and delivery in accordance with the consignor's instructions, as indicated in the document, and that he accepts responsibility for delivery of the goods to the holder of the document through the intermediary of a delivery agent of his choice. E.g. FIATA-FCT."
+    },
+    {
+      "code": "764",
+      "name": "Combined transport document (generic)",
+      "description": "Negotiable or non-negotiable document evidencing a contract for the performance and/or procurement of performance of combined transport of goods and bearing on its face either the heading \"Negotiable combined transport document issued subject to Uniform Rules for a Combined Transport Document (ICC Brochure No. 298)\" or the heading \"Non-negotiable Combined Transport Document issued subject to Uniform Rules for a Combined Transport Document (ICC Brochure No. 298)\"."
+    },
+    {
+      "code": "765",
+      "name": "Multimodal transport document (generic)",
+      "description": "Document/message which evidences a multimodal transport contract, the taking in charge of the goods by the multimodal transport operator, and an undertaking by him to deliver the goods in accordance with the terms of the contract. (International Convention on Multimodal Transport of Goods)."
+    },
+    {
+      "code": "766",
+      "name": "Combined transport bill of lading/multimodal bill of lading",
+      "description": "Document which evidences a multimodal transport contract, the taking in charge of the goods by the multimodal transport operator, and an undertaking by him to deliver the goods in accordance with the terms of the contract."
+    },
+    {
+      "code": "770",
+      "name": "Booking confirmation",
+      "description": "Document/message issued by a carrier to confirm that space has been reserved for a consignment in means of transport."
+    },
+    {
+      "code": "775",
+      "name": "Calling forward notice",
+      "description": "Instructions for release or delivery of goods."
+    },
+    {
+      "code": "780",
+      "name": "Freight invoice",
+      "description": "Document/message issued by a transport operation specifying freight costs and charges incurred for a transport operation and stating conditions of payment."
+    },
+    {
+      "code": "781",
+      "name": "Arrival notice (goods)",
+      "description": "Notification from the carrier to the consignee in writing, by telephone or by any other means (express letter, message, telegram, etc.) informing him that a consignment addressed to him is being or will shortly be held at his disposal at a specified point in the place of destination."
+    },
+    {
+      "code": "782",
+      "name": "Notice of circumstances preventing delivery (goods)",
+      "description": "Request made by the carrier to the sender, or, as the case may be, the consignee, for instructions as to the disposal of the consignment when circumstances prevent delivery and the return of the goods has not been requested by the consignor in the transport document."
+    },
+    {
+      "code": "783",
+      "name": "Notice of circumstances preventing transport (goods)",
+      "description": "Request made by the carrier to the sender, or, the consignee as the case may be, for instructions as to the disposal of the goods when circumstances prevent transport before departure or en route, after acceptance of the consignment concerned."
+    },
+    {
+      "code": "784",
+      "name": "Delivery notice (goods)",
+      "description": "Notification in writing, sent by the carrier to the sender, to inform him at his request of the actual date of delivery of the goods."
+    },
+    {
+      "code": "785",
+      "name": "Cargo manifest",
+      "description": "Listing of goods comprising the cargo carried in a means of transport or in a transport-unit. The cargo manifest gives the commercial particulars of the goods, such as transport document numbers, consignors, consignees, shipping marks, number and kind of packages and descriptions and quantities of the goods."
+    },
+    {
+      "code": "786",
+      "name": "Freight manifest",
+      "description": "Document/message containing the same information as a cargo manifest, and additional details on freight amounts, charges, etc."
+    },
+    {
+      "code": "787",
+      "name": "Bordereau",
+      "description": "Document/message used in road transport, listing the cargo carried on a road vehicle, often referring to appended copies of Road consignment note."
+    },
+    {
+      "code": "788",
+      "name": "Container manifest (unit packing list)",
+      "description": "Document/message specifying the contents of particular freight containers or other transport units, prepared by the party responsible for their loading into the container or unit."
+    },
+    {
+      "code": "789",
+      "name": "Charges note",
+      "description": "Document used by the rail organization to indicate freight charges or additional charges in each case where the departure station is not able to calculate the charges for the total voyage (e.g. tariff not yet updated, part of voyage not covered by the tariff). This document must be considered as joined to the transport."
+    },
+    {
+      "code": "790",
+      "name": "Advice of collection",
+      "description": "Document that is joined to the transport or sent by separate means, giving to the departure rail organization the proof that the cash-on delivery amount has been encashed by the arrival rail organization before reimbursement of the consignor."
+    },
+    {
+      "code": "791",
+      "name": "Safety of ship certificate",
+      "description": "Document certifying a ship's safety to a specified date."
+    },
+    {
+      "code": "792",
+      "name": "Safety of radio certificate",
+      "description": "Document certifying the safety of a ship's radio facilities to a specified date."
+    },
+    {
+      "code": "793",
+      "name": "Safety of equipment certificate",
+      "description": "Document certifying the safety of a ship's equipment to a specified date."
+    },
+    {
+      "code": "794",
+      "name": "Civil liability for oil certificate",
+      "description": "Document declaring a ship owner's liability for oil propelling or carried on a vessel."
+    },
+    {
+      "code": "795",
+      "name": "Loadline document",
+      "description": "Document specifying the limit of a ship's legal submersion under various conditions."
+    },
+    {
+      "code": "796",
+      "name": "Derat document",
+      "description": "Document certifying that a ship is free of rats, valid to a specified date."
+    },
+    {
+      "code": "797",
+      "name": "Maritime declaration of health",
+      "description": "Document certifying the health condition on board a vessel, valid to a specified date."
+    },
+    {
+      "code": "798",
+      "name": "Certificate of registry",
+      "description": "Official certificate stating the vessel's registry."
+    },
+    {
+      "code": "799",
+      "name": "Ship's stores declaration",
+      "description": "Declaration to Customs regarding the contents of the ship's stores (equivalent to IMO FAL 3) i.e. goods intended for consumption by passengers/crew on board vessels, aircraft or trains, whether or not sold or landed; goods necessary for operation/maintenance of conveyance, incl. fuel/lubricants, excl. spare parts/equipment (IMO)."
+    },
+    {
+      "code": "810",
+      "name": "Export licence, application for",
+      "description": "Application for a permit issued by a government authority permitting exportation of a specified commodity subject to specified conditions as quantity, country of destination, etc."
+    },
+    {
+      "code": "811",
+      "name": "Export licence",
+      "description": "Permit issued by a government authority permitting exportation of a specified commodity subject to specified conditions as quantity, country of destination, etc. Synonym: Embargo permit."
+    },
+    {
+      "code": "812",
+      "name": "Exchange control declaration, export",
+      "description": "Document/message completed by an exporter/seller as a means whereby the competent body may control that the amount of foreign exchange accrued from a trade transaction is repatriated in accordance with the conditions of payment and exchange control regulations in force."
+    },
+    {
+      "code": "820",
+      "name": "Despatch note model T",
+      "description": "European community transit declaration."
+    },
+    {
+      "code": "821",
+      "name": "Despatch note model T1",
+      "description": "Transit declaration for goods circulating under internal community transit procedures (between ECE countries)."
+    },
+    {
+      "code": "822",
+      "name": "Despatch note model T2",
+      "description": "Ascertainment that the declared goods were originally produced in an ECE country."
+    },
+    {
+      "code": "823",
+      "name": "Control document T5",
+      "description": "Control document (export declaration) used particularly in case of re-sending without use with only VAT collection, refusal, unconformity with contract etc."
+    },
+    {
+      "code": "824",
+      "name": "Re-sending consignment note",
+      "description": "Rail consignment note prepared by the consignor for the facilitation of an eventual return to the origin of the goods."
+    },
+    {
+      "code": "825",
+      "name": "Despatch note model T2L",
+      "description": "Ascertainment that the declared goods were originally produced in an EC country. May only be used for goods that are loaded on one single means of transport in one single departure point for one single delivery point."
+    },
+    {
+      "code": "830",
+      "name": "Goods declaration for exportation",
+      "description": "Document/message by which goods are declared for export Customs clearance, conforming to the layout key set out at Appendix I to Annex C.1 concerning outright exportation to the Kyoto convention (CCC). Within a Customs union, \"for despatch\" may have the same meaning as \"for exportation\"."
+    },
+    {
+      "code": "833",
+      "name": "Cargo declaration (departure)",
+      "description": "Generic term, sometimes referred to as Freight declaration, applied to the documents providing the particulars required by the Customs concerning the cargo (freight) carried by commercial means of transport (CCC)."
+    },
+    {
+      "code": "840",
+      "name": "Application for goods control certificate",
+      "description": "Document/message submitted to a competent body by party requesting a Goods control certificate to be issued in accordance with national or international standards, or conforming to legislation in the importing country, or as specified in the contract."
+    },
+    {
+      "code": "841",
+      "name": "Goods control certificate",
+      "description": "Document/message issued by a competent body evidencing the quality of the goods described therein, in accordance with national or international standards, or conforming to legislation in the importing country, or as specified in the contract."
+    },
+    {
+      "code": "850",
+      "name": "Application for phytosanitary certificate",
+      "description": "Document/message submitted to a competent body by party requesting a Phytosanitary certificate to be issued."
+    },
+    {
+      "code": "851",
+      "name": "Phytosanitary certificate",
+      "description": "Document/message issued by the competent body in the exporting country evidencing that plants, fruit, or vegetables are free from disease and fit for consumption and giving details on fumigation or other treatment to which they may have been subjected."
+    },
+    {
+      "code": "852",
+      "name": "Sanitary certificate",
+      "description": "Document/message issued by the competent authority in the exporting country evidencing that alimentary and animal products, including dead animals, are fit for human consumption, and giving details, when relevant, of controls undertaken."
+    },
+    {
+      "code": "853",
+      "name": "Veterinary certificate",
+      "description": "Document/message issued by the competent authority in the exporting country evidencing that live animals or birds are not infested or infected with disease, and giving details regarding their provenance, and of vaccinations and other treatment to which they have been subjected."
+    },
+    {
+      "code": "855",
+      "name": "Application for inspection certificate",
+      "description": "Document/message submitted to a competent body by a party requesting an Inspection certificate to be issued in accordance with national or international standards, or conforming to legislation in the country in which it is required, or as specified in the contract."
+    },
+    {
+      "code": "856",
+      "name": "Inspection certificate",
+      "description": "Document/message issued by a competent body evidencing that the goods described therein have been inspected in accordance with national or international standards, in conformity with legislation in the country in which the inspection is required, or as specified in the contract."
+    },
+    {
+      "code": "860",
+      "name": "Certificate of origin, application for",
+      "description": "Document/message submitted to a competent body by an interested party requesting a Certificate of origin to be issued in accordance with relevant criteria, and on the basis of evidence of the origin of the goods."
+    },
+    {
+      "code": "861",
+      "name": "Certificate of origin",
+      "description": "Document/message identifying goods, in which the authority or body authorized to issue it certifies expressly that the goods to which the certificate relates originate in a specific country. The word \"country\" may include a group of countries, a region or a part of a country. This certificate may also include a declaration by the manufacturer, producer, supplier, exporter or other competent person."
+    },
+    {
+      "code": "862",
+      "name": "Declaration of origin",
+      "description": "Appropriate statement as to the origin of the goods, made in connection with their exportation by the manufacturer, producer, supplier, exporter or other competent person on the Commercial invoice or any other document relating to the goods (CCC)."
+    },
+    {
+      "code": "863",
+      "name": "Regional appellation certificate",
+      "description": "Certificate drawn up in accordance with the rules laid down by an authority or approved body, certifying that the goods described therein qualify for a designation specific to the given region (e.g. champagne, port wine, Parmesan cheese)."
+    },
+    {
+      "code": "864",
+      "name": "Preference certificate of origin",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "865",
+      "name": "Certificate of origin form GSP",
+      "description": "Specific form of certificate of origin for goods qualifying for preferential treatment under the generalized system of preferences (includes a combined declaration of origin and certificate, form A)."
+    },
+    {
+      "code": "870",
+      "name": "Consular invoice",
+      "description": "Document/message to be prepared by an exporter in his country and presented to a diplomatic representation of the importing country for endorsement and subsequently to be presented by the importer in connection with the import of the goods described therein."
+    },
+    {
+      "code": "890",
+      "name": "Dangerous goods declaration",
+      "description": "Document/message issued by a consignor in accordance with applicable conventions or regulations, describing hazardous goods or materials for transport purposes, and stating that the latter have been packed and labelled in accordance with the provisions of the relevant conventions or regulations."
+    },
+    {
+      "code": "895",
+      "name": "Statistical document, export",
+      "description": "Document/message in which an exporter provides information about exported goods required by the body responsible for the collection of international trade statistics."
+    },
+    {
+      "code": "896",
+      "name": "INTRASTAT declaration",
+      "description": "Document/message in which a declarant provides information about goods required by the body responsible for the collection of trade statistics."
+    },
+    {
+      "code": "901",
+      "name": "Delivery verification certificate",
+      "description": "Document/message whereby an official authority (Customs or governmental) certifies that goods have been delivered."
+    },
+    {
+      "code": "910",
+      "name": "Import licence, application for",
+      "description": "Document/message in which an interested party applies to the competent body for authorization to import either a limited quantity of articles subject to import restrictions, or an unlimited quantity of such articles during a limited period, and specifies the kind of articles, their origin and value, etc."
+    },
+    {
+      "code": "911",
+      "name": "Import licence",
+      "description": "Document/message issued by the competent body in accordance with import regulations in force, by which authorization is granted to a named party to import either a limited quantity of designated articles or an unlimited quantity of such articles during a limited period, under conditions specified in the document."
+    },
+    {
+      "code": "913",
+      "name": "Customs declaration without commercial detail",
+      "description": "CUSDEC transmission that does not include data from the commercial detail section of the message."
+    },
+    {
+      "code": "914",
+      "name": "Customs declaration with commercial and item detail",
+      "description": "CUSDEC transmission that includes data from both the commercial detail and item detail sections of the message."
+    },
+    {
+      "code": "915",
+      "name": "Customs declaration without item detail",
+      "description": "CUSDEC transmission that does not include data from the item detail section of the message."
+    },
+    {
+      "code": "916",
+      "name": "Related document",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "917",
+      "name": "Receipt (Customs)",
+      "description": "Receipt for Customs duty/tax/fee paid."
+    },
+    {
+      "code": "925",
+      "name": "Application for exchange allocation",
+      "description": "Document/message whereby an importer/buyer requests the competent body to allocate an amount of foreign exchange to be transferred to an exporter/seller in payment for goods."
+    },
+    {
+      "code": "926",
+      "name": "Foreign exchange permit",
+      "description": "Document/message issued by the competent body authorizing an importer/buyer to transfer an amount of foreign exchange to an exporter/seller in payment for goods."
+    },
+    {
+      "code": "927",
+      "name": "Exchange control declaration (import)",
+      "description": "Document/message completed by an importer/buyer as a means for the competent body to control that a trade transaction for which foreign exchange has been allocated has been executed and that money has been transferred in accordance with the conditions of payment and the exchange control regulations in force."
+    },
+    {
+      "code": "929",
+      "name": "Goods declaration for importation",
+      "description": "Document/message by which goods are declared for import Customs clearance [sister entry of 830]."
+    },
+    {
+      "code": "930",
+      "name": "Goods declaration for home use",
+      "description": "Document/message by which goods are declared for import Customs clearance according to Annex B.1 (concerning clearance for home use) to the Kyoto convention (CCC)."
+    },
+    {
+      "code": "931",
+      "name": "Customs immediate release declaration",
+      "description": "Document/message issued by an importer notifying Customs that goods have been removed from an importing means of transport to the importer's premises under a Customs- approved arrangement for immediate release, or requesting authorization to do so."
+    },
+    {
+      "code": "932",
+      "name": "Customs delivery note",
+      "description": "Document/message whereby a Customs authority releases goods under its control to be placed at the disposal of the party concerned. Synonym: Customs release note."
+    },
+    {
+      "code": "933",
+      "name": "Cargo declaration (arrival)",
+      "description": "Generic term, sometimes referred to as Freight declaration, applied to the documents providing the particulars required by the Customs concerning the cargo (freight) carried by commercial means of transport (CCC)."
+    },
+    {
+      "code": "934",
+      "name": "Value declaration",
+      "description": "Document/message in which a declarant (importer) states the invoice or other price (e.g. selling price, price of identical goods), and specifies costs for freight, insurance and packing, etc., terms of delivery and payment, any relationship with the trading partner, etc., for the purpose of determining the Customs value of goods imported."
+    },
+    {
+      "code": "935",
+      "name": "Customs invoice",
+      "description": "Document/message required by the Customs in an importing country in which an exporter states the invoice or other price (e.g. selling price, price of identical goods), and specifies costs for freight, insurance and packing, etc., terms of delivery and payment, for the purpose of determining the Customs value in the importing country of goods consigned to that country."
+    },
+    {
+      "code": "936",
+      "name": "Customs declaration (post parcels)",
+      "description": "Document/message which, according to Article 106 of the \"Agreement concerning Postal Parcels\" under the UPU Convention, must accompany post parcels and in which the contents of such parcels are specified."
+    },
+    {
+      "code": "937",
+      "name": "Tax declaration (value added tax)",
+      "description": "Document/message in which an importer states the pertinent information required by the competent body for assessment of value-added tax."
+    },
+    {
+      "code": "938",
+      "name": "Tax declaration (general)",
+      "description": "Document/message containing a general tax declaration."
+    },
+    {
+      "code": "940",
+      "name": "Tax demand",
+      "description": "Document/message containing the demand of tax."
+    },
+    {
+      "code": "941",
+      "name": "Embargo permit",
+      "description": "Document/message giving the permission to export specified goods."
+    },
+    {
+      "code": "950",
+      "name": "Goods declaration for Customs transit",
+      "description": "Document/message by which the sender declares goods for Customs transit according to Annex E.1 (concerning Customs transit) to the Kyoto convention (CCC)."
+    },
+    {
+      "code": "951",
+      "name": "TIF form",
+      "description": "International Customs transit document by which the sender declares goods for carriage by rail in accordance with the provisions of the 1952 International Convention to facilitate the crossing of frontiers for goods carried by rail (TIF Convention of UIC)."
+    },
+    {
+      "code": "952",
+      "name": "TIR carnet",
+      "description": "International Customs document (International Transit by Road), issued by a guaranteeing association approved by the Customs authorities, under the cover of which goods are carried, in most cases under Customs seal, in road vehicles and/or containers in compliance with the requirements of the Customs TIR Convention of the International Transport of Goods under cover of TIR Carnets (UN/ECE)."
+    },
+    {
+      "code": "953",
+      "name": "EC carnet",
+      "description": "EC customs transit document issued by EC customs authorities for transit and/or temporary user of goods within the EC."
+    },
+    {
+      "code": "954",
+      "name": "EUR 1 certificate of origin",
+      "description": "Customs certificate used in preferential goods interchanges between EC countries and EC external countries."
+    },
+    {
+      "code": "955",
+      "name": "ATA carnet",
+      "description": "International Customs document (Admission Temporaire / Temporary Admission) which, issued under the terms of the ATA Convention (1961), incorporates an internationally valid guarantee and may be used, in lieu of national Customs documents and as security for import duties and taxes, to cover the temporary admission of goods and, where appropriate, the transit of goods. If accepted for controlling the temporary export and reimport of goods, international guarantee does not apply (CCC)."
+    },
+    {
+      "code": "960",
+      "name": "Single administrative document",
+      "description": "A set of documents, replacing the various (national) forms for Customs declaration within the EC, implemented on 01-01-1988."
+    },
+    {
+      "code": "961",
+      "name": "General response (Customs)",
+      "description": "General response message to permit the transfer of data from Customs to the transmitter of the previous message."
+    },
+    {
+      "code": "962",
+      "name": "Document response (Customs)",
+      "description": "Document response message to permit the transfer of data from Customs to the transmitter of the previous message."
+    },
+    {
+      "code": "963",
+      "name": "Error response (Customs)",
+      "description": "Error response message to permit the transfer of data from Customs to the transmitter of the previous message."
+    },
+    {
+      "code": "964",
+      "name": "Package response (Customs)",
+      "description": "Package response message to permit the transfer of data from Customs to the transmitter of the previous message."
+    },
+    {
+      "code": "965",
+      "name": "Tax calculation/confirmation response (Customs)",
+      "description": "Tax calculation/confirmation response message to permit the transfer of data from Customs to the transmitter of the previous message."
+    },
+    {
+      "code": "966",
+      "name": "Quota prior allocation certificate",
+      "description": "Document/message issued by the competent body for prior allocation of a quota."
+    },
+    {
+      "code": "990",
+      "name": "End use authorization",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "991",
+      "name": "Government contract",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "995",
+      "name": "Statistical document, import",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "996",
+      "name": "Application for documentary credit",
+      "description": "Message with application for opening of a documentary credit."
+    },
+    {
+      "code": "998",
+      "name": "Previous Customs document/message",
+      "description": "Indication of the previous Customs document/message concerning the same transaction."
+    }
+  ]
 }

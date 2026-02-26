@@ -1,0 +1,125 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "895",
+  "name": "Delivery/Return Acknowledgment or Adjustment",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Delivery/Return Acknowledgment or Adjustment Transaction Set (895) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to enable a distributor or Direct Store Delivery (DSD) vendor to communicate adjustments to a DSD delivery or to acknowledge the completion of a delivery. The transaction set contains changes to the Delivery/Return Base Record identified during the check-in procedure. A Delivery/Return Acknowledgement and/or Adjustment Transaction containing no changes is considered to be an acceptance of the preceding Base Record or Adjustment. The transaction set will contain only the detail data which is to be changed.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G87",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G88",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LS",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "G89",
+      "mandatory": false,
+      "maxOccurrences": 9999,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "G89",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G22",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G72",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G23",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LE",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G72",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G23",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G84",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G86",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G85",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 11
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    }
+  ]
+}

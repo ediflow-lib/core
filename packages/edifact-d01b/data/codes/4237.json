@@ -1,5 +1,26 @@
 {
-  "code": "4237",
-  "name": "Payment arrangement code",
-  "values": []
+  "elementCode": "4237",
+  "elementName": "Payment arrangement code",
+  "values": [
+    {
+      "code": "A",
+      "name": "Payable elsewhere",
+      "description": "Responsibility for payment of transport charges unknown at time of departure."
+    },
+    {
+      "code": "B",
+      "name": "Third party to pay",
+      "description": "A third party to pay the freight bill is known at the time of shipment."
+    },
+    {
+      "code": "C",
+      "name": "Collect",
+      "description": "Charges are (to be) collected from the consignee at the destination."
+    },
+    {
+      "code": "P",
+      "name": "Prepaid",
+      "description": "Charges are (to be) prepaid before the transport actually leaves."
+    }
+  ]
 }

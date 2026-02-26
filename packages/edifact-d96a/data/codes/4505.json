@@ -1,5 +1,31 @@
 {
-  "code": "4505",
-  "name": "Credit cover request, coded",
-  "values": []
+  "elementCode": "4505",
+  "elementName": "Credit cover request, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Multi-currency credit cover",
+      "description": "Invoices in currencies other than the currency of the credit cover are expected."
+    },
+    {
+      "code": "2",
+      "name": "Request new limit",
+      "description": "Seller requests new limit."
+    },
+    {
+      "code": "3",
+      "name": "Request increased limit",
+      "description": "Seller requests increase of existing limit."
+    },
+    {
+      "code": "4",
+      "name": "Request for preliminary assessment",
+      "description": "Request for information to be used during negotiation with prospective clients (sellers)."
+    },
+    {
+      "code": "5",
+      "name": "Request for new account only",
+      "description": "Request for opening new account only."
+    }
+  ]
 }

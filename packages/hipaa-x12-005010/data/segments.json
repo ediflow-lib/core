@@ -1,0 +1,5611 @@
+{
+  "ST": {
+    "tag": "ST",
+    "name": "Transaction Set Header",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "143",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "329",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1705",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "BHT": {
+    "tag": "BHT",
+    "name": "Beginning of Hierarchical Transaction",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1005",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "353",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "640",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "HL": {
+    "tag": "HL",
+    "name": "Hierarchical Level",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "628",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "734",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "735",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "736",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "NM1": {
+    "tag": "NM1",
+    "name": "Individual or Organizational Name",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1065",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1035",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1037",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1038",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1039",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "706",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1035",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "REF": {
+    "tag": "REF",
+    "name": "Reference Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "128",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C040",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "N3": {
+    "tag": "N3",
+    "name": "Party Location",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "166",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "N4": {
+    "tag": "N4",
+    "name": "Geographic Location",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "19",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "156",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "116",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "26",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "309",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "310",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1715",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1702",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "PRV": {
+    "tag": "PRV",
+    "name": "Provider Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1221",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "156",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1223",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C035",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "TRN": {
+    "tag": "TRN",
+    "name": "Trace",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "481",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "509",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DMG": {
+    "tag": "DMG",
+    "name": "Demographic Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1068",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1067",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1066",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "26",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "659",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "26",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C056",
+        "mandatory": false,
+        "position": 12,
+        "maxOccurrences": 10
+      }
+    ]
+  },
+  "INS": {
+    "tag": "INS",
+    "name": "Insured Benefit",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1069",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "875",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1203",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1216",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1219",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "584",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1220",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1165",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "19",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "156",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "26",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1470",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C052",
+        "mandatory": false,
+        "position": 17
+      }
+    ]
+  },
+  "HI": {
+    "tag": "HI",
+    "name": "Health Care Information Codes",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C022",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "DTP": {
+    "tag": "DTP",
+    "name": "Date or Time or Period",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": true,
+        "position": 3
+      }
+    ]
+  },
+  "EQ": {
+    "tag": "EQ",
+    "name": "Eligibility or Benefit Inquiry",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1207",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1336",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1328",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 5,
+        "maxOccurrences": 99
+      }
+    ]
+  },
+  "AMT": {
+    "tag": "AMT",
+    "name": "Monetary Amount Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "522",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "478",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "III": {
+    "tag": "III",
+    "name": "Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1136",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "933",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "752",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "SE": {
+    "tag": "SE",
+    "name": "Transaction Set Trailer",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "96",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "329",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "AAA": {
+    "tag": "AAA",
+    "name": "Request Validation",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "559",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "901",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "889",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "PER": {
+    "tag": "PER",
+    "name": "Administrative Communications Contact",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "366",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "365",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "364",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "365",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "364",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "365",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "364",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "443",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "MPI": {
+    "tag": "MPI",
+    "name": "Military Personnel Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1201",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "584",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1595",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1596",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "EB": {
+    "tag": "EB",
+    "name": "Eligibility or Benefit Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1390",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1207",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1336",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1204",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "615",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "954",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "673",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1328",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 14,
+        "maxOccurrences": 99
+      }
+    ]
+  },
+  "HSD": {
+    "tag": "HSD",
+    "name": "Health Care Services Delivery",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "673",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1167",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "615",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "616",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "678",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "679",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "MSG": {
+    "tag": "MSG",
+    "name": "Message Text",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "933",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "934",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1470",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "LS": {
+    "tag": "LS",
+    "name": "Loop Header",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "447",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "LE": {
+    "tag": "LE",
+    "name": "Loop Trailer",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "447",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "SVC": {
+    "tag": "SVC",
+    "name": "Service Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": true,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "STC": {
+    "tag": "STC",
+    "name": "Status Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "306",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "591",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "429",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "933",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C043",
+        "mandatory": true,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C043",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "QTY": {
+    "tag": "QTY",
+    "name": "Quantity Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "673",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "61",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "UM": {
+    "tag": "UM",
+    "name": "Health Care Services Review Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1525",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1322",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1338",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1213",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "923",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1363",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1514",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C023",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C024",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "CRC": {
+    "tag": "CRC",
+    "name": "Conditions Indicator",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1136",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1321",
+        "mandatory": true,
+        "position": 3
+      }
+    ]
+  },
+  "CL1": {
+    "tag": "CL1",
+    "name": "Claim Codes",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1315",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1314",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1352",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1345",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "CR1": {
+    "tag": "CR1",
+    "name": "Ambulance Certification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "81",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1316",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1317",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "166",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "166",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "CR2": {
+    "tag": "CR2",
+    "name": "Chiropractic Certification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "609",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1367",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1342",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "CR5": {
+    "tag": "CR5",
+    "name": "Oxygen Therapy Certification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1322",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1348",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1349",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1350",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1382",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1348",
+        "mandatory": false,
+        "position": 15
+      }
+    ]
+  },
+  "CR6": {
+    "tag": "CR6",
+    "name": "Home Health Care Certification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "923",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1322",
+        "mandatory": true,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1137",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1384",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 21
+      }
+    ]
+  },
+  "PWK": {
+    "tag": "PWK",
+    "name": "Paperwork",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "755",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "756",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "757",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1525",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "SV1": {
+    "tag": "SV1",
+    "name": "Professional Service",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1331",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1328",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1340",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1364",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1341",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1327",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1334",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "116",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1337",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1360",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": true,
+        "position": 21
+      }
+    ]
+  },
+  "SV2": {
+    "tag": "SV2",
+    "name": "Institutional Service",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1371",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1345",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1337",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "SV3": {
+    "tag": "SV3",
+    "name": "Dental Service",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1331",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1358",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1327",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1360",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1328",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": true,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C006",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "TOO": {
+    "tag": "TOO",
+    "name": "Tooth Identification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C005",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "HCR": {
+    "tag": "HCR",
+    "name": "Health Care Services Review",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "306",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "BPR": {
+    "tag": "BPR",
+    "name": "Beginning Segment for Payment Order/Remittance Advice",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "305",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "478",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "591",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "812",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "506",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "507",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "569",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "508",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "509",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "510",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "506",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "507",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "569",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "508",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1048",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "506",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "507",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "569",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "508",
+        "mandatory": false,
+        "position": 21
+      }
+    ]
+  },
+  "CUR": {
+    "tag": "CUR",
+    "name": "Currency",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "100",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "280",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "100",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "669",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 21
+      }
+    ]
+  },
+  "DTM": {
+    "tag": "DTM",
+    "name": "Date/Time Reference",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "374",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "623",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "N1": {
+    "tag": "N1",
+    "name": "Party Identification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "706",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "N2": {
+    "tag": "N2",
+    "name": "Additional Name Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "RDM": {
+    "tag": "RDM",
+    "name": "Remittance Delivery Method",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "756",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "364",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C040",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ENT": {
+    "tag": "ENT",
+    "name": "Entity",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "554",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "ADX": {
+    "tag": "ADX",
+    "name": "Adjustment",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "426",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "RMR": {
+    "tag": "RMR",
+    "name": "Remittance Advice Accounts Receivable Open Item Reference",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "128",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "482",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "426",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "IT1": {
+    "tag": "IT1",
+    "name": "Baseline Item Data (Invoice)",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "350",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "358",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "212",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "639",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 21
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 22
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 23
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 24
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 25
+      }
+    ]
+  },
+  "SAC": {
+    "tag": "SAC",
+    "name": "Service, Promotion, Allowance, or Charge Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "248",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1300",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "559",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1301",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "610",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "378",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "332",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "118",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "331",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "770",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "819",
+        "mandatory": false,
+        "position": 15
+      }
+    ]
+  },
+  "SLN": {
+    "tag": "SLN",
+    "name": "Subline Item Detail",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "350",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "350",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "662",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "212",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "639",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "662",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 21
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 22
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 23
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 24
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 25
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 26
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 27
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 28
+      }
+    ]
+  },
+  "BGN": {
+    "tag": "BGN",
+    "name": "Beginning Segment",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "353",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "623",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "640",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "306",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "786",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "ACT": {
+    "tag": "ACT",
+    "name": "Account Identification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "508",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "569",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "508",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "107",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1216",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "EC": {
+    "tag": "EC",
+    "name": "Employment Class",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1176",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "954",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1201",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1149",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ICM": {
+    "tag": "ICM",
+    "name": "Individual Income",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "594",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "310",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1214",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "100",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "HLH": {
+    "tag": "HLH",
+    "name": "Health Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "65",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "81",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "81",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1213",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C061",
+        "mandatory": false,
+        "position": 7,
+        "maxOccurrences": 10
+      }
+    ]
+  },
+  "LUI": {
+    "tag": "LUI",
+    "name": "Language Use",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "66",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1303",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1476",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DSB": {
+    "tag": "DSB",
+    "name": "Disability Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1146",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1149",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1161",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1137",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "HD": {
+    "tag": "HD",
+    "name": "Health Coverage",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "875",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1203",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1205",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1204",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1207",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "609",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "609",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1209",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1211",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "IDC": {
+    "tag": "IDC",
+    "name": "Identification Card",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1204",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1215",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "306",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "LX": {
+    "tag": "LX",
+    "name": "Transaction Set Line Number",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "554",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PLA": {
+    "tag": "PLA",
+    "name": "Place or Location",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "306",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "98",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "337",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1203",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "COB": {
+    "tag": "COB",
+    "name": "Coordination of Benefits",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1138",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1143",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1365",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "TS3": {
+    "tag": "TS3",
+    "name": "Transaction Statistics",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1331",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 21
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 22
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 23
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 24
+      }
+    ]
+  },
+  "TS2": {
+    "tag": "TS2",
+    "name": "Transaction Supplemental Statistics",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 19
+      }
+    ]
+  },
+  "CLP": {
+    "tag": "CLP",
+    "name": "Claim Level Data",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1028",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1029",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1032",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1331",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1325",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1352",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1354",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "954",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "280",
+        "mandatory": false,
+        "position": 15
+      }
+    ]
+  },
+  "CAS": {
+    "tag": "CAS",
+    "name": "Claims Adjustment",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1033",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1034",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 19
+      }
+    ]
+  },
+  "MIA": {
+    "tag": "MIA",
+    "name": "Inpatient Adjudication",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 21
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 22
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 23
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 24
+      }
+    ]
+  },
+  "MOA": {
+    "tag": "MOA",
+    "name": "Outpatient Adjudication",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "954",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "LQ": {
+    "tag": "LQ",
+    "name": "Industry Code Identification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PLB": {
+    "tag": "PLB",
+    "name": "Provider Level Adjustment",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": true,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C042",
+        "mandatory": false,
+        "position": 14
+      }
+    ]
+  },
+  "SBR": {
+    "tag": "SBR",
+    "name": "Subscriber Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1138",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1069",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "93",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1336",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1143",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "584",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1032",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1732",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "PAT": {
+    "tag": "PAT",
+    "name": "Patient Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1069",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1384",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "584",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1220",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "81",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "CLM": {
+    "tag": "CLM",
+    "name": "Health Claim",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1028",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1032",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1343",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1359",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1363",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1351",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1366",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1338",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1360",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1029",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1383",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1514",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C023",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C024",
+        "mandatory": false,
+        "position": 20
+      }
+    ]
+  },
+  "CN1": {
+    "tag": "CN1",
+    "name": "Contract Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1166",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "332",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "338",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "799",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "K3": {
+    "tag": "K3",
+    "name": "File Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "449",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1333",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "NTE": {
+    "tag": "NTE",
+    "name": "Note/Special Instruction",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "363",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "HCP": {
+    "tag": "HCP",
+    "name": "Health Care Pricing",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1473",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "118",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "901",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1526",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1527",
+        "mandatory": false,
+        "position": 15
+      }
+    ]
+  },
+  "OI": {
+    "tag": "OI",
+    "name": "Other Health Insurance Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1032",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1383",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1351",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1360",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1363",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "SV5": {
+    "tag": "SV5",
+    "name": "Durable Medical Equipment Service",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "594",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "923",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": true,
+        "position": 7
+      }
+    ]
+  },
+  "CR3": {
+    "tag": "CR3",
+    "name": "Durable Medical Equipment Certification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1322",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "355",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1335",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "MEA": {
+    "tag": "MEA",
+    "name": "Measurements",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "737",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "738",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "739",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "740",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "741",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "935",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "936",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "752",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1373",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1271",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "PS1": {
+    "tag": "PS1",
+    "name": "Purchase Service",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "156",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "LIN": {
+    "tag": "LIN",
+    "name": "Item Identification",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "350",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 19
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 20
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 21
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 22
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 23
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 24
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 25
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 26
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 27
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 28
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 29
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "235",
+        "mandatory": false,
+        "position": 30
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 31
+      }
+    ]
+  },
+  "CTP": {
+    "tag": "CTP",
+    "name": "Pricing Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "687",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "236",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "212",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "648",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "649",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "639",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "499",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "289",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C001",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "SVD": {
+    "tag": "SVD",
+    "name": "Service Line Adjudication",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "67",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "782",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "234",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "554",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C003",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "FRM": {
+    "tag": "FRM",
+    "name": "Supporting Documentation",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "350",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "373",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "332",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DN1": {
+    "tag": "DN1",
+    "name": "Orthodontic Information",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "352",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DN2": {
+    "tag": "DN2",
+    "name": "Tooth Summary",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "127",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1368",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1250",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1251",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1270",
+        "mandatory": true,
+        "position": 6
+      }
+    ]
+  },
+  "AK1": {
+    "tag": "AK1",
+    "name": "Functional Group Response Header",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "479",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "28",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "480",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "AK2": {
+    "tag": "AK2",
+    "name": "Transaction Set Response Header",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "143",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "329",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1705",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "IK3": {
+    "tag": "IK3",
+    "name": "Implementation Data Segment Note",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "721",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "719",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "447",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "620",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "CTX": {
+    "tag": "CTX",
+    "name": "Context",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "721",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "719",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "447",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C998",
+        "mandatory": true,
+        "position": 4,
+        "maxOccurrences": 10
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C030",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C999",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "IK4": {
+    "tag": "IK4",
+    "name": "Implementation Data Element Note",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "725",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "621",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "724",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C030",
+        "mandatory": true,
+        "position": 4
+      }
+    ]
+  },
+  "IK5": {
+    "tag": "IK5",
+    "name": "Implementation Transaction Set Response Trailer",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "717",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "618",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "AK9": {
+    "tag": "AK9",
+    "name": "Functional Group Response Trailer",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "715",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "97",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "123",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "716",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  }
+}

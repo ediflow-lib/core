@@ -1,5 +1,36 @@
 {
-  "code": "3279",
-  "name": "Geographic area code",
-  "values": []
+  "elementCode": "3279",
+  "elementName": "Geographic area code",
+  "values": [
+    {
+      "code": "DO",
+      "name": "Domestic",
+      "description": "Domestic message as defined by relevant central bank."
+    },
+    {
+      "code": "DR",
+      "name": "Domestic with regulatory information required",
+      "description": "Domestic message with requirement to regulatory information to central bank."
+    },
+    {
+      "code": "EA",
+      "name": "Economic area",
+      "description": "Message crossing at least one national boundary but confined within a specific economic area (e.g. EC, EFTA ...)."
+    },
+    {
+      "code": "IN",
+      "name": "International",
+      "description": "International message as defined by relevant central bank."
+    },
+    {
+      "code": "IR",
+      "name": "International with regulatory information required",
+      "description": "International message with requirement to regulatory information to central bank."
+    },
+    {
+      "code": "IS",
+      "name": "European Union",
+      "description": "To identify the message as originating from and destined to a member state of the European Union."
+    }
+  ]
 }

@@ -1,5 +1,44 @@
 {
-  "code": "5305",
-  "name": "Duty/tax/fee category, coded",
-  "values": []
+  "elementCode": "5305",
+  "elementName": "Duty/tax/fee category, coded",
+  "values": [
+    {
+      "code": "A",
+      "name": "Mixed tax rate"
+    },
+    {
+      "code": "B",
+      "name": "Transferred (VAT)",
+      "description": "VAT not to be paid to the issuer of the invoice but directly to relevant tax authority."
+    },
+    {
+      "code": "C",
+      "name": "Duty paid by supplier",
+      "description": "Duty associated with shipment of goods is paid by the supplier; customer receives goods with duty paid."
+    },
+    {
+      "code": "E",
+      "name": "Exempt from tax"
+    },
+    {
+      "code": "G",
+      "name": "Free export item, tax not charged"
+    },
+    {
+      "code": "H",
+      "name": "Higher rate"
+    },
+    {
+      "code": "O",
+      "name": "Services outside scope of tax"
+    },
+    {
+      "code": "S",
+      "name": "Standard rate"
+    },
+    {
+      "code": "Z",
+      "name": "Zero rated goods"
+    }
+  ]
 }

@@ -1,0 +1,138 @@
+{
+  "code": "I18",
+  "name": "Code specifying the error found processing the interchange control structure",
+  "values": [
+    {
+      "code": "000",
+      "name": "No error"
+    },
+    {
+      "code": "001",
+      "name": "The Interchange Control Number in the Header and Trailer Do Not Match. The Value From the Header is Used in the Acknowledgment."
+    },
+    {
+      "code": "002",
+      "name": "This Standard as Noted in the Control Standards Identifier is Not Supported."
+    },
+    {
+      "code": "003",
+      "name": "This Version of the Controls is Not Supported"
+    },
+    {
+      "code": "004",
+      "name": "The Segment Terminator is Invalid"
+    },
+    {
+      "code": "005",
+      "name": "Invalid Interchange ID Qualifier for Sender"
+    },
+    {
+      "code": "006",
+      "name": "Invalid Interchange Sender ID"
+    },
+    {
+      "code": "007",
+      "name": "Invalid Interchange ID Qualifier for Receiver"
+    },
+    {
+      "code": "008",
+      "name": "Invalid Interchange Receiver ID"
+    },
+    {
+      "code": "009",
+      "name": "Unknown Interchange Receiver ID"
+    },
+    {
+      "code": "010",
+      "name": "Invalid Authorization Information Qualifier Value"
+    },
+    {
+      "code": "011",
+      "name": "Invalid Authorization Information Value"
+    },
+    {
+      "code": "012",
+      "name": "Invalid Security Information Qualifier Value"
+    },
+    {
+      "code": "013",
+      "name": "Invalid Security Information Value"
+    },
+    {
+      "code": "014",
+      "name": "Invalid Interchange Date Value"
+    },
+    {
+      "code": "015",
+      "name": "Invalid Interchange Time Value"
+    },
+    {
+      "code": "016",
+      "name": "Invalid Interchange Standards Identifier Value"
+    },
+    {
+      "code": "017",
+      "name": "Invalid Interchange Version ID Value"
+    },
+    {
+      "code": "018",
+      "name": "Invalid Interchange Control Number Value"
+    },
+    {
+      "code": "019",
+      "name": "Invalid Acknowledgment Requested Value"
+    },
+    {
+      "code": "020",
+      "name": "Invalid Test Indicator Value"
+    },
+    {
+      "code": "021",
+      "name": "Invalid Number of Included Groups Value"
+    },
+    {
+      "code": "022",
+      "name": "Invalid Control Structure"
+    },
+    {
+      "code": "023",
+      "name": "Improper (Premature) End-of-File (Transmission)"
+    },
+    {
+      "code": "024",
+      "name": "Invalid Interchange Content (e.g., Invalid GS Segment)"
+    },
+    {
+      "code": "025",
+      "name": "Duplicate Interchange Control Number"
+    },
+    {
+      "code": "026",
+      "name": "Invalid Data Element Separator"
+    },
+    {
+      "code": "027",
+      "name": "Invalid Component Element Separator"
+    },
+    {
+      "code": "028",
+      "name": "Invalid Delivery Date in Deferred Delivery Request"
+    },
+    {
+      "code": "029",
+      "name": "Invalid Delivery Time in Deferred Delivery Request"
+    },
+    {
+      "code": "030",
+      "name": "Invalid Delivery Time Code in Deferred Delivery Request"
+    },
+    {
+      "code": "031",
+      "name": "Invalid Grade of Service Code"
+    },
+    {
+      "code": "032",
+      "name": "Invalid Repetition Separator"
+    }
+  ]
+}

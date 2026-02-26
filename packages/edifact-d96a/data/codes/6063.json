@@ -1,0 +1,886 @@
+{
+  "elementCode": "6063",
+  "elementName": "Quantity qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Discrete quantity"
+    },
+    {
+      "code": "2",
+      "name": "Charge",
+      "description": "Quantity relevant for charge."
+    },
+    {
+      "code": "3",
+      "name": "Cumulative quantity"
+    },
+    {
+      "code": "8",
+      "name": "Inventory quantity at supplier's subject to inspection by customer",
+      "description": "Quantity of goods which the customer requires the supplier to have in inventory and which may be inspected by the customer if desired."
+    },
+    {
+      "code": "11",
+      "name": "Split quantity",
+      "description": "Part of the whole quantity."
+    },
+    {
+      "code": "12",
+      "name": "Despatch quantity",
+      "description": "Quantity despatched by the seller."
+    },
+    {
+      "code": "17",
+      "name": "Quantity on hand"
+    },
+    {
+      "code": "18",
+      "name": "Previous quantity",
+      "description": "Quantity previously referenced."
+    },
+    {
+      "code": "20",
+      "name": "Unusable quantity"
+    },
+    {
+      "code": "21",
+      "name": "Ordered quantity",
+      "description": "The quantity which has been ordered."
+    },
+    {
+      "code": "22",
+      "name": "Quantity at 100%",
+      "description": "Equivalent quantity at 100% purity."
+    },
+    {
+      "code": "23",
+      "name": "Active ingredient",
+      "description": "Quantity at 100% active agent content."
+    },
+    {
+      "code": "24",
+      "name": "Inventory quantity at supplier's not subject to inspection by customer",
+      "description": "Quantity of goods which the customer requires the supplier to have in inventory but which will not be checked by the customer."
+    },
+    {
+      "code": "25",
+      "name": "Retail sales",
+      "description": "Quantity of retail point of sale activity."
+    },
+    {
+      "code": "26",
+      "name": "Promotion quantity",
+      "description": "A quantity associated with a promotional event."
+    },
+    {
+      "code": "27",
+      "name": "On hold for shipment",
+      "description": "Article received which cannot be shipped in its present form."
+    },
+    {
+      "code": "28",
+      "name": "Military sales quantity",
+      "description": "Quantity of goods or services sold to a military organization."
+    },
+    {
+      "code": "29",
+      "name": "On premises sales",
+      "description": "Sale of product in restaurants or bars."
+    },
+    {
+      "code": "30",
+      "name": "Off premises sales",
+      "description": "Sale of product directly to a store."
+    },
+    {
+      "code": "31",
+      "name": "Estimated annual volume"
+    },
+    {
+      "code": "32",
+      "name": "Minimum delivery batch"
+    },
+    {
+      "code": "33",
+      "name": "Maximum delivery batch"
+    },
+    {
+      "code": "35",
+      "name": "Price break from",
+      "description": "The minimum quantity of a quantity range for a specified (unit) price."
+    },
+    {
+      "code": "36",
+      "name": "Price break to",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "40",
+      "name": "Normal delivery",
+      "description": "Quantity normally delivered by the seller."
+    },
+    {
+      "code": "46",
+      "name": "Pieces delivered",
+      "description": "Number of pieces actually received at the final destination."
+    },
+    {
+      "code": "47",
+      "name": "Invoiced quantity",
+      "description": "The quantity as per invoice."
+    },
+    {
+      "code": "48",
+      "name": "Received quantity",
+      "description": "The quantity which has been received."
+    },
+    {
+      "code": "49",
+      "name": "Chargeable distance",
+      "description": "Distance really charged by tariff appliance."
+    },
+    {
+      "code": "50",
+      "name": "Disposition undetermined quantity",
+      "description": "Product quantity that has not yet had its disposition determined."
+    },
+    {
+      "code": "51",
+      "name": "Inventory category transfer",
+      "description": "Inventory that has been moved from one inventory category to another."
+    },
+    {
+      "code": "52",
+      "name": "Quantity per pack"
+    },
+    {
+      "code": "53",
+      "name": "Minimum order quantity"
+    },
+    {
+      "code": "54",
+      "name": "Maximum order quantity"
+    },
+    {
+      "code": "55",
+      "name": "Total sales",
+      "description": "The summation of total quantity sales."
+    },
+    {
+      "code": "56",
+      "name": "Wholesaler to wholesaler sales",
+      "description": "Sale of product to other wholesalers by a wholesaler."
+    },
+    {
+      "code": "57",
+      "name": "In transit quantity",
+      "description": "A quantity that is enroute."
+    },
+    {
+      "code": "58",
+      "name": "Quantity withdrawn",
+      "description": "Quantity withdrawn from a location."
+    },
+    {
+      "code": "59",
+      "name": "Numbers of consumer units in the traded unit"
+    },
+    {
+      "code": "60",
+      "name": "Current inventory quantity available for shipment",
+      "description": "Current inventory quantity available for shipment."
+    },
+    {
+      "code": "61",
+      "name": "Return quantity"
+    },
+    {
+      "code": "62",
+      "name": "Sorted quantity",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "63",
+      "name": "Sorted quantity rejected",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "64",
+      "name": "Scrap quantity",
+      "description": "Remainder of the total quantity after split deliveries."
+    },
+    {
+      "code": "65",
+      "name": "Destroyed quantity"
+    },
+    {
+      "code": "66",
+      "name": "Committed quantity",
+      "description": "Quantity a party is committed to."
+    },
+    {
+      "code": "67",
+      "name": "Estimated reading quantity",
+      "description": "The value that is estimated to be the reading of a measuring device (e.g. meter)."
+    },
+    {
+      "code": "68",
+      "name": "End quantity",
+      "description": "The quantity recorded at the end of an agreement or period."
+    },
+    {
+      "code": "69",
+      "name": "Start quantity",
+      "description": "The quantity recorded at the start of an agreement or period."
+    },
+    {
+      "code": "70",
+      "name": "Cumulative quantity received",
+      "description": "Cumulative quantity of all deliveries of this article received by the buyer."
+    },
+    {
+      "code": "71",
+      "name": "Cumulative quantity ordered",
+      "description": "Cumulative quantity of all deliveries, outstanding and scheduled orders."
+    },
+    {
+      "code": "72",
+      "name": "Cumulative quantity received end of prior year",
+      "description": "Cumulative quantity of all deliveries of the product received by the buyer till end of prior year."
+    },
+    {
+      "code": "73",
+      "name": "Outstanding quantity",
+      "description": "Difference between quantity ordered and quantity received."
+    },
+    {
+      "code": "74",
+      "name": "Latest cumulative quantity",
+      "description": "Cumulative quantity after complete delivery of all scheduled quantities of the product."
+    },
+    {
+      "code": "75",
+      "name": "Previous highest cumulative quantity",
+      "description": "Cumulative quantity after complete delivery of all scheduled quantities of the product from a prior schedule period."
+    },
+    {
+      "code": "76",
+      "name": "Adjusted corrector reading",
+      "description": "A corrector reading after it has been adjusted."
+    },
+    {
+      "code": "77",
+      "name": "Work days",
+      "description": "Number of work days, e.g. per respective period."
+    },
+    {
+      "code": "78",
+      "name": "Cumulative quantity scheduled",
+      "description": "Adding the quantity actually scheduled to previous cumulative quantity."
+    },
+    {
+      "code": "79",
+      "name": "Previous cumulative quantity",
+      "description": "Cumulative quantity prior the actual order."
+    },
+    {
+      "code": "80",
+      "name": "Unadjusted corrector reading",
+      "description": "A corrector reading before it has been adjusted."
+    },
+    {
+      "code": "81",
+      "name": "Extra unplanned delivery",
+      "description": "Non scheduled additional quantity."
+    },
+    {
+      "code": "82",
+      "name": "Quantity requirement for sample inspection"
+    },
+    {
+      "code": "83",
+      "name": "Backorder quantity"
+    },
+    {
+      "code": "84",
+      "name": "Urgent delivery quantity"
+    },
+    {
+      "code": "85",
+      "name": "Previous order quantity to be cancelled"
+    },
+    {
+      "code": "86",
+      "name": "Normal reading quantity",
+      "description": "The value recorded or read from a measuring device (e.g. meter) in the normal conditions."
+    },
+    {
+      "code": "87",
+      "name": "Customer reading quantity",
+      "description": "The value recorded or read from a measuring device (e.g. meter) by the customer."
+    },
+    {
+      "code": "88",
+      "name": "Information reading quantity",
+      "description": "The value recorded or read from a measuring device (e.g. meter) for information purposes."
+    },
+    {
+      "code": "89",
+      "name": "Quality control held",
+      "description": "Quantity of goods held pending completion of a quality control assessment."
+    },
+    {
+      "code": "90",
+      "name": "As is quantity"
+    },
+    {
+      "code": "91",
+      "name": "Open quantity",
+      "description": "Quantity remaining after partial delivery."
+    },
+    {
+      "code": "92",
+      "name": "Final delivery quantity",
+      "description": "Quantity of final delivery to a respective order."
+    },
+    {
+      "code": "93",
+      "name": "Subsequent delivery quantity",
+      "description": "Quantity delivered to a respective order after it's final delivery."
+    },
+    {
+      "code": "94",
+      "name": "Substitutional quantity",
+      "description": "Quantity delivered replacing previous deliveries."
+    },
+    {
+      "code": "95",
+      "name": "Redelivery after post processing"
+    },
+    {
+      "code": "96",
+      "name": "Quality control failed",
+      "description": "Quantity of goods which have failed quality control."
+    },
+    {
+      "code": "97",
+      "name": "Minimum inventory",
+      "description": "Minimum stock quantity on which replenishment is based."
+    },
+    {
+      "code": "98",
+      "name": "Maximum inventory",
+      "description": "Maximum stock quantity on which replenishment is based."
+    },
+    {
+      "code": "99",
+      "name": "Estimated quantity"
+    },
+    {
+      "code": "100",
+      "name": "Chargeable weight",
+      "description": "The weight on which charges are based."
+    },
+    {
+      "code": "101",
+      "name": "Chargeable gross weight",
+      "description": "The gross weight on which charges are based."
+    },
+    {
+      "code": "102",
+      "name": "Chargeable tare weight",
+      "description": "The tare weight on which charges are based."
+    },
+    {
+      "code": "103",
+      "name": "Chargeable number of axles",
+      "description": "The number of axles on which charges are based."
+    },
+    {
+      "code": "104",
+      "name": "Chargeable number of containers",
+      "description": "The number of containers on which charges are based."
+    },
+    {
+      "code": "105",
+      "name": "Chargeable number of rail wagons",
+      "description": "The number of rail wagons on which charges are based."
+    },
+    {
+      "code": "106",
+      "name": "Chargeable number of packages",
+      "description": "The number of packages on which charges are based."
+    },
+    {
+      "code": "107",
+      "name": "Chargeable number of units",
+      "description": "The number of units on which charges are based."
+    },
+    {
+      "code": "108",
+      "name": "Chargeable period",
+      "description": "The period of time on which charges are based."
+    },
+    {
+      "code": "109",
+      "name": "Chargeable volume",
+      "description": "The volume on which charges are based."
+    },
+    {
+      "code": "110",
+      "name": "Chargeable cubic measurements",
+      "description": "The cubic measurements on which charges are based."
+    },
+    {
+      "code": "111",
+      "name": "Chargeable surface",
+      "description": "The surface area on which charges are based."
+    },
+    {
+      "code": "112",
+      "name": "Chargeable length",
+      "description": "The length on which charges are based."
+    },
+    {
+      "code": "113",
+      "name": "Quantity to be delivered",
+      "description": "The quantity to be delivered."
+    },
+    {
+      "code": "114",
+      "name": "Number of passengers",
+      "description": "Total number of passengers on the conveyance."
+    },
+    {
+      "code": "115",
+      "name": "Number of crew",
+      "description": "Total number of crew members on the conveyance."
+    },
+    {
+      "code": "116",
+      "name": "Number of transport documents",
+      "description": "Total number of air waybills, bills of lading, etc. being reported for a specific conveyance."
+    },
+    {
+      "code": "117",
+      "name": "Quantity landed",
+      "description": "Quantity of goods actually arrived."
+    },
+    {
+      "code": "118",
+      "name": "Quantity manifested",
+      "description": "Quantity of goods contracted for delivery by the carrier."
+    },
+    {
+      "code": "119",
+      "name": "Short shipped",
+      "description": "Indication that part of the consignment was not shipped."
+    },
+    {
+      "code": "120",
+      "name": "Split shipment",
+      "description": "Indication that the consignment has been split into two or more shipments."
+    },
+    {
+      "code": "121",
+      "name": "Over shipped",
+      "description": "Indication that more goods have been shipped than contracted for delivery."
+    },
+    {
+      "code": "122",
+      "name": "Short-landed goods",
+      "description": "If quantity of goods actually landed is less than the quantity which appears in the documentation. This quantity is the difference between these quantities."
+    },
+    {
+      "code": "123",
+      "name": "Surplus goods",
+      "description": "If quantity of goods actually landed is more than the quantity which appears in the documentation. This quantity is the difference between these quantities."
+    },
+    {
+      "code": "124",
+      "name": "Damaged goods",
+      "description": "Quantity of goods which have deteriorated in transport such that they cannot be used for the purpose for which they were originally intended."
+    },
+    {
+      "code": "125",
+      "name": "Pilferage goods",
+      "description": "Quantity of goods stolen during transport."
+    },
+    {
+      "code": "126",
+      "name": "Lost goods",
+      "description": "Quantity of goods that disappeared in transport."
+    },
+    {
+      "code": "127",
+      "name": "Report difference",
+      "description": "The quantity concerning the same transaction differs between two documents/messages and the source of this difference is a typing error."
+    },
+    {
+      "code": "128",
+      "name": "Quantity loaded",
+      "description": "Quantity of goods loaded onto a means of transport."
+    },
+    {
+      "code": "129",
+      "name": "Units per unit price",
+      "description": "Number of units per unit price."
+    },
+    {
+      "code": "130",
+      "name": "Allowance",
+      "description": "Quantity relevant for allowance."
+    },
+    {
+      "code": "131",
+      "name": "Delivery quantity",
+      "description": "Quantity required by buyer to be delivered."
+    },
+    {
+      "code": "132",
+      "name": "Cumulative quantity, preceding period, planned",
+      "description": "Cumulative quantity originally planned for the preceding period."
+    },
+    {
+      "code": "133",
+      "name": "Cumulative quantity, preceding period, reached",
+      "description": "Cumulative quantity reached in the preceding period."
+    },
+    {
+      "code": "134",
+      "name": "Cumulative quantity, actual planned",
+      "description": "Cumulative quantity planned for now."
+    },
+    {
+      "code": "135",
+      "name": "Period quantity, planned",
+      "description": "Quantity planned for this period."
+    },
+    {
+      "code": "136",
+      "name": "Period quantity, reached",
+      "description": "Quantity reached during this period."
+    },
+    {
+      "code": "137",
+      "name": "Cumulative quantity, preceding period, estimated",
+      "description": "Estimated cumulative quantity reached in the preceding period."
+    },
+    {
+      "code": "138",
+      "name": "Cumulative quantity, actual estimated",
+      "description": "Estimated cumulative quantity reached now."
+    },
+    {
+      "code": "139",
+      "name": "Cumulative quantity, preceding period, measured",
+      "description": "Surveyed cumulative quantity reached in the preceding period."
+    },
+    {
+      "code": "140",
+      "name": "Cumulative quantity, actual measured",
+      "description": "Surveyed cumulative quantity reached now."
+    },
+    {
+      "code": "141",
+      "name": "Period quantity, measured",
+      "description": "Surveyed quantity reached during this period."
+    },
+    {
+      "code": "142",
+      "name": "Total quantity, planned",
+      "description": "Total quantity planned."
+    },
+    {
+      "code": "143",
+      "name": "Quantity, remaining",
+      "description": "Quantity remaining."
+    },
+    {
+      "code": "144",
+      "name": "Tolerance",
+      "description": "Plus or minus tolerance expressed as a monetary amount."
+    },
+    {
+      "code": "145",
+      "name": "Actual stock",
+      "description": "The stock on hand, undamaged, and available for despatch, sale or use."
+    },
+    {
+      "code": "146",
+      "name": "Model or target stock",
+      "description": "The stock quantity required or planned to have on hand, undamaged and available for use."
+    },
+    {
+      "code": "147",
+      "name": "Direct shipment quantity",
+      "description": "Quantity to be shipped directly to a customer from a manufacturing site."
+    },
+    {
+      "code": "148",
+      "name": "Amortization total quantity",
+      "description": "Indication of final quantity for amortization."
+    },
+    {
+      "code": "149",
+      "name": "Amortization order quantity",
+      "description": "Indication of actual share of the order quantity for amortization."
+    },
+    {
+      "code": "150",
+      "name": "Amortization cumulated quantity",
+      "description": "Indication of actual cumulated quantity of previous and actual amortization order quantity."
+    },
+    {
+      "code": "151",
+      "name": "Quantity advised",
+      "description": "Quantity advised by supplier or shipper, in contrast to quantity actually received."
+    },
+    {
+      "code": "152",
+      "name": "Quantity on hand",
+      "description": "The total quantity of a product on hand at a location. This includes as well units awaiting return to manufacturer, units unavailable due to inspection procedures and undamaged stock available for despatch, resale or use."
+    },
+    {
+      "code": "153",
+      "name": "Statistical sales quantity",
+      "description": "Quantity of goods sold in a specified period."
+    },
+    {
+      "code": "154",
+      "name": "Sales quantity planned",
+      "description": "Quantity of goods required to meet future demands. - Market intelligence quantity."
+    },
+    {
+      "code": "155",
+      "name": "Replenishment quantity",
+      "description": "Quantity required to maintain the requisite on-hand stock of goods."
+    },
+    {
+      "code": "156",
+      "name": "Inventory movement quantity",
+      "description": "To specify the quantity of an inventory movement."
+    },
+    {
+      "code": "157",
+      "name": "Opening stock balance quantity",
+      "description": "To specify the quantity of an opening stock balance."
+    },
+    {
+      "code": "158",
+      "name": "Closing stock balance quantity",
+      "description": "To specify the quantity of a closing stock balance."
+    },
+    {
+      "code": "159",
+      "name": "Number of stops",
+      "description": "Number of times a means of transport stops before arriving at destination."
+    },
+    {
+      "code": "160",
+      "name": "Minimum production batch",
+      "description": "The quantity specified is the minimum output from a single production run."
+    },
+    {
+      "code": "161",
+      "name": "Dimensional sample quantity",
+      "description": "The quantity defined is a sample for the purpose of validating dimensions."
+    },
+    {
+      "code": "162",
+      "name": "Functional sample quantity",
+      "description": "The quantity defined is a sample for the purpose of validating function and performance."
+    },
+    {
+      "code": "163",
+      "name": "Pre-production quantity",
+      "description": "Quantity of the referenced item required prior to full production."
+    },
+    {
+      "code": "164",
+      "name": "Delivery batch",
+      "description": "Quantity of the referenced item which constitutes a standard batch for deliver purposes."
+    },
+    {
+      "code": "165",
+      "name": "Delivery batch multiple",
+      "description": "The multiples in which delivery batches can be supplied."
+    },
+    {
+      "code": "166",
+      "name": "All time buy",
+      "description": "The total quantity of the referenced covering all future needs. Further orders of the referenced item are not expected."
+    },
+    {
+      "code": "167",
+      "name": "Total delivery quantity",
+      "description": "The total quantity required by the buyer to be delivered."
+    },
+    {
+      "code": "168",
+      "name": "Single delivery quantity",
+      "description": "The quantity required by the buyer to be delivered in a single shipment."
+    },
+    {
+      "code": "169",
+      "name": "Supplied quantity",
+      "description": "Quantity of the referenced item actually shipped."
+    },
+    {
+      "code": "170",
+      "name": "Allocated quantity",
+      "description": "Quantity of the referenced item allocated from available stock for delivery."
+    },
+    {
+      "code": "171",
+      "name": "Maximum stackability",
+      "description": "The number of pallets/handling units which can be safely stacked one on top of another."
+    },
+    {
+      "code": "172",
+      "name": "Amortisation quantity",
+      "description": "The quantity of the referenced item which has a cost for tooling amortisation included in the item price."
+    },
+    {
+      "code": "173",
+      "name": "Previously amortised quantity",
+      "description": "The cumulative quantity of the referenced item which had a cost for tooling amortisation included in the item price."
+    },
+    {
+      "code": "174",
+      "name": "Total amortisation quantity",
+      "description": "The total quantity of the referenced item which has a cost for tooling amortisation included in the item price."
+    },
+    {
+      "code": "175",
+      "name": "Number of moulds",
+      "description": "The number of pressing moulds contained within a single piece of the referenced tooling."
+    },
+    {
+      "code": "176",
+      "name": "Concurrent item output of tooling",
+      "description": "The number of related items which can be produced simultaneously with a single piece of the referenced tooling."
+    },
+    {
+      "code": "177",
+      "name": "Periodic capacity of tooling",
+      "description": "Maximum production output of the referenced tool over a period of time."
+    },
+    {
+      "code": "178",
+      "name": "Lifetime capacity of tooling",
+      "description": "Maximum production output of the referenced tool over its productive lifetime."
+    },
+    {
+      "code": "179",
+      "name": "Number of deliveries per despatch period",
+      "description": "The number of deliveries normally expected to be despatched within each despatch period."
+    },
+    {
+      "code": "180",
+      "name": "Provided quantity",
+      "description": "The quantity of a referenced component supplied by the buyer for manufacturing of an ordered item."
+    },
+    {
+      "code": "181",
+      "name": "Maximum production batch",
+      "description": "The quantity specified is the maximum output from a single production run."
+    },
+    {
+      "code": "182",
+      "name": "Cancelled quantity",
+      "description": "Quantity of the referenced item which has previously been ordered and is now cancelled."
+    },
+    {
+      "code": "183",
+      "name": "No delivery requirement in this instruction",
+      "description": "This delivery instruction does not contain any delivery requirements."
+    },
+    {
+      "code": "184",
+      "name": "Quantity of material in ordered time",
+      "description": "Quantity of the referenced material within the ordered time."
+    },
+    {
+      "code": "185",
+      "name": "Rejected quantity",
+      "description": "The quantity of received goods rejected for quantity reasons."
+    },
+    {
+      "code": "186",
+      "name": "Cumulative quantity scheduled up to accumulation start date",
+      "description": "The cumulative quantity scheduled up to the accumulation start date."
+    },
+    {
+      "code": "187",
+      "name": "Quantity scheduled",
+      "description": "The quantity scheduled for delivery."
+    },
+    {
+      "code": "188",
+      "name": "Number of identical handling units",
+      "description": "Number of identical handling units in terms of type and contents."
+    },
+    {
+      "code": "189",
+      "name": "Number of packages in handling unit",
+      "description": "The number of packages contained in one handling unit."
+    },
+    {
+      "code": "190",
+      "name": "Despatch note quantity",
+      "description": "The item quantity specified on the despatch note."
+    },
+    {
+      "code": "191",
+      "name": "Adjustment to inventory quantity",
+      "description": "An adjustment to inventory quantity."
+    },
+    {
+      "code": "192",
+      "name": "Free goods quantity",
+      "description": "Quantity of goods which are free of charge."
+    },
+    {
+      "code": "193",
+      "name": "Free quantity included",
+      "description": "Free quantity included in ordered quantity."
+    },
+    {
+      "code": "194",
+      "name": "Received and accepted",
+      "description": "Quantity which has been received and accepted at a given location."
+    },
+    {
+      "code": "195",
+      "name": "Received, not accepted, to be returned",
+      "description": "Quantity which has been received but not accepted at a given location and which will consequently be returned to the relevant party."
+    },
+    {
+      "code": "196",
+      "name": "Received, not accepted, to be destroyed",
+      "description": "Quantity which has been received but not accepted at a given location and which will consequently be destroyed."
+    },
+    {
+      "code": "197",
+      "name": "Reordering level",
+      "description": "Quantity at which an order may be triggered to replenish."
+    },
+    {
+      "code": "198",
+      "name": "Quantity in transit",
+      "description": "Quantity which is currently in transit."
+    },
+    {
+      "code": "199",
+      "name": "Inventory withdrawal quantity",
+      "description": "Quantity which has been withdrawn from inventory since the last inventory report."
+    },
+    {
+      "code": "200",
+      "name": "Free quantity not included",
+      "description": "Free quantity not included in ordered quantity."
+    }
+  ]
+}

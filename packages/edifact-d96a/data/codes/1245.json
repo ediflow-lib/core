@@ -1,5 +1,51 @@
 {
-  "code": "1245",
-  "name": "Status indicator, coded",
-  "values": []
+  "elementCode": "1245",
+  "elementName": "Status indicator, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Amendment"
+    },
+    {
+      "code": "2",
+      "name": "Cancellation"
+    },
+    {
+      "code": "3",
+      "name": "Created new"
+    },
+    {
+      "code": "4",
+      "name": "No change"
+    },
+    {
+      "code": "5",
+      "name": "Replacement"
+    },
+    {
+      "code": "6",
+      "name": "Agreement",
+      "description": "An agreed status is allocated to delivery requirements."
+    },
+    {
+      "code": "7",
+      "name": "Proposal",
+      "description": "The delivery requirements are only a proposal."
+    },
+    {
+      "code": "8",
+      "name": "Suggested correction",
+      "description": "A correction status is allocated to previously transmitted delivery requirements."
+    },
+    {
+      "code": "9",
+      "name": "Test/do not deliver",
+      "description": "Status indicating delivery information sent for test purposes only, when the same message also contains operational delivery information."
+    },
+    {
+      "code": "10",
+      "name": "Already delivered",
+      "description": "The corresponding delivery requirements have already been delivered."
+    }
+  ]
 }

@@ -1,0 +1,41 @@
+{
+  "elementCode": "0083",
+  "elementName": "Action, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Acknowledged (this level and all lower levels)"
+    },
+    {
+      "code": "2",
+      "name": "Acknowledged - errors detected and reported"
+    },
+    {
+      "code": "3",
+      "name": "One or more rejected - next lower level"
+    },
+    {
+      "code": "4",
+      "name": "This level and all lower levels rejected",
+      "description": "The corresponding referenced-level and all its lower referenced-levels are rejected. One or more errors are reported at this reporting-level or a lower reporting- level."
+    },
+    {
+      "code": "5",
+      "name": "UNB/UNZ accepted"
+    },
+    {
+      "code": "6",
+      "name": "UNB/UNZ rejected"
+    },
+    {
+      "code": "7",
+      "name": "This level acknowledged, next lower level acknowledged if not explicitly rejected",
+      "description": "The corresponding referenced-level is acknowledged. All messages or functional groups at the next lower referenced-level are acknowledged except those explicitly reported as rejected at the next lower reporting-level in this CONTRL message."
+    },
+    {
+      "code": "8",
+      "name": "Interchange received",
+      "description": "The subject interchange has been received. UNB, UNZ and UNA if present, is acknowledged. The other parts of the interchange will be acknowledged or rejected in a subsequent CONTRL message."
+    }
+  ]
+}

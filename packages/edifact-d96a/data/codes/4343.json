@@ -1,0 +1,65 @@
+{
+  "elementCode": "4343",
+  "elementName": "Response type, coded",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Debit advice",
+      "description": "Receiver of the payment message needs to return a debit advice in response to the payment message."
+    },
+    {
+      "code": "AB",
+      "name": "Message acknowledgement",
+      "description": "Indicates that an acknowledge relating to receipt is required."
+    },
+    {
+      "code": "AC",
+      "name": "Acknowledge - with detail and change",
+      "description": "Acknowledge complete including changes."
+    },
+    {
+      "code": "AD",
+      "name": "Acknowledge - with detail, no change",
+      "description": "Acknowledge complete without changes."
+    },
+    {
+      "code": "AF",
+      "name": "Debit advice/message acknowledgement",
+      "description": "The sender wishes to receive both a Debit Advice and an acknowledgement of receipt for a payment message."
+    },
+    {
+      "code": "AG",
+      "name": "Authentication",
+      "description": "Authentication, by a party, of a document established for him by another party."
+    },
+    {
+      "code": "AI",
+      "name": "Acknowledge only changes",
+      "description": "Acknowledgement of changes only is required."
+    },
+    {
+      "code": "AP",
+      "name": "Accepted",
+      "description": "Indication that the referenced offer or transaction (e.g., cargo booking or quotation request) has been accepted."
+    },
+    {
+      "code": "CA",
+      "name": "Conditionally accepted",
+      "description": "Indication that the referenced offer or transaction (e.g., cargo booking or quotation request) has been accepted under conditions indicated in this message."
+    },
+    {
+      "code": "CO",
+      "name": "Confirmation of measurements",
+      "description": "Indication that the message contains the physical measurements on which the charges will be based."
+    },
+    {
+      "code": "NA",
+      "name": "No acknowledgement needed"
+    },
+    {
+      "code": "RE",
+      "name": "Rejected",
+      "description": "Indication that the referenced offer or transaction (e.g., cargo booking or quotation request) is not accepted."
+    }
+  ]
+}

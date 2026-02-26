@@ -1,0 +1,18 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "description": "X12 004010 (Version 4010) Standard Definitions",
+  "messages": {
+    "850": "Purchase Order",
+    "810": "Invoice",
+    "856": "Ship Notice/Manifest (ASN)",
+    "997": "Functional Acknowledgment"
+  },
+  "files": {
+    "elements": "./elements.json",
+    "segments": "./segments.json",
+    "messages": "./messages/",
+    "codes": "./codes.json"
+  }
+}
+

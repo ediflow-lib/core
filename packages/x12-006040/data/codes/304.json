@@ -1,0 +1,606 @@
+{
+  "code": "304",
+  "name": "Code identifying the event about which a report is made",
+  "values": [
+    {
+      "code": "AAA",
+      "name": "Requested Requirements"
+    },
+    {
+      "code": "AAD",
+      "name": "Actual Arrival at POD"
+    },
+    {
+      "code": "ACA",
+      "name": "Actual Conveyance Arrival"
+    },
+    {
+      "code": "ACC",
+      "name": "Accepted"
+    },
+    {
+      "code": "ADR",
+      "name": "Highway Departure"
+    },
+    {
+      "code": "ALR",
+      "name": "Actually Loaded on Rail"
+    },
+    {
+      "code": "ALV",
+      "name": "Actually Loaded on Vessel"
+    },
+    {
+      "code": "ANL",
+      "name": "Train Annulment"
+    },
+    {
+      "code": "ANO",
+      "name": "Arrived, Not Ordered Placed by Destination Party"
+    },
+    {
+      "code": "APU",
+      "name": "Anticipated Pickup"
+    },
+    {
+      "code": "ARD",
+      "name": "Actual Arrival Date at Final Destination"
+    },
+    {
+      "code": "ARI",
+      "name": "Arrival Transit Location"
+    },
+    {
+      "code": "ARR",
+      "name": "Arrival Final Destination"
+    },
+    {
+      "code": "ASO",
+      "name": "Anticipated Set-out"
+    },
+    {
+      "code": "BAD",
+      "name": "Bad Order"
+    },
+    {
+      "code": "BFR",
+      "name": "Release from Bad Order"
+    },
+    {
+      "code": "BHV",
+      "name": "Bad Order Heavy Repair"
+    },
+    {
+      "code": "BLG",
+      "name": "Bad Order Light Repair"
+    },
+    {
+      "code": "BOH",
+      "name": "Bad Order - Hours to Repair"
+    },
+    {
+      "code": "CCT",
+      "name": "Crew Call"
+    },
+    {
+      "code": "CG1",
+      "name": "Car Grade By Inspection"
+    },
+    {
+      "code": "CLK",
+      "name": "Consist Locked"
+    },
+    {
+      "code": "COC",
+      "name": "Cancellation of Conveyance"
+    },
+    {
+      "code": "CRD",
+      "name": "Cargo Receipt Date"
+    },
+    {
+      "code": "CSL",
+      "name": "Cargo Stripping"
+    },
+    {
+      "code": "CTU",
+      "name": "Crew Tie Up"
+    },
+    {
+      "code": "CUL",
+      "name": "Consist Un-Lock"
+    },
+    {
+      "code": "DDL",
+      "name": "Delivery Attempt"
+    },
+    {
+      "code": "DEC",
+      "name": "Declined"
+    },
+    {
+      "code": "DEL",
+      "name": "Deleted"
+    },
+    {
+      "code": "DEP",
+      "name": "Delivery Pending"
+    },
+    {
+      "code": "DFL",
+      "name": "Departure from Location"
+    },
+    {
+      "code": "DRM",
+      "name": "Deramped"
+    },
+    {
+      "code": "DSI",
+      "name": "Destination Switch Interchange"
+    },
+    {
+      "code": "EAD",
+      "name": "Estimated Arrival Date"
+    },
+    {
+      "code": "EDD",
+      "name": "Estimated Departure Date"
+    },
+    {
+      "code": "EFT",
+      "name": "Estimated Free Time"
+    },
+    {
+      "code": "EQO",
+      "name": "Equipment Ordered In"
+    },
+    {
+      "code": "ERD",
+      "name": "Estimated Arrival Date at Final Destination"
+    },
+    {
+      "code": "ETA",
+      "name": "Advanced Estimated Time of Arrival"
+    },
+    {
+      "code": "EWI",
+      "name": "Early Warning Inspections"
+    },
+    {
+      "code": "EWL",
+      "name": "Association of American Railroads Early Warning Letter"
+    },
+    {
+      "code": "FCA",
+      "name": "Carrier Does Not Possess Valid U.S. Operating Authority"
+    },
+    {
+      "code": "FCB",
+      "name": "Carrier Has an Out of Service Order Against It"
+    },
+    {
+      "code": "FCC",
+      "name": "Safety Score Indicates Inspection is Warranted"
+    },
+    {
+      "code": "FCD",
+      "name": "Carrier Check Not Performed, Data Not Available At This Time"
+    },
+    {
+      "code": "FCI",
+      "name": "Carrier's Current Insurance Does Not Meet the Minimum Level or Better"
+    },
+    {
+      "code": "FCS",
+      "name": "Carrier Data Not Found in Federal Motor Carrier Safety Administration (FMCSA) Systems"
+    },
+    {
+      "code": "FDD",
+      "name": "Driver Check Not Performed, Data Not Available at this Time"
+    },
+    {
+      "code": "FDH",
+      "name": "Driver Does Not Have Proper Commercial Drivers License (CDL) Endorsements for HAZMAT Cargo"
+    },
+    {
+      "code": "FDL",
+      "name": "Driver Does Not Have Valid/Current Commercial Drivers License (CDL) or Equivalent (Mexico or Canada)"
+    },
+    {
+      "code": "FED",
+      "name": "Trailer Check Not Performed, Data Not Available at this Time"
+    },
+    {
+      "code": "FOL",
+      "name": "Follow Up"
+    },
+    {
+      "code": "FRT",
+      "name": "From Repair Track"
+    },
+    {
+      "code": "FTE",
+      "name": "Free Time Expired Date"
+    },
+    {
+      "code": "FVC",
+      "name": "No Current Commercial Vehicle Safety Alliance (CVSA) Decal On File"
+    },
+    {
+      "code": "FVD",
+      "name": "Tractor Check Not Performed, Data Not Available at this Time"
+    },
+    {
+      "code": "HAR",
+      "name": "Highway Arrival RR Facility"
+    },
+    {
+      "code": "HEB",
+      "name": "Hold for Embargo"
+    },
+    {
+      "code": "HEQ",
+      "name": "Equipment Held"
+    },
+    {
+      "code": "HMI",
+      "name": "Hold or Miscellaneous"
+    },
+    {
+      "code": "HRE",
+      "name": "Release from Hold or Miscellaneous"
+    },
+    {
+      "code": "HSP",
+      "name": "Haulage Stop"
+    },
+    {
+      "code": "HSR",
+      "name": "Haulage Start"
+    },
+    {
+      "code": "HTR",
+      "name": "Trip Held"
+    },
+    {
+      "code": "IBD",
+      "name": "In Bond"
+    },
+    {
+      "code": "ICH",
+      "name": "Interchange Delivery"
+    },
+    {
+      "code": "ICR",
+      "name": "Interchange Receipt"
+    },
+    {
+      "code": "IGT",
+      "name": "Intermodal In-Gate Arrival at Railroad Intermodal Terminal"
+    },
+    {
+      "code": "INC",
+      "name": "Incomplete"
+    },
+    {
+      "code": "INV",
+      "name": "Association of American Railroads Inventory Move"
+    },
+    {
+      "code": "IRD",
+      "name": "In Transit"
+    },
+    {
+      "code": "IRI",
+      "name": "Ingate to Rail Interchange"
+    },
+    {
+      "code": "ITS",
+      "name": "Ingate to Rail Terminal or Satellite"
+    },
+    {
+      "code": "MAL",
+      "name": "Mailed"
+    },
+    {
+      "code": "MWY",
+      "name": "Move Away"
+    },
+    {
+      "code": "NOB",
+      "name": "No Bill at Location"
+    },
+    {
+      "code": "NOT",
+      "name": "Notified Destination Party"
+    },
+    {
+      "code": "OCA",
+      "name": "Overdue Conveyance Arrival"
+    },
+    {
+      "code": "OGT",
+      "name": "Intermodal Out-Gate"
+    },
+    {
+      "code": "OID",
+      "name": "Open Interchange Delivery"
+    },
+    {
+      "code": "OIR",
+      "name": "Open Interchange Receipt"
+    },
+    {
+      "code": "ORI",
+      "name": "Outgate to Rail Interchange"
+    },
+    {
+      "code": "ORP",
+      "name": "Ordered to Place"
+    },
+    {
+      "code": "OSI",
+      "name": "Origin Switch Interchange"
+    },
+    {
+      "code": "OTS",
+      "name": "Outgate to Rail Terminal or Satellite"
+    },
+    {
+      "code": "PAC",
+      "name": "Placement Actual"
+    },
+    {
+      "code": "PCO",
+      "name": "Placement Constructive"
+    },
+    {
+      "code": "PEN",
+      "name": "Pending"
+    },
+    {
+      "code": "PFP",
+      "name": "Pulled from Patron"
+    },
+    {
+      "code": "PLF",
+      "name": "Placed on Leased Track - From Customer"
+    },
+    {
+      "code": "PLJ",
+      "name": "Place at Joint Industry"
+    },
+    {
+      "code": "PLT",
+      "name": "Placed On Leased Track - To Customer"
+    },
+    {
+      "code": "POS",
+      "name": "Postpone"
+    },
+    {
+      "code": "PRB",
+      "name": "Problem Log Created"
+    },
+    {
+      "code": "PUJ",
+      "name": "Pull from Joint Industry"
+    },
+    {
+      "code": "PUL",
+      "name": "Pulled From Leased Track"
+    },
+    {
+      "code": "PUR",
+      "name": "Customer Released with No Billing"
+    },
+    {
+      "code": "RAM",
+      "name": "Ramped"
+    },
+    {
+      "code": "RCO",
+      "name": "Conveyance Released"
+    },
+    {
+      "code": "RCR",
+      "name": "Crew and or Passengers Released"
+    },
+    {
+      "code": "REB",
+      "name": "Release from Embargo Hold"
+    },
+    {
+      "code": "REC",
+      "name": "Postal Reconsignment"
+    },
+    {
+      "code": "REJ",
+      "name": "Rejected by Shipper"
+    },
+    {
+      "code": "REP",
+      "name": "Repended"
+    },
+    {
+      "code": "REQ",
+      "name": "Equipment Released"
+    },
+    {
+      "code": "RET",
+      "name": "Receipted"
+    },
+    {
+      "code": "RLO",
+      "name": "Released Loaded from Customer"
+    },
+    {
+      "code": "RLT",
+      "name": "Released From Leased Track"
+    },
+    {
+      "code": "RMT",
+      "name": "Released Empty from Customer"
+    },
+    {
+      "code": "RST",
+      "name": "Restore Annulled Train"
+    },
+    {
+      "code": "RTR",
+      "name": "Trip Released"
+    },
+    {
+      "code": "RYD",
+      "name": "Rail Yard Move"
+    },
+    {
+      "code": "SAD",
+      "name": "Scheduled Arrival Date"
+    },
+    {
+      "code": "SAT",
+      "name": "Satisfied"
+    },
+    {
+      "code": "SDD",
+      "name": "Scheduled Departure Date"
+    },
+    {
+      "code": "SEI",
+      "name": "Seized Equipment"
+    },
+    {
+      "code": "SER",
+      "name": "Seized Equipment - Removed"
+    },
+    {
+      "code": "SLD",
+      "name": "Sailed"
+    },
+    {
+      "code": "SPD",
+      "name": "Scheduled Passing"
+    },
+    {
+      "code": "SPT",
+      "name": "Spot Date"
+    },
+    {
+      "code": "STA",
+      "name": "To Storage - Actual"
+    },
+    {
+      "code": "STI",
+      "name": "To Storage - Intend"
+    },
+    {
+      "code": "STN",
+      "name": "Stored Unserviceable"
+    },
+    {
+      "code": "STP",
+      "name": "Stored Prospective Load"
+    },
+    {
+      "code": "STS",
+      "name": "Stored for Seasonal Use"
+    },
+    {
+      "code": "STU",
+      "name": "Stored Serviceable"
+    },
+    {
+      "code": "STV",
+      "name": "Driver's Country of Citizenship Missing"
+    },
+    {
+      "code": "SUS",
+      "name": "Suspended"
+    },
+    {
+      "code": "SUV",
+      "name": "Driver Missing Approved Western Hemisphere Travel Initiative (WHTI) Document"
+    },
+    {
+      "code": "TDC",
+      "name": "Train Delay Cancelled"
+    },
+    {
+      "code": "TDL",
+      "name": "Train Delay"
+    },
+    {
+      "code": "TMA",
+      "name": "Train Move Arrival"
+    },
+    {
+      "code": "TMD",
+      "name": "Train Move Departure"
+    },
+    {
+      "code": "TOD",
+      "name": "Train Overdue"
+    },
+    {
+      "code": "TPL",
+      "name": "Trip Planned"
+    },
+    {
+      "code": "TRN",
+      "name": "Lading Transferred"
+    },
+    {
+      "code": "TRP",
+      "name": "Train Reported Passing"
+    },
+    {
+      "code": "TRT",
+      "name": "To Repair Track"
+    },
+    {
+      "code": "UFV",
+      "name": "Unloaded From Vessel"
+    },
+    {
+      "code": "UNS",
+      "name": "Unable to Schedule"
+    },
+    {
+      "code": "VAR",
+      "name": "Vessel Arrival"
+    },
+    {
+      "code": "VDP",
+      "name": "Vessel Departure"
+    },
+    {
+      "code": "WAI",
+      "name": "Waived"
+    },
+    {
+      "code": "WGH",
+      "name": "Weigh"
+    },
+    {
+      "code": "WIT",
+      "name": "Withdrawn"
+    },
+    {
+      "code": "WYB",
+      "name": "Waybilled"
+    },
+    {
+      "code": "ZZX",
+      "name": "Refuel"
+    },
+    {
+      "code": "ZZY",
+      "name": "Fuel Reading"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "475",
+  "name": "Rail Route File Maintenance",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Rail Route File Maintenance Transaction Set (475) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used to distribute route file updates of the rail industry route file.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR9",
+      "name": "LoopR9",
+      "triggerSegment": "R9",
+      "mandatory": true,
+      "maxOccurrences": 50,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R9",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": true,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "RDD",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

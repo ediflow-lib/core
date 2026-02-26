@@ -1,0 +1,51 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "127",
+  "name": "Vehicle Baying Order",
+  "description": "Vehicle Baying Order",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BVB",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "VC",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SFC",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    }
+  ]
+}

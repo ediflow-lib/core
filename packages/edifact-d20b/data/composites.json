@@ -110,17 +110,17 @@
   "C008": {
     "code": "C008",
     "name": "MONETARY AMOUNT FUNCTION DETAIL",
-    "description": "To provide the detail of a monetary amount function.",
+    "description": "To provide the detail of a monetary amount function. description code C an..17",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       }
     ]
   },
@@ -788,15 +788,20 @@
   "C100": {
     "code": "C100",
     "name": "TERMS OF DELIVERY OR TRANSPORT",
-    "description": "Terms of delivery or transport code from a specified source.",
+    "description": "Terms of delivery or transport code from a specified source. code C an..3",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4052",
         "mandatory": false,
         "position": 3
       },
@@ -804,11 +809,6 @@
         "elementCode": "4052",
         "mandatory": false,
         "position": 4
-      },
-      {
-        "elementCode": "4052",
-        "mandatory": false,
-        "position": 5
       }
     ]
   },
@@ -1016,32 +1016,32 @@
   "C200": {
     "code": "C200",
     "name": "CHARGE",
-    "description": "Identification of a charge by code and/or by name.",
+    "description": "Identification of a charge by code and/or by name. identifier C an..17",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "8022",
         "mandatory": false,
-        "position": 4
+        "position": 3
       },
       {
         "elementCode": "4237",
         "mandatory": false,
-        "position": 5
+        "position": 4
       },
       {
         "elementCode": "7140",
         "mandatory": false,
-        "position": 6
+        "position": 5
       }
     ]
   },
@@ -1142,7 +1142,7 @@
       {
         "elementCode": "8092",
         "mandatory": false,
-        "position": 3
+        "position": 2
       }
     ]
   },
@@ -1461,27 +1461,27 @@
   "C222": {
     "code": "C222",
     "name": "TRANSPORT IDENTIFICATION",
-    "description": "Code and/or name identifying the means of transport.",
+    "description": "Code and/or name identifying the means of transport. identifier C an..35",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "8212",
         "mandatory": false,
-        "position": 4
+        "position": 3
       },
       {
         "elementCode": "8453",
         "mandatory": false,
-        "position": 5
+        "position": 4
       }
     ]
   },
@@ -1640,12 +1640,12 @@
   "C234": {
     "code": "C234",
     "name": "UNDG INFORMATION",
-    "description": "Information on dangerous goods, taken from the United Nations Dangerous Goods classification.",
+    "description": "Information on dangerous goods, taken from the United Nations Dangerous Goods classification. identifier C n4",
     "components": [
       {
         "elementCode": "7088",
         "mandatory": false,
-        "position": 2
+        "position": 1
       }
     ]
   },
@@ -2462,17 +2462,17 @@
   "C507": {
     "code": "C507",
     "name": "DATE/TIME/PERIOD",
-    "description": "Date and/or time, or period relevant to the specified date/time/period type.",
+    "description": "Date and/or time, or period relevant to the specified date/time/period type. qualifier M an..3",
     "components": [
       {
         "elementCode": "2380",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "2379",
         "mandatory": false,
-        "position": 3
+        "position": 2
       }
     ]
   },
@@ -2908,12 +2908,12 @@
   "C532": {
     "code": "C532",
     "name": "RETURNABLE PACKAGE DETAILS",
-    "description": "Indication of responsibility for payment and load contents of returnable packages.",
+    "description": "Indication of responsibility for payment and load contents of returnable packages. responsibility code C an..3",
     "components": [
       {
         "elementCode": "8393",
         "mandatory": false,
-        "position": 2
+        "position": 1
       }
     ]
   },
@@ -3126,22 +3126,22 @@
   "C550": {
     "code": "C550",
     "name": "REQUIREMENT/CONDITION IDENTIFICATION",
-    "description": "To identify the specific rule/condition requirement.",
+    "description": "To identify the specific rule/condition requirement. identifier M an..17",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "7294",
         "mandatory": false,
-        "position": 4
+        "position": 3
       }
     ]
   },
@@ -3290,22 +3290,22 @@
   "C564": {
     "code": "C564",
     "name": "PHYSICAL OR LOGICAL STATE INFORMATION",
-    "description": "To give information in coded or clear text form on the physical or logical state.",
+    "description": "To give information in coded or clear text form on the physical or logical state. code C an..3",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "7006",
         "mandatory": false,
-        "position": 4
+        "position": 3
       }
     ]
   },
@@ -3548,12 +3548,12 @@
       {
         "elementCode": "1060",
         "mandatory": false,
-        "position": 6
+        "position": 5
       },
       {
         "elementCode": "1373",
         "mandatory": false,
-        "position": 7
+        "position": 6
       }
     ]
   },
@@ -3779,22 +3779,22 @@
   "C815": {
     "code": "C815",
     "name": "ADDITIONAL SAFETY INFORMATION",
-    "description": "To identify additional safety information.",
+    "description": "To identify additional safety information. code M an..3",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "4038",
         "mandatory": false,
-        "position": 4
+        "position": 3
       }
     ]
   },
@@ -3980,7 +3980,7 @@
   "C823": {
     "code": "C823",
     "name": "TYPE OF UNIT/COMPONENT",
-    "description": "To identify the type of unit/component of an object (e.g. lock, door, tyre).",
+    "description": "To identify the type of unit/component of an object",
     "components": [
       {
         "elementCode": "7505",
@@ -4218,22 +4218,22 @@
   "C836": {
     "code": "C836",
     "name": "CLINICAL INFORMATION DETAILS",
-    "description": "To specify an item of clinical information.",
+    "description": "To specify an item of clinical information. identifier C an..17",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "6412",
         "mandatory": false,
-        "position": 4
+        "position": 3
       }
     ]
   },
@@ -4485,22 +4485,22 @@
   "C852": {
     "code": "C852",
     "name": "RISK OBJECT SUB-TYPE",
-    "description": "To provide identification details for a risk object sub-type.",
+    "description": "To provide identification details for a risk object sub-type. identifier C an..17",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
         "mandatory": false,
-        "position": 3
+        "position": 2
       },
       {
         "elementCode": "7176",
         "mandatory": false,
-        "position": 4
+        "position": 3
       }
     ]
   },
@@ -4755,15 +4755,20 @@
   "C950": {
     "code": "C950",
     "name": "QUALIFICATION CLASSIFICATION",
-    "description": "Qualification classification description and/or code. This specifies the trade, skill, professional or similar qualification category.",
+    "description": "Qualification classification description and/or code. This specifies the trade, skill, professional or similar qualification category. code C an..3",
     "components": [
       {
         "elementCode": "1131",
         "mandatory": false,
-        "position": 2
+        "position": 1
       },
       {
         "elementCode": "3055",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "9006",
         "mandatory": false,
         "position": 3
       },
@@ -4771,11 +4776,6 @@
         "elementCode": "9006",
         "mandatory": false,
         "position": 4
-      },
-      {
-        "elementCode": "9006",
-        "mandatory": false,
-        "position": 5
       }
     ]
   },

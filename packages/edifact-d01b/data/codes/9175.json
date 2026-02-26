@@ -1,5 +1,21 @@
 {
-  "code": "9175",
-  "name": "Data element usage type code",
-  "values": []
+  "elementCode": "9175",
+  "elementName": "Data element usage type code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Component data element",
+      "description": "The associated data element is used within a composite."
+    },
+    {
+      "code": "2",
+      "name": "Simple data element",
+      "description": "The associated data element is used as a stand-alone element."
+    },
+    {
+      "code": "3",
+      "name": "Composite data element",
+      "description": "The associated data element is a composite data element."
+    }
+  ]
 }

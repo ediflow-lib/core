@@ -1,5 +1,36 @@
 {
-  "code": "5501",
-  "name": "Rate plan code",
-  "values": []
+  "elementCode": "5501",
+  "elementName": "Rate plan code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Hourly",
+      "description": "Rate is per hour."
+    },
+    {
+      "code": "2",
+      "name": "Total",
+      "description": "Total rate charged for the duration of the provided service which includes taxes, surcharges, drop fees and optional charges."
+    },
+    {
+      "code": "3",
+      "name": "Daily",
+      "description": "Rate is per day."
+    },
+    {
+      "code": "4",
+      "name": "Monthly",
+      "description": "Rate is per month."
+    },
+    {
+      "code": "5",
+      "name": "Weekend",
+      "description": "Rate is per weekend."
+    },
+    {
+      "code": "6",
+      "name": "Weekly",
+      "description": "Rate is per week."
+    }
+  ]
 }

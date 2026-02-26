@@ -1,5 +1,331 @@
 {
-  "code": "1225",
-  "name": "Message function code",
-  "values": []
+  "elementCode": "1225",
+  "elementName": "Message function code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Cancellation",
+      "description": "Message cancelling a previous transmission for a given transaction."
+    },
+    {
+      "code": "2",
+      "name": "Addition",
+      "description": "Message containing items to be added."
+    },
+    {
+      "code": "3",
+      "name": "Deletion",
+      "description": "Message containing items to be deleted."
+    },
+    {
+      "code": "4",
+      "name": "Change",
+      "description": "Message containing items to be changed."
+    },
+    {
+      "code": "5",
+      "name": "Replace",
+      "description": "Message replacing a previous message."
+    },
+    {
+      "code": "6",
+      "name": "Confirmation",
+      "description": "Message confirming the details of a previous transmission where such confirmation is required or recommended under the terms of a trading partner agreement."
+    },
+    {
+      "code": "7",
+      "name": "Duplicate",
+      "description": "The message is a duplicate of a previously generated message."
+    },
+    {
+      "code": "8",
+      "name": "Status",
+      "description": "Code indicating that the referenced message is a status."
+    },
+    {
+      "code": "9",
+      "name": "Original",
+      "description": "Initial transmission related to a given transaction."
+    },
+    {
+      "code": "10",
+      "name": "Not found",
+      "description": "Message whose reference number is not filed."
+    },
+    {
+      "code": "11",
+      "name": "Response",
+      "description": "Message responding to a previous message or document."
+    },
+    {
+      "code": "12",
+      "name": "Not processed",
+      "description": "Message indicating that the referenced message was received but not yet processed."
+    },
+    {
+      "code": "13",
+      "name": "Request",
+      "description": "Code indicating that the referenced message is a request."
+    },
+    {
+      "code": "14",
+      "name": "Advance notification",
+      "description": "Code indicating that the information contained in the message is an advance notification of information to follow."
+    },
+    {
+      "code": "15",
+      "name": "Reminder",
+      "description": "Repeated message transmission for reminding purposes."
+    },
+    {
+      "code": "16",
+      "name": "Proposal",
+      "description": "Message content is a proposal."
+    },
+    {
+      "code": "17",
+      "name": "Cancel, to be reissued",
+      "description": "Referenced transaction cancelled, reissued message will follow."
+    },
+    {
+      "code": "18",
+      "name": "Reissue",
+      "description": "New issue of a previous message (maybe cancelled)."
+    },
+    {
+      "code": "19",
+      "name": "Seller initiated change",
+      "description": "Change information submitted by buyer but initiated by seller."
+    },
+    {
+      "code": "20",
+      "name": "Replace heading section only",
+      "description": "Message to replace the heading of a previous message."
+    },
+    {
+      "code": "21",
+      "name": "Replace item detail and summary only",
+      "description": "Message to replace item detail and summary of a previous message."
+    },
+    {
+      "code": "22",
+      "name": "Final transmission",
+      "description": "Final message in a related series of messages together making up a commercial, administrative or transport transaction."
+    },
+    {
+      "code": "23",
+      "name": "Transaction on hold",
+      "description": "Message not to be processed until further release information."
+    },
+    {
+      "code": "24",
+      "name": "Delivery instruction",
+      "description": "Delivery schedule message only used to transmit short- term delivery instructions."
+    },
+    {
+      "code": "25",
+      "name": "Forecast",
+      "description": "Delivery schedule message only used to transmit long- term schedule information."
+    },
+    {
+      "code": "26",
+      "name": "Delivery instruction and forecast",
+      "description": "Combination of codes '24' and '25'."
+    },
+    {
+      "code": "27",
+      "name": "Not accepted",
+      "description": "Message to inform that the referenced message is not accepted by the recipient."
+    },
+    {
+      "code": "28",
+      "name": "Accepted, with amendment in heading section",
+      "description": "Message accepted but amended in heading section."
+    },
+    {
+      "code": "29",
+      "name": "Accepted without amendment",
+      "description": "Referenced message is entirely accepted."
+    },
+    {
+      "code": "30",
+      "name": "Accepted, with amendment in detail section",
+      "description": "Referenced message is accepted but amended in detail section."
+    },
+    {
+      "code": "31",
+      "name": "Copy",
+      "description": "Indicates that the message is a copy of an original message that has been sent, e.g. for action or information."
+    },
+    {
+      "code": "32",
+      "name": "Approval",
+      "description": "A message releasing an existing referenced message for action to the receiver."
+    },
+    {
+      "code": "33",
+      "name": "Change in heading section",
+      "description": "Message changing the referenced message heading section."
+    },
+    {
+      "code": "34",
+      "name": "Accepted with amendment",
+      "description": "The referenced message is accepted but amended."
+    },
+    {
+      "code": "35",
+      "name": "Retransmission",
+      "description": "Change-free transmission of a message previously sent."
+    },
+    {
+      "code": "36",
+      "name": "Change in detail section",
+      "description": "Message changing referenced detail section."
+    },
+    {
+      "code": "37",
+      "name": "Reversal of a debit",
+      "description": "Reversal of a previously posted debit."
+    },
+    {
+      "code": "38",
+      "name": "Reversal of a credit",
+      "description": "Reversal of a previously posted credit."
+    },
+    {
+      "code": "39",
+      "name": "Reversal for cancellation",
+      "description": "Code indicating that the referenced message is reversing a cancellation of a previous transmission for a given transaction."
+    },
+    {
+      "code": "40",
+      "name": "Request for deletion",
+      "description": "The message is given to inform the recipient to delete the referenced transaction."
+    },
+    {
+      "code": "41",
+      "name": "Finishing/closing order",
+      "description": "Last of series of call-offs."
+    },
+    {
+      "code": "42",
+      "name": "Confirmation via specific means",
+      "description": "Message confirming a transaction previously agreed via other means (e.g. phone)."
+    },
+    {
+      "code": "43",
+      "name": "Additional transmission",
+      "description": "Message already transmitted via another communication channel. This transmission is to provide electronically processable data only."
+    },
+    {
+      "code": "44",
+      "name": "Accepted without reserves",
+      "description": "Message accepted without reserves."
+    },
+    {
+      "code": "45",
+      "name": "Accepted with reserves",
+      "description": "Message accepted with reserves."
+    },
+    {
+      "code": "46",
+      "name": "Provisional",
+      "description": "Message content is provisional."
+    },
+    {
+      "code": "47",
+      "name": "Definitive",
+      "description": "Message content is definitive."
+    },
+    {
+      "code": "48",
+      "name": "Accepted, contents rejected",
+      "description": "Message to inform that the previous message is received, but it cannot be processed due to regulations, laws, etc."
+    },
+    {
+      "code": "49",
+      "name": "Settled dispute",
+      "description": "The reported dispute is settled."
+    },
+    {
+      "code": "50",
+      "name": "Withdraw",
+      "description": "Message withdrawing a previously approved message."
+    },
+    {
+      "code": "51",
+      "name": "Authorisation",
+      "description": "Message authorising a message or transaction(s)."
+    },
+    {
+      "code": "52",
+      "name": "Proposed amendment",
+      "description": "A code used to indicate an amendment suggested by the sender."
+    },
+    {
+      "code": "53",
+      "name": "Test",
+      "description": "Code indicating the message is to be considered as a test."
+    },
+    {
+      "code": "54",
+      "name": "Extract",
+      "description": "A subset of the original."
+    },
+    {
+      "code": "55",
+      "name": "Notification only",
+      "description": "The receiver may use the notification information for analysis only."
+    },
+    {
+      "code": "56",
+      "name": "Advice of ledger booked items",
+      "description": "An advice that items have been booked in the ledger."
+    },
+    {
+      "code": "57",
+      "name": "Advice of items pending to be booked in the ledger",
+      "description": "An advice that items are pending to be booked in the ledger."
+    },
+    {
+      "code": "58",
+      "name": "Pre-advice of items requiring further information",
+      "description": "A pre-advice that items require further information."
+    },
+    {
+      "code": "59",
+      "name": "Pre-adviced items",
+      "description": "A pre-advice of items."
+    },
+    {
+      "code": "60",
+      "name": "No action since last message",
+      "description": "Code indicating the fact that no action has taken place since the last message."
+    },
+    {
+      "code": "61",
+      "name": "Complete schedule",
+      "description": "The message function is a complete schedule."
+    },
+    {
+      "code": "62",
+      "name": "Update schedule",
+      "description": "The message function is an update to a schedule."
+    },
+    {
+      "code": "63",
+      "name": "Not accepted, provisional",
+      "description": "Not accepted, subject to confirmation."
+    },
+    {
+      "code": "64",
+      "name": "Verification",
+      "description": "The message is transmitted to verify information."
+    },
+    {
+      "code": "65",
+      "name": "Unsettled dispute",
+      "description": "To report an unsettled dispute."
+    }
+  ]
 }

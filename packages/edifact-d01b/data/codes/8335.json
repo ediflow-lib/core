@@ -1,5 +1,171 @@
 {
-  "code": "8335",
-  "name": "Movement type description code",
-  "values": []
+  "elementCode": "8335",
+  "elementName": "Movement type description code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Breakbulk",
+      "description": "Defines the movement of general cargo not carried in ISO standard containers."
+    },
+    {
+      "code": "2",
+      "name": "LCL/LCL",
+      "description": "Defines the movement of cargo packed in and unpacked from containers by the carrier on behalf of the shipper/consignee. 'LCL' means Less than Container Load."
+    },
+    {
+      "code": "3",
+      "name": "FCL/FCL",
+      "description": "Defines the movement of cargo packed by the shipper or shipper's agent and unpacked by the consignee or consignee's agent. 'FCL' means Full Container Load."
+    },
+    {
+      "code": "4",
+      "name": "FCL/LCL",
+      "description": "Defines the movement of cargo packed by the shipper or shipper's agent and unpacked by the carrier. 'FCL' means Full Container Load. 'LCL' means Less than Container Load."
+    },
+    {
+      "code": "5",
+      "name": "LCL/FCL",
+      "description": "Defines the movement of cargo packed by the carrier and unpacked by the consignee or consignee's agent. 'LCL' means Less than Container Load. 'FCL' means Full Load."
+    },
+    {
+      "code": "6",
+      "name": "Consolidation",
+      "description": "A movement of multiple shipments to a single destination."
+    },
+    {
+      "code": "7",
+      "name": "Parcel post",
+      "description": "A movement of material by parcel post."
+    },
+    {
+      "code": "8",
+      "name": "Expedited truck",
+      "description": "A movement of material by expedited truck."
+    },
+    {
+      "code": "9",
+      "name": "Consignor determined means",
+      "description": "A movement of material by the means determined by the consignor."
+    },
+    {
+      "code": "10",
+      "name": "Private parcel service",
+      "description": "A movement of material by a private parcel service."
+    },
+    {
+      "code": "11",
+      "name": "House to house",
+      "description": "Cargo packed in a unit by the shipper at point of origin and unpacked by consignee at final destination."
+    },
+    {
+      "code": "12",
+      "name": "House to terminal",
+      "description": "Cargo packed in a unit by the shipper at point of origin and unpacked at the carrier's inland facility between the ship's point of discharge and the final destination."
+    },
+    {
+      "code": "13",
+      "name": "House to pier",
+      "description": "Cargo packed in a unit by the shipper at point of origin and unpacked by carrier at ship's point of discharge (pier)."
+    },
+    {
+      "code": "14",
+      "name": "Air charter",
+      "description": "A movement of material by chartered aircraft."
+    },
+    {
+      "code": "15",
+      "name": "Air express",
+      "description": "A movement of material by air express service."
+    },
+    {
+      "code": "16",
+      "name": "Geographic grouped transport",
+      "description": "A movement of material from multiple origins to a single destination utilizing a single carrier and a single freight bill."
+    },
+    {
+      "code": "17",
+      "name": "Less than truck load",
+      "description": "A movement of material on a truck that is not full."
+    },
+    {
+      "code": "18",
+      "name": "Pooled piggyback",
+      "description": "A movement of material by a trailer on a railcar."
+    },
+    {
+      "code": "19",
+      "name": "Consignee transportation provided",
+      "description": "A movement of material transported by the consignee."
+    },
+    {
+      "code": "20",
+      "name": "Rail",
+      "description": "A movement of material to the consignee via rail."
+    },
+    {
+      "code": "21",
+      "name": "Terminal to house",
+      "description": "Cargo packed in a unit at a carrier's inland facility between point of origin and the ship's point of loading and unpacked by consignee at the final destination."
+    },
+    {
+      "code": "22",
+      "name": "Terminal to terminal",
+      "description": "Cargo packed in a unit at a carrier's inland facility between point of origin and the ship's point of loading and unpacked at a carrier's inland facility between ship's point of discharge and final destination."
+    },
+    {
+      "code": "23",
+      "name": "Terminal to pier",
+      "description": "Cargo packed in a unit at a carrier's inland facility between point of origin and ship's point of loading and unpacked by carrier at ship's point of discharge (pier)."
+    },
+    {
+      "code": "31",
+      "name": "Pier to house",
+      "description": "Cargo packed in a unit at ship's point of loading and unpacked by consignee at final destination."
+    },
+    {
+      "code": "32",
+      "name": "Pier to terminal",
+      "description": "Cargo packed in a unit at ship's point of loading and unpacked at a carrier's inland facility between ship's point of discharge and final destination."
+    },
+    {
+      "code": "33",
+      "name": "Pier to pier",
+      "description": "Cargo packed in a unit at ship's point of loading and unpacked by carrier at ship's point of discharge (pier)."
+    },
+    {
+      "code": "41",
+      "name": "Station to station",
+      "description": "The consignment is moving from one container freight station to another container freight station."
+    },
+    {
+      "code": "42",
+      "name": "House to warehouse",
+      "description": "The consignment is moving from the premises of the shipper to a warehouse."
+    },
+    {
+      "code": "43",
+      "name": "Warehouse to house",
+      "description": "The consignment is moving from a warehouse to the premises of the consignee."
+    },
+    {
+      "code": "44",
+      "name": "Station to house",
+      "description": "The cargo is moving from a container freight station to the premises of the consignee."
+    },
+    {
+      "code": "45",
+      "name": "Geographic grouped transport, multiple origins, multiple destinations",
+      "description": "A movement of material from multiple origins to multiple destinations using a single carrier and a single freight bill."
+    },
+    {
+      "code": "46",
+      "name": "Geographic grouped transport, multiple origins, single destination",
+      "description": "A movement of material from multiple origins to a single destination utilizing a single carrier and a single freight bill."
+    },
+    {
+      "code": "47",
+      "name": "Geographic receiving",
+      "description": "A collection of shipments that involve a single origin, multiple destinations, and a single trailer, and are paid under a single freight bill."
+    }
+  ]
 }

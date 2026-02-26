@@ -1,0 +1,154 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.01B",
+  "messageType": "KEYMAN",
+  "name": "Security key and certificate management",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG1",
+      "name": "SG1",
+      "triggerSegment": "USE",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "USE",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "USX",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "SG2",
+          "name": "SG2",
+          "triggerSegment": "USF",
+          "mandatory": true,
+          "maxOccurrences": 9,
+          "position": 3,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "USF",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "USA",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "SG3",
+              "name": "SG3",
+              "triggerSegment": "USC",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "USC",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "USA",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "USR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG4",
+      "name": "SG4",
+      "triggerSegment": "USL",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "USL",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "SG5",
+          "name": "SG5",
+          "triggerSegment": "USC",
+          "mandatory": true,
+          "maxOccurrences": 9999,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "USC",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "USA",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "USR",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

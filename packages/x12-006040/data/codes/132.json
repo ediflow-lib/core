@@ -1,0 +1,30 @@
+{
+  "code": "132",
+  "name": "Code signifying whether or not the shipment information transaction set includes instructions for pickup and movement of the shipment; (This code provides a means for the shipper to transmit billing data along with the movement instructions, transmit billing data ahead of the movement instructions, or follow movement instructions with complete billing data at a later date)",
+  "values": [
+    {
+      "code": "B",
+      "name": "Not Released - Billing Data Only"
+    },
+    {
+      "code": "H",
+      "name": "Hold previously released shipment"
+    },
+    {
+      "code": "R",
+      "name": "Released with Billing Data"
+    },
+    {
+      "code": "S",
+      "name": "Scheduled future release"
+    },
+    {
+      "code": "T",
+      "name": "Released with shipment information/billing data"
+    },
+    {
+      "code": "U",
+      "name": "Unscheduled release"
+    }
+  ]
+}

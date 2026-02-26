@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { SegmentOrGroup } from '@ediflow/core';
 import * as path from 'path';
 import {FileBasedMessageStructureRepository} from "@ediflow/infrastructure-shared";
 describe('FileBasedMessageStructureRepository Integration', () => {
@@ -19,7 +18,7 @@ describe('FileBasedMessageStructureRepository Integration', () => {
       expect(definition?.standard).toBe('EDIFACT');
       expect(definition?.version).toBe('D.20B');
       expect(definition?.messageType).toBe('ORDERS');
-      expect(definition?.name).toBe('ORDERS'); // Message name extraction to be improved
+      expect(definition?.name).toBe('Purchase order message'); // Message name extraction to be improved
       expect(definition?.structure).toBeDefined();
       expect(definition?.structure.length).toBeGreaterThan(0);
     });
@@ -40,34 +39,29 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     it('should validate message structure contains segment references', async () => {
       const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
 
-      const unhSegment = definition?.structure.find(
-        (node: SegmentOrGroup) => node.nodeType === 'segment' && 'segmentRef' in node && node.segmentRef === 'UNH'
+      const unhSegment: any = definition?.structure.find(
+        (node: any) => node.nodeType === 'segment' && node.segmentRef === 'UNH'
       );
 
       expect(unhSegment).toBeDefined();
       expect(unhSegment?.nodeType).toBe('segment');
-      if (unhSegment && 'segmentRef' in unhSegment) {
-        expect(unhSegment.segmentRef).toBe('UNH');
-        expect(unhSegment.mandatory).toBe(true);
-      }
+      expect(unhSegment?.segmentRef).toBe('UNH');
+      expect(unhSegment?.mandatory).toBe(true);
     });
 
     it('should validate message structure contains segment groups', async () => {
       const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
 
-      const segmentGroup = definition?.structure.find(
-        (node: SegmentOrGroup) => node.nodeType === 'segmentGroup' && 'id' in node && node.id === 'SG2'
+      const segmentGroup: any = definition?.structure.find(
+        (node: any) => node.nodeType === 'segmentGroup' && node.id === 'SG2'
       );
 
       expect(segmentGroup).toBeDefined();
       expect(segmentGroup?.nodeType).toBe('segmentGroup');
-      if (segmentGroup && 'id' in segmentGroup) {
-        expect(segmentGroup.id).toBe('SG2');
-        expect(segmentGroup.name).toBe('Segment group 2');
-        expect(segmentGroup.children).toBeDefined();
-        // Note: Detailed segment group children parsing is future enhancement
-        // For now, children array exists but may be empty (flat structure)
-      }
+      expect(segmentGroup?.id).toBe('SG2');
+      expect(segmentGroup?.name).toBe('SG2');
+      expect(segmentGroup?.structure).toBeDefined();
+      expect(Array.isArray(segmentGroup?.structure)).toBe(true);
     });
   });
 

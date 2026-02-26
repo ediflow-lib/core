@@ -1,0 +1,30 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "980",
+  "name": "Functional Group Totals",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Functional Group Totals Transaction Set (980) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to transmit selected totals and accumulated totals for each type of transaction set contained in a functional group.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BT1",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

@@ -1,0 +1,1449 @@
+{
+  "NM1": [
+    {
+      "type": "P",
+      "positions": [
+        8,
+        9
+      ],
+      "description": "If either 08 or 09 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        11,
+        10
+      ],
+      "description": "If 11 is present, then 10 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        12,
+        3
+      ],
+      "description": "If 12 is present, then 03 is required."
+    }
+  ],
+  "REF": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        3
+      ],
+      "description": "At least one of 02, 03 is required."
+    }
+  ],
+  "N4": [
+    {
+      "type": "E",
+      "positions": [
+        2,
+        7
+      ],
+      "description": "Only one of 02, 07 may be present."
+    },
+    {
+      "type": "E",
+      "positions": [
+        3,
+        8
+      ],
+      "description": "Only one of 03, 08 may be present."
+    },
+    {
+      "type": "C",
+      "positions": [
+        6,
+        5
+      ],
+      "description": "If 06 is present, then 05 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        7,
+        4
+      ],
+      "description": "If 07 is present, then 04 is required."
+    }
+  ],
+  "PRV": [
+    {
+      "type": "P",
+      "positions": [
+        2,
+        3
+      ],
+      "description": "If either 02 or 03 is present, then all others are required."
+    }
+  ],
+  "DMG": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        10,
+        11
+      ],
+      "description": "If either 10 or 11 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        11,
+        5
+      ],
+      "description": "If 11 is present, then 05 is required."
+    }
+  ],
+  "INS": [
+    {
+      "type": "P",
+      "positions": [
+        11,
+        12
+      ],
+      "description": "If either 11 or 12 is present, then all others are required."
+    }
+  ],
+  "EQ": [
+    {
+      "type": "R",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "At least one of 01, 02 is required."
+    }
+  ],
+  "III": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        3,
+        4,
+        5
+      ],
+      "description": "If 03 is present, then at least one of 04, 05 is required."
+    }
+  ],
+  "PER": [
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        7,
+        8
+      ],
+      "description": "If either 07 or 08 is present, then all others are required."
+    }
+  ],
+  "MPI": [
+    {
+      "type": "P",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If either 06 or 07 is present, then all others are required."
+    }
+  ],
+  "EB": [
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10
+      ],
+      "description": "If either 09 or 10 is present, then all others are required."
+    }
+  ],
+  "HSD": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        6,
+        5
+      ],
+      "description": "If 06 is present, then 05 is required."
+    }
+  ],
+  "MSG": [
+    {
+      "type": "C",
+      "positions": [
+        3,
+        2
+      ],
+      "description": "If 03 is present, then 02 is required."
+    }
+  ],
+  "QTY": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        4
+      ],
+      "description": "At least one of 02, 04 is required."
+    },
+    {
+      "type": "E",
+      "positions": [
+        2,
+        4
+      ],
+      "description": "Only one of 02, 04 may be present."
+    }
+  ],
+  "CR1": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    }
+  ],
+  "CR2": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        4,
+        3
+      ],
+      "description": "If 04 is present, then 03 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    }
+  ],
+  "CR6": [
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10,
+        11
+      ],
+      "description": "If either 09 or 10 or 11 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        15,
+        16,
+        17
+      ],
+      "description": "If either 15 or 16 or 17 is present, then all others are required."
+    }
+  ],
+  "PWK": [
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        10,
+        11
+      ],
+      "description": "If either 10 or 11 is present, then all others are required."
+    }
+  ],
+  "SV1": [
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    }
+  ],
+  "SV2": [
+    {
+      "type": "R",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "At least one of 01, 02 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "If either 04 or 05 is present, then all others are required."
+    }
+  ],
+  "TOO": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    }
+  ],
+  "BPR": [
+    {
+      "type": "P",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If either 06 or 07 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        8,
+        9
+      ],
+      "description": "If 08 is present, then 09 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        12,
+        13
+      ],
+      "description": "If either 12 or 13 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        14,
+        15
+      ],
+      "description": "If 14 is present, then 15 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        18,
+        19
+      ],
+      "description": "If either 18 or 19 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        20,
+        21
+      ],
+      "description": "If 20 is present, then 21 is required."
+    }
+  ],
+  "CUR": [
+    {
+      "type": "C",
+      "positions": [
+        8,
+        7
+      ],
+      "description": "If 08 is present, then 07 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        9,
+        7
+      ],
+      "description": "If 09 is present, then 07 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        10,
+        11,
+        12
+      ],
+      "description": "If 10 is present, then at least one of 11, 12 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        11,
+        10
+      ],
+      "description": "If 11 is present, then 10 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        12,
+        10
+      ],
+      "description": "If 12 is present, then 10 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        13,
+        14,
+        15
+      ],
+      "description": "If 13 is present, then at least one of 14, 15 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        14,
+        13
+      ],
+      "description": "If 14 is present, then 13 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        15,
+        13
+      ],
+      "description": "If 15 is present, then 13 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        16,
+        17,
+        18
+      ],
+      "description": "If 16 is present, then at least one of 17, 18 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        17,
+        16
+      ],
+      "description": "If 17 is present, then 16 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        18,
+        16
+      ],
+      "description": "If 18 is present, then 16 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        19,
+        20,
+        21
+      ],
+      "description": "If 19 is present, then at least one of 20, 21 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        20,
+        19
+      ],
+      "description": "If 20 is present, then 19 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        21,
+        19
+      ],
+      "description": "If 21 is present, then 19 is required."
+    }
+  ],
+  "DTM": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        3,
+        5
+      ],
+      "description": "At least one of 02, 03, 05 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        4,
+        3
+      ],
+      "description": "If 04 is present, then 03 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    }
+  ],
+  "N1": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        3
+      ],
+      "description": "At least one of 02, 03 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    }
+  ],
+  "ENT": [
+    {
+      "type": "P",
+      "positions": [
+        2,
+        3,
+        4
+      ],
+      "description": "If either 02 or 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6,
+        7
+      ],
+      "description": "If either 05 or 06 or 07 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        8,
+        9
+      ],
+      "description": "If either 08 or 09 is present, then all others are required."
+    }
+  ],
+  "ADX": [
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    }
+  ],
+  "RMR": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        7,
+        8
+      ],
+      "description": "If either 07 or 08 is present, then all others are required."
+    }
+  ],
+  "IT1": [
+    {
+      "type": "P",
+      "positions": [
+        2,
+        3,
+        4
+      ],
+      "description": "If either 02 or 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If either 06 or 07 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        8,
+        9
+      ],
+      "description": "If either 08 or 09 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        10,
+        11
+      ],
+      "description": "If either 10 or 11 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        12,
+        13
+      ],
+      "description": "If either 12 or 13 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        14,
+        15
+      ],
+      "description": "If either 14 or 15 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        16,
+        17
+      ],
+      "description": "If either 16 or 17 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        18,
+        19
+      ],
+      "description": "If either 18 or 19 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        20,
+        21
+      ],
+      "description": "If either 20 or 21 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        22,
+        23
+      ],
+      "description": "If either 22 or 23 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        24,
+        25
+      ],
+      "description": "If either 24 or 25 is present, then all others are required."
+    }
+  ],
+  "SAC": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        3
+      ],
+      "description": "At least one of 02, 03 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If either 06 or 07 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10
+      ],
+      "description": "If either 09 or 10 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        11,
+        10
+      ],
+      "description": "If 11 is present, then 10 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        14,
+        13
+      ],
+      "description": "If 14 is present, then 13 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        16,
+        15
+      ],
+      "description": "If 16 is present, then 15 is required."
+    }
+  ],
+  "SLN": [
+    {
+      "type": "P",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "If either 04 or 05 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        7,
+        6
+      ],
+      "description": "If 07 is present, then 06 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        8,
+        6
+      ],
+      "description": "If 08 is present, then 06 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10
+      ],
+      "description": "If either 09 or 10 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        11,
+        12
+      ],
+      "description": "If either 11 or 12 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        13,
+        14
+      ],
+      "description": "If either 13 or 14 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        15,
+        16
+      ],
+      "description": "If either 15 or 16 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        17,
+        18
+      ],
+      "description": "If either 17 or 18 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        19,
+        20
+      ],
+      "description": "If either 19 or 20 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        21,
+        22
+      ],
+      "description": "If either 21 or 22 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        23,
+        24
+      ],
+      "description": "If either 23 or 24 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        25,
+        26
+      ],
+      "description": "If either 25 or 26 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        27,
+        28
+      ],
+      "description": "If either 27 or 28 is present, then all others are required."
+    }
+  ],
+  "BGN": [
+    {
+      "type": "C",
+      "positions": [
+        5,
+        4
+      ],
+      "description": "If 05 is present, then 04 is required."
+    }
+  ],
+  "ACT": [
+    {
+      "type": "P",
+      "positions": [
+        3,
+        4
+      ],
+      "description": "If either 03 or 04 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If 05 is present, then 06 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        7,
+        5
+      ],
+      "description": "If 07 is present, then 05 is required."
+    }
+  ],
+  "LUI": [
+    {
+      "type": "P",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If either 01 or 02 is present, then all others are required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        4,
+        2,
+        3
+      ],
+      "description": "If 04 is present, then at least one of 02, 03 is required."
+    }
+  ],
+  "DSB": [
+    {
+      "type": "P",
+      "positions": [
+        7,
+        8
+      ],
+      "description": "If either 07 or 08 is present, then all others are required."
+    }
+  ],
+  "CAS": [
+    {
+      "type": "L",
+      "positions": [
+        5,
+        6,
+        7
+      ],
+      "description": "If 05 is present, then at least one of 06, 07 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        6,
+        5
+      ],
+      "description": "If 06 is present, then 05 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        7,
+        5
+      ],
+      "description": "If 07 is present, then 05 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        8,
+        9,
+        10
+      ],
+      "description": "If 08 is present, then at least one of 09, 10 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        9,
+        8
+      ],
+      "description": "If 09 is present, then 08 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        10,
+        8
+      ],
+      "description": "If 10 is present, then 08 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        11,
+        12,
+        13
+      ],
+      "description": "If 11 is present, then at least one of 12, 13 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        12,
+        11
+      ],
+      "description": "If 12 is present, then 11 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        13,
+        11
+      ],
+      "description": "If 13 is present, then 11 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        14,
+        15,
+        16
+      ],
+      "description": "If 14 is present, then at least one of 15, 16 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        15,
+        14
+      ],
+      "description": "If 15 is present, then 14 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        16,
+        14
+      ],
+      "description": "If 16 is present, then 14 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        17,
+        18,
+        19
+      ],
+      "description": "If 17 is present, then at least one of 18, 19 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        18,
+        17
+      ],
+      "description": "If 18 is present, then 17 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        19,
+        17
+      ],
+      "description": "If 19 is present, then 17 is required."
+    }
+  ],
+  "LQ": [
+    {
+      "type": "C",
+      "positions": [
+        1,
+        2
+      ],
+      "description": "If 01 is present, then 02 is required."
+    }
+  ],
+  "PLB": [
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        7,
+        8
+      ],
+      "description": "If either 07 or 08 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10
+      ],
+      "description": "If either 09 or 10 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        11,
+        12
+      ],
+      "description": "If either 11 or 12 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        13,
+        14
+      ],
+      "description": "If either 13 or 14 is present, then all others are required."
+    }
+  ],
+  "PAT": [
+    {
+      "type": "P",
+      "positions": [
+        5,
+        6
+      ],
+      "description": "If either 05 or 06 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        7,
+        8
+      ],
+      "description": "If either 07 or 08 is present, then all others are required."
+    }
+  ],
+  "HCP": [
+    {
+      "type": "R",
+      "positions": [
+        1,
+        13
+      ],
+      "description": "At least one of 01, 13 is required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        9,
+        10
+      ],
+      "description": "If either 09 or 10 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        11,
+        12
+      ],
+      "description": "If either 11 or 12 is present, then all others are required."
+    }
+  ],
+  "SV5": [
+    {
+      "type": "R",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "At least one of 04, 05 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        6,
+        4
+      ],
+      "description": "If 06 is present, then 04 is required."
+    }
+  ],
+  "CR3": [
+    {
+      "type": "P",
+      "positions": [
+        2,
+        3
+      ],
+      "description": "If either 02 or 03 is present, then all others are required."
+    }
+  ],
+  "MEA": [
+    {
+      "type": "R",
+      "positions": [
+        3,
+        5,
+        6,
+        8
+      ],
+      "description": "At least one of 03, 05, 06, 08 is required."
+    },
+    {
+      "type": "E",
+      "positions": [
+        4,
+        12
+      ],
+      "description": "Only one of 04, 12 may be present."
+    },
+    {
+      "type": "L",
+      "positions": [
+        5,
+        4,
+        12
+      ],
+      "description": "If 05 is present, then at least one of 04, 12 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        6,
+        4,
+        12
+      ],
+      "description": "If 06 is present, then at least one of 04, 12 is required."
+    },
+    {
+      "type": "L",
+      "positions": [
+        7,
+        3,
+        5,
+        6
+      ],
+      "description": "If 07 is present, then at least one of 03, 05, 06 is required."
+    },
+    {
+      "type": "E",
+      "positions": [
+        8,
+        3
+      ],
+      "description": "Only one of 08, 03 may be present."
+    },
+    {
+      "type": "P",
+      "positions": [
+        11,
+        12
+      ],
+      "description": "If either 11 or 12 is present, then all others are required."
+    }
+  ],
+  "LIN": [
+    {
+      "type": "P",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "If either 04 or 05 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If either 06 or 07 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        8,
+        9
+      ],
+      "description": "If either 08 or 09 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        10,
+        11
+      ],
+      "description": "If either 10 or 11 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        12,
+        13
+      ],
+      "description": "If either 12 or 13 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        14,
+        15
+      ],
+      "description": "If either 14 or 15 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        16,
+        17
+      ],
+      "description": "If either 16 or 17 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        18,
+        19
+      ],
+      "description": "If either 18 or 19 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        20,
+        21
+      ],
+      "description": "If either 20 or 21 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        22,
+        23
+      ],
+      "description": "If either 22 or 23 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        24,
+        25
+      ],
+      "description": "If either 24 or 25 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        26,
+        27
+      ],
+      "description": "If either 26 or 27 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        28,
+        29
+      ],
+      "description": "If either 28 or 29 is present, then all others are required."
+    },
+    {
+      "type": "P",
+      "positions": [
+        30,
+        31
+      ],
+      "description": "If either 30 or 31 is present, then all others are required."
+    }
+  ],
+  "CTP": [
+    {
+      "type": "P",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "If either 04 or 05 is present, then all others are required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        6,
+        7
+      ],
+      "description": "If 06 is present, then 07 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        9,
+        2
+      ],
+      "description": "If 09 is present, then 02 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        10,
+        2
+      ],
+      "description": "If 10 is present, then 02 is required."
+    },
+    {
+      "type": "C",
+      "positions": [
+        11,
+        3
+      ],
+      "description": "If 11 is present, then 03 is required."
+    }
+  ],
+  "FRM": [
+    {
+      "type": "R",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "description": "At least one of 02, 03, 04, 05 is required."
+    }
+  ],
+  "DN2": [
+    {
+      "type": "P",
+      "positions": [
+        4,
+        5
+      ],
+      "description": "If either 04 or 05 is present, then all others are required."
+    }
+  ]
+}

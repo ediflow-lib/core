@@ -1,0 +1,76 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "437",
+  "name": "Railroad Junctions and Interchanges Activity",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Railroad Junctions and Interchanges Activity Transaction Set (437) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set allows the Railroad Industry Reference File central site to communicate junction and interchange update activity to subscribers. This information would include the creation and expiration of interchange agreements.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BJF",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "JCT",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopJS",
+      "name": "LoopJS",
+      "triggerSegment": "JS",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "JS",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SID",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    }
+  ]
+}

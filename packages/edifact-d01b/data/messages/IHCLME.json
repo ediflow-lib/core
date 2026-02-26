@@ -1,0 +1,128 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.01B",
+  "messageType": "IHCLME",
+  "name": "Health care claim or encounter request and response ",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UIH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "MSD",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PRT",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "NAA",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CON",
+      "mandatory": false,
+      "maxOccurrences": 9,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BLI",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ITC",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ADI",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "FRM",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 9
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG1",
+      "name": "SG1",
+      "triggerSegment": "OTI",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 10,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "OTI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NAA",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG2",
+      "name": "SG2",
+      "triggerSegment": "PSI",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 11,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "PSI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DNT",
+          "mandatory": false,
+          "maxOccurrences": 35,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UIT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    }
+  ]
+}

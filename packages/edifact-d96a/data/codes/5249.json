@@ -1,5 +1,76 @@
 {
-  "code": "5249",
-  "name": "Percentage basis, coded",
-  "values": []
+  "elementCode": "5249",
+  "elementName": "Percentage basis, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Per unit",
+      "description": "Referenced percentage applies on a single unit basis."
+    },
+    {
+      "code": "2",
+      "name": "Per ton",
+      "description": "Reduction percentage is applied per transported ton."
+    },
+    {
+      "code": "3",
+      "name": "Per equipment unit",
+      "description": "Reduction percentage is applied per main equipment unit (for rail purpose, only rail wagons)."
+    },
+    {
+      "code": "4",
+      "name": "Per unit price",
+      "description": "Reduction percentage is applied on the unit price, which is the basis of the charge calculation."
+    },
+    {
+      "code": "5",
+      "name": "Per quantity",
+      "description": "Reduction percentage applied on the unit price and conceded to a consignor after he reached a specified tonnage of transport."
+    },
+    {
+      "code": "6",
+      "name": "Basic charge",
+      "description": "Code to indicate that the IATA experimental special charge within Europe is the basis for the percentage reduction or surcharge."
+    },
+    {
+      "code": "7",
+      "name": "Rate per kilogram",
+      "description": "Code to indicate that the IATA experimental special rate within in Europe is the basis for the percentage reduction or surcharge."
+    },
+    {
+      "code": "8",
+      "name": "Minimum charge",
+      "description": "Code to indicate that the IATA minimum charge is the basis for the percentage reduction or surcharge."
+    },
+    {
+      "code": "9",
+      "name": "Normal rate",
+      "description": "Code to indicate that the IATA normal rate is the basis for the percentage reduction or surcharge."
+    },
+    {
+      "code": "10",
+      "name": "Quantity rate",
+      "description": "Code to indicate that the IATA quantity rate is the basis for the percentage reduction or surcharge."
+    },
+    {
+      "code": "11",
+      "name": "Amount of drawing",
+      "description": "Referenced percentage applies on the amount of drawing under the documentary credit."
+    },
+    {
+      "code": "12",
+      "name": "Documentary credit amount",
+      "description": "Referenced percentage applies on documentary credit amount."
+    },
+    {
+      "code": "13",
+      "name": "Invoice value",
+      "description": "Referenced percentage applies on the invoice value."
+    },
+    {
+      "code": "14",
+      "name": "CIF value",
+      "description": "Referenced percentage applies on CIF value."
+    }
+  ]
 }

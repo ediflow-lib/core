@@ -1,5 +1,51 @@
 {
-  "code": "5261",
-  "name": "Charge unit code",
-  "values": []
+  "elementCode": "5261",
+  "elementName": "Charge unit code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Drop charge",
+      "description": "Fee charged when a rental is terminated in a city or location other than where the rental originated."
+    },
+    {
+      "code": "2",
+      "name": "Extra day",
+      "description": "The associated charge is for each day beyond the indicated base period."
+    },
+    {
+      "code": "3",
+      "name": "Extra week",
+      "description": "The associated charge is for each week beyond the indicated base period."
+    },
+    {
+      "code": "4",
+      "name": "Extra hour",
+      "description": "The associated charge is for each hour beyond the indicated base period."
+    },
+    {
+      "code": "5",
+      "name": "Extra month",
+      "description": "The associated charge is for each month beyond the indicated base period."
+    },
+    {
+      "code": "6",
+      "name": "Per mile",
+      "description": "The associated charge is for each mile the service is in use."
+    },
+    {
+      "code": "7",
+      "name": "Per kilometer",
+      "description": "The associated charge is for each kilometer the service is in use."
+    },
+    {
+      "code": "8",
+      "name": "Free miles",
+      "description": "To indicate there is no charge for the specified number of free miles."
+    },
+    {
+      "code": "9",
+      "name": "Free kilometers",
+      "description": "To indicate there is no charge for the specified number of free kilometers."
+    }
+  ]
 }

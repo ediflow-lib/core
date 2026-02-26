@@ -1,5 +1,20 @@
 {
-  "code": "6173",
-  "name": "Size qualifier",
-  "values": []
+  "elementCode": "6173",
+  "elementName": "Size qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Population size"
+    },
+    {
+      "code": "2",
+      "name": "Sample size",
+      "description": "The size of the sample within the population size."
+    },
+    {
+      "code": "3",
+      "name": "Subgroup size",
+      "description": "The size of the subgroup within the specific sample size."
+    }
+  ]
 }

@@ -3,12 +3,24 @@ import path from 'path';
 
 export default defineConfig({
   resolve: {
-    alias: {
-      '@domain': path.resolve(__dirname, '../core/src/domain'),
-      '@application': path.resolve(__dirname, '../core/src/application'),
-      '@infrastructure': path.resolve(__dirname, './src/infrastructure'),
-      '@test': path.resolve(__dirname, './test'),
-    },
+    extensions: ['.ts', '.js', '.json'],
+    alias: [
+      // Exact matches for bare imports from core
+      { find: /^@domain$/, replacement: path.resolve(__dirname, '../core/src/domain/index.ts') },
+      { find: /^@application$/, replacement: path.resolve(__dirname, '../core/src/application/index.ts') },
+      { find: /^@infrastructure$/, replacement: path.resolve(__dirname, './src/infrastructure/index.ts') },
+      { find: /^@ediflow\/core$/, replacement: path.resolve(__dirname, '../core/src/index.ts') },
+
+      // Subpath imports from core
+      { find: /^@domain\/(.+)$/, replacement: path.resolve(__dirname, '../core/src/domain/$1') },
+      { find: /^@application\/(.+)$/, replacement: path.resolve(__dirname, '../core/src/application/$1') },
+
+      // Subpath imports from x12
+      { find: /^@infrastructure\/(.+)$/, replacement: path.resolve(__dirname, './src/infrastructure/$1') },
+
+      // Test helpers
+      { find: '@test', replacement: path.resolve(__dirname, './test') },
+    ],
   },
   test: {
     globals: true,

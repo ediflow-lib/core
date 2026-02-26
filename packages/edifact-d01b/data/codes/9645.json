@@ -1,5 +1,36 @@
 {
-  "code": "9645",
-  "name": "Payer responsibility level code",
-  "values": []
+  "elementCode": "9645",
+  "elementName": "Payer responsibility level code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Primary",
+      "description": "First for payment responsibility."
+    },
+    {
+      "code": "2",
+      "name": "Secondary",
+      "description": "Second for payment responsibility."
+    },
+    {
+      "code": "3",
+      "name": "Tertiary",
+      "description": "Third for payment responsibility."
+    },
+    {
+      "code": "4",
+      "name": "Unconfirmed",
+      "description": "Payment responsibility is yet to be determined."
+    },
+    {
+      "code": "5",
+      "name": "None",
+      "description": "No payment responsibility."
+    },
+    {
+      "code": "6",
+      "name": "Unknown",
+      "description": "Unknown payment responsibility."
+    }
+  ]
 }

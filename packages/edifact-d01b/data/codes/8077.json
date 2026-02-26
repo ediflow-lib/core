@@ -1,5 +1,41 @@
 {
-  "code": "8077",
-  "name": "Equipment supplier code",
-  "values": []
+  "elementCode": "8077",
+  "elementName": "Equipment supplier code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Shipper supplied",
+      "description": "The transport equipment is supplied by the shipper."
+    },
+    {
+      "code": "2",
+      "name": "Carrier supplied",
+      "description": "The transport equipment is supplied by the carrier."
+    },
+    {
+      "code": "3",
+      "name": "Consolidator supplied",
+      "description": "The equipment is supplied by the consolidator."
+    },
+    {
+      "code": "4",
+      "name": "Deconsolidator supplied",
+      "description": "The equipment is supplied by the deconsolidator."
+    },
+    {
+      "code": "5",
+      "name": "Third party supplied",
+      "description": "The equipment is supplied by a third party."
+    },
+    {
+      "code": "6",
+      "name": "Forwarder supplied from a leasing company",
+      "description": "The equipment is supplied by the forwarder and is taken from a leasing company."
+    },
+    {
+      "code": "7",
+      "name": "Forwarder supplied from the railways' pool",
+      "description": "The equipment is supplied by the forwarder and is taken from a pool established by railway companies."
+    }
+  ]
 }

@@ -1,5 +1,36 @@
 {
-  "code": "4455",
-  "name": "Back order arrangement type code",
-  "values": []
+  "elementCode": "4455",
+  "elementName": "Back order arrangement type code",
+  "values": [
+    {
+      "code": "B",
+      "name": "Back order only if new item (book industry - not yet published only)",
+      "description": "Item on back order due to unpublished status."
+    },
+    {
+      "code": "F",
+      "name": "Factory ship",
+      "description": "Ship directly from factory to purchaser."
+    },
+    {
+      "code": "N",
+      "name": "No back order",
+      "description": "Back order is unacceptable."
+    },
+    {
+      "code": "W",
+      "name": "Warehouse ship",
+      "description": "Ship directly from warehouse."
+    },
+    {
+      "code": "Y",
+      "name": "Back order if out of stock",
+      "description": "Acceptable to put on back order if out of stock."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
 }

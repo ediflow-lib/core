@@ -1,0 +1,48 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "925",
+  "name": "Claim Tracer",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Claim Tracer Transaction Set (925) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by a claimant to request from a carrier the status of a loss or damage claim.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopF10",
+      "name": "LoopF10",
+      "triggerSegment": "F10",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "F10",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "F02",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

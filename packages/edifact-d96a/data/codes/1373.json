@@ -1,0 +1,108 @@
+{
+  "elementCode": "1373",
+  "elementName": "Document/message status, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Accepted"
+    },
+    {
+      "code": "2",
+      "name": "Accompanying goods",
+      "description": "Notice that a specific document will be accompanying the goods."
+    },
+    {
+      "code": "3",
+      "name": "Conditionally accepted"
+    },
+    {
+      "code": "4",
+      "name": "To arrive by separate EDI message",
+      "description": "Notice that a specific document/message will be transmitted via a separate EDI message."
+    },
+    {
+      "code": "5",
+      "name": "Information only",
+      "description": "Notice that the specific document or message is for information only."
+    },
+    {
+      "code": "6",
+      "name": "To arrive by manual means",
+      "description": "Notice that a specific document or message will not be sent via EDI."
+    },
+    {
+      "code": "7",
+      "name": "To be raised and sent",
+      "description": "Request for a specific message to be formatted and transmitted or a request for a specific document to be raised and sent."
+    },
+    {
+      "code": "8",
+      "name": "Rejected"
+    },
+    {
+      "code": "9",
+      "name": "To be printed",
+      "description": "The document or message is to be printed."
+    },
+    {
+      "code": "10",
+      "name": "Document currently valid",
+      "description": "Specific document is currently valid."
+    },
+    {
+      "code": "11",
+      "name": "Document not available",
+      "description": "Specified document is not available."
+    },
+    {
+      "code": "12",
+      "name": "Document exhausted by declaration and attached",
+      "description": "Customs declaration to which the document is related completed or exhaust the allowance stated on the document. The document is attached to the Customs declaration."
+    },
+    {
+      "code": "13",
+      "name": "Document not exhausted by declaration and attached",
+      "description": "Customs declaration to which the document is related does not complete or exhaust the allowance stated on the document . The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "14",
+      "name": "Document exhausted by declaration and previously lodged",
+      "description": "Customs declaration to which the document is related completed or exhaust the allowance stated on the document. The usage of the document is complete. The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "15",
+      "name": "Document not exhausted by declaration and previously lodged",
+      "description": "Customs declaration to which the document is related does not complete or exhaust the allowance stated on the document. The document can continue to be used for future declarations until the allowance is exhausted. The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "16",
+      "name": "Document not attached",
+      "description": "Specified document is not or cannot be attached."
+    },
+    {
+      "code": "17",
+      "name": "Document with the goods",
+      "description": "Document not attached to the Customs declaration but is attached to the goods."
+    },
+    {
+      "code": "18",
+      "name": "Document attached, to be returned after endorsement",
+      "description": "Specified document is attached to the Customs declaration and will be required to be returned to the declarant after Customs endorsement."
+    },
+    {
+      "code": "19",
+      "name": "Document applied for",
+      "description": "Application has been submitted for that document."
+    },
+    {
+      "code": "20",
+      "name": "Received for shipment",
+      "description": "Indicates that the document has legal validity from the date of receival of the cargo."
+    },
+    {
+      "code": "21",
+      "name": "Shipped on board",
+      "description": "Indicates that the document has legal validity from the date that cargo is loaded on board a vessel."
+    }
+  ]
+}

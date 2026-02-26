@@ -1,0 +1,730 @@
+{
+  "code": "546",
+  "name": "Code identifying the status of a business transaction, such as a claim, policy, real estate, or securities transaction",
+  "values": [
+    {
+      "code": "01",
+      "name": "Accepted"
+    },
+    {
+      "code": "02",
+      "name": "Approved"
+    },
+    {
+      "code": "03",
+      "name": "Back Bill"
+    },
+    {
+      "code": "04",
+      "name": "Conditional Issue"
+    },
+    {
+      "code": "05",
+      "name": "Converted"
+    },
+    {
+      "code": "06",
+      "name": "Deceased"
+    },
+    {
+      "code": "07",
+      "name": "Deleted"
+    },
+    {
+      "code": "08",
+      "name": "Delivery Pending"
+    },
+    {
+      "code": "09",
+      "name": "Double Jeopardy"
+    },
+    {
+      "code": "10",
+      "name": "Extended Term"
+    },
+    {
+      "code": "11",
+      "name": "Automatic"
+    },
+    {
+      "code": "12",
+      "name": "Follow Up"
+    },
+    {
+      "code": "13",
+      "name": "Facultative"
+    },
+    {
+      "code": "14",
+      "name": "Group Expired"
+    },
+    {
+      "code": "15",
+      "name": "Incomplete"
+    },
+    {
+      "code": "16",
+      "name": "In Force"
+    },
+    {
+      "code": "17",
+      "name": "Facultative Placed"
+    },
+    {
+      "code": "18",
+      "name": "Issued"
+    },
+    {
+      "code": "19",
+      "name": "New Business"
+    },
+    {
+      "code": "20",
+      "name": "Lapsed"
+    },
+    {
+      "code": "21",
+      "name": "Mailed"
+    },
+    {
+      "code": "22",
+      "name": "Policy Change"
+    },
+    {
+      "code": "23",
+      "name": "Not Taken"
+    },
+    {
+      "code": "24",
+      "name": "Offer Final"
+    },
+    {
+      "code": "25",
+      "name": "Offer - First Subject To"
+    },
+    {
+      "code": "26",
+      "name": "Paid"
+    },
+    {
+      "code": "27",
+      "name": "Paid Up"
+    },
+    {
+      "code": "28",
+      "name": "Payor Death"
+    },
+    {
+      "code": "29",
+      "name": "Payor Disabled"
+    },
+    {
+      "code": "30",
+      "name": "Pending"
+    },
+    {
+      "code": "31",
+      "name": "Placed"
+    },
+    {
+      "code": "32",
+      "name": "Postpone"
+    },
+    {
+      "code": "33",
+      "name": "Premium Paying"
+    },
+    {
+      "code": "34",
+      "name": "Quoted"
+    },
+    {
+      "code": "35",
+      "name": "Reduced Paid up"
+    },
+    {
+      "code": "36",
+      "name": "Reinstatement"
+    },
+    {
+      "code": "37",
+      "name": "Reapproved"
+    },
+    {
+      "code": "38",
+      "name": "Receipted"
+    },
+    {
+      "code": "39",
+      "name": "Reissue"
+    },
+    {
+      "code": "40",
+      "name": "Repended"
+    },
+    {
+      "code": "41",
+      "name": "Satisfied"
+    },
+    {
+      "code": "42",
+      "name": "Trial Application"
+    },
+    {
+      "code": "43",
+      "name": "Limited"
+    },
+    {
+      "code": "44",
+      "name": "Terminated"
+    },
+    {
+      "code": "45",
+      "name": "Waived"
+    },
+    {
+      "code": "46",
+      "name": "Contingent"
+    },
+    {
+      "code": "47",
+      "name": "Sold"
+    },
+    {
+      "code": "48",
+      "name": "Rented"
+    },
+    {
+      "code": "49",
+      "name": "On Probation"
+    },
+    {
+      "code": "50",
+      "name": "Under Contract"
+    },
+    {
+      "code": "51",
+      "name": "Deposit"
+    },
+    {
+      "code": "52",
+      "name": "Continue to Show"
+    },
+    {
+      "code": "53",
+      "name": "Temporarily off the Market"
+    },
+    {
+      "code": "54",
+      "name": "Leased"
+    },
+    {
+      "code": "55",
+      "name": "Off-Market"
+    },
+    {
+      "code": "56",
+      "name": "Forwarded"
+    },
+    {
+      "code": "57",
+      "name": "Not Required"
+    },
+    {
+      "code": "58",
+      "name": "Ordered"
+    },
+    {
+      "code": "59",
+      "name": "Outstanding"
+    },
+    {
+      "code": "60",
+      "name": "Pending 1035 Exchange"
+    },
+    {
+      "code": "61",
+      "name": "Required"
+    },
+    {
+      "code": "62",
+      "name": "Do Not Mail"
+    },
+    {
+      "code": "63",
+      "name": "Do Not Rent or Exchange"
+    },
+    {
+      "code": "64",
+      "name": "Filed"
+    },
+    {
+      "code": "65",
+      "name": "Facultative Submission"
+    },
+    {
+      "code": "66",
+      "name": "Additional Information"
+    },
+    {
+      "code": "67",
+      "name": "Status Request"
+    },
+    {
+      "code": "68",
+      "name": "Submission Change"
+    },
+    {
+      "code": "69",
+      "name": "Rating Reduction Requested"
+    },
+    {
+      "code": "70",
+      "name": "Facultative Opinion"
+    },
+    {
+      "code": "71",
+      "name": "Reserve Facilities"
+    },
+    {
+      "code": "72",
+      "name": "Offer Accepted"
+    },
+    {
+      "code": "73",
+      "name": "Placed Other Carrier"
+    },
+    {
+      "code": "74",
+      "name": "Capacity Unavailable"
+    },
+    {
+      "code": "75",
+      "name": "Retained"
+    },
+    {
+      "code": "76",
+      "name": "Death"
+    },
+    {
+      "code": "77",
+      "name": "Disabled"
+    },
+    {
+      "code": "78",
+      "name": "Divorced"
+    },
+    {
+      "code": "79",
+      "name": "Free Look Canceled"
+    },
+    {
+      "code": "80",
+      "name": "Processed"
+    },
+    {
+      "code": "81",
+      "name": "Rejected"
+    },
+    {
+      "code": "82",
+      "name": "Reversed"
+    },
+    {
+      "code": "83",
+      "name": "Non-Transferable"
+    },
+    {
+      "code": "84",
+      "name": "Sent for Registration Transfer to be Delivered at a Later Date"
+    },
+    {
+      "code": "85",
+      "name": "In Transfer at Time of Request"
+    },
+    {
+      "code": "86",
+      "name": "Temporary"
+    },
+    {
+      "code": "87",
+      "name": "Legal Description Provided"
+    },
+    {
+      "code": "88",
+      "name": "Legal Description Incomplete"
+    },
+    {
+      "code": "89",
+      "name": "Legal Description Provided Via Paper"
+    },
+    {
+      "code": "90",
+      "name": "Inactive Taxing Authority"
+    },
+    {
+      "code": "91",
+      "name": "Inactive Taxing Authority - No longer collects separate city tax"
+    },
+    {
+      "code": "92",
+      "name": "Inactive Taxing Authority - No longer collects separate school tax"
+    },
+    {
+      "code": "93",
+      "name": "Inactive Taxing Authority - No longer collects separate special district tax"
+    },
+    {
+      "code": "94",
+      "name": "Inactive Taxing Authority - No longer collects separate combined city and school tax"
+    },
+    {
+      "code": "95",
+      "name": "Inactive Taxing Authority - No longer collects separate county tax"
+    },
+    {
+      "code": "96",
+      "name": "Foreclosure"
+    },
+    {
+      "code": "98",
+      "name": "Under Appeal"
+    },
+    {
+      "code": "99",
+      "name": "Other Status"
+    },
+    {
+      "code": "AA",
+      "name": "Annuitized"
+    },
+    {
+      "code": "AB",
+      "name": "Arrived"
+    },
+    {
+      "code": "AC",
+      "name": "Active"
+    },
+    {
+      "code": "AD",
+      "name": "Applicant Denied"
+    },
+    {
+      "code": "AE",
+      "name": "Multiple Delinquency"
+    },
+    {
+      "code": "AF",
+      "name": "Legal Description Not Provided"
+    },
+    {
+      "code": "AG",
+      "name": "Partial Payment"
+    },
+    {
+      "code": "AH",
+      "name": "Deeded Property"
+    },
+    {
+      "code": "AI",
+      "name": "Money In-house"
+    },
+    {
+      "code": "AJ",
+      "name": "Returned Check"
+    },
+    {
+      "code": "AK",
+      "name": "Bankruptcy"
+    },
+    {
+      "code": "AL",
+      "name": "Current Tax Open"
+    },
+    {
+      "code": "AM",
+      "name": "Current Tax Paid"
+    },
+    {
+      "code": "AN",
+      "name": "Tax Delinquent"
+    },
+    {
+      "code": "AO",
+      "name": "Tax Exception or Protest"
+    },
+    {
+      "code": "AP",
+      "name": "Tax Paid"
+    },
+    {
+      "code": "AR",
+      "name": "Assuming Company Review"
+    },
+    {
+      "code": "C1",
+      "name": "Contemplated"
+    },
+    {
+      "code": "C2",
+      "name": "Contained in Record"
+    },
+    {
+      "code": "C3",
+      "name": "Current"
+    },
+    {
+      "code": "CC",
+      "name": "Ceding Company Review - With Copy to Assuming Company"
+    },
+    {
+      "code": "CD",
+      "name": "Canceled"
+    },
+    {
+      "code": "CE",
+      "name": "Ceding Company Review - No Copy to Assuming Company"
+    },
+    {
+      "code": "CF",
+      "name": "Canceled Free Look Cash"
+    },
+    {
+      "code": "CH",
+      "name": "Changeable"
+    },
+    {
+      "code": "CI",
+      "name": "Canceled by Internal Revenue Service"
+    },
+    {
+      "code": "CL",
+      "name": "Closed"
+    },
+    {
+      "code": "CO",
+      "name": "Complete"
+    },
+    {
+      "code": "CR",
+      "name": "Closed Record"
+    },
+    {
+      "code": "CT",
+      "name": "Contained in Transaction"
+    },
+    {
+      "code": "DC",
+      "name": "Declined"
+    },
+    {
+      "code": "DN",
+      "name": "Declined - No Response from Claimant to Correspondence"
+    },
+    {
+      "code": "DS",
+      "name": "Declined/Paid Salvage Only"
+    },
+    {
+      "code": "DU",
+      "name": "Duplicate"
+    },
+    {
+      "code": "EF",
+      "name": "Equipment Failed"
+    },
+    {
+      "code": "ES",
+      "name": "Estimated"
+    },
+    {
+      "code": "EW",
+      "name": "Exchange or Transfer Withdrawn"
+    },
+    {
+      "code": "EX",
+      "name": "Expired"
+    },
+    {
+      "code": "F0",
+      "name": "Follow Up 10 or More"
+    },
+    {
+      "code": "F1",
+      "name": "Follow Up 1"
+    },
+    {
+      "code": "F2",
+      "name": "Follow Up 2"
+    },
+    {
+      "code": "F3",
+      "name": "Follow Up 3"
+    },
+    {
+      "code": "F4",
+      "name": "Follow Up 4"
+    },
+    {
+      "code": "F5",
+      "name": "Follow Up 5"
+    },
+    {
+      "code": "F6",
+      "name": "Follow Up 6"
+    },
+    {
+      "code": "F7",
+      "name": "Follow Up 7"
+    },
+    {
+      "code": "F8",
+      "name": "Follow Up 8"
+    },
+    {
+      "code": "F9",
+      "name": "Follow Up 9"
+    },
+    {
+      "code": "FL",
+      "name": "Free Look"
+    },
+    {
+      "code": "FP",
+      "name": "Filed Pending Further Correspondence"
+    },
+    {
+      "code": "FT",
+      "name": "Future"
+    },
+    {
+      "code": "FX",
+      "name": "Faxed"
+    },
+    {
+      "code": "IA",
+      "name": "Inactive"
+    },
+    {
+      "code": "LA",
+      "name": "Letter of Acceptance Sent"
+    },
+    {
+      "code": "MT",
+      "name": "Matured"
+    },
+    {
+      "code": "NA",
+      "name": "Not in Good Order"
+    },
+    {
+      "code": "NP",
+      "name": "New Premium Only"
+    },
+    {
+      "code": "NR",
+      "name": "No Record Claim Receipt"
+    },
+    {
+      "code": "NT",
+      "name": "No Longer Under Treatment"
+    },
+    {
+      "code": "OF",
+      "name": "On File"
+    },
+    {
+      "code": "OH",
+      "name": "On Hand - Under Investigation"
+    },
+    {
+      "code": "OP",
+      "name": "Other Parties Obligations Have Been Excluded"
+    },
+    {
+      "code": "PD",
+      "name": "Pending Death"
+    },
+    {
+      "code": "PF",
+      "name": "Paid in Full"
+    },
+    {
+      "code": "PM",
+      "name": "Partial Payment Received"
+    },
+    {
+      "code": "PP",
+      "name": "Paid in Part/Denied in Part"
+    },
+    {
+      "code": "PR",
+      "name": "Paperwork Received"
+    },
+    {
+      "code": "PW",
+      "name": "Paperwork Pending"
+    },
+    {
+      "code": "RA",
+      "name": "Rated"
+    },
+    {
+      "code": "RC",
+      "name": "Rescinded"
+    },
+    {
+      "code": "RE",
+      "name": "Received"
+    },
+    {
+      "code": "RQ",
+      "name": "Request"
+    },
+    {
+      "code": "RS",
+      "name": "Restricted"
+    },
+    {
+      "code": "RV",
+      "name": "Revoked"
+    },
+    {
+      "code": "SP",
+      "name": "Suspense"
+    },
+    {
+      "code": "SR",
+      "name": "Signature Required"
+    },
+    {
+      "code": "SS",
+      "name": "Suspended"
+    },
+    {
+      "code": "SU",
+      "name": "Surrendered"
+    },
+    {
+      "code": "UT",
+      "name": "Under Treatment"
+    },
+    {
+      "code": "WD",
+      "name": "Withdrawn"
+    },
+    {
+      "code": "WI",
+      "name": "Waiting Initial Payment"
+    },
+    {
+      "code": "WP",
+      "name": "Waiting Period"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

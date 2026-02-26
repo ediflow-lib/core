@@ -1,5 +1,31 @@
 {
-  "code": "7433",
-  "name": "Agreement type description code",
-  "values": []
+  "elementCode": "7433",
+  "elementName": "Agreement type description code",
+  "values": [
+    {
+      "code": "1",
+      "name": "User group agreed",
+      "description": "The description for the type of agreement is agreed within the user group."
+    },
+    {
+      "code": "2",
+      "name": "Bilateral agreement between countries",
+      "description": "The agreement is bilaterally defined by countries."
+    },
+    {
+      "code": "3",
+      "name": "Unknown agreement",
+      "description": "The type of agreement is not known."
+    },
+    {
+      "code": "4",
+      "name": "European Union agreement",
+      "description": "The agreement is multilaterally defined by the countries of the European Union."
+    },
+    {
+      "code": "5",
+      "name": "National agreement",
+      "description": "The agreement is defined at the national level."
+    }
+  ]
 }

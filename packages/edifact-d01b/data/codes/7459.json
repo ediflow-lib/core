@@ -1,5 +1,31 @@
 {
-  "code": "7459",
-  "name": "Attendee category description code",
-  "values": []
+  "elementCode": "7459",
+  "elementName": "Attendee category description code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Same-day patient with overnight stay",
+      "description": "Actual or intended arrangement for same-day procedure with overnight stay."
+    },
+    {
+      "code": "2",
+      "name": "Same-day patient without overnight stay",
+      "description": "Actual or intended arrangement for same-day procedure without overnight stay."
+    },
+    {
+      "code": "3",
+      "name": "Non same-day patient with overnight stay",
+      "description": "Actual or intended arrangement for procedure, other than a same-day procedure, involving overnight stay."
+    },
+    {
+      "code": "4",
+      "name": "Outreach clinic visit",
+      "description": "Visit to an outreach clinical facility."
+    },
+    {
+      "code": "5",
+      "name": "Home care visit",
+      "description": "Provision of care to the patient in the patient's home."
+    }
+  ]
 }

@@ -1,0 +1,981 @@
+{
+  "elementCode": "0065",
+  "elementName": "Message type",
+  "values": [
+    {
+      "code": "APERAK",
+      "name": "Application error and acknowledgement message",
+      "description": "A code to identify the application error and acknowledgement message."
+    },
+    {
+      "code": "AUTHOR",
+      "name": "Authorization message",
+      "description": "A code to identify the authorization message."
+    },
+    {
+      "code": "BALANC",
+      "name": "Balance message",
+      "description": "A code to identify the balance message."
+    },
+    {
+      "code": "BANSTA",
+      "name": "Banking status message",
+      "description": "A code to identify the banking status message."
+    },
+    {
+      "code": "BAPLIE",
+      "name": "Bayplan/stowage plan occupied and empty locations message",
+      "description": "A code to identify the bayplan/stowage plan occupied and empty locations message."
+    },
+    {
+      "code": "BAPLTE",
+      "name": "Bayplan/stowage plan total numbers message",
+      "description": "A code to identify the bayplan/stowage plan total numbers message."
+    },
+    {
+      "code": "BERMAN",
+      "name": "Berth management message",
+      "description": "A code to identify the berth management message."
+    },
+    {
+      "code": "BMISRM",
+      "name": "Bulk marine inspection summary report message",
+      "description": "A code to identify the bulk marine inspection summary report message."
+    },
+    {
+      "code": "BOPBNK",
+      "name": "Bank transactions and portfolio transactions report message",
+      "description": "A code to identify the bank transactions and portfolio transactions report message."
+    },
+    {
+      "code": "BOPCUS",
+      "name": "Balance of payment customer transaction report message",
+      "description": "A code to identify the balance of payment customer transaction report message."
+    },
+    {
+      "code": "BOPDIR",
+      "name": "Direct balance of payment declaration message",
+      "description": "A code to identify the direct balance of payment declaration message."
+    },
+    {
+      "code": "BOPINF",
+      "name": "Balance of payment information from customer message",
+      "description": "A code to identify the balance of payment information from customer message."
+    },
+    {
+      "code": "BUSCRD",
+      "name": "Business credit report message",
+      "description": "A code to identify the business credit report message."
+    },
+    {
+      "code": "CALINF",
+      "name": "Vessel call information message",
+      "description": "A code to identify the vessel call information message."
+    },
+    {
+      "code": "CASINT",
+      "name": "Request for legal administration action in civil proceedings message",
+      "description": "A code to identify the request for legal administration action in civil proceedings message."
+    },
+    {
+      "code": "CASRES",
+      "name": "Legal administration response in civil proceedings message",
+      "description": "A code to identify the legal administration response in civil proceedings message."
+    },
+    {
+      "code": "CHACCO",
+      "name": "Chart of accounts message",
+      "description": "A code to identify the chart of accounts message."
+    },
+    {
+      "code": "CLASET",
+      "name": "Classification information set message",
+      "description": "A code to identify the classification information set message."
+    },
+    {
+      "code": "CNTCND",
+      "name": "Contractual conditions message",
+      "description": "A code to identify the contractual conditions message."
+    },
+    {
+      "code": "COACSU",
+      "name": "Commercial account summary message",
+      "description": "A code to identify the commercial account summary message."
+    },
+    {
+      "code": "COARRI",
+      "name": "Container discharge/loading report message",
+      "description": "A code to identify the container discharge/loading report message."
+    },
+    {
+      "code": "CODECO",
+      "name": "Container gate-in/gate-out report message",
+      "description": "A code to identify the container gate-in/gate-out report message."
+    },
+    {
+      "code": "CODENO",
+      "name": "Permit expiration/clearance ready notice message",
+      "description": "A code to identify the permit expiration/clearance ready notice message."
+    },
+    {
+      "code": "COEDOR",
+      "name": "Container stock report message",
+      "description": "A code to identify the container stock report message."
+    },
+    {
+      "code": "COHAOR",
+      "name": "Container special handling order message",
+      "description": "A code to identify the container special handling order message."
+    },
+    {
+      "code": "COLREQ",
+      "name": "Request for a documentary collection message",
+      "description": "A code to identify the request for a documentary collection message."
+    },
+    {
+      "code": "COMDIS",
+      "name": "Commercial dispute message",
+      "description": "A code to identify the commercial dispute message."
+    },
+    {
+      "code": "CONAPW",
+      "name": "Advice on pending works message",
+      "description": "A code to identify the advice on pending works message."
+    },
+    {
+      "code": "CONDPV",
+      "name": "Direct payment valuation message",
+      "description": "A code to identify the direct payment valuation message."
+    },
+    {
+      "code": "CONDRA",
+      "name": "Drawing administration message",
+      "description": "A code to identify the drawing administration message."
+    },
+    {
+      "code": "CONDRO",
+      "name": "Drawing organisation message",
+      "description": "A code to identify the drawing organisation message."
+    },
+    {
+      "code": "CONEST",
+      "name": "Establishment of contract message",
+      "description": "A code to identify the establishment of contract message."
+    },
+    {
+      "code": "CONITT",
+      "name": "Invitation to tender message",
+      "description": "A code to identify the invitation to tender message."
+    },
+    {
+      "code": "CONPVA",
+      "name": "Payment valuation message",
+      "description": "A code to identify the payment valuation message."
+    },
+    {
+      "code": "CONQVA",
+      "name": "Quantity valuation message",
+      "description": "A code to identify the quantity valuation message."
+    },
+    {
+      "code": "CONRPW",
+      "name": "Response of pending works message",
+      "description": "A code to identify the response of pending works message."
+    },
+    {
+      "code": "CONTEN",
+      "name": "Tender message",
+      "description": "A code to identify the tender message."
+    },
+    {
+      "code": "CONTRL",
+      "name": "Syntax and service report message",
+      "description": "A code to identify the syntax and service report message."
+    },
+    {
+      "code": "CONWQD",
+      "name": "Work item quantity determination message",
+      "description": "A code to identify the work item quantity determination message."
+    },
+    {
+      "code": "COPARN",
+      "name": "Container announcement message",
+      "description": "A code to identify the container announcement message."
+    },
+    {
+      "code": "COPAYM",
+      "name": "Contributions for payment",
+      "description": "A code to identify the contributions for payment."
+    },
+    {
+      "code": "COPINO",
+      "name": "Container pre-notification message",
+      "description": "A code to identify the container pre-notification message."
+    },
+    {
+      "code": "COPRAR",
+      "name": "Container discharge/loading order message",
+      "description": "A code to identify the container discharge/loading order message."
+    },
+    {
+      "code": "COREOR",
+      "name": "Container release order message",
+      "description": "A code to identify the container release order message."
+    },
+    {
+      "code": "COSTCO",
+      "name": "Container stuffing/stripping confirmation message",
+      "description": "A code to identify the container stuffing/stripping confirmation message."
+    },
+    {
+      "code": "COSTOR",
+      "name": "Container stuffing/stripping order message",
+      "description": "A code to identify the container stuffing/stripping order message."
+    },
+    {
+      "code": "CREADV",
+      "name": "Credit advice message",
+      "description": "A code to identify the credit advice message."
+    },
+    {
+      "code": "CREEXT",
+      "name": "Extended credit advice message",
+      "description": "A code to identify the extended credit advice message."
+    },
+    {
+      "code": "CREMUL",
+      "name": "Multiple credit advice message",
+      "description": "A code to identify the multiple credit advice message."
+    },
+    {
+      "code": "CUSCAR",
+      "name": "Customs cargo report message",
+      "description": "A code to identify the customs cargo report message."
+    },
+    {
+      "code": "CUSDEC",
+      "name": "Customs declaration message",
+      "description": "A code to identify the customs declaration message."
+    },
+    {
+      "code": "CUSEXP",
+      "name": "Customs express consignment declaration message",
+      "description": "A code to identify the customs express consignment declaration message."
+    },
+    {
+      "code": "CUSPED",
+      "name": "Periodic customs declaration message",
+      "description": "A code to identify the periodic customs declaration message."
+    },
+    {
+      "code": "CUSREP",
+      "name": "Customs conveyance report message",
+      "description": "A code to identify the customs conveyance report message."
+    },
+    {
+      "code": "CUSRES",
+      "name": "Customs response message",
+      "description": "A code to identify the customs response message."
+    },
+    {
+      "code": "DEBADV",
+      "name": "Debit advice message",
+      "description": "A code to identify the debit advice message."
+    },
+    {
+      "code": "DEBMUL",
+      "name": "Multiple debit advice message",
+      "description": "A code to identify the multiple debit advice message."
+    },
+    {
+      "code": "DEBREC",
+      "name": "Debts recovery message",
+      "description": "A code to identify the debts recovery message."
+    },
+    {
+      "code": "DELFOR",
+      "name": "Delivery schedule message",
+      "description": "A code to identify the delivery schedule message."
+    },
+    {
+      "code": "DELJIT",
+      "name": "Delivery just in time message",
+      "description": "A code to identify the delivery just in time message."
+    },
+    {
+      "code": "DESADV",
+      "name": "Despatch advice message",
+      "description": "A code to identify the despatch advice message."
+    },
+    {
+      "code": "DESTIM",
+      "name": "Equipment damage and repair estimate message",
+      "description": "A code to identify the equipment damage and repair estimate message."
+    },
+    {
+      "code": "DGRECA",
+      "name": "Dangerous goods recapitulation message",
+      "description": "A code to identify the dangerous goods recapitulation message."
+    },
+    {
+      "code": "DIRDEB",
+      "name": "Direct debit message",
+      "description": "A code to identify the direct debit message."
+    },
+    {
+      "code": "DIRDEF",
+      "name": "Directory definition message",
+      "description": "A code to identify the directory definition message."
+    },
+    {
+      "code": "DMRDEF",
+      "name": "Data maintenance request definition message",
+      "description": "A code to identify the data maintenance request definition message."
+    },
+    {
+      "code": "DMSTAT",
+      "name": "Data maintenance status report/query message",
+      "description": "A code to identify the data maintenance status report/query message."
+    },
+    {
+      "code": "DOCADV",
+      "name": "Documentary credit advice message",
+      "description": "A code to identify the documentary credit advice message."
+    },
+    {
+      "code": "DOCAMA",
+      "name": "Advice of an amendment of a documentary credit message",
+      "description": "A code to identify the advice of an amendment of a documentary credit message."
+    },
+    {
+      "code": "DOCAMI",
+      "name": "Documentary credit amendment information message",
+      "description": "A code to identify the documentary credit amendment information message."
+    },
+    {
+      "code": "DOCAMR",
+      "name": "Request for an amendment of a documentary credit message",
+      "description": "A code to identify the request for an amendment of a documentary credit message."
+    },
+    {
+      "code": "DOCAPP",
+      "name": "Documentary credit application message",
+      "description": "A code to identify the documentary credit application message."
+    },
+    {
+      "code": "DOCARE",
+      "name": "Response to an amendment of a documentary credit message",
+      "description": "A code to identify the response to an amendment of a documentary credit message."
+    },
+    {
+      "code": "DOCINF",
+      "name": "Documentary credit issuance information message",
+      "description": "A code to identify the documentary credit issuance information message."
+    },
+    {
+      "code": "ENTREC",
+      "name": "Accounting entries message",
+      "description": "A code to identify the accounting entries message."
+    },
+    {
+      "code": "FINCAN",
+      "name": "Financial cancellation message",
+      "description": "A code to identify the financial cancellation message."
+    },
+    {
+      "code": "FINPAY",
+      "name": "Multiple interbank funds transfer message",
+      "description": "A code to identify the multiple interbank funds transfer message."
+    },
+    {
+      "code": "FINSTA",
+      "name": "Financial statement of an account message",
+      "description": "A code to identify the financial statement of an account message."
+    },
+    {
+      "code": "GENRAL",
+      "name": "General purpose message",
+      "description": "A code to identify the general purpose message."
+    },
+    {
+      "code": "GESMES",
+      "name": "Generic statistical message",
+      "description": "A code to identify the generic statistical message."
+    },
+    {
+      "code": "HANMOV",
+      "name": "Cargo/goods handling and movement message",
+      "description": "A code to identify the cargo/goods handling and movement message."
+    },
+    {
+      "code": "ICASRP",
+      "name": "Insurance claim assessment and reporting message",
+      "description": "A code to identify the insurance claim assessment and reporting message."
+    },
+    {
+      "code": "ICSOLI",
+      "name": "Insurance claim solicitor's instruction message",
+      "description": "A code to identify the insurance claim solicitor's instruction message."
+    },
+    {
+      "code": "IFCSUM",
+      "name": "Forwarding and consolidation summary message",
+      "description": "A code to identify the forwarding and consolidation summary message."
+    },
+    {
+      "code": "IFTCCA",
+      "name": "Forwarding and transport shipment charge calculation message",
+      "description": "A code to identify the forwarding and transport shipment charge calculation message."
+    },
+    {
+      "code": "IFTDGN",
+      "name": "Dangerous goods notification message",
+      "description": "A code to identify the dangerous goods notification message."
+    },
+    {
+      "code": "IFTFCC",
+      "name": "International transport freight costs and other charges message",
+      "description": "A code to identify the international transport freight costs and other charges message."
+    },
+    {
+      "code": "IFTIAG",
+      "name": "Dangerous cargo list message",
+      "description": "A code to identify the dangerous cargo list message."
+    },
+    {
+      "code": "IFTICL",
+      "name": "Cargo insurance claims message",
+      "description": "A code to identify the cargo insurance claims message."
+    },
+    {
+      "code": "IFTMAN",
+      "name": "Arrival notice message",
+      "description": "A code to identify the arrival notice message."
+    },
+    {
+      "code": "IFTMBC",
+      "name": "Booking confirmation message",
+      "description": "A code to identify the booking confirmation message."
+    },
+    {
+      "code": "IFTMBF",
+      "name": "Firm booking message",
+      "description": "A code to identify the firm booking message."
+    },
+    {
+      "code": "IFTMBP",
+      "name": "Provisional booking message",
+      "description": "A code to identify the provisional booking message."
+    },
+    {
+      "code": "IFTMCA",
+      "name": "Consignment advice message",
+      "description": "A code to identify the consignment advice message."
+    },
+    {
+      "code": "IFTMCS",
+      "name": "Instruction contract status message",
+      "description": "A code to identify the instruction contract status message."
+    },
+    {
+      "code": "IFTMIN",
+      "name": "Instruction message",
+      "description": "A code to identify the instruction message."
+    },
+    {
+      "code": "IFTRIN",
+      "name": "Forwarding and transport rate information message",
+      "description": "A code to identify the forwarding and transport rate information message."
+    },
+    {
+      "code": "IFTSAI",
+      "name": "Forwarding and transport schedule and availability information message",
+      "description": "A code to identify the forwarding and transport schedule and availability information message."
+    },
+    {
+      "code": "IFTSTA",
+      "name": "International multimodal status report message",
+      "description": "A code to identify the international multimodal status report message."
+    },
+    {
+      "code": "IFTSTQ",
+      "name": "International multimodal status request message",
+      "description": "A code to identify the international multimodal status request message."
+    },
+    {
+      "code": "IMPDEF",
+      "name": "EDI implementation guide definition message",
+      "description": "A code to identify the EDI implementation guide definition message."
+    },
+    {
+      "code": "INFCON",
+      "name": "Infrastructure condition message",
+      "description": "A code to identify the infrastructure condition message."
+    },
+    {
+      "code": "INFENT",
+      "name": "Enterprise accounting information message",
+      "description": "A code to identify the enterprise accounting information message."
+    },
+    {
+      "code": "INSDES",
+      "name": "Instruction to despatch message",
+      "description": "A code to identify the instruction to despatch message."
+    },
+    {
+      "code": "INSPRE",
+      "name": "Insurance premium message",
+      "description": "A code to identify the insurance premium message."
+    },
+    {
+      "code": "INSREQ",
+      "name": "Inspection request message",
+      "description": "A code to identify the inspection request message."
+    },
+    {
+      "code": "INSRPT",
+      "name": "Inspection report message",
+      "description": "A code to identify the inspection report message."
+    },
+    {
+      "code": "INVOIC",
+      "name": "Invoice message",
+      "description": "A code to identify the invoice message."
+    },
+    {
+      "code": "INVRPT",
+      "name": "Inventory report message",
+      "description": "A code to identify the inventory report message."
+    },
+    {
+      "code": "IPPOAD",
+      "name": "Insurance policy administration message",
+      "description": "A code to identify the insurance policy administration message."
+    },
+    {
+      "code": "IPPOMO",
+      "name": "Motor insurance policy message",
+      "description": "A code to identify the motor insurance policy message."
+    },
+    {
+      "code": "ISENDS",
+      "name": "Intermediary system enablement or disablement message",
+      "description": "A code to identify the intermediary system enablement or disablement message."
+    },
+    {
+      "code": "ITRRPT",
+      "name": "In transit report detail message",
+      "description": "A code to identify the in transit report detail message."
+    },
+    {
+      "code": "JAPRES",
+      "name": "Job application result message",
+      "description": "A code to identify the job application result message."
+    },
+    {
+      "code": "JINFDE",
+      "name": "Job information demand message",
+      "description": "A code to identify the job information demand message."
+    },
+    {
+      "code": "JOBAPP",
+      "name": "Job application proposal message",
+      "description": "A code to identify the job application proposal message."
+    },
+    {
+      "code": "JOBCON",
+      "name": "Job order confirmation message",
+      "description": "A code to identify the job order confirmation message."
+    },
+    {
+      "code": "JOBMOD",
+      "name": "Job order modification message",
+      "description": "A code to identify the job order modification message."
+    },
+    {
+      "code": "JOBOFF",
+      "name": "Job order message",
+      "description": "A code to identify the job order message."
+    },
+    {
+      "code": "JUPREQ",
+      "name": "Justified payment request message",
+      "description": "A code to identify the justified payment request message."
+    },
+    {
+      "code": "LEDGER",
+      "name": "Ledger message",
+      "description": "A code to identify the ledger message."
+    },
+    {
+      "code": "LREACT",
+      "name": "Life reinsurance activity message",
+      "description": "A code to identify the life reinsurance activity message."
+    },
+    {
+      "code": "LRECLM",
+      "name": "Life reinsurance claims message",
+      "description": "A code to identify the life reinsurance claims message."
+    },
+    {
+      "code": "MEDPID",
+      "name": "Person identification message",
+      "description": "A code to identify the person identification message."
+    },
+    {
+      "code": "MEDPRE",
+      "name": "Medical prescription message",
+      "description": "A code to identify the medical prescription message."
+    },
+    {
+      "code": "MEDREQ",
+      "name": "Medical service request message",
+      "description": "A code to identify the medical service request message."
+    },
+    {
+      "code": "MEDRPT",
+      "name": "Medical service report message",
+      "description": "A code to identify the medical service report message."
+    },
+    {
+      "code": "MEDRUC",
+      "name": "Medical resource usage and cost message",
+      "description": "A code to identify the medical resource usage and cost message."
+    },
+    {
+      "code": "MEQPOS",
+      "name": "Means of transport and equipment position message",
+      "description": "A code to identify the means of transport and equipment position message."
+    },
+    {
+      "code": "MOVINS",
+      "name": "Stowage instruction message",
+      "description": "A code to identify the stowage instruction message."
+    },
+    {
+      "code": "MSCONS",
+      "name": "Metered services consumption report message",
+      "description": "A code to identify the metered services consumption report message."
+    },
+    {
+      "code": "ORDCHG",
+      "name": "Purchase order change request message",
+      "description": "A code to identify the purchase order change request message."
+    },
+    {
+      "code": "ORDERS",
+      "name": "Purchase order message",
+      "description": "A code to identify the purchase order message."
+    },
+    {
+      "code": "ORDRSP",
+      "name": "Purchase order response message",
+      "description": "A code to identify the purchase order response message."
+    },
+    {
+      "code": "OSTENQ",
+      "name": "Order status enquiry message",
+      "description": "A code to identify the order status enquiry message."
+    },
+    {
+      "code": "OSTRPT",
+      "name": "Order status report message",
+      "description": "A code to identify the order status report message."
+    },
+    {
+      "code": "PARTIN",
+      "name": "Party information message",
+      "description": "A code to identify the party information message."
+    },
+    {
+      "code": "PAXLST",
+      "name": "Passenger list message",
+      "description": "A code to identify the passenger list message."
+    },
+    {
+      "code": "PAYDUC",
+      "name": "Payroll deductions advice message",
+      "description": "A code to identify the payroll deductions advice message."
+    },
+    {
+      "code": "PAYEXT",
+      "name": "Extended payment order message",
+      "description": "A code to identify the extended payment order message."
+    },
+    {
+      "code": "PAYMUL",
+      "name": "Multiple payment order message",
+      "description": "A code to identify the multiple payment order message."
+    },
+    {
+      "code": "PAYORD",
+      "name": "Payment order message",
+      "description": "A code to identify the payment order message."
+    },
+    {
+      "code": "PRICAT",
+      "name": "Price/sales catalogue message",
+      "description": "A code to identify the price/sales catalogue message."
+    },
+    {
+      "code": "PRIHIS",
+      "name": "Pricing history message",
+      "description": "A code to identify the pricing history message."
+    },
+    {
+      "code": "PROCST",
+      "name": "Project cost reporting message",
+      "description": "A code to identify the project cost reporting message."
+    },
+    {
+      "code": "PRODAT",
+      "name": "Product data message",
+      "description": "A code to identify the product data message."
+    },
+    {
+      "code": "PRODEX",
+      "name": "Product exchange reconciliation message",
+      "description": "A code to identify the product exchange reconciliation message."
+    },
+    {
+      "code": "PROINQ",
+      "name": "Product inquiry message",
+      "description": "A code to identify the product inquiry message."
+    },
+    {
+      "code": "PROSRV",
+      "name": "Product service message",
+      "description": "A code to identify the product service message."
+    },
+    {
+      "code": "PROTAP",
+      "name": "Project tasks planning message",
+      "description": "A code to identify the project tasks planning message."
+    },
+    {
+      "code": "PRPAID",
+      "name": "Insurance premium payment message",
+      "description": "A code to identify the insurance premium payment message."
+    },
+    {
+      "code": "QALITY",
+      "name": "Quality data message",
+      "description": "A code to identify the quality data message."
+    },
+    {
+      "code": "QUOTES",
+      "name": "Quote message",
+      "description": "A code to identify the quote message."
+    },
+    {
+      "code": "RDRMES",
+      "name": "Raw data reporting message",
+      "description": "A code to identify the raw data reporting message."
+    },
+    {
+      "code": "REBORD",
+      "name": "Reinsurance bordereau message",
+      "description": "A code to identify the reinsurance bordereau message."
+    },
+    {
+      "code": "RECADV",
+      "name": "Receiving advice message",
+      "description": "A code to identify the receiving advice message."
+    },
+    {
+      "code": "RECALC",
+      "name": "Reinsurance calculation message",
+      "description": "A code to identify the reinsurance calculation message."
+    },
+    {
+      "code": "RECECO",
+      "name": "Credit risk cover message",
+      "description": "A code to identify the credit risk cover message."
+    },
+    {
+      "code": "RECLAM",
+      "name": "Reinsurance claims message",
+      "description": "A code to identify the reinsurance claims message."
+    },
+    {
+      "code": "RECORD",
+      "name": "Reinsurance core data message",
+      "description": "A code to identify the reinsurance core data message."
+    },
+    {
+      "code": "REGENT",
+      "name": "Registration of enterprise message",
+      "description": "A code to identify the registration of enterprise message."
+    },
+    {
+      "code": "RELIST",
+      "name": "Reinsured objects list message",
+      "description": "A code to identify the reinsured objects list message."
+    },
+    {
+      "code": "REMADV",
+      "name": "Remittance advice message",
+      "description": "A code to identify the remittance advice message."
+    },
+    {
+      "code": "REPREM",
+      "name": "Reinsurance premium message",
+      "description": "A code to identify the reinsurance premium message."
+    },
+    {
+      "code": "REQDOC",
+      "name": "Request for document message",
+      "description": "A code to identify the request for document message."
+    },
+    {
+      "code": "REQOTE",
+      "name": "Request for quote message",
+      "description": "A code to identify the request for quote message."
+    },
+    {
+      "code": "RESETT",
+      "name": "Reinsurance settlement message",
+      "description": "A code to identify the reinsurance settlement message."
+    },
+    {
+      "code": "RESMSG",
+      "name": "Reservation message",
+      "description": "A code to identify the reservation message."
+    },
+    {
+      "code": "RETACC",
+      "name": "Reinsurance technical account message",
+      "description": "A code to identify the reinsurance technical account message."
+    },
+    {
+      "code": "RETANN",
+      "name": "Announcement for returns message",
+      "description": "A code to identify the announcement for returns message."
+    },
+    {
+      "code": "RETINS",
+      "name": "Instruction for returns message",
+      "description": "A code to identify the instruction for returns message."
+    },
+    {
+      "code": "RPCALL",
+      "name": "Repair call message",
+      "description": "A code to identify the repair call message."
+    },
+    {
+      "code": "SAFHAZ",
+      "name": "Safety and hazard data message",
+      "description": "A code to identify the safety and hazard data message."
+    },
+    {
+      "code": "SANCRT",
+      "name": "International movement of goods governmental regulatory message",
+      "description": "A code to identify the international movement of goods governmental regulatory message."
+    },
+    {
+      "code": "SLSFCT",
+      "name": "Sales forecast message",
+      "description": "A code to identify the sales forecast message."
+    },
+    {
+      "code": "SLSRPT",
+      "name": "Sales data report message",
+      "description": "A code to identify the sales data report message."
+    },
+    {
+      "code": "SOCADE",
+      "name": "Social administration message",
+      "description": "A code to identify the social administration message."
+    },
+    {
+      "code": "SSIMOD",
+      "name": "Modification of identity details message",
+      "description": "A code to identify the modification of identity details message."
+    },
+    {
+      "code": "SSRECH",
+      "name": "Worker's insurance history message",
+      "description": "A code to identify the worker's insurance history message."
+    },
+    {
+      "code": "SSREGW",
+      "name": "Notification of registration of a worker message",
+      "description": "A code to identify the notification of registration of a worker message."
+    },
+    {
+      "code": "STATAC",
+      "name": "Statement of account message",
+      "description": "A code to identify the statement of account message."
+    },
+    {
+      "code": "STLRPT",
+      "name": "Settlement transaction reporting message",
+      "description": "A code to identify the settlement transaction reporting message."
+    },
+    {
+      "code": "SUPCOT",
+      "name": "Superannuation contributions advice message",
+      "description": "A code to identify the superannuation contributions advice message."
+    },
+    {
+      "code": "SUPMAN",
+      "name": "Superannuation maintenance message",
+      "description": "A code to identify the superannuation maintenance message."
+    },
+    {
+      "code": "SUPRES",
+      "name": "Supplier response message",
+      "description": "A code to identify the supplier response message."
+    },
+    {
+      "code": "TANSTA",
+      "name": "Tank status report message",
+      "description": "A code to identify the tank status report message."
+    },
+    {
+      "code": "TAXCON",
+      "name": "Tax control message",
+      "description": "A code to identify the tax control message."
+    },
+    {
+      "code": "TPFREP",
+      "name": "Terminal performance message",
+      "description": "A code to identify the terminal performance message."
+    },
+    {
+      "code": "UTILMD",
+      "name": "Utilities master data message",
+      "description": "A code to identify the utilities master data message."
+    },
+    {
+      "code": "UTILTS",
+      "name": "Utilities time series message",
+      "description": "A code to identify the utilities time series message."
+    },
+    {
+      "code": "VATDEC",
+      "name": "Value added tax message",
+      "description": "A code to identify the value added tax message."
+    },
+    {
+      "code": "VESDEP",
+      "name": "Vessel departure message",
+      "description": "A code to identify the vessel departure message."
+    },
+    {
+      "code": "WASDIS",
+      "name": "Waste disposal information message",
+      "description": "A code to identify the waste disposal information message."
+    },
+    {
+      "code": "WKGRDC",
+      "name": "Work grant decision message",
+      "description": "A code to identify the work grant decision message."
+    },
+    {
+      "code": "WKGRRE",
+      "name": "Work grant request message",
+      "description": "A code to identify the work grant request message."
+    }
+  ]
+}

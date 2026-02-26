@@ -1,5 +1,21 @@
 {
-  "code": "5273",
-  "name": "Duty or tax or fee rate basis code",
-  "values": []
+  "elementCode": "5273",
+  "elementName": "Duty or tax or fee rate basis code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Value",
+      "description": "(5316) To specify that the applicable rate of duty, tax or fee is based on the Customs value (CCC)."
+    },
+    {
+      "code": "2",
+      "name": "Weight",
+      "description": "(6150) To specify that the applicable rate of duty, tax or fee is based on the weight of the item (CCC)."
+    },
+    {
+      "code": "3",
+      "name": "Quantity",
+      "description": "(6060) To specify that the applicable rate of duty, tax or fee is based on the quantity of the item (CCC)."
+    }
+  ]
 }

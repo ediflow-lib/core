@@ -1,5 +1,127 @@
 {
-  "code": "3155",
-  "name": "Communication channel qualifier",
-  "values": []
+  "elementCode": "3155",
+  "elementName": "Communication channel qualifier",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Circuit switching",
+      "description": "A process that, on demand, connects two or more data terminal equipments and permits the exclusive use of a data circuit between them until the connection is released (ISO)."
+    },
+    {
+      "code": "AB",
+      "name": "SITA",
+      "description": "Communications number assigned by Societe Internationale de Telecommunications Aeronautiques (SITA)."
+    },
+    {
+      "code": "AC",
+      "name": "ARINC",
+      "description": "Communications number assigned by Aeronautical Radio Inc."
+    },
+    {
+      "code": "AD",
+      "name": "AT&T mailbox",
+      "description": "AT&T mailbox identifier."
+    },
+    {
+      "code": "AE",
+      "name": "Peripheral device",
+      "description": "Peripheral device identification."
+    },
+    {
+      "code": "CA",
+      "name": "Cable address"
+    },
+    {
+      "code": "EI",
+      "name": "EDI transmission",
+      "description": "Number identifying the service and service user."
+    },
+    {
+      "code": "EM",
+      "name": "Electronic mail",
+      "description": "Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini- computer or an attached modem and regular telephone line or other electronic transmission media."
+    },
+    {
+      "code": "EX",
+      "name": "Extension",
+      "description": "Telephone extension."
+    },
+    {
+      "code": "FT",
+      "name": "File transfer access method",
+      "description": "According to ISO."
+    },
+    {
+      "code": "FX",
+      "name": "Telefax",
+      "description": "Device used for transmitting and reproducing fixed graphic material (as printing) by means of signals over telephone lines or other electronic transmission media."
+    },
+    {
+      "code": "GM",
+      "name": "GEIS (General Electric Information Service) mailbox"
+    },
+    {
+      "code": "IE",
+      "name": "IBM information exchange"
+    },
+    {
+      "code": "IM",
+      "name": "Internal mail",
+      "description": "Internal mail address/number."
+    },
+    {
+      "code": "MA",
+      "name": "Mail",
+      "description": "Postal service document delivery."
+    },
+    {
+      "code": "PB",
+      "name": "Postbox number"
+    },
+    {
+      "code": "PS",
+      "name": "Packet switching",
+      "description": "The process of routing and transferring data by means of addressed packets so that a channel is occupied only during the transmission; upon completion of the transmission the channel is made available for the transfer of other packets (ISO)."
+    },
+    {
+      "code": "SW",
+      "name": "S.W.I.F.T.",
+      "description": "Communications address assigned by Society for Worldwide Interbank Financial Telecommunications s.c."
+    },
+    {
+      "code": "TE",
+      "name": "Telephone",
+      "description": "Voice/data transmission by telephone."
+    },
+    {
+      "code": "TG",
+      "name": "Telegraph",
+      "description": "Text transmission via telegraph."
+    },
+    {
+      "code": "TL",
+      "name": "Telex",
+      "description": "Transmission of text/data via telex."
+    },
+    {
+      "code": "TM",
+      "name": "Telemail",
+      "description": "Transmission of text/data via telemail."
+    },
+    {
+      "code": "TT",
+      "name": "Teletext",
+      "description": "Transmission of text/data via teletext."
+    },
+    {
+      "code": "TX",
+      "name": "TWX",
+      "description": "Communication service involving Teletypewriter machines connected by wire or electronic transmission media. Teletypewriter machines are the devices used to send and receive signals and produce hardcopy from them."
+    },
+    {
+      "code": "XF",
+      "name": "X.400",
+      "description": "CCITT Message handling system."
+    }
+  ]
 }

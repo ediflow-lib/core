@@ -103,13 +103,13 @@ if (validation.success) {
 **Use D.01B if:**
 - ✅ Trading partner requires D.01B specifically
 - ✅ Legacy system integration (2001-2010 era)
-- ✅ Transportation & logistics focus
-- ✅ Freight forwarding industry
+- ✅ Comprehensive message coverage (226 types)
+- ✅ Cross-industry B2B integration
 
 **Consider other versions if:**
-- 🔄 **D.20B** - Latest standard (2020) - More message types
-- 🔄 **D.12A** - Comprehensive (196 message types)
-- 🔄 **D.96A** - Older standard (1996) - 7 message types
+- 🔄 **D.20B** - Latest standard (196 messages, 2020)
+- 🔄 **D.12A** - Alternative comprehensive version (198 messages)
+- 🔄 **D.96A** - Older standard (126 messages, 1996)
 
 ---
 
@@ -120,8 +120,9 @@ if (validation.success) {
 
 **Other EDIFACT Standards:**
 - [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) - 7 messages
-- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 messages
 - [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) - 196 messages
+- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 messages
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 - 50 messages (GS1 Retail)
 
 ---
 

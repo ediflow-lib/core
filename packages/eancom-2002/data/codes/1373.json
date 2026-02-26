@@ -1,0 +1,181 @@
+{
+  "elementCode": "1373",
+  "elementName": "Document status code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Accepted",
+      "description": "The specified document is accepted."
+    },
+    {
+      "code": "2",
+      "name": "Accompanying goods",
+      "description": "Notice that a specific document will be accompanying the goods."
+    },
+    {
+      "code": "3",
+      "name": "Conditionally accepted",
+      "description": "The specified document is conditionally accepted."
+    },
+    {
+      "code": "4",
+      "name": "To arrive by separate EDI message",
+      "description": "Notice that a specific document/message will be transmitted via a separate EDI message."
+    },
+    {
+      "code": "5",
+      "name": "Information only",
+      "description": "Notice that the specific document or message is for information only."
+    },
+    {
+      "code": "6",
+      "name": "To arrive by manual means",
+      "description": "Notice that a specific document or message will not be sent via EDI."
+    },
+    {
+      "code": "7",
+      "name": "To be raised and sent",
+      "description": "Request for a specific message to be formatted and transmitted or a request for a specific document to be raised and sent."
+    },
+    {
+      "code": "8",
+      "name": "Rejected",
+      "description": "The specified document is rejected."
+    },
+    {
+      "code": "9",
+      "name": "To be printed",
+      "description": "The document or message is to be printed."
+    },
+    {
+      "code": "10",
+      "name": "Document currently valid",
+      "description": "Specific document is currently valid."
+    },
+    {
+      "code": "11",
+      "name": "Document not available",
+      "description": "Specified document is not available."
+    },
+    {
+      "code": "12",
+      "name": "Document exhausted by declaration and attached",
+      "description": "Customs declaration to which the document is related completed or exhaust the allowance stated on the document. The document is attached to the Customs declaration."
+    },
+    {
+      "code": "13",
+      "name": "Document not exhausted by declaration and attached",
+      "description": "Customs declaration to which the document is related does not complete or exhaust the allowance stated on the document . The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "14",
+      "name": "Document exhausted by declaration and previously lodged",
+      "description": "Customs declaration to which the document is related completed or exhaust the allowance stated on the document. The usage of the document is complete. The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "15",
+      "name": "Document not exhausted by declaration and previously lodged",
+      "description": "Customs declaration to which the document is related does not complete or exhaust the allowance stated on the document. The document can continue to be used for future declarations until the allowance is exhausted. The document is not attached to the declaration but has already been lodged in the Customs station."
+    },
+    {
+      "code": "16",
+      "name": "Document not attached",
+      "description": "Specified document is not or cannot be attached."
+    },
+    {
+      "code": "17",
+      "name": "Document with the goods",
+      "description": "Document not attached to the Customs declaration but is attached to the goods."
+    },
+    {
+      "code": "18",
+      "name": "Document attached, to be returned after endorsement",
+      "description": "Specified document is attached to the Customs declaration and will be required to be returned to the declarant after Customs endorsement."
+    },
+    {
+      "code": "19",
+      "name": "Document applied for",
+      "description": "Application has been submitted for that document."
+    },
+    {
+      "code": "20",
+      "name": "Received for shipment",
+      "description": "Indicates that the document has legal validity from the date of receival of the cargo."
+    },
+    {
+      "code": "21",
+      "name": "Shipped on board",
+      "description": "Indicates that the document has legal validity from the date that cargo is loaded on board a vessel."
+    },
+    {
+      "code": "22",
+      "name": "Status 0",
+      "description": "Message is at status 0."
+    },
+    {
+      "code": "23",
+      "name": "Status 1",
+      "description": "Message is at status 1."
+    },
+    {
+      "code": "24",
+      "name": "Status 2",
+      "description": "Message is at status 2."
+    },
+    {
+      "code": "25",
+      "name": "Message under development",
+      "description": "Message is under development."
+    },
+    {
+      "code": "26",
+      "name": "Document not freighted",
+      "description": "Document not to include freight figures."
+    },
+    {
+      "code": "27",
+      "name": "Document freighted",
+      "description": "Document to include freight figures."
+    },
+    {
+      "code": "28",
+      "name": "Archived",
+      "description": "The document or message has been archived."
+    },
+    {
+      "code": "29",
+      "name": "Provisional",
+      "description": "The document or message has no official status."
+    },
+    {
+      "code": "30",
+      "name": "Documents enclosed in the first transmission",
+      "description": "The documents are enclosed in the first transmission."
+    },
+    {
+      "code": "31",
+      "name": "Documents enclosed in the second transmission",
+      "description": "The documents are enclosed in the second transmission."
+    },
+    {
+      "code": "32",
+      "name": "Document not required, waiver issued",
+      "description": "The document is not required, waiver of requirement has been issued."
+    },
+    {
+      "code": "33",
+      "name": "Already on file with receiver of this message",
+      "description": "The document is already on file with the party receiving the message."
+    },
+    {
+      "code": "34",
+      "name": "Retained by sender of this message, or by sender's agent or representative",
+      "description": "The document is in the possession of the sender or sender's agent or representative."
+    },
+    {
+      "code": "36",
+      "name": "Document previously submitted",
+      "description": "The document has already been submitted."
+    }
+  ]
+}

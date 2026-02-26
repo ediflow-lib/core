@@ -1,5 +1,21 @@
 {
-  "code": "5013",
-  "name": "Index code qualifier",
-  "values": []
+  "elementCode": "5013",
+  "elementName": "Index code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Project",
+      "description": "Indicates that the index relates to the whole project."
+    },
+    {
+      "code": "2",
+      "name": "Group",
+      "description": "Indicates that the index relates to a group of work items."
+    },
+    {
+      "code": "3",
+      "name": "Alternative",
+      "description": "Indicates that the index is an alternative."
+    }
+  ]
 }

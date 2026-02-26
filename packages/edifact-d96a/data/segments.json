@@ -1,7 +1,7 @@
 {
   "ADR": {
     "tag": "ADR",
-    "name": "ADDRESS",
+    "name": "Address",
     "description": "To specify an address.",
     "elements": [
       {
@@ -17,6 +17,24 @@
         "position": 2
       },
       {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 5
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C819",
         "mandatory": false,
@@ -30,10 +48,159 @@
       }
     ]
   },
+  "AGR": {
+    "tag": "AGR",
+    "name": "Agreement identification",
+    "description": "To specify the agreement details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C543",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9419",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "AJT": {
+    "tag": "AJT",
+    "name": "Adjustment details",
+    "description": "To identify the reason for an adjustment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4465",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ALC": {
+    "tag": "ALC",
+    "name": "Allowance or charge",
+    "description": "To identify allowance or charge details.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5463",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C552",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4471",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1227",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C214",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "ALI": {
+    "tag": "ALI",
+    "name": "Additional information",
+    "description": "To indicate that special conditions due to the origin, customs preference, fiscal or commercial factors are applicable.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3239",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9213",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "APR": {
+    "tag": "APR",
+    "name": "Additional price information",
+    "description": "To provide information concerning pricing related to class of trade, price multiplier, and reason for change.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4043",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C138",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "ARD": {
     "tag": "ARD",
-    "name": "AMOUNTS RELATIONSHIP DETAILS",
-    "description": "To provide details of the function of a monetary",
+    "name": "Amounts relationship details",
+    "description": "To provide details of the function of a monetary amount.",
     "elements": [
       {
         "nodeType": "composite",
@@ -43,9 +210,28 @@
       }
     ]
   },
+  "ARR": {
+    "tag": "ARR",
+    "name": "Array information",
+    "description": "To contain the data in a array.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C778",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C770",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "ASI": {
     "tag": "ASI",
-    "name": "ARRAY STRUCTURE IDENTIFICATION",
+    "name": "Array structure identification",
     "description": "To identify the structure of an array.",
     "elements": [
       {
@@ -59,25 +245,161 @@
         "compositeCode": "C082",
         "mandatory": false,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ATT": {
+    "tag": "ATT",
+    "name": "Attribute",
+    "description": "To identify a specific attribute.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C955",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C956",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "AUT": {
+    "tag": "AUT",
+    "name": "Authentication result",
+    "description": "To specify results of the application of an authentification procedure.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9280",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9282",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "BGM": {
+    "tag": "BGM",
+    "name": "Beginning of message",
+    "description": "To indicate the type and function of a message and to transmit the identifying number.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C002",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4343",
+        "mandatory": false,
+        "position": 4
       }
     ]
   },
   "BII": {
     "tag": "BII",
-    "name": "STRUCTURE IDENTIFICATION",
-    "description": "A segment used to convey an indexing structure",
+    "name": "Structure identification",
+    "description": "A segment used to convey an indexing structure mechanism which identifies the positioning of a group or item.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7429",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C045",
         "mandatory": true,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7140",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "BUS": {
+    "tag": "BUS",
+    "name": "Business function",
+    "description": "To provide information related to the processing and purpose of a financial message.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C521",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3279",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4487",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C551",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4463",
+        "mandatory": false,
+        "position": 5
       }
     ]
   },
   "CAV": {
     "tag": "CAV",
-    "name": "CHARACTERISTIC VALUE",
+    "name": "Characteristic value",
     "description": "To provide the value of a characteristic.",
     "elements": [
       {
@@ -88,11 +410,42 @@
       }
     ]
   },
+  "CCD": {
+    "tag": "CCD",
+    "name": "Credit cover details",
+    "description": "To request a credit cover, reply to that request and disclose the reason for the reply.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4505",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4509",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "CCI": {
     "tag": "CCI",
-    "name": "CHARACTERISTIC/CLASS ID",
+    "name": "Characteristic/class id",
     "description": "To identify and describe a specific characteristic.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7059",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C502",
@@ -104,6 +457,19 @@
         "compositeCode": "C240",
         "mandatory": false,
         "position": 3
+      }
+    ]
+  },
+  "CDI": {
+    "tag": "CDI",
+    "name": "Physical or logical state",
+    "description": "To describe a physical or logical state.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7001",
+        "mandatory": true,
+        "position": 1
       },
       {
         "nodeType": "composite",
@@ -113,9 +479,128 @@
       }
     ]
   },
+  "CDS": {
+    "tag": "CDS",
+    "name": "Code set identification",
+    "description": "To identify a code set and to give its class and maintenance operation.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C702",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CDV": {
+    "tag": "CDV",
+    "name": "Code value definition",
+    "description": "To provide information related to a code value.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9426",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9434",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CED": {
+    "tag": "CED",
+    "name": "Computer environment details",
+    "description": "To give a precise definition of all necessary elements belonging to the configuration of a computer system like hardware, firmware, operating system, communication (VANS, network type, protocol, format) and application software.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1501",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C079",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "CMP": {
+    "tag": "CMP",
+    "name": "Composite data element identification",
+    "description": "To identify a composite data element and to give its class and maintenance operation.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9146",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CNI": {
+    "tag": "CNI",
+    "name": "Consignment information",
+    "description": "To identify one consignment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1490",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C503",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1312",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "CNT": {
     "tag": "CNT",
-    "name": "CONTROL TOTAL",
+    "name": "Control total",
     "description": "To provide control total.",
     "elements": [
       {
@@ -126,10 +611,29 @@
       }
     ]
   },
+  "COD": {
+    "tag": "COD",
+    "name": "Component details",
+    "description": "To provide component details of an object (e.g. product, container) such as its type and the material of which it is composed.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C823",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C824",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "COM": {
     "tag": "COM",
-    "name": "COMMUNICATION CONTACT",
-    "description": "To identify a communication number of a department or",
+    "name": "Communication contact",
+    "description": "To identify a communication number of a department or a person to whom communication should be directed.",
     "elements": [
       {
         "nodeType": "composite",
@@ -139,9 +643,46 @@
       }
     ]
   },
+  "COT": {
+    "tag": "COT",
+    "name": "Contribution details",
+    "description": "To specify details about membership contributions.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5047",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C953",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "CPI": {
     "tag": "CPI",
-    "name": "CHARGE PAYMENT INSTRUCTIONS",
+    "name": "Charge payment instructions",
     "description": "To identify a charge.",
     "elements": [
       {
@@ -155,14 +696,51 @@
         "compositeCode": "C231",
         "mandatory": false,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4237",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CPS": {
+    "tag": "CPS",
+    "name": "Consignment packing sequence",
+    "description": "To identify the sequence in which physical packing is presented in the consignment, and optionally to identify the hierarchical relationship between packing layers.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7164",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7166",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7075",
+        "mandatory": false,
+        "position": 3
       }
     ]
   },
   "CST": {
     "tag": "CST",
-    "name": "CUSTOMS STATUS OF GOODS",
-    "description": "To specify goods in terms of customs identities,",
+    "name": "Customs status of goods",
+    "description": "To specify goods in terms of customs identities, status and intended use.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1496",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C246",
@@ -195,10 +773,29 @@
       }
     ]
   },
+  "CTA": {
+    "tag": "CTA",
+    "name": "Contact information",
+    "description": "To identify a person or a department to whom communication should be directed.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3139",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C056",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "CUX": {
     "tag": "CUX",
-    "name": "CURRENCIES",
-    "description": "To specify currencies used in the transaction and",
+    "name": "Currencies",
+    "description": "To specify currencies used in the transaction and relevant details for the rate of exchange.",
     "elements": [
       {
         "nodeType": "composite",
@@ -211,14 +808,69 @@
         "compositeCode": "C504",
         "mandatory": false,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5402",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6341",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DAM": {
+    "tag": "DAM",
+    "name": "Damage",
+    "description": "To specify damage including action taken.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7493",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C821",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C822",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C825",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C826",
+        "mandatory": false,
+        "position": 5
       }
     ]
   },
   "DGS": {
     "tag": "DGS",
-    "name": "DANGEROUS GOODS",
+    "name": "Dangerous goods",
     "description": "To identify dangerous goods.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8273",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C205",
@@ -238,6 +890,30 @@
         "position": 4
       },
       {
+        "nodeType": "element",
+        "elementCode": "8339",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8364",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8410",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8126",
+        "mandatory": false,
+        "position": 8
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C235",
         "mandatory": false,
@@ -248,14 +924,81 @@
         "compositeCode": "C236",
         "mandatory": false,
         "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8255",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8325",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8211",
+        "mandatory": false,
+        "position": 13
+      }
+    ]
+  },
+  "DII": {
+    "tag": "DII",
+    "name": "Directory identification",
+    "description": "To identify a directory and to give its release, status, controlling agency, language and maintenance operation.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1056",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1058",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9148",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1476",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 6
       }
     ]
   },
   "DIM": {
     "tag": "DIM",
-    "name": "DIMENSIONS",
+    "name": "Dimensions",
     "description": "To specify dimensions.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6145",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C211",
@@ -264,11 +1007,36 @@
       }
     ]
   },
+  "DLI": {
+    "tag": "DLI",
+    "name": "Document line identification",
+    "description": "To specify the processing mode of a specific line within a referenced document.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1073",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
   "DLM": {
     "tag": "DLM",
-    "name": "DELIVERY LIMITATIONS",
+    "name": "Delivery limitations",
     "description": "To specify limitations on deliveries.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4455",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C522",
@@ -280,13 +1048,44 @@
         "compositeCode": "C214",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4457",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "DMS": {
+    "tag": "DMS",
+    "name": "Document/message summary",
+    "description": "To specify summary information relating to the document/message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1004",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1001",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7240",
+        "mandatory": false,
+        "position": 3
       }
     ]
   },
   "DOC": {
     "tag": "DOC",
-    "name": "DOCUMENT/MESSAGE DETAILS",
-    "description": "To identify documents, either printed, electronically",
+    "name": "Document/message details",
+    "description": "To identify documents, either printed, electronically transferred, or referenced as specified in message description, including, where relevant, the identification of the type of transaction that will result from this message.",
     "elements": [
       {
         "nodeType": "composite",
@@ -299,12 +1098,67 @@
         "compositeCode": "C503",
         "mandatory": false,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3153",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1220",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1218",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "DSI": {
+    "tag": "DSI",
+    "name": "Data set identification",
+    "description": "To identify a data set.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C782",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C286",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 5
       }
     ]
   },
   "DTM": {
     "tag": "DTM",
-    "name": "DATE/TIME/PERIOD",
+    "name": "Date/time/period",
     "description": "To specify date, and/or time, or period.",
     "elements": [
       {
@@ -315,11 +1169,128 @@
       }
     ]
   },
+  "EFI": {
+    "tag": "EFI",
+    "name": "External file link identification",
+    "description": "To specify the link of one non-EDIFACT external file to an EDIFACT message.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C077",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C099",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "ELM": {
+    "tag": "ELM",
+    "name": "Simple data element details",
+    "description": "To identify a simple data element and give related details.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9150",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9153",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9155",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9156",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9158",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9161",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "ELU": {
+    "tag": "ELU",
+    "name": "Data element usage details",
+    "description": "To specify the usage of a data element.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9162",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "EMP": {
     "tag": "EMP",
-    "name": "EMPLOYMENT DETAILS",
+    "name": "Employment details",
     "description": "To specify employment details.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9003",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C948",
@@ -337,14 +1308,51 @@
         "compositeCode": "C950",
         "mandatory": false,
         "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3494",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9035",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "EQA": {
+    "tag": "EQA",
+    "name": "Attached equipment",
+    "description": "To specify attached or related equipment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8053",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": false,
+        "position": 2
       }
     ]
   },
   "EQD": {
     "tag": "EQD",
-    "name": "EQUIPMENT DETAILS",
+    "name": "Equipment details",
     "description": "To identify a unit of equipment.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8053",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C237",
@@ -356,13 +1364,44 @@
         "compositeCode": "C224",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8077",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8249",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8169",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "EQN": {
+    "tag": "EQN",
+    "name": "Number of units",
+    "description": "To specify the number of units.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C523",
+        "mandatory": true,
+        "position": 1
       }
     ]
   },
   "ERC": {
     "tag": "ERC",
-    "name": "APPLICATION ERROR INFORMATION",
-    "description": "To identify the type of application error within a",
+    "name": "Application error information",
+    "description": "To identify the type of application error within a message.",
     "elements": [
       {
         "nodeType": "composite",
@@ -372,11 +1411,30 @@
       }
     ]
   },
+  "ERP": {
+    "tag": "ERP",
+    "name": "Error point details",
+    "description": "To identify the location and type of application error within a message.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C701",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "FCA": {
     "tag": "FCA",
-    "name": "FINANCIAL CHARGES ALLOCATION",
+    "name": "Financial charges allocation",
     "description": "Description of allocation of charges.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4471",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C878",
@@ -385,9 +1443,40 @@
       }
     ]
   },
+  "FII": {
+    "tag": "FII",
+    "name": "Financial institution information",
+    "description": "To identify an account and a related financial institution.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C078",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C088",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "FNS": {
     "tag": "FNS",
-    "name": "FOOTNOTE SET",
+    "name": "Footnote set",
     "description": "To identify a set of footnotes.",
     "elements": [
       {
@@ -401,14 +1490,69 @@
         "compositeCode": "C082",
         "mandatory": false,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "FNT": {
+    "tag": "FNT",
+    "name": "Footnote",
+    "description": "To identify a footnote.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C784",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
       }
     ]
   },
   "FTX": {
     "tag": "FTX",
-    "name": "FREE TEXT",
+    "name": "Free text",
     "description": "To provide free form or coded text information.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4451",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4453",
+        "mandatory": false,
+        "position": 2
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C107",
@@ -420,14 +1564,39 @@
         "compositeCode": "C108",
         "mandatory": false,
         "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "GDS": {
+    "tag": "GDS",
+    "name": "Nature of cargo",
+    "description": "To indicate the type of cargo as a general classification.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C703",
+        "mandatory": false,
+        "position": 1
       }
     ]
   },
   "GID": {
     "tag": "GID",
-    "name": "GOODS ITEM DETAILS",
+    "name": "Goods item details",
     "description": "To indicate totals of a goods item.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1496",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C213",
@@ -448,11 +1617,60 @@
       }
     ]
   },
+  "GIN": {
+    "tag": "GIN",
+    "name": "Goods identity number",
+    "description": "To give specific identification numbers, either as single numbers or ranges.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C208",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
   "GIR": {
     "tag": "GIR",
-    "name": "RELATED IDENTIFICATION NUMBERS",
+    "name": "Related identification numbers",
     "description": "To specify a related set of identification numbers.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7297",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C206",
@@ -485,11 +1703,30 @@
       }
     ]
   },
+  "GIS": {
+    "tag": "GIS",
+    "name": "General indicator",
+    "description": "To transmit a processing indicator.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C529",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "GOR": {
     "tag": "GOR",
-    "name": "GOVERNMENTAL REQUIREMENTS",
-    "description": "To indicate the requirement for a specific govermental",
+    "name": "Governmental requirements",
+    "description": "To indicate the requirement for a specific govermental action and/or procedure or which specific procedure is valid for a specific part of the transport.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8323",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C232",
@@ -516,10 +1753,47 @@
       }
     ]
   },
+  "GRU": {
+    "tag": "GRU",
+    "name": "Segment group usage details",
+    "description": "To specify the usage of a segment group within a message type structure and its maintenance operation.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9164",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6176",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "HAN": {
     "tag": "HAN",
-    "name": "HANDLING INSTRUCTIONS",
-    "description": "To specify handling and where necessary, notify",
+    "name": "Handling instructions",
+    "description": "To specify handling and where necessary, notify hazards.",
     "elements": [
       {
         "nodeType": "composite",
@@ -535,11 +1809,36 @@
       }
     ]
   },
+  "ICD": {
+    "tag": "ICD",
+    "name": "Insurance cover description",
+    "description": "To describe the insurance cover.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C330",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C331",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
   "IDE": {
     "tag": "IDE",
-    "name": "IDENTITY",
+    "name": "Identity",
     "description": "To identify an object.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7495",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C206",
@@ -551,6 +1850,18 @@
         "compositeCode": "C082",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
       },
       {
         "nodeType": "composite",
@@ -566,23 +1877,79 @@
       }
     ]
   },
+  "IHC": {
+    "tag": "IHC",
+    "name": "Person characteristic",
+    "description": "To specify characteristics of a person such as ethnic origin.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3289",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C818",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "IMD": {
     "tag": "IMD",
-    "name": "ITEM DESCRIPTION",
-    "description": "To describe an item in either an industry or free",
+    "name": "Item description",
+    "description": "To describe an item in either an industry or free format.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7077",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7081",
+        "mandatory": false,
+        "position": 2
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C273",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7383",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "IND": {
+    "tag": "IND",
+    "name": "Index details",
+    "description": "To specify an index.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C545",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C546",
+        "mandatory": false,
+        "position": 2
       }
     ]
   },
   "INP": {
     "tag": "INP",
-    "name": "PARTIES TO INSTRUCTION",
-    "description": "To specify parties to an instruction and where",
+    "name": "Parties to instruction",
+    "description": "To specify parties to an instruction and where relevant, the instruction.",
     "elements": [
       {
         "nodeType": "composite",
@@ -601,13 +1968,56 @@
         "compositeCode": "C850",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "INV": {
+    "tag": "INV",
+    "name": "Inventory management related details",
+    "description": "To provide the different information related to the inventory management functions and needed to process properly the inventory movements and the inventory balances.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4501",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7491",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4499",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4503",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C522",
+        "mandatory": false,
+        "position": 5
       }
     ]
   },
   "IRQ": {
     "tag": "IRQ",
-    "name": "INFORMATION REQUIRED",
-    "description": "To indicate which information is requested in a",
+    "name": "Information required",
+    "description": "To indicate which information is requested in a responding message.",
     "elements": [
       {
         "nodeType": "composite",
@@ -617,11 +2027,42 @@
       }
     ]
   },
+  "LAN": {
+    "tag": "LAN",
+    "name": "Language",
+    "description": "To specify a language.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3455",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C508",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "LIN": {
     "tag": "LIN",
-    "name": "LINE ITEM",
+    "name": "Line item",
     "description": "To identify a line item and configuration.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 2
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C212",
@@ -633,14 +2074,69 @@
         "compositeCode": "C829",
         "mandatory": false,
         "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7083",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "LOC": {
+    "tag": "LOC",
+    "name": "Place/location identification",
+    "description": "To identify a country/place/location/related location one/related location two.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3227",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C517",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C519",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C553",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5479",
+        "mandatory": false,
+        "position": 5
       }
     ]
   },
   "MEA": {
     "tag": "MEA",
-    "name": "MEASUREMENTS",
-    "description": "To specify physical measurements, including dimension",
+    "name": "Measurements",
+    "description": "To specify physical measurements, including dimension tolerances, weights and counts.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6311",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C502",
@@ -652,40 +2148,193 @@
         "compositeCode": "C174",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7383",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "MEM": {
+    "tag": "MEM",
+    "name": "Membership details",
+    "description": "To specify details about membership.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7449",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C942",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C944",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C945",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C960",
+        "mandatory": false,
+        "position": 6
       }
     ]
   },
   "MKS": {
     "tag": "MKS",
-    "name": "MARKET/SALES CHANNEL INFORMATION",
-    "description": "To specify to which market and/or through which sales",
+    "name": "Market/sales channel information",
+    "description": "To specify to which market and/or through which sales distribution channel and/or for which end-use the sales of product/service have been made or are given as forecast.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C332",
         "mandatory": true,
         "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "MOA": {
+    "tag": "MOA",
+    "name": "Monetary amount",
+    "description": "To specify a monetary amount.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C516",
+        "mandatory": true,
+        "position": 1
       }
     ]
   },
   "MSG": {
     "tag": "MSG",
-    "name": "MESSAGE TYPE IDENTIFICATION",
-    "description": "To identify a message type and to give its class and",
+    "name": "Message type identification",
+    "description": "To identify a message type and to give its class and maintenance operation.",
     "elements": [
       {
         "nodeType": "composite",
         "compositeCode": "C709",
         "mandatory": true,
         "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "NAD": {
+    "tag": "NAD",
+    "name": "Name and address",
+    "description": "To specify the name/address and their related function, either by CO82 only and/or unstructured by CO58 or structured by CO80 thru 3207.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C058",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C080",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C059",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3229",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 9
       }
     ]
   },
   "NAT": {
     "tag": "NAT",
-    "name": "NATIONALITY",
+    "name": "Nationality",
     "description": "To specify a nationality.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3493",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C042",
@@ -694,9 +2343,46 @@
       }
     ]
   },
+  "PAC": {
+    "tag": "PAC",
+    "name": "Package",
+    "description": "To describe the number and type of packages/physical units.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7224",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C531",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C202",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C402",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C532",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "PAI": {
     "tag": "PAI",
-    "name": "PAYMENT INSTRUCTIONS",
+    "name": "Payment instructions",
     "description": "To specify the instructions for payment.",
     "elements": [
       {
@@ -707,9 +2393,34 @@
       }
     ]
   },
+  "PAT": {
+    "tag": "PAT",
+    "name": "Payment terms basis",
+    "description": "To specify the payment terms basis.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4279",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C110",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C112",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "PCD": {
     "tag": "PCD",
-    "name": "PERCENTAGE DETAILS",
+    "name": "Percentage details",
     "description": "To specify percentage information.",
     "elements": [
       {
@@ -720,11 +2431,48 @@
       }
     ]
   },
+  "PCI": {
+    "tag": "PCI",
+    "name": "Package identification",
+    "description": "To specify markings and labels on individual packages or physical units.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4233",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C210",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8275",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C827",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "PDI": {
     "tag": "PDI",
-    "name": "PERSON DEMOGRAPHIC INFORMATION",
+    "name": "Person demographic information",
     "description": "To specify items of person demographic information.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3499",
+        "mandatory": false,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C085",
@@ -739,11 +2487,36 @@
       }
     ]
   },
+  "PGI": {
+    "tag": "PGI",
+    "name": "Product group information",
+    "description": "To indicate the group in which a product belongs.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5379",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C288",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "PIA": {
     "tag": "PIA",
-    "name": "ADDITIONAL PRODUCT ID",
-    "description": "To specify additional or substitutional item",
+    "name": "Additional product id",
+    "description": "To specify additional or substitutional item identification codes.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4347",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C212",
@@ -773,18 +2546,128 @@
         "compositeCode": "C212",
         "mandatory": false,
         "position": 6
+      }
+    ]
+  },
+  "PIT": {
+    "tag": "PIT",
+    "name": "Price item line",
+    "description": "To specify details relating to pricing of a product.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 2
       },
       {
         "nodeType": "composite",
         "compositeCode": "C292",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7011",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5495",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7083",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "PNA": {
+    "tag": "PNA",
+    "name": "Party name",
+    "description": "To specify information necessary to establish the identity of a party.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C206",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3403",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3397",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C816",
+        "mandatory": false,
+        "position": 10
       }
     ]
   },
   "PRC": {
     "tag": "PRC",
-    "name": "PROCESS IDENTIFICATION",
+    "name": "Process identification",
     "description": "To identify a process.",
     "elements": [
       {
@@ -795,11 +2678,91 @@
       }
     ]
   },
+  "PRI": {
+    "tag": "PRI",
+    "name": "Price details",
+    "description": "To specify price information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C509",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5213",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PSD": {
+    "tag": "PSD",
+    "name": "Physical sample description",
+    "description": "To define the physical sample parameters associated with a test, resulting in discrete measurements.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4407",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7039",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C526",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7045",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7047",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C514",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
   "PTY": {
     "tag": "PTY",
-    "name": "PRIORITY",
-    "description": "The segment is used to communicate priority",
+    "name": "Priority",
+    "description": "The segment is used to communicate priority information.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4035",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C585",
@@ -808,16 +2771,35 @@
       }
     ]
   },
+  "QTY": {
+    "tag": "QTY",
+    "name": "Quantity",
+    "description": "To specify a pertinent quantity.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C186",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "QVR": {
     "tag": "QVR",
-    "name": "QUANTITY VARIANCES",
-    "description": "To specify item details relating to quantity",
+    "name": "Quantity variances",
+    "description": "To specify item details relating to quantity variances.",
     "elements": [
       {
         "nodeType": "composite",
         "compositeCode": "C279",
         "mandatory": false,
         "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4221",
+        "mandatory": false,
+        "position": 2
       },
       {
         "nodeType": "composite",
@@ -827,11 +2809,42 @@
       }
     ]
   },
+  "RCS": {
+    "tag": "RCS",
+    "name": "Requirements and conditions",
+    "description": "To specify sector/subject requirements and conditions.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7293",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C550",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "REL": {
     "tag": "REL",
-    "name": "RELATIONSHIP",
-    "description": "To identify the direct relationship between the",
+    "name": "Relationship",
+    "description": "To identify the direct relationship between the data/information contained in one segment and the data/information contained in one or more other segments.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9141",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C941",
@@ -840,11 +2853,30 @@
       }
     ]
   },
+  "RFF": {
+    "tag": "RFF",
+    "name": "Reference",
+    "description": "To specify a reference.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C506",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "RNG": {
     "tag": "RNG",
-    "name": "RANGE DETAILS",
+    "name": "Range details",
     "description": "To identify a range.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6167",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C280",
@@ -853,9 +2885,22 @@
       }
     ]
   },
+  "RTE": {
+    "tag": "RTE",
+    "name": "Rate details",
+    "description": "To specify rate information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C128",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "SAL": {
     "tag": "SAL",
-    "name": "REMUNERATION TYPE IDENTIFICATION",
+    "name": "Remuneration type identification",
     "description": "Identification of a remuneration type.",
     "elements": [
       {
@@ -866,11 +2911,42 @@
       }
     ]
   },
+  "SCC": {
+    "tag": "SCC",
+    "name": "Scheduling conditions",
+    "description": "To specify scheduling conditions.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4493",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C329",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "SCD": {
     "tag": "SCD",
-    "name": "STRUCTURE COMPONENT DEFINITION",
-    "description": "To specify a component of a data structure (e.g. an",
+    "name": "Structure component definition",
+    "description": "To specify a component of a data structure (e.g. an array or table).",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7497",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C786",
@@ -882,6 +2958,18 @@
         "compositeCode": "C082",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1222",
+        "mandatory": false,
+        "position": 5
       },
       {
         "nodeType": "composite",
@@ -897,14 +2985,70 @@
       }
     ]
   },
+  "SEG": {
+    "tag": "SEG",
+    "name": "Segment identification",
+    "description": "To identify a segment and give its class and maintenance operation.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9166",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "SEL": {
     "tag": "SEL",
-    "name": "SEAL NUMBER",
+    "name": "Seal number",
     "description": "To specify a seal number related to equipment.",
     "elements": [
       {
+        "nodeType": "element",
+        "elementCode": "9308",
+        "mandatory": true,
+        "position": 1
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C215",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4517",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "SEQ": {
+    "tag": "SEQ",
+    "name": "Sequence details",
+    "description": "To provide specific details related to the delivery sequence.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1245",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C286",
         "mandatory": false,
         "position": 2
       }
@@ -912,9 +3056,15 @@
   },
   "SFI": {
     "tag": "SFI",
-    "name": "SAFETY INFORMATION",
+    "name": "Safety information",
     "description": "To identify regulatory safety information.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7164",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C814",
@@ -926,14 +3076,143 @@
         "compositeCode": "C815",
         "mandatory": false,
         "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "SGP": {
+    "tag": "SGP",
+    "name": "Split goods placement",
+    "description": "To specify the placement of goods in relation to equipment.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C237",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7224",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "SGU": {
+    "tag": "SGU",
+    "name": "Segment usage details",
+    "description": "To specify the details of the usage of a segment within a message type structure.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9166",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6176",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7168",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1049",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "SPS": {
+    "tag": "SPS",
+    "name": "Sampling parameters for summary statistics",
+    "description": "To define the sampling parameters associated with summary statistics reported.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C526",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6074",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C512",
+        "mandatory": false,
+        "position": 7
       }
     ]
   },
   "STA": {
     "tag": "STA",
-    "name": "STATISTICS",
-    "description": "To transmit summary statistics related to a specified",
+    "name": "Statistics",
+    "description": "To transmit summary statistics related to a specified collection of test result values.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6331",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C527",
@@ -942,11 +3221,122 @@
       }
     ]
   },
+  "STC": {
+    "tag": "STC",
+    "name": "Statistical concept",
+    "description": "To specify a statistical concept.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C785",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "STG": {
+    "tag": "STG",
+    "name": "Stages",
+    "description": "To provide information related to the kind of stage in a process, the number of stages and the actual stage.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9421",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6426",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6428",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "STS": {
+    "tag": "STS",
+    "name": "Status",
+    "description": "To specify the type of industry sector/application to which this segment refers, giving the status and status reason relevant to conducting business and/or services.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C601",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C555",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C556",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
   "TAX": {
     "tag": "TAX",
-    "name": "DUTY/TAX/FEE DETAILS",
+    "name": "Duty/tax/fee details",
     "description": "To specify relevant duty/tax/fee information.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5283",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C241",
@@ -960,18 +3350,79 @@
         "position": 3
       },
       {
+        "nodeType": "element",
+        "elementCode": "5286",
+        "mandatory": false,
+        "position": 4
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C243",
         "mandatory": false,
         "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5305",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3446",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "TCC": {
+    "tag": "TCC",
+    "name": "Transport charge/rate calculations",
+    "description": "To specify charges.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C200",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C203",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C528",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C554",
+        "mandatory": false,
+        "position": 4
       }
     ]
   },
   "TDT": {
     "tag": "TDT",
-    "name": "DETAILS OF TRANSPORT",
-    "description": "To specify the transport details such as mode of",
+    "name": "Details of transport",
+    "description": "To specify the transport details such as mode of transport, means of transport, its conveyance reference number and the identification of the means of transport. The segment may be pointed to by the TPL segment.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8051",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8028",
+        "mandatory": false,
+        "position": 2
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C220",
@@ -991,6 +3442,12 @@
         "position": 5
       },
       {
+        "nodeType": "element",
+        "elementCode": "8101",
+        "mandatory": false,
+        "position": 6
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C401",
         "mandatory": false,
@@ -1001,14 +3458,94 @@
         "compositeCode": "C222",
         "mandatory": false,
         "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8281",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "TEM": {
+    "tag": "TEM",
+    "name": "Test method",
+    "description": "To describe the nature of the test performed.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C244",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4419",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3077",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6311",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7188",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C515",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "TMD": {
+    "tag": "TMD",
+    "name": "Transport movement details",
+    "description": "To specify operational transport movement details for a goods item or equipment (which may differ from the contractual conditions).",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C219",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8332",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "8341",
+        "mandatory": false,
+        "position": 3
       }
     ]
   },
   "TMP": {
     "tag": "TMP",
-    "name": "TEMPERATURE",
+    "name": "Temperature",
     "description": "To specify the temperature setting.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "6245",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C239",
@@ -1017,10 +3554,35 @@
       }
     ]
   },
+  "TOD": {
+    "tag": "TOD",
+    "name": "Terms of delivery or transport",
+    "description": "To specify terms of delivery or transport.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4055",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4215",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C100",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "TPL": {
     "tag": "TPL",
-    "name": "TRANSPORT PLACEMENT",
-    "description": "To specify placement of goods or equipment in relation",
+    "name": "Transport placement",
+    "description": "To specify placement of goods or equipment in relation to the transport used. The segment serves as a pointer to the TDT segment group.",
     "elements": [
       {
         "nodeType": "composite",
@@ -1030,9 +3592,448 @@
       }
     ]
   },
+  "TSR": {
+    "tag": "TSR",
+    "name": "Transport service requirements",
+    "description": "To specify the contract and carriage conditions and service and priority requirements for the transport.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "C536",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C233",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C537",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "C703",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "UCD": {
+    "tag": "UCD",
+    "name": "Data element error indication",
+    "description": "To identify an erroneous simple, composite or component data element, and to identify the nature of the error.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S011",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UCF": {
+    "tag": "UCF",
+    "name": "Functional group response",
+    "description": "To identify a functional group in the subject interchange and to indicate acknowledgement or rejection (action taken) of the UNG and UNE segments, and to identify any error related to these segments. Depending on the action code, it may also indicate the action taken on the messages within that functional group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S006",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S007",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0013",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S011",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "UCI": {
+    "tag": "UCI",
+    "name": "Interchange response",
+    "description": "To identify the subject interchange, to indicate interchange receipt, to indicate acknowledgement or rejection (action taken) of the UNA, UNB and UNZ segments, and to identify any error related to these segments. Depending on the action code, it may also indicate the action taken on the functional groups and messages within that interchange.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S002",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S003",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0013",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S011",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "UCM": {
+    "tag": "UCM",
+    "name": "Message response",
+    "description": "To identify a message in the subject interchange, and to indicate that message's acknowledgement or rejection (action taken), and to identify any error related to the UNH and UNT segments.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S009",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0013",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S011",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "UCS": {
+    "tag": "UCS",
+    "name": "Segment error indication",
+    "description": "To identify either a segment containing an error or a missing segment, and to identify any error related to the complete segment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0096",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "UNB": {
+    "tag": "UNB",
+    "name": "Interchange header",
+    "description": "To start, identify and specify an interchange.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "S001",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S002",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S003",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S004",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S005",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0026",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0029",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0031",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0032",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0035",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "UNE": {
+    "tag": "UNE",
+    "name": "Functional group trailer",
+    "description": "To end and check the completeness of a functional group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0060",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UNG": {
+    "tag": "UNG",
+    "name": "Functional group header",
+    "description": "To head, identify and specify a functional group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0038",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S006",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S007",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S004",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0051",
+        "mandatory": true,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S008",
+        "mandatory": true,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0058",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "UNH": {
+    "tag": "UNH",
+    "name": "Message header",
+    "description": "To head, identify and specify a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S009",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0068",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "S010",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "UNS": {
+    "tag": "UNS",
+    "name": "Section control",
+    "description": "To separate header, detail and summary sections of a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0081",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UNT": {
+    "tag": "UNT",
+    "name": "Message trailer",
+    "description": "To end and check the completeness of a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0074",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UNZ": {
+    "tag": "UNZ",
+    "name": "Interchange trailer",
+    "description": "To end and check the completeness of an interchange.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
   "VLI": {
     "tag": "VLI",
-    "name": "VALUE LIST IDENTIFICATION",
+    "name": "Value list identification",
     "description": "To identify a coded or non coded value list.",
     "elements": [
       {
@@ -1048,10 +4049,40 @@
         "position": 2
       },
       {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1514",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1507",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1505",
+        "mandatory": false,
+        "position": 6
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C240",
         "mandatory": false,
         "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 8
       }
     ]
   }

@@ -1,5 +1,31 @@
 {
-  "code": "3301",
-  "name": "Party enacting instruction identification",
-  "values": []
+  "elementCode": "3301",
+  "elementName": "Party enacting instruction identification",
+  "values": [
+    {
+      "code": "1",
+      "name": "Applicant's bank",
+      "description": "The financial institution which is requested to issue the documentary credit."
+    },
+    {
+      "code": "2",
+      "name": "Issuing bank",
+      "description": "The financial institution which issues the documentary credit, if the applicant's bank is not acting as the issuing bank."
+    },
+    {
+      "code": "3",
+      "name": "Beneficiary's bank",
+      "description": "The financial institution with which the beneficiary maintains an account."
+    },
+    {
+      "code": "4",
+      "name": "Buyer",
+      "description": "The buyer is responsible for carrying out the instruction."
+    },
+    {
+      "code": "5",
+      "name": "Seller",
+      "description": "The seller is responsible for carrying out the instruction."
+    }
+  ]
 }

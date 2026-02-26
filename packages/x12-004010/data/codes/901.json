@@ -1,0 +1,1030 @@
+{
+  "code": "901",
+  "name": "Code identifying reason for rejection as assigned by issuer",
+  "values": [
+    {
+      "code": "01",
+      "name": "Price Authorization Invalid"
+    },
+    {
+      "code": "02",
+      "name": "Price Authorization Expired"
+    },
+    {
+      "code": "03",
+      "name": "Product not on the price authorization"
+    },
+    {
+      "code": "04",
+      "name": "Authorized Quantity Exceeded"
+    },
+    {
+      "code": "05",
+      "name": "Zero Balance"
+    },
+    {
+      "code": "06",
+      "name": "Special Cost Incorrect"
+    },
+    {
+      "code": "07",
+      "name": "Catalog Cost Incorrect"
+    },
+    {
+      "code": "08",
+      "name": "Invalid Ship Location"
+    },
+    {
+      "code": "09",
+      "name": "No Credit Allowed"
+    },
+    {
+      "code": "10",
+      "name": "Administrative Cancellation"
+    },
+    {
+      "code": "11",
+      "name": "Invalid Debit Number"
+    },
+    {
+      "code": "12",
+      "name": "Duplicate Sequence Number"
+    },
+    {
+      "code": "13",
+      "name": "Not Valid for Price Protection"
+    },
+    {
+      "code": "14",
+      "name": "Invalid part number"
+    },
+    {
+      "code": "15",
+      "name": "Required application data missing"
+    },
+    {
+      "code": "16",
+      "name": "Unit resale higher than authorized"
+    },
+    {
+      "code": "17",
+      "name": "Negotiated price was not less than book price"
+    },
+    {
+      "code": "18",
+      "name": "Ship date must not be after current date"
+    },
+    {
+      "code": "19",
+      "name": "Ship date cannot be prior to price authorization issue date"
+    },
+    {
+      "code": "20",
+      "name": "Ship date should not be before price authorization date (for rebills)"
+    },
+    {
+      "code": "21",
+      "name": "Price authorization is a rebill type"
+    },
+    {
+      "code": "23",
+      "name": "Price authorization has been deleted"
+    },
+    {
+      "code": "24",
+      "name": "Price authorization used on a sales order"
+    },
+    {
+      "code": "25",
+      "name": "Disposition pending vendor review."
+    },
+    {
+      "code": "26",
+      "name": "Invalid Customer Number"
+    },
+    {
+      "code": "27",
+      "name": "Invalid Ship Date"
+    },
+    {
+      "code": "28",
+      "name": "Duplicate Invoice Number"
+    },
+    {
+      "code": "29",
+      "name": "Claim Submitted Past Exercise Period"
+    },
+    {
+      "code": "30",
+      "name": "Invalid Meet Competition Cost"
+    },
+    {
+      "code": "31",
+      "name": "Invalid Book Cost"
+    },
+    {
+      "code": "32",
+      "name": "Input Incomplete"
+    },
+    {
+      "code": "33",
+      "name": "Input Errors"
+    },
+    {
+      "code": "34",
+      "name": "No Coverage"
+    },
+    {
+      "code": "35",
+      "name": "Out of Network"
+    },
+    {
+      "code": "36",
+      "name": "Testing not Included"
+    },
+    {
+      "code": "37",
+      "name": "Request Forwarded To and Decision Response Forthcoming From an External Review Organization"
+    },
+    {
+      "code": "38",
+      "name": "Claim Can Not Be Identified for Verification"
+    },
+    {
+      "code": "39",
+      "name": "Actual Information Different than Reported"
+    },
+    {
+      "code": "40",
+      "name": "Actual Information Different - Claim Has Been Re-adjudicated Since Initial Payment"
+    },
+    {
+      "code": "41",
+      "name": "Authorization/Access Restrictions"
+    },
+    {
+      "code": "42",
+      "name": "Unable to Respond at Current Time"
+    },
+    {
+      "code": "43",
+      "name": "Invalid/Missing Provider Identification"
+    },
+    {
+      "code": "44",
+      "name": "Invalid/Missing Provider Name"
+    },
+    {
+      "code": "45",
+      "name": "Invalid/Missing Provider Specialty"
+    },
+    {
+      "code": "46",
+      "name": "Invalid/Missing Provider Phone Number"
+    },
+    {
+      "code": "47",
+      "name": "Invalid/Missing Provider State"
+    },
+    {
+      "code": "48",
+      "name": "Invalid/Missing Referring Provider Identification Number"
+    },
+    {
+      "code": "49",
+      "name": "Provider is Not Primary Care Physician"
+    },
+    {
+      "code": "50",
+      "name": "Provider Ineligible for Inquiries"
+    },
+    {
+      "code": "51",
+      "name": "Provider Not on File"
+    },
+    {
+      "code": "52",
+      "name": "Service Dates Not Within Provider Plan Enrollment"
+    },
+    {
+      "code": "53",
+      "name": "Inquired Benefit Inconsistent with Provider Type"
+    },
+    {
+      "code": "54",
+      "name": "Inappropriate Product/Service ID Qualifier"
+    },
+    {
+      "code": "55",
+      "name": "Inappropriate Product/Service ID"
+    },
+    {
+      "code": "56",
+      "name": "Inappropriate Date"
+    },
+    {
+      "code": "57",
+      "name": "Invalid/Missing Date(s) of Service"
+    },
+    {
+      "code": "58",
+      "name": "Invalid/Missing Date-of-Birth"
+    },
+    {
+      "code": "59",
+      "name": "Invalid/Missing Date-of-Death"
+    },
+    {
+      "code": "60",
+      "name": "Date of Birth Follows Date(s) of Service"
+    },
+    {
+      "code": "61",
+      "name": "Date of Death Precedes Date(s) of Service"
+    },
+    {
+      "code": "62",
+      "name": "Date of Service Not Within Allowable Inquiry Period"
+    },
+    {
+      "code": "63",
+      "name": "Date of Service in Future"
+    },
+    {
+      "code": "64",
+      "name": "Invalid/Missing Patient ID"
+    },
+    {
+      "code": "65",
+      "name": "Invalid/Missing Patient Name"
+    },
+    {
+      "code": "66",
+      "name": "Invalid/Missing Patient Gender Code"
+    },
+    {
+      "code": "67",
+      "name": "Patient Not Found"
+    },
+    {
+      "code": "68",
+      "name": "Duplicate Patient ID Number"
+    },
+    {
+      "code": "69",
+      "name": "Inconsistent with Patient's Age"
+    },
+    {
+      "code": "70",
+      "name": "Inconsistent with Patient's Gender"
+    },
+    {
+      "code": "71",
+      "name": "Patient Birth Date Does Not Match That for the Patient on the Database"
+    },
+    {
+      "code": "72",
+      "name": "Invalid/Missing Subscriber/Insured ID"
+    },
+    {
+      "code": "73",
+      "name": "Invalid/Missing Subscriber/Insured Name"
+    },
+    {
+      "code": "74",
+      "name": "Invalid/Missing Subscriber/Insured Gender Code"
+    },
+    {
+      "code": "75",
+      "name": "Subscriber/Insured Not Found"
+    },
+    {
+      "code": "76",
+      "name": "Duplicate Subscriber/Insured ID Number"
+    },
+    {
+      "code": "77",
+      "name": "Subscriber Found, Patient Not Found"
+    },
+    {
+      "code": "78",
+      "name": "Subscriber/Insured Not in Group/Plan Identified"
+    },
+    {
+      "code": "79",
+      "name": "Invalid Participant Identification"
+    },
+    {
+      "code": "80",
+      "name": "No Response received - Transaction Terminated"
+    },
+    {
+      "code": "81",
+      "name": "Invalid or Missing Case Number"
+    },
+    {
+      "code": "82",
+      "name": "Not Medically Necessary"
+    },
+    {
+      "code": "83",
+      "name": "Level of Care Not Appropriate"
+    },
+    {
+      "code": "84",
+      "name": "Certification Not Required for this Service"
+    },
+    {
+      "code": "85",
+      "name": "Certification Responsibility of External Review Organization"
+    },
+    {
+      "code": "86",
+      "name": "Primary Care Service"
+    },
+    {
+      "code": "87",
+      "name": "Exceeds Plan Maximums"
+    },
+    {
+      "code": "88",
+      "name": "Non-covered Service"
+    },
+    {
+      "code": "89",
+      "name": "No Prior Approval"
+    },
+    {
+      "code": "90",
+      "name": "Requested Information Not Received"
+    },
+    {
+      "code": "91",
+      "name": "Duplicate Request"
+    },
+    {
+      "code": "92",
+      "name": "Service Inconsistent with Diagnosis"
+    },
+    {
+      "code": "93",
+      "name": "Invalid Provider Identification"
+    },
+    {
+      "code": "94",
+      "name": "Missing Provider Identification"
+    },
+    {
+      "code": "95",
+      "name": "Patient Not Eligible"
+    },
+    {
+      "code": "96",
+      "name": "Pre-existing Condition"
+    },
+    {
+      "code": "97",
+      "name": "Invalid or Missing Provider Address"
+    },
+    {
+      "code": "98",
+      "name": "Experimental Service or Procedure"
+    },
+    {
+      "code": "AA",
+      "name": "Authorization Number Not Found"
+    },
+    {
+      "code": "AB",
+      "name": "Air Brakes - Inoperative, etc."
+    },
+    {
+      "code": "AC",
+      "name": "Missing Date(s) of Service"
+    },
+    {
+      "code": "AD",
+      "name": "Accident Damage - Derail/Sideswiped"
+    },
+    {
+      "code": "AE",
+      "name": "Requires Primary Care Physician Authorization"
+    },
+    {
+      "code": "AF",
+      "name": "Invalid/Missing Diagnosis Code(s)"
+    },
+    {
+      "code": "AG",
+      "name": "Invalid/Missing Procedure Code(s)"
+    },
+    {
+      "code": "AH",
+      "name": "Invalid/Missing Onset of Current Condition or Illness Date"
+    },
+    {
+      "code": "AI",
+      "name": "Invalid/Missing Accident Date"
+    },
+    {
+      "code": "AJ",
+      "name": "Invalid/Missing Last Menstrual Period Date"
+    },
+    {
+      "code": "AK",
+      "name": "Invalid/Missing Expected Date of Birth"
+    },
+    {
+      "code": "AL",
+      "name": "Invalid/Missing Surgery Date"
+    },
+    {
+      "code": "AM",
+      "name": "Invalid/Missing Admission Date"
+    },
+    {
+      "code": "AN",
+      "name": "Invalid/Missing Discharge Date"
+    },
+    {
+      "code": "AO",
+      "name": "Additional Patient Condition Information Required"
+    },
+    {
+      "code": "AP",
+      "name": "Invalid Date of Birth"
+    },
+    {
+      "code": "AQ",
+      "name": "Missing Date of Birth"
+    },
+    {
+      "code": "AR",
+      "name": "Arrivals"
+    },
+    {
+      "code": "AS",
+      "name": "Invalid Gender Code"
+    },
+    {
+      "code": "AT",
+      "name": "Missing Gender Code"
+    },
+    {
+      "code": "AU",
+      "name": "Provider Identification Does Not Match That on the Database"
+    },
+    {
+      "code": "AV",
+      "name": "Invalid Member Identification"
+    },
+    {
+      "code": "AW",
+      "name": "Invalid Date(s) of Service"
+    },
+    {
+      "code": "AX",
+      "name": "System is Unable to Respond Within the Allotted Time"
+    },
+    {
+      "code": "AY",
+      "name": "Invalid Last Name"
+    },
+    {
+      "code": "AZ",
+      "name": "Invalid First Name"
+    },
+    {
+      "code": "B1",
+      "name": "Contract Price Error"
+    },
+    {
+      "code": "B2",
+      "name": "Contract Price Mark Up Error"
+    },
+    {
+      "code": "B3",
+      "name": "Contract Price Freight Error"
+    },
+    {
+      "code": "B4",
+      "name": "Contract Price Volume Discount Error"
+    },
+    {
+      "code": "B5",
+      "name": "Contract Price Starting Price Error"
+    },
+    {
+      "code": "B6",
+      "name": "Contract Price Invalid Date Range"
+    },
+    {
+      "code": "B7",
+      "name": "Contract Price Freight Surcharge Error"
+    },
+    {
+      "code": "B8",
+      "name": "Drop Size Error"
+    },
+    {
+      "code": "B9",
+      "name": "Drop Frequency Error"
+    },
+    {
+      "code": "BA",
+      "name": "Reject Due to Air Bags"
+    },
+    {
+      "code": "BB",
+      "name": "Missing Last Name"
+    },
+    {
+      "code": "BC",
+      "name": "Reject Due to No Chains"
+    },
+    {
+      "code": "BD",
+      "name": "Reject Due to Damps"
+    },
+    {
+      "code": "BE",
+      "name": "Missing First Name"
+    },
+    {
+      "code": "BF",
+      "name": "Missing Member Identification"
+    },
+    {
+      "code": "BG",
+      "name": "Reject Due to Bearings"
+    },
+    {
+      "code": "BH",
+      "name": "Member Identification Does Not Match That on the Database"
+    },
+    {
+      "code": "BI",
+      "name": "Gender Code Does Not Match That on the Database"
+    },
+    {
+      "code": "BJ",
+      "name": "First Name Does Not Match That on the Database"
+    },
+    {
+      "code": "BK",
+      "name": "Last Name Does Not Match That on the Database"
+    },
+    {
+      "code": "BL",
+      "name": "Reject Due to Load Divider Bad Order"
+    },
+    {
+      "code": "BM",
+      "name": "Invalid Middle Name"
+    },
+    {
+      "code": "BN",
+      "name": "Missing Middle Name"
+    },
+    {
+      "code": "BO",
+      "name": "Loaded Car, Unable to Load"
+    },
+    {
+      "code": "BP",
+      "name": "Reject Due to Bridge Plate"
+    },
+    {
+      "code": "BQ",
+      "name": "Middle Name Does Not Match That on the Database"
+    },
+    {
+      "code": "BR",
+      "name": "Reject Due to Brake Rigging Beam, Lever"
+    },
+    {
+      "code": "BS",
+      "name": "Reject Due to Bad Order Slides"
+    },
+    {
+      "code": "BT",
+      "name": "Invalid Suffix"
+    },
+    {
+      "code": "BU",
+      "name": "Missing Suffix"
+    },
+    {
+      "code": "BV",
+      "name": "Reject Due to Bad Order Valves/Piping"
+    },
+    {
+      "code": "BW",
+      "name": "Reject Due to Bad Order Walls"
+    },
+    {
+      "code": "BX",
+      "name": "Suffix Does Not Match That on the Database"
+    },
+    {
+      "code": "C1",
+      "name": "Date Error"
+    },
+    {
+      "code": "C2",
+      "name": "Duplicate Program"
+    },
+    {
+      "code": "C3",
+      "name": "Duplicate Contract"
+    },
+    {
+      "code": "C4",
+      "name": "Not As Negotiated"
+    },
+    {
+      "code": "C5",
+      "name": "Product Missing"
+    },
+    {
+      "code": "C6",
+      "name": "Quantity Error"
+    },
+    {
+      "code": "C7",
+      "name": "Incorrect Allowance"
+    },
+    {
+      "code": "C8",
+      "name": "Incorrect Start Date"
+    },
+    {
+      "code": "C9",
+      "name": "Incorrect End Date"
+    },
+    {
+      "code": "CA",
+      "name": "Reject Due to Crank Arm Application"
+    },
+    {
+      "code": "CB",
+      "name": "Reject Due to Center Bowls, Plates and Pins"
+    },
+    {
+      "code": "CI",
+      "name": "Certification Information Does Not Match Patient"
+    },
+    {
+      "code": "CL",
+      "name": "Complete Loading"
+    },
+    {
+      "code": "CM",
+      "name": "Released as Railroad Company Material"
+    },
+    {
+      "code": "CN",
+      "name": "Car Not Ordered"
+    },
+    {
+      "code": "CP",
+      "name": "Put on Constructive Placement"
+    },
+    {
+      "code": "CR",
+      "name": "Wrong Consignee"
+    },
+    {
+      "code": "CS",
+      "name": "Release Load Through Bill Connecting Road"
+    },
+    {
+      "code": "CT",
+      "name": "Release as a Cross-town Load"
+    },
+    {
+      "code": "CU",
+      "name": "Equipment Not Used"
+    },
+    {
+      "code": "CW",
+      "name": "Wrong Car Type"
+    },
+    {
+      "code": "DD",
+      "name": "Reject Due to Doors"
+    },
+    {
+      "code": "DG",
+      "name": "Reject Due to Draft Gear - Yoke"
+    },
+    {
+      "code": "DM",
+      "name": "Dismantle"
+    },
+    {
+      "code": "DP",
+      "name": "Departed"
+    },
+    {
+      "code": "DR",
+      "name": "Reject Due to Dirty"
+    },
+    {
+      "code": "DS",
+      "name": "Defective Safety Devices"
+    },
+    {
+      "code": "DV",
+      "name": "Reject Due to Load Dividers, Side Filters, Special Equipment"
+    },
+    {
+      "code": "E1",
+      "name": "Requested Record Will Not Be Sent; Cannot Identify the Record"
+    },
+    {
+      "code": "E2",
+      "name": "Requested Record Will Not Be Sent; Need Student or Parent Permission"
+    },
+    {
+      "code": "E3",
+      "name": "Requested Record Will Not Be Sent"
+    },
+    {
+      "code": "E4",
+      "name": "Requested Record Will Not Be Sent; Never Enrolled"
+    },
+    {
+      "code": "E5",
+      "name": "Requested Record Will Not Be Sent; No Degree Awarded"
+    },
+    {
+      "code": "E6",
+      "name": "Requested Record Will Not Be Sent; No Grades Posted"
+    },
+    {
+      "code": "E7",
+      "name": "Requested Record Cannot Be Sent Electronically; Record Resides in Paper Format only which Will Be Sent by Mail"
+    },
+    {
+      "code": "E8",
+      "name": "Requires Medical Review"
+    },
+    {
+      "code": "EA",
+      "name": "Empty Equipment Available for Loading"
+    },
+    {
+      "code": "ER",
+      "name": "Reject Due to Spotted in Error"
+    },
+    {
+      "code": "ET",
+      "name": "Empty Trailer Flat Release"
+    },
+    {
+      "code": "FD",
+      "name": "Freight Damage Claim"
+    },
+    {
+      "code": "FR",
+      "name": "Reject Due to Bad Floor"
+    },
+    {
+      "code": "GS",
+      "name": "Release From Demurrage and Start Storage until Waybilled"
+    },
+    {
+      "code": "HB",
+      "name": "Reject Due to Handbrake"
+    },
+    {
+      "code": "HH",
+      "name": "Reject Due to Hand Hold, Ladder, Step, Running Boards, Platforms, etc."
+    },
+    {
+      "code": "HX",
+      "name": "Reject Due to Hot Journal Box"
+    },
+    {
+      "code": "IA",
+      "name": "Invalid Authorization Number Format"
+    },
+    {
+      "code": "ID",
+      "name": "Releases an Idler"
+    },
+    {
+      "code": "II",
+      "name": "Industrial Interchange"
+    },
+    {
+      "code": "IP",
+      "name": "Inappropriate Provider Role"
+    },
+    {
+      "code": "J1",
+      "name": "Ambulance Certification Segment Information Doesn’t Correspond to Transport Address Segment Information"
+    },
+    {
+      "code": "J2",
+      "name": "Mileage Cannot Be Computed Based on Data Submitted"
+    },
+    {
+      "code": "J3",
+      "name": "Computed Mileage is Inconsistent with Transport Information or Service Units"
+    },
+    {
+      "code": "KR",
+      "name": "Reject Due to Couplers"
+    },
+    {
+      "code": "LK",
+      "name": "Reject Due to Leaking Contents"
+    },
+    {
+      "code": "LS",
+      "name": "Reject Due to Load Shifted"
+    },
+    {
+      "code": "LW",
+      "name": "Light Weigh and Restencil"
+    },
+    {
+      "code": "MA",
+      "name": "Missing Authorization Number"
+    },
+    {
+      "code": "MO",
+      "name": "Move from Current Spot to Next"
+    },
+    {
+      "code": "MU",
+      "name": "Missing Number of Units"
+    },
+    {
+      "code": "NC",
+      "name": "No Certification Information Found"
+    },
+    {
+      "code": "OG",
+      "name": "Reject Due to Outlet Gate/Valve Lo and Open Hopper"
+    },
+    {
+      "code": "OI",
+      "name": "Released from Industry to be Inspected"
+    },
+    {
+      "code": "OR",
+      "name": "Ordered for Replacement"
+    },
+    {
+      "code": "OV",
+      "name": "Reject Due to Overloaded"
+    },
+    {
+      "code": "PM",
+      "name": "Preventative Maintenance"
+    },
+    {
+      "code": "RB",
+      "name": "Released from Industry to Custody of Broker"
+    },
+    {
+      "code": "RD",
+      "name": "To be Reloaded"
+    },
+    {
+      "code": "RF",
+      "name": "Reject Due to Refrigeration Unit"
+    },
+    {
+      "code": "RH",
+      "name": "Reject Due to Roof Hatches"
+    },
+    {
+      "code": "RK",
+      "name": "Reject Due to Racks (Bi or Tri Levels)"
+    },
+    {
+      "code": "RL",
+      "name": "Released"
+    },
+    {
+      "code": "RM",
+      "name": "Requesting Provider Contact Information Missing"
+    },
+    {
+      "code": "RN",
+      "name": "Bad Order Reinitialing and Numbering"
+    },
+    {
+      "code": "RP",
+      "name": "Released Partially Unloaded"
+    },
+    {
+      "code": "RS",
+      "name": "Released Loaded for Line Haul Shipment"
+    },
+    {
+      "code": "RT",
+      "name": "Run Through Equipment not Spotted"
+    },
+    {
+      "code": "SC",
+      "name": "Released from Demurrage after being Scrapped"
+    },
+    {
+      "code": "ST",
+      "name": "Released from Shop Track"
+    },
+    {
+      "code": "SU",
+      "name": "Reject Due to Superstructure - End, Roof and Sides"
+    },
+    {
+      "code": "SW",
+      "name": "Local Waybill"
+    },
+    {
+      "code": "T1",
+      "name": "Cannot Identify Provider as TPO (Third Party Organization) Participant"
+    },
+    {
+      "code": "T2",
+      "name": "Cannot Identify Payer as TPO (Third Party Organization) Participant"
+    },
+    {
+      "code": "T3",
+      "name": "Cannot Identify Insured as TPO (Third Party Organization) Participant"
+    },
+    {
+      "code": "T4",
+      "name": "Payer Name or Identifier Missing"
+    },
+    {
+      "code": "T5",
+      "name": "Certification Information Missing"
+    },
+    {
+      "code": "T6",
+      "name": "Claim does not contain enough information for re-pricing"
+    },
+    {
+      "code": "TC",
+      "name": "Bad Order to Transfer Lading"
+    },
+    {
+      "code": "TD",
+      "name": "Reject Due to Tie Down Devices"
+    },
+    {
+      "code": "TH",
+      "name": "Reject Due to Trailer Hitch"
+    },
+    {
+      "code": "TL",
+      "name": "Reject Due to Train Line, Air Hose, Anglecock"
+    },
+    {
+      "code": "TR",
+      "name": "Reject Due to Truck, S-Frame, Bolster"
+    },
+    {
+      "code": "UC",
+      "name": "Reject Due to Uncoupling Rod"
+    },
+    {
+      "code": "UF",
+      "name": "Reject Due to Underframe - Including Sills"
+    },
+    {
+      "code": "UG",
+      "name": "Bad Order for Upgrading of Car"
+    },
+    {
+      "code": "UN",
+      "name": "Invalid Number of Units"
+    },
+    {
+      "code": "WA",
+      "name": "Reject Due to Wheel/Axle"
+    },
+    {
+      "code": "WK",
+      "name": "Bad Order Due to Wreck"
+    },
+    {
+      "code": "XR",
+      "name": "Inquiry Response Type Not Supported"
+    },
+    {
+      "code": "XT",
+      "name": "Responding System Cannot Process Inquiry Type in Real-time"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

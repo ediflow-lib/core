@@ -1,0 +1,283 @@
+{
+  "elementCode": "4439",
+  "elementName": "Payment conditions code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Direct payment",
+      "description": "An assigned invoice has been paid by the buyer to the factor."
+    },
+    {
+      "code": "2",
+      "name": "Automatic clearing house credit",
+      "description": "Credit transaction via an ACH (Automated Clearing House)."
+    },
+    {
+      "code": "3",
+      "name": "Automatic clearing house debit",
+      "description": "Debit transaction via an ACH (Automated Clearing House)."
+    },
+    {
+      "code": "4",
+      "name": "Automatic clearing house credit-savings account",
+      "description": "Credit transaction via an ACH (Automated Clearing House) to an interest bearing deposit account without a stated maturity."
+    },
+    {
+      "code": "5",
+      "name": "Automatic clearing house debit-demand account",
+      "description": "Debit transaction via an ACH (Automated Clearing House) to an account paying funds on demand without notice of intended withdrawal."
+    },
+    {
+      "code": "6",
+      "name": "Bank book transfer (credit)",
+      "description": "Current value of an asset, moved from one account to another, as it appears on the balance sheet (credit)."
+    },
+    {
+      "code": "7",
+      "name": "Bank book transfer (debit)",
+      "description": "Current value of an asset, moved from one account to another, as it appears on the balance sheet (debit)."
+    },
+    {
+      "code": "8",
+      "name": "Doc collection via 3rd party with bill of EX",
+      "description": "Presentment of negotiable instruments to the point of origin, and receiving payment from the paying bank, using a 3rd party with bill of exchange."
+    },
+    {
+      "code": "9",
+      "name": "Doc collection via 3rd party no bill of EX",
+      "description": "Presentment of negotiable instruments to the point of origin, and receiving payment from the paying bank, using a 3rd party without bill of exchange."
+    },
+    {
+      "code": "10",
+      "name": "Irrevocable documentary credit",
+      "description": "Written undertaking by a bank to pay a seller against stipulated documents that cannot be amended or cancelled without the consent of all parties involved."
+    },
+    {
+      "code": "11",
+      "name": "Transferable irrevocable documentary credit",
+      "description": "Written undertaking by a bank to pay a seller against stipulated documents that cannot be amended or cancelled without the consent of all parties involved and that can be transferred by the first beneficiary to one or more beneficiaries."
+    },
+    {
+      "code": "12",
+      "name": "Confirmed irrevocable documentary credit",
+      "description": "Written undertaking by a bank to pay a seller against credit conform stipulated documents that cannot be amended or cancelled without the consent of all parties involved."
+    },
+    {
+      "code": "13",
+      "name": "Transferable confirmed irrevocable documentary credit",
+      "description": "Written undertaking by a bank to pay a seller against credit conform stipulated documents that cannot be amended or cancelled without the consent of all parties involved and that can be transferred by the first beneficiary to one or more beneficiaries."
+    },
+    {
+      "code": "14",
+      "name": "Revocable documentary credit",
+      "description": "Written undertaking by a bank to pay a seller against stipulated documents that can be amended or cancelled at any time."
+    },
+    {
+      "code": "15",
+      "name": "Irrevocable letter of credit-confirmed",
+      "description": "Letter of credit that cannot be cancelled or amended without agreement by all the parties involved, and carries the endorsement of both the issuing bank and its correspondent, guaranteeing payment of all drafts written against."
+    },
+    {
+      "code": "16",
+      "name": "Letter of guarantee",
+      "description": "Any guarantee, bond or other payment undertaking given for the payment of money on presentation in conformity with the terms of the undertaking of a demand for payment and other documents specified."
+    },
+    {
+      "code": "17",
+      "name": "Revocable letter of credit",
+      "description": "Letter of credit that can be cancelled or amended at any time by the issuing bank."
+    },
+    {
+      "code": "18",
+      "name": "Standby letter of credit",
+      "description": "Letter of credit which is a contingent (future) obligation of the issuing bank to make payment to the designated beneficiary if the bank's customer fails to perform as called for under the terms of a contract."
+    },
+    {
+      "code": "19",
+      "name": "Irrevocable letter of credit unconfirmed",
+      "description": "Letter of credit that cannot be cancelled or amended before a specific date without agreement by all the parties involved, and carries no guarantee that a correspondent will honour drafts presented for payment."
+    },
+    {
+      "code": "20",
+      "name": "Clean collection (ICC)"
+    },
+    {
+      "code": "21",
+      "name": "Documentary collection (ICC)"
+    },
+    {
+      "code": "22",
+      "name": "Documentary sight collection (ICC)"
+    },
+    {
+      "code": "23",
+      "name": "Documentary collection with date of expiry (ICC)"
+    },
+    {
+      "code": "24",
+      "name": "Documentary collection: bill of exchange against acceptance",
+      "description": "A collection in which the bill of exchange is handed over on acceptance and the payment will take place on a future date."
+    },
+    {
+      "code": "25",
+      "name": "Documentary collection: bill of exchange against payment",
+      "description": "A collection in which the bill of exchange is handed over when payment is obtained."
+    },
+    {
+      "code": "26",
+      "name": "Collection subject to buyer's approval (ICC)",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "27",
+      "name": "Collection by a bank consignee for the goods (ICC)"
+    },
+    {
+      "code": "28",
+      "name": "Collection under CMEA rules with immediate payment and subsequent AC"
+    },
+    {
+      "code": "29",
+      "name": "Collection under CMEA rules with prior acceptance"
+    },
+    {
+      "code": "30",
+      "name": "Other collection"
+    },
+    {
+      "code": "31",
+      "name": "Open account against payment in advance"
+    },
+    {
+      "code": "32",
+      "name": "Open account for contra"
+    },
+    {
+      "code": "33",
+      "name": "Open account for payment"
+    },
+    {
+      "code": "34",
+      "name": "Seller to advise buyer",
+      "description": "Payment conditions to be advised by the seller to the buyer."
+    },
+    {
+      "code": "35",
+      "name": "Documents through banks",
+      "description": "Also known as 'documents against presentation', the documents are sent to a bank, and the buyer obtains the documents by paying the invoice amount to the bank."
+    },
+    {
+      "code": "36",
+      "name": "Charging (to account)",
+      "description": "Amount due booked to accounts payable/accounts receivables accordingly."
+    },
+    {
+      "code": "37",
+      "name": "Available with issuing bank",
+      "description": "Documentary credit is available with the issuing bank."
+    },
+    {
+      "code": "38",
+      "name": "Available with advising bank",
+      "description": "Documentary credit is available with the advising bank."
+    },
+    {
+      "code": "39",
+      "name": "Available with named bank",
+      "description": "Documentary credit is available with the financial institution identified in the FII segment."
+    },
+    {
+      "code": "40",
+      "name": "Available with any bank",
+      "description": "Documentary credit is available with any bank."
+    },
+    {
+      "code": "41",
+      "name": "Available with any bank in ...",
+      "description": "Documentary credit is available with any bank located in a place identified in the LOC segment."
+    },
+    {
+      "code": "42",
+      "name": "Indirect payment",
+      "description": "An assigned invoice has been paid by the buyer to the seller or to the seller's agent instead of to the factor."
+    },
+    {
+      "code": "43",
+      "name": "Reassignment",
+      "description": "An invoice or credit note assigned to a factor has been reassigned back to the seller or to another factor."
+    },
+    {
+      "code": "44",
+      "name": "Offset",
+      "description": "An invoice/credit note has been (partly) offset against other items on the seller's or buyer's account."
+    },
+    {
+      "code": "45",
+      "name": "Special entries",
+      "description": "Payment to be treated as special booking entry by the beneficiary."
+    },
+    {
+      "code": "46",
+      "name": "Instalment payment",
+      "description": "Payment is to be made in one or more instalments."
+    },
+    {
+      "code": "47",
+      "name": "Instalment payment with draft",
+      "description": "Payment is to be made by bank draft in one or more instalments."
+    },
+    {
+      "code": "48",
+      "name": "Available with advise through bank",
+      "description": "Available with the financial institution through which the advising bank is to advise the documentary credit."
+    },
+    {
+      "code": "49",
+      "name": "General conditions of sale",
+      "description": "Refer to general conditions of sale for payment condition information."
+    },
+    {
+      "code": "50",
+      "name": "Special payment",
+      "description": "Payment with special condition(s)."
+    },
+    {
+      "code": "61",
+      "name": "Set-off by exchange of documents",
+      "description": "Payment will be initiated by the exchange of documents."
+    },
+    {
+      "code": "62",
+      "name": "Set-off by reciprocal credits",
+      "description": "Payment will be initiated by the settling of reciprocal credits."
+    },
+    {
+      "code": "63",
+      "name": "Set-off by \"linkage\" (against reciprocal benefits)"
+    },
+    {
+      "code": "64",
+      "name": "Set-off by exchange of goods",
+      "description": "Payment will be initiated by the exchange of goods."
+    },
+    {
+      "code": "69",
+      "name": "Other set-off",
+      "description": "Payment will be initiated by an action not otherwise stipulated."
+    },
+    {
+      "code": "70",
+      "name": "Supplier to invoice",
+      "description": "To identify in an order that the supplier is required to invoice for payment."
+    },
+    {
+      "code": "71",
+      "name": "Recipient to self bill",
+      "description": "To identify in an order that the receiver of the goods is expected to self bill."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
+}

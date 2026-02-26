@@ -1,5 +1,126 @@
 {
-  "code": "5237",
-  "name": "Charge category code",
-  "values": []
+  "elementCode": "5237",
+  "elementName": "Charge category code",
+  "values": [
+    {
+      "code": "1",
+      "name": "All charges",
+      "description": "All amounts calculated by the carrier in accordance with tariffs or in case of special events during the voyage (e.g. Rail - freights costs - additional costs)."
+    },
+    {
+      "code": "2",
+      "name": "Additional charges",
+      "description": "Charges calculated by the carrier for specific events like re-weighting, re-loading, unexpected operations, services required during the voyage, etc."
+    },
+    {
+      "code": "3",
+      "name": "Transport charges + additional charges",
+      "description": "Transport charges plus Additional charges (e.g. for re- loading, re-weighting or unexpected operations) that must be precised in the payment conditions by the consignor (other charges must be taken in account by the consignee)."
+    },
+    {
+      "code": "4",
+      "name": "Basic freight",
+      "description": "The basic freight payable on the cargo as per tariff."
+    },
+    {
+      "code": "5",
+      "name": "Destination haulage charges",
+      "description": "Haulage charges for transporting goods to the destination."
+    },
+    {
+      "code": "6",
+      "name": "Disbursement",
+      "description": "Sums paid out by ship's agent at a port and recovered from the carrier."
+    },
+    {
+      "code": "7",
+      "name": "Destination port charges",
+      "description": "Charges payable at the port of destination."
+    },
+    {
+      "code": "8",
+      "name": "Miscellaneous charges",
+      "description": "Miscellaneous charges not otherwise categorized."
+    },
+    {
+      "code": "9",
+      "name": "Transport charges up to a specified location",
+      "description": "Transport charges to be paid by a specified party for a part of a voyage, i.e. up to a specified location."
+    },
+    {
+      "code": "10",
+      "name": "Origin port charges",
+      "description": "Charges payable at the port of origin."
+    },
+    {
+      "code": "11",
+      "name": "Origin haulage charges",
+      "description": "Haulage charges for the pickup of goods at origin."
+    },
+    {
+      "code": "12",
+      "name": "Other charges",
+      "description": "Unspecified charges."
+    },
+    {
+      "code": "13",
+      "name": "Specific amount payable",
+      "description": "Amount that the consignor agrees to be invoiced or to pay. This amount is part of the total charges applied to the consignment."
+    },
+    {
+      "code": "14",
+      "name": "Transport costs (carriage charges)",
+      "description": "Monetary amount calculated on the basis of the transport tariffs or contract eventually including charges or other costs."
+    },
+    {
+      "code": "15",
+      "name": "All costs up to a specified location",
+      "description": "All amounts to be paid by the consignor for a part of the voyage, i.e. up to a location that must be precised. (The remaining part of the voyage to be paid by the consignee) The amounts are calculated by the carrier in accordance with tariffs or in case of special events during the voyage (e.g. rail - freight costs - additional costs)."
+    },
+    {
+      "code": "16",
+      "name": "Weight/valuation charge",
+      "description": "Code to indicate weight/valuation charges to be either wholly prepaid or wholly collect."
+    },
+    {
+      "code": "17",
+      "name": "All costs",
+      "description": "All cost elements."
+    },
+    {
+      "code": "18",
+      "name": "Transport costs and supplementary costs",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "19",
+      "name": "Supply of certificate of shipment",
+      "description": "Charges payable for the supply of a certificate of shipment."
+    },
+    {
+      "code": "20",
+      "name": "Supply of consular formalities or certificate of origin",
+      "description": "Charges payable for the supply of consular formalities or certificate of origin."
+    },
+    {
+      "code": "21",
+      "name": "Supply of non-categorised documentation in paper form",
+      "description": "Charges payable for the supply of one or more documents in paper form that are not otherwise categorised."
+    },
+    {
+      "code": "22",
+      "name": "Supply of customs formalities, export",
+      "description": "Charges payable for the supply of export customs formalities."
+    },
+    {
+      "code": "23",
+      "name": "Supply of customs formalities, transit",
+      "description": "Charges payable for the supply of transit customs formalities."
+    },
+    {
+      "code": "24",
+      "name": "Supply of customs formalities, import",
+      "description": "Charges payable for the supply of import customs formalities."
+    }
+  ]
 }

@@ -1,0 +1,106 @@
+{
+  "code": "716",
+  "name": "Code indicating error found based on the syntax editing of the functional group header and/or trailer",
+  "values": [
+    {
+      "code": "1",
+      "name": "Functional Group Not Supported"
+    },
+    {
+      "code": "2",
+      "name": "Functional Group Version Not Supported"
+    },
+    {
+      "code": "3",
+      "name": "Functional Group Trailer Missing"
+    },
+    {
+      "code": "4",
+      "name": "Group Control Number in the Functional Group Header and Trailer Do Not Agree"
+    },
+    {
+      "code": "5",
+      "name": "Number of Included Transaction Sets Does Not Match Actual Count"
+    },
+    {
+      "code": "6",
+      "name": "Group Control Number Violates Syntax"
+    },
+    {
+      "code": "7",
+      "name": "Invalid Application Sender's Code"
+    },
+    {
+      "code": "8",
+      "name": "Invalid Application Receiver's Code"
+    },
+    {
+      "code": "9",
+      "name": "Invalid Responsible Agency Code"
+    },
+    {
+      "code": "10",
+      "name": "Authentication Key Name Unknown"
+    },
+    {
+      "code": "11",
+      "name": "Encryption Key Name Unknown"
+    },
+    {
+      "code": "12",
+      "name": "Requested Service (Authentication or Encryption) Not Available"
+    },
+    {
+      "code": "13",
+      "name": "Unknown Security Recipient"
+    },
+    {
+      "code": "14",
+      "name": "Unknown Security Originator"
+    },
+    {
+      "code": "15",
+      "name": "Syntax Error in Decrypted Text"
+    },
+    {
+      "code": "16",
+      "name": "Security Not Supported"
+    },
+    {
+      "code": "17",
+      "name": "Incorrect Message Length (Encryption Only)"
+    },
+    {
+      "code": "18",
+      "name": "Message Authentication Code Failed"
+    },
+    {
+      "code": "19",
+      "name": "Functional Group Control Number not Unique within Interchange"
+    },
+    {
+      "code": "23",
+      "name": "S3E Security End Segment Missing for S3S Security Start Segment"
+    },
+    {
+      "code": "24",
+      "name": "S3S Security Start Segment Missing for S3E End Segment"
+    },
+    {
+      "code": "25",
+      "name": "S4E Security End Segment Missing for S4S Security Start Segment"
+    },
+    {
+      "code": "26",
+      "name": "S4S Security Start Segment Missing for S4E Security End Segment"
+    },
+    {
+      "code": "30",
+      "name": "Invalid Group Date"
+    },
+    {
+      "code": "31",
+      "name": "Invalid Group Time"
+    }
+  ]
+}

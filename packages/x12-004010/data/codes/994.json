@@ -1,0 +1,54 @@
+{
+  "code": "994",
+  "name": "Codes specifying values representing options for encryption processing, including the use of compression and filtering; the code either defines the encryption mode and the transmission filter specification for filtering binary data into transmittable text or specifics that the following subelements define these values",
+  "values": [
+    {
+      "code": "20",
+      "name": "ANSI X9.23 Cipher Block Chaining (CBC), No Filter (Binary Cipher Text)"
+    },
+    {
+      "code": "21",
+      "name": "ANSI X9.23 Cipher Block Chaining (CBC), Hexadecimal Filter"
+    },
+    {
+      "code": "22",
+      "name": "ANSI X9.23 Cipher Block Chaining (CBC), ASCII Filter"
+    },
+    {
+      "code": "23",
+      "name": "ANSI X9.23 Cipher Block Chaining (CBC), ASCII/BAUDOT Filter"
+    },
+    {
+      "code": "2Z",
+      "name": "ANSI X9.23 Cipher Block Chaining (CBC), Mutually Defined Filter"
+    },
+    {
+      "code": "40",
+      "name": "ANSI X9.23 CFB-8 (Cipher Feedback); No Filter (Binary Cipher Text)"
+    },
+    {
+      "code": "41",
+      "name": "ANSI X9.23 CFB-8 (Cipher Feedback), Hexadecimal Filter"
+    },
+    {
+      "code": "42",
+      "name": "ANSI X9.23 CFB-8 (Cipher Feedback), ASCII Filter"
+    },
+    {
+      "code": "43",
+      "name": "ANSI X9.23 CFB-8 (Cipher Feedback), BAUDOT Filter"
+    },
+    {
+      "code": "4Z",
+      "name": "ANSI X9.23 CFB-8 (Cipher Feedback), Mutually Defined Filter"
+    },
+    {
+      "code": "AA",
+      "name": "Parameters Defined Individually"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "928",
+  "name": "Automotive Inspection Detail",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Automotive Inspection Detail Transaction Set (928) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by automotive manufacturers, inspection agencies, or carriers to report motor vehicle inspection results to other interested parties.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BIX",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "TI",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopVC",
+      "name": "LoopVC",
+      "triggerSegment": "VC",
+      "mandatory": true,
+      "maxOccurrences": 21,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "VC",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ID",
+          "mandatory": false,
+          "maxOccurrences": 99,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

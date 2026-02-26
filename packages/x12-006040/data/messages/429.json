@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "429",
+  "name": "Railroad Retirement Activity",
+  "description": "Railroad Retirement Activity",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "RU1",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopRU2",
+      "name": "LoopRU2",
+      "triggerSegment": "RU2",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "RU2",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "RU3",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NTE",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

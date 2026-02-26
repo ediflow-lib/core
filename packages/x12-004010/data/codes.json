@@ -1,0 +1,243 @@
+{
+  "128": {
+    "code": "128",
+    "name": "Reference Identification Qualifier",
+    "description": "Code qualifying the Reference Identification",
+    "values": {
+      "CR": "Customer Reference Number",
+      "PO": "Purchase Order Number",
+      "IV": "Invoice Number",
+      "BM": "Bill of Lading Number",
+      "CN": "Carrier's Reference Number",
+      "CO": "Customer Order Number",
+      "DP": "Department Number",
+      "IL": "Internal Order Number",
+      "PK": "Packing List Number",
+      "SH": "Shipper's Number",
+      "VN": "Vendor Order Number"
+    }
+  },
+  "374": {
+    "code": "374",
+    "name": "Date/Time Qualifier",
+    "description": "Code specifying type of date or time",
+    "values": {
+      "002": "Delivery Requested",
+      "010": "Requested Ship",
+      "011": "Shipped",
+      "017": "Estimated Delivery",
+      "037": "Ship Not Before",
+      "038": "Ship No Later Than",
+      "063": "Do Not Deliver After",
+      "064": "Do Not Ship Before",
+      "065": "Do Not Ship After",
+      "067": "Current Schedule Ship",
+      "068": "Requested Delivery",
+      "069": "Promised Delivery",
+      "110": "Invoice",
+      "111": "Invoice Period Start"
+    }
+  },
+  "98": {
+    "code": "98",
+    "name": "Entity Identifier Code",
+    "description": "Code identifying an organizational entity, a physical location, property or an individual",
+    "values": {
+      "BY": "Buying Party (Purchaser)",
+      "SE": "Selling Party",
+      "ST": "Ship To",
+      "BT": "Bill-to-Party",
+      "SF": "Ship From",
+      "SO": "Sold To",
+      "RI": "Remit To",
+      "VN": "Vendor",
+      "MA": "Party to Receive Material Release",
+      "AG": "Agent/Agency"
+    }
+  },
+  "66": {
+    "code": "66",
+    "name": "Identification Code Qualifier",
+    "description": "Code designating the system/method of code structure used for Identification Code",
+    "values": {
+      "1": "D-U-N-S Number, Dun & Bradstreet",
+      "9": "D-U-N-S+4, D-U-N-S Number with Four Character Suffix",
+      "92": "Assigned by Buyer or Buyer's Agent"
+    }
+  },
+  "353": {
+    "code": "353",
+    "name": "Transaction Set Purpose Code",
+    "description": "Code identifying purpose of transaction set",
+    "values": {
+      "00": "Original",
+      "01": "Cancellation",
+      "02": "Add",
+      "03": "Delete",
+      "04": "Change",
+      "05": "Replace",
+      "06": "Confirmation",
+      "07": "Duplicate",
+      "08": "Status"
+    }
+  },
+  "92": {
+    "code": "92",
+    "name": "Purchase Order Type Code",
+    "description": "Code specifying the type of Purchase Order",
+    "values": {
+      "BK": "Blanket Order",
+      "CF": "Confirmation",
+      "DE": "Delivery Order",
+      "KA": "Contract",
+      "KB": "Blanket Purchase Agreement",
+      "KN": "Purchase Order",
+      "NE": "New Order",
+      "RL": "Release or Delivery Order",
+      "RO": "Rush Order",
+      "SA": "Stand-alone Order",
+      "SO": "Shipped Order"
+    }
+  },
+  "235": {
+    "code": "235",
+    "name": "Product/Service ID Qualifier",
+    "description": "Code identifying the type/source of the descriptive number used in Product/Service ID",
+    "values": {
+      "BP": "Buyer's Part Number",
+      "CB": "Buyer's Catalog Number",
+      "EN": "European Article Number (EAN)",
+      "IN": "Buyer's Item Number",
+      "SK": "Stock Keeping Unit (SKU)",
+      "UA": "U.P.C./EAN Case Code",
+      "UK": "GTIN 14-digit Data Structure",
+      "UP": "U.P.C. Consumer Package Code",
+      "VN": "Vendor's (Seller's) Part Number",
+      "VP": "Vendor's (Seller's) Product Number"
+    }
+  },
+  "355": {
+    "code": "355",
+    "name": "Unit or Basis for Measurement Code",
+    "description": "Code specifying the units in which a value is being expressed",
+    "values": {
+      "CA": "Case",
+      "EA": "Each",
+      "LB": "Pound",
+      "PC": "Piece",
+      "BX": "Box",
+      "PK": "Package",
+      "PR": "Pair",
+      "CS": "Carton",
+      "DZ": "Dozen",
+      "KG": "Kilogram"
+    }
+  },
+  "639": {
+    "code": "639",
+    "name": "Basis of Unit Price Code",
+    "description": "Code identifying the type of unit price for an item",
+    "values": {
+      "ES": "Estimated",
+      "KA": "Price with Government Furnished Property",
+      "NC": "No Charge",
+      "NE": "Not to Exceed",
+      "PE": "Price with Buyer Furnished Material",
+      "TB": "To Be Negotiated",
+      "TE": "Temporary"
+    }
+  },
+  "479": {
+    "code": "479",
+    "name": "Functional Identifier Code",
+    "description": "Code identifying the functional group",
+    "values": {
+      "FA": "Functional or Implementation Acknowledgment Transaction Sets",
+      "IN": "Invoice Information",
+      "PO": "Purchase Order Transaction Sets",
+      "SH": "Ship Notice/Manifest Information"
+    }
+  },
+  "715": {
+    "code": "715",
+    "name": "Functional Group Acknowledge Code",
+    "description": "Code indicating accept or reject status of the Functional Group",
+    "values": {
+      "A": "Accepted",
+      "E": "Accepted, But Errors Were Noted",
+      "P": "Partially Accepted, At Least One Transaction Set Was Rejected",
+      "R": "Rejected"
+    }
+  },
+  "717": {
+    "code": "717",
+    "name": "Transaction Set Acknowledgment Code",
+    "description": "Code indicating accept or reject status of the transaction set",
+    "values": {
+      "A": "Accepted",
+      "E": "Accepted But Errors Were Noted",
+      "M": "Rejected, Message Authentication Code (MAC) Failed",
+      "R": "Rejected",
+      "W": "Rejected, Assurance Failed Validity Tests",
+      "X": "Rejected, Content After Decryption Could Not Be Analyzed"
+    }
+  },
+  "349": {
+    "code": "349",
+    "name": "Item Description Type",
+    "description": "Code indicating the format of a description",
+    "values": {
+      "F": "Free-form",
+      "S": "Structured"
+    }
+  },
+  "623": {
+    "code": "623",
+    "name": "Time Code",
+    "description": "Code identifying the time zone",
+    "values": {
+      "AD": "Atlantic Daylight Time",
+      "AS": "Atlantic Standard Time",
+      "CD": "Central Daylight Time",
+      "CS": "Central Standard Time",
+      "ED": "Eastern Daylight Time",
+      "ES": "Eastern Standard Time",
+      "GM": "Greenwich Mean Time",
+      "MD": "Mountain Daylight Time",
+      "MS": "Mountain Standard Time",
+      "PD": "Pacific Daylight Time",
+      "PS": "Pacific Standard Time",
+      "UT": "Universal Time Coordinate"
+    }
+  },
+  "706": {
+    "code": "706",
+    "name": "Entity Relationship Code",
+    "description": "Code describing entity relationship",
+    "values": {
+      "01": "Parent",
+      "02": "Child"
+    }
+  },
+  "735": {
+    "code": "735",
+    "name": "Hierarchical Level Code",
+    "description": "Code defining the characteristic of a level in a hierarchical structure",
+    "values": {
+      "S": "Shipment",
+      "O": "Order",
+      "P": "Pack",
+      "I": "Item"
+    }
+  },
+  "736": {
+    "code": "736",
+    "name": "Hierarchical Child Code",
+    "description": "Code indicating if there are hierarchical child data segments subordinate to the level being described",
+    "values": {
+      "0": "No Subordinate HL Segment in This Hierarchical Structure",
+      "1": "Additional Subordinate HL Data Segment in This Hierarchical Structure"
+    }
+  }
+}
+

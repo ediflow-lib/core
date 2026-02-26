@@ -1,0 +1,44 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "353",
+  "name": "U.S. Customs Events Advisory Details",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the U.S. Customs Events Advisory Details Transaction Set (353) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by carriers to notify U.S. Customs of events concerning cargo moving in-bond, or of conveyance arrivals or departures. These events include the arrival of containers, or cargo covered by individual ocean bills of lading or in-bond numbers, which have moved in-bond to an inland destination or which have been exported from the United States. Carriers can also use this transaction set to notify U.S. Customs of the arrival or departure of a conveyance for which an electronic manifest has been filed and for the transfer of custodial liability when an in-bond movement involves multiple legs.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "P4",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M15",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

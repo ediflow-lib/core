@@ -1,5 +1,16 @@
 {
-  "code": "8035",
-  "name": "Traffic restriction type code qualifier",
-  "values": []
+  "elementCode": "8035",
+  "elementName": "Traffic restriction type code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Required stopover or connection must occur at the board point",
+      "description": "Required stopover or connection from another station to a means of transport can only be made at the board point."
+    },
+    {
+      "code": "2",
+      "name": "Required stopover or connection must occur at the off point",
+      "description": "Required stopover or connection from another station to a means of transport can only be made at the off point."
+    }
+  ]
 }

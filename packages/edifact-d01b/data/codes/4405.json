@@ -1,0 +1,586 @@
+{
+  "elementCode": "4405",
+  "elementName": "Status description code",
+  "values": [
+    {
+      "code": "1",
+      "name": "To be done",
+      "description": "Remark that the requested service in the order remains outstanding."
+    },
+    {
+      "code": "2",
+      "name": "Done",
+      "description": "The instruction has been completed."
+    },
+    {
+      "code": "3",
+      "name": "Passed on",
+      "description": "The information has been passed on."
+    },
+    {
+      "code": "4",
+      "name": "Final",
+      "description": "The amount has the status of finality."
+    },
+    {
+      "code": "5",
+      "name": "Subject to final payment",
+      "description": "The amount is subject to finality."
+    },
+    {
+      "code": "6",
+      "name": "Minimum",
+      "description": "The amount quoted is a minimum tariff."
+    },
+    {
+      "code": "7",
+      "name": "Fixed",
+      "description": "The amount quoted is a fixed tariff."
+    },
+    {
+      "code": "8",
+      "name": "Maximum",
+      "description": "The amount quoted is a maximum tariff."
+    },
+    {
+      "code": "9",
+      "name": "Information",
+      "description": "The amount is quoted for information only, it is not part of the charges to be deducted or added."
+    },
+    {
+      "code": "10",
+      "name": "0 day available",
+      "description": "The amount is available today."
+    },
+    {
+      "code": "11",
+      "name": "1 day available",
+      "description": "The amount is available on the next banking office day after the booking date."
+    },
+    {
+      "code": "12",
+      "name": "2 days available",
+      "description": "The amount is available on the second banking office day after the booking date."
+    },
+    {
+      "code": "13",
+      "name": "3 days available",
+      "description": "The amount available on the third banking office day after the booking date."
+    },
+    {
+      "code": "14",
+      "name": "Uncollected funds",
+      "description": "Funds not collected by beneficiary."
+    },
+    {
+      "code": "15",
+      "name": "Nil",
+      "description": "The amount or quantity is zero."
+    },
+    {
+      "code": "16",
+      "name": "None advised",
+      "description": "No status or condition has been advised."
+    },
+    {
+      "code": "17",
+      "name": "Requested",
+      "description": "A status or condition has been requested."
+    },
+    {
+      "code": "18",
+      "name": "Free of charge",
+      "description": "No charge is to be made."
+    },
+    {
+      "code": "19",
+      "name": "Rounded",
+      "description": "The quantity has been the subject of a rounding operation."
+    },
+    {
+      "code": "20",
+      "name": "Permanent",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "21",
+      "name": "Temporary",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "22",
+      "name": "Subject to agreed condition",
+      "description": "Subject to agreed condition."
+    },
+    {
+      "code": "23",
+      "name": "Added",
+      "description": "In addition to."
+    },
+    {
+      "code": "24",
+      "name": "Deducted",
+      "description": "A deduction from."
+    },
+    {
+      "code": "25",
+      "name": "Included",
+      "description": "Is included in."
+    },
+    {
+      "code": "26",
+      "name": "Subject to clearing",
+      "description": "Clearing operations are to be applied."
+    },
+    {
+      "code": "27",
+      "name": "Subject to bilaterally agreed condition",
+      "description": "Bilaterally agreed conditions are to be applied."
+    },
+    {
+      "code": "28",
+      "name": "Transaction expected to be executed",
+      "description": "The transaction is expected to be executed."
+    },
+    {
+      "code": "29",
+      "name": "Debit",
+      "description": "The object has a status of debit."
+    },
+    {
+      "code": "30",
+      "name": "Credit",
+      "description": "The object has a status of credit."
+    },
+    {
+      "code": "31",
+      "name": "Positive debit",
+      "description": "The object has a status of positive debit."
+    },
+    {
+      "code": "32",
+      "name": "Negative debit",
+      "description": "The object has a status of negative debit."
+    },
+    {
+      "code": "33",
+      "name": "Positive credit",
+      "description": "The object has a status of positive credit."
+    },
+    {
+      "code": "34",
+      "name": "Negative credit",
+      "description": "The object has a status of negative credit."
+    },
+    {
+      "code": "35",
+      "name": "Started",
+      "description": "To specify an event has started."
+    },
+    {
+      "code": "36",
+      "name": "Revised",
+      "description": "To indicate a revision has been made."
+    },
+    {
+      "code": "37",
+      "name": "Stolen",
+      "description": "A consignment or goods have been stolen."
+    },
+    {
+      "code": "38",
+      "name": "Assigned",
+      "description": "A value has been assigned to an item."
+    },
+    {
+      "code": "39",
+      "name": "Approved",
+      "description": "Approval has been given."
+    },
+    {
+      "code": "40",
+      "name": "Withdrawn",
+      "description": "Item is withdrawn."
+    },
+    {
+      "code": "41",
+      "name": "Rejected",
+      "description": "Item is rejected."
+    },
+    {
+      "code": "42",
+      "name": "Approval pending",
+      "description": "Approval is pending."
+    },
+    {
+      "code": "43",
+      "name": "Postponed",
+      "description": "Further action is delayed."
+    },
+    {
+      "code": "44",
+      "name": "Replaced",
+      "description": "Item has been replaced."
+    },
+    {
+      "code": "45",
+      "name": "No status",
+      "description": "There is no status information to report."
+    },
+    {
+      "code": "46",
+      "name": "Does not exist",
+      "description": "Non existent."
+    },
+    {
+      "code": "47",
+      "name": "Draft version",
+      "description": "A preliminary version."
+    },
+    {
+      "code": "48",
+      "name": "Live version",
+      "description": "A version with a live status."
+    },
+    {
+      "code": "49",
+      "name": "Expired version",
+      "description": "A version which no longer has a live status."
+    },
+    {
+      "code": "50",
+      "name": "Part-time",
+      "description": "Using only part of the available time."
+    },
+    {
+      "code": "51",
+      "name": "Full-time",
+      "description": "Using the whole of the available time."
+    },
+    {
+      "code": "52",
+      "name": "Not a student",
+      "description": "Not enrolled in an educational program."
+    },
+    {
+      "code": "53",
+      "name": "To be extracted",
+      "description": "To be removed."
+    },
+    {
+      "code": "54",
+      "name": "Impacted tooth",
+      "description": "Tooth wedged between another tooth and the jaw."
+    },
+    {
+      "code": "55",
+      "name": "Extracted",
+      "description": "Removed."
+    },
+    {
+      "code": "56",
+      "name": "Estimated",
+      "description": "The value is estimated."
+    },
+    {
+      "code": "57",
+      "name": "Undefined incident",
+      "description": "An undefined incident has occurred."
+    },
+    {
+      "code": "58",
+      "name": "Quantity error",
+      "description": "The quantity is an error."
+    },
+    {
+      "code": "59",
+      "name": "Monetary amount error",
+      "description": "The monetary amount is an error."
+    },
+    {
+      "code": "60",
+      "name": "Product not ordered",
+      "description": "The product was not ordered."
+    },
+    {
+      "code": "61",
+      "name": "Uncertain",
+      "description": "The value is uncertain."
+    },
+    {
+      "code": "62",
+      "name": "Significant",
+      "description": "Noteworthy."
+    },
+    {
+      "code": "63",
+      "name": "Not accepted",
+      "description": "The item has not been accepted."
+    },
+    {
+      "code": "64",
+      "name": "Order or request cancelled",
+      "description": "The referenced order or request has been cancelled."
+    },
+    {
+      "code": "65",
+      "name": "Negative",
+      "description": "Negative status."
+    },
+    {
+      "code": "66",
+      "name": "Unsigned amount",
+      "description": "The status of the amount is unsigned."
+    },
+    {
+      "code": "67",
+      "name": "Preliminary",
+      "description": "Preparatory to."
+    },
+    {
+      "code": "68",
+      "name": "Split",
+      "description": "Divided into parts."
+    },
+    {
+      "code": "69",
+      "name": "Recommended",
+      "description": "The object is favoured in preference to other alternatives."
+    },
+    {
+      "code": "70",
+      "name": "Issued",
+      "description": "Has been given out."
+    },
+    {
+      "code": "71",
+      "name": "Available for ordering",
+      "description": "Goods are available for ordering."
+    },
+    {
+      "code": "72",
+      "name": "Not available for ordering",
+      "description": "Goods are not available for ordering."
+    },
+    {
+      "code": "73",
+      "name": "Confirmed",
+      "description": "Officially acknowledged."
+    },
+    {
+      "code": "74",
+      "name": "Expiry date exceeded",
+      "description": "The expiry date has been exceeded."
+    },
+    {
+      "code": "75",
+      "name": "Prescribed",
+      "description": "Advised the use of."
+    },
+    {
+      "code": "76",
+      "name": "All published issues since subscription start",
+      "description": "Applies to all published issues since subscription start."
+    },
+    {
+      "code": "77",
+      "name": "All published issues since issue specified in claim",
+      "description": "Applies to all published issues since issue specified in claim."
+    },
+    {
+      "code": "78",
+      "name": "All published issues from and including issue specified in claim",
+      "description": "Applies to all published issues from and including issue specified in claim."
+    },
+    {
+      "code": "79",
+      "name": "Specified published issue only",
+      "description": "Applies to specified published issue only."
+    },
+    {
+      "code": "80",
+      "name": "Publication issue cancelled",
+      "description": "Publication issue has been cancelled."
+    },
+    {
+      "code": "81",
+      "name": "Definitive",
+      "description": "The status is definitive."
+    },
+    {
+      "code": "82",
+      "name": "Supplementary",
+      "description": "An addition to something."
+    },
+    {
+      "code": "83",
+      "name": "Under legal appeal",
+      "description": "An application to a court for a reconsideration of the decision."
+    },
+    {
+      "code": "84",
+      "name": "Legally assigned",
+      "description": "Transferred legally to another party."
+    },
+    {
+      "code": "85",
+      "name": "Updated",
+      "description": "Brought up to date."
+    },
+    {
+      "code": "86",
+      "name": "Ratified",
+      "description": "Made valid or binding by some formal or legal act."
+    },
+    {
+      "code": "87",
+      "name": "Under consideration",
+      "description": "Being considered."
+    },
+    {
+      "code": "88",
+      "name": "Countersued",
+      "description": "A response to institute legal proceedings in which an entity has filed a law suit."
+    },
+    {
+      "code": "89",
+      "name": "Legal item dismissed",
+      "description": "Refused further hearing to a legal matter."
+    },
+    {
+      "code": "90",
+      "name": "Disputed",
+      "description": "Questioned validity."
+    },
+    {
+      "code": "91",
+      "name": "Enforced",
+      "description": "Compelled observance."
+    },
+    {
+      "code": "92",
+      "name": "Legal documentation filed",
+      "description": "Submitted a petition, document or application to the appropriate authority."
+    },
+    {
+      "code": "93",
+      "name": "Judgement for defendant",
+      "description": "A judgement for the defendant was rendered."
+    },
+    {
+      "code": "94",
+      "name": "Judgement for plaintiff",
+      "description": "A judgement for the plaintiff was rendered."
+    },
+    {
+      "code": "95",
+      "name": "Unchanged",
+      "description": "Unaltered."
+    },
+    {
+      "code": "96",
+      "name": "Legal documentation not filed",
+      "description": "No petition, document or application was submitted to the appropriate authority."
+    },
+    {
+      "code": "97",
+      "name": "Pending",
+      "description": "Awaiting decision or settlement."
+    },
+    {
+      "code": "98",
+      "name": "Debt released",
+      "description": "Released a debt."
+    },
+    {
+      "code": "99",
+      "name": "Law suit filed",
+      "description": "A law suit was filed."
+    },
+    {
+      "code": "100",
+      "name": "Satisfied",
+      "description": "Adequately met, fulfilled or complied with all conditions."
+    },
+    {
+      "code": "101",
+      "name": "Set aside",
+      "description": "Set aside by using one's authority."
+    },
+    {
+      "code": "102",
+      "name": "Settled",
+      "description": "Concluded by mutual agreement."
+    },
+    {
+      "code": "103",
+      "name": "Settled out of court",
+      "description": "The matter has been settled out of court."
+    },
+    {
+      "code": "104",
+      "name": "Stayed",
+      "description": "A stopping of the proceedings."
+    },
+    {
+      "code": "105",
+      "name": "Terminated",
+      "description": "Brought to an end."
+    },
+    {
+      "code": "106",
+      "name": "Arranged",
+      "description": "Planned or provided for."
+    },
+    {
+      "code": "107",
+      "name": "Not arranged",
+      "description": "Not planned or provided for."
+    },
+    {
+      "code": "108",
+      "name": "Instructed to start",
+      "description": "Received instruction to start."
+    },
+    {
+      "code": "109",
+      "name": "Instructed to stop",
+      "description": "Received instruction to stop."
+    },
+    {
+      "code": "110",
+      "name": "Stock quantity corrected",
+      "description": "A difference in quantity between stocks has been corrected."
+    },
+    {
+      "code": "111",
+      "name": "Inactive",
+      "description": "Not in operation."
+    },
+    {
+      "code": "112",
+      "name": "Active",
+      "description": "In operation."
+    },
+    {
+      "code": "113",
+      "name": "Incomplete data",
+      "description": "The data is incomplete."
+    },
+    {
+      "code": "114",
+      "name": "Booked when overbooked",
+      "description": "The booking has been made although there is no more availability."
+    },
+    {
+      "code": "115",
+      "name": "Provisional",
+      "description": "The object is in a provisional status."
+    },
+    {
+      "code": "116",
+      "name": "Ticketed",
+      "description": "The ticket has been issued."
+    }
+  ]
+}

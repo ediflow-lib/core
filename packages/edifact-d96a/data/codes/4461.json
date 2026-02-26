@@ -1,5 +1,315 @@
 {
-  "code": "4461",
-  "name": "Payment means, coded",
-  "values": []
+  "elementCode": "4461",
+  "elementName": "Payment means, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Instrument not defined"
+    },
+    {
+      "code": "2",
+      "name": "Automated clearing house credit",
+      "description": "A credit transaction made through the automated clearing house system."
+    },
+    {
+      "code": "3",
+      "name": "Automated clearing house debit",
+      "description": "A debit transaction made through the automated clearing house system."
+    },
+    {
+      "code": "4",
+      "name": "ACH demand debit reversal",
+      "description": "A request to reverse an ACH debit transaction to a demand deposit account."
+    },
+    {
+      "code": "5",
+      "name": "ACH demand credit reversal",
+      "description": "A request to reverse a credit transaction to a demand deposit account."
+    },
+    {
+      "code": "6",
+      "name": "ACH demand credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit account."
+    },
+    {
+      "code": "7",
+      "name": "ACH demand debit",
+      "description": "A debit transaction made through the ACH system to a demand deposit account."
+    },
+    {
+      "code": "8",
+      "name": "Hold",
+      "description": "Indicates that the bank should hold the payment for collection by the beneficiary or other instructions."
+    },
+    {
+      "code": "9",
+      "name": "National or regional clearing",
+      "description": "Indicates that the payment should be made using the national or regional clearing."
+    },
+    {
+      "code": "10",
+      "name": "In cash"
+    },
+    {
+      "code": "11",
+      "name": "ACH savings credit reversal",
+      "description": "A request to reverse an ACH credit transaction to a savings account."
+    },
+    {
+      "code": "12",
+      "name": "ACH savings debit reversal",
+      "description": "A request to reverse an ACH debit transaction to a savings account."
+    },
+    {
+      "code": "13",
+      "name": "ACH savings credit",
+      "description": "A credit transaction made through the ACH system to a savings account."
+    },
+    {
+      "code": "14",
+      "name": "ACH savings debit",
+      "description": "A debit transaction made through the ACH system to a savings account."
+    },
+    {
+      "code": "15",
+      "name": "Bookentry credit",
+      "description": "A credit transaction, initiated from the buyer's account to the seller's account at the save financial institution."
+    },
+    {
+      "code": "16",
+      "name": "Bookentry debit",
+      "description": "A debit transaction initiated from the seller's account to the seller's account at the same financial institution."
+    },
+    {
+      "code": "17",
+      "name": "ACH demand cash concentration/disbursement (CCD) credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit account using the CCD payment format."
+    },
+    {
+      "code": "18",
+      "name": "ACH demand cash concentration/disbursement (CCD) debit",
+      "description": "A debit transaction made through the ACH system to a demand deposit account using the CCD payment format."
+    },
+    {
+      "code": "19",
+      "name": "ACH demand corporate trade payment (CTP) credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit account using the CTP payment format."
+    },
+    {
+      "code": "20",
+      "name": "Cheque"
+    },
+    {
+      "code": "21",
+      "name": "Banker's draft",
+      "description": "Issue of a banker's draft in payment of the funds."
+    },
+    {
+      "code": "22",
+      "name": "Certified banker's draft"
+    },
+    {
+      "code": "23",
+      "name": "Bank cheque (issued by a banking or similar establishment)"
+    },
+    {
+      "code": "25",
+      "name": "Certified cheque"
+    },
+    {
+      "code": "26",
+      "name": "Local cheque",
+      "description": "Indicates that the cheque is given local to the recipient."
+    },
+    {
+      "code": "27",
+      "name": "ACH demand corporate trade payment (CTP) debit",
+      "description": "A debit transaction made through the ACH system to a demand deposit account using the CTP payment format."
+    },
+    {
+      "code": "28",
+      "name": "ACH demand corporate trade exchange (CTX) credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit account using the CTX payment format."
+    },
+    {
+      "code": "29",
+      "name": "ACH demand corporate trade exchange (CTX) debit",
+      "description": "A debit transaction made through the ACH system to a demand account using the CTX payment format."
+    },
+    {
+      "code": "30",
+      "name": "Credit transfer"
+    },
+    {
+      "code": "31",
+      "name": "Debit transfer"
+    },
+    {
+      "code": "32",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+) credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit account using the CCD+ payment format."
+    },
+    {
+      "code": "33",
+      "name": "ACH demand cash concentration/disbursement plus (CCD+) debit",
+      "description": "A debit transaction made through the ACH system to a demand deposit account using the CCD+ payment format."
+    },
+    {
+      "code": "34",
+      "name": "ACH prearranged payment and deposit (PPD)",
+      "description": "A consumer credit transaction made through the ACH system to a demand deposit or savings account."
+    },
+    {
+      "code": "35",
+      "name": "ACH savings cash concentration/disbursement (CCD) credit",
+      "description": "A credit transaction made through the ACH system to a demand deposit or savings account."
+    },
+    {
+      "code": "36",
+      "name": "ACH savings cash concentration/disbursement (CCD) debit",
+      "description": "A debit transaction made through the ACH system to a savings account using the CCD payment format."
+    },
+    {
+      "code": "37",
+      "name": "ACH savings corporate trade payment (CTP) credit",
+      "description": "A credit transaction made through the ACH system to a savings account using the CTP payment format."
+    },
+    {
+      "code": "38",
+      "name": "ACH savings corporate trade payment (CTP) debit",
+      "description": "A debit transaction made through the ACH system to a savings account using the CTP payment format."
+    },
+    {
+      "code": "39",
+      "name": "ACH savings corporate trade exchange (CTX) credit",
+      "description": "A credit transaction made through the ACH system to a savings account using the CTX payment format."
+    },
+    {
+      "code": "40",
+      "name": "ACH savings corporate trade exchange (CTX) debit",
+      "description": "A debit transaction made through the ACH system to a savings account using the CTX payment format."
+    },
+    {
+      "code": "41",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+) credit",
+      "description": "A credit transaction made through the ACH system to a savings account using the CCD+ payment format."
+    },
+    {
+      "code": "42",
+      "name": "Payment to bank account"
+    },
+    {
+      "code": "43",
+      "name": "ACH savings cash concentration/disbursement plus (CCD+) debit",
+      "description": "A debit transaction made through the ACH system to a savings account using the CCD+ payment format."
+    },
+    {
+      "code": "50",
+      "name": "Payment by postgiro"
+    },
+    {
+      "code": "60",
+      "name": "Promissory note"
+    },
+    {
+      "code": "61",
+      "name": "Promissory note signed by the debtor"
+    },
+    {
+      "code": "62",
+      "name": "Promissory note signed by the debtor and endorsed by a bank"
+    },
+    {
+      "code": "63",
+      "name": "Promissory note signed by the debtor and endorsed by a third party"
+    },
+    {
+      "code": "64",
+      "name": "Promissory note signed by a bank"
+    },
+    {
+      "code": "65",
+      "name": "Promissory note signed by a bank and endorsed by another bank"
+    },
+    {
+      "code": "66",
+      "name": "Promissory note signed by a third party"
+    },
+    {
+      "code": "67",
+      "name": "Promissory note signed by a third party and endorsed by a bank"
+    },
+    {
+      "code": "70",
+      "name": "Bill drawn by the creditor on the debtor"
+    },
+    {
+      "code": "74",
+      "name": "Bill drawn by the creditor on a bank",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "75",
+      "name": "Bill drawn by the creditor, endorsed by another bank",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "76",
+      "name": "Bill drawn by the creditor on a bank and endorsed by a third party",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "77",
+      "name": "Bill drawn by the creditor on a third party",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "78",
+      "name": "Bill drawn by creditor on third party, accepted and endorsed by bank",
+      "description": "Description to be provided."
+    },
+    {
+      "code": "91",
+      "name": "Not transferable banker's draft",
+      "description": "Issue a bankers draft not endorsable."
+    },
+    {
+      "code": "92",
+      "name": "Not transferable local cheque",
+      "description": "Issue a cheque not endorsable in payment of the funds."
+    },
+    {
+      "code": "93",
+      "name": "Reference giro",
+      "description": "Ordering customer tells the bank to use the payment system 'Reference giro'. Used in the Finnish national banking system."
+    },
+    {
+      "code": "94",
+      "name": "Urgent giro",
+      "description": "Ordering customer tells the bank to use the bank service 'Urgent Giro' when transferring the payment."
+    },
+    {
+      "code": "95",
+      "name": "Free format giro",
+      "description": "Ordering customer tells the ordering bank to use the bank service 'Free Format Giro' when transferring the payment. Used in Finnish national banking system."
+    },
+    {
+      "code": "96",
+      "name": "Requested method for payment was not used",
+      "description": "If the requested method for payment was or could not be used, this code indicates that."
+    },
+    {
+      "code": "97",
+      "name": "Clearing between partners",
+      "description": "Amounts which two partners owe to each other to be compensated in order to avoid useless payments."
+    },
+    {
+      "code": "Used",
+      "name": "in Finnish national banking system."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
 }

@@ -1,5 +1,36 @@
 {
-  "code": "4487",
-  "name": "Type of financial transaction, coded",
-  "values": []
+  "elementCode": "4487",
+  "elementName": "Type of financial transaction, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Clean payment",
+      "description": "Payment under open account terms."
+    },
+    {
+      "code": "4",
+      "name": "Documentary payment",
+      "description": "Payment relating to a documentary settlement."
+    },
+    {
+      "code": "5",
+      "name": "Irrevocable documentary credit",
+      "description": "The documentary credit is irrevocable."
+    },
+    {
+      "code": "6",
+      "name": "Revocable documentary credit",
+      "description": "The documentary credit is revocable."
+    },
+    {
+      "code": "7",
+      "name": "Irrevocable and transferable documentary credit",
+      "description": "The documentary credit is irrevocable and may be transferred to a second beneficiary."
+    },
+    {
+      "code": "8",
+      "name": "Revocable and transferable documentary credit",
+      "description": "The documentary credit is revocable and may be transferred to a second beneficiary."
+    }
+  ]
 }

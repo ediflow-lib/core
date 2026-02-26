@@ -1,5 +1,356 @@
 {
-  "code": "2379",
-  "name": "Date/time/period format qualifier",
-  "values": []
+  "elementCode": "2379",
+  "elementName": "Date/time/period format qualifier",
+  "values": [
+    {
+      "code": "2",
+      "name": "DDMMYY",
+      "description": "Calendar date: D = Day; M = Month; Y = Year."
+    },
+    {
+      "code": "3",
+      "name": "MMDDYY",
+      "description": "Calendar date: M = Month; D = Day; Y = Year."
+    },
+    {
+      "code": "101",
+      "name": "YYMMDD",
+      "description": "Calendar date: Y = Year; M = Month; D = Day."
+    },
+    {
+      "code": "102",
+      "name": "CCYYMMDD",
+      "description": "Calendar date: C = Century ; Y = Year ; M = Month ; D = Day."
+    },
+    {
+      "code": "103",
+      "name": "YYWWD",
+      "description": "Calendar week day: Y = Year ; W = Week ; D = Day Week number 01 is always first week of January Day number 1 is always Monday."
+    },
+    {
+      "code": "105",
+      "name": "YYDDD",
+      "description": "Calendar day: Y = Year ; D = Day January the first = Day 001 Always start numbering the days of the year from January 1st through December 31st."
+    },
+    {
+      "code": "106",
+      "name": "MMDD",
+      "description": "Day of a month: M = Month; D = Day."
+    },
+    {
+      "code": "107",
+      "name": "DDD",
+      "description": "Day's number within a specific year: D = Day."
+    },
+    {
+      "code": "108",
+      "name": "WW",
+      "description": "Week's number within a specific year: W = Week."
+    },
+    {
+      "code": "109",
+      "name": "MM",
+      "description": "Month's number within a specific year: M = Month."
+    },
+    {
+      "code": "110",
+      "name": "DD",
+      "description": "Day's number within is a specific month: D = Day."
+    },
+    {
+      "code": "201",
+      "name": "YYMMDDHHMM",
+      "description": "Calendar date including time without seconds: Y = Year; M = Month; D = Day; H = Hour; M = Minute."
+    },
+    {
+      "code": "202",
+      "name": "YYMMDDHHMMSS",
+      "description": "Calendar date including time with seconds: Y = Year; M = Month; D = Day; H = Hour; m = Minutes = Seconds."
+    },
+    {
+      "code": "203",
+      "name": "CCYYMMDDHHMM",
+      "description": "Calendar date including time with minutes: C=Century; Y=Year; M=Month; D=Day; H=Hour; M=Minutes."
+    },
+    {
+      "code": "204",
+      "name": "CCYYMMDDHHMMSS",
+      "description": "Calendar date including time with seconds: C=Century;Y=Year; M=Month;D=Day;H=Hour;M=Minute;S=Second."
+    },
+    {
+      "code": "301",
+      "name": "YYMMDDHHMMZZZ",
+      "description": "See 201 + Z = Time zone."
+    },
+    {
+      "code": "302",
+      "name": "YYMMDDHHMMSSZZZ",
+      "description": "See 202 + Z = Time zone."
+    },
+    {
+      "code": "303",
+      "name": "CCYYMMDDHHMMZZZ",
+      "description": "See 203 plus Z=Time zone."
+    },
+    {
+      "code": "304",
+      "name": "CCYYMMDDHHMMSSZZZ",
+      "description": "See 204 plus Z=Time zone."
+    },
+    {
+      "code": "305",
+      "name": "MMDDHHMM",
+      "description": "Month, day, hours, minutes; M = Month; D = Day; H = Hour; M = Minute."
+    },
+    {
+      "code": "306",
+      "name": "DDHHMM",
+      "description": "Day, hours, minutes; D = Day; H = Hour; M = Minute."
+    },
+    {
+      "code": "401",
+      "name": "HHMM",
+      "description": "Time without seconds: H = Hour; m = Minute."
+    },
+    {
+      "code": "402",
+      "name": "HHMMSS",
+      "description": "Time with seconds: H = Hour; m = Minute; s = Seconds."
+    },
+    {
+      "code": "404",
+      "name": "HHMMSSZZZ",
+      "description": "See 402 plus Z=Time zone."
+    },
+    {
+      "code": "405",
+      "name": "MMMMSS",
+      "description": "Time without hours: m=minutes, s=seconds."
+    },
+    {
+      "code": "501",
+      "name": "HHMMHHMM",
+      "description": "Time span without seconds: H = Hour; m = Minute;."
+    },
+    {
+      "code": "502",
+      "name": "HHMMSS-HHMMSS",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "503",
+      "name": "HHMMSSZZZ-HHMMSSZZZ",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "600",
+      "name": "CC",
+      "description": "Century."
+    },
+    {
+      "code": "601",
+      "name": "YY",
+      "description": "Calendar year: Y = Year."
+    },
+    {
+      "code": "602",
+      "name": "CCYY",
+      "description": "Calendar year including century: C = Century; Y = Year."
+    },
+    {
+      "code": "603",
+      "name": "YYS",
+      "description": "Semester in a calendar year: Y = Year; S = Semester."
+    },
+    {
+      "code": "604",
+      "name": "CCYYS",
+      "description": "Semester in a calendar year: C = Century; Y = Year; S = Semester."
+    },
+    {
+      "code": "608",
+      "name": "CCYYQ",
+      "description": "Quarter in a calendar year: C = Century; Y = Year; Q = Quarter."
+    },
+    {
+      "code": "609",
+      "name": "YYMM",
+      "description": "Month within a calendar year: Y = Year; M = Month."
+    },
+    {
+      "code": "610",
+      "name": "CCYYMM",
+      "description": "Month within a calendar year: CC = Century; Y = Year; M = Month."
+    },
+    {
+      "code": "613",
+      "name": "YYMMA",
+      "description": "Format of period to be given without hyphen (A = ten days period)."
+    },
+    {
+      "code": "614",
+      "name": "CCYYMMA",
+      "description": "Format of period to be given without hyphen (A = ten days period)."
+    },
+    {
+      "code": "615",
+      "name": "YYWW",
+      "description": "Week within a calendar year: Y = Year; W = Week 1st week of January = week 01."
+    },
+    {
+      "code": "616",
+      "name": "CCYYWW",
+      "description": "Week within a calendar year: CC = Century; Y = Year; W = Week (1st week of January = week 01)."
+    },
+    {
+      "code": "701",
+      "name": "YY-YY",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "702",
+      "name": "CCYY-CCYY",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "703",
+      "name": "YYS-YYS",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "704",
+      "name": "CCYYS-CCYYS",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "705",
+      "name": "YYPYYP",
+      "description": "Format of period to be given without hyphen (P = period of 4 months)."
+    },
+    {
+      "code": "706",
+      "name": "CCYYP-CCYYP",
+      "description": "Format of period to be given without hyphen (P = period of 4 months)."
+    },
+    {
+      "code": "707",
+      "name": "YYQ-YYQ",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "708",
+      "name": "CCYYQ-CCYYQ",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "709",
+      "name": "YYMM-YYMM",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "710",
+      "name": "CCYYMM-CCYYMM",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "711",
+      "name": "CCYYMMDD-CCYYMMDD",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "713",
+      "name": "YYMMDDHHMM-YYMMDDHHMM",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "715",
+      "name": "YYWW-YYWW",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "716",
+      "name": "CCYYWW-CCYYWW",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "717",
+      "name": "YYMMDD-YYMMDD",
+      "description": "Format of period to be given in actual message without hyphen."
+    },
+    {
+      "code": "718",
+      "name": "CCYYMMDD-CCYYMMDD",
+      "description": "Format of period to be given without hyphen."
+    },
+    {
+      "code": "801",
+      "name": "Year",
+      "description": "To indicate a quantity of years."
+    },
+    {
+      "code": "802",
+      "name": "Month",
+      "description": "To indicate a quantity of months."
+    },
+    {
+      "code": "803",
+      "name": "Week",
+      "description": "To indicate a quantity of weeks."
+    },
+    {
+      "code": "804",
+      "name": "Day",
+      "description": "To indicate a quantity of days."
+    },
+    {
+      "code": "805",
+      "name": "Hour",
+      "description": "To indicate a quantity of hours."
+    },
+    {
+      "code": "806",
+      "name": "Minute",
+      "description": "To indicate a quantity of minutes."
+    },
+    {
+      "code": "807",
+      "name": "Second",
+      "description": "To indicate a quantity of seconds."
+    },
+    {
+      "code": "808",
+      "name": "Semester",
+      "description": "To indicate a quantity of semesters (six months)."
+    },
+    {
+      "code": "809",
+      "name": "Four months period",
+      "description": "To indicate a quantity of four months periods."
+    },
+    {
+      "code": "810",
+      "name": "Trimester",
+      "description": "To indicate a quantity of trimesters (three months)."
+    },
+    {
+      "code": "811",
+      "name": "Half month",
+      "description": "To indicate a quantity of half months."
+    },
+    {
+      "code": "812",
+      "name": "Ten days",
+      "description": "To indicate a quantity of ten days periods."
+    },
+    {
+      "code": "813",
+      "name": "Day of the week",
+      "description": "Numeric representation of the day (Monday = 1)."
+    },
+    {
+      "code": "814",
+      "name": "Working days",
+      "description": "Number of working days."
+    }
+  ]
 }

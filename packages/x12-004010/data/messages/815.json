@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "815",
+  "name": "Cryptographic Service Message",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Cryptographic Service Message Transaction Set (815) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide the data format required for cryptographic key management including the automated distribution and exchange of keys. The mechanism uses X12 structures and data formats and is based on existing standards such as X509 and ANSI X3 and X9 developed by the Accredited Standards Committees (ASCs) X9 and X12. The standard provides an X12 format for key distribution and exchange. The Cryptographic Service Message (CSM) transaction conveys the pertinent keying material for use in the EDI environment. The business requirements addressed in this standard for the key management data encompasses distribution and exchange of keying material in support of authentication, encryption and assurances.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CSM",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CSB",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopCSC",
+      "name": "LoopCSC",
+      "triggerSegment": "CSC",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "CSC",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTP",
+          "mandatory": false,
+          "maxOccurrences": 9,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

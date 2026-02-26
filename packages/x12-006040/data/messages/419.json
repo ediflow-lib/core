@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "419",
+  "name": "Advance Car Disposition",
+  "description": "Advance Car Disposition",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopE6",
+      "name": "LoopE6",
+      "triggerSegment": "E6",
+      "mandatory": true,
+      "maxOccurrences": 150,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "E6",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "W3",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "W5",
+          "mandatory": false,
+          "maxOccurrences": 4,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

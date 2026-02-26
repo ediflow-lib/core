@@ -1,5 +1,185 @@
 {
-  "code": "4401",
-  "name": "Instruction, coded",
-  "values": []
+  "elementCode": "4401",
+  "elementName": "Instruction, coded",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Send credit note"
+    },
+    {
+      "code": "AB",
+      "name": "Change invoice",
+      "description": "Send invoice, taking into account specified discrepancies."
+    },
+    {
+      "code": "AD",
+      "name": "Advise",
+      "description": "Instruction to advise a party."
+    },
+    {
+      "code": "AE",
+      "name": "Change invoice",
+      "description": "Send invoice, taking into account specified discrepancies. Use code value AB."
+    },
+    {
+      "code": "AF",
+      "name": "Stop delivery process",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "AG",
+      "name": "Send replacement",
+      "description": "The identified item must be sent for replacement."
+    },
+    {
+      "code": "AH",
+      "name": "Pick-up",
+      "description": "The identified item is to be picked up."
+    },
+    {
+      "code": "AI",
+      "name": "Advise by telecommunication",
+      "description": "Advise of documentary credit by telecommunication."
+    },
+    {
+      "code": "AJ",
+      "name": "Advise by fax",
+      "description": "Instruction to advise party by fax."
+    },
+    {
+      "code": "AK",
+      "name": "By registered airmail",
+      "description": "Issue documentary credit by registered airmail."
+    },
+    {
+      "code": "AL",
+      "name": "By registered airmail in one set",
+      "description": "Deliver documents in one set by registered airmail."
+    },
+    {
+      "code": "AM",
+      "name": "By registered airmail in two sets",
+      "description": "Deliver documents in two sets by registered airmail."
+    },
+    {
+      "code": "AP",
+      "name": "Advise by phone",
+      "description": "Instruction to advise party by phone."
+    },
+    {
+      "code": "AT",
+      "name": "Advise by telex",
+      "description": "Instruction to advise party by telex."
+    },
+    {
+      "code": "CO",
+      "name": "Convert",
+      "description": "Convert the message into other format."
+    },
+    {
+      "code": "DA",
+      "name": "Without",
+      "description": "The bank advising the documentary credit is not requested to confirm the credit."
+    },
+    {
+      "code": "DB",
+      "name": "May add",
+      "description": "The bank advising the documentary credit may add its confirmation to the documentary credit."
+    },
+    {
+      "code": "DC",
+      "name": "Confirm",
+      "description": "The bank advising the documentary credit is requested to confirm the credit."
+    },
+    {
+      "code": "DD",
+      "name": "By registered mail",
+      "description": "Issue documentary credit by registered mail."
+    },
+    {
+      "code": "DE",
+      "name": "By courier service",
+      "description": "Issue documentary credit by courier service."
+    },
+    {
+      "code": "DF",
+      "name": "By teletransmission",
+      "description": "Issue documentary credit by teletransmission."
+    },
+    {
+      "code": "DG",
+      "name": "Preadvice by teletransmission",
+      "description": "Preadvise documentary credit by teletransmission."
+    },
+    {
+      "code": "DH",
+      "name": "By courier service in one set",
+      "description": "Deliver documents in one set by courier service."
+    },
+    {
+      "code": "DI",
+      "name": "By courier service in two sets",
+      "description": "Deliver documents in two sets by courier service."
+    },
+    {
+      "code": "DJ",
+      "name": "By registered mail in one set",
+      "description": "Deliver documents in one set by registered mail."
+    },
+    {
+      "code": "DK",
+      "name": "By registered mail in two sets",
+      "description": "Deliver documents in two sets by registered mail."
+    },
+    {
+      "code": "DN",
+      "name": "Per teletransmission",
+      "description": "Deliver documents by teletransmission."
+    },
+    {
+      "code": "DO",
+      "name": "Advise beneficiary by phone",
+      "description": "Advise beneficiary of documentary credit by phone."
+    },
+    {
+      "code": "DP",
+      "name": "Late presentation of documents within D/C validity acceptable",
+      "description": "Late presentation of documents with the documentary credit validity is acceptable."
+    },
+    {
+      "code": "EI",
+      "name": "EDI",
+      "description": "Instructions to advise beneficiary by EDI."
+    },
+    {
+      "code": "EM",
+      "name": "Electronic mail",
+      "description": "Instructions to advise beneficiary by electronic mail."
+    },
+    {
+      "code": "EX",
+      "name": "Expedite",
+      "description": "Forward the information to requested party immediately."
+    },
+    {
+      "code": "QC",
+      "name": "Quality control held",
+      "description": "Goods to be held from distribution by stockholder until a quality control assessment is completed by the manufacturer."
+    },
+    {
+      "code": "QE",
+      "name": "Quality control embargo",
+      "description": "Quality control assessment is negative, goods are to be held from distribution by stockholder."
+    },
+    {
+      "code": "RL",
+      "name": "Released",
+      "description": "Goods are released by manufacturer for distribution by stockholder."
+    },
+    {
+      "code": "SW",
+      "name": "S.W.I.F.T.",
+      "description": "Instructions to advise beneficiary by S.W.I.F.T."
+    }
+  ]
 }

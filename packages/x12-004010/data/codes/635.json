@@ -1,0 +1,86 @@
+{
+  "code": "635",
+  "name": "Code indicating rate request or response purpose",
+  "values": [
+    {
+      "code": "0",
+      "name": "No rates available applicable to requested movement."
+    },
+    {
+      "code": "1",
+      "name": "Rates provided per request."
+    },
+    {
+      "code": "2",
+      "name": "Rates provided because rates earlier provided have been changed by a blanket change."
+    },
+    {
+      "code": "3",
+      "name": "Rates provided because rates earlier provided have been changed by other than a blanket change."
+    },
+    {
+      "code": "4",
+      "name": "Rates provided because new rates have been added applicable to a previously requested movement."
+    },
+    {
+      "code": "5",
+      "name": "Successfully Processed"
+    },
+    {
+      "code": "6",
+      "name": "Unsuccessfully Processed"
+    },
+    {
+      "code": "9",
+      "name": "Group Definition Request"
+    },
+    {
+      "code": "A",
+      "name": "Provide rates applicable to a specific movement and continue to provide rates in the future applicable to the specific movement."
+    },
+    {
+      "code": "C",
+      "name": "Rate or Division Change"
+    },
+    {
+      "code": "D",
+      "name": "Cease providing rates applicable to a specific movement."
+    },
+    {
+      "code": "F",
+      "name": "No Rates Provided Due To Invalid Origin Geography"
+    },
+    {
+      "code": "G",
+      "name": "General Price Request or Response"
+    },
+    {
+      "code": "H",
+      "name": "Historic Price Request or Response"
+    },
+    {
+      "code": "I",
+      "name": "Provide rates applicable to specific movement."
+    },
+    {
+      "code": "P",
+      "name": "No Rates Provided Due To Invalid Commodity"
+    },
+    {
+      "code": "Q",
+      "name": "Price Quote Request or Response"
+    },
+    {
+      "code": "S",
+      "name": "Price Distribution Send"
+    },
+    {
+      "code": "T",
+      "name": "No Rates Provided Due To Invalid Destination Geography"
+    },
+    {
+      "code": "W",
+      "name": "Waybill Price Request or Response"
+    }
+  ]
+}

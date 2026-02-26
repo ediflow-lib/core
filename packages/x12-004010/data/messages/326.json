@@ -1,0 +1,119 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "326",
+  "name": "Consignment Summary List",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Consignment Summary List Transaction Set (326) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used to provide a list to a customer of all consignments for which an ocean carrier has accepted or is expected to accept responsibility for the transport of goods. It is sent by an ocean carrier or consolidator to a shipper, freight forwarder, consignee, customs broker, or any other interested party.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopV1",
+      "name": "LoopV1",
+      "triggerSegment": "V1",
+      "mandatory": true,
+      "maxOccurrences": 999,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "V1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "MBL",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "VC",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 5
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN7",
+          "name": "LoopN7",
+          "triggerSegment": "N7",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 6,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N7",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "VC",
+              "mandatory": false,
+              "maxOccurrences": 9,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopR4",
+          "name": "LoopR4",
+          "triggerSegment": "R4",
+          "mandatory": true,
+          "maxOccurrences": 4,
+          "position": 7,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "R4",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "DTM",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

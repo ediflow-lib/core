@@ -1,0 +1,83 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "451",
+  "name": "Railroad Event Report",
+  "description": "Railroad Event Report",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ER",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopED",
+      "name": "LoopED",
+      "triggerSegment": "ED",
+      "mandatory": true,
+      "maxOccurrences": 999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ED",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ER",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NA",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IC",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "CLR",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ES",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 6
+        }
+      ]
+    }
+  ]
+}

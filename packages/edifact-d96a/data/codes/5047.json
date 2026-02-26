@@ -1,5 +1,41 @@
 {
-  "code": "5047",
-  "name": "Contribution qualifier",
-  "values": []
+  "elementCode": "5047",
+  "elementName": "Contribution qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Normal",
+      "description": "As normally agreed between parties."
+    },
+    {
+      "code": "2",
+      "name": "Special",
+      "description": "A contribution not usually made."
+    },
+    {
+      "code": "3",
+      "name": "Reversal",
+      "description": "Reversing a previous contribution."
+    },
+    {
+      "code": "4",
+      "name": "Back payment",
+      "description": "Payment is a period prior to the normal period."
+    },
+    {
+      "code": "5",
+      "name": "Advanced payment",
+      "description": "Payment is for a period post the normal period."
+    },
+    {
+      "code": "6",
+      "name": "Ceasing contributions",
+      "description": "Payment is irregular as contributions ceased from the specified date."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "Mutually defined contribution qualifier."
+    }
+  ]
 }

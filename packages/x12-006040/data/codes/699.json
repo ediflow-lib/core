@@ -1,0 +1,14 @@
+{
+  "code": "699",
+  "name": "Code identifying how a specific segment's statement of a rate restriction is evaluated and its relationship to rate restrictions stated within other segments of the same segment definition",
+  "values": [
+    {
+      "code": "M",
+      "name": "If one or more segments of a given segment definition contain this element indicating a '-' value, rate application is denied upon satisfaction of any one of these segments, so indicated; In the event that rate restrictions on two segments of similar definition are satisfied, one segment containing this element indicating a '+' value and the other segment indicating a '-', rate application is denied. In other words, a minus takes precedence over a plus."
+    },
+    {
+      "code": "P",
+      "name": "If one or more segments of a given segment definition contain this element indicating a '+' value, rate application requires satisfaction of the restriction stated on at least one of those segments, so indicated; In the event that rate restrictions on two segments of similar definition are satisfied, one segment containing this element indicating a '+' value and the other segment indicating a '-', rate application is denied. In other words, a minus takes precedence over a plus."
+    }
+  ]
+}

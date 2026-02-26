@@ -1,0 +1,242 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "456",
+  "name": "Railroad Equipment Inquiry or Advice",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Railroad Equipment Inquiry or Advice Transaction Set (456) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used in the following ways: (1) for a provider of equipment or transportation service to provide information to a qualified customer; (2) for a qualified customer to inquire as to the location of equipment or shipments; and (3) for one company to provide another company with equipment or shipment information.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "EIA",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N8",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopLX",
+      "name": "LoopLX",
+      "triggerSegment": "LX",
+      "mandatory": false,
+      "maxOccurrences": 500,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "LX",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N7",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "H5",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IC",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "F9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "D9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 6
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 99,
+          "position": 7
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 8
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "H3",
+          "mandatory": false,
+          "maxOccurrences": 6,
+          "position": 9
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "L5",
+          "mandatory": false,
+          "maxOccurrences": 15,
+          "position": 10
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "R2",
+          "mandatory": false,
+          "maxOccurrences": 13,
+          "position": 11
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "VC",
+          "mandatory": false,
+          "maxOccurrences": 21,
+          "position": 12
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PI",
+          "mandatory": false,
+          "maxOccurrences": 30,
+          "position": 13
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopS1",
+          "name": "LoopS1",
+          "triggerSegment": "S1",
+          "mandatory": false,
+          "maxOccurrences": 12,
+          "position": 14,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "S1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "S9",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopIS1",
+      "name": "LoopIS1",
+      "triggerSegment": "IS1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "IS1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ISC",
+          "mandatory": false,
+          "maxOccurrences": 99,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IS2",
+          "mandatory": true,
+          "maxOccurrences": 99,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": true,
+          "maxOccurrences": 5,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopER",
+      "name": "LoopER",
+      "triggerSegment": "ER",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ER",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NA",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ES",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

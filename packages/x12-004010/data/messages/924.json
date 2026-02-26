@@ -1,0 +1,58 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "924",
+  "name": "Loss or Damage Claim - Motor Vehicle",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Loss or Damage Claim - Motor Vehicle Transaction Set (924) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to file a legal claim with a carrier for loss or damage to a motor vehicle.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "F01",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "F6X",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "F02",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "F12",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "F07",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

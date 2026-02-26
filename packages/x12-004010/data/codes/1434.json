@@ -1,0 +1,34 @@
+{
+  "code": "1434",
+  "name": "Code specifying the bounds of the text, whether contiguous or not, over which the computation of the Assurance Token is computed using the defined methodology of computation and any relevant Assurance Token parametersThe \"body\" is defined as a transaction set, beginning with the first byte of the segment immediately following the ST segment terminator and including all segments up to but not including the \"S\" in the first SVA segment; DO NOT include any S4A segmentsThe \"body\" can also be defined as a functional group, beginning with the first byte of the segment immediately following the GS segment terminator and including all transaction sets up to but not including the \"S\" in the first SVA segment at the functional group level; DO NOT include any S3A segments\"This Assurance\" is defined as from the \"S\" in S3A or S4A up to and including the segment terminator of that segment\"Previous Assurance(s)\" is defined as including the entire S3A or S4A segment and the entire corresponding SVA segment that is associated with the S3A or S4A at the same level",
+  "values": [
+    {
+      "code": "A",
+      "name": "Body Only"
+    },
+    {
+      "code": "B",
+      "name": "Body Plus This Assurance Header Only"
+    },
+    {
+      "code": "C",
+      "name": "Body Plus All Previous Assurances Plus This Assurance Header"
+    },
+    {
+      "code": "D",
+      "name": "Body plus All Previous Assurances Only"
+    },
+    {
+      "code": "E",
+      "name": "This Assurance Header Only"
+    },
+    {
+      "code": "F",
+      "name": "All Previous Assurances Plus This Assurance Header"
+    },
+    {
+      "code": "G",
+      "name": "Body Plus All Previous Assurances of Referenced Document"
+    }
+  ]
+}

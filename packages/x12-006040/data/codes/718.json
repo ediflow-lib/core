@@ -1,0 +1,98 @@
+{
+  "code": "718",
+  "name": "Code indicating error found based on the syntax editing of a transaction set",
+  "values": [
+    {
+      "code": "1",
+      "name": "Transaction Set Not Supported"
+    },
+    {
+      "code": "2",
+      "name": "Transaction Set Trailer Missing"
+    },
+    {
+      "code": "3",
+      "name": "Transaction Set Control Number in Header and Trailer Do Not Match"
+    },
+    {
+      "code": "4",
+      "name": "Number of Included Segments Does Not Match Actual Count"
+    },
+    {
+      "code": "5",
+      "name": "One or More Segments in Error"
+    },
+    {
+      "code": "6",
+      "name": "Missing or Invalid Transaction Set Identifier"
+    },
+    {
+      "code": "7",
+      "name": "Missing or Invalid Transaction Set Control Number"
+    },
+    {
+      "code": "8",
+      "name": "Authentication Key Name Unknown"
+    },
+    {
+      "code": "9",
+      "name": "Encryption Key Name Unknown"
+    },
+    {
+      "code": "10",
+      "name": "Requested Service (Authentication or Encrypted) Not Available"
+    },
+    {
+      "code": "11",
+      "name": "Unknown Security Recipient"
+    },
+    {
+      "code": "12",
+      "name": "Incorrect Message Length (Encryption Only)"
+    },
+    {
+      "code": "13",
+      "name": "Message Authentication Code Failed"
+    },
+    {
+      "code": "15",
+      "name": "Unknown Security Originator"
+    },
+    {
+      "code": "16",
+      "name": "Syntax Error in Decrypted Text"
+    },
+    {
+      "code": "17",
+      "name": "Security Not Supported"
+    },
+    {
+      "code": "18",
+      "name": "Transaction Set not in Functional Group"
+    },
+    {
+      "code": "19",
+      "name": "Invalid Transaction Set Implementation Convention Reference"
+    },
+    {
+      "code": "23",
+      "name": "Transaction Set Control Number Not Unique within the Functional Group"
+    },
+    {
+      "code": "24",
+      "name": "S3E Security End Segment Missing for S3S Security Start Segment"
+    },
+    {
+      "code": "25",
+      "name": "S3S Security Start Segment Missing for S3E Security End Segment"
+    },
+    {
+      "code": "26",
+      "name": "S4E Security End Segment Missing for S4S Security Start Segment"
+    },
+    {
+      "code": "27",
+      "name": "S4S Security Start Segment Missing for S4E Security End Segment"
+    }
+  ]
+}

@@ -1,5 +1,26 @@
 {
-  "code": "9507",
-  "name": "Formula sequence code qualifier",
-  "values": []
+  "elementCode": "9507",
+  "elementName": "Formula sequence code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Arithmetic operation",
+      "description": "An individual arithmetic operation within a formula."
+    },
+    {
+      "code": "2",
+      "name": "Open bracket",
+      "description": "An open bracket indicates the beginning of a specific series of arithmetic operations."
+    },
+    {
+      "code": "3",
+      "name": "Close bracket",
+      "description": "A close bracket indicates the end of a specific series of arithmetic operations."
+    },
+    {
+      "code": "4",
+      "name": "Disjoint value",
+      "description": "A value which is disjoint."
+    }
+  ]
 }

@@ -1,5 +1,51 @@
 {
-  "code": "3477",
-  "name": "Address format code",
-  "values": []
+  "elementCode": "3477",
+  "elementName": "Address format code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Street name followed by number",
+      "description": "Address street name followed by address number."
+    },
+    {
+      "code": "2",
+      "name": "Number, road type, road name in this sequence",
+      "description": "House number followed by type of road and name of the road."
+    },
+    {
+      "code": "3",
+      "name": "Road type, road name, number in this sequence",
+      "description": "Type of the road followed by name of the road and the house number."
+    },
+    {
+      "code": "4",
+      "name": "Post office box",
+      "description": "Post office box."
+    },
+    {
+      "code": "5",
+      "name": "Unstructured address",
+      "description": "Unstructured address, comprising an unspecified mix of components."
+    },
+    {
+      "code": "6",
+      "name": "Street name followed by number, building, suite",
+      "description": "Identifies the address component as street name followed by number, building, and suite in this sequence."
+    },
+    {
+      "code": "7",
+      "name": "Rural route number",
+      "description": "Identifies the address component as the rural route number."
+    },
+    {
+      "code": "8",
+      "name": "Post office drawer number",
+      "description": "Identifies the address component as the post office drawer."
+    },
+    {
+      "code": "9",
+      "name": "Building name followed by suite",
+      "description": "Identifies the address component as building followed by suite."
+    }
+  ]
 }

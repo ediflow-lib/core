@@ -1,5 +1,66 @@
 {
-  "code": "4513",
-  "name": "Maintenance operation code",
-  "values": []
+  "elementCode": "4513",
+  "elementName": "Maintenance operation code",
+  "values": [
+    {
+      "code": "1",
+      "name": "New",
+      "description": "The data is to be processed as new."
+    },
+    {
+      "code": "2",
+      "name": "Add and replace",
+      "description": "The data contains new objects, which are to be added, and existing objects, which are to replace objects which have the same identifier."
+    },
+    {
+      "code": "3",
+      "name": "Replace",
+      "description": "The data is to replace existing data which has the same identifier."
+    },
+    {
+      "code": "4",
+      "name": "Delete",
+      "description": "The data identified is to be deleted."
+    },
+    {
+      "code": "5",
+      "name": "None",
+      "description": "The data is not to be maintained."
+    },
+    {
+      "code": "6",
+      "name": "Addition",
+      "description": "Maintenance operation involves addition."
+    },
+    {
+      "code": "7",
+      "name": "Change",
+      "description": "Maintenance operation involves change."
+    },
+    {
+      "code": "8",
+      "name": "Marked for deletion",
+      "description": "The item is marked for deletion in a future release."
+    },
+    {
+      "code": "9",
+      "name": "Repair",
+      "description": "Maintenance operation involves repair."
+    },
+    {
+      "code": "10",
+      "name": "Cleaning",
+      "description": "Maintenance operation involves cleaning."
+    },
+    {
+      "code": "11",
+      "name": "Waste disposal",
+      "description": "Maintenance operation involves waste disposal."
+    },
+    {
+      "code": "12",
+      "name": "Return of empty packages",
+      "description": "Maintenance operation involves return of empty packages."
+    }
+  ]
 }

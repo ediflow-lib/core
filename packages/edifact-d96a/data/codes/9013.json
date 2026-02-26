@@ -1,5 +1,330 @@
 {
-  "code": "9013",
-  "name": "Status reason, coded",
-  "values": []
+  "elementCode": "9013",
+  "elementName": "Status reason, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Address ex delivery area",
+      "description": "The address for delivery is outside the area of the carrier/transporter."
+    },
+    {
+      "code": "2",
+      "name": "After transport departed",
+      "description": "The goods/consignments/equipment arrived after the means of transport has departed."
+    },
+    {
+      "code": "3",
+      "name": "Agent refusal",
+      "description": "The agent of the customer refused to accept delivery."
+    },
+    {
+      "code": "4",
+      "name": "Altered seals",
+      "description": "The seals on the equipment have been changed from those notified."
+    },
+    {
+      "code": "5",
+      "name": "Appointment scheduled",
+      "description": "An arrangement has been made to deliver at a specific time."
+    },
+    {
+      "code": "6",
+      "name": "Attempt unsuccessful",
+      "description": "An unsuccessful attempt has been made to deliver the goods/consignments/equipment."
+    },
+    {
+      "code": "7",
+      "name": "Business closed",
+      "description": "The goods/consignments/equipment could not be delivered/collected as the business was closed."
+    },
+    {
+      "code": "8",
+      "name": "Changed schedule",
+      "description": "The goods/consignments/equipment cannot/will not be delivered/collected at the arranged time because of a change of schedule."
+    },
+    {
+      "code": "9",
+      "name": "Complementary address needed",
+      "description": "A further address is needed to effect delivery/collection of the goods/consignments/equipment."
+    },
+    {
+      "code": "10",
+      "name": "Computer system down",
+      "description": "The computer system is inoperative."
+    },
+    {
+      "code": "11",
+      "name": "Credit approval requested",
+      "description": "The consignee requests delivery on a credit base."
+    },
+    {
+      "code": "12",
+      "name": "Customer arrangements",
+      "description": "Goods/consignments/equipment require delivery arrangements by the customer."
+    },
+    {
+      "code": "13",
+      "name": "Customs refusal",
+      "description": "The Customs authorities have refused to clear the goods/consignments/equipment."
+    },
+    {
+      "code": "14",
+      "name": "Damaged",
+      "description": "The goods/consignments/equipment have been damaged."
+    },
+    {
+      "code": "15",
+      "name": "Delivery at specific requested dates/times/periods",
+      "description": "Delivery of the goods/consignments/equipment is requested at specific dates/times/periods."
+    },
+    {
+      "code": "16",
+      "name": "Destination incorrect",
+      "description": "The goods/consignments/equipment have been sent to wrong destination."
+    },
+    {
+      "code": "17",
+      "name": "Departure delay",
+      "description": "The transport has been delayed in departing on the arranged transport action."
+    },
+    {
+      "code": "18",
+      "name": "Derailment",
+      "description": "The train carrying the goods/consignments/equipment has been derailed."
+    },
+    {
+      "code": "19",
+      "name": "Discrepancy",
+      "description": "There is a discrepancy between the details of goods/ equipment previously provided and the actual situation."
+    },
+    {
+      "code": "20",
+      "name": "Dock strike",
+      "description": "The goods/consignments/equipment cannot be delivered/collected due to a dock strike."
+    },
+    {
+      "code": "21",
+      "name": "Due to customer",
+      "description": "An action in the transport chain has been affected due to action of the customer."
+    },
+    {
+      "code": "22",
+      "name": "Empty",
+      "description": "The package/equipment is found to be empty."
+    },
+    {
+      "code": "23",
+      "name": "Equipment failure",
+      "description": "Delivery/collection could not be effected due to equipment failure."
+    },
+    {
+      "code": "24",
+      "name": "Examination required by relevant authority",
+      "description": "An examination of the goods/equipment has been ordered by the relevant authority."
+    },
+    {
+      "code": "25",
+      "name": "Export restrictions",
+      "description": "The goods/consignments/equipment have been prohibited from export pending further investigation."
+    },
+    {
+      "code": "26",
+      "name": "Frustrated export",
+      "description": "Attempts to export the goods/consignments/equipment have been unsuccessful."
+    },
+    {
+      "code": "27",
+      "name": "Goods units missing",
+      "description": "The tally of goods/consignments/equipment does not match the quantity as per advice. Result: less than advised."
+    },
+    {
+      "code": "28",
+      "name": "Import restrictions",
+      "description": "The goods/consignments/equipment need import checks and tests pending being released for importation."
+    },
+    {
+      "code": "29",
+      "name": "Incorrect pick information",
+      "description": "The goods/consignments/equipment were not collected due to incorrect pick information."
+    },
+    {
+      "code": "30",
+      "name": "Incorrect address",
+      "description": "The address given for the action was incorrect."
+    },
+    {
+      "code": "31",
+      "name": "Industrial dispute",
+      "description": "The action was frustrated by an industrial dispute."
+    },
+    {
+      "code": "32",
+      "name": "Instructions awaited",
+      "description": "Further instructions are required."
+    },
+    {
+      "code": "33",
+      "name": "Lost goods/consignments/equipment",
+      "description": "The goods/consignments/equipment have been lost in the course of a movement along the transport chain."
+    },
+    {
+      "code": "34",
+      "name": "Means of transport damaged",
+      "description": "The means of transport on which the goods/consignments/equipment were being (were to be) moved has been  damaged."
+    },
+    {
+      "code": "35",
+      "name": "Mechanical breakdown",
+      "description": "There has been a mechanical breakdown of the means of transport/equipment on which the goods/consignments/equipment was being (was to be) moved."
+    },
+    {
+      "code": "36",
+      "name": "Mechanical inspection",
+      "description": "A mechanical inspection of the means of transport/ equipment on which the goods/consignments/equipment were being (were to be) moved, is required."
+    },
+    {
+      "code": "37",
+      "name": "Missing and/or incorrect documents",
+      "description": "The goods/consignments/equipment require complete and correct documentation."
+    },
+    {
+      "code": "38",
+      "name": "New delivery arrangements",
+      "description": "Alternative delivery arrangements advised by consignee after failed delivery."
+    },
+    {
+      "code": "39",
+      "name": "No recipient contact information",
+      "description": "No information available concerning the responsible person at delivery address."
+    },
+    {
+      "code": "40",
+      "name": "Not identified",
+      "description": "The goods/consignments/equipment expected to be located and identified in the transport chain cannot be identified."
+    },
+    {
+      "code": "41",
+      "name": "Not loaded",
+      "description": "The goods/consignments/equipment to be loaded onto a means of transport have not been loaded on the expected transport."
+    },
+    {
+      "code": "42",
+      "name": "On deck",
+      "description": "The goods/consignments/equipment have been stowed on deck."
+    },
+    {
+      "code": "43",
+      "name": "Package not ready",
+      "description": "The package was not available for collection."
+    },
+    {
+      "code": "44",
+      "name": "Package tracking number unknown",
+      "description": "The package tracking number is unknown."
+    },
+    {
+      "code": "45",
+      "name": "Partly missing",
+      "description": "The goods/consignments/equipment are partly, but not completely, missing."
+    },
+    {
+      "code": "46",
+      "name": "Payment not received",
+      "description": "The expected payment for the transport action was not received."
+    },
+    {
+      "code": "47",
+      "name": "Payment refused",
+      "description": "The payer refused to pay for the service."
+    },
+    {
+      "code": "48",
+      "name": "Plundered",
+      "description": "The goods/consignments/equipment have been plundered."
+    },
+    {
+      "code": "49",
+      "name": "Refused without reason given",
+      "description": "The transport action/documentation has been refused without explanation."
+    },
+    {
+      "code": "50",
+      "name": "Scheduled past cut-off",
+      "description": "The goods/consignments/equipment to be delivered/collected have been scheduled past/later than the cut-off time."
+    },
+    {
+      "code": "51",
+      "name": "Shunted to siding",
+      "description": "The transport on which the goods/consignments/equipment is to be placed has been shunted to siding."
+    },
+    {
+      "code": "52",
+      "name": "Signature not required"
+    },
+    {
+      "code": "53",
+      "name": "Sorted wrong route",
+      "description": "The goods/consignments/equipment have been sorted erroneously to an incorrect route."
+    },
+    {
+      "code": "54",
+      "name": "Special service required",
+      "description": "A special service is required for the goods/consignments/equipment."
+    },
+    {
+      "code": "55",
+      "name": "Split",
+      "description": "The consignment of goods has been split into two or more consignments."
+    },
+    {
+      "code": "56",
+      "name": "Totally missing",
+      "description": "The total goods/consignments/equipment is missing."
+    },
+    {
+      "code": "57",
+      "name": "Tracking information unavailable",
+      "description": "The tracking information of the goods/consignments/equipment is unavailable."
+    },
+    {
+      "code": "58",
+      "name": "Transit delay",
+      "description": "The goods/consignments/equipment have been delayed in transit."
+    },
+    {
+      "code": "59",
+      "name": "Unable to locate",
+      "description": "The goods/consignments/equipment cannot be located."
+    },
+    {
+      "code": "60",
+      "name": "Unacceptable condition",
+      "description": "The goods/consignments/equipment were in unacceptable condition at time of delivery/collection."
+    },
+    {
+      "code": "61",
+      "name": "Under deck",
+      "description": "The goods/consignments/equipment have been stowed under/below deck."
+    },
+    {
+      "code": "62",
+      "name": "Unknown",
+      "description": "The reason is unknown."
+    },
+    {
+      "code": "63",
+      "name": "Weather conditions",
+      "description": "The weather conditions have affected collection/delivery."
+    },
+    {
+      "code": "64",
+      "name": "Expired free time",
+      "description": "The goods/consignments/equipment have been in a storage facility for longer than permitted free time."
+    },
+    {
+      "code": "65",
+      "name": "Outstanding claims settled",
+      "description": "Outstanding claims in respect of goods/consignments/equipment have been settled."
+    }
+  ]
 }
