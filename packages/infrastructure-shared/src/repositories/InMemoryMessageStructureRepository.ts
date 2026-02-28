@@ -2,22 +2,22 @@ import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/
 
 
 export class InMemoryMessageStructureRepository implements IMessageStructureRepository {
-  private definitions = new Map<string, MessageStructureDTO>();
+  private structures = new Map<string, MessageStructureDTO>();
 
-  async getMessageDefinition(
+  async getMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<MessageStructureDTO | null> {
     const key = this.createKey(standard, version, messageType);
-    return this.definitions.get(key) || null;
+    return this.structures.get(key) || null;
   }
 
   async getAllMessageTypes(standard: string, version: string): Promise<string[]> {
     const prefix = this.createKey(standard, version, '');
     const messageTypes: string[] = [];
 
-    for (const key of this.definitions.keys()) {
+    for (const key of this.structures.keys()) {
       if (key.startsWith(prefix)) {
         const parts = key.split(':');
         if (parts[2]) {
@@ -29,26 +29,26 @@ export class InMemoryMessageStructureRepository implements IMessageStructureRepo
     return messageTypes;
   }
 
-  async hasMessageDefinition(
+  async hasMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<boolean> {
     const key = this.createKey(standard, version, messageType);
-    return this.definitions.has(key);
+    return this.structures.has(key);
   }
 
-  register(definition: MessageStructureDTO): void {
+  register(structure: MessageStructureDTO): void {
     const key = this.createKey(
-      definition.standard,
-      definition.version,
-      definition.messageType
+      structure.standard,
+      structure.version,
+      structure.messageType
     );
-    this.definitions.set(key, definition);
+    this.structures.set(key, structure);
   }
 
   clear(): void {
-    this.definitions.clear();
+    this.structures.clear();
   }
 
   private createKey(standard: string, version: string, messageType: string): string {

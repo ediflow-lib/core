@@ -1,0 +1,64 @@
+# YAML Schema Definition für Composite Elements
+# Definiert die Struktur, wie Composites in composites.json gespeichert werden
+
+type: object
+description: Map of composite code to composite definition.
+additionalProperties:
+  type: object
+  properties:
+    code:
+      type: string
+      description: Composite element code (e.g. "C001", "C040")
+    name:
+      type: string
+      description: Composite element name
+    description:
+      type: string
+      description: Composite element description (optional)
+    components:
+      type: array
+      description: Ordered list of component elements within this composite
+      items:
+        type: object
+        properties:
+          elementCode:
+            type: string
+            description: Reference to element code from elements.json
+          mandatory:
+            type: boolean
+            description: Whether this component is mandatory
+          position:
+            type: integer
+            minimum: 1
+            description: Position of this component within the composite (1-based)
+        required:
+          - elementCode
+          - mandatory
+          - position
+  required:
+    - code
+    - name
+    - components
+
+example:
+  "C001":
+    code: "C001"
+    name: "Composite Unit of Measure"
+    description: "Identifies a composite unit of measure"
+    components:
+      - elementCode: "355"
+        mandatory: true
+        position: 1
+      - elementCode: "1018"
+        mandatory: false
+        position: 2
+  "C040":
+    code: "C040"
+    name: "Reference Identifier"
+    components:
+      - elementCode: "128"
+        mandatory: true
+        position: 1
+      - elementCode: "127"
+        mandatory: false
+        position: 2

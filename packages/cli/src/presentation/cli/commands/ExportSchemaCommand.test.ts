@@ -29,7 +29,7 @@ describe('ExportSchemaCommand', () => {
     } as any;
 
     mockRepository = {
-      getMessageDefinition: vi.fn().mockResolvedValue(mockMessageStructure)
+      getMessageStructure: vi.fn().mockResolvedValue(mockMessageStructure)
     } as any;
 
     command = new ExportSchemaCommand(mockGenerator, mockRepository);
@@ -128,7 +128,7 @@ describe('ExportSchemaCommand', () => {
 
   describe('Error Handling', () => {
     it('should propagate repository errors', async () => {
-      mockRepository.getMessageDefinition = vi.fn().mockRejectedValue(
+      mockRepository.getMessageStructure = vi.fn().mockRejectedValue(
         new Error('Message type not found')
       );
 

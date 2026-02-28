@@ -1,0 +1,67 @@
+# YAML Schema Definition für Data Elements
+# Definiert die Struktur, wie Elements in elements.json gespeichert werden
+
+type: object
+description: Map of element code to element definition.
+additionalProperties:
+  type: object
+  properties:
+    code:
+      type: string
+      description: Element code (e.g. "128", "3035")
+    name:
+      type: string
+      description: Element name
+    description:
+      type: string
+      description: Element description (optional)
+    dataType:
+      type: string
+      enum: [a, n, an, id, dt, tm, r, b]
+      description: >
+        Data type of the element:
+          a   = alphabetic
+          n   = numeric
+          an  = alphanumeric
+          id  = identifier (references a code list)
+          dt  = date (YYYYMMDD)
+          tm  = time (HHMM)
+          r   = decimal number
+          b   = binary
+    minLength:
+      type: integer
+      minimum: 0
+      description: Minimum length (optional)
+    maxLength:
+      type: integer
+      minimum: 1
+      description: Maximum length
+    codeListCode:
+      type: string
+      description: Reference to code list in codes/{code}.json (optional)
+  required:
+    - code
+    - name
+    - dataType
+    - maxLength
+
+example:
+  "128":
+    code: "128"
+    name: "Reference Identification Qualifier"
+    dataType: "id"
+    minLength: 2
+    maxLength: 3
+    codeListCode: "128"
+  "3035":
+    code: "3035"
+    name: "Party function code qualifier"
+    dataType: "an"
+    maxLength: 3
+    codeListCode: "3035"
+  "373":
+    code: "373"
+    name: "Date"
+    dataType: "dt"
+    minLength: 8
+    maxLength: 8

@@ -1,0 +1,157 @@
+type: object
+description: Message definition including structure of segments and segment groups.
+properties:
+  standard:
+    type: string
+    description: EDI standard name (e.g. "EDIFACT", "X12")
+  version:
+    type: string
+    description: Standard version (e.g. "D.20B", "006040", "004010")
+  messageType:
+    type: string
+    description: Message type code (e.g. "ORDERS", "850", "837")
+  name:
+    type: string
+    description: Message name
+  description:
+    type: string
+    description: Message description (optional)
+  structure:
+    type: array
+    description: Ordered list of segments and segment groups
+    items:
+      oneOf:
+        - type: object
+          description: Direct segment reference
+          properties:
+            nodeType:
+              type: string
+              const: segment
+            segmentRef:
+              type: string
+              description: Reference to segment tag from segments.json
+            mandatory:
+              type: boolean
+            maxOccurrences:
+              type: integer
+              minimum: 1
+            position:
+              type: integer
+              minimum: 1
+          required:
+            - nodeType
+            - segmentRef
+            - mandatory
+            - maxOccurrences
+            - position
+        - type: object
+          description: >
+            Segment group — a named, repeating group of segments.
+            Used in EDIFACT (SG1, SG2, ...) and X12 (Loop0100, LoopN1, ...).
+          properties:
+            nodeType:
+              type: string
+              const: segmentGroup
+            id:
+              type: string
+              description: Unique group identifier (e.g. "SG1", "LoopN1", "Loop2000A")
+            name:
+              type: string
+              description: Group display name (same as id)
+            triggerSegment:
+              type: string
+              description: >
+                The first segment of this group — its presence triggers the group.
+                Always the first segment in the group's structure array.
+            mandatory:
+              type: boolean
+            maxOccurrences:
+              type: integer
+              minimum: 1
+            position:
+              type: integer
+              minimum: 1
+            structure:
+              type: array
+              description: Nested segments and segment groups within this group
+              items:
+                $ref: "#/properties/structure/items"
+          required:
+            - nodeType
+            - id
+            - name
+            - triggerSegment
+            - mandatory
+            - maxOccurrences
+            - position
+            - structure
+required:
+  - standard
+  - version
+  - messageType
+  - name
+  - structure
+
+example:
+  standard: "EDIFACT"
+  version: "D.20B"
+  messageType: "ORDERS"
+  name: "Purchase order message"
+  structure:
+    - nodeType: "segment"
+      segmentRef: "UNH"
+      mandatory: true
+      maxOccurrences: 1
+      position: 10
+    - nodeType: "segment"
+      segmentRef: "BGM"
+      mandatory: true
+      maxOccurrences: 1
+      position: 20
+    - nodeType: "segmentGroup"
+      id: "SG1"
+      name: "SG1"
+      triggerSegment: "RFF"
+      mandatory: false
+      maxOccurrences: 10
+      position: 30
+      structure:
+        - nodeType: "segment"
+          segmentRef: "RFF"
+          mandatory: true
+          maxOccurrences: 1
+          position: 10
+        - nodeType: "segment"
+          segmentRef: "DTM"
+          mandatory: false
+          maxOccurrences: 5
+          position: 20
+  ---
+  standard: "X12"
+  version: "006040"
+  messageType: "850"
+  name: "Purchase Order"
+  structure:
+    - nodeType: "segment"
+      segmentRef: "ST"
+      mandatory: true
+      maxOccurrences: 1
+      position: 10
+    - nodeType: "segmentGroup"
+      id: "LoopN1"
+      name: "LoopN1"
+      triggerSegment: "N1"
+      mandatory: false
+      maxOccurrences: 200
+      position: 310
+      structure:
+        - nodeType: "segment"
+          segmentRef: "N1"
+          mandatory: true
+          maxOccurrences: 1
+          position: 10
+        - nodeType: "segment"
+          segmentRef: "N3"
+          mandatory: false
+          maxOccurrences: 2
+          position: 20

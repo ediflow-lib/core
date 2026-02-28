@@ -9,6 +9,5 @@
  * Application DTO = MessageStructureDTO (the external definition)
  */
 
-export * from './MessageStructureDTO';export type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite } from './MessageStructureDTO';
-export type { MessageDefinitionDTO, MessageDefinition } from './MessageDefinitionDTO';
-export * from './RepositoryDefinitions';
+export * from './MessageStructureDTO';
+export type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite } from './MessageStructureDTO';

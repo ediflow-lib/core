@@ -6,7 +6,7 @@ import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
   constructor(private readonly basePath: string) {}
 
-  async getMessageDefinition(
+  async getMessageStructure(
     standard: string,
     version: string,
     messageType: string
@@ -39,7 +39,7 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
     }
   }
 
-  async hasMessageDefinition(
+  async hasMessageStructure(
     standard: string,
     version: string,
     messageType: string

@@ -346,7 +346,7 @@ packages/
     │   ├── FileBasedMessageStructureRepository.ts
     │   └── InMemoryMessageStructureRepository.ts
     ├── loaders/
-    │   └── CachedDefinitionLoader.ts
+    │   └── CachingMessageStructureRepository.ts
     └── cache/
         └── CacheService.ts
 ```

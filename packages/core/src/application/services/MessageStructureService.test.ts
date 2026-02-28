@@ -7,40 +7,40 @@ import { Standard } from '@domain/value-objects/Standard';
 describe('MessageStructureService', () => {
   let service: MessageStructureService;
   let mockRepository: IMessageStructureRepository;
-  const definitions = new Map<string, MessageStructureDTO>();
+  const structures = new Map<string, MessageStructureDTO>();
 
   beforeEach(() => {
-    definitions.clear();
+    structures.clear();
 
     mockRepository = {
-      getMessageDefinition: vi.fn(async (standard: string, version: string, messageType: string) => {
+      getMessageStructure: vi.fn(async (standard: string, version: string, messageType: string) => {
         const key = `${standard}:${version}:${messageType}`;
-        return definitions.get(key) || null;
+        return structures.get(key) || null;
       }),
       getAllMessageTypes: vi.fn(async (standard: string, version: string) => {
         const prefix = `${standard}:${version}:`;
-        return Array.from(definitions.keys())
+        return Array.from(structures.keys())
           .filter(key => key.startsWith(prefix))
           .map(key => key.split(':')[2])
           .filter((type): type is string => type !== undefined);
       }),
-      hasMessageDefinition: vi.fn(async (standard: string, version: string, messageType: string) => {
+      hasMessageStructure: vi.fn(async (standard: string, version: string, messageType: string) => {
         const key = `${standard}:${version}:${messageType}`;
-        return definitions.has(key);
+        return structures.has(key);
       })
     };
 
     service = new MessageStructureService(mockRepository);
   });
 
-  const registerDefinition = (definition: MessageStructureDTO) => {
-    const key = `${definition.standard}:${definition.version}:${definition.messageType}`;
-    definitions.set(key, definition);
+  const registerStructure = (structure: MessageStructureDTO) => {
+    const key = `${structure.standard}:${structure.version}:${structure.messageType}`;
+    structures.set(key, structure);
   };
 
-  describe('getMessageDefinition', () => {
-    it('should return message definition when it exists', async () => {
-      const definition: MessageStructureDTO = {
+  describe('getMessageStructure', () => {
+    it('should return message structure when it exists', async () => {
+      const structure: MessageStructureDTO = {
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -48,23 +48,23 @@ describe('MessageStructureService', () => {
         structure: []
       };
 
-      registerDefinition(definition);
+      registerStructure(structure);
 
-      const result = await service.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const result = await service.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
-      expect(result).toEqual(definition);
+      expect(result).toEqual(structure);
     });
 
-    it('should throw error when message definition not found', async () => {
+    it('should throw error when message structure not found', async () => {
       expect(
-        service.getMessageDefinition('EDIFACT', 'D.20B', 'UNKNOWN')
-      ).rejects.toThrow('Message definition not found: EDIFACT D.20B UNKNOWN');
+        service.getMessageStructure('EDIFACT', 'D.20B', 'UNKNOWN')
+      ).rejects.toThrow('Message structure not found: EDIFACT D.20B UNKNOWN');
     });
   });
 
   describe('getAllMessageTypes', () => {
     it('should return all message types', async () => {
-      registerDefinition({
+      registerStructure({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -72,7 +72,7 @@ describe('MessageStructureService', () => {
         structure: []
       });
 
-      registerDefinition({
+      registerStructure({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'INVOIC',
@@ -88,9 +88,9 @@ describe('MessageStructureService', () => {
     });
   });
 
-  describe('hasMessageDefinition', () => {
+  describe('hasMessageStructure', () => {
     it('should return true when message exists', async () => {
-      registerDefinition({
+      registerStructure({
         standard: Standard.EDIFACT,
         version: 'D.20B',
         messageType: 'ORDERS',
@@ -98,13 +98,13 @@ describe('MessageStructureService', () => {
         structure: []
       });
 
-      const result = await service.hasMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const result = await service.hasMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       expect(result).toBe(true);
     });
 
     it('should return false when message does not exist', async () => {
-      const result = await service.hasMessageDefinition('EDIFACT', 'D.20B', 'UNKNOWN');
+      const result = await service.hasMessageStructure('EDIFACT', 'D.20B', 'UNKNOWN');
 
       expect(result).toBe(false);
     });

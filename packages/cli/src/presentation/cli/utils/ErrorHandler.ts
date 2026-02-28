@@ -1,4 +1,4 @@
-import { DefinitionNotFoundError } from '@ediflow/core';
+import { MessageStructureNotFoundError } from '@ediflow/core';
 
 /**
  * Handles error formatting for CLI output.
@@ -13,9 +13,8 @@ export class ErrorHandler {
    * @returns Formatted error message
    */
   static format(error: Error | unknown): string {
-    // Special handling for DefinitionNotFoundError
-    if (error instanceof DefinitionNotFoundError) {
-      return this.formatDefinitionNotFound(error);
+    if (error instanceof MessageStructureNotFoundError) {
+      return this.formatMessageStructureNotFound(error);
     }
 
     if (error instanceof Error) {
@@ -25,12 +24,9 @@ export class ErrorHandler {
   }
 
   /**
-   * Formats DefinitionNotFoundError with installation instructions.
-   *
-   * @param error - DefinitionNotFoundError instance
-   * @returns User-friendly error message with installation help
+   * Formats MessageStructureNotFoundError with installation instructions.
    */
-  private static formatDefinitionNotFound(error: DefinitionNotFoundError): string {
+  private static formatMessageStructureNotFound(error: MessageStructureNotFoundError): string {
     const standard = error.standard.toString();
     const version = error.version.value;
     const messageType = error.messageType.value;

@@ -10,9 +10,9 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     repository = new FileBasedMessageStructureRepository(basePath);
   });
 
-  describe('getMessageDefinition', () => {
+  describe('getMessageStructure', () => {
     it('should load ORDERS message definition from JSON file', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       expect(definition).not.toBeNull();
       expect(definition?.standard).toBe('EDIFACT');
@@ -24,20 +24,20 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     });
 
     it('should handle case-insensitive standard and version', async () => {
-      const definition = await repository.getMessageDefinition('edifact', 'd.20b', 'ORDERS');
+      const definition = await repository.getMessageStructure('edifact', 'd.20b', 'ORDERS');
 
       expect(definition).not.toBeNull();
       expect(definition?.messageType).toBe('ORDERS');
     });
 
     it('should return null for non-existing message', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'NONEXIST');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'NONEXIST');
 
       expect(definition).toBeNull();
     });
 
     it('should validate message structure contains segment references', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       const unhSegment: any = definition?.structure.find(
         (node: any) => node.nodeType === 'segment' && node.segmentRef === 'UNH'
@@ -50,7 +50,7 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     });
 
     it('should validate message structure contains segment groups', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       const segmentGroup: any = definition?.structure.find(
         (node: any) => node.nodeType === 'segmentGroup' && node.id === 'SG2'
@@ -80,15 +80,15 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     });
   });
 
-  describe('hasMessageDefinition', () => {
+  describe('hasMessageStructure', () => {
     it('should return true for existing message', async () => {
-      const exists = await repository.hasMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const exists = await repository.hasMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       expect(exists).toBe(true);
     });
 
     it('should return false for non-existing message', async () => {
-      const exists = await repository.hasMessageDefinition('EDIFACT', 'D.20B', 'NONEXIST');
+      const exists = await repository.hasMessageStructure('EDIFACT', 'D.20B', 'NONEXIST');
 
       expect(exists).toBe(false);
     });

@@ -25,7 +25,7 @@ export class ExportSchemaCommand {
       throw new Error('Message type is required');
     }
 
-    const structure = await this.repository.getMessageDefinition(
+    const structure = await this.repository.getMessageStructure(
       'EDIFACT',
       version,
       options.message
@@ -45,7 +45,7 @@ export class ExportSchemaCommand {
     const results: Array<{ messageType: string; schema: string }> = [];
 
     for (const messageType of messageTypes) {
-      const structure = await this.repository.getMessageDefinition('EDIFACT', version, messageType);
+      const structure = await this.repository.getMessageStructure('EDIFACT', version, messageType);
 
       if (!structure) continue;
 

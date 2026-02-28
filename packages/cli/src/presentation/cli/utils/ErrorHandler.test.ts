@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { ErrorHandler } from './ErrorHandler';
-import { DefinitionNotFoundError } from '@ediflow/core';
+import { MessageStructureNotFoundError } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
 import { Version } from '@ediflow/core';
 import { MessageType } from '@ediflow/core';
@@ -23,8 +23,8 @@ describe('ErrorHandler', () => {
       expect(result).toContain('string error');
     });
 
-    it('should format DefinitionNotFoundError with installation instructions', () => {
-      const error = new DefinitionNotFoundError(
+    it('should format MessageStructureNotFoundError with installation instructions', () => {
+      const error = new MessageStructureNotFoundError(
         Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.96A'),
         new MessageType(Standard.EDIFACT, 'ORDERS')
@@ -32,24 +32,21 @@ describe('ErrorHandler', () => {
 
       const result = ErrorHandler.format(error);
 
-      // Should contain all important information
       expect(result).toContain('❌ Message Definition Not Found');
       expect(result).toContain('Standard:     EDIFACT');
       expect(result).toContain('Version:      D.96A');
       expect(result).toContain('Message Type: ORDERS');
 
-      // Should contain installation instructions
       expect(result).toContain('npm install @ediflow/edifact-d96a');
       expect(result).toContain('📦 The required data package is not installed');
 
-      // Should list available packages
       expect(result).toContain('@ediflow/edifact-d96a');
       expect(result).toContain('@ediflow/edifact-d01b');
       expect(result).toContain('@ediflow/edifact-d20b');
     });
 
     it('should map version D.01B to correct package name', () => {
-      const error = new DefinitionNotFoundError(
+      const error = new MessageStructureNotFoundError(
         Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.01B'),
         new MessageType(Standard.EDIFACT, 'INVOIC')
@@ -62,7 +59,7 @@ describe('ErrorHandler', () => {
     });
 
     it('should map version D.20B to correct package name', () => {
-      const error = new DefinitionNotFoundError(
+      const error = new MessageStructureNotFoundError(
         Standard.EDIFACT,
         new Version(Standard.EDIFACT, 'D.20B'),
         new MessageType(Standard.EDIFACT, 'DESADV')
