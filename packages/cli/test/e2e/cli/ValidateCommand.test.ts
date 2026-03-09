@@ -121,7 +121,7 @@ describe('ValidateCommand - Integration Tests (US-5.2)', () => {
       const testEDI = `UNB+UNOC:3+SENDER+RECEIVER+20240124:1200+1'BGM+220+ORDER123+9'UNT+2+1'UNZ+1+1'`;
       writeFileSync(testFile, testEDI);
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should return invalid result for messages with segment count mismatch', async () => {
@@ -162,7 +162,7 @@ describe('ValidateCommand - Integration Tests (US-5.2)', () => {
       const testEDI = `UNB+UNOC:3+SENDER+RECEIVER+20240124:1200+1'UNH+1+UNKNOWN:D:96A:UN'UNT+2+1'UNZ+1+1'`;
       writeFileSync(testFile, testEDI);
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow('Cannot validate: Message parsing failed');
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow('Cannot validate: Message parsing failed');
     });
   });
 
@@ -245,27 +245,27 @@ describe('ValidateCommand - Integration Tests (US-5.2)', () => {
     it('should throw error for non-existent file', async () => {
       const nonExistentFile = join(testDir, 'does-not-exist.edi');
 
-      expect(simulateValidateExecution(nonExistentFile, {})).rejects.toThrow();
+      await expect(simulateValidateExecution(nonExistentFile, {})).rejects.toThrow();
     });
 
     it('should throw error for undetectable EDI standard', async () => {
       const invalidContent = 'This is not EDI content at all';
       writeFileSync(testFile, invalidContent);
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow('Unable to detect EDI standard');
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow('Unable to detect EDI standard');
     });
 
     it('should handle empty file', async () => {
       writeFileSync(testFile, '');
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should handle malformed EDIFACT message', async () => {
       const malformedEDI = `UNB+UNOC:3+SENDER`;
       writeFileSync(testFile, malformedEDI);
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should handle message with control characters', async () => {
@@ -285,7 +285,7 @@ describe('ValidateCommand - Integration Tests (US-5.2)', () => {
       const wrongTerminator = `UNB+UNOC:3+SENDER+RECEIVER+20240124:1200+1\nUNH+1+ORDERS:D:96A:UN\nUNT+2+1\nUNZ+1+1\n`;
       writeFileSync(testFile, wrongTerminator);
 
-      expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateValidateExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should handle message with missing element separator', async () => {

@@ -1,9 +1,10 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { ValidateMessageUseCase } from '@application';
-import { EDIMessage, Standard, Version, MessageType, EDISegment } from '@domain';
+import { EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement } from '@domain';
 import { EDIMessageFactory } from '@application/factories';
 import type { IValidationService } from '@application/ports';
 import { ValidationResult, ValidationError } from '@application/validation';
+import type { MessageStructureDTO, SegmentNode } from '@application/dtos';
 
 describe('ValidateMessageUseCase', () => {
   let useCase: ValidateMessageUseCase;
@@ -108,6 +109,73 @@ describe('ValidateMessageUseCase', () => {
         expect(result.metadata.version.value).toBe('005010');
         expect(result.metadata.messageType.value).toBe('850');
         expect(result.metadata.segmentCount).toBe(1);
+      }
+    });
+
+    it('should validate codes when validateCodes and codeLists provided', () => {
+      const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
+      message.addSegment(new EDISegment('BEG', [new EDIElement('XX')]));
+
+      const structure: MessageStructureDTO = {
+        standard: 'X12', version: '004010', messageType: '850', name: 'PO',
+        structure: [{
+          nodeType: 'segment', tag: 'BEG', name: 'Beginning', mandatory: true, maxOccurrences: 1, position: 10,
+          elements: [{ nodeType: 'element', code: '353', name: 'PurposeCode', mandatory: true, position: 1, codeListCode: '353' }]
+        } as SegmentNode]
+      };
+
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.success());
+
+      const result = useCase.execute({
+        message,
+        messageStructure: structure,
+        validateCodes: true,
+        codeLists: new Map([['353', new Set(['00', '01', '02'])]])
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.validationResult.isValid).toBe(false);
+        expect(result.validationResult.errors.some(e => e.code === 'INVALID_CODE_VALUE')).toBe(true);
+      }
+    });
+
+    it('should skip code validation when validateCodes is false', () => {
+      const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
+      message.addSegment(new EDISegment('BEG', [new EDIElement('XX')]));
+
+      const structure: MessageStructureDTO = {
+        standard: 'X12', version: '004010', messageType: '850', name: 'PO',
+        structure: [{
+          nodeType: 'segment', tag: 'BEG', name: 'Beginning', mandatory: true, maxOccurrences: 1, position: 10,
+          elements: [{ nodeType: 'element', code: '353', name: 'PurposeCode', mandatory: true, position: 1, codeListCode: '353' }]
+        } as SegmentNode]
+      };
+
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.success());
+
+      const result = useCase.execute({
+        message,
+        messageStructure: structure,
+        validateCodes: false,
+        codeLists: new Map([['353', new Set(['00', '01', '02'])]])
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.validationResult.isValid).toBe(true);
+      }
+    });
+
+    it('should skip code validation when codeLists is not provided', () => {
+      const message = createMessage(Standard.X12, '004010', '850');
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.success());
+
+      const result = useCase.execute({ message, validateCodes: true });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.validationResult.isValid).toBe(true);
       }
     });
   });

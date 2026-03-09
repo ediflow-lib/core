@@ -25,4 +25,14 @@ export interface IMessageStructureRepository {
     version: string,
     messageType: string
   ): Promise<boolean>;
+
+  /**
+   * Opt-in: Load a code list for code value validation.
+   * Returns null if the code list is not available in this package.
+   */
+  getCodeList(
+    standard: string,
+    version: string,
+    codeListCode: string
+  ): Promise<Set<string> | null>;
 }

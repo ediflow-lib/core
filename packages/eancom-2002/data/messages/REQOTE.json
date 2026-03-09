@@ -6,45 +6,31 @@
   "structure": [
     {
       "nodeType": "segment",
-      "segmentRef": "UNA",
-      "mandatory": false,
-      "maxOccurrences": 1,
-      "position": 1
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNB",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 2
-    },
-    {
-      "nodeType": "segment",
       "segmentRef": "UNH",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 3
+      "position": 1
     },
     {
       "nodeType": "segment",
       "segmentRef": "BGM",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 4
+      "position": 2
     },
     {
       "nodeType": "segment",
       "segmentRef": "DTM",
       "mandatory": true,
       "maxOccurrences": 35,
-      "position": 5
+      "position": 3
     },
     {
       "nodeType": "segment",
       "segmentRef": "FTX",
       "mandatory": false,
       "maxOccurrences": 99,
-      "position": 6
+      "position": 4
     },
     {
       "nodeType": "segmentGroup",
@@ -53,7 +39,7 @@
       "triggerSegment": "RFF",
       "mandatory": false,
       "maxOccurrences": 9999,
-      "position": 7,
+      "position": 5,
       "structure": [
         {
           "nodeType": "segment",
@@ -78,7 +64,7 @@
       "triggerSegment": "CUX",
       "mandatory": false,
       "maxOccurrences": 5,
-      "position": 8,
+      "position": 6,
       "structure": [
         {
           "nodeType": "segment",
@@ -103,7 +89,7 @@
       "triggerSegment": "PAT",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 9,
+      "position": 7,
       "structure": [
         {
           "nodeType": "segment",
@@ -128,7 +114,7 @@
       "triggerSegment": "TOD",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 10,
+      "position": 8,
       "structure": [
         {
           "nodeType": "segment",
@@ -153,7 +139,7 @@
       "triggerSegment": "NAD",
       "mandatory": false,
       "maxOccurrences": 99,
-      "position": 11,
+      "position": 9,
       "structure": [
         {
           "nodeType": "segment",
@@ -214,7 +200,7 @@
       "triggerSegment": "TDT",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 12,
+      "position": 10,
       "structure": [
         {
           "nodeType": "segment",
@@ -232,7 +218,7 @@
       "triggerSegment": "LIN",
       "mandatory": true,
       "maxOccurrences": 200000,
-      "position": 13,
+      "position": 11,
       "structure": [
         {
           "nodeType": "segment",
@@ -651,14 +637,7 @@
       "segmentRef": "UNT",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 14
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNZ",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 15
+      "position": 12
     }
   ]
 }

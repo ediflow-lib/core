@@ -21,18 +21,16 @@ import { LRUCacheManager } from '../cache/LRUCacheManager';
  */
 export class CachingMessageStructureRepository implements IMessageStructureRepository {
   private readonly cache: LRUCacheManager<MessageStructureDTO>;
+  private readonly codeListCache: LRUCacheManager<Set<string>>;
 
   constructor(
     private readonly repository: IMessageStructureRepository,
     cacheSize: number = 100
   ) {
     this.cache = new LRUCacheManager(cacheSize);
+    this.codeListCache = new LRUCacheManager(cacheSize);
   }
 
-  /**
-   * Loads a message structure definition for the given parameters.
-   * Checks cache first, then loads from repository if not cached.
-   */
   async getMessageStructure(
     standard: string,
     version: string,
@@ -59,7 +57,6 @@ export class CachingMessageStructureRepository implements IMessageStructureRepos
   }
 
   /**
-   * Checks if a definition exists without loading it.
    * Checks cache first for performance.
    */
   async hasMessageStructure(
@@ -75,10 +72,6 @@ export class CachingMessageStructureRepository implements IMessageStructureRepos
     return await this.repository.hasMessageStructure(standard, version, messageType);
   }
 
-  /**
-   * Creates a cache key from standard, version, and message type.
-   * Format: "STANDARD:VERSION:MESSAGETYPE"
-   */
   private createCacheKeyFromStrings(
     standard: string,
     version: string,
@@ -87,16 +80,25 @@ export class CachingMessageStructureRepository implements IMessageStructureRepos
     return `${standard}:${version}:${messageType}`;
   }
 
-  /**
-   * Clears the definition cache.
-   */
-  clearCache(): void {
-    this.cache.clear();
+  async getCodeList(standard: string, version: string, codeListCode: string): Promise<Set<string> | null> {
+    const cacheKey = `${standard}:${version}:${codeListCode}`;
+    const cached = this.codeListCache.get(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
+    const codes = await this.repository.getCodeList(standard, version, codeListCode);
+    if (codes) {
+      this.codeListCache.set(cacheKey, codes);
+    }
+    return codes;
   }
 
-  /**
-   * Returns the current cache size.
-   */
+  clearCache(): void {
+    this.cache.clear();
+    this.codeListCache.clear();
+  }
+
   getCacheSize(): number {
     return this.cache.size();
   }

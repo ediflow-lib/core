@@ -6,59 +6,45 @@
   "structure": [
     {
       "nodeType": "segment",
-      "segmentRef": "UNA",
-      "mandatory": false,
-      "maxOccurrences": 1,
-      "position": 1
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNB",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 2
-    },
-    {
-      "nodeType": "segment",
       "segmentRef": "UNH",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 3
+      "position": 1
     },
     {
       "nodeType": "segment",
       "segmentRef": "BGM",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 4
+      "position": 2
     },
     {
       "nodeType": "segment",
       "segmentRef": "DTM",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 5
+      "position": 3
     },
     {
       "nodeType": "segment",
       "segmentRef": "ALI",
       "mandatory": false,
       "maxOccurrences": 5,
-      "position": 6
+      "position": 4
     },
     {
       "nodeType": "segment",
       "segmentRef": "MEA",
       "mandatory": false,
       "maxOccurrences": 5,
-      "position": 7
+      "position": 5
     },
     {
       "nodeType": "segment",
       "segmentRef": "MOA",
       "mandatory": false,
       "maxOccurrences": 5,
-      "position": 8
+      "position": 6
     },
     {
       "nodeType": "segmentGroup",
@@ -67,7 +53,7 @@
       "triggerSegment": "RFF",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 9,
+      "position": 7,
       "structure": [
         {
           "nodeType": "segment",
@@ -92,7 +78,7 @@
       "triggerSegment": "NAD",
       "mandatory": false,
       "maxOccurrences": 99,
-      "position": 10,
+      "position": 8,
       "structure": [
         {
           "nodeType": "segment",
@@ -160,7 +146,7 @@
       "triggerSegment": "TOD",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 11,
+      "position": 9,
       "structure": [
         {
           "nodeType": "segment",
@@ -185,7 +171,7 @@
       "triggerSegment": "TDT",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 12,
+      "position": 10,
       "structure": [
         {
           "nodeType": "segment",
@@ -228,7 +214,7 @@
       "triggerSegment": "EQD",
       "mandatory": false,
       "maxOccurrences": 10,
-      "position": 13,
+      "position": 11,
       "structure": [
         {
           "nodeType": "segment",
@@ -260,7 +246,7 @@
       "triggerSegment": "CPS",
       "mandatory": false,
       "maxOccurrences": 9999,
-      "position": 14,
+      "position": 12,
       "structure": [
         {
           "nodeType": "segment",
@@ -642,14 +628,7 @@
       "segmentRef": "UNT",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 15
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNZ",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 16
+      "position": 13
     }
   ]
 }

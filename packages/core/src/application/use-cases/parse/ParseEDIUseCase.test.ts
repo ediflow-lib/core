@@ -18,7 +18,7 @@ describe('ParseEDIUseCase', () => {
   });
   describe('execute', () => {
     it('should parse message successfully via IMessageParser', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       mockMessageParser.parse = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);
       const input: ParseEDIInputDTO = { message: "UNH+1+ORDERS:D:96A:UN'BGM+220'UNT+3+1'", standard: Standard.EDIFACT };
@@ -54,7 +54,7 @@ describe('ParseEDIUseCase', () => {
     });
 
     it('should pass ParserConfig to parser when provided', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       const parseSpy = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.parse = parseSpy;
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);
@@ -77,7 +77,7 @@ describe('ParseEDIUseCase', () => {
     });
 
     it('should work without ParserConfig (backward compatibility)', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       const parseSpy = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.parse = parseSpy;
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);

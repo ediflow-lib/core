@@ -40,12 +40,12 @@ describe('FileBasedMessageStructureRepository Integration', () => {
       const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       const unhSegment: any = definition?.structure.find(
-        (node: any) => node.nodeType === 'segment' && node.segmentRef === 'UNH'
+        (node: any) => node.nodeType === 'segment' && node.tag === 'UNH'
       );
 
       expect(unhSegment).toBeDefined();
       expect(unhSegment?.nodeType).toBe('segment');
-      expect(unhSegment?.segmentRef).toBe('UNH');
+      expect(unhSegment?.tag).toBe('UNH');
       expect(unhSegment?.mandatory).toBe(true);
     });
 
@@ -60,8 +60,8 @@ describe('FileBasedMessageStructureRepository Integration', () => {
       expect(segmentGroup?.nodeType).toBe('segmentGroup');
       expect(segmentGroup?.id).toBe('SG2');
       expect(segmentGroup?.name).toBe('SG2');
-      expect(segmentGroup?.structure).toBeDefined();
-      expect(Array.isArray(segmentGroup?.structure)).toBe(true);
+      expect(segmentGroup?.children).toBeDefined();
+      expect(Array.isArray(segmentGroup?.children)).toBe(true);
     });
   });
 
@@ -91,6 +91,34 @@ describe('FileBasedMessageStructureRepository Integration', () => {
       const exists = await repository.hasMessageStructure('EDIFACT', 'D.20B', 'NONEXIST');
 
       expect(exists).toBe(false);
+    });
+  });
+
+  describe('getCodeList', () => {
+    it('should load code list from codes/{code}.json', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '1001');
+
+      expect(codes).not.toBeNull();
+      expect(codes!.size).toBeGreaterThan(0);
+    });
+
+    it('should return valid code values as Set<string>', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '1001');
+
+      expect(codes).not.toBeNull();
+      expect(codes instanceof Set).toBe(true);
+    });
+
+    it('should return null for non-existing code list', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '9999999');
+
+      expect(codes).toBeNull();
+    });
+
+    it('should return null for non-existing version', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.99Z', '1001');
+
+      expect(codes).toBeNull();
     });
   });
 });

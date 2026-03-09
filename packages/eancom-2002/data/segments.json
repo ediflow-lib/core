@@ -5,8 +5,8 @@
     "description": "To specify the references, the type and the characteristic of accommodations allocated as a result of a reservation request.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E997",
+        "nodeType": "composite",
+        "compositeCode": "E997",
         "mandatory": true,
         "position": 1
       }
@@ -18,14 +18,14 @@
     "description": "To provide adjudication information for all services in a health care claim.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E206",
+        "nodeType": "composite",
+        "compositeCode": "E206",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E021",
+        "nodeType": "composite",
+        "compositeCode": "E021",
         "mandatory": false,
         "position": 2
       },
@@ -36,8 +36,8 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E017",
+        "nodeType": "composite",
+        "compositeCode": "E017",
         "mandatory": false,
         "position": 4
       },
@@ -48,8 +48,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "E030",
+        "nodeType": "composite",
+        "compositeCode": "E030",
         "mandatory": false,
         "position": 6
       },
@@ -66,8 +66,8 @@
         "position": 8
       },
       {
-        "nodeType": "element",
-        "elementCode": "E507",
+        "nodeType": "composite",
+        "compositeCode": "E507",
         "mandatory": false,
         "position": 9
       },
@@ -140,14 +140,14 @@
     "description": "To specify an address.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E817",
+        "nodeType": "composite",
+        "compositeCode": "E817",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E001",
+        "nodeType": "composite",
+        "compositeCode": "E001",
         "mandatory": false,
         "position": 2
       },
@@ -170,14 +170,14 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "E819",
+        "nodeType": "composite",
+        "compositeCode": "E819",
         "mandatory": false,
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "E517",
+        "nodeType": "composite",
+        "compositeCode": "E517",
         "mandatory": false,
         "position": 7
       }
@@ -319,8 +319,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E975",
+        "nodeType": "composite",
+        "compositeCode": "E975",
         "mandatory": true,
         "position": 2
       },
@@ -344,32 +344,32 @@
     "description": "To convey additional information concerning a means of transport.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E961",
+        "nodeType": "composite",
+        "compositeCode": "E961",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E962",
+        "nodeType": "composite",
+        "compositeCode": "E962",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E963",
+        "nodeType": "composite",
+        "compositeCode": "E963",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E964",
+        "nodeType": "composite",
+        "compositeCode": "E964",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "E965",
+        "nodeType": "composite",
+        "compositeCode": "E965",
         "mandatory": false,
         "position": 5
       }
@@ -463,14 +463,14 @@
     "description": "To specify date, time, location and additional characteristic information related to a service.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E959",
+        "nodeType": "composite",
+        "compositeCode": "E959",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": false,
         "position": 2
       },
@@ -519,14 +519,14 @@
     "description": "To convey information concerning a tour.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E993",
+        "nodeType": "composite",
+        "compositeCode": "E993",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E994",
+        "nodeType": "composite",
+        "compositeCode": "E994",
         "mandatory": false,
         "position": 2
       }
@@ -544,8 +544,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E003",
+        "nodeType": "composite",
+        "compositeCode": "E003",
         "mandatory": true,
         "position": 2
       }
@@ -682,14 +682,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E029",
+        "nodeType": "composite",
+        "compositeCode": "E029",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E507",
+        "nodeType": "composite",
+        "compositeCode": "E507",
         "mandatory": false,
         "position": 3
       },
@@ -706,8 +706,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "E028",
+        "nodeType": "composite",
+        "compositeCode": "E028",
         "mandatory": false,
         "position": 6
       }
@@ -1019,8 +1019,8 @@
     "description": "To specify information about a commission.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E002",
+        "nodeType": "composite",
+        "compositeCode": "E002",
         "mandatory": true,
         "position": 1
       }
@@ -1095,8 +1095,8 @@
     "description": "To specify a connection location, the designated supplier, the associated times, and the travel venue sequence.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E999",
+        "nodeType": "composite",
+        "compositeCode": "E999",
         "mandatory": false,
         "position": 1
       }
@@ -1114,8 +1114,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": false,
         "position": 2
       },
@@ -1177,8 +1177,8 @@
     "description": "To specify contact communication numbers and names.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E966",
+        "nodeType": "composite",
+        "compositeCode": "E966",
         "mandatory": false,
         "position": 1
       }
@@ -1296,8 +1296,8 @@
     "description": "To specify consumer reference information.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E967",
+        "nodeType": "composite",
+        "compositeCode": "E967",
         "mandatory": true,
         "position": 1
       }
@@ -1371,14 +1371,14 @@
     "description": "To specify currencies used in the transaction and relevant details for the rate of exchange.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E504",
+        "nodeType": "composite",
+        "compositeCode": "E504",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E504",
+        "nodeType": "composite",
+        "compositeCode": "E504",
         "mandatory": false,
         "position": 2
       },
@@ -1476,8 +1476,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E009",
+        "nodeType": "composite",
+        "compositeCode": "E009",
         "mandatory": true,
         "position": 2
       }
@@ -1661,8 +1661,8 @@
     "description": "To specify information about discounts.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E998",
+        "nodeType": "composite",
+        "compositeCode": "E998",
         "mandatory": true,
         "position": 1
       }
@@ -1910,14 +1910,14 @@
     "description": "To specify dates and times, related text and time references.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E014",
+        "nodeType": "composite",
+        "compositeCode": "E014",
         "mandatory": false,
         "position": 2
       }
@@ -2282,8 +2282,8 @@
     "description": "To identify the type of application error within a message.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E901",
+        "nodeType": "composite",
+        "compositeCode": "E901",
         "mandatory": true,
         "position": 1
       }
@@ -2544,8 +2544,8 @@
     "description": "To specify a frequency and the time window in which it applies.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E520",
+        "nodeType": "composite",
+        "compositeCode": "E520",
         "mandatory": true,
         "position": 1
       }
@@ -2594,8 +2594,8 @@
     "description": "To specify frequent traveller information.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E970",
+        "nodeType": "composite",
+        "compositeCode": "E970",
         "mandatory": true,
         "position": 1
       }
@@ -2941,8 +2941,8 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E003",
+        "nodeType": "composite",
+        "compositeCode": "E003",
         "mandatory": false,
         "position": 4
       }
@@ -2960,8 +2960,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": true,
         "position": 2
       },
@@ -3053,14 +3053,14 @@
     "description": "To specify a type of insurance, if it is required, and the coverage, limit, and deductible amounts.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E016",
+        "nodeType": "composite",
+        "compositeCode": "E016",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E017",
+        "nodeType": "composite",
+        "compositeCode": "E017",
         "mandatory": false,
         "position": 2
       }
@@ -3158,8 +3158,8 @@
     "description": "To provide free form information.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E971",
+        "nodeType": "composite",
+        "compositeCode": "E971",
         "mandatory": false,
         "position": 1
       },
@@ -3327,8 +3327,8 @@
     "description": "To provide specific claim information for services performed while admitted to an institution.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E027",
+        "nodeType": "composite",
+        "compositeCode": "E027",
         "mandatory": true,
         "position": 1
       },
@@ -3339,8 +3339,8 @@
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E026",
+        "nodeType": "composite",
+        "compositeCode": "E026",
         "mandatory": true,
         "position": 3
       },
@@ -3351,8 +3351,8 @@
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "E025",
+        "nodeType": "composite",
+        "compositeCode": "E025",
         "mandatory": false,
         "position": 5
       }
@@ -3395,8 +3395,8 @@
     "description": "To specify an item number.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E212",
+        "nodeType": "composite",
+        "compositeCode": "E212",
         "mandatory": false,
         "position": 1
       }
@@ -3470,8 +3470,8 @@
     "description": "To indicate a level in a hierarchical structure.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E778",
+        "nodeType": "composite",
+        "compositeCode": "E778",
         "mandatory": true,
         "position": 1
       }
@@ -3489,8 +3489,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E033",
+        "nodeType": "composite",
+        "compositeCode": "E033",
         "mandatory": false,
         "position": 2
       }
@@ -3539,8 +3539,8 @@
     "description": "To indicate the instruction, the applicable supplier, and the message functions and applications affected.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E022",
+        "nodeType": "composite",
+        "compositeCode": "E022",
         "mandatory": false,
         "position": 1
       },
@@ -3551,8 +3551,8 @@
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E031",
+        "nodeType": "composite",
+        "compositeCode": "E031",
         "mandatory": false,
         "position": 3
       }
@@ -3638,8 +3638,8 @@
     "description": "To specify physical measurements.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E175",
+        "nodeType": "composite",
+        "compositeCode": "E175",
         "mandatory": true,
         "position": 1
       }
@@ -3689,8 +3689,8 @@
     "description": "To specify delivery and chauffeur drive details, including number of passengers and language of passengers for a car.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E995",
+        "nodeType": "composite",
+        "compositeCode": "E995",
         "mandatory": false,
         "position": 1
       },
@@ -3714,8 +3714,8 @@
     "description": "To specify the message and business function and to provide a tracking mechanism.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E972",
+        "nodeType": "composite",
+        "compositeCode": "E972",
         "mandatory": false,
         "position": 1
       },
@@ -3726,8 +3726,8 @@
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E206",
+        "nodeType": "composite",
+        "compositeCode": "E206",
         "mandatory": false,
         "position": 3
       }
@@ -3807,8 +3807,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E082",
+        "nodeType": "composite",
+        "compositeCode": "E082",
         "mandatory": false,
         "position": 2
       },
@@ -3819,8 +3819,8 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E080",
+        "nodeType": "composite",
+        "compositeCode": "E080",
         "mandatory": false,
         "position": 4
       },
@@ -3942,8 +3942,8 @@
     "description": "To identify the name of a person or entity.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E012",
+        "nodeType": "composite",
+        "compositeCode": "E012",
         "mandatory": true,
         "position": 1
       }
@@ -3955,8 +3955,8 @@
     "description": "To specify the number of units required.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E523",
+        "nodeType": "composite",
+        "compositeCode": "E523",
         "mandatory": true,
         "position": 1
       }
@@ -3993,8 +3993,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E015",
+        "nodeType": "composite",
+        "compositeCode": "E015",
         "mandatory": true,
         "position": 2
       }
@@ -4006,20 +4006,20 @@
     "description": "To provide the originator of request details.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E973",
+        "nodeType": "composite",
+        "compositeCode": "E973",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E974",
+        "nodeType": "composite",
+        "compositeCode": "E974",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E975",
+        "nodeType": "composite",
+        "compositeCode": "E975",
         "mandatory": false,
         "position": 3
       },
@@ -4036,8 +4036,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "E976",
+        "nodeType": "composite",
+        "compositeCode": "E976",
         "mandatory": false,
         "position": 6
       },
@@ -4055,8 +4055,8 @@
     "description": "To provide payer, insured, and payment information when benefits are being coordinated between third party benefit carriers.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E206",
+        "nodeType": "composite",
+        "compositeCode": "E206",
         "mandatory": true,
         "position": 1
       },
@@ -4067,8 +4067,8 @@
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E507",
+        "nodeType": "composite",
+        "compositeCode": "E507",
         "mandatory": false,
         "position": 3
       },
@@ -4085,8 +4085,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "E030",
+        "nodeType": "composite",
+        "compositeCode": "E030",
         "mandatory": false,
         "position": 6
       },
@@ -4322,8 +4322,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E996",
+        "nodeType": "composite",
+        "compositeCode": "E996",
         "mandatory": false,
         "position": 2
       }
@@ -4416,8 +4416,8 @@
     "description": "To specify product location information.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E008",
+        "nodeType": "composite",
+        "compositeCode": "E008",
         "mandatory": true,
         "position": 1
       }
@@ -4429,14 +4429,14 @@
     "description": "To specify information concerning the payment.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E977",
+        "nodeType": "composite",
+        "compositeCode": "E977",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E978",
+        "nodeType": "composite",
+        "compositeCode": "E978",
         "mandatory": false,
         "position": 2
       }
@@ -4534,8 +4534,8 @@
     "description": "To specify date or time period with days of operation.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": true,
         "position": 1
       },
@@ -4559,20 +4559,20 @@
     "description": "To provide information about a location, related times and sub-locations.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E517",
+        "nodeType": "composite",
+        "compositeCode": "E517",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E362",
+        "nodeType": "composite",
+        "compositeCode": "E362",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E992",
+        "nodeType": "composite",
+        "compositeCode": "E992",
         "mandatory": false,
         "position": 3
       },
@@ -4596,14 +4596,14 @@
     "description": "To specify point of sale information by party identification or location identification.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E032",
+        "nodeType": "composite",
+        "compositeCode": "E032",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E975",
+        "nodeType": "composite",
+        "compositeCode": "E975",
         "mandatory": false,
         "position": 2
       }
@@ -4634,8 +4634,8 @@
     "description": "To identify a product.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E989",
+        "nodeType": "composite",
+        "compositeCode": "E989",
         "mandatory": false,
         "position": 1
       },
@@ -4653,8 +4653,8 @@
     "description": "To specify price information.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E018",
+        "nodeType": "composite",
+        "compositeCode": "E018",
         "mandatory": false,
         "position": 1
       },
@@ -4691,8 +4691,8 @@
     "description": "To specify the promotion details.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E019",
+        "nodeType": "composite",
+        "compositeCode": "E019",
         "mandatory": true,
         "position": 1
       }
@@ -4710,8 +4710,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E206",
+        "nodeType": "composite",
+        "compositeCode": "E206",
         "mandatory": false,
         "position": 2
       },
@@ -4722,8 +4722,8 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E023",
+        "nodeType": "composite",
+        "compositeCode": "E023",
         "mandatory": false,
         "position": 4
       }
@@ -4821,14 +4821,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E507",
+        "nodeType": "composite",
+        "compositeCode": "E507",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E021",
+        "nodeType": "composite",
+        "compositeCode": "E021",
         "mandatory": false,
         "position": 3
       },
@@ -4869,8 +4869,8 @@
         "position": 9
       },
       {
-        "nodeType": "element",
-        "elementCode": "E024",
+        "nodeType": "composite",
+        "compositeCode": "E024",
         "mandatory": false,
         "position": 10
       }
@@ -4969,8 +4969,8 @@
     "description": "To convey information about a quantity.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E035",
+        "nodeType": "composite",
+        "compositeCode": "E035",
         "mandatory": true,
         "position": 1
       }
@@ -5039,8 +5039,8 @@
     "description": "To specify a reference to a reservation.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E979",
+        "nodeType": "composite",
+        "compositeCode": "E979",
         "mandatory": false,
         "position": 1
       }
@@ -5115,8 +5115,8 @@
     "description": "To specify a reference.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E506",
+        "nodeType": "composite",
+        "compositeCode": "E506",
         "mandatory": true,
         "position": 1
       }
@@ -5153,8 +5153,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E941",
+        "nodeType": "composite",
+        "compositeCode": "E941",
         "mandatory": false,
         "position": 2
       }
@@ -5204,8 +5204,8 @@
     "description": "To indicate quantity and action required in relation to a product.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E958",
+        "nodeType": "composite",
+        "compositeCode": "E958",
         "mandatory": true,
         "position": 1
       }
@@ -5292,8 +5292,8 @@
     "description": "To identify a rate and to indicate how it should be processed.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E011",
+        "nodeType": "composite",
+        "compositeCode": "E011",
         "mandatory": true,
         "position": 1
       }
@@ -5305,20 +5305,20 @@
     "description": "To specify rule information and rule status.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E004",
+        "nodeType": "composite",
+        "compositeCode": "E004",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E005",
+        "nodeType": "composite",
+        "compositeCode": "E005",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E006",
+        "nodeType": "composite",
+        "compositeCode": "E006",
         "mandatory": false,
         "position": 3
       }
@@ -5417,8 +5417,8 @@
     "description": "To specify the details for making a selection.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E010",
+        "nodeType": "composite",
+        "compositeCode": "E010",
         "mandatory": true,
         "position": 1
       }
@@ -5505,8 +5505,8 @@
     "description": "To provide facility information, followed by the period and days of operation.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E965",
+        "nodeType": "composite",
+        "compositeCode": "E965",
         "mandatory": false,
         "position": 1
       },
@@ -5523,8 +5523,8 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E013",
+        "nodeType": "composite",
+        "compositeCode": "E013",
         "mandatory": false,
         "position": 4
       },
@@ -5715,14 +5715,14 @@
     "description": "To specify special requirements on services, the quantity required, action to be taken and where the requirement should be administered.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E980",
+        "nodeType": "composite",
+        "compositeCode": "E980",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E981",
+        "nodeType": "composite",
+        "compositeCode": "E981",
         "mandatory": false,
         "position": 2
       }
@@ -5950,8 +5950,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E946",
+        "nodeType": "composite",
+        "compositeCode": "E946",
         "mandatory": false,
         "position": 2
       }
@@ -5963,14 +5963,14 @@
     "description": "To specify document information related to a traveller.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E968",
+        "nodeType": "composite",
+        "compositeCode": "E968",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E969",
+        "nodeType": "composite",
+        "compositeCode": "E969",
         "mandatory": false,
         "position": 2
       },
@@ -6098,20 +6098,20 @@
     "description": "To specify tariff details relating to a service or product.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E982",
+        "nodeType": "composite",
+        "compositeCode": "E982",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E983",
+        "nodeType": "composite",
+        "compositeCode": "E983",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E984",
+        "nodeType": "composite",
+        "compositeCode": "E984",
         "mandatory": false,
         "position": 3
       }
@@ -6123,14 +6123,14 @@
     "description": "To specify traveller(s) and personal details.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E985",
+        "nodeType": "composite",
+        "compositeCode": "E985",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E986",
+        "nodeType": "composite",
+        "compositeCode": "E986",
         "mandatory": false,
         "position": 2
       }
@@ -6142,8 +6142,8 @@
     "description": "To provide information about a time zone.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E034",
+        "nodeType": "composite",
+        "compositeCode": "E034",
         "mandatory": true,
         "position": 1
       }
@@ -6237,8 +6237,8 @@
     "description": "To provide details which restrict traffic.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E007",
+        "nodeType": "composite",
+        "compositeCode": "E007",
         "mandatory": true,
         "position": 1
       }
@@ -6318,32 +6318,32 @@
     "description": "To specify details related to a travel product.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E987",
+        "nodeType": "composite",
+        "compositeCode": "E987",
         "mandatory": false,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E975",
+        "nodeType": "composite",
+        "compositeCode": "E975",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E988",
+        "nodeType": "composite",
+        "compositeCode": "E988",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "E989",
+        "nodeType": "composite",
+        "compositeCode": "E989",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "E990",
+        "nodeType": "composite",
+        "compositeCode": "E990",
         "mandatory": false,
         "position": 5
       },
@@ -6367,8 +6367,8 @@
     "description": "To specify tax details.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "E020",
+        "nodeType": "composite",
+        "compositeCode": "E020",
         "mandatory": true,
         "position": 1
       }
@@ -6386,8 +6386,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S011",
+        "nodeType": "composite",
+        "compositeCode": "S011",
         "mandatory": true,
         "position": 2
       }
@@ -6405,14 +6405,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S006",
+        "nodeType": "composite",
+        "compositeCode": "S006",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S007",
+        "nodeType": "composite",
+        "compositeCode": "S007",
         "mandatory": false,
         "position": 3
       },
@@ -6435,8 +6435,8 @@
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S011",
+        "nodeType": "composite",
+        "compositeCode": "S011",
         "mandatory": false,
         "position": 7
       },
@@ -6466,14 +6466,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S002",
+        "nodeType": "composite",
+        "compositeCode": "S002",
         "mandatory": true,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S003",
+        "nodeType": "composite",
+        "compositeCode": "S003",
         "mandatory": true,
         "position": 3
       },
@@ -6496,8 +6496,8 @@
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S011",
+        "nodeType": "composite",
+        "compositeCode": "S011",
         "mandatory": false,
         "position": 7
       },
@@ -6527,8 +6527,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S009",
+        "nodeType": "composite",
+        "compositeCode": "S009",
         "mandatory": false,
         "position": 2
       },
@@ -6551,8 +6551,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S011",
+        "nodeType": "composite",
+        "compositeCode": "S011",
         "mandatory": false,
         "position": 6
       },
@@ -6563,8 +6563,8 @@
         "position": 7
       },
       {
-        "nodeType": "element",
-        "elementCode": "S020",
+        "nodeType": "composite",
+        "compositeCode": "S020",
         "mandatory": false,
         "position": 8
       },
@@ -6633,50 +6633,50 @@
     "description": "To head and identify an interchange.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S001",
+        "nodeType": "composite",
+        "compositeCode": "S001",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S302",
+        "nodeType": "composite",
+        "compositeCode": "S302",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S303",
+        "nodeType": "composite",
+        "compositeCode": "S303",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S018",
+        "nodeType": "composite",
+        "compositeCode": "S018",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "S305",
+        "nodeType": "composite",
+        "compositeCode": "S305",
         "mandatory": false,
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S002",
+        "nodeType": "composite",
+        "compositeCode": "S002",
         "mandatory": false,
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S003",
+        "nodeType": "composite",
+        "compositeCode": "S003",
         "mandatory": false,
         "position": 7
       },
       {
-        "nodeType": "element",
-        "elementCode": "S300",
+        "nodeType": "composite",
+        "compositeCode": "S300",
         "mandatory": false,
         "position": 8
       },
@@ -6700,8 +6700,8 @@
     "description": "To head, identify and specify a message.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S306",
+        "nodeType": "composite",
+        "compositeCode": "S306",
         "mandatory": true,
         "position": 1
       },
@@ -6712,20 +6712,20 @@
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S302",
+        "nodeType": "composite",
+        "compositeCode": "S302",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S301",
+        "nodeType": "composite",
+        "compositeCode": "S301",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "S300",
+        "nodeType": "composite",
+        "compositeCode": "S300",
         "mandatory": false,
         "position": 5
       },
@@ -6749,20 +6749,20 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S307",
+        "nodeType": "composite",
+        "compositeCode": "S307",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S302",
+        "nodeType": "composite",
+        "compositeCode": "S302",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S300",
+        "nodeType": "composite",
+        "compositeCode": "S300",
         "mandatory": false,
         "position": 4
       },
@@ -6805,8 +6805,8 @@
     "description": "To end and check the completeness of an interchange.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S302",
+        "nodeType": "composite",
+        "compositeCode": "S302",
         "mandatory": false,
         "position": 1
       },
@@ -6830,26 +6830,26 @@
     "description": "To identify an interchange.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S001",
+        "nodeType": "composite",
+        "compositeCode": "S001",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S002",
+        "nodeType": "composite",
+        "compositeCode": "S002",
         "mandatory": true,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S003",
+        "nodeType": "composite",
+        "compositeCode": "S003",
         "mandatory": true,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S004",
+        "nodeType": "composite",
+        "compositeCode": "S004",
         "mandatory": true,
         "position": 4
       },
@@ -6860,8 +6860,8 @@
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S005",
+        "nodeType": "composite",
+        "compositeCode": "S005",
         "mandatory": false,
         "position": 6
       },
@@ -6928,20 +6928,20 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S006",
+        "nodeType": "composite",
+        "compositeCode": "S006",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S007",
+        "nodeType": "composite",
+        "compositeCode": "S007",
         "mandatory": false,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S004",
+        "nodeType": "composite",
+        "compositeCode": "S004",
         "mandatory": false,
         "position": 4
       },
@@ -6958,8 +6958,8 @@
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S008",
+        "nodeType": "composite",
+        "compositeCode": "S008",
         "mandatory": false,
         "position": 7
       },
@@ -6983,8 +6983,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S009",
+        "nodeType": "composite",
+        "compositeCode": "S009",
         "mandatory": true,
         "position": 2
       },
@@ -6995,26 +6995,26 @@
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S010",
+        "nodeType": "composite",
+        "compositeCode": "S010",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "S016",
+        "nodeType": "composite",
+        "compositeCode": "S016",
         "mandatory": false,
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S017",
+        "nodeType": "composite",
+        "compositeCode": "S017",
         "mandatory": false,
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S018",
+        "nodeType": "composite",
+        "compositeCode": "S018",
         "mandatory": false,
         "position": 7
       }
@@ -7032,38 +7032,38 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S020",
+        "nodeType": "composite",
+        "compositeCode": "S020",
         "mandatory": true,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S021",
+        "nodeType": "composite",
+        "compositeCode": "S021",
         "mandatory": true,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S022",
+        "nodeType": "composite",
+        "compositeCode": "S022",
         "mandatory": true,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "S302",
+        "nodeType": "composite",
+        "compositeCode": "S302",
         "mandatory": false,
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S301",
+        "nodeType": "composite",
+        "compositeCode": "S301",
         "mandatory": false,
         "position": 6
       },
       {
-        "nodeType": "element",
-        "elementCode": "S300",
+        "nodeType": "composite",
+        "compositeCode": "S300",
         "mandatory": false,
         "position": 7
       },
@@ -7151,14 +7151,14 @@
     "description": "To identify a security algorithm, the technical usage made of it, and to contain the technical parameters required.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S502",
+        "nodeType": "composite",
+        "compositeCode": "S502",
         "mandatory": true,
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S503",
+        "nodeType": "composite",
+        "compositeCode": "S503",
         "mandatory": false,
         "position": 2
       }
@@ -7176,20 +7176,20 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S501",
+        "nodeType": "composite",
+        "compositeCode": "S501",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S002",
+        "nodeType": "composite",
+        "compositeCode": "S002",
         "mandatory": true,
         "position": 3
       },
       {
-        "nodeType": "element",
-        "elementCode": "S003",
+        "nodeType": "composite",
+        "compositeCode": "S003",
         "mandatory": true,
         "position": 4
       }
@@ -7207,8 +7207,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S500",
+        "nodeType": "composite",
+        "compositeCode": "S500",
         "mandatory": false,
         "position": 2
       },
@@ -7243,14 +7243,14 @@
         "position": 7
       },
       {
-        "nodeType": "element",
-        "elementCode": "S505",
+        "nodeType": "composite",
+        "compositeCode": "S505",
         "mandatory": false,
         "position": 8
       },
       {
-        "nodeType": "element",
-        "elementCode": "S501",
+        "nodeType": "composite",
+        "compositeCode": "S501",
         "mandatory": false,
         "position": 9
       },
@@ -7318,8 +7318,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S504",
+        "nodeType": "composite",
+        "compositeCode": "S504",
         "mandatory": false,
         "position": 2
       },
@@ -7391,8 +7391,8 @@
         "position": 7
       },
       {
-        "nodeType": "element",
-        "elementCode": "S500",
+        "nodeType": "composite",
+        "compositeCode": "S500",
         "mandatory": false,
         "position": 8
       },
@@ -7403,8 +7403,8 @@
         "position": 9
       },
       {
-        "nodeType": "element",
-        "elementCode": "S501",
+        "nodeType": "composite",
+        "compositeCode": "S501",
         "mandatory": false,
         "position": 10
       }
@@ -7422,8 +7422,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S504",
+        "nodeType": "composite",
+        "compositeCode": "S504",
         "mandatory": false,
         "position": 2
       }
@@ -7435,8 +7435,8 @@
     "description": "To contain the result of the security mechanisms.",
     "elements": [
       {
-        "nodeType": "element",
-        "elementCode": "S508",
+        "nodeType": "composite",
+        "compositeCode": "S508",
         "mandatory": true,
         "position": 1
       }
@@ -7492,14 +7492,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S002",
+        "nodeType": "composite",
+        "compositeCode": "S002",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "S003",
+        "nodeType": "composite",
+        "compositeCode": "S003",
         "mandatory": false,
         "position": 3
       },
@@ -7510,14 +7510,14 @@
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "S006",
+        "nodeType": "composite",
+        "compositeCode": "S006",
         "mandatory": false,
         "position": 5
       },
       {
-        "nodeType": "element",
-        "elementCode": "S007",
+        "nodeType": "composite",
+        "compositeCode": "S007",
         "mandatory": false,
         "position": 6
       },
@@ -7528,8 +7528,8 @@
         "position": 7
       },
       {
-        "nodeType": "element",
-        "elementCode": "S009",
+        "nodeType": "composite",
+        "compositeCode": "S009",
         "mandatory": false,
         "position": 8
       },
@@ -7540,8 +7540,8 @@
         "position": 9
       },
       {
-        "nodeType": "element",
-        "elementCode": "S501",
+        "nodeType": "composite",
+        "compositeCode": "S501",
         "mandatory": false,
         "position": 10
       }
@@ -7559,8 +7559,8 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "S508",
+        "nodeType": "composite",
+        "compositeCode": "S508",
         "mandatory": false,
         "position": 2
       },
@@ -7584,14 +7584,14 @@
         "position": 1
       },
       {
-        "nodeType": "element",
-        "elementCode": "E991",
+        "nodeType": "composite",
+        "compositeCode": "E991",
         "mandatory": false,
         "position": 2
       },
       {
-        "nodeType": "element",
-        "elementCode": "E211",
+        "nodeType": "composite",
+        "compositeCode": "E211",
         "mandatory": false,
         "position": 3
       },
@@ -7602,8 +7602,8 @@
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "E992",
+        "nodeType": "composite",
+        "compositeCode": "E992",
         "mandatory": false,
         "position": 5
       },

@@ -3,6 +3,7 @@ import { ValidateMessageOutputDTO } from './ValidateMessageOutputDTO';
 import type { IValidationService } from '@application/ports';
 import type { EDIMessage } from '@domain';
 import { StructuralValidationService } from '@application/services/StructuralValidationService';
+import { CodeListRule } from '@application/validation/rules/CodeListRule';
 import { ValidationResult } from '@application/validation';
 
 /**
@@ -24,7 +25,8 @@ export class ValidateMessageUseCase {
   execute(input: ValidateMessageInputDTO): ValidateMessageOutputDTO {
     try {
       const syntaxResult = this.validationService.validate(input.message);
-      const finalResult = this.performStructuralValidation(input, syntaxResult);
+      const structureResult = this.performStructuralValidation(input, syntaxResult);
+      const finalResult = this.performCodeValidation(input, structureResult);
 
       return this.buildSuccessResponse(input.message, finalResult);
     } catch (error) {
@@ -50,6 +52,28 @@ export class ValidateMessageUseCase {
     );
 
     return this.mergeValidationResults(syntaxResult, structureResult);
+  }
+
+  private performCodeValidation(
+    input: ValidateMessageInputDTO,
+    previousResult: ValidationResult
+  ): ValidationResult {
+    if (!input.validateCodes || !input.messageStructure || !input.codeLists) {
+      return previousResult;
+    }
+
+    if (input.strictMode && !previousResult.isValid) {
+      return previousResult;
+    }
+
+    const codeRule = new CodeListRule(input.messageStructure, input.codeLists);
+    const codeErrors = codeRule.apply(input.message);
+
+    if (codeErrors.length === 0) {
+      return previousResult;
+    }
+
+    return this.mergeValidationResults(previousResult, ValidationResult.failure(...codeErrors));
   }
 
   private buildSuccessResponse(

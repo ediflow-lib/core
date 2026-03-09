@@ -1,7 +1,93 @@
 {
+  "AAI": {
+    "tag": "AAI",
+    "name": "Accommodation allocation information",
+    "description": "To specify the references, the type and the characteristic of accommodations allocated as a result of a reservation request.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E997",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "ADI": {
+    "tag": "ADI",
+    "name": "Health care claim adjudication information",
+    "description": "To provide adjudication information for all services in a health care claim.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E206",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E021",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E017",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E030",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9620",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5389",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E507",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9639",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
   "ADR": {
     "tag": "ADR",
-    "name": "ADDRESS",
+    "name": "Address",
     "description": "To specify an address.",
     "elements": [
       {
@@ -48,9 +134,58 @@
       }
     ]
   },
+  "ADS": {
+    "tag": "ADS",
+    "name": "Address",
+    "description": "To specify an address.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E817",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E001",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E819",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E517",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
   "AGR": {
     "tag": "AGR",
-    "name": "AGREEMENT IDENTIFICATION",
+    "name": "Agreement identification",
     "description": "To specify the agreement details.",
     "elements": [
       {
@@ -69,7 +204,7 @@
   },
   "AJT": {
     "tag": "AJT",
-    "name": "ADJUSTMENT DETAILS",
+    "name": "Adjustment details",
     "description": "To identify the reason for an adjustment.",
     "elements": [
       {
@@ -88,7 +223,7 @@
   },
   "ALC": {
     "tag": "ALC",
-    "name": "ALLOWANCE OR CHARGE",
+    "name": "Allowance or charge",
     "description": "To identify allowance or charge details.",
     "elements": [
       {
@@ -125,7 +260,7 @@
   },
   "ALI": {
     "tag": "ALI",
-    "name": "ADDITIONAL INFORMATION",
+    "name": "Additional information",
     "description": "To indicate that special conditions due to the origin, customs preference, fiscal or commercial factors are applicable.",
     "elements": [
       {
@@ -172,9 +307,77 @@
       }
     ]
   },
+  "ALS": {
+    "tag": "ALS",
+    "name": "Additional location information",
+    "description": "To specify the type of location, the actual location in coded and full name text, and the country code of the location.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3227",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E975",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6000",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6002",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "APD": {
+    "tag": "APD",
+    "name": "Additional transport details",
+    "description": "To convey additional information concerning a means of transport.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E961",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E962",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E963",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E964",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E965",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "APP": {
     "tag": "APP",
-    "name": "APPLICABILITY",
+    "name": "Applicability",
     "description": "To specify the applicability.",
     "elements": [
       {
@@ -199,7 +402,7 @@
   },
   "APR": {
     "tag": "APR",
-    "name": "ADDITIONAL PRICE INFORMATION",
+    "name": "Additional price information",
     "description": "To provide information concerning pricing related to class of trade, price multiplier, and reason for change.",
     "elements": [
       {
@@ -224,7 +427,7 @@
   },
   "ARD": {
     "tag": "ARD",
-    "name": "MONETARY AMOUNT FUNCTION",
+    "name": "Monetary amount function",
     "description": "To provide details of the function of a monetary amount.",
     "elements": [
       {
@@ -243,7 +446,7 @@
   },
   "ARR": {
     "tag": "ARR",
-    "name": "ARRAY INFORMATION",
+    "name": "Array information",
     "description": "To contain the data in an array.",
     "elements": [
       {
@@ -260,9 +463,34 @@
       }
     ]
   },
+  "ASD": {
+    "tag": "ASD",
+    "name": "Service details",
+    "description": "To specify date, time, location and additional characteristic information related to a service.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E959",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "ASI": {
     "tag": "ASI",
-    "name": "ARRAY STRUCTURE IDENTIFICATION",
+    "name": "Array structure identification",
     "description": "To identify the structure of an array.",
     "elements": [
       {
@@ -291,9 +519,47 @@
       }
     ]
   },
+  "ATI": {
+    "tag": "ATI",
+    "name": "Tour information",
+    "description": "To convey information concerning a tour.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E993",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E994",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ATR": {
+    "tag": "ATR",
+    "name": "Attribute",
+    "description": "To identify a specific attribute.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E003",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
   "ATT": {
     "tag": "ATT",
-    "name": "ATTRIBUTE",
+    "name": "Attribute",
     "description": "To identify a specific attribute.",
     "elements": [
       {
@@ -318,7 +584,7 @@
   },
   "AUT": {
     "tag": "AUT",
-    "name": "AUTHENTICATION RESULT",
+    "name": "Authentication result",
     "description": "To specify results of the application of an authentication procedure.",
     "elements": [
       {
@@ -337,7 +603,7 @@
   },
   "BAS": {
     "tag": "BAS",
-    "name": "BASIS",
+    "name": "Basis",
     "description": "To describe the foundation or starting point.",
     "elements": [
       {
@@ -354,9 +620,82 @@
       }
     ]
   },
+  "BCD": {
+    "tag": "BCD",
+    "name": "Benefit and coverage detail",
+    "description": "A segment to identify and provide information about benefit and coverage.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5267",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7517",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3507",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2151",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E017",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6063",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9607",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4497",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
   "BGM": {
     "tag": "BGM",
-    "name": "BEGINNING OF MESSAGE",
+    "name": "Beginning of message",
     "description": "To indicate the type and function of a message and to transmit the identifying number.",
     "elements": [
       {
@@ -387,7 +726,7 @@
   },
   "BII": {
     "tag": "BII",
-    "name": "STRUCTURE IDENTIFICATION",
+    "name": "Structure identification",
     "description": "A segment used to convey an indexing structure mechanism which identifies the positioning of a group or item.",
     "elements": [
       {
@@ -410,9 +749,52 @@
       }
     ]
   },
+  "BLI": {
+    "tag": "BLI",
+    "name": "Billable information",
+    "description": "To provide billable information for a claim or encounter.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E029",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E507",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9607",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E028",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
   "BUS": {
     "tag": "BUS",
-    "name": "BUSINESS FUNCTION",
+    "name": "Business function",
     "description": "To provide information related to the processing and purpose of a financial message.",
     "elements": [
       {
@@ -449,7 +831,7 @@
   },
   "CAV": {
     "tag": "CAV",
-    "name": "CHARACTERISTIC VALUE",
+    "name": "Characteristic value",
     "description": "To provide the value of a characteristic.",
     "elements": [
       {
@@ -462,7 +844,7 @@
   },
   "CCD": {
     "tag": "CCD",
-    "name": "CREDIT COVER DETAILS",
+    "name": "Credit cover details",
     "description": "To request a credit cover, reply to that request and disclose the reason for the reply.",
     "elements": [
       {
@@ -487,7 +869,7 @@
   },
   "CCI": {
     "tag": "CCI",
-    "name": "CHARACTERISTIC/CLASS ID",
+    "name": "Characteristic/class id",
     "description": "To identify and describe a specific characteristic and its relevance for subsequent business processes.",
     "elements": [
       {
@@ -518,20 +900,26 @@
   },
   "CDI": {
     "tag": "CDI",
-    "name": "PHYSICAL OR LOGICAL STATE",
+    "name": "Physical or logical state",
     "description": "To describe a physical or logical state.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7001",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C564",
         "mandatory": true,
-        "position": 1
+        "position": 2
       }
     ]
   },
   "CDS": {
     "tag": "CDS",
-    "name": "CODE SET IDENTIFICATION",
+    "name": "Code set identification",
     "description": "To identify a code set and to give its class and maintenance operation.",
     "elements": [
       {
@@ -556,7 +944,7 @@
   },
   "CDV": {
     "tag": "CDV",
-    "name": "CODE VALUE DEFINITION",
+    "name": "Code value definition",
     "description": "To provide information related to a code value.",
     "elements": [
       {
@@ -593,26 +981,32 @@
   },
   "CED": {
     "tag": "CED",
-    "name": "COMPUTER ENVIRONMENT DETAILS",
+    "name": "Computer environment details",
     "description": "To give a precise definition of all necessary elements belonging to the configuration of a computer system like hardware, firmware, operating system, communication (VANS, network type, protocol, format) and application software.",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1501",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C079",
         "mandatory": true,
-        "position": 1
+        "position": 2
       },
       {
         "nodeType": "element",
         "elementCode": "9448",
         "mandatory": false,
-        "position": 2
+        "position": 3
       }
     ]
   },
   "CIN": {
     "tag": "CIN",
-    "name": "CLINICAL INFORMATION",
+    "name": "Clinical information",
     "description": "To describe an item of clinical information.",
     "elements": [
       {
@@ -637,7 +1031,7 @@
   },
   "CLA": {
     "tag": "CLA",
-    "name": "CLAUSE IDENTIFICATION",
+    "name": "Clause identification",
     "description": "To identify a clause in a treaty, law and/or contract.",
     "elements": [
       {
@@ -656,7 +1050,7 @@
   },
   "CLI": {
     "tag": "CLI",
-    "name": "CLINICAL INTERVENTION",
+    "name": "Clinical intervention",
     "description": "To specify a clinical intervention such as treatments and investigations.",
     "elements": [
       {
@@ -673,9 +1067,47 @@
       }
     ]
   },
+  "CLT": {
+    "tag": "CLT",
+    "name": "Clear terminate information",
+    "description": "To specify information required to undo all or part of the previous actions in a business transaction.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "CMN": {
+    "tag": "CMN",
+    "name": "Commission information",
+    "description": "To specify information about a commission.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E002",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "CMP": {
     "tag": "CMP",
-    "name": "COMPOSITE DATA ELEMENT IDENTIFICATION",
+    "name": "Composite data element identification",
     "description": "To identify a composite data element and to give its class and maintenance operation.",
     "elements": [
       {
@@ -700,7 +1132,7 @@
   },
   "CNI": {
     "tag": "CNI",
-    "name": "CONSIGNMENT INFORMATION",
+    "name": "Consignment information",
     "description": "To identify one consignment.",
     "elements": [
       {
@@ -725,7 +1157,7 @@
   },
   "CNT": {
     "tag": "CNT",
-    "name": "CONTROL TOTAL",
+    "name": "Control total",
     "description": "To provide control total.",
     "elements": [
       {
@@ -736,9 +1168,59 @@
       }
     ]
   },
+  "CNX": {
+    "tag": "CNX",
+    "name": "Connection details",
+    "description": "To specify a connection location, the designated supplier, the associated times, and the travel venue sequence.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E999",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "CNY": {
+    "tag": "CNY",
+    "name": "Country information",
+    "description": "To specify country and related information, i.e. date and time of summer or winter time transition and related time variation, currency and language(s).",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2031",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "COD": {
     "tag": "COD",
-    "name": "COMPONENT DETAILS",
+    "name": "Component details",
     "description": "To provide component details of an object (e.g. product, container) such as its type and the material of which it is composed.",
     "elements": [
       {
@@ -757,7 +1239,7 @@
   },
   "COM": {
     "tag": "COM",
-    "name": "COMMUNICATION CONTACT",
+    "name": "Communication contact",
     "description": "To identify a communication number of a department or a person to whom communication should be directed.",
     "elements": [
       {
@@ -768,9 +1250,22 @@
       }
     ]
   },
+  "CON": {
+    "tag": "CON",
+    "name": "Contact information",
+    "description": "To specify contact communication numbers and names.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E966",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
   "COT": {
     "tag": "COT",
-    "name": "CONTRIBUTION DETAILS",
+    "name": "Contribution details",
     "description": "To specify details about membership contributions.",
     "elements": [
       {
@@ -807,7 +1302,7 @@
   },
   "CPI": {
     "tag": "CPI",
-    "name": "CHARGE PAYMENT INSTRUCTIONS",
+    "name": "Charge payment instructions",
     "description": "To identify a charge.",
     "elements": [
       {
@@ -832,7 +1327,7 @@
   },
   "CPS": {
     "tag": "CPS",
-    "name": "CONSIGNMENT PACKING SEQUENCE",
+    "name": "Consignment packing sequence",
     "description": "To identify the sequence in which physical packing is presented in the consignment, and optionally to identify the hierarchical relationship between packing layers.",
     "elements": [
       {
@@ -857,7 +1352,7 @@
   },
   "CPT": {
     "tag": "CPT",
-    "name": "ACCOUNT IDENTIFICATION",
+    "name": "Account identification",
     "description": "To provide account identification information.",
     "elements": [
       {
@@ -874,9 +1369,22 @@
       }
     ]
   },
+  "CRI": {
+    "tag": "CRI",
+    "name": "Consumer reference information",
+    "description": "To specify consumer reference information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E967",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "CST": {
     "tag": "CST",
-    "name": "CUSTOMS STATUS OF GOODS",
+    "name": "Customs status of goods",
     "description": "To specify goods in terms of customs identities, status and intended use.",
     "elements": [
       {
@@ -919,7 +1427,7 @@
   },
   "CTA": {
     "tag": "CTA",
-    "name": "CONTACT INFORMATION",
+    "name": "Contact information",
     "description": "To identify a person or a department to whom communication should be directed.",
     "elements": [
       {
@@ -936,9 +1444,40 @@
       }
     ]
   },
+  "CUR": {
+    "tag": "CUR",
+    "name": "Currencies",
+    "description": "To specify currencies used in the transaction and relevant details for the rate of exchange.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E504",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E504",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5402",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6341",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "CUX": {
     "tag": "CUX",
-    "name": "CURRENCIES",
+    "name": "Currencies",
     "description": "To specify currencies used in the transaction and relevant details for the rate of exchange.",
     "elements": [
       {
@@ -969,7 +1508,7 @@
   },
   "DAM": {
     "tag": "DAM",
-    "name": "DAMAGE",
+    "name": "Damage",
     "description": "To specify damage including action taken.",
     "elements": [
       {
@@ -1004,9 +1543,28 @@
       }
     ]
   },
+  "DAV": {
+    "tag": "DAV",
+    "name": "Daily availability",
+    "description": "To specify availability on a daily basis.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7037",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E009",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
   "DFN": {
     "tag": "DFN",
-    "name": "DEFINITION FUNCTION",
+    "name": "Definition function",
     "description": "To specify a definition function.",
     "elements": [
       {
@@ -1031,7 +1589,7 @@
   },
   "DGS": {
     "tag": "DGS",
-    "name": "DANGEROUS GOODS",
+    "name": "Dangerous goods",
     "description": "To identify dangerous goods.",
     "elements": [
       {
@@ -1107,16 +1665,22 @@
         "position": 12
       },
       {
+        "nodeType": "element",
+        "elementCode": "8211",
+        "mandatory": false,
+        "position": 13
+      },
+      {
         "nodeType": "composite",
         "compositeCode": "C289",
         "mandatory": false,
-        "position": 13
+        "position": 14
       }
     ]
   },
   "DII": {
     "tag": "DII",
-    "name": "DIRECTORY IDENTIFICATION",
+    "name": "Directory identification",
     "description": "To identify a directory and to give its release, status, controlling agency, language and maintenance operation.",
     "elements": [
       {
@@ -1159,7 +1723,7 @@
   },
   "DIM": {
     "tag": "DIM",
-    "name": "DIMENSIONS",
+    "name": "Dimensions",
     "description": "To specify dimensions.",
     "elements": [
       {
@@ -1176,9 +1740,22 @@
       }
     ]
   },
+  "DIS": {
+    "tag": "DIS",
+    "name": "Discount information",
+    "description": "To specify information about discounts.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E998",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "DLI": {
     "tag": "DLI",
-    "name": "DOCUMENT LINE IDENTIFICATION",
+    "name": "Document line identification",
     "description": "To specify the processing mode of a specific line within a referenced document.",
     "elements": [
       {
@@ -1197,7 +1774,7 @@
   },
   "DLM": {
     "tag": "DLM",
-    "name": "DELIVERY LIMITATIONS",
+    "name": "Delivery limitations",
     "description": "To specify limitations on deliveries.",
     "elements": [
       {
@@ -1228,7 +1805,7 @@
   },
   "DMS": {
     "tag": "DMS",
-    "name": "DOCUMENT/MESSAGE SUMMARY",
+    "name": "Document/message summary",
     "description": "To specify summary information relating to the document/message.",
     "elements": [
       {
@@ -1251,9 +1828,46 @@
       }
     ]
   },
+  "DNT": {
+    "tag": "DNT",
+    "name": "Dental information",
+    "description": "To provide specific tooth and oral cavity information.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7383",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9647",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "DOC": {
     "tag": "DOC",
-    "name": "DOCUMENT/MESSAGE DETAILS",
+    "name": "Document/message details",
     "description": "To identify documents and details directly related to it.",
     "elements": [
       {
@@ -1290,7 +1904,7 @@
   },
   "DRD": {
     "tag": "DRD",
-    "name": "DATA REPRESENTATION DETAILS",
+    "name": "Data representation details",
     "description": "To specify the details of the data representation.",
     "elements": [
       {
@@ -1321,7 +1935,7 @@
   },
   "DSG": {
     "tag": "DSG",
-    "name": "DOSAGE ADMINISTRATION",
+    "name": "Dosage administration",
     "description": "To communicate how dose(s) are administered.",
     "elements": [
       {
@@ -1340,7 +1954,7 @@
   },
   "DSI": {
     "tag": "DSI",
-    "name": "DATA SET IDENTIFICATION",
+    "name": "Data set identification",
     "description": "To identify a data set.",
     "elements": [
       {
@@ -1375,9 +1989,28 @@
       }
     ]
   },
+  "DTI": {
+    "tag": "DTI",
+    "name": "Date and time information",
+    "description": "To specify dates and times, related text and time references.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E014",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "DTM": {
     "tag": "DTM",
-    "name": "DATE/TIME/PERIOD",
+    "name": "Date/time/period",
     "description": "To specify date, and/or time, or period.",
     "elements": [
       {
@@ -1390,7 +2023,7 @@
   },
   "EDT": {
     "tag": "EDT",
-    "name": "EDITING DETAILS",
+    "name": "Editing details",
     "description": "To specify editing details.",
     "elements": [
       {
@@ -1421,7 +2054,7 @@
   },
   "EFI": {
     "tag": "EFI",
-    "name": "EXTERNAL FILE LINK IDENTIFICATION",
+    "name": "External file link identification",
     "description": "To specify the link of one non-EDIFACT external file to an EDIFACT message.",
     "elements": [
       {
@@ -1452,7 +2085,7 @@
   },
   "ELM": {
     "tag": "ELM",
-    "name": "SIMPLE DATA ELEMENT DETAILS",
+    "name": "Simple data element details",
     "description": "To identify a simple data element and give related details.",
     "elements": [
       {
@@ -1463,51 +2096,57 @@
       },
       {
         "nodeType": "element",
-        "elementCode": "6113",
+        "elementCode": "9153",
         "mandatory": false,
         "position": 2
       },
       {
         "nodeType": "element",
-        "elementCode": "9156",
+        "elementCode": "6113",
         "mandatory": false,
         "position": 3
       },
       {
         "nodeType": "element",
-        "elementCode": "9158",
+        "elementCode": "9156",
         "mandatory": false,
         "position": 4
       },
       {
         "nodeType": "element",
-        "elementCode": "9161",
+        "elementCode": "9158",
         "mandatory": false,
         "position": 5
       },
       {
         "nodeType": "element",
-        "elementCode": "1507",
+        "elementCode": "9161",
         "mandatory": false,
         "position": 6
       },
       {
         "nodeType": "element",
-        "elementCode": "4513",
+        "elementCode": "1507",
         "mandatory": false,
         "position": 7
       },
       {
         "nodeType": "element",
-        "elementCode": "6432",
+        "elementCode": "4513",
         "mandatory": false,
         "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6432",
+        "mandatory": false,
+        "position": 9
       }
     ]
   },
   "ELU": {
     "tag": "ELU",
-    "name": "DATA ELEMENT USAGE DETAILS",
+    "name": "Data element usage details",
     "description": "To specify the usage of a data element.",
     "elements": [
       {
@@ -1562,7 +2201,7 @@
   },
   "ELV": {
     "tag": "ELV",
-    "name": "ELEMENT VALUE DEFINITION",
+    "name": "Element value definition",
     "description": "To define an element value.",
     "elements": [
       {
@@ -1593,7 +2232,7 @@
   },
   "EMP": {
     "tag": "EMP",
-    "name": "EMPLOYMENT DETAILS",
+    "name": "Employment details",
     "description": "To specify employment details.",
     "elements": [
       {
@@ -1636,7 +2275,7 @@
   },
   "EQA": {
     "tag": "EQA",
-    "name": "ATTACHED EQUIPMENT",
+    "name": "Attached equipment",
     "description": "To specify attached or related equipment.",
     "elements": [
       {
@@ -1655,7 +2294,7 @@
   },
   "EQD": {
     "tag": "EQD",
-    "name": "EQUIPMENT DETAILS",
+    "name": "Equipment details",
     "description": "To identify a unit of equipment.",
     "elements": [
       {
@@ -1704,7 +2343,7 @@
   },
   "EQN": {
     "tag": "EQN",
-    "name": "NUMBER OF UNITS",
+    "name": "Number of units",
     "description": "To specify the number of units.",
     "elements": [
       {
@@ -1717,7 +2356,7 @@
   },
   "ERC": {
     "tag": "ERC",
-    "name": "APPLICATION ERROR INFORMATION",
+    "name": "Application error information",
     "description": "To identify the type of application error within a message.",
     "elements": [
       {
@@ -1728,9 +2367,22 @@
       }
     ]
   },
+  "ERI": {
+    "tag": "ERI",
+    "name": "Application error information",
+    "description": "To identify the type of application error within a message.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E901",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "ERP": {
     "tag": "ERP",
-    "name": "ERROR POINT DETAILS",
+    "name": "Error point details",
     "description": "A segment to identify the location of an application error within a message.",
     "elements": [
       {
@@ -1749,7 +2401,7 @@
   },
   "EVE": {
     "tag": "EVE",
-    "name": "EVENT",
+    "name": "Event",
     "description": "To specify details about events.",
     "elements": [
       {
@@ -1786,7 +2438,7 @@
   },
   "FCA": {
     "tag": "FCA",
-    "name": "FINANCIAL CHARGES ALLOCATION",
+    "name": "Financial charges allocation",
     "description": "Description of allocation of charges.",
     "elements": [
       {
@@ -1805,7 +2457,7 @@
   },
   "FII": {
     "tag": "FII",
-    "name": "FINANCIAL INSTITUTION INFORMATION",
+    "name": "Financial institution information",
     "description": "To identify an account and a related financial institution.",
     "elements": [
       {
@@ -1836,7 +2488,7 @@
   },
   "FNS": {
     "tag": "FNS",
-    "name": "FOOTNOTE SET",
+    "name": "Footnote set",
     "description": "To identify a set of footnotes.",
     "elements": [
       {
@@ -1867,7 +2519,7 @@
   },
   "FNT": {
     "tag": "FNT",
-    "name": "FOOTNOTE",
+    "name": "Footnote",
     "description": "To identify a footnote.",
     "elements": [
       {
@@ -1898,7 +2550,7 @@
   },
   "FOR": {
     "tag": "FOR",
-    "name": "FORMULA",
+    "name": "Formula",
     "description": "To identify a formula.",
     "elements": [
       {
@@ -1933,9 +2585,47 @@
       }
     ]
   },
+  "FRM": {
+    "tag": "FRM",
+    "name": "Follow-up action",
+    "description": "To identify a follow-up action that should occur.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9013",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "FRQ": {
+    "tag": "FRQ",
+    "name": "Frequency",
+    "description": "To specify a frequency and the time window in which it applies.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E520",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "FSQ": {
     "tag": "FSQ",
-    "name": "FORMULA SEQUENCE",
+    "name": "Formula sequence",
     "description": "To provide a single operation within the sequence of operations of a formula.",
     "elements": [
       {
@@ -1970,9 +2660,22 @@
       }
     ]
   },
+  "FTI": {
+    "tag": "FTI",
+    "name": "Frequent traveller information",
+    "description": "To specify frequent traveller information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E970",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "FTX": {
     "tag": "FTX",
-    "name": "FREE TEXT",
+    "name": "Free text",
     "description": "To provide free form or coded text information.",
     "elements": [
       {
@@ -2015,7 +2718,7 @@
   },
   "GDS": {
     "tag": "GDS",
-    "name": "NATURE OF CARGO",
+    "name": "Nature of cargo",
     "description": "To indicate the type of cargo as a general classification.",
     "elements": [
       {
@@ -2034,7 +2737,7 @@
   },
   "GEI": {
     "tag": "GEI",
-    "name": "PROCESSING INFORMATION",
+    "name": "Processing information",
     "description": "To identify processing information.",
     "elements": [
       {
@@ -2059,7 +2762,7 @@
   },
   "GID": {
     "tag": "GID",
-    "name": "GOODS ITEM DETAILS",
+    "name": "Goods item details",
     "description": "To indicate totals of a goods item.",
     "elements": [
       {
@@ -2102,7 +2805,7 @@
   },
   "GIN": {
     "tag": "GIN",
-    "name": "GOODS IDENTITY NUMBER",
+    "name": "Goods identity number",
     "description": "To give specific identification numbers, either as single numbers or ranges.",
     "elements": [
       {
@@ -2145,7 +2848,7 @@
   },
   "GIR": {
     "tag": "GIR",
-    "name": "RELATED IDENTIFICATION NUMBERS",
+    "name": "Related identification numbers",
     "description": "To specify a related set of identification numbers.",
     "elements": [
       {
@@ -2188,7 +2891,7 @@
   },
   "GOR": {
     "tag": "GOR",
-    "name": "GOVERNMENTAL REQUIREMENTS",
+    "name": "Governmental requirements",
     "description": "To indicate the requirement for a specific governmental action and/or procedure or which specific procedure is valid for a specific part of the transport and cross-border transactions.",
     "elements": [
       {
@@ -2225,7 +2928,7 @@
   },
   "GPO": {
     "tag": "GPO",
-    "name": "GEOGRAPHICAL POSITION",
+    "name": "Geographical position",
     "description": "To specify a geographical position.",
     "elements": [
       {
@@ -2256,7 +2959,7 @@
   },
   "GRU": {
     "tag": "GRU",
-    "name": "SEGMENT GROUP USAGE DETAILS",
+    "name": "Segment group usage details",
     "description": "To specify the usage of a segment group within a message type structure and its maintenance operation.",
     "elements": [
       {
@@ -2293,7 +2996,7 @@
   },
   "HAN": {
     "tag": "HAN",
-    "name": "HANDLING INSTRUCTIONS",
+    "name": "Handling instructions",
     "description": "To specify handling and where necessary, notify hazards.",
     "elements": [
       {
@@ -2310,9 +3013,108 @@
       }
     ]
   },
+  "HDI": {
+    "tag": "HDI",
+    "name": "Hardware device information",
+    "description": "To specify a hardware device line number, level of access, type and characteristics of the device.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3148",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3413",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1511",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E003",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "HDR": {
+    "tag": "HDR",
+    "name": "Header information",
+    "description": "To specify header information applicable to the entire message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7135",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "HDS": {
+    "tag": "HDS",
+    "name": "Health diagnosis service and delivery",
+    "description": "A segment to provide specific information about covered benefit services, which is used to report a diagnosis to show necessity, the service or procedure being requested or provided, and service delivery instructions.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E029",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E021",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E083",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "HYN": {
     "tag": "HYN",
-    "name": "HIERARCHY INFORMATION",
+    "name": "Hierarchy information",
     "description": "A segment to identify hierarchical connections from a given item to a higher or lower levelled item or to identify dependencies among the content of hierarchically related groups of data.",
     "elements": [
       {
@@ -2349,7 +3151,7 @@
   },
   "ICD": {
     "tag": "ICD",
-    "name": "INSURANCE COVER DESCRIPTION",
+    "name": "Insurance cover description",
     "description": "To describe the insurance cover.",
     "elements": [
       {
@@ -2366,9 +3168,28 @@
       }
     ]
   },
+  "ICI": {
+    "tag": "ICI",
+    "name": "Insurance cover information",
+    "description": "To specify a type of insurance, if it is required, and the coverage, limit, and deductible amounts.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E016",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E017",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "IDE": {
     "tag": "IDE",
-    "name": "IDENTITY",
+    "name": "Identity",
     "description": "To identify an object.",
     "elements": [
       {
@@ -2417,7 +3238,7 @@
   },
   "IFD": {
     "tag": "IFD",
-    "name": "INFORMATION DETAIL",
+    "name": "Information detail",
     "description": "To specify details about items of information.",
     "elements": [
       {
@@ -2452,9 +3273,28 @@
       }
     ]
   },
+  "IFT": {
+    "tag": "IFT",
+    "name": "Interactive free text",
+    "description": "To provide free form information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E971",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "IHC": {
     "tag": "IHC",
-    "name": "PERSON CHARACTERISTIC",
+    "name": "Person characteristic",
     "description": "To specify characteristics of a person such as ethnic origin.",
     "elements": [
       {
@@ -2473,7 +3313,7 @@
   },
   "IMD": {
     "tag": "IMD",
-    "name": "ITEM DESCRIPTION",
+    "name": "Item description",
     "description": "To describe an item in either an industry or free format.",
     "elements": [
       {
@@ -2504,7 +3344,7 @@
   },
   "IND": {
     "tag": "IND",
-    "name": "INDEX DETAILS",
+    "name": "Index details",
     "description": "To specify an index.",
     "elements": [
       {
@@ -2523,7 +3363,7 @@
   },
   "INP": {
     "tag": "INP",
-    "name": "PARTIES AND INSTRUCTION",
+    "name": "Parties and instruction",
     "description": "To specify parties to an instruction, the instruction, or both.",
     "elements": [
       {
@@ -2554,7 +3394,7 @@
   },
   "INV": {
     "tag": "INV",
-    "name": "INVENTORY MANAGEMENT RELATED DETAILS",
+    "name": "Inventory management related details",
     "description": "To provide the different information related to the inventory management functions and needed to process properly the inventory movements and the inventory balances.",
     "elements": [
       {
@@ -2591,7 +3431,7 @@
   },
   "IRQ": {
     "tag": "IRQ",
-    "name": "INFORMATION REQUIRED",
+    "name": "Information required",
     "description": "To indicate which information is requested in a responding message.",
     "elements": [
       {
@@ -2602,9 +3442,90 @@
       }
     ]
   },
+  "ITC": {
+    "tag": "ITC",
+    "name": "Institutional claim",
+    "description": "To provide specific claim information for services performed while admitted to an institution.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E027",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6060",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E026",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9447",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E025",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "ITD": {
+    "tag": "ITD",
+    "name": "Information type data",
+    "description": "To indicate the category of data, the language, and the format of the data.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9601",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1503",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "ITM": {
+    "tag": "ITM",
+    "name": "Item number",
+    "description": "To specify an item number.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E212",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
   "LAN": {
     "tag": "LAN",
-    "name": "LANGUAGE",
+    "name": "Language",
     "description": "To specify a language.",
     "elements": [
       {
@@ -2623,7 +3544,7 @@
   },
   "LIN": {
     "tag": "LIN",
-    "name": "LINE ITEM",
+    "name": "Line item",
     "description": "To identify a line item and configuration.",
     "elements": [
       {
@@ -2664,9 +3585,41 @@
       }
     ]
   },
+  "LKP": {
+    "tag": "LKP",
+    "name": "Level indication",
+    "description": "To indicate a level in a hierarchical structure.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E778",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "LNG": {
+    "tag": "LNG",
+    "name": "Language",
+    "description": "To specify a language.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3455",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E033",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "LOC": {
     "tag": "LOC",
-    "name": "PLACE/LOCATION IDENTIFICATION",
+    "name": "Place/location identification",
     "description": "To identify a place or a location and/or related locations.",
     "elements": [
       {
@@ -2701,9 +3654,34 @@
       }
     ]
   },
+  "MAP": {
+    "tag": "MAP",
+    "name": "Message application product information",
+    "description": "To indicate the instruction, the applicable supplier, and the message functions and applications affected.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E022",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E031",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "MEA": {
     "tag": "MEA",
-    "name": "MEASUREMENTS",
+    "name": "Measurements",
     "description": "To specify physical measurements, including dimension tolerances, weights and counts.",
     "elements": [
       {
@@ -2734,7 +3712,7 @@
   },
   "MEM": {
     "tag": "MEM",
-    "name": "MEMBERSHIP DETAILS",
+    "name": "Membership details",
     "description": "To specify details about membership.",
     "elements": [
       {
@@ -2775,9 +3753,22 @@
       }
     ]
   },
+  "MES": {
+    "tag": "MES",
+    "name": "Measurements",
+    "description": "To specify physical measurements.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E175",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "MKS": {
     "tag": "MKS",
-    "name": "MARKET/SALES CHANNEL INFORMATION",
+    "name": "Market/sales channel information",
     "description": "To specify to which market and/or through which sales distribution channel and/or for which end- use the sales of product/service have been made or are given as forecast.",
     "elements": [
       {
@@ -2802,7 +3793,7 @@
   },
   "MOA": {
     "tag": "MOA",
-    "name": "MONETARY AMOUNT",
+    "name": "Monetary amount",
     "description": "To specify a monetary amount.",
     "elements": [
       {
@@ -2813,9 +3804,59 @@
       }
     ]
   },
+  "MOV": {
+    "tag": "MOV",
+    "name": "Car delivery instruction",
+    "description": "To specify delivery and chauffeur drive details, including number of passengers and language of passengers for a car.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E995",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "MSD": {
+    "tag": "MSD",
+    "name": "Message action details",
+    "description": "To specify the message and business function and to provide a tracking mechanism.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E972",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4343",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E206",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "MSG": {
     "tag": "MSG",
-    "name": "MESSAGE TYPE IDENTIFICATION",
+    "name": "Message type identification",
     "description": "To identify a message type and to give its class and maintenance operation.",
     "elements": [
       {
@@ -2846,7 +3887,7 @@
   },
   "MTD": {
     "tag": "MTD",
-    "name": "MAINTENANCE OPERATION DETAILS",
+    "name": "Maintenance operation details",
     "description": "To identify a maintenance operation and its responsible parties.",
     "elements": [
       {
@@ -2875,10 +3916,71 @@
       }
     ]
   },
+  "NAA": {
+    "tag": "NAA",
+    "name": "Name and address",
+    "description": "To specify the name/address and their related function, either by E082 only and/or unstructured by E058 or structured by E080 through 3207.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E082",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3124",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E080",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3042",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3229",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3251",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
   "NAD": {
     "tag": "NAD",
-    "name": "NAME AND ADDRESS",
-    "description": "To specify the name/address and their related function, either by C082 only and/or unstructured by C058 or structured by C080 thru",
+    "name": "Name and address",
+    "description": "To specify the name/address and their related function, either by C082 only and/or unstructured by C058 or structured by C080 thru 3207.",
     "elements": [
       {
         "nodeType": "element",
@@ -2938,7 +4040,7 @@
   },
   "NAT": {
     "tag": "NAT",
-    "name": "NATIONALITY",
+    "name": "Nationality",
     "description": "To specify a nationality.",
     "elements": [
       {
@@ -2955,9 +4057,183 @@
       }
     ]
   },
+  "NME": {
+    "tag": "NME",
+    "name": "Name",
+    "description": "To identify the name of a person or entity.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E012",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "NUN": {
+    "tag": "NUN",
+    "name": "Number of units",
+    "description": "To specify the number of units required.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E523",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "ODI": {
+    "tag": "ODI",
+    "name": "Origin and destination details",
+    "description": "To convey first the origin and then final destination of a journey.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "ODS": {
+    "tag": "ODS",
+    "name": "Additional product details",
+    "description": "To specify additional details including the types of product data, the actual data, the number available, and the charges for usage.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9605",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E015",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "ORG": {
+    "tag": "ORG",
+    "name": "Originator of request details",
+    "description": "To provide the originator of request details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E973",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E974",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E975",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3457",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E976",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3503",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "OTI": {
+    "tag": "OTI",
+    "name": "Other insurance",
+    "description": "To provide payer, insured, and payment information when benefits are being coordinated between third party benefit carriers.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E206",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9645",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E507",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5267",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E030",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4497",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9143",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9607",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
   "PAC": {
     "tag": "PAC",
-    "name": "PACKAGE",
+    "name": "Package",
     "description": "To describe the number and type of packages/physical units.",
     "elements": [
       {
@@ -2994,7 +4270,7 @@
   },
   "PAI": {
     "tag": "PAI",
-    "name": "PAYMENT INSTRUCTIONS",
+    "name": "Payment instructions",
     "description": "To specify the instructions for payment.",
     "elements": [
       {
@@ -3007,7 +4283,7 @@
   },
   "PAS": {
     "tag": "PAS",
-    "name": "ATTENDANCE",
+    "name": "Attendance",
     "description": "To specify attendance information relating to an individual.",
     "elements": [
       {
@@ -3038,7 +4314,7 @@
   },
   "PCC": {
     "tag": "PCC",
-    "name": "PREMIUM CALCULATION COMPONENT DETAILS",
+    "name": "Premium calculation component details",
     "description": "To identify the component affecting a premium calculation and the value category of the component.",
     "elements": [
       {
@@ -3046,12 +4322,18 @@
         "compositeCode": "C820",
         "mandatory": false,
         "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4522",
+        "mandatory": false,
+        "position": 2
       }
     ]
   },
   "PCD": {
     "tag": "PCD",
-    "name": "PERCENTAGE DETAILS",
+    "name": "Percentage details",
     "description": "To specify percentage information.",
     "elements": [
       {
@@ -3070,7 +4352,7 @@
   },
   "PCI": {
     "tag": "PCI",
-    "name": "PACKAGE IDENTIFICATION",
+    "name": "Package identification",
     "description": "To specify markings and labels on individual packages or physical units.",
     "elements": [
       {
@@ -3101,7 +4383,7 @@
   },
   "PDI": {
     "tag": "PDI",
-    "name": "PERSON DEMOGRAPHIC INFORMATION",
+    "name": "Person demographic information",
     "description": "To specify items of person demographic information.",
     "elements": [
       {
@@ -3124,9 +4406,28 @@
       }
     ]
   },
+  "PDT": {
+    "tag": "PDT",
+    "name": "Product information",
+    "description": "To specify details related to a product such as configuration and availability.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7133",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E996",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "PER": {
     "tag": "PER",
-    "name": "PERIOD RELATED DETAILS",
+    "name": "Period related details",
     "description": "Specification of details relating to a period.",
     "elements": [
       {
@@ -3145,7 +4446,7 @@
   },
   "PGI": {
     "tag": "PGI",
-    "name": "PRODUCT GROUP INFORMATION",
+    "name": "Product group information",
     "description": "To indicate the group in which a product belongs.",
     "elements": [
       {
@@ -3164,7 +4465,7 @@
   },
   "PIA": {
     "tag": "PIA",
-    "name": "ADDITIONAL PRODUCT ID",
+    "name": "Additional product id",
     "description": "To specify additional or substitutional item identification codes.",
     "elements": [
       {
@@ -3205,9 +4506,41 @@
       }
     ]
   },
+  "PLI": {
+    "tag": "PLI",
+    "name": "Product location information",
+    "description": "To specify product location information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E008",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PMT": {
+    "tag": "PMT",
+    "name": "Payment information",
+    "description": "To specify information concerning the payment.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E977",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E978",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "PNA": {
     "tag": "PNA",
-    "name": "PARTY IDENTIFICATION",
+    "name": "Party identification",
     "description": "To specify information necessary to establish the identity of a party.",
     "elements": [
       {
@@ -3280,7 +4613,7 @@
   },
   "POC": {
     "tag": "POC",
-    "name": "PURPOSE OF CONVEYANCE CALL",
+    "name": "Purpose of conveyance call",
     "description": "To specify the purpose of the call of the conveyance.",
     "elements": [
       {
@@ -3291,9 +4624,90 @@
       }
     ]
   },
+  "POP": {
+    "tag": "POP",
+    "name": "Period of operation",
+    "description": "To specify date or time period with days of operation.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "POR": {
+    "tag": "POR",
+    "name": "Location and/or related time information",
+    "description": "To provide information about a location, related times and sub-locations.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E517",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E362",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E992",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3227",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "POS": {
+    "tag": "POS",
+    "name": "Point of sale information",
+    "description": "To specify point of sale information by party identification or location identification.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E032",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E975",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "PRC": {
     "tag": "PRC",
-    "name": "PROCESS IDENTIFICATION",
+    "name": "Process identification",
     "description": "To identify a process.",
     "elements": [
       {
@@ -3310,9 +4724,47 @@
       }
     ]
   },
+  "PRD": {
+    "tag": "PRD",
+    "name": "Product identification",
+    "description": "To identify a product.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E989",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "PRE": {
+    "tag": "PRE",
+    "name": "Price details",
+    "description": "To specify price information.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E018",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5213",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "PRI": {
     "tag": "PRI",
-    "name": "PRICE DETAILS",
+    "name": "Price details",
     "description": "To specify price information.",
     "elements": [
       {
@@ -3329,9 +4781,53 @@
       }
     ]
   },
+  "PRO": {
+    "tag": "PRO",
+    "name": "Promotions",
+    "description": "To specify the promotion details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E019",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "PRT": {
+    "tag": "PRT",
+    "name": "Party information",
+    "description": "To provide specific identification number and demographic information regarding the identity of the participating parties.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E206",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E023",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "PRV": {
     "tag": "PRV",
-    "name": "PROVISO DETAILS",
+    "name": "Proviso details",
     "description": "Details regarding the stipulation or limitation in a document.",
     "elements": [
       {
@@ -3356,7 +4852,7 @@
   },
   "PSD": {
     "tag": "PSD",
-    "name": "PHYSICAL SAMPLE DESCRIPTION",
+    "name": "Physical sample description",
     "description": "To define the physical sample parameters associated with a test, resulting in discrete measurements.",
     "elements": [
       {
@@ -3409,9 +4905,76 @@
       }
     ]
   },
+  "PSI": {
+    "tag": "PSI",
+    "name": "Service information",
+    "description": "To provide detail information about the service.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E507",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E021",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5030",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "9039",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5267",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E024",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
   "PTY": {
     "tag": "PTY",
-    "name": "PRIORITY",
+    "name": "Priority",
     "description": "The segment is used to communicate priority information.",
     "elements": [
       {
@@ -3430,7 +4993,7 @@
   },
   "PYT": {
     "tag": "PYT",
-    "name": "PAYMENT TERMS",
+    "name": "Payment terms",
     "description": "To specify the terms of payment.",
     "elements": [
       {
@@ -3473,7 +5036,7 @@
   },
   "QRS": {
     "tag": "QRS",
-    "name": "QUERY AND RESPONSE",
+    "name": "Query and response",
     "description": "To provide a declaration in the form of a coded question and response.",
     "elements": [
       {
@@ -3496,9 +5059,22 @@
       }
     ]
   },
+  "QTI": {
+    "tag": "QTI",
+    "name": "Quantity",
+    "description": "To convey information about a quantity.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E035",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "QTY": {
     "tag": "QTY",
-    "name": "QUANTITY",
+    "name": "Quantity",
     "description": "To specify a pertinent quantity.",
     "elements": [
       {
@@ -3511,7 +5087,7 @@
   },
   "QUA": {
     "tag": "QUA",
-    "name": "QUALIFICATION",
+    "name": "Qualification",
     "description": "To specify the qualification of a person.",
     "elements": [
       {
@@ -3530,7 +5106,7 @@
   },
   "QVR": {
     "tag": "QVR",
-    "name": "QUANTITY VARIANCES",
+    "name": "Quantity variances",
     "description": "To specify item details relating to quantity variances.",
     "elements": [
       {
@@ -3553,9 +5129,22 @@
       }
     ]
   },
+  "RCI": {
+    "tag": "RCI",
+    "name": "Reservation control information",
+    "description": "To specify a reference to a reservation.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E979",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
   "RCS": {
     "tag": "RCS",
-    "name": "REQUIREMENTS AND CONDITIONS",
+    "name": "Requirements and conditions",
     "description": "To specify sector/subject requirements and conditions.",
     "elements": [
       {
@@ -3586,7 +5175,7 @@
   },
   "REL": {
     "tag": "REL",
-    "name": "RELATIONSHIP",
+    "name": "Relationship",
     "description": "To identify relationships between objects.",
     "elements": [
       {
@@ -3605,7 +5194,7 @@
   },
   "RFF": {
     "tag": "RFF",
-    "name": "REFERENCE",
+    "name": "Reference",
     "description": "To specify a reference.",
     "elements": [
       {
@@ -3616,9 +5205,22 @@
       }
     ]
   },
+  "RFR": {
+    "tag": "RFR",
+    "name": "Reference",
+    "description": "To specify a reference.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E506",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "RJL": {
     "tag": "RJL",
-    "name": "ACCOUNTING JOURNAL IDENTIFICATION",
+    "name": "Accounting journal identification",
     "description": "To identify an accounting journal.",
     "elements": [
       {
@@ -3635,9 +5237,28 @@
       }
     ]
   },
+  "RLS": {
+    "tag": "RLS",
+    "name": "Relationship",
+    "description": "To identify relationships between objects.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "9141",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E941",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "RNG": {
     "tag": "RNG",
-    "name": "RANGE DETAILS",
+    "name": "Range details",
     "description": "To identify a range.",
     "elements": [
       {
@@ -3656,7 +5277,7 @@
   },
   "ROD": {
     "tag": "ROD",
-    "name": "RISK OBJECT TYPE",
+    "name": "Risk object type",
     "description": "To identify a type of object at risk.",
     "elements": [
       {
@@ -3673,9 +5294,22 @@
       }
     ]
   },
+  "RPI": {
+    "tag": "RPI",
+    "name": "Quantity and action details",
+    "description": "To indicate quantity and action required in relation to a product.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E958",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "RSL": {
     "tag": "RSL",
-    "name": "RESULT",
+    "name": "Result",
     "description": "To specify a discrete or non-discrete result as a value or value range.",
     "elements": [
       {
@@ -3716,9 +5350,22 @@
       }
     ]
   },
+  "RTC": {
+    "tag": "RTC",
+    "name": "Rate types",
+    "description": "To specify the types of rates.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "5263",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "RTE": {
     "tag": "RTE",
-    "name": "RATE DETAILS",
+    "name": "Rate details",
     "description": "To specify rate information.",
     "elements": [
       {
@@ -3735,9 +5382,47 @@
       }
     ]
   },
+  "RTI": {
+    "tag": "RTI",
+    "name": "Rate details",
+    "description": "To identify a rate and to indicate how it should be processed.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E011",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "RUL": {
+    "tag": "RUL",
+    "name": "Rule information",
+    "description": "To specify rule information and rule status.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E004",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E005",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E006",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
   "SAL": {
     "tag": "SAL",
-    "name": "REMUNERATION TYPE IDENTIFICATION",
+    "name": "Remuneration type identification",
     "description": "Identification of a remuneration type.",
     "elements": [
       {
@@ -3750,7 +5435,7 @@
   },
   "SCC": {
     "tag": "SCC",
-    "name": "SCHEDULING CONDITIONS",
+    "name": "Scheduling conditions",
     "description": "To specify scheduling conditions.",
     "elements": [
       {
@@ -3775,50 +5460,69 @@
   },
   "SCD": {
     "tag": "SCD",
-    "name": "STRUCTURE COMPONENT DEFINITION",
+    "name": "Structure component definition",
     "description": "To specify a component of a data structure (e.g. an array or table).",
     "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "7497",
+        "mandatory": true,
+        "position": 1
+      },
       {
         "nodeType": "composite",
         "compositeCode": "C786",
         "mandatory": false,
-        "position": 1
+        "position": 2
       },
       {
         "nodeType": "composite",
         "compositeCode": "C082",
         "mandatory": false,
-        "position": 2
+        "position": 3
       },
       {
         "nodeType": "element",
         "elementCode": "4405",
         "mandatory": false,
-        "position": 3
+        "position": 4
       },
       {
         "nodeType": "element",
         "elementCode": "1222",
         "mandatory": false,
-        "position": 4
+        "position": 5
       },
       {
         "nodeType": "composite",
         "compositeCode": "C778",
         "mandatory": false,
-        "position": 5
+        "position": 6
       },
       {
         "nodeType": "composite",
         "compositeCode": "C240",
         "mandatory": false,
-        "position": 6
+        "position": 7
+      }
+    ]
+  },
+  "SDT": {
+    "tag": "SDT",
+    "name": "Selection details",
+    "description": "To specify the details for making a selection.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E010",
+        "mandatory": true,
+        "position": 1
       }
     ]
   },
   "SEG": {
     "tag": "SEG",
-    "name": "SEGMENT IDENTIFICATION",
+    "name": "Segment identification",
     "description": "To identify a segment and give its class and maintenance operation.",
     "elements": [
       {
@@ -3843,7 +5547,7 @@
   },
   "SEL": {
     "tag": "SEL",
-    "name": "SEAL NUMBER",
+    "name": "Seal number",
     "description": "To specify the seal number or a range of seal numbers.",
     "elements": [
       {
@@ -3880,7 +5584,7 @@
   },
   "SEQ": {
     "tag": "SEQ",
-    "name": "SEQUENCE DETAILS",
+    "name": "Sequence details",
     "description": "To provide details relating to the sequence.",
     "elements": [
       {
@@ -3897,9 +5601,46 @@
       }
     ]
   },
+  "SER": {
+    "tag": "SER",
+    "name": "Facility information",
+    "description": "To provide facility information, followed by the period and days of operation.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E965",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E013",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
   "SFI": {
     "tag": "SFI",
-    "name": "SAFETY INFORMATION",
+    "name": "Safety information",
     "description": "To identify regulatory safety information.",
     "elements": [
       {
@@ -3930,7 +5671,7 @@
   },
   "SGP": {
     "tag": "SGP",
-    "name": "SPLIT GOODS PLACEMENT",
+    "name": "Split goods placement",
     "description": "To specify the placement of goods in relation to equipment.",
     "elements": [
       {
@@ -3949,7 +5690,7 @@
   },
   "SGU": {
     "tag": "SGU",
-    "name": "SEGMENT USAGE DETAILS",
+    "name": "Segment usage details",
     "description": "To specify the details of the usage of a segment within a message type structure.",
     "elements": [
       {
@@ -3998,7 +5739,7 @@
   },
   "SPR": {
     "tag": "SPR",
-    "name": "ORGANISATION CLASSIFICATION DETAILS",
+    "name": "Organisation classification details",
     "description": "To provide classification details relating to the activities of an organisation.",
     "elements": [
       {
@@ -4023,7 +5764,7 @@
   },
   "SPS": {
     "tag": "SPS",
-    "name": "SAMPLING PARAMETERS FOR SUMMARY STATISTICS",
+    "name": "Sampling parameters for summary statistics",
     "description": "To define the sampling parameters associated with summary statistics reported.",
     "elements": [
       {
@@ -4070,9 +5811,28 @@
       }
     ]
   },
+  "SSR": {
+    "tag": "SSR",
+    "name": "Special requirement details",
+    "description": "To specify special requirements on services, the quantity required, action to be taken and where the requirement should be administered.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E980",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E981",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
   "STA": {
     "tag": "STA",
-    "name": "STATISTICS",
+    "name": "Statistics",
     "description": "To transmit summary statistics related to a specified collection of test result values.",
     "elements": [
       {
@@ -4091,7 +5851,7 @@
   },
   "STC": {
     "tag": "STC",
-    "name": "STATISTICAL CONCEPT",
+    "name": "Statistical concept",
     "description": "To specify a statistical concept.",
     "elements": [
       {
@@ -4122,7 +5882,7 @@
   },
   "STG": {
     "tag": "STG",
-    "name": "STAGES",
+    "name": "Stages",
     "description": "To provide information related to the kind of stage in a process, the number of stages and the actual stage.",
     "elements": [
       {
@@ -4147,7 +5907,7 @@
   },
   "STS": {
     "tag": "STS",
-    "name": "STATUS",
+    "name": "Status",
     "description": "To specify the status of an object or service, including its category and the reason(s) for the status.",
     "elements": [
       {
@@ -4196,7 +5956,7 @@
   },
   "TAX": {
     "tag": "TAX",
-    "name": "DUTY/TAX/FEE DETAILS",
+    "name": "Duty/tax/fee details",
     "description": "To specify relevant duty/tax/fee information.",
     "elements": [
       {
@@ -4218,40 +5978,46 @@
         "position": 3
       },
       {
-        "nodeType": "composite",
-        "compositeCode": "C243",
+        "nodeType": "element",
+        "elementCode": "5286",
         "mandatory": false,
         "position": 4
       },
       {
-        "nodeType": "element",
-        "elementCode": "5305",
+        "nodeType": "composite",
+        "compositeCode": "C243",
         "mandatory": false,
         "position": 5
       },
       {
         "nodeType": "element",
-        "elementCode": "3446",
+        "elementCode": "5305",
         "mandatory": false,
         "position": 6
       },
       {
         "nodeType": "element",
-        "elementCode": "1227",
+        "elementCode": "3446",
         "mandatory": false,
         "position": 7
       },
       {
         "nodeType": "element",
-        "elementCode": "5307",
+        "elementCode": "1227",
         "mandatory": false,
         "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "5307",
+        "mandatory": false,
+        "position": 9
       }
     ]
   },
   "TCC": {
     "tag": "TCC",
-    "name": "CHARGE/RATE CALCULATIONS",
+    "name": "Charge/rate calculations",
     "description": "To specify charges.",
     "elements": [
       {
@@ -4280,9 +6046,59 @@
       }
     ]
   },
+  "TCE": {
+    "tag": "TCE",
+    "name": "Time and certainty",
+    "description": "To specify the time and certainty of an event.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E946",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "TDI": {
+    "tag": "TDI",
+    "name": "Traveller document information",
+    "description": "To specify document information related to a traveller.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E968",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E969",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3500",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "3460",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
   "TDT": {
     "tag": "TDT",
-    "name": "TRANSPORT INFORMATION",
+    "name": "Transport information",
     "description": "To specify information regarding the transport such as mode of transport, means of transport, its conveyance reference number and the identification of the means of transport.",
     "elements": [
       {
@@ -4349,7 +6165,7 @@
   },
   "TEM": {
     "tag": "TEM",
-    "name": "TEST METHOD",
+    "name": "Test method",
     "description": "To describe the nature of the test performed.",
     "elements": [
       {
@@ -4390,9 +6206,66 @@
       }
     ]
   },
+  "TFF": {
+    "tag": "TFF",
+    "name": "Tariff information",
+    "description": "To specify tariff details relating to a service or product.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E982",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E983",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E984",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "TIF": {
+    "tag": "TIF",
+    "name": "Traveller information",
+    "description": "To specify traveller(s) and personal details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E985",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E986",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "TIZ": {
+    "tag": "TIZ",
+    "name": "Time zone information",
+    "description": "To provide information about a time zone.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E034",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "TMD": {
     "tag": "TMD",
-    "name": "TRANSPORT MOVEMENT DETAILS",
+    "name": "Transport movement details",
     "description": "To specify operational transport movement details for a goods item or equipment (which may differ from the contractual conditions).",
     "elements": [
       {
@@ -4417,7 +6290,7 @@
   },
   "TMP": {
     "tag": "TMP",
-    "name": "TEMPERATURE",
+    "name": "Temperature",
     "description": "To specify the temperature setting.",
     "elements": [
       {
@@ -4436,7 +6309,7 @@
   },
   "TOD": {
     "tag": "TOD",
-    "name": "TERMS OF DELIVERY OR TRANSPORT",
+    "name": "Terms of delivery or transport",
     "description": "To specify terms of delivery or transport.",
     "elements": [
       {
@@ -4461,7 +6334,7 @@
   },
   "TPL": {
     "tag": "TPL",
-    "name": "TRANSPORT PLACEMENT",
+    "name": "Transport placement",
     "description": "To specify placement of goods or equipment in relation to the transport used. The segment serves as a pointer to the TDT segment group.",
     "elements": [
       {
@@ -4472,9 +6345,22 @@
       }
     ]
   },
+  "TRF": {
+    "tag": "TRF",
+    "name": "Traffic restriction details",
+    "description": "To provide details which restrict traffic.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E007",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
   "TRU": {
     "tag": "TRU",
-    "name": "TECHNICAL RULES",
+    "name": "Technical rules",
     "description": "A segment specifying technical rules.",
     "elements": [
       {
@@ -4511,7 +6397,7 @@
   },
   "TSR": {
     "tag": "TSR",
-    "name": "TRANSPORT SERVICE REQUIREMENTS",
+    "name": "Transport service requirements",
     "description": "To specify the contract and carriage conditions and service and priority requirements for the transport.",
     "elements": [
       {
@@ -4540,9 +6426,1312 @@
       }
     ]
   },
+  "TVL": {
+    "tag": "TVL",
+    "name": "Travel product information",
+    "description": "To specify details related to a travel product.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E987",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E975",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E988",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E989",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E990",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "TXS": {
+    "tag": "TXS",
+    "name": "Taxes",
+    "description": "To specify tax details.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "E020",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UCD": {
+    "tag": "UCD",
+    "name": "Data element error indication",
+    "description": "To identify an erroneous stand-alone, composite or component data element, and to identify the nature of the error.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S011",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UCF": {
+    "tag": "UCF",
+    "name": "Group response",
+    "description": "To identify a group in the subject interchange and to indicate acknowledgement or rejection (action taken) of the UNG and UNE segments, and to identify any error related to these segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the group level. Depending on the action code, it may also indicate the action taken on the messages and packages within that group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S006",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S007",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0135",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S011",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0138",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "UCI": {
+    "tag": "UCI",
+    "name": "Interchange response",
+    "description": "To identify the subject interchange, to indicate interchange receipt, to indicate acknowledgement or rejection (action taken) of the UNA, UNB and UNZ segments, and to identify any error related to these segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the interchange level. Depending on the action code, it may also indicate the action taken on the groups, messages, and packages within that interchange.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S002",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S003",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0135",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S011",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0138",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "UCM": {
+    "tag": "UCM",
+    "name": "Message/package response",
+    "description": "To identify a message or package in the subject interchange, and to indicate that message's or package's acknowledgement or rejection (action taken), and to identify any error related to the UNH, UNT, UNO, and UNP segments. It can also identify errors related to the USA, USC, USD, USH, USR, UST, or USU security segments when they appear at the message or package level.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S009",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0083",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0135",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S011",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0800",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S020",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0138",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "UCS": {
+    "tag": "UCS",
+    "name": "Segment error indication",
+    "description": "To identify either a segment containing an error or a missing segment, and to identify any error related to the complete segment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0096",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0085",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "UGH": {
+    "tag": "UGH",
+    "name": "Anti-collision segment group header",
+    "description": "To head, identify and specify an anti-collision segment group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0087",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UGT": {
+    "tag": "UGT",
+    "name": "Anti-collision segment group trailer",
+    "description": "To end and check the completeness of an anti-collision segment group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0087",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UIB": {
+    "tag": "UIB",
+    "name": "Interactive interchange header",
+    "description": "To head and identify an interchange.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S001",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S302",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S303",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S018",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S305",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S002",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S003",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S300",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0325",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0035",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "UIH": {
+    "tag": "UIH",
+    "name": "Interactive message header",
+    "description": "To head, identify and specify a message.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S306",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0340",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S302",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S301",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S300",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0035",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "UIR": {
+    "tag": "UIR",
+    "name": "Interactive status",
+    "description": "To report the status of the dialogue.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0331",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S307",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S302",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S300",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0340",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0800",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "UIT": {
+    "tag": "UIT",
+    "name": "Interactive message trailer",
+    "description": "To end and check the completeness of a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0340",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0074",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "UIZ": {
+    "tag": "UIZ",
+    "name": "Interactive interchange trailer",
+    "description": "To end and check the completeness of an interchange.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S302",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0325",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "UNB": {
+    "tag": "UNB",
+    "name": "Interchange header",
+    "description": "To identify an interchange.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S001",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S002",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S003",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S004",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S005",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0026",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0029",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0031",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0032",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0035",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "UNE": {
+    "tag": "UNE",
+    "name": "Group trailer",
+    "description": "To end and check the completeness of a group.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0060",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UNG": {
+    "tag": "UNG",
+    "name": "Group header",
+    "description": "To head, identify and specify a group of messages and/or packages, which may be used for internal routing and which may contain one or more message types and/or packages.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0038",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S006",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S007",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S004",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": true,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S008",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0058",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "UNH": {
+    "tag": "UNH",
+    "name": "Message header",
+    "description": "To head, identify and specify a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S009",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0068",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S010",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S016",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S017",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S018",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "UNO": {
+    "tag": "UNO",
+    "name": "Object header",
+    "description": "To head, identify and specify an object.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0800",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S020",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S021",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S022",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S302",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S301",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S300",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0035",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "UNP": {
+    "tag": "UNP",
+    "name": "Object trailer",
+    "description": "To end and check the completeness of an object.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0810",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0800",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UNS": {
+    "tag": "UNS",
+    "name": "Section control",
+    "description": "To separate header, detail and summary sections of a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0081",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UNT": {
+    "tag": "UNT",
+    "name": "Message trailer",
+    "description": "To end and check the completeness of a message.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0074",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "UNZ": {
+    "tag": "UNZ",
+    "name": "Interchange trailer",
+    "description": "To end and check the completeness of an interchange.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "USA": {
+    "tag": "USA",
+    "name": "Security algorithm",
+    "description": "To identify a security algorithm, the technical usage made of it, and to contain the technical parameters required.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S502",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S503",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "USB": {
+    "tag": "USB",
+    "name": "Secured data identification",
+    "description": "To contain details related to the AUTACK.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0503",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S501",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S002",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S003",
+        "mandatory": true,
+        "position": 4
+      }
+    ]
+  },
+  "USC": {
+    "tag": "USC",
+    "name": "Certificate",
+    "description": "To convey the public key and the credentials of its owner.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0536",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S500",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0545",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0505",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0507",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0543",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0546",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S505",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S501",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0567",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0569",
+        "mandatory": false,
+        "position": 11
+      }
+    ]
+  },
+  "USD": {
+    "tag": "USD",
+    "name": "Data encryption header",
+    "description": "To specify size (i.e. length of data in octets of bits) of encrypted data following the segment terminator of this segment.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0556",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0518",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0582",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "USE": {
+    "tag": "USE",
+    "name": "Security message relation",
+    "description": "To specify the relation to earlier security messages, such as response to a particular request, or request for a particular answer.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0565",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "USF": {
+    "tag": "USF",
+    "name": "Key management function",
+    "description": "To specify the type of key management function and the status of a corresponding key or certificate.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0579",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S504",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0567",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0572",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0505",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "USH": {
+    "tag": "USH",
+    "name": "Security header",
+    "description": "To specify a security mechanism applied to a EDIFACT structure (i.e.: either message/package, group or interchange).",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0501",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0541",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0503",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0505",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0507",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0509",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S500",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0520",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S501",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "USL": {
+    "tag": "USL",
+    "name": "Security list status",
+    "description": "To specify the status of security objects, such as keys or certificates to be delivered in a list, and the corresponding list parameters.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0567",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S504",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "USR": {
+    "tag": "USR",
+    "name": "Security result",
+    "description": "To contain the result of the security mechanisms.",
+    "elements": [
+      {
+        "nodeType": "composite",
+        "compositeCode": "S508",
+        "mandatory": true,
+        "position": 1
+      }
+    ]
+  },
+  "UST": {
+    "tag": "UST",
+    "name": "Security trailer",
+    "description": "To establish a link between security header and security trailer segment groups.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0588",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "USU": {
+    "tag": "USU",
+    "name": "Data encryption trailer",
+    "description": "To provide a trailer for the encrypted data.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0556",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0518",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "USX": {
+    "tag": "USX",
+    "name": "Security references",
+    "description": "To refer to the secured EDIFACT structure and its associated date and time.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0020",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S003",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0048",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S006",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S007",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0062",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S009",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0800",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S501",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "USY": {
+    "tag": "USY",
+    "name": "Security on references",
+    "description": "To identify the applicable header, and to contain the security result and/or to indicate the possible cause of security rejection for the referred value.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "0534",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "S508",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "0571",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "VEH": {
+    "tag": "VEH",
+    "name": "Vehicle",
+    "description": "To convey information about a vehicle.",
+    "elements": [
+      {
+        "nodeType": "element",
+        "elementCode": "8053",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E991",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E211",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "6314",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "nodeType": "composite",
+        "compositeCode": "E992",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "nodeType": "element",
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
   "VLI": {
     "tag": "VLI",
-    "name": "VALUE LIST IDENTIFICATION",
+    "name": "Value list identification",
     "description": "To identify a coded or non coded value list.",
     "elements": [
       {

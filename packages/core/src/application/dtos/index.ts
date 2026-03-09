@@ -10,4 +10,4 @@
  */
 
 export * from './MessageStructureDTO';
-export type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite } from './MessageStructureDTO';
+export type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, CompositeElementNode, ElementOrComposite, SyntaxRuleDefinition } from './MessageStructureDTO';

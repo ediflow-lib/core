@@ -13,6 +13,8 @@
     "test:coverage": "npm run test:coverage --workspace=packages/core",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
+    "validate:packages": "tsx scripts/validate-data-packages.ts",
+    "validate:scrapers": "tsx scripts/validate-scrapers-packages.ts",
     "publish:all": "npm publish --workspaces --access public",
     "publish:core": "npm publish --workspace=packages/core --access public",
     "publish:d96a": "npm publish --workspace=packages/edifact-d96a --access public",

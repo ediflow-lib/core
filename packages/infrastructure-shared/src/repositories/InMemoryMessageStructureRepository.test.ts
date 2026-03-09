@@ -122,5 +122,52 @@ describe('InMemoryMessageStructureRepository', () => {
 
       expect(result).toBeNull();
     });
+
+    it('should also clear registered code lists', async () => {
+      repository.registerCodeList('X12', '004010', '353', new Set(['00', '01']));
+
+      repository.clear();
+
+      const result = await repository.getCodeList('X12', '004010', '353');
+
+      expect(result).toBeNull();
+    });
+  });
+
+  describe('getCodeList and registerCodeList', () => {
+    it('should register and retrieve a code list', async () => {
+      const codes = new Set(['00', '01', '02', '03']);
+      repository.registerCodeList('X12', '004010', '353', codes);
+
+      const result = await repository.getCodeList('X12', '004010', '353');
+
+      expect(result).not.toBeNull();
+      expect(result!.has('00')).toBe(true);
+      expect(result!.has('01')).toBe(true);
+      expect(result!.size).toBe(4);
+    });
+
+    it('should return null for non-registered code list', async () => {
+      const result = await repository.getCodeList('X12', '004010', '999');
+      expect(result).toBeNull();
+    });
+
+    it('should be case-insensitive for standard and version', async () => {
+      repository.registerCodeList('X12', '004010', '353', new Set(['00']));
+
+      const result = await repository.getCodeList('x12', '004010', '353');
+      expect(result).not.toBeNull();
+    });
+
+    it('should support multiple code lists for different versions', async () => {
+      repository.registerCodeList('X12', '004010', '353', new Set(['00', '01']));
+      repository.registerCodeList('X12', '005010', '353', new Set(['00', '01', '02']));
+
+      const result004 = await repository.getCodeList('X12', '004010', '353');
+      const result005 = await repository.getCodeList('X12', '005010', '353');
+
+      expect(result004!.size).toBe(2);
+      expect(result005!.size).toBe(3);
+    });
   });
 });

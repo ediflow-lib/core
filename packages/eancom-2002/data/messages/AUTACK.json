@@ -6,24 +6,10 @@
   "structure": [
     {
       "nodeType": "segment",
-      "segmentRef": "UNA",
-      "mandatory": false,
-      "maxOccurrences": 1,
-      "position": 1
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNB",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 2
-    },
-    {
-      "nodeType": "segment",
       "segmentRef": "UNH",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 3
+      "position": 1
     },
     {
       "nodeType": "segmentGroup",
@@ -32,7 +18,7 @@
       "triggerSegment": "USH",
       "mandatory": true,
       "maxOccurrences": 99,
-      "position": 4,
+      "position": 2,
       "structure": [
         {
           "nodeType": "segment",
@@ -89,7 +75,7 @@
       "triggerSegment": "USX",
       "mandatory": true,
       "maxOccurrences": 9999,
-      "position": 5,
+      "position": 3,
       "structure": [
         {
           "nodeType": "segment",
@@ -114,7 +100,7 @@
       "triggerSegment": "UST",
       "mandatory": true,
       "maxOccurrences": 99,
-      "position": 6,
+      "position": 4,
       "structure": [
         {
           "nodeType": "segment",
@@ -130,14 +116,7 @@
       "segmentRef": "UNT",
       "mandatory": true,
       "maxOccurrences": 1,
-      "position": 7
-    },
-    {
-      "nodeType": "segment",
-      "segmentRef": "UNZ",
-      "mandatory": true,
-      "maxOccurrences": 1,
-      "position": 8
+      "position": 5
     }
   ]
 }

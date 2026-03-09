@@ -22,7 +22,8 @@ describe('CachingMessageStructureRepository', () => {
     mockRepository = {
       getMessageStructure: vi.fn(async () => mockStructure),
       getAllMessageTypes: vi.fn(async () => ['ORDERS', 'INVOIC']),
-      hasMessageStructure: vi.fn(async () => true)
+      hasMessageStructure: vi.fn(async () => true),
+      getCodeList: vi.fn(async () => null)
     };
 
     repository = new CachingMessageStructureRepository(mockRepository);

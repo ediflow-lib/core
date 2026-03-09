@@ -16,3 +16,11 @@ export { X12DelimiterDetector } from './infrastructure/parsers/X12DelimiterDetec
 export { X12SegmentParser } from './infrastructure/parsers/X12SegmentParser';
 export { X12EnvelopeParser } from './infrastructure/parsers/X12EnvelopeParser';
 export { X12MessageParser } from './infrastructure/parsers/X12MessageParser';
+
+// Export validation
+export { X12ValidationServiceBuilder } from './infrastructure/validation/X12ValidationServiceBuilder';
+export { ISAMustBeFirstRule } from './infrastructure/validation/rules/ISAMustBeFirstRule';
+export { IEAMustBeLastRule } from './infrastructure/validation/rules/IEAMustBeLastRule';
+export { X12SegmentTagFormatRule } from './infrastructure/validation/rules/X12SegmentTagFormatRule';
+export { X12EnvelopeIntegrityRule } from './infrastructure/validation/rules/X12EnvelopeIntegrityRule';
+

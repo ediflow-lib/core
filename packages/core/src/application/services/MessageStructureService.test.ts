@@ -27,7 +27,8 @@ describe('MessageStructureService', () => {
       hasMessageStructure: vi.fn(async (standard: string, version: string, messageType: string) => {
         const key = `${standard}:${version}:${messageType}`;
         return structures.has(key);
-      })
+      }),
+      getCodeList: vi.fn(async () => null)
     };
 
     service = new MessageStructureService(mockRepository);
@@ -56,7 +57,7 @@ describe('MessageStructureService', () => {
     });
 
     it('should throw error when message structure not found', async () => {
-      expect(
+      await expect(
         service.getMessageStructure('EDIFACT', 'D.20B', 'UNKNOWN')
       ).rejects.toThrow('Message structure not found: EDIFACT D.20B UNKNOWN');
     });

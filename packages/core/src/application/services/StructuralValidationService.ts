@@ -1,5 +1,6 @@
 import { EDIMessage } from '@domain/entities/EDIMessage';
-import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup } from '@application/dtos';
+import type { EDISegment } from '@domain/value-objects/EDISegment';
+import type { MessageStructureDTO, SegmentNode, SegmentGroupNode, SegmentOrGroup, ElementNode, SyntaxRuleDefinition } from '@application/dtos';
 import { ValidationResult } from '@application/validation/ValidationResult';
 import { ValidationError } from '@application/validation/ValidationError';
 import { StructuralValidationContext } from './StructuralValidationContext';
@@ -54,6 +55,13 @@ export class StructuralValidationService {
 
     if (this.segmentExceedsMaxOccurrences(segments, node.maxOccurrences)) {
       this.reportSegmentMaxOccurrencesExceeded(node, context, segments, errors);
+    }
+
+    if (node.elements.length > 0) {
+      segments.forEach((segment, segmentIndex) => {
+        this.validateSegmentElements(node, segment, segmentIndex, context, errors);
+        this.validateSyntaxRules(node, segment, errors);
+      });
     }
   }
 
@@ -193,6 +201,112 @@ export class StructuralValidationService {
         this.validateSegmentGroup(child, ediMessage, context, errors);
       }
     }
+  }
+
+  private validateSegmentElements(
+    node: SegmentNode,
+    segment: EDISegment,
+    segmentIndex: number,
+    context: StructuralValidationContext,
+    errors: ValidationError[]
+  ): void {
+    for (const elementDef of node.elements) {
+      if (elementDef.nodeType !== 'element') {
+        continue;
+      }
+      const elementNode = elementDef as ElementNode;
+      const elementValue = segment.elements[elementNode.position - 1]?.value ?? '';
+      const fieldPath = this.buildElementPath(context, node.tag, segmentIndex, elementNode);
+
+      if (elementNode.mandatory && elementValue === '') {
+        errors.push(new ValidationError(fieldPath, `Mandatory element ${elementNode.code} is missing`, 'MISSING_MANDATORY_ELEMENT'));
+        continue;
+      }
+
+      if (elementNode.maxLength !== undefined && elementValue.length > elementNode.maxLength) {
+        errors.push(new ValidationError(fieldPath, `Element ${elementNode.code} exceeds max length ${elementNode.maxLength} (actual: ${elementValue.length})`, 'ELEMENT_TOO_LONG'));
+      }
+    }
+  }
+
+  private buildElementPath(
+    context: StructuralValidationContext,
+    tag: string,
+    segmentIndex: number,
+    element: ElementNode
+  ): string {
+    const segmentPath = context.path.length > 0 ? `${context.path.join('.')}.${tag}[${segmentIndex}]` : `${tag}[${segmentIndex}]`;
+    return `${segmentPath}.${element.code}[${element.position}]`;
+  }
+
+  private validateSyntaxRules(
+    node: SegmentNode,
+    segment: EDISegment,
+    errors: ValidationError[]
+  ): void {
+    if (!node.syntaxRules || node.syntaxRules.length === 0) {
+      return;
+    }
+
+    for (const rule of node.syntaxRules) {
+      const ruleErrors = this.applySyntaxRule(rule, node.tag, segment);
+      errors.push(...ruleErrors);
+    }
+  }
+
+  private applySyntaxRule(rule: SyntaxRuleDefinition, tag: string, segment: EDISegment): ValidationError[] {
+    const present = rule.positions.map(pos => {
+      const value = segment.elements[pos - 1]?.value ?? '';
+      return value !== '';
+    });
+
+    switch (rule.type) {
+      case 'P': return this.applyPRule(tag, present, rule.description);
+      case 'R': return this.applyRRule(tag, present, rule.description);
+      case 'E': return this.applyERule(tag, present, rule.description);
+      case 'C': return this.applyCRule(tag, present, rule.description);
+      case 'L': return this.applyLRule(tag, present, rule.description);
+      default: return [];
+    }
+  }
+
+  private applyPRule(tag: string, present: boolean[], description: string): ValidationError[] {
+    const anyPresent = present.some(Boolean);
+    const allPresent = present.every(Boolean);
+    if (anyPresent && !allPresent) {
+      return [new ValidationError(tag, description, 'SYNTAX_RULE_P_VIOLATION')];
+    }
+    return [];
+  }
+
+  private applyRRule(tag: string, present: boolean[], description: string): ValidationError[] {
+    if (!present.some(Boolean)) {
+      return [new ValidationError(tag, description, 'SYNTAX_RULE_R_VIOLATION')];
+    }
+    return [];
+  }
+
+  private applyERule(tag: string, present: boolean[], description: string): ValidationError[] {
+    if (present.filter(Boolean).length > 1) {
+      return [new ValidationError(tag, description, 'SYNTAX_RULE_E_VIOLATION')];
+    }
+    return [];
+  }
+
+  private applyCRule(tag: string, present: boolean[], description: string): ValidationError[] {
+    const [first, ...rest] = present;
+    if (first && rest.some(p => !p)) {
+      return [new ValidationError(tag, description, 'SYNTAX_RULE_C_VIOLATION')];
+    }
+    return [];
+  }
+
+  private applyLRule(tag: string, present: boolean[], description: string): ValidationError[] {
+    const [first, ...rest] = present;
+    if (!first && rest.some(Boolean)) {
+      return [new ValidationError(tag, description, 'SYNTAX_RULE_L_VIOLATION')];
+    }
+    return [];
   }
 
   private isSegmentNode(node: SegmentOrGroup): node is SegmentNode {

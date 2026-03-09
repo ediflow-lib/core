@@ -365,7 +365,7 @@ describe('ValidateCommand - TDD (US-5.2)', () => {
       expect(() => parseStandard('INVALID')).toThrow('Unsupported standard: INVALID');
     });
 
-    it('should throw error when parse fails', () => {
+    it('should throw error when parse fails', async () => {
       mockParseUseCase.execute.mockReturnValue({
         success: false,
         errors: [{ code: 'PARSE_ERROR', message: 'Parse failed' }],
@@ -373,10 +373,10 @@ describe('ValidateCommand - TDD (US-5.2)', () => {
 
       const execute = (validateCommand as any).execute.bind(validateCommand);
 
-      expect(() => execute('test.edi', {})).rejects.toThrow();
+      await expect(() => execute('test.edi', {})).rejects.toThrow();
     });
 
-    it('should throw error when validation use case fails', () => {
+    it('should throw error when validation use case fails', async () => {
       mockValidateUseCase.execute.mockReturnValue({
         success: false,
         errors: [{ code: 'VALIDATION_ERROR', message: 'Validation failed' }],
@@ -384,7 +384,7 @@ describe('ValidateCommand - TDD (US-5.2)', () => {
 
       const execute = (validateCommand as any).execute.bind(validateCommand);
 
-      expect(() => execute('test.edi', {})).rejects.toThrow();
+      await expect(() => execute('test.edi', {})).rejects.toThrow();
     });
 
     it('should throw error for invalid format option', () => {

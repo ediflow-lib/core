@@ -3,6 +3,7 @@ import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/
 
 export class InMemoryMessageStructureRepository implements IMessageStructureRepository {
   private structures = new Map<string, MessageStructureDTO>();
+  private codeLists = new Map<string, Set<string>>();
 
   async getMessageStructure(
     standard: string,
@@ -10,7 +11,7 @@ export class InMemoryMessageStructureRepository implements IMessageStructureRepo
     messageType: string
   ): Promise<MessageStructureDTO | null> {
     const key = this.createKey(standard, version, messageType);
-    return this.structures.get(key) || null;
+    return this.structures.get(key) ?? null;
   }
 
   async getAllMessageTypes(standard: string, version: string): Promise<string[]> {
@@ -38,6 +39,11 @@ export class InMemoryMessageStructureRepository implements IMessageStructureRepo
     return this.structures.has(key);
   }
 
+  async getCodeList(standard: string, version: string, codeListCode: string): Promise<Set<string> | null> {
+    const key = `${standard.toLowerCase()}:${version.toLowerCase()}:${codeListCode}`;
+    return this.codeLists.get(key) ?? null;
+  }
+
   register(structure: MessageStructureDTO): void {
     const key = this.createKey(
       structure.standard,
@@ -47,8 +53,14 @@ export class InMemoryMessageStructureRepository implements IMessageStructureRepo
     this.structures.set(key, structure);
   }
 
+  registerCodeList(standard: string, version: string, codeListCode: string, values: Set<string>): void {
+    const key = `${standard.toLowerCase()}:${version.toLowerCase()}:${codeListCode}`;
+    this.codeLists.set(key, values);
+  }
+
   clear(): void {
     this.structures.clear();
+    this.codeLists.clear();
   }
 
   private createKey(standard: string, version: string, messageType: string): string {

@@ -85,7 +85,7 @@ describe('ExportSchemaCommand', () => {
     });
 
     it('should throw error when message is not provided', async () => {
-      expect(command.execute({})).rejects.toThrow('Message type is required');
+      await expect(command.execute({})).rejects.toThrow('Message type is required');
     });
   });
 
@@ -132,7 +132,7 @@ describe('ExportSchemaCommand', () => {
         new Error('Message type not found')
       );
 
-      expect(command.execute({message: 'INVALID'})).rejects.toThrow('Message type not found');
+      await expect(command.execute({message: 'INVALID'})).rejects.toThrow('Message type not found');
     });
   });
 });
