@@ -10,12 +10,15 @@
 **You tell me:** "Sprint X, Story #YY"
 
 **I will:**
-1. Fetch story from GitHub Issues (#YY)
-2. Read acceptance criteria and DoD
+1. Fetch story using the script: `npx ts-node --project tsconfig.scripts.json scripts/fetch-story.ts YY`
+2. Read acceptance criteria and DoD from the output
 3. Ask: "Should I create feature branch?"
 4. Start implementing with TDD
 
-**That's it! No manual file reading needed!**
+**Script location:** `scripts/fetch-story.ts`
+**Usage:** `npx ts-node --project tsconfig.scripts.json scripts/fetch-story.ts <issue-number>`
+
+**That's it! No manual file reading needed! ALWAYS use fetch-story.ts to get the story!**
 
 ---
 
@@ -283,16 +286,36 @@ const useCase = new ParseEDIUseCase(parser);
 
 ## 🎯 Critical Rules (NEVER Break!)
 
-1. **File Naming:** ALL `.ts` files PascalCase
-2. **Path Aliases:** ALWAYS use `@domain` (NO `../../../`)
-3. **TDD:** Red → Green → Refactor (ALWAYS!)
-4. **Refactor Phase:** Apply ALL Clean Code rules
-5. **Clean Architecture:** Dependencies INWARD only
-6. **No Inline Comments:** Code is self-explanatory
-7. **Functions < 20 lines:** Single Responsibility
-8. **Pre-Commit:** ALL checks pass (0 errors, 0 warnings)
-9. **Git:** Feature branch from develop
-10. **Conventional Commits:** `type(scope): description`
+### 🗂️ File & Naming
+1. **File Naming:** ALL `.ts` files **PascalCase** — `StructureMapper.ts` ✅ / `structure-mapper.ts` ❌
+2. **Path Aliases:** ALWAYS use `@domain/*`, `@application/*`, `@infrastructure/*` — NO `../../../` ❌
+3. **Meaningful Names:** `parseX12Message()` ✅ / `parseMsg()` ❌ / `temp`, `data`, `info` ❌
+4. **Use Enums:** `Standard.X12` ✅ / `'X12'` (magic string) ❌
+
+### 🧱 Code Structure
+5. **Functions < 20 lines:** Single Responsibility — extract if longer ❌ God functions
+6. **No `any` types:** Always use concrete types or generics ❌ `any`
+7. **No `@ts-ignore`:** Fix the type error properly ❌ `@ts-ignore`
+8. **No `console.log`:** Use proper logging or remove ❌ `console.log`
+9. **DRY Principle:** Extract helpers — NO copy-paste code ❌ duplication
+10. **No Inline Comments:** Code is self-explanatory — ONLY WHY comments ❌ `// Get user by ID`
+
+### 🏗️ Architecture
+11. **Clean Architecture:** Dependencies INWARD only — Domain never imports Infrastructure ❌
+12. **Ports & Adapters:** Use Cases use Interfaces (Ports), not concrete classes ❌ `new X12Parser()`
+13. **No Domain → Application:** Domain layer is pure — no use case imports ❌
+
+### 🧪 TDD
+14. **TDD:** Red → Green → Refactor — ALWAYS! Write test first ❌ code without tests
+15. **Refactor Phase:** Apply ALL Clean Code rules during Refactor — NEVER skip ❌
+16. **Test Co-location:** `ClassName.test.ts` next to `ClassName.ts` ❌ `__tests__/` folders
+
+### ✅ Pre-Commit & Git
+17. **Pre-Commit:** ALL checks pass — `npm run build` + `npm test` + Inspect Code ❌ skip
+18. **Quality Gate:** 0 TypeScript errors, 0 warnings before every commit ❌
+19. **Git:** Feature branch from `develop` — NEVER commit to `main` directly ❌
+20. **Conventional Commits:** `type(scope): description` — `feat(parser): add X12Tokenizer` ✅
+21. **fetch-story.ts:** ALWAYS use `npx ts-node --project tsconfig.scripts.json scripts/fetch-story.ts <N>` to fetch stories ❌ manual reading
 
 ---
 
@@ -300,12 +323,13 @@ const useCase = new ParseEDIUseCase(parser);
 
 ```
 1. User says: "Sprint X, Story #YY"
-2. I fetch story from GitHub
-3. I create feature branch
-4. TDD: Red → Green → Refactor (repeat)
-5. Pre-Commit: Inspect + Build + Tests + Manual
-6. Commit with Conventional format
-7. Ask: "Ready to push?"
+2. I run: npx ts-node --project tsconfig.scripts.json scripts/fetch-story.ts YY
+3. I create feature branch: feature/us-X.Y-short-name from develop
+4. TDD: Red → Green → Refactor (repeat per acceptance criterion)
+5. Refactor: Apply ALL 21 Critical Rules
+6. Pre-Commit: Inspect + npm run build + npm test → 0 errors, 0 warnings
+7. Commit with Conventional format
+8. Ask: "Ready to push?"
 ```
 
 ---

@@ -15,6 +15,7 @@ export default defineConfig({
     alias: {
       '@presentation': path.resolve(__dirname, './src/presentation'),
       '@infrastructure': path.resolve(__dirname, './src/infrastructure'),
+      '@ediflow/infrastructure-shared': path.resolve(__dirname, '../infrastructure-shared/src/index.ts'),
     },
   },
 });

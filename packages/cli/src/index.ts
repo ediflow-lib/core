@@ -4,7 +4,7 @@
  * EDIFlow CLI Entry Point
  *
  * Presentation Layer - Command Line Interface
- * Depends on: @ediflow/core, @ediflow/edifact, @ediflow/x12
+ * Depends on: @ediflow/core, @ediflow/edifact, @ediflow/infrastructure-shared
  */
 
 import { Command } from 'commander';
@@ -30,5 +30,7 @@ buildCommand.register(program);
 
 const validateCommand = new ValidateCommand(container.useCaseFactory);
 validateCommand.register(program);
+
+container.exportSchemaCommand.register(program);
 
 program.parse(process.argv);
