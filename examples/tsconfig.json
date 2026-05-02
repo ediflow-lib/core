@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@domain/*": ["../../packages/core/src/domain/*"],
+      "@application/*": ["../../packages/core/src/application/*"],
+      "@infrastructure/*": ["../../packages/core/src/infrastructure/*"],
+      "@ediflow/core": ["../../packages/core/src/index.ts"],
+      "@ediflow/edifact": ["../../packages/edifact/src/index.ts"],
+      "@ediflow/x12": ["../../packages/x12/src/index.ts"],
+      "@ediflow/infrastructure-shared": ["../../packages/infrastructure-shared/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts"]
+}
+
