@@ -57,10 +57,10 @@ npm install
 This installs dependencies for **all packages**:
 - `@ediflow/core` - Domain + Application
 - `@ediflow/edifact` - EDIFACT infrastructure
-- `@ediflow/x12` - X12 infrastructure (internal)
+- `@ediflow/x12` - X12 infrastructure (parsers, validation)
 - `@ediflow/infrastructure-shared` - Shared repositories/loaders
 - `@ediflow/cli` - Command-line interface
-- Data packages (edifact-d96a, edifact-d01b, etc.)
+- Data packages (edifact-d96a, edifact-d01b, x12-004010, etc.)
 
 **Workspace Benefits:**
 - Single `npm install` for entire monorepo

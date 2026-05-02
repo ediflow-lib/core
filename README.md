@@ -1,11 +1,11 @@
 # EDIFlow 🌊
 
-> Modern EDIFACT Parser, Validator & Builder for TypeScript/JavaScript
+> Modern EDI Parser, Validator & Builder for TypeScript/JavaScript — EDIFACT & X12
 
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
-[![Tests](https://img.shields.io/badge/tests-599%20passing-brightgreen)](https://github.com/ediflow-lib/core)
+[![Tests](https://img.shields.io/badge/tests-725%20passing-brightgreen)](https://github.com/ediflow-lib/core)
 [![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
 **Clean Architecture** • **Type-Safe** • **Business Object Mapping** • **Schema Export** • **Battle-Tested**
@@ -90,10 +90,11 @@ if (validate(order)) {
 ✅ **Type-Safe Business Objects** - Map EDIFACT to TypeScript objects  
 ✅ **Schema Export** - Generate JSON Schema & TypeScript definitions  
 ✅ **Clean Architecture** - SOLID principles, testable, maintainable  
-✅ **Complete EDIFACT Support** - D.96A, D.01B, D.20B standards  
+✅ **Complete EDIFACT Support** - D.96A, D.01B, D.20B, D.12A standards  
+✅ **X12 Support** - 850, 810, 837, 856 and more (v0.3.0)  
 ✅ **3-Phase Validation** - Syntax → Structure → Business Logic  
-✅ **Envelope Support** - UNH/UNT/UNB/UNZ generation & parsing  
-✅ **Well-Tested** - 599 tests passing  
+✅ **Envelope Support** - UNH/UNT/UNB/UNZ and ISA/GS/GE/IEA  
+✅ **Well-Tested** - 725 tests passing  
 ✅ **Zero Config** - Works out of the box  
 
 ---
@@ -103,7 +104,7 @@ if (validate(order)) {
 
 ### Installation
 
-EDIFlow is published as **5 separate NPM packages** (all MIT licensed):
+EDIFlow is published as **separate NPM packages** (all MIT licensed):
 
 ```bash
 # 1. Install core library (required)
@@ -114,6 +115,10 @@ npm install @ediflow/edifact-d96a   # D.96A (1996) - 89 messages - Community
 npm install @ediflow/edifact-d01b   # D.01B (2001) - 155 messages - Community
 npm install @ediflow/edifact-d20b   # D.20B (2020) - 178 messages - Community (Latest)
 npm install @ediflow/edifact-d12a   # D.12A (2012) - 196 messages - Business (Prep)
+
+# 3. OR: Install X12 (USA market)
+npm install @ediflow/x12            # X12 Parser (850, 810, 837, 856, ...)
+npm install @ediflow/x12-004010     # X12 version 004010 definitions
 ```
 
 ### Parse EDIFACT Message
@@ -180,10 +185,15 @@ console.log(ediString); // Ready to send!
 | Package | Size | Messages | License | Use Case |
 |---------|------|----------|---------|----------|
 | **[@ediflow/core](packages/core)** | 120 KB | - | MIT | Parser, Validator, Builder engine |
+| **[@ediflow/edifact](packages/edifact)** | - | - | MIT | EDIFACT parsers & builders |
+| **[@ediflow/x12](packages/x12)** | - | - | MIT | X12 parsers & validators (NEW!) |
+| **[@ediflow/infrastructure-shared](packages/infrastructure-shared)** | - | - | MIT | Repositories, loaders, cache |
+| **[@ediflow/cli](packages/cli)** | - | - | MIT | Command-line interface |
 | **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 89 | MIT | D.96A (1996) - Community |
 | **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 155 | MIT | D.01B (2001) - Community |
 | **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 178 | MIT | D.20B (2020) - Community (Latest) |
 | **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | MIT | D.12A (2012) - Business (Prep) |
+| **[@ediflow/x12-004010](packages/x12-004010)** | - | - | MIT | X12 version 004010 definitions (NEW!) |
 
 **Total if all installed:** 6.6 MB • **618 message types** • **All MIT licensed**
 
@@ -222,23 +232,22 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 ```
 ┌─────────────────────────────────────┐
-│      Presentation Layer             │  CLI, Future: API
-│      (packages/core/src/presentation)│
+│      Presentation Layer             │  @ediflow/cli
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
 │      Application Layer              │  Use Cases, DTOs
-│      (packages/core/src/application)│  ParseEDI, ValidateMessage, BuildEDI
+│      @ediflow/core (application/)   │  ParseEDI, ValidateMessage, BuildEDI
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
 │      Domain Layer                   │  Entities, Value Objects
-│      (packages/core/src/domain)     │  EDIMessage, ValidationRules
+│      @ediflow/core (domain/)        │  EDIMessage, ValidationRules
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐
-│      Infrastructure Layer           │  Parsers, Repositories
-│      (packages/core/src/infrastructure)│  EdifactParser, FileBasedRepo
+│      Infrastructure Layer           │  Format-specific parsers
+│  @ediflow/edifact   @ediflow/x12    │  Shared: @ediflow/infrastructure-shared
 └─────────────────────────────────────┘
 ```
 
@@ -263,30 +272,41 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 ### Package Documentation
 - **[@ediflow/core](packages/core/README.md)** - Core library
+- **[@ediflow/edifact](packages/edifact/README.md)** - EDIFACT parsers & builders
+- **[@ediflow/x12](packages/x12/README.md)** - X12 parsers & validators (NEW!)
+- **[@ediflow/infrastructure-shared](packages/infrastructure-shared/README.md)** - Shared infrastructure
+- **[@ediflow/cli](packages/cli/README.md)** - CLI tool
 - **[@ediflow/edifact-d96a](packages/edifact-d96a/README.md)** - D.96A standard
 - **[@ediflow/edifact-d01b](packages/edifact-d01b/README.md)** - D.01B standard
 - **[@ediflow/edifact-d20b](packages/edifact-d20b/README.md)** - D.20B standard
 - **[@ediflow/edifact-d12a](packages/edifact-d12a/README.md)** - D.12A standard
+- **[@ediflow/x12-004010](packages/x12-004010/README.md)** - X12 004010 definitions (NEW!)
 
 ---
 
 ## 🗺️ Roadmap
 
-### ✅ M1 - EDIFACT Foundation (February 2026)
+### ✅ M1 - EDIFACT Foundation (v0.1.0 / February 2026)
 - EDIFACT parsing, validation, building
 - 4 EDIFACT versions (D.96A, D.01B, D.20B, D.12A)
 - 618 message types total
 - Clean Architecture
 - 599 tests
 
-### 🚀 M2 - Enhanced Features (Q2 2026)
+### ✅ M2 - Architecture Refactoring & X12 (v0.2.0 / v0.3.0)
+- Monorepo with format-specific packages
+- X12 Parser with full ISA/GS/GE/IEA envelope support
+- X12 Validation Rules (STRICT/LENIENT)
+- Schema Export for X12 messages
+- 725 tests
+
+### 🚀 M3 - Enhanced Features (Q3 2026)
 - UNG/UNE functional groups
-- More message types
+- More X12 transaction sets
 - Performance optimizations
 - SaaS Platform (EDIFlow Cloud)
 
-### 🌍 M3 - Multi-Standard (Q4 2026 - 2027)
-- X12 support (ANSI ASC X12)
+### 🌍 M4 - More Standards (2027)
 - IDOC support (SAP)
 - VDA support (Automotive)
 - Unified API for all standards
@@ -295,11 +315,11 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 ## 🧪 Testing
 
-EDIFlow is extensively tested with **TDD (Test-Driven Development)**:
+- EDIFlow is extensively tested with **TDD (Test-Driven Development)**:
 
-- **599 tests** passing (Unit + Integration + E2E)
-- **100% coverage goal** for critical paths
-- **E2E roundtrip tests** across 3 EDIFACT versions
+- **725 tests** passing (Unit + Integration + E2E)
+- **90%+ coverage** for critical paths
+- **E2E roundtrip tests** across EDIFACT & X12
 - **Performance tests** (< 200ms parse-build-parse cycle)
 
 ```bash
@@ -380,8 +400,8 @@ Special thanks to the EDI community for feedback and contributions.
 **Made with ❤️ for the EDI community**
 
 **Status:** 🚀 Production Ready  
-**Version:** 0.1.0  
-**Released:** February 2026  
+**Version:** 0.3.0  
+**Released:** May 2026  
 **Maintained by:** [EDIFlow Contributors](https://github.com/ediflow-lib/core/graphs/contributors)
 
 ---
