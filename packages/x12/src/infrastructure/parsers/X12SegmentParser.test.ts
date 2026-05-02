@@ -153,5 +153,12 @@ describe('X12SegmentParser', () => {
 
       expect(segment.elements[0].constructor.name).toBe('EDIElement');
     });
+
+    it('should handle segment ending with element separator but no value', () => {
+      const segment = parser.parseSegment('ST*~', standardDelimiters);
+
+      expect(segment.tag).toBe('ST');
+      expect(segment.elements).toHaveLength(0);
+    });
   });
 });
