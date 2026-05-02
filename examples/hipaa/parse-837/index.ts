@@ -13,7 +13,7 @@ import {
   X12SegmentParser,
   X12EnvelopeParser,
   X12ValidationServiceBuilder,
-} from '../../../packages/x12/dist/index.cjs';
+} from '@ediflow/x12';
 
 // HIPAA 005010X222A1 837P — Professional Healthcare Claim
 // NOTE: ISA needs sender/receiver exactly 15 chars each, component sep at position 104

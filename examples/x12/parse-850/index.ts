@@ -9,7 +9,7 @@ import {
   X12DelimiterDetector,
   X12SegmentParser,
   X12EnvelopeParser,
-} from '../../../packages/x12/dist/index.cjs';
+} from '@ediflow/x12';
 
 // ─── Sample X12 850 Purchase Order ───────────────────────────────────────────
 const X12_850 = [

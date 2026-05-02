@@ -9,7 +9,7 @@ import {
   EdifactDelimiterDetector,
   EdifactTokenizer,
   EdifactSegmentParser,
-} from '../../../packages/edifact/dist/index.cjs';
+} from '@ediflow/edifact';
 
 // Helper: split composite element value by ':'
 const comp = (value: string | undefined, idx: number): string =>

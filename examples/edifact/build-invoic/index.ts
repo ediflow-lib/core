@@ -11,10 +11,10 @@ import {
   EdifactDelimiterDetector,
   EdifactTokenizer,
   EdifactSegmentParser,
-} from '../../../packages/edifact/dist/index.cjs';
+} from '@ediflow/edifact';
 import {
   EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement,
-} from '../../../packages/core/dist/index.cjs';
+} from '@ediflow/core';
 
 const comp = (value: string | undefined, idx: number): string =>
   value?.split(':')[idx] ?? '';

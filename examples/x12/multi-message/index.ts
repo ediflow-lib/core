@@ -9,7 +9,7 @@ import {
   X12DelimiterDetector,
   X12SegmentParser,
   X12EnvelopeParser,
-} from '../../../packages/x12/dist/index.cjs';
+} from '@ediflow/x12';
 
 const MESSAGES: Record<string, { name: string; edi: string }> = {
   '850': {

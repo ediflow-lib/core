@@ -10,7 +10,7 @@ import {
   EdifactTokenizer,
   EdifactSegmentParser,
   EdifactValidationServiceBuilder,
-} from '../../../packages/edifact/dist/index.cjs';
+} from '@ediflow/edifact';
 
 const comp = (value: string | undefined, idx: number): string =>
   value?.split(':')[idx] ?? '';

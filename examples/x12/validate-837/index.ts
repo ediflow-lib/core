@@ -10,7 +10,7 @@ import {
   X12SegmentParser,
   X12EnvelopeParser,
   X12ValidationServiceBuilder,
-} from '../../../packages/x12/dist/index.cjs';
+} from '@ediflow/x12';
 import {
   EDIMessage,
   Standard,
@@ -18,7 +18,7 @@ import {
   MessageType,
   EDISegment,
   EDIElement,
-} from '../../../packages/core/dist/index.cjs';
+} from '@ediflow/core';
 
 const X12_837 = [
   'ISA*00*          *00*          *ZZ*PROVIDER       *ZZ*PAYER          *260204*1030*^*00501*000000002*0*P*>~',

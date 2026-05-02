@@ -9,7 +9,7 @@
 
 'use strict';
 
-const { FileBasedMessageStructureRepository } = require('../../../packages/infrastructure-shared/dist/index.js');
+const { FileBasedMessageStructureRepository } = require('@ediflow/infrastructure-shared');
 const path = require('path');
 
 async function main() {
