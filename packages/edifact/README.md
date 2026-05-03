@@ -6,28 +6,16 @@ Part of the [EdiFlow](https://github.com/ediflow-lib/core) ecosystem - Modern, t
 
 ---
 
-## 🆕 Updated in v0.2.0!
+## 🆕 What's in v0.3.0
 
-This package has been **restructured** in v0.2.0 for Clean Architecture!
-
-**What changed:**
-- ✅ **Clean Architecture** - Infrastructure separated from domain
-- ✅ **Same functionality** - All parsers/builders still work
-- ✅ **Better organized** - Clearer code structure
-
-**Migration:**
-If you used `@ediflow/core` parsers before, now use `@ediflow/edifact`:
-```typescript
-// Before (v0.1.x)
-import { EdifactMessageParser } from '@ediflow/core';
-
-// After (v0.2.0) - Recommended
-import { EdifactMessageParser } from '@ediflow/edifact';
-```
+- ✅ **Full EDIFACT parser** — UNB/UNH/UNT/UNZ envelope support
+- ✅ **Builder + EnvelopeBuilder** — Construct and wrap messages programmatically
+- ✅ **Validation** — `EdifactValidationServiceBuilder` with STRICT/LENIENT levels
+- ✅ **All data packages** — D.96A, D.01B, D.12A, D.20B, EANCOM 2002
 
 ---
 
-This package provides **EDIFACT-specific parsers** for the UN/EDIFACT EDI standard. It works with `@ediflow/core` to parse EDIFACT messages (ORDERS, INVOIC, DESADV, etc.).
+This package provides **EDIFACT-specific parsers, builders, and validators** for the UN/EDIFACT standard.
 
 ```typescript
 import { EdifactMessageParser } from '@ediflow/edifact';
@@ -39,34 +27,11 @@ const parseUseCase = new ParseEDIUseCase(parser, definitionLoader);
 const message = parseUseCase.execute(edifactData);
 ```
 
-## 🔄 Migration from @ediflow/core
-
-**⚠️ Important:** EDIFACT parsers in `@ediflow/core` are deprecated and will be removed in v1.0.0.
-
-### Before (Deprecated):
-```typescript
-import { EdifactMessageParser } from '@ediflow/core/infrastructure';
-```
-
-### After (Recommended):
-```typescript
-import { EdifactMessageParser } from '@ediflow/edifact';
-```
-
-### Installation:
-```bash
-# Old way (still works but deprecated):
-npm install @ediflow/core
-
-# New way (recommended):
-npm install @ediflow/core @ediflow/edifact
-```
-
 ## 🎯 Why a Separate Package?
 
-**Clean Architecture**: 
+**Clean Architecture**:
 - `@ediflow/core` = Format-agnostic domain & application logic
-- `@ediflow/edifact` = EDIFACT-specific parsing infrastructure  
+- `@ediflow/edifact` = EDIFACT-specific parsing infrastructure
 - `@ediflow/x12` = X12-specific parsing infrastructure
 
 This allows you to:

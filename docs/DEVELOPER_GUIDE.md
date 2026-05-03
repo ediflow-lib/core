@@ -103,7 +103,7 @@ npm run dev -- build ./output.edi --type ORDERS --version D20B
 
 ## 📁 Project Structure
 
-> **📢 Updated for v0.2.0** - Complete architecture refactoring in Sprint 9!
+> **📢 Updated for v0.3.0** — X12, HIPAA, EANCOM support; 857 tests passing.
 
 ```
 ediflow/ (Monorepo)
@@ -162,7 +162,7 @@ ediflow/ (Monorepo)
 └── tsconfig.json                # Root TypeScript config
 ```
 
-### Package Responsibilities (v0.2.0)
+### Package Responsibilities (v0.3.0)
 
 **Core Package** (`@ediflow/core`)
 - ✅ Domain entities (EDIMessage, EDISegment)
@@ -244,7 +244,7 @@ src/
         └── X12DelimiterDetector.ts
 ```
 
-### Package Dependencies (v0.2.0)
+### Package Dependencies (v0.3.0)
 
 Understanding how packages depend on each other:
 
@@ -544,7 +544,7 @@ const user = getUserById(id);
 ### Branching Strategy
 
 ```
-main              ← Production releases (v0.1.0, v0.2.0)
+main              ← Production releases (v0.1.0, v0.2.0, v0.3.0)
   ↑
 develop           ← Integration branch (latest development)
   ↑
@@ -727,7 +727,7 @@ npx tsc --noEmit
 
 - **[Quick Start](QUICK_START.md)** - Get started quickly
 - **[Architecture](ARCHITECTURE.md)** - Clean Architecture explained
-- **[API Reference](API.md)** - Complete API docs
+- **[Examples](https://github.com/ediflow-lib/core/tree/main/examples)** - Runnable TypeScript examples
 - **[Contributing Guidelines](../CONTRIBUTING.md)** - Contribution rules
 
 ---

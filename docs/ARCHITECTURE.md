@@ -68,7 +68,9 @@ packages/
 └── x12-006040/                # 🔒 Data Package (X12 006040, internal)
 ```
 
-### Key Changes in v0.2.0:
+### Historical Note (v0.2.0 refactoring)
+
+The monorepo was restructured in v0.2.0 — EDIFACT infrastructure moved from `@ediflow/core` into `@ediflow/edifact` and `@ediflow/infrastructure-shared`. v0.3.0 added `@ediflow/x12`, EANCOM and HIPAA data packages.
 
 **Before Sprint 9 (v0.1.x):**
 ```
@@ -797,7 +799,7 @@ container.register('ParseX12UseCase', () =>
 **Our Docs:**
 - [Quick Start Guide](QUICK_START.md) - Get started quickly
 - [Developer Guide](DEVELOPER_GUIDE.md) - Contributing guidelines
-- [API Reference](API.md) - Complete API docs
+- [Examples](https://github.com/ediflow-lib/core/tree/main/examples) - Runnable TypeScript examples
 
 ---
 

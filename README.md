@@ -5,7 +5,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
-[![Tests](https://img.shields.io/badge/tests-725%20passing-brightgreen)](https://github.com/ediflow-lib/core)
+[![Tests](https://img.shields.io/badge/tests-857%20passing-brightgreen)](https://github.com/ediflow-lib/core)
 [![Downloads](https://img.shields.io/npm/dm/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 
 **Clean Architecture** • **Type-Safe** • **Business Object Mapping** • **Schema Export** • **Battle-Tested**
@@ -94,7 +94,7 @@ if (validate(order)) {
 ✅ **X12 Support** - 850, 810, 837, 856 and more (v0.3.0)  
 ✅ **3-Phase Validation** - Syntax → Structure → Business Logic  
 ✅ **Envelope Support** - UNH/UNT/UNB/UNZ and ISA/GS/GE/IEA  
-✅ **Well-Tested** - 725 tests passing  
+✅ **Well-Tested** - 857 tests passing  
 ✅ **Zero Config** - Works out of the box  
 
 ---
@@ -124,58 +124,52 @@ npm install @ediflow/x12-004010     # X12 version 004010 definitions
 ### Parse EDIFACT Message
 
 ```typescript
-import { DIContainer } from '@ediflow/core';
+import {
+  EdifactMessageParser,
+  EdifactDelimiterDetector,
+  EdifactTokenizer,
+  EdifactSegmentParser,
+} from '@ediflow/edifact';
 
-const container = DIContainer.getInstance();
-const parseUseCase = container.resolve('ParseEDIUseCase');
+const parser  = new EdifactMessageParser(
+  new EdifactDelimiterDetector(), new EdifactTokenizer(), new EdifactSegmentParser(),
+);
+const message = parser.parse(edifactString);
 
-// Parse EDIFACT string to structured message
-const result = parseUseCase.execute({
-  message: edifactString,
-  standard: 'EDIFACT'
-});
-
-if (result.success) {
-  console.log(result.message.header);      // UNH segment
-  console.log(result.message.segments);    // All segments
-  console.log(result.message.trailer);     // UNT segment
-}
+console.log(message.standard);           // 'EDIFACT'
+console.log(message.messageType.value);  // 'ORDERS'
+console.log(message.segments.length);    // segment count
 ```
 
 ### Validate Message
 
 ```typescript
-const validateUseCase = container.resolve('ValidateMessageUseCase');
+import { EdifactValidationServiceBuilder } from '@ediflow/edifact';
 
-const validation = validateUseCase.execute({
-  message: result.message,
-  strictMode: false,
-  enableStructuralValidation: true
-});
+const validator = EdifactValidationServiceBuilder.forEDIFACT();
+const result    = validator.validate(message);
 
-if (validation.success) {
+if (result.isValid) {
   console.log('✅ Message is valid!');
 } else {
-  console.log('❌ Validation errors:', validation.errors);
+  result.errors.forEach(e => console.error(`❌ ${e.code}: ${e.message}`));
 }
 ```
 
 ### Build EDIFACT Message
 
 ```typescript
-const buildUseCase = container.resolve('BuildEDIUseCase');
+import { EdifactMessageBuilder, EdifactEnvelopeBuilder } from '@ediflow/edifact';
+import { EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement } from '@ediflow/core';
 
-const ediString = buildUseCase.execute({
-  message: ediMessage,
-  standard: 'EDIFACT',
-  // Optional: Add envelope (UNH/UNT/UNB/UNZ)
-  envelope: {
-    sender: { id: 'SENDER123', qualifier: '14' },
-    receiver: { id: 'RECEIVER456', qualifier: '14' }
-  }
-});
+const msg = new EDIMessage('1', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.20B'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+msg.addSegment(new EDISegment('BGM', [new EDIElement('220'), new EDIElement('PO-001')]));
 
-console.log(ediString); // Ready to send!
+const envelopeBuilder = new EdifactEnvelopeBuilder();
+const wrapped   = envelopeBuilder.wrapMessage(msg, { messageRef: '1', messageType: msg.messageType, version: msg.version });
+const builder   = new EdifactMessageBuilder();
+const edifactStr = builder.build(wrapped);
+console.log(edifactStr); // Ready to send!
 ```
 
 ---
@@ -184,18 +178,20 @@ console.log(ediString); // Ready to send!
 
 | Package | Size | Messages | License | Use Case |
 |---------|------|----------|---------|----------|
-| **[@ediflow/core](packages/core)** | 120 KB | - | MIT | Parser, Validator, Builder engine |
+| **[@ediflow/core](packages/core)** | 120 KB | - | MIT | Parser engine, use cases, domain |
 | **[@ediflow/edifact](packages/edifact)** | - | - | MIT | EDIFACT parsers & builders |
-| **[@ediflow/x12](packages/x12)** | - | - | MIT | X12 parsers & validators (NEW!) |
+| **[@ediflow/x12](packages/x12)** | - | - | MIT | X12 parsers & validators |
 | **[@ediflow/infrastructure-shared](packages/infrastructure-shared)** | - | - | MIT | Repositories, loaders, cache |
 | **[@ediflow/cli](packages/cli)** | - | - | MIT | Command-line interface |
-| **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 89 | MIT | D.96A (1996) - Community |
-| **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 155 | MIT | D.01B (2001) - Community |
-| **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 178 | MIT | D.20B (2020) - Community (Latest) |
-| **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | MIT | D.12A (2012) - Business (Prep) |
-| **[@ediflow/x12-004010](packages/x12-004010)** | - | - | MIT | X12 version 004010 definitions (NEW!) |
+| **[@ediflow/edifact-d96a](packages/edifact-d96a)** | 0.32 MB | 89 | MIT | D.96A (1996) |
+| **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 155 | MIT | D.01B (2001) |
+| **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 178 | MIT | D.20B (2020) — Latest |
+| **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | MIT | D.12A (2012) — Most complete |
+| **[@ediflow/eancom-2002](packages/eancom-2002)** | - | 50 | MIT | EANCOM 2002 — GS1 retail |
+| **[@ediflow/x12-004010](packages/x12-004010)** | 7.8 MB | 293 | MIT | X12 version 004010 |
+| **[@ediflow/hipaa-x12-005010](packages/hipaa-x12-005010)** | - | 14 | MIT | HIPAA X12 005010 (internal) |
 
-**Total if all installed:** 6.6 MB • **618 message types** • **All MIT licensed**
+**Total (public packages):** ~14 MB • **965+ message types** • **All MIT licensed**
 
 💡 **Tip:** Community packages (D.96A, D.01B, D.20B) are free and open source. D.12A is in preparation for business customers.
 
@@ -267,7 +263,7 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 - **[Quick Start Guide](docs/QUICK_START.md)** - Get started in 5 minutes
 - **[Architecture](docs/ARCHITECTURE.md)** - Clean Architecture explained
 - **[Developer Guide](docs/DEVELOPER_GUIDE.md)** - Contributing, testing, development
-- **[API Reference](docs/API.md)** - Complete API documentation
+- **[Examples](examples/README.md)** - Runnable TypeScript & CLI examples
 - **[Release Process](docs/RELEASE_PROCESS.md)** - How we release
 
 ### Package Documentation
@@ -276,12 +272,13 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 - **[@ediflow/x12](packages/x12/README.md)** - X12 parsers & validators (NEW!)
 - **[@ediflow/infrastructure-shared](packages/infrastructure-shared/README.md)** - Shared infrastructure
 - **[@ediflow/cli](packages/cli/README.md)** - CLI tool
-- **[CLI Examples](examples/cli/CLI_EXAMPLES.md)** - Runnable CLI examples for all commands & formats
+- **[Examples](examples/README.md)** - Runnable examples (X12, EDIFACT, EANCOM, HIPAA, CLI)
 - **[@ediflow/edifact-d96a](packages/edifact-d96a/README.md)** - D.96A standard
 - **[@ediflow/edifact-d01b](packages/edifact-d01b/README.md)** - D.01B standard
 - **[@ediflow/edifact-d20b](packages/edifact-d20b/README.md)** - D.20B standard
 - **[@ediflow/edifact-d12a](packages/edifact-d12a/README.md)** - D.12A standard
-- **[@ediflow/x12-004010](packages/x12-004010/README.md)** - X12 004010 definitions (NEW!)
+- **[@ediflow/x12-004010](packages/x12-004010/README.md)** - X12 004010 definitions
+- **[@ediflow/eancom-2002](packages/eancom-2002/README.md)** - EANCOM 2002 definitions
 
 ---
 
@@ -296,10 +293,12 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 ### ✅ M2 - Architecture Refactoring & X12 (v0.2.0 / v0.3.0)
 - Monorepo with format-specific packages
-- X12 Parser with full ISA/GS/GE/IEA envelope support
+- X12 Parser with full ISA/GS/ST/SE/GE/IEA envelope support
 - X12 Validation Rules (STRICT/LENIENT)
-- Schema Export for X12 messages
-- 725 tests
+- Schema Export for X12 and EDIFACT via CLI
+- EANCOM 2002 and HIPAA X12 005010 data packages
+- Business Object Mapping + unmap (round-trip)
+- 857 tests
 
 ### 🚀 M3 - Enhanced Features (Q3 2026)
 - UNG/UNE functional groups
@@ -318,7 +317,7 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 
 - EDIFlow is extensively tested with **TDD (Test-Driven Development)**:
 
-- **725 tests** passing (Unit + Integration + E2E)
+- **857 tests** passing (Unit + Integration + E2E)
 - **90%+ coverage** for critical paths
 - **E2E roundtrip tests** across EDIFACT & X12
 - **Performance tests** (< 200ms parse-build-parse cycle)
