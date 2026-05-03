@@ -1,6 +1,6 @@
 # @ediflow/core
 
-> Modern EDIFACT Parser, Validator & Builder - Core Library
+> Modern EDI Parser, Validator & Builder — EDIFACT, X12, EANCOM & HIPAA
 
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -24,7 +24,7 @@
 
 ## 📦 What is @ediflow/core?
 
-`@ediflow/core` is the **core engine** for EDIFlow - a modern EDIFACT library built with Clean Architecture principles.
+`@ediflow/core` is the **core engine** for EDIFlow — a modern EDI library for EDIFACT, X12, EANCOM and HIPAA, built with Clean Architecture principles.
 
 **This package provides:**
 - ✅ **Parser** - EDIFACT string → EDIMessage
@@ -43,16 +43,29 @@
 ## 🚀 Installation
 
 ```bash
-# Install core library
+# Always required
 npm install @ediflow/core
 
-# Install EDIFACT standard(s) - REQUIRED for validation
-npm install @ediflow/edifact-d20b   # Latest (recommended)
-# OR
-npm install @ediflow/edifact-d12a   # Full coverage (196 messages)
-# OR
-npm install @ediflow/edifact-d01b   # Legacy systems
-npm install @ediflow/edifact-d96a   # Classic
+# ── EDIFACT ──────────────────────────────────────────────────────────────────
+npm install @ediflow/edifact            # EDIFACT parsers & builders
+npm install @ediflow/edifact-d20b       # D.20B (2020) — 195 messages, latest
+npm install @ediflow/edifact-d01b       # D.01B (2001) — 211 messages
+npm install @ediflow/edifact-d12a       # D.12A (2012) — 196 messages
+npm install @ediflow/edifact-d96a       # D.96A (1996) — 126 messages
+
+# ── EANCOM (GS1 retail) ──────────────────────────────────────────────────────
+npm install @ediflow/eancom-2002        # EANCOM 2002 — 49 messages
+
+# ── X12 (USA / North America) ────────────────────────────────────────────────
+npm install @ediflow/x12                # X12 parsers & validators
+npm install @ediflow/x12-004010         # X12 004010 — 293 transaction sets
+npm install @ediflow/x12-006040         # X12 006040 — 319 transaction sets (latest 2026)
+
+# ── HIPAA (US healthcare) ─────────────────────────────────────────────────────
+npm install @ediflow/hipaa-x12-005010   # HIPAA 005010 — 14 transaction sets
+
+# ── Shared infrastructure (required for schema/mapping features) ──────────────
+npm install @ediflow/infrastructure-shared
 ```
 
 ---
@@ -160,11 +173,26 @@ console.log(edifactStr); // UNH+1+ORDERS:D:20B:UN'BGM+220+PO-001+9'UNT+2+1'
 
 ## 📦 Related Packages
 
-**EDIFACT Standards (choose what you need):**
-- [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) - 7 message types
-- [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) - 4 message types
-- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 message types
-- [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) - 196 message types
+**EDIFACT:**
+- [`@ediflow/edifact`](https://npmjs.com/package/@ediflow/edifact) - EDIFACT parsers & builders (required for EDIFACT)
+- [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) — 126 message types
+- [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) — 211 message types
+- [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) — 196 message types
+- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) — 195 message types (latest)
+
+**EANCOM (GS1 retail):**
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 — 49 message types
+
+**X12 (USA / North America):**
+- [`@ediflow/x12`](https://npmjs.com/package/@ediflow/x12) - X12 parsers & validators (required for X12)
+- [`@ediflow/x12-004010`](https://npmjs.com/package/@ediflow/x12-004010) - X12 004010 — 293 transaction sets
+- [`@ediflow/x12-006040`](https://npmjs.com/package/@ediflow/x12-006040) - X12 006040 — 319 transaction sets (latest 2026)
+
+**HIPAA (US healthcare):**
+- [`@ediflow/hipaa-x12-005010`](https://npmjs.com/package/@ediflow/hipaa-x12-005010) - HIPAA 005010 — 14 transaction sets
+
+**Shared Infrastructure:**
+- [`@ediflow/infrastructure-shared`](https://npmjs.com/package/@ediflow/infrastructure-shared) - Repositories, loaders, cache
 
 ---
 
