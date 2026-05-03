@@ -45,9 +45,6 @@ const HIPAA_835 = [
   'IEA*1*000000003~',
 ].join('');
 
-// ─── 835 with mismatched IEA control number ───────────────────────────────────
-const HIPAA_835_BAD_IEA = HIPAA_835.replace('IEA*1*000000003~', 'IEA*1*999999999~');
-
 const parser    = new X12MessageParser(new X12DelimiterDetector(), new X12SegmentParser(), new X12EnvelopeParser());
 const validator = X12ValidationServiceBuilder.forX12();
 
@@ -115,8 +112,11 @@ console.log('');
 
 // ─── Validate: ISA/IEA Control Number Mismatch ────────────────────────────────
 console.log('─── Validate: ISA/IEA Control Number Mismatch ───────────────');
+// ISA has 16 elements; control number is at index 12 (0-based).
+// Elements 0-11 are padding, 12 = interchange control number.
+const ISA_PADDING_COUNT = 12;
 const invalidMsg = new EDIMessage('invalid-835', Standard.X12, new Version(Standard.X12, '005010'), new MessageType(Standard.X12, '835'));
-invalidMsg.addSegment(new EDISegment('ISA', [...Array(12).fill(new EDIElement('')), new EDIElement('000000003')]));
+invalidMsg.addSegment(new EDISegment('ISA', [...Array(ISA_PADDING_COUNT).fill(new EDIElement('')), new EDIElement('000000003')]));
 invalidMsg.addSegment(new EDISegment('IEA', [new EDIElement('1'), new EDIElement('999999999')]));
 
 const invalidResult = validator.validate(invalidMsg);
