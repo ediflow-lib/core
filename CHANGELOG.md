@@ -55,9 +55,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `@ediflow/x12-006040@0.3.0`
 - `@ediflow/hipaa-x12-005010@0.3.0`
 
+### 🔧 Improved
+
+#### Test Quality & Coverage (Sprint 10 / US-15)
+- Unit test coverage for `@ediflow/core` raised to **≥ 90%** (statements, branches, functions)
+- New test files: `MessageStructureNotFoundError`, `UseCaseFactory`, `BuildEDIUseCase`, `ValidateMessageUseCase`, `BasicValidationRules`, `EDISegment`, `ParseEDIUseCase` (extended)
+- Root `vitest.config.ts` with scoped `coverage.include` (only `packages/*/src/**/*.ts`)
+- All TypeScript strict-mode errors in test files resolved
+
 ### 📊 Statistics
 
-- **Tests:** 857 passing (191 CLI + 301 core + 162 edifact + 56 infrastructure-shared + 147 x12)
+- **Tests:** 711 passing
+- **Coverage:** ≥ 90% statements/branches/functions (`@ediflow/core`)
 - **TypeScript Errors:** 0
 
 ---
