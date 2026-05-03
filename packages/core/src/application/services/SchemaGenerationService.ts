@@ -143,8 +143,8 @@ export class SchemaGenerationService {
     return {
       type: this.mapDataType(element.dataType),
       title: element.name,
-      ...(element.maxLength !== undefined ? { maxLength: element.maxLength } : {}),
-      ...(element.minLength !== undefined ? { minLength: element.minLength } : {}),
+      ...(element.maxLength === undefined ? {} : {maxLength: element.maxLength}),
+      ...(element.minLength === undefined ? {} : {minLength: element.minLength}),
       'x-position': element.position,
       'x-mandatory': element.mandatory,
       'x-nodeType': 'element' as const

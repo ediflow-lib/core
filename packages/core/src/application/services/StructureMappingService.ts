@@ -54,11 +54,12 @@ export class StructureMappingService {
     const idx = (ediMessage.segments as EDISegment[]).indexOf(triggerSeg);
     for (const child of node.children) {
       if (child.nodeType === 'segment') {
-        if (!child.mapping) { this.mapStructureBasedSegment(child, (ediMessage.segments as EDISegment[]).slice(idx), obj, strategy); }
-        else {
+        if (child.mapping) {
           const segs = (ediMessage.segments as EDISegment[]).slice(idx).filter(s => s.tag === child.tag);
           const s = segs[0];
           if (s) obj[child.mapping.targetField] = this.extractValue(s, child.mapping);
+        } else {
+          this.mapStructureBasedSegment(child, (ediMessage.segments as EDISegment[]).slice(idx), obj, strategy);
         }
       } else {
         this.mapSegmentGroup(child, ediMessage, obj, strategy);
@@ -158,7 +159,7 @@ export class StructureMappingService {
         const elemKey = mappingKeyTransformer.elementKey(elemNode, strategy);
         const elemVal = (item as Record<string, unknown>)[elemKey];
         if (elemNode.nodeType === 'element') {
-          elements[idx] = new EDIElement(elemVal !== undefined ? String(elemVal) : '', []);
+          elements[idx] = new EDIElement(elemVal === undefined ? '' : String(elemVal), []);
         } else {
           const comp = elemNode as CompositeElementNode;
           const nested = (elemVal ?? {}) as Record<string, unknown>;
@@ -166,7 +167,7 @@ export class StructureMappingService {
           const components: string[] = Array.from({ length: maxCompPos }, () => '');
           for (const c of comp.components) {
             const ck = mappingKeyTransformer.elementKey(c, strategy);
-            components[c.position - 1] = nested[ck] !== undefined ? String(nested[ck]) : '';
+            components[c.position - 1] = nested[ck] === undefined ? '' : String(nested[ck]);
           }
           elements[idx] = new EDIElement('', components);
         }

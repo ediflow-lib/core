@@ -30,6 +30,7 @@ export class UseCaseFactory {
    * Creates a ParseEDIUseCase with the appropriate parser.
    *
    * @param standard - EDI standard (e.g., 'EDIFACT', 'X12')
+   * @param mapper
    * @returns Configured ParseEDIUseCase
    * @throws Error if standard is not supported
    */
