@@ -92,6 +92,8 @@ ediflow validate -f message.x12 -s X12 --strict
 
 ## 📝 Examples
 
+> **📖 See [CLI Examples](../../examples/cli/CLI_EXAMPLES.md) for a comprehensive guide with all commands, options, and runnable examples for EDIFACT, X12, and HIPAA.**
+
 ### Parse EDIFACT ORDERS D.96A
 
 ```bash

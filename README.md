@@ -276,6 +276,7 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 - **[@ediflow/x12](packages/x12/README.md)** - X12 parsers & validators (NEW!)
 - **[@ediflow/infrastructure-shared](packages/infrastructure-shared/README.md)** - Shared infrastructure
 - **[@ediflow/cli](packages/cli/README.md)** - CLI tool
+- **[CLI Examples](examples/cli/CLI_EXAMPLES.md)** - Runnable CLI examples for all commands & formats
 - **[@ediflow/edifact-d96a](packages/edifact-d96a/README.md)** - D.96A standard
 - **[@ediflow/edifact-d01b](packages/edifact-d01b/README.md)** - D.01B standard
 - **[@ediflow/edifact-d20b](packages/edifact-d20b/README.md)** - D.20B standard

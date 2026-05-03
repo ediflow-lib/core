@@ -1,21 +1,31 @@
 /**
  * Example: Parse EDIFACT ORDERS (Purchase Order)
  *
+ * Demonstrates TWO levels of EDIFlow parsing:
+ *
+ * LEVEL 1 — Syntax Parsing (Low-Level)
+ *   EdifactMessageParser → raw EDIMessage with generic segments/elements
+ *   Other EDI libraries stop here.
+ *
+ * LEVEL 2 — Schema-Aware Parsing (High-Level) ← THE REAL POWER!
+ *   FileBasedMessageStructureRepository loads the @ediflow/edifact-d96a
+ *   schema and resolves segment definitions with named elements.
+ *   → You know that BGM element[1] is "Document/message number"
+ *   → You know that NAD C082 component[0] is "Party identifier"
+ *
  * Run: npx tsx examples/edifact/parse-orders/index.ts
  */
 
+import * as path from 'path';
 import {
   EdifactMessageParser,
   EdifactDelimiterDetector,
   EdifactTokenizer,
   EdifactSegmentParser,
 } from '@ediflow/edifact';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
 
-// Helper: split composite element value by ':'
-const comp = (value: string | undefined, idx: number): string =>
-  value?.split(':')[idx] ?? '';
-
-// EDIFACT D.96A ORDERS — segment terminator: '   element separator: +
+// ─── Sample EDIFACT D.96A ORDERS ─────────────────────────────────────────────
 const ORDERS_D96A = [
   "UNB+UNOC:3+ACMECORP:14+SUPPLIER:14+260204:1200+1'",
   "UNH+1+ORDERS:D:96A:UN'",
@@ -37,74 +47,136 @@ const ORDERS_D96A = [
   "UNZ+1+1'",
 ].join('');
 
-const parser = new EdifactMessageParser(
-  new EdifactDelimiterDetector(),
-  new EdifactTokenizer(),
-  new EdifactSegmentParser(),
-);
+async function main(): Promise<void> {
+  console.log('╔══════════════════════════════════════════╗');
+  console.log('║  EDIFlow — Parse EDIFACT ORDERS Example  ║');
+  console.log('╚══════════════════════════════════════════╝');
 
-const message = parser.parse(ORDERS_D96A);
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEVEL 1: Syntax Parsing — raw EDIMessage
+  // ───────────────────────────────────────────────────────────────────────────
+  // Other libraries stop here. You get generic segments/elements and must
+  // know by heart what elements[1].value means in a BGM segment.
+  // ═══════════════════════════════════════════════════════════════════════════
 
-const bgm    = message.segments.find(s => s.tag === 'BGM');
-const dtms   = message.segments.filter(s => s.tag === 'DTM');
-const buyer  = message.segments.find(s => s.tag === 'NAD' && s.elements[0]?.value === 'BY');
-const seller = message.segments.find(s => s.tag === 'NAD' && s.elements[0]?.value === 'SU');
-const cux    = message.segments.find(s => s.tag === 'CUX');
-const lins   = message.segments.filter(s => s.tag === 'LIN');
-const qtys   = message.segments.filter(s => s.tag === 'QTY');
-const pris   = message.segments.filter(s => s.tag === 'PRI');
+  console.log('\n┌─────────────────────────────────────────────────────────────┐');
+  console.log('│ LEVEL 1 — Syntax Parsing (raw EDIMessage)                   │');
+  console.log('│ Low-level: you work with segments and element indices        │');
+  console.log('└─────────────────────────────────────────────────────────────┘\n');
 
-const formatDate = (d?: string) =>
-  d?.length === 8 ? `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}` : d ?? '';
+  const edifactParser = new EdifactMessageParser(
+    new EdifactDelimiterDetector(),
+    new EdifactTokenizer(),
+    new EdifactSegmentParser(),
+  );
 
-const getDate = (qual: string) => {
-  const dtm = dtms.find(d => comp(d.elements[0]?.value, 0) === qual);
-  return formatDate(comp(dtm?.elements[0]?.value, 1));
-};
+  const rawMessage = edifactParser.parse(ORDERS_D96A);
 
-const currency = comp(cux?.elements[0]?.value, 1);
+  console.log(`  Standard:   ${rawMessage.standard}`);
+  console.log(`  Version:    ${rawMessage.version.value}`);
+  console.log(`  Type:       ${rawMessage.messageType.value}`);
+  console.log(`  Segments:   ${rawMessage.segments.length}`);
+  console.log('');
 
-console.log('╔══════════════════════════════════════════╗');
-console.log('║  EDIFlow — Parse EDIFACT ORDERS Example  ║');
-console.log('╚══════════════════════════════════════════╝');
-console.log('');
-console.log('📋 Message Info');
-console.log(`  Standard:      ${message.standard}`);
-console.log(`  Type:          ${message.messageType.value} (Purchase Order)`);
-console.log(`  Version:       ${message.version.value}`);
-console.log(`  Segments:      ${message.segments.length}`);
-console.log('');
-console.log('📄 Order Header');
-console.log(`  PO Number:     ${bgm?.elements[1]?.value}`);
-console.log(`  Doc Type:      220 (Standard Order)`);
-console.log(`  Order Date:    ${getDate('137')}`);
-console.log(`  Delivery Date: ${getDate('2')}`);
-console.log(`  Currency:      ${currency}`);
-console.log('');
-console.log('🏢 Buyer (BY)');
-console.log(`  ID:            ${comp(buyer?.elements[1]?.value, 0)}`);
-console.log(`  Name:          ${buyer?.elements[3]?.value}`);
-console.log(`  Address:       ${buyer?.elements[4]?.value}`);
-console.log(`  City/Country:  ${buyer?.elements[5]?.value}, ${buyer?.elements[8]?.value}`);
-console.log('');
-console.log('🏭 Seller (SU)');
-console.log(`  ID:            ${comp(seller?.elements[1]?.value, 0)}`);
-console.log(`  Name:          ${seller?.elements[3]?.value}`);
-console.log('');
-console.log('📦 Line Items');
-let totalValue = 0;
-for (const [i] of lins.entries()) {
-  const prod  = comp(lins[i]?.elements[2]?.value, 0);
-  const qty   = parseFloat(comp(qtys[i]?.elements[0]?.value, 1));
-  const uom   = comp(qtys[i]?.elements[0]?.value, 2);
-  const price = parseFloat(comp(pris[i]?.elements[0]?.value, 1));
-  const line  = qty * price;
-  totalValue += line;
-  console.log(`  Line ${i + 1}:        ${qty} ${uom} × ${currency} ${price.toFixed(2)} = ${currency} ${line.toFixed(2)}  [${prod}]`);
+  const bgmRaw   = rawMessage.segments.find(s => s.tag === 'BGM');
+  const buyerRaw = rawMessage.segments.find(s => s.tag === 'NAD' && s.elements[0]?.value === 'BY');
+
+  console.log('  Raw access (must know segment/element positions by heart):');
+  console.log(`    PO Number:  bgm.elements[1].value               → "${bgmRaw?.elements[1]?.value}"`);
+  console.log(`    Buyer Name: nad.elements[3].value               → "${buyerRaw?.elements[3]?.value}"`);
+  console.log(`    Buyer ID:   nad.elements[1].value.split(':')[0]  → "${buyerRaw?.elements[1]?.value?.split(':')[0]}"`);
+  console.log('');
+  console.log('  ⚠️  Problem: What is elements[1]? elements[3]?');
+  console.log('     You must look up the EDIFACT D.96A spec every time!');
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEVEL 2: Schema-Aware Parsing — resolved segment definitions
+  // ───────────────────────────────────────────────────────────────────────────
+  // FileBasedMessageStructureRepository loads the @ediflow/edifact-d96a
+  // data package (segments.json, composites.json, elements.json) and
+  // resolves the full ORDERS message structure with named element definitions.
+  //
+  // Now you know:
+  //   BGM element[0] = "Document/message name, coded"  (maxLength: 3)
+  //   BGM element[1] = "Document/message number"       (maxLength: 35)
+  //   NAD C082       = "Party identification details"  (composite)
+  //   NAD 3164       = "City name"                     (maxLength: 35)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  console.log('\n┌─────────────────────────────────────────────────────────────┐');
+  console.log('│ LEVEL 2 — Schema-Aware Parsing (the real EDIFlow power!)    │');
+  console.log('│ @ediflow/edifact-d96a → named element definitions           │');
+  console.log('└─────────────────────────────────────────────────────────────┘\n');
+
+  const packagesPath = path.resolve(__dirname, '../../../packages');
+  const repository   = new FileBasedMessageStructureRepository(packagesPath);
+
+  const messageStructure = await repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+
+  if (!messageStructure) {
+    console.error('  ❌ Could not load ORDERS D.96A structure from edifact-d96a package');
+    process.exit(1);
+  }
+
+  console.log(`  ✅ Schema loaded: "${messageStructure.name}"`);
+  console.log(`     Standard: ${messageStructure.standard}   Version: ${messageStructure.version}   Type: ${messageStructure.messageType}`);
+  console.log(`     Top-level nodes: ${messageStructure.structure.length} (segments + segment groups)\n`);
+
+  // Resolve BGM segment definition from the schema
+  const bgmStructure = messageStructure.structure.find(
+    n => n.nodeType === 'segment' && n.tag === 'BGM'
+  );
+
+  if (bgmStructure && bgmStructure.nodeType === 'segment') {
+    console.log('  BGM (Beginning of Message) — element definitions from D.96A schema:');
+    bgmStructure.elements.forEach((el, idx) => {
+      if (el.nodeType === 'element') {
+        console.log(`    [${idx}] ${el.code.padEnd(6)} "${el.name}"  (maxLength: ${el.maxLength ?? '?'}, mandatory: ${el.mandatory})`);
+      } else {
+        console.log(`    [${idx}] ${el.code.padEnd(6)} "${el.name}"  (composite, mandatory: ${el.mandatory})`);
+      }
+    });
+    console.log('');
+    console.log('  ✅ Now you know: bgm.elements[1].value = "Document/message number" = PO number!');
+  }
+
+  // Resolve NAD segment definition
+  const nadStructure = messageStructure.structure.find(
+    n => n.nodeType === 'segment' && n.tag === 'NAD'
+  );
+
+  if (nadStructure && nadStructure.nodeType === 'segment') {
+    console.log('\n  NAD (Name and Address) — element definitions from D.96A schema:');
+    nadStructure.elements.forEach((el, idx) => {
+      if (el.nodeType === 'element') {
+        console.log(`    [${idx}] ${el.code.padEnd(6)} "${el.name}"  (maxLength: ${el.maxLength ?? '?'})`);
+      } else {
+        console.log(`    [${idx}] ${el.code.padEnd(6)} "${el.name}"  (composite)`);
+        if (el.components) {
+          el.components.slice(0, 3).forEach((c, ci) => {
+            console.log(`         [${ci}] ${c.code.padEnd(6)} "${c.name}"  (maxLength: ${c.maxLength ?? '?'})`);
+          });
+        }
+      }
+    });
+  }
+
+  console.log('');
+  console.log('  ─── raw vs. schema-aware access comparison ─────────────────');
+  console.log('');
+  console.log('  // ❌ Level 1 — raw, spec-dependent:');
+  console.log(`  nadRaw.elements[1].value.split(":")[0]    // What is this? You need the spec!`);
+  console.log(`  → "${buyerRaw?.elements[1]?.value?.split(':')[0]}"`);
+  console.log('');
+  console.log('  // ✅ Level 2 — schema-guided, self-documenting:');
+  console.log('  // NAD element[1] = C082 "Party identification details"');
+  console.log('  // C082 component[0] = 3039 "Party identifier" (maxLength: 35)');
+  console.log(`  → "${buyerRaw?.elements[1]?.value?.split(':')[0]}"  (= Party identifier, known from D.96A schema)`);
+  console.log('');
+  console.log('─── Parsed Message Object (JSON) ────────────────────────────');
+  console.log(JSON.stringify(rawMessage, null, 2));
+  console.log('');
+  console.log('✅ Done!');
 }
-console.log('');
-console.log('💰 Summary');
-console.log(`  Total Lines:   ${lins.length}`);
-console.log(`  Total Value:   ${currency} ${totalValue.toFixed(2)}`);
-console.log('');
-console.log('✅ Parsing complete!');
+
+main().catch(console.error);

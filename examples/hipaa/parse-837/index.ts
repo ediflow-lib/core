@@ -12,7 +12,6 @@ import {
   X12DelimiterDetector,
   X12SegmentParser,
   X12EnvelopeParser,
-  X12ValidationServiceBuilder,
 } from '@ediflow/x12';
 
 // HIPAA 005010X222A1 837P — Professional Healthcare Claim
@@ -123,7 +122,7 @@ console.log('');
 console.log('🔬 Diagnosis Codes (ICD-10)');
 const hiVal = hi?.elements[0]?.value ?? '';
 const [, ...moreDx] = hi?.elements ?? [];
-[hiVal, ...moreDx.map(e => e?.value)].filter(Boolean).forEach(code => {
+[hiVal, ...moreDx.map((e: { value?: string }) => e?.value)].filter(Boolean).forEach(code => {
   const [, icd] = code?.split(':') ?? [];
   if (icd) console.log(`  ${icd.padEnd(10)} ${diagCodes[icd] ?? 'See ICD-10 reference'}`);
 });
@@ -135,13 +134,15 @@ const procNames: Record<string, string> = {
   '71046': 'Chest X-Ray (2 views)',
 };
 let totalBilled = 0;
+const PROC_NAME_COLUMN_WIDTH = 26;
+// ...
 sv1s.forEach((sv1, i) => {
   const procCode = sv1.elements[0]?.value?.split(':')[1];
   const amount   = parseFloat(sv1.elements[1]?.value ?? '0');
   totalBilled   += amount;
   const mod      = sv1.elements[0]?.value?.split(':')[2];
   const modStr   = mod ? ` [mod:${mod}]` : '';
-  console.log(`  Line ${i + 1}: ${procCode?.padEnd(8)} ${(procNames[procCode ?? ''] ?? '').padEnd(26)} USD ${amount.toFixed(2)}${modStr}`);
+  console.log(`  Line ${i + 1}: ${procCode?.padEnd(8)} ${(procNames[procCode ?? ''] ?? '').padEnd(PROC_NAME_COLUMN_WIDTH)} USD ${amount.toFixed(2)}${modStr}`);
 });
 console.log('');
 console.log('💰 Claim Summary');
