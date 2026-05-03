@@ -3,7 +3,7 @@ import {
   MessageMustHaveSegmentsRule,
   VersionStandardMustMatchRule,
   MessageTypeStandardMustMatchRule,
-} from './BasicValidationRules';
+} from '@application';
 import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType } from '@domain';
 
 const createValidMessage = (): EDIMessage => {
@@ -36,7 +36,7 @@ describe('MessageMustHaveSegmentsRule', () => {
   it('returns EMPTY_MESSAGE error for message with no segments', () => {
     const errors = rule.apply(createEmptyMessage());
     expect(errors).toHaveLength(1);
-    expect(errors[0].code).toBe('EMPTY_MESSAGE');
+    expect(errors[0]!.code).toBe('EMPTY_MESSAGE');
   });
 
   it('returns no errors for message with at least one segment', () => {
@@ -67,8 +67,8 @@ describe('VersionStandardMustMatchRule', () => {
     msg.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
     const errors = rule.apply(msg);
     expect(errors).toHaveLength(1);
-    expect(errors[0].code).toBe('STANDARD_MISMATCH');
-    expect(errors[0].message).toContain('X12');
+    expect(errors[0]!.code).toBe('STANDARD_MISMATCH');
+    expect(errors[0]!.message).toContain('X12');
   });
 });
 
@@ -94,8 +94,8 @@ describe('MessageTypeStandardMustMatchRule', () => {
     msg.addSegment(new EDISegment('BGM', [new EDIElement('220')]));
     const errors = rule.apply(msg);
     expect(errors).toHaveLength(1);
-    expect(errors[0].code).toBe('STANDARD_MISMATCH');
-    expect(errors[0].message).toContain('X12');
+    expect(errors[0]!.code).toBe('STANDARD_MISMATCH');
+    expect(errors[0]!.message).toContain('X12');
   });
 });
 
