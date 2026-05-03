@@ -110,15 +110,18 @@ EDIFlow is published as **separate NPM packages** (all MIT licensed):
 # 1. Install core library (required)
 npm install @ediflow/core
 
-# 2. Install EDIFACT standard(s) you need (choose one or more)
-npm install @ediflow/edifact-d96a   # D.96A (1996) - 89 messages - Community
-npm install @ediflow/edifact-d01b   # D.01B (2001) - 155 messages - Community
-npm install @ediflow/edifact-d20b   # D.20B (2020) - 178 messages - Community (Latest)
-npm install @ediflow/edifact-d12a   # D.12A (2012) - 196 messages - Business (Prep)
+# 2. Install EDIFACT standard(s) you need
+npm install @ediflow/edifact-d96a   # D.96A (1996) — 89 messages
+npm install @ediflow/edifact-d01b   # D.01B (2001) — 155 messages
+npm install @ediflow/edifact-d20b   # D.20B (2020) — 178 messages (latest)
+npm install @ediflow/edifact-d12a   # D.12A (2012) — 196 messages (most complete)
+npm install @ediflow/eancom-2002    # EANCOM 2002 — 50 GS1 retail messages
 
 # 3. OR: Install X12 (USA market)
 npm install @ediflow/x12            # X12 Parser (850, 810, 837, 856, ...)
-npm install @ediflow/x12-004010     # X12 version 004010 definitions
+npm install @ediflow/x12-004010     # X12 004010 — 293 transaction sets
+npm install @ediflow/x12-006040     # X12 006040 — 319 transaction sets (latest 2026)
+npm install @ediflow/hipaa-x12-005010  # HIPAA 005010 — 14 healthcare transaction sets
 ```
 
 ### Parse EDIFACT Message
@@ -194,7 +197,7 @@ console.log(edifactStr); // Ready to send!
 
 **Total (all packages):** ~14 MB • **1294+ message types** • **All MIT licensed**
 
-💡 **Tip:** Community packages (D.96A, D.01B, D.20B) are free and open source. D.12A is in preparation for business customers.
+💡 **Tip:** Install only what you need. All packages are free and MIT licensed.
 
 ---
 
@@ -203,23 +206,56 @@ console.log(edifactStr); // Ready to send!
 ## 🎯 Features
 
 ### Core Features
-- **Parse** - EDIFACT string → Structured EDIMessage
-- **Validate** - 3-phase validation (Syntax → Structure → Business)
-- **Build** - EDIMessage → EDIFACT string
-- **Map** - Auto-convert to/from business objects (Phase 2)
-- **Envelopes** - UNH/UNT/UNB/UNZ generation & parsing
+- **Parse** — EDIFACT / X12 / EANCOM string → structured `EDIMessage`
+- **Validate** — 3-phase validation (Syntax → Structure → Business)
+- **Build** — `EDIMessage` → EDI string (EDIFACT, X12)
+- **Map** — Business Object ↔ `EDIMessage` with 5 key strategies (`code`, `name`, `camelCase`, `snake_case`, `kebab-case`)
+- **Schema Export** — JSON Schema & YAML from any message structure
+- **Envelopes** — UNH/UNT/UNB/UNZ and ISA/GS/ST/SE/GE/IEA generation & parsing
 
-### EDIFACT Versions Supported
-- **D.96A** (1996) - 89 message types - **Community (MIT)**
-- **D.01B** (2001) - 155 message types - **Community (MIT)**
-- **D.20B** (2020) - 178 message types - **Community (MIT) - Latest!**
-- **D.12A** (2012) - 196 message types - **Business (Preparation)**
+### Supported Standards
 
-### Message Types (618 total)
-**Logistics:** DESADV, ORDERS, ORDRSP, RECADV, IFTMIN, IFTSTA, IFCSUM  
-**Financial:** INVOIC, REMADV, FINSTA, PAYMUL  
-**Catalog:** PRICAT, SLSRPT  
-**Plus:** 600+ more message types across all versions
+#### EDIFACT (UN/EDIFACT)
+- **D.96A** (1996) — 89 message types
+- **D.01B** (2001) — 155 message types
+- **D.20B** (2020) — 178 message types
+- **D.12A** (2012) — 196 message types (most complete)
+
+#### EANCOM 2002 (GS1 retail subset of EDIFACT)
+- **EANCOM 2002** — 50 message types (DESADV, ORDERS, INVOIC, PRICAT, ...)
+- Uses GLN (Global Location Numbers) & EAN-13 / GTIN product codes
+
+#### X12 (ANSI ASC X12)
+- **004010** — 293 transaction sets (850, 810, 856, 997, ...)
+- **006040** — 319 transaction sets — Latest 2026 release
+
+#### HIPAA X12 (Healthcare)
+- **005010** — 14 transaction sets (837P, 837I, 835, 270, 271, ...)
+- US-mandated standard for healthcare transactions (HIPAA)
+
+### Message Types (1294+ total)
+**EDIFACT Logistics:** DESADV, ORDERS, ORDRSP, RECADV, IFTMIN, IFTSTA, IFCSUM  
+**EDIFACT Financial:** INVOIC, REMADV, FINSTA, PAYMUL  
+**EDIFACT Catalog:** PRICAT, SLSRPT  
+**EANCOM Retail:** DESADV, INVOIC, ORDERS, ORDRSP, PRICAT, SLSRPT, RECADV, ...  
+**X12 Retail/Logistics:** 850 PO, 810 Invoice, 856 ASN, 997 Functional ACK  
+**X12 Healthcare:** 837P/I Claims, 835 Remittance, 270/271 Eligibility, ...  
+**Plus:** 1000+ more across all versions and standards
+
+---
+
+## 💡 Examples
+
+> **📖 See complete runnable examples on GitHub:**
+> [`examples/`](https://github.com/ediflow-lib/core/tree/main/examples)
+
+| Folder | Examples |
+|--------|----------|
+| **[examples/edifact/](https://github.com/ediflow-lib/core/tree/main/examples/edifact)** | Build INVOIC, Parse ORDERS, Validate DESADV |
+| **[examples/eancom/](https://github.com/ediflow-lib/core/tree/main/examples/eancom)** | Parse DESADV (GLN/EAN-13), Validate envelope |
+| **[examples/x12/](https://github.com/ediflow-lib/core/tree/main/examples/x12)** | Build 850 PO, Parse 850, Validate 837, Schema Export, Multi-message |
+| **[examples/hipaa/](https://github.com/ediflow-lib/core/tree/main/examples/hipaa)** | Parse 837P, Validate 835 |
+| **[examples/cli/](https://github.com/ediflow-lib/core/tree/main/examples/cli)** | All CLI commands with input/result files |
 
 ---
 
@@ -270,7 +306,7 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 ### Package Documentation
 - **[@ediflow/core](packages/core/README.md)** - Core library
 - **[@ediflow/edifact](packages/edifact/README.md)** - EDIFACT parsers & builders
-- **[@ediflow/x12](packages/x12/README.md)** - X12 parsers & validators (NEW!)
+- **[@ediflow/x12](packages/x12/README.md)** - X12 parsers & validators
 - **[@ediflow/infrastructure-shared](packages/infrastructure-shared/README.md)** - Shared infrastructure
 - **[@ediflow/cli](packages/cli/README.md)** - CLI tool
 - **[Examples](examples/README.md)** - Runnable examples (X12, EDIFACT, EANCOM, HIPAA, CLI)
