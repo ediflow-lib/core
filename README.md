@@ -187,11 +187,12 @@ console.log(edifactStr); // Ready to send!
 | **[@ediflow/edifact-d01b](packages/edifact-d01b)** | 0.36 MB | 155 | MIT | D.01B (2001) |
 | **[@ediflow/edifact-d20b](packages/edifact-d20b)** | 1.34 MB | 178 | MIT | D.20B (2020) — Latest |
 | **[@ediflow/edifact-d12a](packages/edifact-d12a)** | 4.44 MB | 196 | MIT | D.12A (2012) — Most complete |
-| **[@ediflow/eancom-2002](packages/eancom-2002)** | - | 50 | MIT | EANCOM 2002 — GS1 retail |
-| **[@ediflow/x12-004010](packages/x12-004010)** | 7.8 MB | 293 | MIT | X12 version 004010 |
-| **[@ediflow/hipaa-x12-005010](packages/hipaa-x12-005010)** | - | 14 | MIT | HIPAA X12 005010 (internal) |
+| **[@ediflow/eancom-2002](packages/eancom-2002/README.md)** | - | 50 | MIT | EANCOM 2002 — GS1 retail |
+| **[@ediflow/x12-004010](packages/x12-004010/README.md)** | 7.8 MB | 293 | MIT | X12 version 004010 |
+| **[@ediflow/x12-006040](packages/x12-006040/README.md)** | - | 319 | MIT | X12 version 006040 — Latest 2026 |
+| **[@ediflow/hipaa-x12-005010](packages/hipaa-x12-005010/README.md)** | - | 14 | MIT | HIPAA X12 005010 — Healthcare |
 
-**Total (public packages):** ~14 MB • **965+ message types** • **All MIT licensed**
+**Total (all packages):** ~14 MB • **1294+ message types** • **All MIT licensed**
 
 💡 **Tip:** Community packages (D.96A, D.01B, D.20B) are free and open source. D.12A is in preparation for business customers.
 
@@ -278,7 +279,9 @@ EDIFlow follows **Clean Architecture** (Uncle Bob) with strict layer separation:
 - **[@ediflow/edifact-d20b](packages/edifact-d20b/README.md)** - D.20B standard
 - **[@ediflow/edifact-d12a](packages/edifact-d12a/README.md)** - D.12A standard
 - **[@ediflow/x12-004010](packages/x12-004010/README.md)** - X12 004010 definitions
+- **[@ediflow/x12-006040](packages/x12-006040/README.md)** - X12 006040 definitions — Latest 2026
 - **[@ediflow/eancom-2002](packages/eancom-2002/README.md)** - EANCOM 2002 definitions
+- **[@ediflow/hipaa-x12-005010](packages/hipaa-x12-005010/README.md)** - HIPAA X12 005010 definitions
 
 ---
 

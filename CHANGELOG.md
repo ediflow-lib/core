@@ -52,6 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `@ediflow/edifact-d20b@0.3.0`
 - `@ediflow/eancom-2002@0.3.0`
 - `@ediflow/x12-004010@0.3.0`
+- `@ediflow/x12-006040@0.3.0`
+- `@ediflow/hipaa-x12-005010@0.3.0`
 
 ### 📊 Statistics
 
