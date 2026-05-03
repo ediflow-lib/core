@@ -1,0 +1,209 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "850",
+  "segments": [
+    { "tag": "ISA", "elements": [
+      { "value": "00" }, { "value": "          " },
+      { "value": "00" }, { "value": "          " },
+      { "value": "ZZ" }, { "value": "ACMECORP       " },
+      { "value": "ZZ" }, { "value": "SUPPLIER       " },
+      { "value": "260204" }, { "value": "1030" },
+      { "value": "^" }, { "value": "00401" },
+      { "value": "000000001" }, { "value": "0" },
+      { "value": "P" }, { "value": ">" }
+    ]},
+    { "tag": "GS", "elements": [
+      { "value": "PO" }, { "value": "ACMECORP" }, { "value": "SUPPLIER" },
+      { "value": "20260204" }, { "value": "1030" },
+      { "value": "1" }, { "value": "X" }, { "value": "004010" }
+    ]},
+    {
+      "tag": "ST",
+      "elements": [
+        {
+          "value": "850"
+        },
+        {
+          "value": "0001"
+        }
+      ]
+    },
+    {
+      "tag": "BEG",
+      "elements": [
+        {
+          "value": "00"
+        },
+        {
+          "value": "SA"
+        },
+        {
+          "value": "PO123456"
+        },
+        {
+          "value": "20260204"
+        }
+      ]
+    },
+    {
+      "tag": "REF",
+      "elements": [
+        {
+          "value": "DP"
+        },
+        {
+          "value": "DEPT001"
+        }
+      ]
+    },
+    {
+      "tag": "DTM",
+      "elements": [
+        {
+          "value": "002"
+        },
+        {
+          "value": "20260210"
+        }
+      ]
+    },
+    {
+      "tag": "N1",
+      "elements": [
+        {
+          "value": "BY"
+        },
+        {
+          "value": "ACME Corporation"
+        },
+        {
+          "value": "92"
+        },
+        {
+          "value": "BUYER123"
+        }
+      ]
+    },
+    {
+      "tag": "N3",
+      "elements": [
+        {
+          "value": "123 Main Street"
+        }
+      ]
+    },
+    {
+      "tag": "N4",
+      "elements": [
+        {
+          "value": "New York"
+        },
+        {
+          "value": "NY"
+        },
+        {
+          "value": "10001"
+        }
+      ]
+    },
+    {
+      "tag": "N1",
+      "elements": [
+        {
+          "value": "SE"
+        },
+        {
+          "value": "Best Supplier Inc"
+        },
+        {
+          "value": "92"
+        },
+        {
+          "value": "SUPP456"
+        }
+      ]
+    },
+    {
+      "tag": "PO1",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "100"
+        },
+        {
+          "value": "EA"
+        },
+        {
+          "value": "10.50"
+        },
+        {
+          "value": "PE"
+        },
+        {
+          "value": "BP"
+        },
+        {
+          "value": "WIDGET-A"
+        }
+      ]
+    },
+    {
+      "tag": "PO1",
+      "elements": [
+        {
+          "value": "2"
+        },
+        {
+          "value": "50"
+        },
+        {
+          "value": "EA"
+        },
+        {
+          "value": "25.00"
+        },
+        {
+          "value": "PE"
+        },
+        {
+          "value": "BP"
+        },
+        {
+          "value": "GADGET-B"
+        }
+      ]
+    },
+    {
+      "tag": "CTT",
+      "elements": [
+        {
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "tag": "SE",
+      "elements": [
+        { "value": "12" },
+        { "value": "0001" }
+      ]
+    },
+    {
+      "tag": "GE",
+      "elements": [
+        { "value": "1" },
+        { "value": "1" }
+      ]
+    },
+    {
+      "tag": "IEA",
+      "elements": [
+        { "value": "1" },
+        { "value": "000000001" }
+      ]
+    }
+  ]
+}

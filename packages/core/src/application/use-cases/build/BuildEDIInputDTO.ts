@@ -1,6 +1,7 @@
 import { EDIMessage, Delimiters } from '@domain';
 import { MessageStructureDTO } from "@application/dtos";
 import { OutputFormat } from '@application/ports/output';
+import type { MappingKeyStrategy } from '@application/services/mapping/OutputKeyStrategy';
 
 export interface BuildEDIInputDTO {
   message?: EDIMessage;
@@ -10,6 +11,7 @@ export interface BuildEDIInputDTO {
 
   businessObject?: any;
   messageStructure?: MessageStructureDTO;
+  businessObjectKeyStyle?: MappingKeyStrategy;
 
   includeEnvelope?: boolean;
   includeInterchange?: boolean;

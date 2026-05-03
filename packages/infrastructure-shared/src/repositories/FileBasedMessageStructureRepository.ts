@@ -29,6 +29,13 @@ interface DataPackageContext {
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
   private contextCache = new Map<string, DataPackageContext>();
 
+  // Non-standard package names that don't follow {standard}-{version} pattern
+  private static readonly PACKAGE_ALIASES = new Map<string, string>([
+    ['x12:005010', 'hipaa-x12-005010'],
+    ['edifact:eancom2002', 'eancom-2002'],
+    ['edifact:d02b',       'eancom-2002'],   // EANCOM 2002 messages use EDIFACT D.02B syntax
+  ]);
+
   constructor(private readonly basePath: string) {}
 
   async getMessageStructure(
@@ -77,7 +84,9 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
       await fs.access(filePath);
       return true;
     } catch {
-      return false;
+      // Try qualifier fallback
+      const result = await this.loadMessageFileWithQualifierFallback(standard, version, messageType);
+      return result !== null;
     }
   }
 
@@ -107,9 +116,34 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
       return MessageFileSchema.parse(JSON.parse(content));
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-        return null;
+        return this.loadMessageFileWithQualifierFallback(standard, version, messageType);
       }
       throw error;
+    }
+  }
+
+  /**
+   * Fallback for data packages that use qualifier suffixes in message file names
+   * (e.g. HIPAA 837-Q1.json, 270-B1.json instead of 837.json).
+   * Returns the first alphabetically matching file for the given message type prefix.
+   */
+  private async loadMessageFileWithQualifierFallback(
+    standard: string,
+    version: string,
+    messageType: string
+  ): Promise<MessageFile | null> {
+    try {
+      const dirPath = this.getMessageDirPath(standard, version);
+      const files = await fs.readdir(dirPath);
+      const prefix = messageType.toUpperCase() + '-';
+      const match = files.filter(f => f.startsWith(prefix) && f.endsWith('.json')).sort()[0];
+      if (!match) {
+        return null;
+      }
+      const content = await fs.readFile(path.join(dirPath, match), 'utf-8');
+      return MessageFileSchema.parse(JSON.parse(content));
+    } catch {
+      return null;
     }
   }
 
@@ -152,6 +186,13 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
   }
 
   private getDataDirPath(standard: string, version: string): string {
+    const aliasKey = `${standard.toLowerCase()}:${version.toLowerCase().replace(/\./g, '')}`;
+    const alias = FileBasedMessageStructureRepository.PACKAGE_ALIASES.get(aliasKey);
+
+    if (alias) {
+      return path.join(this.basePath, alias, 'data');
+    }
+
     const normalizedVersion = version.toLowerCase().replace(/\./g, '');
     return path.join(
       this.basePath,

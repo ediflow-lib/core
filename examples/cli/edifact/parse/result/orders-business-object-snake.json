@@ -1,0 +1,228 @@
+﻿{
+  "message_header": {
+    "message_reference_number": "1",
+    "message_identifier": {
+      "message_type": "ORDERS",
+      "message_version_number": "D",
+      "message_release_number": "96A",
+      "controlling_agency": "UN",
+      "association_assigned_code": ""
+    }
+  },
+  "beginning_of_message": {
+    "document_message_name": {
+      "document_message_name_coded": "220",
+      "code_list_qualifier": "",
+      "code_list_responsible_agency_coded": "",
+      "document_message_name": ""
+    },
+    "document_message_number": "PO-2026-001",
+    "message_function_coded": "9"
+  },
+  "date_time_period": [
+    {
+      "date_time_period": {
+        "date_time_period_qualifier": "137",
+        "date_time_period": "20260204",
+        "date_time_period_format_qualifier": "102"
+      }
+    },
+    {
+      "date_time_period": {
+        "date_time_period_qualifier": "2",
+        "date_time_period": "20260210",
+        "date_time_period_format_qualifier": "102"
+      }
+    }
+  ],
+  "sg1": [],
+  "sg2": [
+    {
+      "name_and_address": {
+        "party_qualifier": "BY",
+        "party_identification_details": {
+          "party_id_identification": "BUYER123",
+          "code_list_qualifier": "",
+          "code_list_responsible_agency_coded": "92"
+        },
+        "name_and_address": {
+          "name_and_address_line": ""
+        },
+        "party_name": {
+          "party_name": "",
+          "party_name_format_coded": ""
+        },
+        "street": {
+          "street_and_number_p_o_box": ""
+        },
+        "city_name": "New York",
+        "country_sub_entity_identification": "",
+        "postcode_identification": "10001",
+        "country_coded": "US"
+      },
+      "sg3": [],
+      "sg4": [],
+      "sg5": []
+    },
+    {
+      "name_and_address": {
+        "party_qualifier": "SU",
+        "party_identification_details": {
+          "party_id_identification": "SUPP456",
+          "code_list_qualifier": "",
+          "code_list_responsible_agency_coded": "92"
+        },
+        "name_and_address": {
+          "name_and_address_line": ""
+        },
+        "party_name": {
+          "party_name": "",
+          "party_name_format_coded": ""
+        },
+        "street": {
+          "street_and_number_p_o_box": ""
+        },
+        "city_name": "Chicago",
+        "country_sub_entity_identification": "",
+        "postcode_identification": "60601",
+        "country_coded": "US"
+      },
+      "sg3": [],
+      "sg4": [],
+      "sg5": []
+    }
+  ],
+  "sg6": [],
+  "sg7": [
+    {
+      "currencies": {
+        "currency_details": {
+          "currency_details_qualifier": "2",
+          "currency_coded": "EUR",
+          "currency_qualifier": "4",
+          "currency_rate_base": ""
+        }
+      }
+    }
+  ],
+  "sg8": [],
+  "sg9": [],
+  "sg11": [],
+  "sg12": [],
+  "sg14": [],
+  "sg15": [],
+  "sg17": [],
+  "sg18": [],
+  "sg24": [],
+  "sg25": [
+    {
+      "line_item": {
+        "line_item_number": "1",
+        "action_request_notification_coded": "",
+        "item_number_identification": {
+          "item_number": "WIDGET-A",
+          "item_number_type_coded": "SA",
+          "code_list_qualifier": "",
+          "code_list_responsible_agency_coded": ""
+        }
+      },
+      "quantity": {
+        "quantity_details": {
+          "quantity_qualifier": "21",
+          "quantity": "100",
+          "measure_unit_qualifier": "PCE"
+        }
+      },
+      "sg26": [],
+      "sg27": [],
+      "sg28": [
+        {
+          "price_details": {
+            "price_information": {
+              "price_qualifier": "AAA",
+              "price": "10.50",
+              "price_type_coded": "CA",
+              "price_type_qualifier": "",
+              "unit_price_basis": "",
+              "measure_unit_qualifier": ""
+            }
+          }
+        }
+      ],
+      "sg29": [],
+      "sg30": [],
+      "sg33": [],
+      "sg34": [],
+      "sg35": [],
+      "sg39": [],
+      "sg45": [],
+      "sg47": [],
+      "sg48": [],
+      "sg49": [],
+      "sg51": [],
+      "sg52": []
+    },
+    {
+      "line_item": {
+        "line_item_number": "2",
+        "action_request_notification_coded": "",
+        "item_number_identification": {
+          "item_number": "GADGET-B",
+          "item_number_type_coded": "SA",
+          "code_list_qualifier": "",
+          "code_list_responsible_agency_coded": ""
+        }
+      },
+      "quantity": {
+        "quantity_details": {
+          "quantity_qualifier": "21",
+          "quantity": "50",
+          "measure_unit_qualifier": "PCE"
+        }
+      },
+      "sg26": [],
+      "sg27": [],
+      "sg28": [
+        {
+          "price_details": {
+            "price_information": {
+              "price_qualifier": "AAA",
+              "price": "25.00",
+              "price_type_coded": "CA",
+              "price_type_qualifier": "",
+              "unit_price_basis": "",
+              "measure_unit_qualifier": ""
+            }
+          }
+        }
+      ],
+      "sg29": [],
+      "sg30": [],
+      "sg33": [],
+      "sg34": [],
+      "sg35": [],
+      "sg39": [],
+      "sg45": [],
+      "sg47": [],
+      "sg48": [],
+      "sg49": [],
+      "sg51": [],
+      "sg52": []
+    }
+  ],
+  "section_control": {
+    "section_identification": "S"
+  },
+  "control_total": {
+    "control": {
+      "control_qualifier": "2",
+      "control_value": "2",
+      "measure_unit_qualifier": ""
+    }
+  },
+  "sg54": [],
+  "message_trailer": {
+    "number_of_segments_in_the_message": "15",
+    "message_reference_number": "1"
+  }
+}

@@ -22,13 +22,13 @@ program
   .version('0.1.0');
 
 // Register commands with dependency injection
-const parseCommand = new ParseCommand(container.useCaseFactory);
+const parseCommand = new ParseCommand(container.useCaseFactory, container.repository, container.structureMappingService);
 parseCommand.register(program);
 
-const buildCommand = new BuildCommand(container.useCaseFactory);
+const buildCommand = new BuildCommand(container.useCaseFactory, container.repository, container.structureMappingService);
 buildCommand.register(program);
 
-const validateCommand = new ValidateCommand(container.useCaseFactory);
+const validateCommand = new ValidateCommand(container.useCaseFactory, container.repository);
 validateCommand.register(program);
 
 container.exportSchemaCommand.register(program);

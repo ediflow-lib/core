@@ -181,7 +181,7 @@ describe('BuildCommand - Integration Tests (US-5.3)', () => {
 
       writeFileSync(testFile, JSON.stringify(invalidJSON));
 
-      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow('Missing required field: standard');
+      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow(/standard/i);
     });
 
     it('should throw error for empty file', async () => {

@@ -1,130 +1,151 @@
 # @ediflow/x12
 
-> X12 EDI Parser - Format-specific infrastructure for ANSI ASC X12 standard
+> X12 EDI Parser & Validator — ANSI ASC X12 standard (850, 810, 837, 856, ...)
 
-Part of the [EdiFlow](https://github.com/ediflow-lib/core) ecosystem - Modern, type-safe EDI parsing for TypeScript/JavaScript.
+[![NPM Version](https://img.shields.io/npm/v/@ediflow/x12.svg)](https://www.npmjs.com/package/@ediflow/x12)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Part of the [EDIFlow](https://github.com/ediflow-lib/core) ecosystem — Modern, type-safe EDI parsing for TypeScript/JavaScript.
+
+## 🆕 What's New in v0.3.0
+
+- ✅ **Full X12 Parser** — ISA/GS/ST/SE/GE/IEA envelope support
+- ✅ **Validation Rules** — STRICT and LENIENT validation levels
+- ✅ **Schema Export** — CLI `export-schema --standard X12`
+- ✅ **140 Tests** with 87%+ coverage
+
+---
 
 ## 📦 What's This Package?
 
-This package provides **X12-specific parsers** for the ANSI ASC X12 EDI standard. It works with `@ediflow/core` to parse X12 messages (850, 810, 837, 835, etc.).
-
-```typescript
-import { X12MessageParser } from '@ediflow/x12';
-import { ParseEDIUseCase } from '@ediflow/core';
-
-// Parse X12 message
-const parser = new X12MessageParser(/* ... */);
-const parseUseCase = new ParseEDIUseCase(parser, definitionLoader);
-const message = parseUseCase.execute(x12Data);
-```
-
-## 🎯 Why a Separate Package?
-
-**Clean Architecture**: 
-- `@ediflow/core` = Format-agnostic domain & application logic
-- `@ediflow/x12` = X12-specific parsing infrastructure  
-- `@ediflow/edifact` = EDIFACT-specific parsing infrastructure
-
-This allows you to:
-- ✅ Only install parsers you need (tree-shaking)
-- ✅ Keep core small and format-agnostic
-- ✅ Add new formats without bloating core
+`@ediflow/x12` provides **X12-specific parsers and validators** for the ANSI ASC X12 EDI standard. It implements the `IMessageParser` port from `@ediflow/core`.
 
 ## 📥 Installation
 
 ```bash
-npm install @ediflow/core @ediflow/x12
+npm install @ediflow/core @ediflow/x12 @ediflow/infrastructure-shared
+
+# Optional: X12 message definitions
+npm install @ediflow/x12-004010
 ```
 
 ## 🚀 Quick Start
 
+### Parse X12 850 Purchase Order
+
 ```typescript
-import { X12MessageParser } from '@ediflow/x12';
-import { ParseEDIUseCase } from '@ediflow/core';
+import {
+  X12MessageParser,
+  X12DelimiterDetector,
+  X12SegmentParser,
+  X12EnvelopeParser
+} from '@ediflow/x12';
 
-// X12 850 Purchase Order
-const x12Data = `ISA*00*          *00*          *ZZ*SENDER         *ZZ*RECEIVER       *240204*1200*U*00401*000000001*0*P*>~
-GS*PO*SENDER*RECEIVER*20240204*1200*1*X*004010~
-ST*850*0001~
-BEG*00*SA*PO123456**20240204~
-SE*3*0001~
-GE*1*1~
-IEA*1*000000001~`;
+const parser = new X12MessageParser(
+  new X12DelimiterDetector(),
+  new X12SegmentParser(),
+  new X12EnvelopeParser()
+);
 
-// Setup parser
-const parser = new X12MessageParser(/* config */);
-const useCase = new ParseEDIUseCase(parser, definitionLoader);
+const x12 = `ISA*00*          *00*          *ZZ*SENDER         *ZZ*RECEIVER       *260204*1030*^*00501*000000001*0*P*>~GS*PO*SENDER*RECEIVER*20260204*1030*1*X*005010~ST*850*0001~BEG*00*SA*PO123456**20260204~PO1*1*100*EA*10.50~SE*4*0001~GE*1*1~IEA*1*000000001~`;
 
-// Parse
-const message = useCase.execute(x12Data);
+const message = parser.parse(x12);
 
-console.log(message.getSegments());
-// [ISA, GS, ST, BEG, SE, GE, IEA]
+console.log(message.standard);           // 'X12'
+console.log(message.messageType.value);  // '850'
+console.log(message.version.value);      // '005010'
+console.log(message.segments.length);    // 4 (ST, BEG, PO1, SE)
 ```
+
+### Validate X12 Message
+
+```typescript
+import { X12ValidationServiceBuilder, ValidationLevel } from '@ediflow/x12';
+
+const validator = X12ValidationServiceBuilder.forX12();
+const result = validator.validate(message);
+
+if (result.isValid) {
+  console.log('✅ Valid X12 message');
+} else {
+  result.errors.forEach(e => console.error(`❌ ${e.code}: ${e.message}`));
+}
+```
+
+---
 
 ## 🏗️ Architecture
 
 ```
 @ediflow/x12/
 └── infrastructure/
-    └── parsers/
-        ├── X12Tokenizer.ts         # Splits X12 into tokens
-        ├── X12SegmentParser.ts     # Parses segments
-        ├── X12EnvelopeParser.ts    # Handles ISA/GS/GE/IEA
-        └── X12MessageParser.ts     # Full message parsing
+    ├── parsers/
+    │   ├── X12Tokenizer.ts           # Splits X12 by segment terminator (~)
+    │   ├── X12DelimiterDetector.ts   # Extracts delimiters from ISA
+    │   ├── X12SegmentParser.ts       # Parses segments into EDISegment entities
+    │   ├── X12EnvelopeParser.ts      # ISA/GS/ST/SE/GE/IEA hierarchical parsing
+    │   └── X12MessageParser.ts       # Full message parsing (implements IMessageParser)
+    └── validation/
+        ├── ValidationLevel.ts              # STRICT | LENIENT
+        ├── X12ValidationServiceBuilder.ts  # Builder pattern for validators
+        └── rules/
+            ├── ISAMustBeFirstRule.ts
+            ├── IEAMustBeLastRule.ts
+            ├── X12EnvelopeIntegrityRule.ts
+            └── X12SegmentTagFormatRule.ts
 ```
 
 ## 🎓 X12 vs EDIFACT
 
 | Feature | X12 | EDIFACT |
 |---------|-----|---------|
-| **Delimiter** | `*` (data), `~` (segment) | `+` (data), `'` (segment) |
-| **Envelope** | ISA/GS/GE/IEA | UNB/UNH/UNT/UNZ |
-| **Composite** | `:` | `:` |
+| **Segment Terminator** | `~` | `'` |
+| **Element Separator** | `*` | `+` |
+| **Envelope** | ISA/GS/ST/SE/GE/IEA | UNB/UNH/UNT/UNZ |
 | **Region** | North America | Global |
-| **Common Uses** | Healthcare, Retail | Logistics, Manufacturing |
+| **Healthcare** | 837 (HIPAA) | — |
 
 ## 📚 Supported Transaction Sets
 
-- **850** - Purchase Order
-- **810** - Invoice
-- **837** - Healthcare Claim
-- **835** - Healthcare Payment/Remittance
-- **More coming soon!**
+| Code | Name | Industry |
+|------|------|----------|
+| **850** | Purchase Order | Retail / Manufacturing |
+| **810** | Invoice | All |
+| **856** | Advance Ship Notice | Logistics |
+| **837** | Healthcare Claim | Healthcare |
+| **835** | Healthcare Payment | Healthcare |
+| **997** | Functional Acknowledgment | All |
+
+## 🔗 Related Packages
+
+| Package | Description |
+|---------|-------------|
+| **[@ediflow/core](https://www.npmjs.com/package/@ediflow/core)** | Core domain & application logic (required) |
+| **[@ediflow/infrastructure-shared](https://www.npmjs.com/package/@ediflow/infrastructure-shared)** | Repositories, cache, loaders |
+| **[@ediflow/x12-004010](https://www.npmjs.com/package/@ediflow/x12-004010)** | X12 version 004010 message definitions |
+| **[@ediflow/edifact](https://www.npmjs.com/package/@ediflow/edifact)** | EDIFACT parser (sibling package) |
 
 ## 🧪 Testing
 
 ```bash
-# Run tests
-npm test
-
-# Watch mode
-npm run test:watch
-
-# Coverage
-npm run test:coverage
+npm test                # 147 tests
+npm run test:coverage   # coverage report
 ```
 
-## 🔗 Related Packages
+## 💡 Examples
 
-- **[@ediflow/core](https://www.npmjs.com/package/@ediflow/core)** - Core domain & application logic (required)
-- **[@ediflow/edifact](https://www.npmjs.com/package/@ediflow/edifact)** - EDIFACT parser
-- **[@ediflow/edifact-d96a](https://www.npmjs.com/package/@ediflow/edifact-d96a)** - EDIFACT D96A definitions
+See [`examples/x12/`](https://github.com/ediflow-lib/core/tree/main/examples/x12) for runnable examples:
 
-## 📖 Documentation
-
-- [Architecture Guide](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)
-- [Developer Guide](https://github.com/ediflow-lib/core/blob/main/docs/DEVELOPER_GUIDE.md)
-- [API Documentation](https://github.com/ediflow-lib/core#api-documentation)
-
-## 🤝 Contributing
-
-See [CONTRIBUTING.md](https://github.com/ediflow-lib/core/blob/main/CONTRIBUTING.md)
+- **build-850** — Build a Purchase Order from scratch + round-trip verify
+- **parse-850** — Parse a Purchase Order (buyer, seller, line items)
+- **validate-837** — Validate a Healthcare Claim (valid + invalid scenarios)
+- **schema-export** — Load X12 004010 definitions and export as JSON Schema
+- **multi-message** — Parse 850, 810, 856, 997 in one run
 
 ## 📄 License
 
-MIT - See [LICENSE](https://github.com/ediflow-lib/core/blob/main/LICENSE)
+MIT — See [LICENSE](https://github.com/ediflow-lib/core/blob/main/LICENSE)
 
 ---
 
-**Part of EdiFlow** - Modern, type-safe EDI parsing for TypeScript/JavaScript
+**Part of [EDIFlow](https://github.com/ediflow-lib/core)** — Modern, type-safe EDI for TypeScript/JavaScript

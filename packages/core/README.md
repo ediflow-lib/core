@@ -1,6 +1,6 @@
 # @ediflow/core
 
-> Modern EDIFACT Parser, Validator & Builder - Core Library
+> Modern EDI Parser, Validator & Builder — EDIFACT, X12, EANCOM & HIPAA
 
 [![NPM Version](https://img.shields.io/npm/v/@ediflow/core.svg)](https://www.npmjs.com/package/@ediflow/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,28 +11,20 @@
 
 ---
 
-## 🆕 What's New in v0.2.0
+## 🆕 What's New in v0.3.0
 
-🔥 **Major Architecture Refactoring** - Complete Clean Architecture enforcement!
-
-**Key Changes:**
-- ✨ **New modular structure** - Better tree-shaking, smaller bundles
-- ✨ **New packages** - `@ediflow/edifact`, `@ediflow/infrastructure-shared`, `@ediflow/cli`
-- ✨ **Pure domain layer** - No infrastructure code in core anymore
-- 🇺🇸 **X12 foundation** - USA market support coming in v0.3.0
-
-⚠️ **Migrating from v0.1.x?** **Zero code changes needed!** Just upgrade:
-```bash
-npm install @ediflow/core@0.2.0 @ediflow/edifact@0.2.0
-```
-
-📝 [See full changelog →](https://github.com/ediflow-lib/core/releases/tag/v0.2.0)
+- ✅ **X12 Support** — Full ISA/GS/ST/SE/GE/IEA envelope parsing & validation (850, 810, 837, 856, ...)
+- ✅ **Business Object Mapping** — `StructureMappingService.map()` / `unmap()` with 5 key strategies
+- ✅ **Schema Export** — `ExportSchemaUseCase` for JSON Schema + YAML via CLI
+- ✅ **HIPAA** — `@ediflow/hipaa-x12-005010` data package (14 transaction sets)
+- ✅ **EANCOM** — `@ediflow/eancom-2002` data package (50 message types)
+- ✅ **857 tests** passing across all packages
 
 ---
 
 ## 📦 What is @ediflow/core?
 
-`@ediflow/core` is the **core engine** for EDIFlow - a modern EDIFACT library built with Clean Architecture principles.
+`@ediflow/core` is the **core engine** for EDIFlow — a modern EDI library for EDIFACT, X12, EANCOM and HIPAA, built with Clean Architecture principles.
 
 **This package provides:**
 - ✅ **Parser** - EDIFACT string → EDIMessage
@@ -51,16 +43,29 @@ npm install @ediflow/core@0.2.0 @ediflow/edifact@0.2.0
 ## 🚀 Installation
 
 ```bash
-# Install core library
+# Always required
 npm install @ediflow/core
 
-# Install EDIFACT standard(s) - REQUIRED for validation
-npm install @ediflow/edifact-d20b   # Latest (recommended)
-# OR
-npm install @ediflow/edifact-d12a   # Full coverage (196 messages)
-# OR
-npm install @ediflow/edifact-d01b   # Legacy systems
-npm install @ediflow/edifact-d96a   # Classic
+# ── EDIFACT ──────────────────────────────────────────────────────────────────
+npm install @ediflow/edifact            # EDIFACT parsers & builders
+npm install @ediflow/edifact-d20b       # D.20B (2020) — 195 messages, latest
+npm install @ediflow/edifact-d01b       # D.01B (2001) — 211 messages
+npm install @ediflow/edifact-d12a       # D.12A (2012) — 196 messages
+npm install @ediflow/edifact-d96a       # D.96A (1996) — 126 messages
+
+# ── EANCOM (GS1 retail) ──────────────────────────────────────────────────────
+npm install @ediflow/eancom-2002        # EANCOM 2002 — 49 messages
+
+# ── X12 (USA / North America) ────────────────────────────────────────────────
+npm install @ediflow/x12                # X12 parsers & validators
+npm install @ediflow/x12-004010         # X12 004010 — 293 transaction sets
+npm install @ediflow/x12-006040         # X12 006040 — 319 transaction sets (latest 2026)
+
+# ── HIPAA (US healthcare) ─────────────────────────────────────────────────────
+npm install @ediflow/hipaa-x12-005010   # HIPAA 005010 — 14 transaction sets
+
+# ── Shared infrastructure (required for schema/mapping features) ──────────────
+npm install @ediflow/infrastructure-shared
 ```
 
 ---
@@ -70,65 +75,70 @@ npm install @ediflow/edifact-d96a   # Classic
 ### Parse EDIFACT Message
 
 ```typescript
-import { DIContainer } from '@ediflow/core';
+import {
+  EdifactMessageParser,
+  EdifactDelimiterDetector,
+  EdifactTokenizer,
+  EdifactSegmentParser,
+} from '@ediflow/edifact';
 
-const container = DIContainer.getInstance();
-const parseUseCase = container.resolve('ParseEDIUseCase');
+const parser = new EdifactMessageParser(
+  new EdifactDelimiterDetector(),
+  new EdifactTokenizer(),
+  new EdifactSegmentParser(),
+);
 
-const result = parseUseCase.execute({
-  message: edifactString,
-  standard: 'EDIFACT'
-});
+const message = parser.parse(edifactString);
+console.log(message.standard);           // 'EDIFACT'
+console.log(message.messageType.value);  // 'ORDERS'
+console.log(message.version.value);      // 'D.96A'
+console.log(message.segments.length);    // segment count
+```
 
-if (result.success) {
-  console.log('✅ Parsed!', result.message);
-}
+### Map to Business Object
+
+```typescript
+import { StructureMappingService } from '@ediflow/core';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
+
+const repository = new FileBasedMessageStructureRepository('./node_modules');
+const structure  = await repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+
+const mapper = new StructureMappingService();
+const order  = mapper.map(message, structure!, 'camelCase');
+// order.beginningOfMessage.documentMessageNumber === 'PO-001'
 ```
 
 ### Validate Message
 
 ```typescript
-const validateUseCase = container.resolve('ValidateMessageUseCase');
+import { EdifactValidationServiceBuilder } from '@ediflow/edifact';
 
-const validation = validateUseCase.execute({
-  message: result.message,
-  messageType: 'ORDERS',
-  version: 'D20B',
-  repositoryPath: './node_modules/@ediflow/edifact-d20b/data'
-});
+const validator = EdifactValidationServiceBuilder.forEDIFACT();
+const result    = validator.validate(message);
 
-if (validation.success) {
+if (result.isValid) {
   console.log('✅ Valid!');
+} else {
+  result.errors.forEach(e => console.error(`❌ ${e.code}: ${e.message}`));
 }
 ```
 
 ### Build EDIFACT Message
 
 ```typescript
-import { EDIMessage, EDISegment, EDIElement } from '@ediflow/core';
+import { EdifactMessageBuilder, EdifactEnvelopeBuilder } from '@ediflow/edifact';
+import { EDIMessage, Standard, Version, MessageType, EDISegment, EDIElement } from '@ediflow/core';
 
-const message = new EDIMessage({
-  standard: 'EDIFACT',
-  version: 'D20B',
-  messageType: 'ORDERS',
-  segments: [
-    new EDISegment({
-      tag: 'BGM',
-      elements: [
-        new EDIElement({ value: '220' }),
-        new EDIElement({ value: 'PO12345' })
-      ]
-    })
-  ]
-});
+const msg = new EDIMessage('1', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.20B'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+msg.addSegment(new EDISegment('BGM', [new EDIElement('220'), new EDIElement('PO-001'), new EDIElement('9')]));
 
-const buildUseCase = container.resolve('BuildEDIUseCase');
-const ediString = buildUseCase.execute({
-  message,
-  standard: 'EDIFACT'
-});
+const envelopeBuilder = new EdifactEnvelopeBuilder();
+const wrapped         = envelopeBuilder.wrapMessage(msg, { messageRef: '1', messageType: msg.messageType, version: msg.version });
 
-console.log(ediString); // BGM+220+PO12345'
+const builder    = new EdifactMessageBuilder();
+const edifactStr = builder.build(wrapped);
+console.log(edifactStr); // UNH+1+ORDERS:D:20B:UN'BGM+220+PO-001+9'UNT+2+1'
 ```
 
 ---
@@ -163,11 +173,26 @@ console.log(ediString); // BGM+220+PO12345'
 
 ## 📦 Related Packages
 
-**EDIFACT Standards (choose what you need):**
-- [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) - 7 message types
-- [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) - 4 message types
-- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 message types
-- [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) - 196 message types
+**EDIFACT:**
+- [`@ediflow/edifact`](https://npmjs.com/package/@ediflow/edifact) - EDIFACT parsers & builders (required for EDIFACT)
+- [`@ediflow/edifact-d96a`](https://npmjs.com/package/@ediflow/edifact-d96a) - D.96A (1996) — 126 message types
+- [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) — 211 message types
+- [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) — 196 message types
+- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) — 195 message types (latest)
+
+**EANCOM (GS1 retail):**
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 — 49 message types
+
+**X12 (USA / North America):**
+- [`@ediflow/x12`](https://npmjs.com/package/@ediflow/x12) - X12 parsers & validators (required for X12)
+- [`@ediflow/x12-004010`](https://npmjs.com/package/@ediflow/x12-004010) - X12 004010 — 293 transaction sets
+- [`@ediflow/x12-006040`](https://npmjs.com/package/@ediflow/x12-006040) - X12 006040 — 319 transaction sets (latest 2026)
+
+**HIPAA (US healthcare):**
+- [`@ediflow/hipaa-x12-005010`](https://npmjs.com/package/@ediflow/hipaa-x12-005010) - HIPAA 005010 — 14 transaction sets
+
+**Shared Infrastructure:**
+- [`@ediflow/infrastructure-shared`](https://npmjs.com/package/@ediflow/infrastructure-shared) - Repositories, loaders, cache
 
 ---
 
@@ -208,14 +233,14 @@ console.log(ediString); // BGM+220+PO12345'
 - **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)** - Get started in 5 minutes
 - **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)** - Clean Architecture explained
 - **[Developer Guide](https://github.com/ediflow-lib/core/blob/main/docs/DEVELOPER_GUIDE.md)** - Contributing
-- **[API Reference](https://github.com/ediflow-lib/core/blob/main/docs/API.md)** - Complete API docs
+- **[Examples](https://github.com/ediflow-lib/core/tree/main/examples)** - Runnable TypeScript examples
 
 ---
 
 ## 🧪 Testing
 
 Extensively tested with TDD:
-- **590 tests** passing
+- **857 tests** passing across all packages
 - **Unit tests** - Domain & Application layers
 - **Integration tests** - Cross-layer interactions
 - **E2E tests** - Complete roundtrip validation

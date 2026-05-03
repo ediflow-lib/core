@@ -5,18 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Package Size](https://img.shields.io/bundlephobia/min/@ediflow/hipaa-x12-005010)](https://www.npmjs.com/package/@ediflow/hipaa-x12-005010)
 
-**HIPAA 005010** • **14 Transaction Sets** • **Healthcare Standard** • **MIT Licensed** • **Internal**
-
----
-
-## ⚠️ Internal Package
-
-**This package is INTERNAL and not published to NPM.**
-
-This package is in development for future HIPAA compliance support.
-
-For production use, please use:
-- **`@ediflow/x12-004010`** - General X12 (293 transaction sets)
+**HIPAA 005010** • **14 Transaction Sets** • **Healthcare Standard** • **MIT Licensed** • **Free**
 
 ---
 

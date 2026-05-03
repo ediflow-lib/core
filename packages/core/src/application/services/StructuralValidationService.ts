@@ -5,6 +5,8 @@ import { ValidationResult } from '@application/validation/ValidationResult';
 import { ValidationError } from '@application/validation/ValidationError';
 import { StructuralValidationContext } from './StructuralValidationContext';
 
+type SegmentWindow = readonly EDISegment[];
+
 /**
  * StructuralValidationService
  *
@@ -25,12 +27,13 @@ export class StructuralValidationService {
   validate(ediMessage: EDIMessage, structure: MessageStructureDTO): ValidationResult {
     const errors: ValidationError[] = [];
     const context = new StructuralValidationContext();
+    const window: SegmentWindow = ediMessage.segments;
 
     for (const node of structure.structure) {
       if (this.isSegmentNode(node)) {
-        this.validateSegment(node, ediMessage, context, errors);
+        this.validateSegment(node, window, context, errors);
       } else if (this.isSegmentGroupNode(node)) {
-        this.validateSegmentGroup(node, ediMessage, context, errors);
+        this.validateSegmentGroup(node, window, context, errors);
       }
     }
 
@@ -42,11 +45,11 @@ export class StructuralValidationService {
 
   private validateSegment(
     node: SegmentNode,
-    ediMessage: EDIMessage,
+    window: SegmentWindow,
     context: StructuralValidationContext,
     errors: ValidationError[]
   ): void {
-    const segments = ediMessage.segments.filter(s => s.tag === node.tag);
+    const segments = window.filter(s => s.tag === node.tag);
 
     if (this.isMandatorySegmentMissing(node, segments)) {
       this.reportMissingSegment(node, context, errors);
@@ -65,7 +68,128 @@ export class StructuralValidationService {
     }
   }
 
-  private isMandatorySegmentMissing(node: SegmentNode, segments: any[]): boolean {
+  private validateSegmentGroup(
+    node: SegmentGroupNode,
+    window: SegmentWindow,
+    context: StructuralValidationContext,
+    errors: ValidationError[]
+  ): void {
+    const groupPath = this.buildGroupPath(context, node.id);
+    const instanceSlices = this.sliceGroupInstances(window, node);
+
+    if (this.isMandatoryGroupMissing(node, instanceSlices)) {
+      this.reportMissingGroup(groupPath, node, errors);
+      this.validateChildrenOfMissingGroup(node, window, context, errors);
+      return;
+    }
+
+    if (this.exceedsMaxOccurrences(instanceSlices, node.maxOccurrences)) {
+      this.reportMaxOccurrencesExceeded(groupPath, node, instanceSlices, errors);
+      return;
+    }
+
+    for (const slice of instanceSlices) {
+      this.validateGroupChildrenInWindow(node, slice, context, errors);
+    }
+  }
+
+  /**
+   * Slices the segment window into one sub-window per group instance.
+   * Each instance starts at a trigger segment and ends just before the next trigger
+   * at the same nesting level (or at the end of the window).
+   */
+  private sliceGroupInstances(window: SegmentWindow, node: SegmentGroupNode): SegmentWindow[] {
+    const slices: SegmentWindow[] = [];
+    const triggerIndices: number[] = [];
+
+    for (let i = 0; i < window.length; i++) {
+      if (window[i]!.tag === node.triggerSegment) {
+        triggerIndices.push(i);
+      }
+    }
+
+    for (let t = 0; t < triggerIndices.length; t++) {
+      const start = triggerIndices[t]!;
+      const end = t + 1 < triggerIndices.length ? triggerIndices[t + 1]! : window.length;
+      slices.push(window.slice(start, end));
+    }
+
+    return slices;
+  }
+
+  private buildGroupPath(context: StructuralValidationContext, groupId: string): string {
+    return context.path.length > 0 ? `${context.path.join('.')}.${groupId}` : groupId;
+  }
+
+  private isMandatoryGroupMissing(node: SegmentGroupNode, instanceSlices: SegmentWindow[]): boolean {
+    return node.mandatory && instanceSlices.length === 0;
+  }
+
+  private reportMissingGroup(groupPath: string, node: SegmentGroupNode, errors: ValidationError[]): void {
+    errors.push(new ValidationError(
+      groupPath,
+      `Mandatory segment group ${node.id} is missing`,
+      'MISSING_MANDATORY_GROUP'
+    ));
+  }
+
+  private validateChildrenOfMissingGroup(
+    node: SegmentGroupNode,
+    window: SegmentWindow,
+    context: StructuralValidationContext,
+    errors: ValidationError[]
+  ): void {
+    context.enterGroup(node.id);
+    this.validateChildren(node.children, window, context, errors);
+    context.exitGroup();
+  }
+
+  private exceedsMaxOccurrences(instanceSlices: SegmentWindow[], maxOccurrences: number): boolean {
+    return instanceSlices.length > 0 && instanceSlices.length > maxOccurrences;
+  }
+
+  private reportMaxOccurrencesExceeded(
+    groupPath: string,
+    node: SegmentGroupNode,
+    instanceSlices: SegmentWindow[],
+    errors: ValidationError[]
+  ): void {
+    errors.push(new ValidationError(
+      groupPath,
+      `Segment group ${node.id} occurs ${instanceSlices.length} times (max: ${node.maxOccurrences})`,
+      'MAX_GROUP_OCCURRENCES_EXCEEDED'
+    ));
+  }
+
+  private validateGroupChildrenInWindow(
+    node: SegmentGroupNode,
+    window: SegmentWindow,
+    context: StructuralValidationContext,
+    errors: ValidationError[]
+  ): void {
+    context.enterGroup(node.id);
+    this.validateChildren(node.children, window, context, errors);
+    context.exitGroup();
+  }
+
+  private validateChildren(
+    children: (SegmentNode | SegmentGroupNode)[],
+    window: SegmentWindow,
+    context: StructuralValidationContext,
+    errors: ValidationError[]
+  ): void {
+    for (const child of children) {
+      if (this.isSegmentNode(child)) {
+        this.validateSegment(child, window, context, errors);
+      } else if (this.isSegmentGroupNode(child)) {
+        this.validateSegmentGroup(child, window, context, errors);
+      }
+    }
+  }
+
+  // ...existing code...
+
+  private isMandatorySegmentMissing(node: SegmentNode, segments: EDISegment[]): boolean {
     return node.mandatory && segments.length === 0;
   }
 
@@ -86,14 +210,14 @@ export class StructuralValidationService {
     return context.path.length > 0 ? `${context.path.join('.')}.${tag}[0]` : `${tag}[0]`;
   }
 
-  private segmentExceedsMaxOccurrences(segments: any[], maxOccurrences: number): boolean {
+  private segmentExceedsMaxOccurrences(segments: EDISegment[], maxOccurrences: number): boolean {
     return segments.length > 0 && segments.length > maxOccurrences;
   }
 
   private reportSegmentMaxOccurrencesExceeded(
     node: SegmentNode,
     context: StructuralValidationContext,
-    segments: any[],
+    segments: EDISegment[],
     errors: ValidationError[]
   ): void {
     const path = this.buildSegmentPath(context, node.tag);
@@ -102,105 +226,6 @@ export class StructuralValidationService {
       `Segment ${node.tag} occurs ${segments.length} times (max: ${node.maxOccurrences})`,
       'MAX_OCCURRENCES_EXCEEDED'
     ));
-  }
-
-  private validateSegmentGroup(
-    node: SegmentGroupNode,
-    ediMessage: EDIMessage,
-    context: StructuralValidationContext,
-    errors: ValidationError[]
-  ): void {
-    const groupPath = this.buildGroupPath(context, node.id);
-    const triggerSegments = this.findTriggerSegments(ediMessage, node.triggerSegment);
-
-    if (this.isMandatoryGroupMissing(node, triggerSegments)) {
-      this.reportMissingGroup(groupPath, node, errors);
-      this.validateChildrenOfMissingGroup(node, ediMessage, context, errors);
-      return;
-    }
-
-    if (this.exceedsMaxOccurrences(triggerSegments, node.maxOccurrences)) {
-      this.reportMaxOccurrencesExceeded(groupPath, node, triggerSegments, errors);
-      return;
-    }
-
-    if (triggerSegments.length > 0) {
-      this.validateGroupChildren(node, ediMessage, context, errors);
-    }
-  }
-
-  private buildGroupPath(context: StructuralValidationContext, groupId: string): string {
-    return context.path.length > 0 ? `${context.path.join('.')}.${groupId}` : groupId;
-  }
-
-  private findTriggerSegments(ediMessage: EDIMessage, triggerSegment: string): any[] {
-    return ediMessage.segments.filter(s => s.tag === triggerSegment);
-  }
-
-  private isMandatoryGroupMissing(node: SegmentGroupNode, triggerSegments: any[]): boolean {
-    return node.mandatory && triggerSegments.length === 0;
-  }
-
-  private reportMissingGroup(groupPath: string, node: SegmentGroupNode, errors: ValidationError[]): void {
-    errors.push(new ValidationError(
-      groupPath,
-      `Mandatory segment group ${node.id} is missing`,
-      'MISSING_MANDATORY_GROUP'
-    ));
-  }
-
-  private validateChildrenOfMissingGroup(
-    node: SegmentGroupNode,
-    ediMessage: EDIMessage,
-    context: StructuralValidationContext,
-    errors: ValidationError[]
-  ): void {
-    context.enterGroup(node.id);
-    this.validateChildren(node.children, ediMessage, context, errors);
-    context.exitGroup();
-  }
-
-  private exceedsMaxOccurrences(triggerSegments: any[], maxOccurrences: number): boolean {
-    return triggerSegments.length > 0 && triggerSegments.length > maxOccurrences;
-  }
-
-  private reportMaxOccurrencesExceeded(
-    groupPath: string,
-    node: SegmentGroupNode,
-    triggerSegments: any[],
-    errors: ValidationError[]
-  ): void {
-    errors.push(new ValidationError(
-      groupPath,
-      `Segment group ${node.id} occurs ${triggerSegments.length} times (max: ${node.maxOccurrences})`,
-      'MAX_GROUP_OCCURRENCES_EXCEEDED'
-    ));
-  }
-
-  private validateGroupChildren(
-    node: SegmentGroupNode,
-    ediMessage: EDIMessage,
-    context: StructuralValidationContext,
-    errors: ValidationError[]
-  ): void {
-    context.enterGroup(node.id);
-    this.validateChildren(node.children, ediMessage, context, errors);
-    context.exitGroup();
-  }
-
-  private validateChildren(
-    children: (SegmentNode | SegmentGroupNode)[],
-    ediMessage: EDIMessage,
-    context: StructuralValidationContext,
-    errors: ValidationError[]
-  ): void {
-    for (const child of children) {
-      if (this.isSegmentNode(child)) {
-        this.validateSegment(child, ediMessage, context, errors);
-      } else if (this.isSegmentGroupNode(child)) {
-        this.validateSegmentGroup(child, ediMessage, context, errors);
-      }
-    }
   }
 
   private validateSegmentElements(

@@ -1,0 +1,145 @@
+{
+  "messageType": "ORDERS",
+  "standard": "EDIFACT",
+  "version": "D.96A",
+  "data": {
+    "messageHeader": {
+      "messageReferenceNumber": "1",
+      "messageIdentifier": {
+        "messageType": "ORDERS",
+        "messageVersionNumber": "D",
+        "messageReleaseNumber": "96A",
+        "controllingAgency": "UN"
+      }
+    },
+    "beginningOfMessage": {
+      "documentMessageName": {
+        "documentMessageNameCoded": "220"
+      },
+      "documentMessageNumber": "PO-2026-001",
+      "messageFunctionCoded": "9"
+    },
+    "dateTimePeriod": [
+      {
+        "dateTimePeriod": {
+          "dateTimePeriodQualifier": "137",
+          "dateTimePeriod": "20260204",
+          "dateTimePeriodFormatQualifier": "102"
+        }
+      },
+      {
+        "dateTimePeriod": {
+          "dateTimePeriodQualifier": "2",
+          "dateTimePeriod": "20260210",
+          "dateTimePeriodFormatQualifier": "102"
+        }
+      }
+    ],
+    "sg2": [
+      {
+        "nameAndAddress": {
+          "partyQualifier": "BY",
+          "partyIdentificationDetails": {
+            "partyIdIdentification": "BUYER123",
+            "codeListResponsibleAgencyCoded": "92"
+          },
+          "cityName": "New York",
+          "postcodeIdentification": "10001",
+          "countryCoded": "US"
+        }
+      },
+      {
+        "nameAndAddress": {
+          "partyQualifier": "SU",
+          "partyIdentificationDetails": {
+            "partyIdIdentification": "SUPP456",
+            "codeListResponsibleAgencyCoded": "92"
+          },
+          "cityName": "Chicago",
+          "postcodeIdentification": "60601",
+          "countryCoded": "US"
+        }
+      }
+    ],
+    "sg7": [
+      {
+        "currencies": {
+          "currencyDetails": {
+            "currencyDetailsQualifier": "2",
+            "currencyCoded": "EUR",
+            "currencyQualifier": "4"
+          }
+        }
+      }
+    ],
+    "sg25": [
+      {
+        "lineItem": {
+          "lineItemNumber": "1",
+          "itemNumberIdentification": {
+            "itemNumber": "WIDGET-A",
+            "itemNumberTypeCoded": "SA"
+          }
+        },
+        "quantity": {
+          "quantityDetails": {
+            "quantityQualifier": "21",
+            "quantity": "100",
+            "measureUnitQualifier": "PCE"
+          }
+        },
+        "sg28": [
+          {
+            "priceDetails": {
+              "priceInformation": {
+                "priceQualifier": "AAA",
+                "price": "10.50",
+                "priceTypeCoded": "CA"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "lineItem": {
+          "lineItemNumber": "2",
+          "itemNumberIdentification": {
+            "itemNumber": "GADGET-B",
+            "itemNumberTypeCoded": "SA"
+          }
+        },
+        "quantity": {
+          "quantityDetails": {
+            "quantityQualifier": "21",
+            "quantity": "50",
+            "measureUnitQualifier": "PCE"
+          }
+        },
+        "sg28": [
+          {
+            "priceDetails": {
+              "priceInformation": {
+                "priceQualifier": "AAA",
+                "price": "25.00",
+                "priceTypeCoded": "CA"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "sectionControl": {
+      "sectionIdentification": "S"
+    },
+    "controlTotal": {
+      "control": {
+        "controlQualifier": "2",
+        "controlValue": "2"
+      }
+    },
+    "messageTrailer": {
+      "numberOfSegmentsInTheMessage": "15",
+      "messageReferenceNumber": "1"
+    }
+  }
+}

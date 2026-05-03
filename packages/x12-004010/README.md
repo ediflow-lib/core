@@ -110,29 +110,37 @@ npm install @ediflow/x12-004010
 ## 📖 Usage Example
 
 ```typescript
-import { DIContainer } from '@ediflow/core';
+import {
+  X12MessageParser,
+  X12DelimiterDetector,
+  X12SegmentParser,
+  X12EnvelopeParser
+} from '@ediflow/x12';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
+import path from 'path';
 
-const container = DIContainer.getInstance();
-const parseUseCase = container.resolve('ParseEDIUseCase');
-const validateUseCase = container.resolve('ValidateMessageUseCase');
+// 1. Set up parser
+const parser = new X12MessageParser(
+  new X12DelimiterDetector(),
+  new X12SegmentParser(),
+  new X12EnvelopeParser()
+);
 
-// Parse X12 message
-const parsed = parseUseCase.execute({
-  message: x12String,
-  standard: 'X12'
-});
+// 2. Parse X12 850 Purchase Order
+const x12String = `ISA*00*          *00*          *ZZ*SENDER         *ZZ*RECEIVER       *260204*1030*^*00401*000000001*0*P*>~GS*PO*SENDER*RECEIVER*20260204*1030*1*X*004010~ST*850*0001~BEG*00*NE*PO123456**20260210~SE*3*0001~GE*1*1~IEA*1*000000001~`;
 
-// Validate against 004010 structure
-const validation = validateUseCase.execute({
-  message: parsed.message,
-  messageType: '850',
-  version: '004010',
-  repositoryPath: './node_modules/@ediflow/x12-004010/data'
-});
+const message = parser.parse(x12String);
 
-if (validation.success) {
-  console.log('✅ Valid 004010 850 Purchase Order!');
-}
+console.log(message.standard);          // 'X12'
+console.log(message.messageType.value); // '850'
+console.log(message.version.value);     // '004010'
+
+// 3. Load 004010 definitions
+const basePath = path.resolve(__dirname, 'node_modules');
+const repository = new FileBasedMessageStructureRepository(basePath);
+const structure = await repository.getMessageStructure('X12', '004010', '850');
+
+console.log(structure?.name);           // 'Purchase Order'
 ```
 
 ---
@@ -262,6 +270,7 @@ HL*1**S*1~        (Shipment level)
 - **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)**
 - **[Main README](https://github.com/ediflow-lib/core/blob/main/README.md)**
 - **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)**
+- **[X12 Examples](https://github.com/ediflow-lib/core/tree/main/examples/x12)**
 
 ---
 

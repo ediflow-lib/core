@@ -57,7 +57,8 @@ export class BuildEDIUseCase {
 
   private getMessageFromInput(input: BuildEDIInputDTO): EDIMessage | null {
     if (input.businessObject && input.messageStructure && this.structureMappingService) {
-      return this.structureMappingService.unmap(input.businessObject, input.messageStructure);
+      const keyStyle = input.businessObjectKeyStyle ?? 'code';
+      return this.structureMappingService.unmap(input.businessObject, input.messageStructure, keyStyle);
     }
 
     if (input.message) {

@@ -219,21 +219,26 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       expect(schema.properties).toBeDefined();
     });
 
-    it('should include documentNumber in schema properties', () => {
+    it('should include BGM segment in schema properties with x-position and x-mandatory', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
       const maxDocumentNumberLength = 35;
 
-      expect(schema.properties?.['documentNumber']).toBeDefined();
-      expect(schema.properties?.['documentNumber']?.type).toBe('string');
-      expect(schema.properties?.['documentNumber']?.maxLength).toBe(maxDocumentNumberLength);
+      const bgm = schema.properties?.['BGM'];
+      expect(bgm).toBeDefined();
+      expect(bgm?.type).toBe('object');
+      expect(bgm?.['x-position']).toBe(10);
+      expect(bgm?.['x-mandatory']).toBe(true);
+      expect(bgm?.['x-nodeType']).toBe('segment');
+      expect(bgm?.properties?.['1001']?.maxLength).toBe(maxDocumentNumberLength);
+      expect(bgm?.properties?.['1001']?.['x-position']).toBe(1);
     });
 
-    it('should mark mandatory fields as required', () => {
+    it('should mark mandatory segments as required', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
-      expect(schema.required).toContain('documentNumber');
-      expect(schema.required).toContain('documentDate');
-      expect(schema.required).toContain('parties');
+      expect(schema.required).toContain('BGM');
+      expect(schema.required).toContain('DTM');
+      expect(schema.required).toContain('SG1');
     });
 
     it('should cache generated schema for performance', () => {
@@ -245,35 +250,20 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
   });
 
   describe('BusinessObject Validation - Valid Cases', () => {
-    it('should validate valid DESADV business object', () => {
+    it('should validate valid DESADV EDI message object (segment-keyed schema)', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
+      // Objects are now keyed by segment tag / group id, not business field names
       const validDesadv = {
-        documentNumber: 'DESADV-2026-001',
-        documentDate: '20260127',
-        parties: [
-          {
-            partyRole: 'SU',
-            partyId: 'SUPPLIER123',
-            partyName: 'ACME Supplier Inc.'
-          },
-          {
-            partyRole: 'BY',
-            partyId: 'BUYER456',
-            partyName: 'Customer Corp'
-          }
+        BGM: { '1001': 'DESADV-2026-001' },
+        DTM: { '2005': '20260127' },
+        SG1: [
+          { NAD: { '3035': 'SU', '3039': 'SUPPLIER123', '3036': 'ACME Supplier Inc.' } },
+          { NAD: { '3035': 'BY', '3039': 'BUYER456',    '3036': 'Customer Corp'      } }
         ],
-        lineItems: [
-          {
-            lineNumber: 1,
-            itemNumber: 'ITEM-001',
-            quantity: 100
-          },
-          {
-            lineNumber: 2,
-            itemNumber: 'ITEM-002',
-            quantity: 50
-          }
+        SG10: [
+          { LIN: { '1082': 1, '7140': 'ITEM-001' }, QTY: { '6060': 100 } },
+          { LIN: { '1082': 2, '7140': 'ITEM-002' }, QTY: { '6060': 50  } }
         ]
       };
 
@@ -287,9 +277,9 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
       const minimalDesadv = {
-        documentNumber: 'DESADV-MIN-001',
-        documentDate: '20260127',
-        parties: []
+        BGM: { '1001': 'DESADV-MIN-001' },
+        DTM: { '2005': '20260127' },
+        SG1: []
       };
 
       const result = validator.validate(minimalDesadv, schema);
@@ -303,16 +293,16 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
       const invalidDesadv = {
-        // documentNumber missing!
-        documentDate: '20260127',
-        parties: []
+        // BGM missing!
+        DTM: { '2005': '20260127' },
+        SG1: []
       };
 
       const result = validator.validate(invalidDesadv, schema);
 
       expect(result.isValid).toBe(false);
       expect(result.errors.length).toBeGreaterThan(0);
-      expect(result.errors[0]?.field).toBe('documentNumber');
+      expect(result.errors[0]?.field).toBe('BGM');
       expect(result.errors[0]?.message).toContain('Required');
     });
 
@@ -320,15 +310,15 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
       const invalidDesadv = {
-        documentNumber: 12345, // should be string!
-        documentDate: '20260127',
-        parties: []
+        BGM: 12345, // should be object!
+        DTM: { '2005': '20260127' },
+        SG1: []
       };
 
       const result = validator.validate(invalidDesadv, schema);
 
       expect(result.isValid).toBe(false);
-      expect(result.errors.some(e => e.field === 'documentNumber')).toBe(true);
+      expect(result.errors.some(e => e.field === 'BGM')).toBe(true);
     });
 
     it('should detect maxLength violation', () => {
@@ -336,16 +326,16 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       const exceedsMaxLength = 50;
 
       const invalidDesadv = {
-        documentNumber: 'A'.repeat(exceedsMaxLength),
-        documentDate: '20260127',
-        parties: []
+        BGM: { '1001': 'A'.repeat(exceedsMaxLength) },
+        DTM: { '2005': '20260127' },
+        SG1: []
       };
 
       const result = validator.validate(invalidDesadv, schema);
 
       expect(result.isValid).toBe(false);
       expect(result.errors.some(e =>
-        e.field === 'documentNumber' && e.message.includes('maxLength')
+        e.field.includes('1001') && e.message.includes('maxLength')
       )).toBe(true);
     });
 
@@ -353,14 +343,13 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
       const schema = generator.fromMessageStructure(desadvStructure);
 
       const invalidDesadv = {
-        documentNumber: 'DESADV-001',
-        documentDate: '20260127',
-        parties: [],
-        lineItems: [
+        BGM: { '1001': 'DESADV-001' },
+        DTM: { '2005': '20260127' },
+        SG1: [],
+        SG10: [
           {
-            // lineNumber missing (required)!
-            itemNumber: 'ITEM-001',
-            quantity: 100
+            // LIN missing (required trigger segment for group)!
+            QTY: { '6060': 100 }
           }
         ]
       };
@@ -369,7 +358,7 @@ describe('Integration: BusinessObject Schema Validation (US-7.8)', () => {
 
       expect(result.isValid).toBe(false);
       expect(result.errors.some(e =>
-        e.field === 'lineItems[0].lineNumber' && e.message.includes('Required')
+        e.field.includes('LIN') && e.message.includes('Required')
       )).toBe(true);
     });
   });

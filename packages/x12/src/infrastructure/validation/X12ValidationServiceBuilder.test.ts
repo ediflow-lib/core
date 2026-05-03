@@ -126,6 +126,33 @@ describe('X12ValidationServiceBuilder', () => {
       expect(ruleIds).toContain('X12_ISA_MUST_BE_FIRST');
       expect(ruleIds).not.toContain('MESSAGE_MUST_HAVE_SEGMENTS');
     });
+
+    it('should support withCodeListRules', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'X12', version: '004010', messageType: '850', name: 'PO', structure: []
+      };
+      const codeLists = new Map<string, Set<string>>([['353', new Set(['00', '01'])]]);
+
+      const validator = X12ValidationServiceBuilder.custom()
+        .withCodeListRules(structure, codeLists)
+        .build();
+
+      expect(validator.getRuleIds()).toContain('CODE_LIST_VALIDATION');
+    });
+
+    it('should support withCustomRule', () => {
+      const customRule = {
+        ruleId: 'MY_CUSTOM_RULE',
+        description: 'Test custom rule',
+        apply: () => []
+      };
+
+      const validator = X12ValidationServiceBuilder.custom()
+        .withCustomRule(customRule)
+        .build();
+
+      expect(validator.getRuleIds()).toContain('MY_CUSTOM_RULE');
+    });
   });
 
   describe('ISAMustBeFirstRule', () => {
@@ -153,9 +180,36 @@ describe('X12ValidationServiceBuilder', () => {
 
       expect(rule.apply(message)).toHaveLength(0);
     });
+
+    it('should skip empty messages', () => {
+      const rule = new IEAMustBeLastRule();
+      const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
+
+      expect(rule.apply(message)).toHaveLength(0);
+    });
+
+    it('should reject message not ending with IEA', () => {
+      const rule = new IEAMustBeLastRule();
+      const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
+      message.addSegment(new EDISegment('ISA', []));
+      message.addSegment(new EDISegment('GE', []));
+
+      const errors = rule.apply(message);
+
+      expect(errors).toHaveLength(1);
+      expect(errors[0]?.code).toBe('INVALID_LAST_SEGMENT');
+    });
   });
 
   describe('X12SegmentTagFormatRule', () => {
+    it('should skip non-X12 messages', () => {
+      const rule = new X12SegmentTagFormatRule();
+      const message = new EDIMessage('id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      message.addSegment(new EDISegment('unb', []));
+
+      expect(rule.apply(message)).toHaveLength(0);
+    });
+
     it('should accept valid 2-char tag', () => {
       const rule = new X12SegmentTagFormatRule();
       const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
@@ -190,6 +244,14 @@ describe('X12ValidationServiceBuilder', () => {
   });
 
   describe('X12EnvelopeIntegrityRule', () => {
+    it('should skip non-X12 messages', () => {
+      const rule = new X12EnvelopeIntegrityRule();
+      const message = new EDIMessage('id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      message.addSegment(new EDISegment('UNB', []));
+
+      expect(rule.apply(message)).toHaveLength(0);
+    });
+
     it('should accept matching control numbers', () => {
       const rule = new X12EnvelopeIntegrityRule();
 

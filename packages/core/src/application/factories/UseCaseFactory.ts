@@ -2,6 +2,7 @@ import { ParseEDIUseCase } from '@application/use-cases/parse/ParseEDIUseCase';
 import { BuildEDIUseCase } from '@application/use-cases/build/BuildEDIUseCase';
 import { ValidateMessageUseCase } from '@application/use-cases/validate/ValidateMessageUseCase';
 import { IMessageParser, IMessageBuilder, IValidationService } from '@application/ports';
+import { StructureMappingService } from '@application/services/StructureMappingService';
 import { EDIMessage } from '@domain/entities/EDIMessage';
 
 /**
@@ -29,15 +30,16 @@ export class UseCaseFactory {
    * Creates a ParseEDIUseCase with the appropriate parser.
    *
    * @param standard - EDI standard (e.g., 'EDIFACT', 'X12')
+   * @param mapper
    * @returns Configured ParseEDIUseCase
    * @throws Error if standard is not supported
    */
-  createParseUseCase(standard: string): ParseEDIUseCase {
+  createParseUseCase(standard: string, mapper?: StructureMappingService): ParseEDIUseCase {
     const parser = this.parsers.get(standard.toUpperCase());
     if (!parser) {
       throw new Error(`No parser registered for standard: ${standard}`);
     }
-    return new ParseEDIUseCase(parser);
+    return new ParseEDIUseCase(parser, mapper);
   }
 
   /**
@@ -47,12 +49,12 @@ export class UseCaseFactory {
    * @returns Configured BuildEDIUseCase
    * @throws Error if standard is not supported
    */
-  createBuildUseCase(standard: string): BuildEDIUseCase {
+  createBuildUseCase(standard: string, mapper?: StructureMappingService): BuildEDIUseCase {
     const builder = this.builders.get(standard.toUpperCase());
     if (!builder) {
       throw new Error(`No builder registered for standard: ${standard}`);
     }
-    return new BuildEDIUseCase(builder);
+    return new BuildEDIUseCase(builder, undefined, mapper);
   }
 
   /**

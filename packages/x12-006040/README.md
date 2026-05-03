@@ -5,17 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Package Size](https://img.shields.io/bundlephobia/min/@ediflow/x12-006040)](https://www.npmjs.com/package/@ediflow/x12-006040)
 
-**X12 006040** • **319 Transaction Sets** • **Latest 2026 Release** • **MIT Licensed** • **Internal**
-
----
-
-## ⚠️ Internal Package
-
-**This package is INTERNAL and not published to NPM.**
-
-For production use, please use:
-- **`@ediflow/x12-004010`** - Most widely adopted (293 transaction sets)
-- **`@ediflow/hipaa-x12-005010`** - Healthcare (14 transaction sets)
+**X12 006040** • **319 Transaction Sets** • **Latest 2026 Release** • **MIT Licensed** • **Free**
 
 ---
 

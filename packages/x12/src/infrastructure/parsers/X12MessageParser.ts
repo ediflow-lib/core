@@ -134,9 +134,30 @@ export class X12MessageParser implements IMessageParser {
     }
 
     const version = new Version(Standard.X12, versionElement.value);
-    const messageType = new MessageType(Standard.X12, messageTypeElement.value);
+
+    // ST03 (Implementation Convention Reference) identifies HIPAA message subtype
+    // e.g. 005010X222A1 -> 837-Q1 (Professional Claims)
+    const st03Element = stSegment.elements[2];
+    const qualifiedMessageType = this.resolveMessageType(
+      messageTypeElement.value,
+      st03Element?.value
+    );
+    const messageType = new MessageType(Standard.X12, qualifiedMessageType);
 
     return { version, messageType };
+  }
+
+  /**
+   * Resolves the full message type including HIPAA qualifier from ST03.
+   * ST03 format: {version}{implementationGuideId}  e.g. 005010X222A1
+   * Returns qualified type like '837-Q1' when ST03 is present and recognized.
+   */
+  private resolveMessageType(baseType: string, st03?: string): string {
+    if (!st03) {
+      return baseType;
+    }
+    const qualifier = HipaaConventionRegistry.getQualifier(st03);
+    return qualifier ? `${baseType}-${qualifier}` : baseType;
   }
 
   getSupportedStandard(): Standard {
@@ -154,3 +175,31 @@ export class X12MessageParser implements IMessageParser {
     return this.lastParserConfig;
   }
 }
+
+/**
+ * Maps HIPAA ST03 Implementation Convention Reference values to message type qualifiers.
+ * ST03 is the 3rd element of the ST segment (e.g. ST*837*0001*005010X222A1~).
+ * Source: HIPAA 005010 Implementation Guides
+ */
+class HipaaConventionRegistry {
+  private static readonly ST03_TO_QUALIFIER = new Map<string, string>([
+    ['005010X222A1', 'Q1'],   // 837P Professional Claims
+    ['005010X223A2', 'Q2'],   // 837D Dental Claims
+    ['005010X223A3', 'Q3'],   // 837I Institutional Claims
+    ['005010X279A1', 'B1'],   // 270/271 Eligibility
+    ['005010X212',   'A1'],   // 276 Claim Status Request
+    ['005010X214',   'A1'],   // 277 Status Notification
+    ['005010X214B3', 'B3'],   // 277 Claim Acknowledgment
+    ['005010X217',   'A1'],   // 278 Auth Request
+    ['005010X217A3', 'A3'],   // 278 Auth Response
+    ['005010X218',   'A1'],   // 820 Premium Payment
+    ['005010X220A1', 'A1'],   // 834 Benefit Enrollment
+    ['005010X221A1', 'W1'],   // 835 Claim Payment
+    ['005010X231A1', 'A1'],   // 999 Implementation Acknowledgment
+  ]);
+
+  static getQualifier(st03: string): string | undefined {
+    return this.ST03_TO_QUALIFIER.get(st03);
+  }
+}
+

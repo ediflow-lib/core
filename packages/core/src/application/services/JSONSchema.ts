@@ -25,7 +25,13 @@ export interface JSONSchema {
   maxLength?: number;
   minimum?: number;
   maximum?: number;
-  enum?: any[];
+  enum?: unknown[];
+  // EDIFlow extension properties (JSON Schema x- prefix = vendor extension, valid in Draft 7)
+  'x-position'?: number;
+  'x-mandatory'?: boolean;
+  'x-maxOccurrences'?: number;
+  'x-triggerSegment'?: string;
+  'x-nodeType'?: 'segment' | 'segmentGroup' | 'element' | 'composite';
 }
 
 export type JSONSchemaType =
