@@ -1,13 +1,16 @@
 import { Command } from 'commander';
-import { UseCaseFactory, StructureMappingService } from '@ediflow/core';
+import { UseCaseFactory, StructureMappingService, DEFAULT_MAPPING_KEY_STRATEGY } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
 import { EDIMessage, EDISegment, EDIElement } from '@ediflow/core';
 import { Version } from '@ediflow/core';
 import { MessageType } from '@ediflow/core';
 import type { IMessageStructureRepository } from '@ediflow/core';
+import type { MappingKeyStrategy } from '@ediflow/core';
 import { readFileSync } from 'fs';
 import { writeFileSync } from 'fs';
 import { ErrorHandler } from '../utils';
+
+const VALID_KEY_STYLES = ['code', 'name', 'camelCase', 'snake_case', 'kebab-case'] as const;
 
 export class BuildCommand {
   constructor(
@@ -23,6 +26,11 @@ export class BuildCommand {
       .argument('<file>', 'JSON file path with EDI message or Business Object')
       .option('-s, --standard <standard>', 'EDI standard (EDIFACT, X12)', undefined)
       .option('-o, --output <file>', 'Output file path', undefined)
+      .option(
+        '--key-style <style>',
+        `Key naming strategy for Business Object input: ${VALID_KEY_STYLES.join(' | ')} (default: ${DEFAULT_MAPPING_KEY_STRATEGY})`,
+        DEFAULT_MAPPING_KEY_STRATEGY
+      )
       .action(async (file: string, options) => {
         try {
           const result = await this.execute(file, options);
@@ -49,7 +57,7 @@ export class BuildCommand {
       throw new Error('Cannot determine EDI standard. Provide --standard or include "standard" in JSON.');
     }
 
-    const buildUseCase = this.useCaseFactory.createBuildUseCase(standardStr);
+    const buildUseCase = this.useCaseFactory.createBuildUseCase(standardStr, this.structureMappingService ?? undefined);
 
     // Detect: Business Object (has "data" key) vs raw segments format
     const isBusinessObject = !!jsonData.data && !jsonData.segments;
@@ -73,9 +81,16 @@ export class BuildCommand {
         throw new Error(`No structure definition found for ${standard} ${version} ${messageType}. Cannot map Business Object to EDI.`);
       }
 
+      const keyStyle: MappingKeyStrategy = VALID_KEY_STYLES.includes(options.keyStyle)
+        ? options.keyStyle as MappingKeyStrategy
+        : VALID_KEY_STYLES.includes(jsonData.keyStyle)
+          ? jsonData.keyStyle as MappingKeyStrategy
+          : DEFAULT_MAPPING_KEY_STRATEGY;
+
       const result = buildUseCase.execute({
         businessObject: jsonData.data,
         messageStructure: structure,
+        businessObjectKeyStyle: keyStyle,
       });
 
       if (!result.success) {

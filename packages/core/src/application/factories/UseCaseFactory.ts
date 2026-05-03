@@ -49,12 +49,12 @@ export class UseCaseFactory {
    * @returns Configured BuildEDIUseCase
    * @throws Error if standard is not supported
    */
-  createBuildUseCase(standard: string): BuildEDIUseCase {
+  createBuildUseCase(standard: string, mapper?: StructureMappingService): BuildEDIUseCase {
     const builder = this.builders.get(standard.toUpperCase());
     if (!builder) {
       throw new Error(`No builder registered for standard: ${standard}`);
     }
-    return new BuildEDIUseCase(builder);
+    return new BuildEDIUseCase(builder, undefined, mapper);
   }
 
   /**
