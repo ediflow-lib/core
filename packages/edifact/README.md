@@ -118,9 +118,9 @@ Works with all EDIFACT data packages (all MIT licensed):
 | Package | Messages | Description |
 |---------|----------|-------------|
 | **[@ediflow/edifact-d96a](https://www.npmjs.com/package/@ediflow/edifact-d96a)** | 126 | D.96A (1996) |
-| **[@ediflow/edifact-d01b](https://www.npmjs.com/package/@ediflow/edifact-d01b)** | 211 | D.01B (2001) |
+| **[@ediflow/edifact-d01b](https://www.npmjs.com/package/@ediflow/edifact-d01b)** | 211 | D.01B (2001) — largest message count |
+| **[@ediflow/edifact-d12a](https://www.npmjs.com/package/@ediflow/edifact-d12a)** | 196 | D.12A (2012) |
 | **[@ediflow/edifact-d20b](https://www.npmjs.com/package/@ediflow/edifact-d20b)** | 195 | D.20B (2020) — latest |
-| **[@ediflow/edifact-d12a](https://www.npmjs.com/package/@ediflow/edifact-d12a)** | 196 | D.12A (2012) — most complete |
 | **[@ediflow/eancom-2002](https://www.npmjs.com/package/@ediflow/eancom-2002)** | 49 | EANCOM 2002 — GS1 retail |
 
 **Total: 777 unique message types** across all EDIFACT versions.

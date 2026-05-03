@@ -19,7 +19,7 @@ npm install @ediflow/core @ediflow/edifact @ediflow/infrastructure-shared
 npm install @ediflow/edifact-d96a  # D.96A - 89 messages
 npm install @ediflow/edifact-d01b  # D.01B - 155 messages  
 npm install @ediflow/edifact-d20b  # D.20B - 178 messages (latest)
-npm install @ediflow/edifact-d12a  # D.12A - 196 messages (most complete)
+npm install @ediflow/edifact-d12a  # D.12A — 196 messages
 ```
 
 ### X12 Stack (USA / Healthcare / Retail)
