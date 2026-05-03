@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'url';
 import { dirname, join, sep } from 'path';
+import { existsSync } from 'fs';
 import { UseCaseFactory, EDIMessageValidationService, SchemaGenerationService, SchemaCache, StructureMappingService } from '@ediflow/core';
 import {
   EdifactMessageParser,
@@ -21,13 +22,22 @@ import type { IMessageStructureRepository } from '@ediflow/core';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// packages/ directory — contains edifact-d20b/, x12-004010/, x12-006040/ etc.
-// In dist/: __dirname = packages/cli/dist/           → 2 levels up = packages/
-// In src/:  __dirname = packages/cli/src/infrastructure/container/ → 4 levels up = packages/
-const isDistBuild = __dirname.includes(`${sep}dist`);
-const DATA_PACKAGES_BASE_PATH = isDistBuild
-  ? join(__dirname, '../../')
-  : join(__dirname, '../../../../');
+// Resolve packages/ directory by walking up until edifact-d96a is found.
+// This works regardless of whether __dirname is dist/ or src/infrastructure/container/.
+function resolvePackagesRoot(startDir: string): string {
+  let current = startDir;
+  for (let i = 0; i <= 5; i++) {
+    if (existsSync(join(current, 'edifact-d96a'))) {
+      return join(current, sep);  // normalize with trailing separator
+    }
+    current = dirname(current);
+  }
+  // Fallback
+  const isInDist = startDir.endsWith(`${sep}dist`) || startDir.includes(`${sep}dist${sep}`);
+  return isInDist ? join(startDir, '../../') : join(startDir, '../../../../');
+}
+
+const DATA_PACKAGES_BASE_PATH = resolvePackagesRoot(__dirname);
 
 export class DIContainer {
   private static instance: DIContainer;

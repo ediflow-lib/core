@@ -170,11 +170,3 @@ export class ParseCommand {
   }
 }
 
-
-/**
- * Parse Command - CLI handler for parsing EDI files.
- *
- * Smart output strategy:
- * - If structure package found â†’ returns Business Object under "data" key
- * - If no structure package â†’ returns raw segments with "_warning" key
- */
