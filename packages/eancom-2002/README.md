@@ -187,6 +187,7 @@ if (validation.success) {
 - **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)**
 - **[Main README](https://github.com/ediflow-lib/core/blob/main/README.md)**
 - **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)**
+- **[EANCOM Examples](https://github.com/ediflow-lib/core/tree/main/examples/eancom)**
 
 ---
 

@@ -8,6 +8,7 @@ Runnable examples demonstrating **EDIFlow** features across all supported EDI st
 |--------|------|-------------|
 | **[x12/](x12/README.md)** | Programmatic (TypeScript) | X12 850, 837, multi-message, schema export |
 | **[edifact/](edifact/README.md)** | Programmatic (TypeScript) | EDIFACT INVOIC, ORDERS, DESADV |
+| **[eancom/](eancom/README.md)** | Programmatic (TypeScript) | EANCOM 2002 DESADV (GS1 GLN + EAN-13) |
 | **[hipaa/](hipaa/README.md)** | Programmatic (TypeScript) | HIPAA 837P, 835 with validation |
 | **[cli/](cli/README.md)** | CLI commands | `parse`, `validate`, `build`, `export-schema` for all formats |
 
@@ -30,6 +31,10 @@ npx tsx examples/x12/multi-message/index.ts
 npx tsx examples/edifact/build-invoic/index.ts
 npx tsx examples/edifact/parse-orders/index.ts
 npx tsx examples/edifact/validate-desadv/index.ts
+
+# ── EANCOM ───────────────────────────────────────────────────────
+npx tsx examples/eancom/parse-desadv/index.ts
+npx tsx examples/eancom/validate-desadv/index.ts
 
 # ── HIPAA ────────────────────────────────────────────────────────
 npx tsx examples/hipaa/parse-837/index.ts
@@ -55,6 +60,10 @@ examples/
     build-invoic/index.ts     ← Build INVOIC + round-trip
     parse-orders/index.ts     ← Parse ORDERS (Level 1 + Level 2)
     validate-desadv/index.ts  ← Validate DESADV
+  eancom/
+    README.md                 ← EANCOM example overview + outputs
+    parse-desadv/index.ts     ← Parse DESADV (GLN parties, EAN-13 products)
+    validate-desadv/index.ts  ← Validate DESADV
   hipaa/
     README.md                 ← HIPAA example overview + outputs
     parse-837/index.ts        ← Parse 837P Professional Claim
@@ -75,4 +84,7 @@ examples/
 - [Quick Start Guide](../docs/QUICK_START.md)
 - [Architecture Guide](../docs/ARCHITECTURE.md)
 - [Developer Guide](../docs/DEVELOPER_GUIDE.md)
+
+
+
 
