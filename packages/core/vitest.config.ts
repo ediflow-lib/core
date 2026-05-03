@@ -28,6 +28,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html', 'lcov'],
+      include: ['packages/core/src/**/*.ts'],
       exclude: [
         'node_modules/',
         'dist/',
@@ -35,6 +36,18 @@ export default defineConfig({
         '**/*.test.ts',
         '**/index.ts',
         '**/*.d.ts',
+        // Config files (no business logic)
+        'tsup.config.ts',
+        'vitest.config.ts',
+        // Pure TypeScript interfaces (nothing to test)
+        '**/ports/**/*.ts',
+        '**/validation/Validator.ts',
+        '**/services/JSONSchema.ts',
+        '**/services/mapping/MappingRule.ts',
+        // DTOs (data containers, no logic)
+        '**/*DTO.ts',
+        '**/*InputDTO.ts',
+        '**/*OutputDTO.ts',
       ],
       thresholds: {
         lines: 90,

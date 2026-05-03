@@ -30,6 +30,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html', 'lcov'],
+      include: ['packages/edifact/src/**/*.ts'],
       exclude: [
         'node_modules/',
         'dist/',

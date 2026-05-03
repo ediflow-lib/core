@@ -178,5 +178,72 @@ describe('ValidateMessageUseCase', () => {
         expect(result.validationResult.isValid).toBe(true);
       }
     });
+
+    it('skips structural validation when strictMode=true and syntax is invalid', () => {
+      const message = createMessage(Standard.EDIFACT, 'D.20B', 'ORDERS');
+      const syntaxError = new ValidationError('seg', 'syntax fail', 'SYNTAX');
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.failure(syntaxError));
+
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS', structure: [],
+      };
+
+      const result = useCase.execute({
+        message,
+        messageStructure: structure,
+        enableStructuralValidation: true,
+        strictMode: true,
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        // structural validation was skipped, only syntax error remains
+        expect(result.validationResult.errors).toHaveLength(1);
+        expect(result.validationResult.errors[0].code).toBe('SYNTAX');
+      }
+    });
+
+    it('skips code validation when strictMode=true and previous result is invalid', () => {
+      const message = new EDIMessage('id', Standard.X12, new Version(Standard.X12, '004010'), new MessageType(Standard.X12, '850'));
+      message.addSegment(new EDISegment('BEG', [new EDIElement('XX')]));
+
+      const syntaxError = new ValidationError('seg', 'syntax fail', 'SYNTAX');
+      mockValidationService.validate = vi.fn().mockReturnValue(ValidationResult.failure(syntaxError));
+
+      const structure: MessageStructureDTO = {
+        standard: 'X12', version: '004010', messageType: '850', name: 'PO',
+        structure: [{
+          nodeType: 'segment', tag: 'BEG', name: 'Beginning', mandatory: true, maxOccurrences: 1, position: 10,
+          elements: [{ nodeType: 'element', code: '353', name: 'PurposeCode', mandatory: true, position: 1, codeListCode: '353' }]
+        } as SegmentNode]
+      };
+
+      const result = useCase.execute({
+        message,
+        messageStructure: structure,
+        validateCodes: true,
+        strictMode: true,
+        codeLists: new Map([['353', new Set(['00', '01'])]]),
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        // code validation was skipped due to strictMode
+        expect(result.validationResult.errors).toHaveLength(1);
+        expect(result.validationResult.errors[0].code).toBe('SYNTAX');
+      }
+    });
+
+    it('handles non-Error thrown by validation service', () => {
+      const message = createMessage(Standard.EDIFACT, 'D.96A', 'ORDERS');
+      mockValidationService.validate = vi.fn().mockImplementation(() => { throw 'string error'; });
+
+      const result = useCase.execute({ message });
+
+      expect(result.success).toBe(false);
+      if (!result.success) {
+        expect(result.errors[0].message).toBe('Unknown validation error');
+      }
+    });
   });
 });
