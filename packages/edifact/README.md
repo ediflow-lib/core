@@ -18,13 +18,18 @@ Part of the [EdiFlow](https://github.com/ediflow-lib/core) ecosystem - Modern, t
 This package provides **EDIFACT-specific parsers, builders, and validators** for the UN/EDIFACT standard.
 
 ```typescript
-import { EdifactMessageParser } from '@ediflow/edifact';
-import { ParseEDIUseCase } from '@ediflow/core';
+import {
+  EdifactMessageParser,
+  EdifactDelimiterDetector,
+  EdifactTokenizer,
+  EdifactSegmentParser,
+} from '@ediflow/edifact';
 
-// Parse EDIFACT message
-const parser = new EdifactMessageParser(/* ... */);
-const parseUseCase = new ParseEDIUseCase(parser, definitionLoader);
-const message = parseUseCase.execute(edifactData);
+const parser  = new EdifactMessageParser(
+  new EdifactDelimiterDetector(), new EdifactTokenizer(), new EdifactSegmentParser(),
+);
+const message = parser.parse(edifactString);
+console.log(message.messageType.value); // 'ORDERS'
 ```
 
 ## 🎯 Why a Separate Package?
@@ -48,37 +53,38 @@ npm install @ediflow/core @ediflow/edifact
 ## 🚀 Quick Start
 
 ```typescript
-import { 
+import {
   EdifactMessageParser,
   EdifactDelimiterDetector,
   EdifactTokenizer,
-  EdifactSegmentParser 
+  EdifactSegmentParser,
+  EdifactValidationServiceBuilder,
 } from '@ediflow/edifact';
-import { ParseEDIUseCase, RepositoryManager } from '@ediflow/core';
 
-// EDIFACT ORDERS D96A message
-const edifactData = `UNB+UNOC:3+SENDER+RECEIVER+240204:1200+1++ORDERS'UNH+1+ORDERS:D:96A:UN'BGM+220+ORDER123+9'DTM+137:20240204:102'UNT+4+1'UNZ+1+1'`;
+const edifact = `UNB+UNOC:3+SENDER:14+RECEIVER:14+260503:0800+1'` +
+                `UNH+1+ORDERS:D:96A:UN'` +
+                `BGM+220+PO-001+9'` +
+                `DTM+137:20260503:102'` +
+                `UNT+4+1'` +
+                `UNZ+1+1'`;
 
-// Setup parsers
-const delimiterDetector = new EdifactDelimiterDetector();
-const tokenizer = new EdifactTokenizer();
-const segmentParser = new EdifactSegmentParser();
-const messageParser = new EdifactMessageParser(
-  delimiterDetector,
-  tokenizer,
-  segmentParser
+// 1. Parse
+const parser = new EdifactMessageParser(
+  new EdifactDelimiterDetector(),
+  new EdifactTokenizer(),
+  new EdifactSegmentParser(),
 );
+const message = parser.parse(edifact);
 
-// Setup use case
-const repositoryManager = new RepositoryManager();
-const definitionLoader = createDefinitionLoader(repositoryManager);
-const useCase = new ParseEDIUseCase(messageParser, definitionLoader);
+console.log(message.standard);           // 'EDIFACT'
+console.log(message.version.value);      // 'D.96A'
+console.log(message.messageType.value);  // 'ORDERS'
+console.log(message.segments.length);    // 4 (BGM, DTM + envelope stripped)
 
-// Parse
-const message = useCase.execute(edifactData);
-
-console.log(message.getSegments());
-// [UNB, UNH, BGM, DTM, UNT, UNZ]
+// 2. Validate
+const validator = EdifactValidationServiceBuilder.forEDIFACT();
+const result    = validator.validate(message);
+console.log(result.isValid);             // true
 ```
 
 ## 🏗️ Architecture
@@ -107,13 +113,42 @@ console.log(message.getSegments());
 
 ## 📚 Supported Message Types
 
-Works with all EDIFACT versions through data packages:
-- **[@ediflow/edifact-d96a](https://www.npmjs.com/package/@ediflow/edifact-d96a)** - Version D.96A
-- **[@ediflow/edifact-d01b](https://www.npmjs.com/package/@ediflow/edifact-d01b)** - Version D.01B
-- **[@ediflow/edifact-d12a](https://www.npmjs.com/package/@ediflow/edifact-d12a)** - Version D.12A
-- **[@ediflow/edifact-d20b](https://www.npmjs.com/package/@ediflow/edifact-d20b)** - Version D.20B
+Works with all EDIFACT data packages (all MIT licensed):
 
-Common message types: ORDERS, INVOIC, DESADV, ORDRSP, PRICAT, etc.
+| Package | Messages | Description |
+|---------|----------|-------------|
+| **[@ediflow/edifact-d96a](https://www.npmjs.com/package/@ediflow/edifact-d96a)** | 126 | D.96A (1996) |
+| **[@ediflow/edifact-d01b](https://www.npmjs.com/package/@ediflow/edifact-d01b)** | 211 | D.01B (2001) |
+| **[@ediflow/edifact-d20b](https://www.npmjs.com/package/@ediflow/edifact-d20b)** | 195 | D.20B (2020) — latest |
+| **[@ediflow/edifact-d12a](https://www.npmjs.com/package/@ediflow/edifact-d12a)** | 196 | D.12A (2012) — most complete |
+| **[@ediflow/eancom-2002](https://www.npmjs.com/package/@ediflow/eancom-2002)** | 49 | EANCOM 2002 — GS1 retail |
+
+**Total: 777 unique message types** across all EDIFACT versions.
+
+### Message Type Categories (D.12A — 196 types)
+
+**📦 Supply Chain & Logistics**
+DESADV, ORDERS, ORDRSP, ORDCHG, DELFOR, DELJIT, RECADV, COPARN, COREOR, COPRAR, COPINO, IFTMIN, IFTMAN, IFTMBC, IFTMCS, IFTSTA, IFTSAI, IFCSUM, COSTCO, COSTOR
+
+**💰 Finance & Payment**
+INVOIC, REMADV, PAYORD, PAYEXT, PAYMUL, PAYDUC, FINSTA, FINPAY, CREADV, CREEXT, CREMUL, DEBADV, DEBMUL, DEBREC, DIRDEB
+
+**📋 Catalog & Inventory**
+PRICAT, PRIHIS, INVRPT, SLSRPT, SLSFCT, QUOTES, REQOTE
+
+**🚢 Transport & Customs**
+CUSCAR, CUSDEC, CUSEXP, CUSRES, BAPLIE, COARRI, CODECO, VESDEP, MOVINS, BERMAN, HANMOV, IFTSTQ, IFTDGN, SAFHAZ, PAXLST
+
+**🏥 Healthcare**
+MEQPOS, MEDPID, MEDPRE, MEDREQ, MEDRPT, MEDRUC, INSDES, INSREQ, INSPRE, INSRPT
+
+**🏦 Banking & Trade Finance**
+BANSTA, DOCADV, DOCAPP, DOCARE, DOCAMA, DOCAMI, DOCAMR, DOCINF, BOPBNK, BOPCUS, BOPDIR, BOPINF
+
+**📊 Reporting & Statistics**
+STATAC, STLRPT, TPFREP, INVRPT, RDRMES, ITRRPT, GENRAL, GESMES
+
+**Plus:** PARTIN, AUTHOR, APERAK, CONTRL, KEYMAN, and 100+ more
 
 ## 🧪 Testing
 
@@ -139,7 +174,7 @@ npm run test:coverage
 - [Architecture Guide](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)
 - [Developer Guide](https://github.com/ediflow-lib/core/blob/main/docs/DEVELOPER_GUIDE.md)
 - [Quick Start](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)
-- [API Documentation](https://github.com/ediflow-lib/core#api-documentation)
+- [EDIFACT Examples on GitHub](https://github.com/ediflow-lib/core/tree/main/examples/edifact)
 
 ## 🤝 Contributing
 
