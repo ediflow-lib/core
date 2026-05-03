@@ -270,6 +270,7 @@ HL*1**S*1~        (Shipment level)
 - **[Quick Start Guide](https://github.com/ediflow-lib/core/blob/main/docs/QUICK_START.md)**
 - **[Main README](https://github.com/ediflow-lib/core/blob/main/README.md)**
 - **[Architecture](https://github.com/ediflow-lib/core/blob/main/docs/ARCHITECTURE.md)**
+- **[X12 Examples](https://github.com/ediflow-lib/core/tree/main/examples/x12)**
 
 ---
 

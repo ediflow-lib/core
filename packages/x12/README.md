@@ -128,9 +128,19 @@ if (result.isValid) {
 ## 🧪 Testing
 
 ```bash
-npm test                # 140 tests
-npm run test:coverage   # 87%+ coverage
+npm test                # 147 tests
+npm run test:coverage   # coverage report
 ```
+
+## 💡 Examples
+
+See [`examples/x12/`](https://github.com/ediflow-lib/core/tree/main/examples/x12) for runnable examples:
+
+- **build-850** — Build a Purchase Order from scratch + round-trip verify
+- **parse-850** — Parse a Purchase Order (buyer, seller, line items)
+- **validate-837** — Validate a Healthcare Claim (valid + invalid scenarios)
+- **schema-export** — Load X12 004010 definitions and export as JSON Schema
+- **multi-message** — Parse 850, 810, 856, 997 in one run
 
 ## 📄 License
 
