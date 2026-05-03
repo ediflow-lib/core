@@ -10,6 +10,8 @@ import type { EDIMessage } from '@domain';
 const mockParser = (): IMessageParser => ({
   parse: vi.fn(),
   getSupportedStandard: vi.fn().mockReturnValue(Standard.EDIFACT),
+  canParse: vi.fn().mockReturnValue(true),
+  getConfiguration: vi.fn().mockReturnValue({}),
 });
 
 const mockBuilder = (): IMessageBuilder => ({

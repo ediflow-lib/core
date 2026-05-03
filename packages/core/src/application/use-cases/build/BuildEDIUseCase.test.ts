@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { BuildEDIUseCase } from './BuildEDIUseCase';
 import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType } from '@domain';
 import type { IMessageBuilder, IEnvelopeBuilder } from '@application/ports/output';
@@ -23,7 +23,8 @@ const mockBuilder = (): IMessageBuilder => ({
 
 const mockEnvelopeBuilder = (): IEnvelopeBuilder => ({
   wrapMessage: vi.fn().mockImplementation((msg: EDIMessage) => msg),
-  wrapInterchange: vi.fn().mockImplementation((msgs: EDIMessage[]) => msgs[0]),
+  wrapInterchange: vi.fn().mockImplementation((msgs: EDIMessage[]) => msgs[0] as EDIMessage),
+  getSupportedStandard: vi.fn().mockReturnValue(Standard.EDIFACT),
 });
 
 describe('BuildEDIUseCase', () => {
@@ -32,7 +33,9 @@ describe('BuildEDIUseCase', () => {
       const useCase = new BuildEDIUseCase(mockBuilder());
       const result = useCase.execute({});
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('MISSING_INPUT');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('MISSING_INPUT');
+      }
     });
 
     it('builds successfully from direct EDIMessage input', () => {
@@ -40,7 +43,9 @@ describe('BuildEDIUseCase', () => {
       const useCase = new BuildEDIUseCase(builder);
       const result = useCase.execute({ message: createMessage() });
       expect(result.success).toBe(true);
-      expect(result.ediString).toBe("BGM+220'");
+      if (result.success) {
+        expect(result.ediString).toBe("BGM+220'");
+      }
       expect(builder.build).toHaveBeenCalledOnce();
     });
 
@@ -81,7 +86,9 @@ describe('BuildEDIUseCase', () => {
         messageStructure: {} as MessageStructureDTO,
       });
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('MISSING_INPUT');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('MISSING_INPUT');
+      }
     });
   });
 
@@ -90,14 +97,18 @@ describe('BuildEDIUseCase', () => {
       const useCase = new BuildEDIUseCase(mockBuilder());
       const result = useCase.execute({ message: createMessage(), includeEnvelope: true });
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('MISSING_ENVELOPE_BUILDER');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('MISSING_ENVELOPE_BUILDER');
+      }
     });
 
     it('returns MISSING_ENVELOPE_CONFIG when messageType or version are missing', () => {
       const useCase = new BuildEDIUseCase(mockBuilder(), mockEnvelopeBuilder());
       const result = useCase.execute({ message: createMessage(), includeEnvelope: true });
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('MISSING_ENVELOPE_CONFIG');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('MISSING_ENVELOPE_CONFIG');
+      }
     });
 
     it('returns MISSING_INTERCHANGE_CONFIG when includeInterchange=true but sender/receiver missing', () => {
@@ -110,7 +121,9 @@ describe('BuildEDIUseCase', () => {
         version: 'D.20B',
       });
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('MISSING_INTERCHANGE_CONFIG');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('MISSING_INTERCHANGE_CONFIG');
+      }
     });
 
     it('wraps with envelope only (no interchange) when includeEnvelope=true', () => {
@@ -164,7 +177,6 @@ describe('BuildEDIUseCase', () => {
 
   describe('execute — validation before build', () => {
     it('returns validation errors when validateBeforeBuild=true and message is invalid', () => {
-      // empty message has no segments → fails MessageMustHaveSegmentsRule
       const emptyMsg = new EDIMessage(
         '1',
         Standard.EDIFACT,
@@ -174,7 +186,9 @@ describe('BuildEDIUseCase', () => {
       const useCase = new BuildEDIUseCase(mockBuilder());
       const result = useCase.execute({ message: emptyMsg, validateBeforeBuild: true });
       expect(result.success).toBe(false);
-      expect(result.errors!.length).toBeGreaterThan(0);
+      if (!result.success) {
+        expect(result.errors.length).toBeGreaterThan(0);
+      }
     });
 
     it('builds successfully when validateBeforeBuild=true and message is valid', () => {
@@ -186,20 +200,30 @@ describe('BuildEDIUseCase', () => {
 
   describe('execute — error handling', () => {
     it('returns BUILD_ERROR when builder.build throws', () => {
-      const builder = { build: vi.fn().mockImplementation(() => { throw new Error('build failed'); }), getSupportedStandard: vi.fn() } as unknown as IMessageBuilder;
+      const builder: IMessageBuilder = {
+        build: vi.fn().mockImplementation(() => { throw new Error('build failed'); }),
+        getSupportedStandard: vi.fn().mockReturnValue(Standard.EDIFACT),
+      };
       const useCase = new BuildEDIUseCase(builder);
       const result = useCase.execute({ message: createMessage() });
       expect(result.success).toBe(false);
-      expect(result.errors![0].code).toBe('BUILD_ERROR');
-      expect(result.errors![0].message).toBe('build failed');
+      if (!result.success) {
+        expect(result.errors[0].code).toBe('BUILD_ERROR');
+        expect(result.errors[0].message).toBe('build failed');
+      }
     });
 
     it('returns BUILD_ERROR with generic message for non-Error throws', () => {
-      const builder = { build: vi.fn().mockImplementation(() => { throw 'crash'; }), getSupportedStandard: vi.fn() } as unknown as IMessageBuilder;
+      const builder: IMessageBuilder = {
+        build: vi.fn().mockImplementation(() => { throw 'crash'; }),
+        getSupportedStandard: vi.fn().mockReturnValue(Standard.EDIFACT),
+      };
       const useCase = new BuildEDIUseCase(builder);
       const result = useCase.execute({ message: createMessage() });
       expect(result.success).toBe(false);
-      expect(result.errors![0].message).toBe('Unknown error occurred');
+      if (!result.success) {
+        expect(result.errors[0].message).toBe('Unknown error occurred');
+      }
     });
   });
 });

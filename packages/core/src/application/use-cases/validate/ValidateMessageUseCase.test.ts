@@ -78,7 +78,7 @@ describe('ValidateMessageUseCase', () => {
       expect(result.success).toBe(false);
       if (!result.success) {
         expect(result.errors).toHaveLength(1);
-        expect(result.errors[0]?.code).toBe('VALIDATION_SERVICE_ERROR');
+        expect(result.errors[0]!.code).toBe('VALIDATION_SERVICE_ERROR');
       }
     });
 
@@ -199,7 +199,7 @@ describe('ValidateMessageUseCase', () => {
       if (result.success) {
         // structural validation was skipped, only syntax error remains
         expect(result.validationResult.errors).toHaveLength(1);
-        expect(result.validationResult.errors[0].code).toBe('SYNTAX');
+        expect(result.validationResult.errors[0]!.code).toBe('SYNTAX');
       }
     });
 
@@ -230,7 +230,7 @@ describe('ValidateMessageUseCase', () => {
       if (result.success) {
         // code validation was skipped due to strictMode
         expect(result.validationResult.errors).toHaveLength(1);
-        expect(result.validationResult.errors[0].code).toBe('SYNTAX');
+        expect(result.validationResult.errors[0]!.code).toBe('SYNTAX');
       }
     });
 
@@ -242,7 +242,7 @@ describe('ValidateMessageUseCase', () => {
 
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].message).toBe('Unknown validation error');
+        expect(result.errors[0]!.message).toBe('Unknown validation error');
       }
     });
   });
