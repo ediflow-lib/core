@@ -35,6 +35,7 @@ export const MessageFileSchema = z.object({
   messageType: z.string().min(1),
   name: z.string().min(1),
   description: z.string().optional(),
+  st03: z.string().optional(),
   structure: z.array(MessageStructureNodeSchema)
 });
 

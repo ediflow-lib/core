@@ -584,6 +584,259 @@ describe('StructuralValidationService', () => {
     });
   });
 
+  describe('validate() - Multiple Group Instances', () => {
+    it('should create separate group instances for each trigger segment', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT',
+        version: 'D.96A',
+        messageType: 'ORDERS',
+        name: 'Purchase order',
+        structure: [
+          {
+            nodeType: 'segmentGroup',
+            id: 'SG2',
+            name: 'Party details',
+            mandatory: true,
+            maxOccurrences: 99,
+            position: 20,
+            triggerSegment: 'NAD',
+            children: [
+              {
+                nodeType: 'segment',
+                tag: 'NAD',
+                name: 'Name and address',
+                mandatory: true,
+                maxOccurrences: 1,
+                position: 10,
+                elements: []
+              } as SegmentNode
+            ]
+          } as SegmentGroupNode
+        ]
+      };
+
+      const message = createMessage([
+        new EDISegment('NAD', []),
+        new EDISegment('NAD', [])
+      ]);
+
+      const result = validator.validate(message, structure);
+
+      expect(result.isValid).toBe(true);
+      expect(result.errors).toHaveLength(0);
+    });
+
+    it('should validate each group instance children independently with correct max occurrences', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT',
+        version: 'D.96A',
+        messageType: 'ORDERS',
+        name: 'Purchase order',
+        structure: [
+          {
+            nodeType: 'segmentGroup',
+            id: 'SG25',
+            name: 'Line item',
+            mandatory: false,
+            maxOccurrences: 99,
+            position: 100,
+            triggerSegment: 'LIN',
+            children: [
+              {
+                nodeType: 'segment',
+                tag: 'LIN',
+                name: 'Line item',
+                mandatory: true,
+                maxOccurrences: 1,
+                position: 10,
+                elements: []
+              } as SegmentNode,
+              {
+                nodeType: 'segment',
+                tag: 'PRI',
+                name: 'Price details',
+                mandatory: false,
+                maxOccurrences: 1,
+                position: 20,
+                elements: []
+              } as SegmentNode
+            ]
+          } as SegmentGroupNode
+        ]
+      };
+
+      const message = createMessage([
+        new EDISegment('LIN', []),
+        new EDISegment('PRI', []),
+        new EDISegment('LIN', []),
+        new EDISegment('PRI', [])
+      ]);
+
+      const result = validator.validate(message, structure);
+
+      expect(result.isValid).toBe(true);
+      expect(result.errors).toHaveLength(0);
+    });
+
+    it('should report error for segment that exceeds max occurrences within a single group instance', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT',
+        version: 'D.96A',
+        messageType: 'ORDERS',
+        name: 'Purchase order',
+        structure: [
+          {
+            nodeType: 'segmentGroup',
+            id: 'SG25',
+            name: 'Line item',
+            mandatory: false,
+            maxOccurrences: 99,
+            position: 100,
+            triggerSegment: 'LIN',
+            children: [
+              {
+                nodeType: 'segment',
+                tag: 'LIN',
+                name: 'Line item',
+                mandatory: true,
+                maxOccurrences: 1,
+                position: 10,
+                elements: []
+              } as SegmentNode,
+              {
+                nodeType: 'segment',
+                tag: 'PRI',
+                name: 'Price details',
+                mandatory: false,
+                maxOccurrences: 1,
+                position: 20,
+                elements: []
+              } as SegmentNode
+            ]
+          } as SegmentGroupNode
+        ]
+      };
+
+      // Two PRI within the same LIN group instance -> should fail
+      const message = createMessage([
+        new EDISegment('LIN', []),
+        new EDISegment('PRI', []),
+        new EDISegment('PRI', [])
+      ]);
+
+      const result = validator.validate(message, structure);
+
+      expect(result.isValid).toBe(false);
+      expect(result.errors.some(e => e.code === 'MAX_OCCURRENCES_EXCEEDED')).toBe(true);
+    });
+
+    it('should validate nested groups per group instance (recursive)', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT',
+        version: 'D.96A',
+        messageType: 'ORDERS',
+        name: 'Purchase order',
+        structure: [
+          {
+            nodeType: 'segmentGroup',
+            id: 'SG2',
+            name: 'Party details',
+            mandatory: false,
+            maxOccurrences: 99,
+            position: 20,
+            triggerSegment: 'NAD',
+            children: [
+              {
+                nodeType: 'segment',
+                tag: 'NAD',
+                name: 'Name and address',
+                mandatory: true,
+                maxOccurrences: 1,
+                position: 10,
+                elements: []
+              } as SegmentNode,
+              {
+                nodeType: 'segmentGroup',
+                id: 'SG3',
+                name: 'Contact',
+                mandatory: false,
+                maxOccurrences: 5,
+                position: 20,
+                triggerSegment: 'CTA',
+                children: [
+                  {
+                    nodeType: 'segment',
+                    tag: 'CTA',
+                    name: 'Contact',
+                    mandatory: true,
+                    maxOccurrences: 1,
+                    position: 10,
+                    elements: []
+                  } as SegmentNode
+                ]
+              } as SegmentGroupNode
+            ]
+          } as SegmentGroupNode
+        ]
+      };
+
+      // NAD+BY, CTA+IC, NAD+SU, CTA+IC -> 2 SG2 instances, each with 1 SG3 instance
+      const message = createMessage([
+        new EDISegment('NAD', [new EDIElement('BY')]),
+        new EDISegment('CTA', [new EDIElement('IC')]),
+        new EDISegment('NAD', [new EDIElement('SU')]),
+        new EDISegment('CTA', [new EDIElement('IC')])
+      ]);
+
+      const result = validator.validate(message, structure);
+
+      expect(result.isValid).toBe(true);
+      expect(result.errors).toHaveLength(0);
+    });
+
+    it('should fail max group occurrences only when group count exceeds limit', () => {
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT',
+        version: 'D.96A',
+        messageType: 'ORDERS',
+        name: 'Purchase order',
+        structure: [
+          {
+            nodeType: 'segmentGroup',
+            id: 'SG2',
+            name: 'Party details',
+            mandatory: false,
+            maxOccurrences: 1,
+            position: 20,
+            triggerSegment: 'NAD',
+            children: [
+              {
+                nodeType: 'segment',
+                tag: 'NAD',
+                name: 'Name and address',
+                mandatory: true,
+                maxOccurrences: 1,
+                position: 10,
+                elements: []
+              } as SegmentNode
+            ]
+          } as SegmentGroupNode
+        ]
+      };
+
+      // 2 NAD = 2 instances, but maxOccurrences for SG2 is 1 -> should fail
+      const message = createMessage([
+        new EDISegment('NAD', []),
+        new EDISegment('NAD', [])
+      ]);
+
+      const result = validator.validate(message, structure);
+
+      expect(result.isValid).toBe(false);
+      expect(result.errors.some(e => e.code === 'MAX_GROUP_OCCURRENCES_EXCEEDED')).toBe(true);
+    });
+  });
+
   describe('validate() - Complex Scenarios', () => {
     it('should validate multiple segments and groups', () => {
       const structure: MessageStructureDTO = {

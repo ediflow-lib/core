@@ -34,6 +34,16 @@ examples/cli/
       result/orders.edi             <- built EDI output
     export-schema/
       result/orders-d20b.json       <- JSON Schema
+  eancom/
+    parse/
+      input/desadv.edi              <- EANCOM DESADV (Despatch Advice)
+      result/desadv.json            <- parsed EDI-message output
+      result/desadv-business-object.json <- mapped business object
+    validate/
+      input/desadv.edi
+      result/desadv.json            <- validation result
+    export-schema/
+      result/desadv-d02b.json       <- JSON Schema
   x12/
     parse/
       input/purchase-order-850.edi
@@ -62,16 +72,18 @@ examples/cli/
 ```
 ediflow parse <file> [options]
 
-  -s, --standard <standard>            EDIFACT | X12 (auto-detected)
-  -f, --format <format>                json | yaml (default: json)
-  -o, --output <file>                  save to file
-  --property-parse-mode <mode>         code | name (default: code)
-  --codelist-value-parse-mode <mode>   code | name (default: code)
+  -s, --standard <standard>           EDIFACT | X12 (auto-detected)
+  -f, --format <format>               json | yaml (default: json)
+  -o, --output <file>                 save to file
+  --output-type <type>                edi-message | business-object (default: edi-message)
+  --property-parse-mode <mode>        code | name | camelCase | snake_case | kebab-case (default: code)
 ```
 
-> **Smart Output:** When a data package (`@ediflow/edifact-d96a`, `@ediflow/x12-004010` etc.) is installed,
-> `parse` returns a Business Object under the `data` key instead of raw segments.
-> Raw segments are emitted as fallback with a `_warning` field.
+> **Output Types:**
+> - `edi-message` (default): returns raw segments with metadata — always available.
+> - `business-object`: returns a mapped business object under the `data` key when a data package
+>   (`@ediflow/edifact-d96a`, `@ediflow/x12-004010` etc.) is installed. Falls back to raw segments
+>   with a `_warning` field if no mapping is available.
 
 ### EDIFACT ORDERS
 
@@ -80,32 +92,38 @@ node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.ed
 ```
 
 **Input:** [`edifact/parse/input/orders.edi`](edifact/parse/input/orders.edi)  
-**Current result:** [`edifact/parse/result/orders.json`](edifact/parse/result/orders.json)  
-**Expected result (after mapping rules):** [`edifact/parse/result/orders-expected.json`](edifact/parse/result/orders-expected.json)
+**Result:** [`edifact/parse/result/orders.json`](edifact/parse/result/orders.json)
 
 <details>
 <summary>Expected Output (click to expand)</summary>
 
 ```json
 {
-  "metadata": {
-    "standard": "EDIFACT",
-    "version": "D.96A",
-    "messageType": "ORDERS",
-    "segmentCount": 18,
-    "delimiters": { "segment": "'", "element": "+", "component": ":" }
-  },
-  "data": {
-    "documentNumber": "PO-2026-001",
-    "orderDate": "2026-02-04T00:00:00.000Z",
-    "buyer": { "id": "BUYER123", "name": "ACME Corporation" },
-    "supplier": { "id": "SUPP456", "name": "Best Supplier Inc" },
-    "currency": "EUR",
-    "lineItems": [
-      { "lineNumber": "1", "productId": "WIDGET-A", "quantity": 100, "price": 10.50 },
-      { "lineNumber": "2", "productId": "GADGET-B", "quantity": 50, "price": 25.00 }
-    ]
-  }
+  "standard": "EDIFACT",
+  "version": "D.96A",
+  "messageType": "ORDERS",
+  "segmentCount": 18,
+  "delimiters": { "segment": "'", "element": "+", "component": ":" },
+  "segments": [
+    { "tag": "UNB", "elements": [ { "value": "UNOC:3", "components": ["UNOC","3"] }, { "value": "ACMECORP:14", "components": ["ACMECORP","14"] }, { "value": "SUPPLIER:14", "components": ["SUPPLIER","14"] }, { "value": "260204:1200", "components": ["260204","1200"] }, { "value": "1" } ] },
+    { "tag": "UNH", "elements": [ { "value": "1" }, { "value": "ORDERS:D:96A:UN", "components": ["ORDERS","D","96A","UN"] } ] },
+    { "tag": "BGM", "elements": [ { "value": "220" }, { "value": "PO-2026-001" }, { "value": "9" } ] },
+    { "tag": "DTM", "elements": [ { "value": "137:20260204:102", "components": ["137","20260204","102"] } ] },
+    { "tag": "DTM", "elements": [ { "value": "2:20260210:102", "components": ["2","20260210","102"] } ] },
+    { "tag": "NAD", "elements": [ { "value": "BY" }, { "value": "BUYER123::92", "components": ["BUYER123","","92"] }, { "value": "" }, { "value": "ACME Corporation" }, { "value": "123 Main Street" }, { "value": "New York" }, { "value": "" }, { "value": "10001" }, { "value": "US" } ] },
+    { "tag": "NAD", "elements": [ { "value": "SU" }, { "value": "SUPP456::92", "components": ["SUPP456","","92"] }, { "value": "" }, { "value": "Best Supplier Inc" }, { "value": "456 Industrial Ave" }, { "value": "Chicago" }, { "value": "" }, { "value": "60601" }, { "value": "US" } ] },
+    { "tag": "CUX", "elements": [ { "value": "2:EUR:4", "components": ["2","EUR","4"] } ] },
+    { "tag": "LIN", "elements": [ { "value": "1" }, { "value": "" }, { "value": "WIDGET-A:SA", "components": ["WIDGET-A","SA"] } ] },
+    { "tag": "QTY", "elements": [ { "value": "21:100:PCE", "components": ["21","100","PCE"] } ] },
+    { "tag": "PRI", "elements": [ { "value": "AAA:10.50:CA", "components": ["AAA","10.50","CA"] } ] },
+    { "tag": "LIN", "elements": [ { "value": "2" }, { "value": "" }, { "value": "GADGET-B:SA", "components": ["GADGET-B","SA"] } ] },
+    { "tag": "QTY", "elements": [ { "value": "21:50:PCE", "components": ["21","50","PCE"] } ] },
+    { "tag": "PRI", "elements": [ { "value": "AAA:25.00:CA", "components": ["AAA","25.00","CA"] } ] },
+    { "tag": "UNS", "elements": [ { "value": "S" } ] },
+    { "tag": "CNT", "elements": [ { "value": "2:2", "components": ["2","2"] } ] },
+    { "tag": "UNT", "elements": [ { "value": "15" }, { "value": "1" } ] },
+    { "tag": "UNZ", "elements": [ { "value": "1" }, { "value": "1" } ] }
+  ]
 }
 ```
 </details>
@@ -128,6 +146,19 @@ node packages/cli/dist/index.js parse examples/cli/hipaa/parse/input/claim-837.e
 **Input:** [`hipaa/parse/input/claim-837.edi`](hipaa/parse/input/claim-837.edi)  
 **Result:** [`hipaa/parse/result/claim-837.json`](hipaa/parse/result/claim-837.json)
 
+> **Note:** The HIPAA 837 subtype is detected via ST03 (`005010X222A1` = 837-Q1 Professional).
+
+### EANCOM DESADV (Despatch Advice / Lieferavis)
+
+```bash
+node packages/cli/dist/index.js parse examples/cli/eancom/parse/input/desadv.edi
+```
+
+**Input:** [`eancom/parse/input/desadv.edi`](eancom/parse/input/desadv.edi)  
+**Result:** [`eancom/parse/result/desadv.json`](eancom/parse/result/desadv.json)
+
+> **Note:** EANCOM 2002 messages use EDIFACT D.02B syntax and are auto-mapped to the `@ediflow/eancom-2002` data package.
+
 ### Output Options
 
 ```bash
@@ -137,9 +168,12 @@ node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.ed
 # Explicit standard
 node packages/cli/dist/index.js parse examples/cli/x12/parse/input/purchase-order-850.edi -s X12
 
-# Property names instead of codes
+# Business object output (requires data package)
+node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.edi --output-type business-object
+
+# Property names instead of codes (for business-object output)
 node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.edi \
-  --property-parse-mode name --codelist-value-parse-mode name
+  --output-type business-object --property-parse-mode name
 ```
 
 ---
@@ -199,6 +233,22 @@ node packages/cli/dist/index.js validate examples/cli/hipaa/validate/input/claim
 
 **Input:** [`hipaa/validate/input/claim-837.edi`](hipaa/validate/input/claim-837.edi)  
 **Result:** [`hipaa/validate/result/claim-837.json`](hipaa/validate/result/claim-837.json)
+
+### EANCOM Validation
+
+```bash
+node packages/cli/dist/index.js validate examples/cli/eancom/validate/input/desadv.edi -f text
+```
+
+**Input:** [`eancom/validate/input/desadv.edi`](eancom/validate/input/desadv.edi)  
+**Result:** [`eancom/validate/result/desadv.json`](eancom/validate/result/desadv.json)
+
+**Expected text output:**
+```
+✓ Valid EDIFACT D.02B DESADV message
+  - 0 errors
+  - 0 warnings
+```
 
 ### Output Format Comparison
 
@@ -268,6 +318,18 @@ node packages/cli/dist/index.js export-schema -m DESADV -s EDIFACT -v D.20B -f y
 **Result:** [`edifact/export-schema/result/orders-d20b.json`](edifact/export-schema/result/orders-d20b.json)
 
 **Available versions:** `D.96A` (126 msgs), `D.01B`, `D.12A`, `D.20B` (195 msgs)
+
+### EANCOM Schemas
+
+```bash
+node packages/cli/dist/index.js export-schema -m DESADV -s EDIFACT -v D.02B
+node packages/cli/dist/index.js export-schema -m ORDERS -s EDIFACT -v D.02B
+node packages/cli/dist/index.js export-schema -m INVOIC -s EDIFACT -v D.02B -f yml
+```
+
+**Result:** [`eancom/export-schema/result/desadv-d02b.json`](eancom/export-schema/result/desadv-d02b.json)
+
+**Available version:** `D.02B` (EANCOM 2002, 49 msgs)
 
 ### X12 Schemas
 
@@ -367,7 +429,7 @@ node packages/cli/dist/index.js export-schema -m 850 -s X12 -v 004010 > schemas/
 | X12 | `@ediflow/x12-004010` | 004010 | 293 |
 | X12 | `@ediflow/x12-006040` | 006040 | 319 |
 | HIPAA | `@ediflow/hipaa-x12-005010` | 005010 | 14 |
-| EANCOM | `@ediflow/eancom-2002` | EANCOM2002 | 49 |
+| EANCOM | `@ediflow/eancom-2002` | D.02B (EANCOM2002) | 49 |
 
 ---
 

@@ -1,0 +1,477 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.02B",
+  "messageType": "DESADV",
+  "segmentCount": 27,
+  "delimiters": {
+    "segment": "'",
+    "element": "+",
+    "component": ":"
+  },
+  "segments": [
+    {
+      "tag": "UNB",
+      "elements": [
+        {
+          "value": "UNOC:3",
+          "components": [
+            "UNOC",
+            "3"
+          ]
+        },
+        {
+          "value": "SUPPLIER:14",
+          "components": [
+            "SUPPLIER",
+            "14"
+          ]
+        },
+        {
+          "value": "BUYER:14",
+          "components": [
+            "BUYER",
+            "14"
+          ]
+        },
+        {
+          "value": "260503:0800",
+          "components": [
+            "260503",
+            "0800"
+          ]
+        },
+        {
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "tag": "UNH",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "DESADV:D:02B:UN:EAN008",
+          "components": [
+            "DESADV",
+            "D",
+            "02B",
+            "UN",
+            "EAN008"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "BGM",
+      "elements": [
+        {
+          "value": "351"
+        },
+        {
+          "value": "ASN-2026-001"
+        },
+        {
+          "value": "9"
+        }
+      ]
+    },
+    {
+      "tag": "DTM",
+      "elements": [
+        {
+          "value": "137:20260503:102",
+          "components": [
+            "137",
+            "20260503",
+            "102"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "DTM",
+      "elements": [
+        {
+          "value": "11:20260504:102",
+          "components": [
+            "11",
+            "20260504",
+            "102"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "RFF",
+      "elements": [
+        {
+          "value": "ON:PO-2026-001",
+          "components": [
+            "ON",
+            "PO-2026-001"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "BY"
+        },
+        {
+          "value": "5412345000013::9",
+          "components": [
+            "5412345000013",
+            "",
+            "9"
+          ]
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "ACME Retail"
+        },
+        {
+          "value": "High Street 1"
+        },
+        {
+          "value": "London"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "EC1A"
+        },
+        {
+          "value": "GB"
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "SU"
+        },
+        {
+          "value": "4012345000014::9",
+          "components": [
+            "4012345000014",
+            "",
+            "9"
+          ]
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "Best Supplier GmbH"
+        },
+        {
+          "value": "Industriestr. 5"
+        },
+        {
+          "value": "Hamburg"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "20095"
+        },
+        {
+          "value": "DE"
+        }
+      ]
+    },
+    {
+      "tag": "TDT",
+      "elements": [
+        {
+          "value": "20"
+        },
+        {
+          "value": "TRUCK-001"
+        },
+        {
+          "value": "30"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "DHL:160:ZZZ",
+          "components": [
+            "DHL",
+            "160",
+            "ZZZ"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "CPS",
+      "elements": [
+        {
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "tag": "PAC",
+      "elements": [
+        {
+          "value": "2"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "CT"
+        }
+      ]
+    },
+    {
+      "tag": "MEA",
+      "elements": [
+        {
+          "value": "AAE"
+        },
+        {
+          "value": "AAB"
+        },
+        {
+          "value": "KGM:25",
+          "components": [
+            "KGM",
+            "25"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "QTY",
+      "elements": [
+        {
+          "value": "12:2:PCE",
+          "components": [
+            "12",
+            "2",
+            "PCE"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "LIN",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "5412345111116:EN",
+          "components": [
+            "5412345111116",
+            "EN"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "PIA",
+      "elements": [
+        {
+          "value": "5"
+        },
+        {
+          "value": "WIDGET-A:SA",
+          "components": [
+            "WIDGET-A",
+            "SA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "IMD",
+      "elements": [
+        {
+          "value": "F"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": ":::Premium Widget Type A",
+          "components": [
+            "",
+            "",
+            "",
+            "Premium Widget Type A"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "QTY",
+      "elements": [
+        {
+          "value": "12:100:PCE",
+          "components": [
+            "12",
+            "100",
+            "PCE"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "UC"
+        },
+        {
+          "value": "5412345000013::9",
+          "components": [
+            "5412345000013",
+            "",
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "LIN",
+      "elements": [
+        {
+          "value": "2"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": "5412345222223:EN",
+          "components": [
+            "5412345222223",
+            "EN"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "PIA",
+      "elements": [
+        {
+          "value": "5"
+        },
+        {
+          "value": "GADGET-B:SA",
+          "components": [
+            "GADGET-B",
+            "SA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "IMD",
+      "elements": [
+        {
+          "value": "F"
+        },
+        {
+          "value": ""
+        },
+        {
+          "value": ":::Smart Gadget Type B",
+          "components": [
+            "",
+            "",
+            "",
+            "Smart Gadget Type B"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "QTY",
+      "elements": [
+        {
+          "value": "12:50:PCE",
+          "components": [
+            "12",
+            "50",
+            "PCE"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "UC"
+        },
+        {
+          "value": "5412345000013::9",
+          "components": [
+            "5412345000013",
+            "",
+            "9"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "UNS",
+      "elements": [
+        {
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "tag": "CNT",
+      "elements": [
+        {
+          "value": "2:2",
+          "components": [
+            "2",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "UNT",
+      "elements": [
+        {
+          "value": "25"
+        },
+        {
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "tag": "UNZ",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

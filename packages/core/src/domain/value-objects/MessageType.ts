@@ -9,7 +9,7 @@ import { Standard } from './Standard';
 export class MessageType {
   private static readonly PATTERNS: Record<Standard, RegExp> = {
     [Standard.EDIFACT]: /^[A-Z]{6}$/,
-    [Standard.X12]: /^\d{3}$/,
+    [Standard.X12]: /^\d{3}(-[A-Z0-9]+)?$/,  // e.g. 850, 837-Q1, 277-B3
     [Standard.IDOC]: /^[A-Z]+\d{2}$/,
     [Standard.VDA]: /^\d{4}$/,
     [Standard.HL7v2]: /^[A-Z]{3}$/,
@@ -57,7 +57,7 @@ export class MessageType {
   private getExpectedFormat(): string {
     const formats: Record<Standard, string> = {
       [Standard.EDIFACT]: '6 uppercase letters (e.g., DESADV, INVOIC)',
-      [Standard.X12]: '3 digits (e.g., 850, 810, 856)',
+      [Standard.X12]: '3 digits with optional qualifier (e.g., 850, 837-Q1, 277-B3)',
       [Standard.IDOC]: 'Uppercase letters + 2 digits (e.g., ORDERS05, INVOIC02)',
       [Standard.VDA]: '4 digits (e.g., 4905, 4906, 4908)',
       [Standard.HL7v2]: '3 uppercase letters (e.g., ADT, ORM, ORU)',
