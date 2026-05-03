@@ -2,13 +2,22 @@
   "standard": "X12",
   "version": "005010",
   "messageType": "837-Q1",
-  "segmentCount": 19,
-  "delimiters": {
-    "segment": "~",
-    "element": "*",
-    "component": ">"
-  },
   "segments": [
+    { "tag": "ISA", "elements": [
+      { "value": "00" }, { "value": "          " },
+      { "value": "00" }, { "value": "          " },
+      { "value": "ZZ" }, { "value": "SENDER         " },
+      { "value": "ZZ" }, { "value": "RECEIVER       " },
+      { "value": "260301" }, { "value": "1200" },
+      { "value": "^" }, { "value": "00501" },
+      { "value": "000000001" }, { "value": "0" },
+      { "value": "P" }, { "value": ">" }
+    ]},
+    { "tag": "GS", "elements": [
+      { "value": "HC" }, { "value": "SENDER" }, { "value": "RECEIVER" },
+      { "value": "20260301" }, { "value": "1200" },
+      { "value": "1" }, { "value": "X" }, { "value": "005010" }
+    ]},
     {
       "tag": "ST",
       "elements": [
@@ -321,13 +330,11 @@
     {
       "tag": "SE",
       "elements": [
-        {
-          "value": "19"
-        },
-        {
-          "value": "0001"
-        }
+        { "value": "19" },
+        { "value": "0001" }
       ]
-    }
+    },
+    { "tag": "GE", "elements": [{ "value": "1" }, { "value": "1" }]},
+    { "tag": "IEA", "elements": [{ "value": "1" }, { "value": "000000001" }]}
   ]
 }

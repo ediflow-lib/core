@@ -2,13 +2,22 @@
   "standard": "X12",
   "version": "004010",
   "messageType": "850",
-  "segmentCount": 12,
-  "delimiters": {
-    "segment": "~",
-    "element": "*",
-    "component": ">"
-  },
   "segments": [
+    { "tag": "ISA", "elements": [
+      { "value": "00" }, { "value": "          " },
+      { "value": "00" }, { "value": "          " },
+      { "value": "ZZ" }, { "value": "ACMECORP       " },
+      { "value": "ZZ" }, { "value": "SUPPLIER       " },
+      { "value": "260204" }, { "value": "1030" },
+      { "value": "^" }, { "value": "00401" },
+      { "value": "000000001" }, { "value": "0" },
+      { "value": "P" }, { "value": ">" }
+    ]},
+    { "tag": "GS", "elements": [
+      { "value": "PO" }, { "value": "ACMECORP" }, { "value": "SUPPLIER" },
+      { "value": "20260204" }, { "value": "1030" },
+      { "value": "1" }, { "value": "X" }, { "value": "004010" }
+    ]},
     {
       "tag": "ST",
       "elements": [
@@ -178,12 +187,22 @@
     {
       "tag": "SE",
       "elements": [
-        {
-          "value": "12"
-        },
-        {
-          "value": "0001"
-        }
+        { "value": "12" },
+        { "value": "0001" }
+      ]
+    },
+    {
+      "tag": "GE",
+      "elements": [
+        { "value": "1" },
+        { "value": "1" }
+      ]
+    },
+    {
+      "tag": "IEA",
+      "elements": [
+        { "value": "1" },
+        { "value": "000000001" }
       ]
     }
   ]
