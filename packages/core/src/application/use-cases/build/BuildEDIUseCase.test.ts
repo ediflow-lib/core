@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { BuildEDIUseCase } from './BuildEDIUseCase';
+import { BuildEDIUseCase } from '@application';
 import { EDIMessage, EDISegment, EDIElement, Standard, Version, MessageType } from '@domain';
 import type { IMessageBuilder, IEnvelopeBuilder } from '@application/ports/output';
 import type { MessageStructureDTO } from '@application/dtos';
@@ -34,7 +34,7 @@ describe('BuildEDIUseCase', () => {
       const result = useCase.execute({});
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('MISSING_INPUT');
+        expect(result.errors[0]!.code).toBe('MISSING_INPUT');
       }
     });
 
@@ -87,7 +87,7 @@ describe('BuildEDIUseCase', () => {
       });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('MISSING_INPUT');
+        expect(result.errors[0]!.code).toBe('MISSING_INPUT');
       }
     });
   });
@@ -98,7 +98,7 @@ describe('BuildEDIUseCase', () => {
       const result = useCase.execute({ message: createMessage(), includeEnvelope: true });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('MISSING_ENVELOPE_BUILDER');
+        expect(result.errors[0]!.code).toBe('MISSING_ENVELOPE_BUILDER');
       }
     });
 
@@ -107,7 +107,7 @@ describe('BuildEDIUseCase', () => {
       const result = useCase.execute({ message: createMessage(), includeEnvelope: true });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('MISSING_ENVELOPE_CONFIG');
+        expect(result.errors[0]!.code).toBe('MISSING_ENVELOPE_CONFIG');
       }
     });
 
@@ -122,7 +122,7 @@ describe('BuildEDIUseCase', () => {
       });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('MISSING_INTERCHANGE_CONFIG');
+        expect(result.errors[0]!.code).toBe('MISSING_INTERCHANGE_CONFIG');
       }
     });
 
@@ -170,7 +170,7 @@ describe('BuildEDIUseCase', () => {
         sender: 'S',
         receiver: 'R',
       });
-      const [, opts] = (envelopeBuilder.wrapMessage as ReturnType<typeof vi.fn>).mock.calls[0];
+      const [, opts] = (envelopeBuilder.wrapMessage as ReturnType<typeof vi.fn>).mock.calls[0]!;
       expect(opts.messageRef).toBeTruthy();
     });
   });
@@ -208,8 +208,8 @@ describe('BuildEDIUseCase', () => {
       const result = useCase.execute({ message: createMessage() });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].code).toBe('BUILD_ERROR');
-        expect(result.errors[0].message).toBe('build failed');
+        expect(result.errors[0]!.code).toBe('BUILD_ERROR');
+        expect(result.errors[0]!.message).toBe('build failed');
       }
     });
 
@@ -222,7 +222,7 @@ describe('BuildEDIUseCase', () => {
       const result = useCase.execute({ message: createMessage() });
       expect(result.success).toBe(false);
       if (!result.success) {
-        expect(result.errors[0].message).toBe('Unknown error occurred');
+        expect(result.errors[0]!.message).toBe('Unknown error occurred');
       }
     });
   });
