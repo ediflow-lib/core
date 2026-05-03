@@ -99,9 +99,25 @@ export class EdifactSegmentParser {
       delimiters.element,
       delimiters.escape
     );
+        // Convert each element string to an EDIElement, splitting composites
+    return elementStrings.map(str => this.createElement(str, delimiters));
+  }
 
-    // Convert each element string to an EDIElement
-    return elementStrings.map(str => new EDIElement(str));
+  /**
+   * Creates an EDIElement from a raw element string, splitting composite values.
+   */
+  private createElement(elementString: string, delimiters: Delimiters): EDIElement {
+    const components = this.splitRespectingEscape(
+      elementString,
+      delimiters.component,
+      delimiters.escape
+    );
+
+    if (components.length <= 1) {
+      return new EDIElement(elementString);
+    }
+
+    return new EDIElement(elementString, components);
   }
 
   /**

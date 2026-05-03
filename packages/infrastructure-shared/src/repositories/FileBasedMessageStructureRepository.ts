@@ -29,6 +29,12 @@ interface DataPackageContext {
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
   private contextCache = new Map<string, DataPackageContext>();
 
+  // Non-standard package names that don't follow {standard}-{version} pattern
+  private static readonly PACKAGE_ALIASES = new Map<string, string>([
+    ['x12:005010', 'hipaa-x12-005010'],
+    ['edifact:eancom2002', 'eancom-2002'],
+  ]);
+
   constructor(private readonly basePath: string) {}
 
   async getMessageStructure(
@@ -152,6 +158,13 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
   }
 
   private getDataDirPath(standard: string, version: string): string {
+    const aliasKey = `${standard.toLowerCase()}:${version.toLowerCase().replace(/\./g, '')}`;
+    const alias = FileBasedMessageStructureRepository.PACKAGE_ALIASES.get(aliasKey);
+
+    if (alias) {
+      return path.join(this.basePath, alias, 'data');
+    }
+
     const normalizedVersion = version.toLowerCase().replace(/\./g, '');
     return path.join(
       this.basePath,

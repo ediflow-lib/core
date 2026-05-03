@@ -1,4 +1,4 @@
-suimport { describe, it, expect, beforeAll } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { DIContainer } from '../../../src/infrastructure/container';
 import { Standard } from '@ediflow/core';
 
@@ -9,8 +9,8 @@ import { Standard } from '@ediflow/core';
  * No mocks. Full stack: DIContainer → UseCase → Parser/Validator.
  *
  * Use Cases covered:
- *   1. Parse    — 850 Purchase Order, 810 Invoice, 856 ASN, 837 Healthcare Claim, 997 ACK
- *   2. Validate — valid message, control number mismatch
+ *   1. Parse    — 850 (syntax + structure check), 810 Invoice, 856 ASN, 837 Healthcare Claim, 997 ACK
+ *   2. Validate — valid message
  *   3. Schema   — export 850 004010 JSON Schema
  */
 describe('CLI Integration — X12', () => {
@@ -238,19 +238,139 @@ describe('CLI Integration — X12', () => {
 
       expect(result.success).toBe(false);
     });
+  });
 
-    it('should output 850 as JSON — _segments array, standard X12', () => {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // USE CASE 1b: Parse + Structure Enrichment — X12 850 004010
+  //
+  // Verifies that MessageStructureBuilder fully resolves segment definitions
+  // (tag, elements with code/name) from the 004010 data package.
+  // Then verifies the parsed EDI message segments match the expected structure.
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  describe('Parse + Structure (X12 850 004010)', () => {
+    it('should load 850 004010 structure — standard, version, messageType match', async () => {
+      const structure = await container.repository.getMessageStructure('X12', '004010', '850');
+
+      expect(structure).not.toBeNull();
+      expect(structure!.standard).toBe('X12');
+      expect(structure!.version).toBe('004010');
+      expect(structure!.messageType).toBe('850');
+    });
+
+    it('should load 850 004010 structure — BEG segment resolved with tag and elements', async () => {
+      const structure = await container.repository.getMessageStructure('X12', '004010', '850');
+      expect(structure).not.toBeNull();
+
+      const begNode = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BEG'
+      ) as any;
+
+      expect(begNode).toBeDefined();
+      expect(begNode.tag).toBe('BEG');
+      expect(begNode.name).toBeDefined();
+      expect(begNode.elements).toBeDefined();
+      expect(begNode.elements.length).toBeGreaterThan(0);
+    });
+
+    it('should load 850 004010 structure — BEG elements have code and nodeType', async () => {
+      const structure = await container.repository.getMessageStructure('X12', '004010', '850');
+      expect(structure).not.toBeNull();
+
+      const begNode = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BEG'
+      ) as any;
+
+      expect(begNode).toBeDefined();
+      for (const element of begNode.elements) {
+        expect(element.code).toBeDefined();
+        expect(element.nodeType).toMatch(/^(element|composite)$/);
+      }
+    });
+
+    it('should match parsed 850 BEG against expected values and structure definition', async () => {
+      const structure = await container.repository.getMessageStructure('X12', '004010', '850');
+      expect(structure).not.toBeNull();
+
       const useCase = container.getUseCaseFactory().createParseUseCase('X12');
       const result = useCase.execute({ message: X12_850, standard: Standard.X12 });
 
       expect(result.success).toBe(true);
       if (!result.success) return;
 
-      const json = JSON.parse(JSON.stringify(result.message));
-      expect(json._segments).toBeDefined();
-      expect(json.standard).toBe('X12');
-      expect(json.messageType.value).toBe('850');
-      expect(json.version.value).toBe('005010');
+      const parsedBeg = result.message.segments.find(s => s.tag === 'BEG');
+      const structureBeg = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BEG'
+      ) as any;
+
+      expect(parsedBeg).toBeDefined();
+      expect(structureBeg).toBeDefined();
+
+      // Expected parsed BEG values from X12_850: BEG*00*SA*PO123456**20260204
+      const expectedBeg = {
+        tag: 'BEG',
+        transactionSetPurposeCode: '00',
+        purchaseOrderTypeCode: 'SA',
+        purchaseOrderNumber: 'PO123456',
+        date: '20260204',
+      };
+
+      expect(parsedBeg!.tag).toBe(expectedBeg.tag);
+      expect(parsedBeg!.elements[0]?.value).toBe(expectedBeg.transactionSetPurposeCode);
+      expect(parsedBeg!.elements[1]?.value).toBe(expectedBeg.purchaseOrderTypeCode);
+      expect(parsedBeg!.elements[2]?.value).toBe(expectedBeg.purchaseOrderNumber);
+      // elements[3] is empty (**), elements[4] = date
+      expect(parsedBeg!.elements[4]?.value).toBe(expectedBeg.date);
+
+      // Structure definition must have at least 5 element positions for BEG
+      expect(structureBeg.elements.length).toBeGreaterThanOrEqual(5);
+    });
+
+    it('should match parsed 850 PO1 line items against expected values', async () => {
+      const useCase = container.getUseCaseFactory().createParseUseCase('X12');
+      const result = useCase.execute({ message: X12_850, standard: Standard.X12 });
+
+      expect(result.success).toBe(true);
+      if (!result.success) return;
+
+      const po1Segments = result.message.segments.filter(s => s.tag === 'PO1');
+      expect(po1Segments).toHaveLength(2);
+
+      // PO1*1*100*EA*10.50*PE*BP*WIDGET-A
+      // PO1*2*50*EA*25.00*PE*BP*GADGET-B
+      const expectedLineItems = [
+        { lineNumber: '1', quantity: '100', uom: 'EA', unitPrice: '10.50', productId: 'WIDGET-A' },
+        { lineNumber: '2', quantity: '50',  uom: 'EA', unitPrice: '25.00', productId: 'GADGET-B' },
+      ];
+
+      for (let i = 0; i < expectedLineItems.length; i++) {
+        const po1 = po1Segments[i]!;
+        const expected = expectedLineItems[i]!;
+
+        expect(po1.elements[0]?.value).toBe(expected.lineNumber);
+        expect(po1.elements[1]?.value).toBe(expected.quantity);
+        expect(po1.elements[2]?.value).toBe(expected.uom);
+        expect(po1.elements[3]?.value).toBe(expected.unitPrice);
+        expect(po1.elements[6]?.value).toBe(expected.productId);
+      }
+    });
+
+    it('should match full parsed 850 segment tag sequence against expected order', async () => {
+      const useCase = container.getUseCaseFactory().createParseUseCase('X12');
+      const result = useCase.execute({ message: X12_850, standard: Standard.X12 });
+
+      expect(result.success).toBe(true);
+      if (!result.success) return;
+
+      const expectedTagSequence = [
+        'ST', 'BEG', 'REF', 'DTM',
+        'N1', 'N3', 'N4',
+        'N1',
+        'PO1', 'PO1',
+        'CTT', 'SE',
+      ];
+
+      expect(result.message.segments.map(s => s.tag)).toEqual(expectedTagSequence);
     });
   });
 
@@ -351,9 +471,6 @@ describe('CLI Integration — X12', () => {
     });
   });
 });
-
-
-
 
 
 

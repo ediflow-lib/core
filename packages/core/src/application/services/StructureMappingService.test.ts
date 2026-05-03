@@ -721,7 +721,7 @@ describe('StructureMappingService', () => {
   });
 
   describe('Error Handling', () => {
-    it('should return empty object when no mapping rules defined', () => {
+    it('should use structure-based mapping when no mapping rules defined (produces segment-keyed result)', () => {
       const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const segment = new EDISegment('BGM', [
@@ -743,14 +743,15 @@ describe('StructureMappingService', () => {
             maxOccurrences: 1,
             position: 10,
             elements: [],
-            // NO mapping!
+            // NO mapping → structure-based path
           } as SegmentNode,
         ],
       };
 
       const result = mapper.map<any>(ediMessage, structure);
 
-      expect(result).toEqual({});
+      // Structure-based: produces segment-keyed object (empty elements = empty object)
+      expect(result['BGM']).toEqual({});
     });
 
     it('should handle missing element gracefully', () => {
@@ -1016,7 +1017,7 @@ describe('StructureMappingService', () => {
   });
 
   describe('Edge Cases', () => {
-    it('should handle message with only technical segments (no business data)', () => {
+    it('should handle message with only technical segments (structure-based produces segment keys)', () => {
       const ediMessage = EDIMessageFactory.create({ standard: Standard.EDIFACT, version: new Version(Standard.EDIFACT, 'D.20B'), messageType: new MessageType(Standard.EDIFACT, 'ORDERS') });
 
       const unh = new EDISegment('UNH', [new EDIElement('1', [])]);
@@ -1038,7 +1039,7 @@ describe('StructureMappingService', () => {
             maxOccurrences: 1,
             position: 10,
             elements: [],
-            // No mapping
+            // No mapping → structure-based
           } as SegmentNode,
           {
             nodeType: 'segment',
@@ -1055,7 +1056,9 @@ describe('StructureMappingService', () => {
 
       const result = mapper.map<any>(ediMessage, structure);
 
-      expect(result).toEqual({});
+      // Structure-based: segments present → keyed by tag with empty element objects
+      expect(result['UNH']).toEqual({});
+      expect(result['UNT']).toEqual({});
     });
 
     it('should handle time values as strings', () => {
@@ -1636,6 +1639,429 @@ describe('StructureMappingService', () => {
 
       expect(result.segments[0]!.tag).toBe('BGM');
       expect(result.segments[0]!.elements[1]!.value).toBe('DOC123');
+    });
+  });
+
+  // ============================================================================
+  // Structure-based mapping (no mapping rules required)
+  // ============================================================================
+
+  describe('Structure-based mapping (no mapping rules)', () => {
+    const makeMessage = () => EDIMessageFactory.create({
+      standard: Standard.EDIFACT,
+      version: new Version(Standard.EDIFACT, 'D.20B'),
+      messageType: new MessageType(Standard.EDIFACT, 'ORDERS')
+    });
+
+    describe('map() - flat segments', () => {
+      it('should map a single segment using element codes as keys', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('BGM', [
+          new EDIElement('220'),
+          new EDIElement('PO-2026-001'),
+          new EDIElement('9'),
+        ]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'BGM', name: 'Beginning of message',
+            mandatory: true, maxOccurrences: 1, position: 10,
+            elements: [
+              { nodeType: 'element', code: '1001', name: 'Doc type',   mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+              { nodeType: 'element', code: '1004', name: 'Doc number', mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+              { nodeType: 'element', code: '1225', name: 'Msg func',   mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+            ]
+          }]
+        };
+
+        const result = mapper.map<Record<string, unknown>>(msg, structure);
+
+        expect(result['BGM']).toEqual({ '1001': '220', '1004': 'PO-2026-001', '1225': '9' });
+      });
+
+      it('should map composite element to nested object keyed by component codes', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('DTM', [
+          new EDIElement('', ['137', '20260127', '102']),
+        ]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'DTM', name: 'Date/Time',
+            mandatory: true, maxOccurrences: 1, position: 20,
+            elements: [{
+              nodeType: 'composite', code: 'C507', name: 'DTM composite',
+              mandatory: true, position: 1,
+              components: [
+                { nodeType: 'element', code: '2005', name: 'Qualifier', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                { nodeType: 'element', code: '2380', name: 'Value',     mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+                { nodeType: 'element', code: '2379', name: 'Format',    mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+              ]
+            }]
+          }]
+        };
+
+        const result = mapper.map<Record<string, unknown>>(msg, structure);
+
+        expect(result['DTM']).toEqual({ C507: { '2005': '137', '2380': '20260127', '2379': '102' } });
+      });
+
+      it('should map repeating segment (maxOccurrences > 1) to array', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('DTM', [new EDIElement('', ['137', '20260127', '102'])]));
+        msg.addSegment(new EDISegment('DTM', [new EDIElement('', ['2', '20260201', '102'])]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'DTM', name: 'Date/Time',
+            mandatory: false, maxOccurrences: 35, position: 20,
+            elements: [{
+              nodeType: 'composite', code: 'C507', name: 'DTM composite',
+              mandatory: true, position: 1,
+              components: [
+                { nodeType: 'element', code: '2005', name: 'Qualifier', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                { nodeType: 'element', code: '2380', name: 'Value',     mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+                { nodeType: 'element', code: '2379', name: 'Format',    mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+              ]
+            }]
+          }]
+        };
+
+        const result = mapper.map<Record<string, unknown>>(msg, structure);
+
+        expect(Array.isArray(result['DTM'])).toBe(true);
+        expect((result['DTM'] as any[])[0]).toEqual({ C507: { '2005': '137', '2380': '20260127', '2379': '102' } });
+        expect((result['DTM'] as any[])[1]).toEqual({ C507: { '2005': '2',   '2380': '20260201', '2379': '102' } });
+      });
+    });
+
+    describe('map() - segment groups', () => {
+      it('should map segment group instances by trigger segment', () => {
+        const msg = makeMessage();
+        // Group instance 1: RFF+ON:REF-001, DTM
+        msg.addSegment(new EDISegment('RFF', [new EDIElement('', ['ON', 'REF-001'])]));
+        msg.addSegment(new EDISegment('DTM', [new EDIElement('', ['171', '20260127', '102'])]));
+        // Group instance 2: RFF+DQ:REF-002
+        msg.addSegment(new EDISegment('RFF', [new EDIElement('', ['DQ', 'REF-002'])]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segmentGroup', id: 'SG1', name: 'References',
+            mandatory: false, maxOccurrences: 99, position: 30,
+            triggerSegment: 'RFF',
+            children: [
+              {
+                nodeType: 'segment', tag: 'RFF', name: 'Reference',
+                mandatory: true, maxOccurrences: 1, position: 10,
+                elements: [{
+                  nodeType: 'composite', code: 'C506', name: 'Reference composite',
+                  mandatory: true, position: 1,
+                  components: [
+                    { nodeType: 'element', code: '1153', name: 'Qualifier', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                    { nodeType: 'element', code: '1154', name: 'Value',     mandatory: false, position: 2, dataType: 'an', maxLength: 70 },
+                  ]
+                }]
+              },
+              {
+                nodeType: 'segment', tag: 'DTM', name: 'Date',
+                mandatory: false, maxOccurrences: 5, position: 20,
+                elements: [{
+                  nodeType: 'composite', code: 'C507', name: 'DTM composite',
+                  mandatory: true, position: 1,
+                  components: [
+                    { nodeType: 'element', code: '2005', name: 'Qualifier', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                    { nodeType: 'element', code: '2380', name: 'Value',     mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+                    { nodeType: 'element', code: '2379', name: 'Format',    mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+                  ]
+                }]
+              }
+            ]
+          }]
+        };
+
+        const result = mapper.map<Record<string, unknown>>(msg, structure);
+
+        const sg1 = result['SG1'] as any[];
+        expect(Array.isArray(sg1)).toBe(true);
+        expect(sg1).toHaveLength(2);
+        expect(sg1[0]!['RFF']).toEqual({ C506: { '1153': 'ON', '1154': 'REF-001' } });
+        expect(sg1[0]!['DTM']).toEqual({ C507: { '2005': '171', '2380': '20260127', '2379': '102' } });
+        expect(sg1[1]!['RFF']).toEqual({ C506: { '1153': 'DQ', '1154': 'REF-002' } });
+        expect(sg1[1]!['DTM']).toBeUndefined();
+      });
+
+      it('should map mixed top-level segments and segment groups', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('BGM', [new EDIElement('220'), new EDIElement('PO-001')]));
+        msg.addSegment(new EDISegment('RFF', [new EDIElement('', ['ON', 'REF-001'])]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [
+            {
+              nodeType: 'segment', tag: 'BGM', name: 'BGM',
+              mandatory: true, maxOccurrences: 1, position: 10,
+              elements: [
+                { nodeType: 'element', code: '1001', name: 'Type',   mandatory: true, position: 1, dataType: 'an', maxLength: 3 },
+                { nodeType: 'element', code: '1004', name: 'Number', mandatory: true, position: 2, dataType: 'an', maxLength: 35 },
+              ]
+            },
+            {
+              nodeType: 'segmentGroup', id: 'SG1', name: 'Refs',
+              mandatory: false, maxOccurrences: 99, position: 30,
+              triggerSegment: 'RFF',
+              children: [{
+                nodeType: 'segment', tag: 'RFF', name: 'Reference',
+                mandatory: true, maxOccurrences: 1, position: 10,
+                elements: [{
+                  nodeType: 'composite', code: 'C506', name: 'Ref',
+                  mandatory: true, position: 1,
+                  components: [
+                    { nodeType: 'element', code: '1153', name: 'Q', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                    { nodeType: 'element', code: '1154', name: 'V', mandatory: false, position: 2, dataType: 'an', maxLength: 70 },
+                  ]
+                }]
+              }]
+            }
+          ]
+        };
+
+        const result = mapper.map<Record<string, unknown>>(msg, structure);
+
+        expect(result['BGM']).toEqual({ '1001': '220', '1004': 'PO-001' });
+        expect((result['SG1'] as any[])[0]!['RFF']).toEqual({ C506: { '1153': 'ON', '1154': 'REF-001' } });
+      });
+    });
+
+    describe('unmap() - roundtrip', () => {
+      it('should roundtrip flat segment: map then unmap produces same EDI values', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('BGM', [
+          new EDIElement('220'),
+          new EDIElement('PO-2026-001'),
+          new EDIElement('9'),
+        ]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'BGM', name: 'BGM',
+            mandatory: true, maxOccurrences: 1, position: 10,
+            elements: [
+              { nodeType: 'element', code: '1001', name: 'Type',   mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+              { nodeType: 'element', code: '1004', name: 'Number', mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+              { nodeType: 'element', code: '1225', name: 'Func',   mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+            ]
+          }]
+        };
+
+        const mapped = mapper.map<Record<string, unknown>>(msg, structure);
+        const rebuilt = mapper.unmap(mapped, structure);
+
+        const bgm = rebuilt.segments.find(s => s.tag === 'BGM')!;
+        expect(bgm).toBeDefined();
+        expect(bgm.elements[0]!.value).toBe('220');
+        expect(bgm.elements[1]!.value).toBe('PO-2026-001');
+        expect(bgm.elements[2]!.value).toBe('9');
+      });
+
+      it('should roundtrip composite element', () => {
+        const msg = makeMessage();
+        msg.addSegment(new EDISegment('DTM', [
+          new EDIElement('', ['137', '20260127', '102']),
+        ]));
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'DTM', name: 'DTM',
+            mandatory: true, maxOccurrences: 1, position: 20,
+            elements: [{
+              nodeType: 'composite', code: 'C507', name: 'DTM composite',
+              mandatory: true, position: 1,
+              components: [
+                { nodeType: 'element', code: '2005', name: 'Q', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                { nodeType: 'element', code: '2380', name: 'V', mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+                { nodeType: 'element', code: '2379', name: 'F', mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+              ]
+            }]
+          }]
+        };
+
+        const mapped = mapper.map<Record<string, unknown>>(msg, structure);
+        const rebuilt = mapper.unmap(mapped, structure);
+
+        const dtm = rebuilt.segments.find(s => s.tag === 'DTM')!;
+        expect(dtm).toBeDefined();
+        expect(dtm.elements[0]!.isComposite()).toBe(true);
+        expect(dtm.elements[0]!.components[0]).toBe('137');
+        expect(dtm.elements[0]!.components[1]).toBe('20260127');
+        expect(dtm.elements[0]!.components[2]).toBe('102');
+      });
+
+      it('should unmap structure-based object directly (without prior map())', () => {
+        const sourceObj = {
+          BGM: { '1001': '220', '1004': 'PO-DIRECT-001', '1225': '9' }
+        };
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segment', tag: 'BGM', name: 'BGM',
+            mandatory: true, maxOccurrences: 1, position: 10,
+            elements: [
+              { nodeType: 'element', code: '1001', name: 'Type',   mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+              { nodeType: 'element', code: '1004', name: 'Number', mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+              { nodeType: 'element', code: '1225', name: 'Func',   mandatory: false, position: 3, dataType: 'an', maxLength: 3 },
+            ]
+          }]
+        };
+
+        const rebuilt = mapper.unmap(sourceObj, structure);
+
+        const bgm = rebuilt.segments.find(s => s.tag === 'BGM')!;
+        expect(bgm.elements[0]!.value).toBe('220');
+        expect(bgm.elements[1]!.value).toBe('PO-DIRECT-001');
+        expect(bgm.elements[2]!.value).toBe('9');
+      });
+
+      it('should unmap segment group array to flat EDI segments in order', () => {
+        const sourceObj = {
+          SG1: [
+            { RFF: { C506: { '1153': 'ON', '1154': 'REF-001' } } },
+            { RFF: { C506: { '1153': 'DQ', '1154': 'REF-002' } } },
+          ]
+        };
+
+        const structure: MessageStructureDTO = {
+          standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+          structure: [{
+            nodeType: 'segmentGroup', id: 'SG1', name: 'Refs',
+            mandatory: false, maxOccurrences: 99, position: 30,
+            triggerSegment: 'RFF',
+            children: [{
+              nodeType: 'segment', tag: 'RFF', name: 'Reference',
+              mandatory: true, maxOccurrences: 1, position: 10,
+              elements: [{
+                nodeType: 'composite', code: 'C506', name: 'Ref',
+                mandatory: true, position: 1,
+                components: [
+                  { nodeType: 'element', code: '1153', name: 'Q', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+                  { nodeType: 'element', code: '1154', name: 'V', mandatory: false, position: 2, dataType: 'an', maxLength: 70 },
+                ]
+              }]
+            }]
+          }]
+        };
+
+        const rebuilt = mapper.unmap(sourceObj, structure);
+
+        const rff = rebuilt.segments.filter(s => s.tag === 'RFF');
+        expect(rff).toHaveLength(2);
+        expect(rff[0]!.elements[0]!.components[0]).toBe('ON');
+        expect(rff[0]!.elements[0]!.components[1]).toBe('REF-001');
+        expect(rff[1]!.elements[0]!.components[0]).toBe('DQ');
+        expect(rff[1]!.elements[0]!.components[1]).toBe('REF-002');
+      });
+    });
+  });
+
+  // ============================================================================
+  // MappingKeyStrategy — output key format
+  // ============================================================================
+
+  describe('MappingKeyStrategy', () => {
+    const bgmStructure: MessageStructureDTO = {
+      standard: 'EDIFACT', version: 'D.20B', messageType: 'ORDERS', name: 'ORDERS',
+      structure: [{
+        nodeType: 'segment', tag: 'BGM', name: 'Beginning of message',
+        mandatory: true, maxOccurrences: 1, position: 10,
+        elements: [
+          { nodeType: 'element', code: '1001', name: 'Document type code', mandatory: true,  position: 1, dataType: 'an', maxLength: 3 },
+          { nodeType: 'element', code: '1004', name: 'Document identifier', mandatory: false, position: 2, dataType: 'an', maxLength: 35 },
+        ]
+      }]
+    };
+
+    const makeMsg = () => {
+      const msg = EDIMessageFactory.create({
+        standard: Standard.EDIFACT,
+        version: new Version(Standard.EDIFACT, 'D.20B'),
+        messageType: new MessageType(Standard.EDIFACT, 'ORDERS')
+      });
+      msg.addSegment(new EDISegment('BGM', [new EDIElement('220'), new EDIElement('PO-001')]));
+      return msg;
+    };
+
+    it('strategy "code" (default) uses segment tag and element codes as keys', () => {
+      const result = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure);
+      expect(result['BGM']).toBeDefined();
+      expect((result['BGM'] as any)['1001']).toBe('220');
+      expect((result['BGM'] as any)['1004']).toBe('PO-001');
+    });
+
+    it('strategy "name" uses human-readable names as keys', () => {
+      const result = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'name');
+      expect(result['Beginning of message']).toBeDefined();
+      expect((result['Beginning of message'] as any)['Document type code']).toBe('220');
+      expect((result['Beginning of message'] as any)['Document identifier']).toBe('PO-001');
+    });
+
+    it('strategy "camelCase" uses camelCase names as keys', () => {
+      const result = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'camelCase');
+      expect(result['beginningOfMessage']).toBeDefined();
+      expect((result['beginningOfMessage'] as any)['documentTypeCode']).toBe('220');
+      expect((result['beginningOfMessage'] as any)['documentIdentifier']).toBe('PO-001');
+    });
+
+    it('strategy "snake_case" uses snake_case names as keys', () => {
+      const result = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'snake_case');
+      expect(result['beginning_of_message']).toBeDefined();
+      expect((result['beginning_of_message'] as any)['document_type_code']).toBe('220');
+      expect((result['beginning_of_message'] as any)['document_identifier']).toBe('PO-001');
+    });
+
+    it('strategy "kebab-case" uses kebab-case names as keys', () => {
+      const result = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'kebab-case');
+      expect(result['beginning-of-message']).toBeDefined();
+      expect((result['beginning-of-message'] as any)['document-type-code']).toBe('220');
+      expect((result['beginning-of-message'] as any)['document-identifier']).toBe('PO-001');
+    });
+
+    it('roundtrip camelCase: map then unmap restores original EDI values', () => {
+      const mapped = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'camelCase');
+      const rebuilt = mapper.unmap(mapped, bgmStructure, 'camelCase');
+
+      const bgm = rebuilt.segments.find(s => s.tag === 'BGM')!;
+      expect(bgm.elements[0]!.value).toBe('220');
+      expect(bgm.elements[1]!.value).toBe('PO-001');
+    });
+
+    it('roundtrip snake_case: map then unmap restores original EDI values', () => {
+      const mapped = mapper.map<Record<string, unknown>>(makeMsg(), bgmStructure, 'snake_case');
+      const rebuilt = mapper.unmap(mapped, bgmStructure, 'snake_case');
+
+      const bgm = rebuilt.segments.find(s => s.tag === 'BGM')!;
+      expect(bgm.elements[0]!.value).toBe('220');
+      expect(bgm.elements[1]!.value).toBe('PO-001');
+    });
+
+    it('unmap() with camelCase input directly (without prior map())', () => {
+      const camelObj = {
+        beginningOfMessage: {
+          documentTypeCode: '220',
+          documentIdentifier: 'DIRECT-001'
+        }
+      };
+      const rebuilt = mapper.unmap(camelObj, bgmStructure, 'camelCase');
+
+      const bgm = rebuilt.segments.find(s => s.tag === 'BGM')!;
+      expect(bgm.elements[0]!.value).toBe('220');
+      expect(bgm.elements[1]!.value).toBe('DIRECT-001');
     });
   });
 });

@@ -1,23 +1,26 @@
 import { Command } from 'commander';
-import { UseCaseFactory } from '@ediflow/core';
+import { UseCaseFactory, StructureMappingService } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
 import { EDIMessage, EDISegment, EDIElement } from '@ediflow/core';
 import { Version } from '@ediflow/core';
 import { MessageType } from '@ediflow/core';
+import type { IMessageStructureRepository } from '@ediflow/core';
 import { readFileSync } from 'fs';
 import { writeFileSync } from 'fs';
 import { ErrorHandler } from '../utils';
 
 export class BuildCommand {
   constructor(
-    private readonly useCaseFactory: UseCaseFactory
+    private readonly useCaseFactory: UseCaseFactory,
+    private readonly repository?: IMessageStructureRepository,
+    private readonly structureMappingService?: StructureMappingService
   ) {}
 
   register(program: Command): void {
     program
       .command('build')
       .description('Build an EDI message from JSON')
-      .argument('<file>', 'JSON file path with EDI message structure')
+      .argument('<file>', 'JSON file path with EDI message or Business Object')
       .option('-s, --standard <standard>', 'EDI standard (EDIFACT, X12)', undefined)
       .option('-o, --output <file>', 'Output file path', undefined)
       .action(async (file: string, options) => {
@@ -40,11 +43,50 @@ export class BuildCommand {
   async execute(file: string, options: any): Promise<string> {
     const jsonContent = this.readJSON(file);
     const jsonData = JSON.parse(jsonContent);
-    const message = this.parseJSON(jsonData);
 
     const standardStr = options.standard || jsonData.standard;
+    if (!standardStr) {
+      throw new Error('Cannot determine EDI standard. Provide --standard or include "standard" in JSON.');
+    }
+
     const buildUseCase = this.useCaseFactory.createBuildUseCase(standardStr);
 
+    // Detect: Business Object (has "data" key) vs raw segments format
+    const isBusinessObject = !!jsonData.data && !jsonData.segments;
+
+    if (isBusinessObject && this.repository && this.structureMappingService) {
+      const standard = jsonData.standard || standardStr;
+      const version = jsonData.version;
+      const messageType = jsonData.messageType;
+
+      if (!version || !messageType) {
+        throw new Error('Business Object JSON must include "standard", "version", and "messageType" fields.');
+      }
+
+      const structure = await this.repository.getMessageStructure(
+        standard.toUpperCase(),
+        version,
+        messageType
+      );
+
+      if (!structure) {
+        throw new Error(`No structure definition found for ${standard} ${version} ${messageType}. Cannot map Business Object to EDI.`);
+      }
+
+      const result = buildUseCase.execute({
+        businessObject: jsonData.data,
+        messageStructure: structure,
+      });
+
+      if (!result.success) {
+        throw new Error(ErrorHandler.formatMultiple(result.errors));
+      }
+
+      return result.ediString;
+    }
+
+    // Fallback: raw segments JSON format (legacy, from previous parse output)
+    const message = this.parseJSON(jsonData);
     const result = buildUseCase.execute({ message });
 
     if (!result.success) {
@@ -96,7 +138,6 @@ export class BuildCommand {
     if (versionStr) {
       return new Version(standard, versionStr);
     }
-
     const defaultVersion = standard === Standard.EDIFACT ? 'D.96A' : '004010';
     return new Version(standard, defaultVersion);
   }
@@ -105,7 +146,6 @@ export class BuildCommand {
     if (messageTypeStr) {
       return new MessageType(standard, messageTypeStr);
     }
-
     const defaultMessageType = standard === Standard.EDIFACT ? 'ORDERS' : '850';
     return new MessageType(standard, defaultMessageType);
   }
@@ -114,16 +154,13 @@ export class BuildCommand {
     if (!segmentData.tag) {
       throw new Error('Segment must have a tag');
     }
-
     const elements = segmentData.elements?.map((elem: any) => this.parseElement(elem)) || [];
-
     return new EDISegment(segmentData.tag, elements);
   }
 
   private parseElement(elementData: any): EDIElement {
     const value = elementData.value || '';
     const components = elementData.components || [];
-
     return new EDIElement(value, components);
   }
 

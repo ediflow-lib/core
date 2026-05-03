@@ -133,12 +133,14 @@ describe('ParseCommand - TDD', () => {
     });
 
     it('should format result with metadata and segments', () => {
-      const formatResult = (parseCommand as any).formatResult.bind(parseCommand);
+      const formatResult = (parseCommand as any).formatEDIMessageResult.bind(parseCommand);
 
       const mockResult = {
         success: true,
         metadata: {
           standard: Standard.EDIFACT,
+          version: { toString: () => 'D.96A' },
+          messageType: { toString: () => 'ORDERS' },
           segmentCount: 5,
           delimiters: {
             segment: "'",
@@ -163,10 +165,10 @@ describe('ParseCommand - TDD', () => {
 
       const result = formatResult(mockResult);
 
-      expect(result.metadata.standard).toBe('EDIFACT');
-      expect(result.metadata.version).toBe('D.96A');
-      expect(result.metadata.messageType).toBe('ORDERS');
-      expect(result.metadata.segmentCount).toBe(5);
+      expect(result.standard).toBe('EDIFACT');
+      expect(result.version).toBe('D.96A');
+      expect(result.messageType).toBe('ORDERS');
+      expect(result.segmentCount).toBe(5);
       expect(result.segments).toHaveLength(1);
       expect(result.segments[0].tag).toBe('UNH');
     });
@@ -199,7 +201,7 @@ describe('ParseCommand - TDD', () => {
     });
 
     it('should handle empty segments array in result', () => {
-      const formatResult = (parseCommand as any).formatResult.bind(parseCommand);
+      const formatResult = (parseCommand as any).formatEDIMessageResult.bind(parseCommand);
 
       const mockResult = {
         success: true,
@@ -221,7 +223,7 @@ describe('ParseCommand - TDD', () => {
     });
 
     it('should handle segments without components', () => {
-      const formatResult = (parseCommand as any).formatResult.bind(parseCommand);
+      const formatResult = (parseCommand as any).formatEDIMessageResult.bind(parseCommand);
 
       const mockResult = {
         success: true,
@@ -250,7 +252,7 @@ describe('ParseCommand - TDD', () => {
     });
 
     it('should handle segments with components', () => {
-      const formatResult = (parseCommand as any).formatResult.bind(parseCommand);
+      const formatResult = (parseCommand as any).formatEDIMessageResult.bind(parseCommand);
 
       const mockResult = {
         success: true,
@@ -325,7 +327,7 @@ describe('ParseCommand - TDD', () => {
     });
 
     it('should handle result without message gracefully', () => {
-      const formatResult = (parseCommand as any).formatResult.bind(parseCommand);
+      const formatResult = (parseCommand as any).formatEDIMessageResult.bind(parseCommand);
 
       const mockResult = {
         success: true,
@@ -339,8 +341,8 @@ describe('ParseCommand - TDD', () => {
 
       const result = formatResult(mockResult);
 
-      expect(result.metadata.version).toBeUndefined();
-      expect(result.metadata.messageType).toBeUndefined();
+      expect(result.version).toBeUndefined();
+      expect(result.messageType).toBeUndefined();
       expect(result.segments).toBeUndefined();
     });
   });

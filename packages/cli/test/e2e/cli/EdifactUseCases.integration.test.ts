@@ -9,9 +9,9 @@ import { Standard } from '@ediflow/core';
  * No mocks. Full stack: DIContainer → UseCase → Parser/Builder/Validator.
  *
  * Use Cases covered:
- *   1. Parse    — ORDERS, INVOIC, DESADV
- *   2. Validate — valid message, invalid message
- *   3. Build    — EDIMessage → EDIFACT string
+ *   1. Parse    — ORDERS (syntax + structure check), INVOIC, DESADV
+ *   2. Validate — valid message, structural validation
+ *   3. Build    — EDIMessage → EDIFACT string (round-trip)
  *   4. Schema   — export ORDERS D.96A JSON Schema
  */
 describe('CLI Integration — EDIFACT', () => {
@@ -190,21 +190,140 @@ describe('CLI Integration — EDIFACT', () => {
 
       expect(result.success).toBe(false);
     });
+  });
 
-    it('should output full parsed message as JSON — segments array present', () => {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // USE CASE 1b: Parse + Structure Enrichment — EDIFACT ORDERS D.96A
+  //
+  // Verifies that MessageStructureBuilder fully resolves segment definitions
+  // (tag, elements with code/name) from the D.96A data package.
+  // Then verifies the parsed EDI message segments match the expected structure.
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  describe('Parse + Structure (EDIFACT ORDERS D.96A)', () => {
+    it('should load ORDERS D.96A structure — standard, version, messageType match', async () => {
+      const structure = await container.repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+
+      expect(structure).not.toBeNull();
+      expect(structure!.standard).toBe('EDIFACT');
+      expect(structure!.version).toBe('D.96A');
+      expect(structure!.messageType).toBe('ORDERS');
+    });
+
+    it('should load ORDERS D.96A structure — BGM segment resolved with tag and elements', async () => {
+      const structure = await container.repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+      expect(structure).not.toBeNull();
+
+      const bgmNode = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BGM'
+      ) as any;
+
+      expect(bgmNode).toBeDefined();
+      expect(bgmNode.tag).toBe('BGM');
+      expect(bgmNode.name).toBeDefined();
+      expect(bgmNode.elements).toBeDefined();
+      expect(bgmNode.elements.length).toBeGreaterThan(0);
+    });
+
+    it('should load ORDERS D.96A structure — BGM elements have code and nodeType', async () => {
+      const structure = await container.repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+      expect(structure).not.toBeNull();
+
+      const bgmNode = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BGM'
+      ) as any;
+
+      expect(bgmNode).toBeDefined();
+      for (const element of bgmNode.elements) {
+        expect(element.code).toBeDefined();
+        expect(element.nodeType).toMatch(/^(element|composite)$/);
+      }
+    });
+
+    it('should match parsed ORDERS BGM against expected values and structure definition', async () => {
+      const structure = await container.repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+      expect(structure).not.toBeNull();
+
       const useCase = container.getUseCaseFactory().createParseUseCase('EDIFACT');
       const result = useCase.execute({ message: ORDERS_D96A, standard: Standard.EDIFACT });
 
       expect(result.success).toBe(true);
       if (!result.success) return;
 
-      // JSON serialization (as CLI would output)
-      const json = JSON.parse(JSON.stringify(result.message));
-      expect(json._segments).toBeDefined();
-      expect(json._segments.length).toBe(18);
-      expect(json.standard).toBe('EDIFACT');
-      expect(json.version.value).toBe('D.96A');
-      expect(json.messageType.value).toBe('ORDERS');
+      const parsedBgm = result.message.segments.find(s => s.tag === 'BGM');
+      const structureBgm = structure!.structure.find(
+        node => node.nodeType === 'segment' && (node as any).tag === 'BGM'
+      ) as any;
+
+      expect(parsedBgm).toBeDefined();
+      expect(structureBgm).toBeDefined();
+
+      // Expected parsed BGM values from ORDERS_D96A: BGM+220+PO-2026-001+9
+      const expectedBgm = {
+        tag: 'BGM',
+        documentTypeCode: '220',
+        documentNumber: 'PO-2026-001',
+        messageFunctionCode: '9',
+      };
+
+      expect(parsedBgm!.tag).toBe(expectedBgm.tag);
+      expect(parsedBgm!.elements[0]?.value).toBe(expectedBgm.documentTypeCode);
+      expect(parsedBgm!.elements[1]?.value).toBe(expectedBgm.documentNumber);
+      expect(parsedBgm!.elements[2]?.value).toBe(expectedBgm.messageFunctionCode);
+
+      // Structure definition must have at least 3 element positions for BGM
+      expect(structureBgm.elements.length).toBeGreaterThanOrEqual(3);
+    });
+
+    it('should match parsed ORDERS DTM segments against expected date values', async () => {
+      const useCase = container.getUseCaseFactory().createParseUseCase('EDIFACT');
+      const result = useCase.execute({ message: ORDERS_D96A, standard: Standard.EDIFACT });
+
+      expect(result.success).toBe(true);
+      if (!result.success) return;
+
+      const dtmSegments = result.message.segments.filter(s => s.tag === 'DTM');
+      expect(dtmSegments).toHaveLength(2);
+
+      // DTM+137:20260204:102 — document date
+      // DTM+2:20260210:102  — delivery date
+      const expectedDtm = [
+        { qualifier: '137', date: '20260204', format: '102' },
+        { qualifier: '2',   date: '20260210', format: '102' },
+      ];
+
+      for (let i = 0; i < expectedDtm.length; i++) {
+        const dtm = dtmSegments[i]!;
+        const expected = expectedDtm[i]!;
+        const composite = dtm.elements[0];
+
+        // C507 composite: qualifier:date:format  → components[] or full value split
+        const qualifier = composite?.components[0] ?? composite?.value.split(':')[0];
+        const date      = composite?.components[1] ?? composite?.value.split(':')[1];
+        const format    = composite?.components[2] ?? composite?.value.split(':')[2];
+
+        expect(qualifier).toBe(expected.qualifier);
+        expect(date).toBe(expected.date);
+        expect(format).toBe(expected.format);
+      }
+    });
+
+    it('should match full parsed ORDERS segment tag sequence against expected order', async () => {
+      const useCase = container.getUseCaseFactory().createParseUseCase('EDIFACT');
+      const result = useCase.execute({ message: ORDERS_D96A, standard: Standard.EDIFACT });
+
+      expect(result.success).toBe(true);
+      if (!result.success) return;
+
+      const expectedTagSequence = [
+        'UNB', 'UNH', 'BGM', 'DTM', 'DTM',
+        'NAD', 'NAD', 'CUX',
+        'LIN', 'QTY', 'PRI',
+        'LIN', 'QTY', 'PRI',
+        'UNS', 'CNT', 'UNT', 'UNZ',
+      ];
+
+      expect(result.message.segments.map(s => s.tag)).toEqual(expectedTagSequence);
     });
   });
 
@@ -214,7 +333,7 @@ describe('CLI Integration — EDIFACT', () => {
 
   describe('Validate', () => {
     it('should validate parsed ORDERS D.96A — isValid true, 0 errors', () => {
-      const parseUseCase   = container.getUseCaseFactory().createParseUseCase('EDIFACT');
+      const parseUseCase    = container.getUseCaseFactory().createParseUseCase('EDIFACT');
       const validateUseCase = container.getUseCaseFactory().createValidateUseCase();
 
       const parsed = parseUseCase.execute({ message: ORDERS_D96A, standard: Standard.EDIFACT });
@@ -227,6 +346,26 @@ describe('CLI Integration — EDIFACT', () => {
       if (!result.success) return;
       expect(result.validationResult.isValid).toBe(true);
       expect(result.validationResult.errors).toHaveLength(0);
+    });
+
+    it('should validate ORDERS with structural validation enabled — result returned', async () => {
+      const structure       = await container.repository.getMessageStructure('EDIFACT', 'D.96A', 'ORDERS');
+      const parseUseCase    = container.getUseCaseFactory().createParseUseCase('EDIFACT');
+      const validateUseCase = container.getUseCaseFactory().createValidateUseCase();
+
+      const parsed = parseUseCase.execute({ message: ORDERS_D96A, standard: Standard.EDIFACT });
+      expect(parsed.success).toBe(true);
+      if (!parsed.success) return;
+
+      const result = validateUseCase.execute({
+        message: parsed.message,
+        enableStructuralValidation: !!structure,
+        messageStructure: structure ?? undefined,
+      });
+
+      // Structural validation is enabled when structure is available
+      expect(result).toBeDefined();
+      expect(result.success).toBeDefined();
     });
 
     it('should validate parsed INVOIC D.20B — isValid true', () => {
@@ -289,7 +428,7 @@ describe('CLI Integration — EDIFACT', () => {
       expect(reparsed.metadata.segmentCount).toBe(parsed.metadata.segmentCount);
     });
 
-    it('should build EDIFACT INVOIC — output contains UNH, BGM, UNT', () => {
+    it('should build EDIFACT INVOIC — output contains UNH, BGM, UNT and invoice number', () => {
       const parseUseCase = container.getUseCaseFactory().createParseUseCase('EDIFACT');
       const buildUseCase = container.getUseCaseFactory().createBuildUseCase('EDIFACT');
 
@@ -307,7 +446,7 @@ describe('CLI Integration — EDIFACT', () => {
       expect(built.ediString).toContain('INV-2026-001');
     });
 
-    it('should build EDIFACT DESADV — PO number preserverd in round-trip', () => {
+    it('should build EDIFACT DESADV — shipment number preserved in round-trip', () => {
       const parseUseCase = container.getUseCaseFactory().createParseUseCase('EDIFACT');
       const buildUseCase = container.getUseCaseFactory().createBuildUseCase('EDIFACT');
 
@@ -383,7 +522,5 @@ describe('CLI Integration — EDIFACT', () => {
     });
   });
 });
-
-
 
 

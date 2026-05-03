@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import { UseCaseFactory, EDIMessageValidationService, SchemaGenerationService, SchemaCache } from '@ediflow/core';
+import { dirname, join, sep } from 'path';
+import { UseCaseFactory, EDIMessageValidationService, SchemaGenerationService, SchemaCache, StructureMappingService } from '@ediflow/core';
 import {
   EdifactMessageParser,
   EdifactDelimiterDetector,
@@ -16,18 +16,25 @@ import {
 } from '@ediflow/x12';
 import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
 import { ExportSchemaCommand } from '@presentation/cli/commands/ExportSchemaCommand';
+import type { IMessageStructureRepository } from '@ediflow/core';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // packages/ directory — contains edifact-d20b/, x12-004010/, x12-006040/ etc.
-// __dirname = packages/cli/dist → go up 3 levels to workspace root, then into packages/
-const DATA_PACKAGES_BASE_PATH = join(__dirname, '../../../packages');
+// In dist/: __dirname = packages/cli/dist/           → 2 levels up = packages/
+// In src/:  __dirname = packages/cli/src/infrastructure/container/ → 4 levels up = packages/
+const isDistBuild = __dirname.includes(`${sep}dist`);
+const DATA_PACKAGES_BASE_PATH = isDistBuild
+  ? join(__dirname, '../../')
+  : join(__dirname, '../../../../');
 
 export class DIContainer {
   private static instance: DIContainer;
   public readonly useCaseFactory: UseCaseFactory;
   public readonly exportSchemaCommand: ExportSchemaCommand;
+  public readonly repository: IMessageStructureRepository;
+  public readonly structureMappingService: StructureMappingService;
 
   private constructor() {
     const edifactDelimiterDetector = new EdifactDelimiterDetector();
@@ -56,9 +63,11 @@ export class DIContainer {
     const validationService = new EDIMessageValidationService();
     this.useCaseFactory = new UseCaseFactory(parsers, builders, validationService);
 
-    const repository = new FileBasedMessageStructureRepository(DATA_PACKAGES_BASE_PATH);
+    this.repository = new FileBasedMessageStructureRepository(DATA_PACKAGES_BASE_PATH);
+    this.structureMappingService = new StructureMappingService();
+
     const schemaGenerator = new SchemaGenerationService(new SchemaCache());
-    this.exportSchemaCommand = new ExportSchemaCommand(schemaGenerator, repository);
+    this.exportSchemaCommand = new ExportSchemaCommand(schemaGenerator, this.repository);
   }
 
   static getInstance(): DIContainer {
