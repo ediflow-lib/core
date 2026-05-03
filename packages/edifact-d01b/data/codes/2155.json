@@ -1,5 +1,36 @@
 {
-  "code": "2155",
-  "name": "Charge period type code",
-  "values": []
+  "elementCode": "2155",
+  "elementName": "Charge period type code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Per day",
+      "description": "The associated charge applies to each day the service is provided."
+    },
+    {
+      "code": "2",
+      "name": "Per week",
+      "description": "The associated charge applies to each week the service is provided."
+    },
+    {
+      "code": "3",
+      "name": "Per month",
+      "description": "The associated charge applies to each month the service is provided."
+    },
+    {
+      "code": "4",
+      "name": "Per rental",
+      "description": "The associated charge applies to the entire length of time the service is provided."
+    },
+    {
+      "code": "5",
+      "name": "Per hour",
+      "description": "The associated charge applies to each hour the service is provided."
+    },
+    {
+      "code": "6",
+      "name": "Per minute",
+      "description": "The associated charge applies to each minute the service is provided."
+    }
+  ]
 }

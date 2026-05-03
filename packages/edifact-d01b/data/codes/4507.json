@@ -1,5 +1,61 @@
 {
-  "code": "4507",
-  "name": "Credit cover response type code",
-  "values": []
+  "elementCode": "4507",
+  "elementName": "Credit cover response type code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Preliminary assessment",
+      "description": "A preliminary assessment without formal approval or commitment."
+    },
+    {
+      "code": "2",
+      "name": "Approved",
+      "description": "The limit request has been approved."
+    },
+    {
+      "code": "3",
+      "name": "Not approved",
+      "description": "The limit request has not been approved."
+    },
+    {
+      "code": "4",
+      "name": "Conditional approval",
+      "description": "Approval subject to conditions as specified."
+    },
+    {
+      "code": "5",
+      "name": "Partly approved",
+      "description": "Partly approved as specified."
+    },
+    {
+      "code": "6",
+      "name": "Still investigating",
+      "description": "The limit request is still under investigation."
+    },
+    {
+      "code": "7",
+      "name": "Open new account only",
+      "description": "Buyer account has been opened without an approved limit."
+    },
+    {
+      "code": "8",
+      "name": "Cancellation",
+      "description": "The existing limit has been cancelled."
+    },
+    {
+      "code": "9",
+      "name": "Reduction",
+      "description": "Credit limit is reduced."
+    },
+    {
+      "code": "10",
+      "name": "Change of name and/or address",
+      "description": "The name and/or address of the buyer has changed."
+    },
+    {
+      "code": "11",
+      "name": "Close buyer's account",
+      "description": "The buyer's account is to be closed."
+    }
+  ]
 }

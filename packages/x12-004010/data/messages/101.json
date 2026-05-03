@@ -1,0 +1,108 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "101",
+  "name": "Name and Address Lists",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Name and Address Lists Transaction Set (101) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction can be used to facilitate the rental or exchange of name and address mailing lists between direct marketing companies.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopDTM",
+      "name": "LoopDTM",
+      "triggerSegment": "DTM",
+      "mandatory": true,
+      "maxOccurrences": 999999,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 999999,
+          "position": 2
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopLX",
+          "name": "LoopLX",
+          "triggerSegment": "LX",
+          "mandatory": true,
+          "maxOccurrences": 999999,
+          "position": 3,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "LX",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "IN2",
+              "mandatory": true,
+              "maxOccurrences": 999999,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "NX2",
+              "mandatory": true,
+              "maxOccurrences": 999999,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "SPA",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "COM",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

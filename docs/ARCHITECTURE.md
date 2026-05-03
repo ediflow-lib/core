@@ -2,7 +2,7 @@
 
 This guide explains the **Clean Architecture** design of EDIFlow and how all components work together.
 
-> **📢 Updated for v0.2.0** - Complete monorepo architecture refactoring completed in Sprint 9!
+> **📢 Updated for v0.3.0** - X12 support added, complete package overview!
 
 ---
 
@@ -15,13 +15,11 @@ EDIFlow follows **Clean Architecture** principles (by Robert C. Martin "Uncle Bo
 1. **Independence** - Framework-agnostic core
 2. **Testability** - Every layer can be tested independently
 3. **Maintainability** - Easy to understand and modify
-4. **Scalability** - Easy to add new standards (X12, IDOC, etc.)
+4. **Scalability** - Easy to add new standards (IDOC, VDA, etc.)
 
 ---
 
-## 📦 Package Structure (v0.2.0)
-
-**Complete refactoring in Sprint 9** - Infrastructure now separated by format!
+## 📦 Package Structure (v0.3.0)
 
 ```
 packages/
@@ -36,38 +34,44 @@ packages/
 │   │   ├── infrastructure/
 │   │   │   ├── parsers/        # EdifactMessageParser, Tokenizer, etc.
 │   │   │   ├── builders/       # EdifactMessageBuilder
-│   │   │   └── validation/     # EDIFACT-specific validation
+│   │   │   └── validation/     # EDIFACT-specific validation rules
 │   │   └── index.ts
 │   └── test/                   # Integration tests
 │
-├── x12/                        # ✅ X12 Infrastructure (internal, not published)
+├── x12/                        # ✅ X12 Infrastructure
 │   ├── src/
 │   │   ├── infrastructure/
-│   │   │   └── parsers/        # X12MessageParser, Tokenizer, etc.
+│   │   │   ├── parsers/        # X12MessageParser, Tokenizer, etc.
+│   │   │   ├── repositories/   # (via infrastructure-shared)
+│   │   │   └── validation/     # X12 validation rules (STRICT/LENIENT)
 │   │   └── index.ts
 │   └── test/                   # Integration tests
 │
 ├── infrastructure-shared/      # ✅ Reusable Infrastructure
 │   ├── src/
 │   │   ├── repositories/       # FileBasedMessageStructureRepository
-│   │   ├── loaders/           # CachedDefinitionLoader
-│   │   └── cache/             # CacheService
+│   │   ├── loaders/           # CachingMessageStructureRepository
+│   │   └── cache/             # LRUCacheManager
 │   └── test/
 │
 ├── cli/                        # ✅ Presentation Layer
 │   └── src/
-│       ├── presentation/cli/   # Commands (parse, validate, build, etc.)
+│       ├── presentation/cli/   # Commands (parse, validate, build, export-schema)
 │       └── infrastructure/     # DIContainer
 │
 ├── edifact-d96a/              # ✅ Data Package (EDIFACT D.96A)
 ├── edifact-d01b/              # ✅ Data Package (EDIFACT D.01B)
 ├── edifact-d12a/              # ✅ Data Package (EDIFACT D.12A)
 ├── edifact-d20b/              # ✅ Data Package (EDIFACT D.20B)
-├── x12-004010/                # ✅ Data Package (X12 004010, internal)
-└── x12-005010/                # ✅ Data Package (X12 005010, internal)
+├── eancom-2002/               # ✅ Data Package (EANCOM 2002)
+├── hipaa-x12-005010/          # ✅ Data Package (HIPAA X12 005010)
+├── x12-004010/                # ✅ Data Package (X12 004010)
+└── x12-006040/                # ✅ Data Package (X12 006040)
 ```
 
-### Key Changes in v0.2.0:
+### Historical Note (v0.2.0 refactoring)
+
+The monorepo was restructured in v0.2.0 — EDIFACT infrastructure moved from `@ediflow/core` into `@ediflow/edifact` and `@ediflow/infrastructure-shared`. v0.3.0 added `@ediflow/x12`, EANCOM and HIPAA data packages.
 
 **Before Sprint 9 (v0.1.x):**
 ```
@@ -138,7 +142,7 @@ packages/
 ├── edifact-d96a/              # Data packages
 ├── edifact-d01b/
 ├── x12-004010/                # ✅ NEW!
-└── x12-005010/                # ✅ NEW!
+└── hipaa-x12-005010/          # ✅ NEW!
 ```
 
 **Solution:**
@@ -346,7 +350,7 @@ packages/
     │   ├── FileBasedMessageStructureRepository.ts
     │   └── InMemoryMessageStructureRepository.ts
     ├── loaders/
-    │   └── CachedDefinitionLoader.ts
+    │   └── CachingMessageStructureRepository.ts
     └── cache/
         └── CacheService.ts
 ```
@@ -415,20 +419,6 @@ export class X12MessageParser implements IMessageParser {
 - X12 has complex envelope structure (ISA/GS/ST)
 - Each format can evolve independently
 - Users only install formats they need
-    const tokens = this.tokenizer.tokenize(message);
-    
-    // 2. Parse segments
-    const segments = tokens.map(t => this.segmentParser.parse(t));
-    
-    // 3. Create domain entity
-    return new EDIMessage({
-      standard: 'EDIFACT',
-      segments,
-      // ...
-    });
-  }
-}
-```
 
 ---
 
@@ -810,7 +800,7 @@ container.register('ParseX12UseCase', () =>
 **Our Docs:**
 - [Quick Start Guide](QUICK_START.md) - Get started quickly
 - [Developer Guide](DEVELOPER_GUIDE.md) - Contributing guidelines
-- [API Reference](API.md) - Complete API docs
+- [Examples](https://github.com/ediflow-lib/core/tree/main/examples) - Runnable TypeScript examples
 
 ---
 

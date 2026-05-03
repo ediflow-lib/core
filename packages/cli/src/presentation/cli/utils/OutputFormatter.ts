@@ -7,29 +7,49 @@ import { writeFileSync } from 'fs';
  */
 export class OutputFormatter {
   /**
+   * Removes empty values (null, "", [], {}) recursively from an object.
+   * Used by --skip-empty option (default: true).
+   */
+  static removeEmpty(value: unknown): unknown {
+    if (value === null || value === undefined) return undefined;
+    if (typeof value === 'string') return value === '' ? undefined : value;
+    if (Array.isArray(value)) {
+      const filtered = value.map(v => OutputFormatter.removeEmpty(v)).filter(v => v !== undefined);
+      return filtered.length === 0 ? undefined : filtered;
+    }
+    if (typeof value === 'object') {
+      const result: Record<string, unknown> = {};
+      for (const [k, v] of Object.entries(value as Record<string, unknown>)) {
+        const cleaned = OutputFormatter.removeEmpty(v);
+        if (cleaned !== undefined) {
+          result[k] = cleaned;
+        }
+      }
+      return Object.keys(result).length === 0 ? undefined : result;
+    }
+    return value;
+  }
+
+  /**
    * Formats data as JSON string.
    */
-  static toJSON(data: any, pretty: boolean = true): string {
+  static toJSON(data: unknown, pretty: boolean = true, skipEmpty: boolean = false): string {
+    const processed = skipEmpty ? (OutputFormatter.removeEmpty(data) ?? {}) : data;
     return pretty
-      ? JSON.stringify(data, null, 2)
-      : JSON.stringify(data);
+      ? JSON.stringify(processed, null, 2)
+      : JSON.stringify(processed);
   }
 
   /**
    * Formats data as YAML string (simplified).
-   * For full YAML support, consider adding 'js-yaml' library.
    */
-  static toYAML(data: any): string {
-    // Simple YAML-like formatting
-    // TODO: Use 'js-yaml' library for full YAML support if needed
-    return JSON.stringify(data, null, 2);
+  static toYAML(data: unknown, skipEmpty: boolean = false): string {
+    const processed = skipEmpty ? (OutputFormatter.removeEmpty(data) ?? {}) : data;
+    return JSON.stringify(processed, null, 2);
   }
 
   /**
    * Outputs result to console or file.
-   *
-   * @param content - Content to output
-   * @param outputFile - Optional file path for output
    */
   static output(content: string, outputFile?: string): void {
     if (outputFile) {

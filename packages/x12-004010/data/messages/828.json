@@ -1,0 +1,146 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "828",
+  "name": "Debit Authorization",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Debit Authorization Transaction Set (828) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to provide information from the paying entity to the financial institution regarding debits that the paying entity has authorized against its account. The financial institution would hold this information then match it against incoming debits to determine whether those debits have been authorized by the account holder.\n\nThis transaction set can be used to add new authorizations or cancel existing authorizations.\n\nWith regard to electronic debits, this would be used for ACH debit processing only. This transaction set can also be used for paper-based debits (i.e., checks). In the paper-based world, this transaction set would serve the purpose of the \"issuance file\" or \"check register\" used in account reconciliation applications.\n\nEither one-time or recurring debits can be authorized with this transaction set.\n\nOne transaction set can be used to identify multiple debit authorization details against one bank account.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BAU",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N2",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N3",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N4",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PER",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 8
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopDAD",
+      "name": "LoopDAD",
+      "triggerSegment": "DAD",
+      "mandatory": true,
+      "maxOccurrences": 999999,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "DAD",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NM1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 6
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CTT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AMT",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 11
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    }
+  ]
+}

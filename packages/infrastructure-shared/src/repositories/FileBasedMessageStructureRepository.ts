@@ -1,26 +1,61 @@
-
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import type { IMessageStructureRepository, MessageStructureDTO } from '@ediflow/core';
+import { MessageStructureBuilder } from './MessageStructureBuilder';
+import { DataPackageValidator } from './DataPackageValidator';
+import { DataPackageValidationError } from './DataPackageValidationError';
+import {
+  MessageFileSchema,
+  SegmentsFileSchema,
+  ElementsFileSchema,
+  CompositesFileSchema,
+  SyntaxRulesFileSchema,
+  CodeListSchema
+} from './models/DataPackageModels';
+import type {
+  MessageFile,
+  SegmentDefinition,
+  ElementDefinition,
+  CompositeDefinition,
+  SyntaxRule
+} from './models/DataPackageModels';
+import type { ZodSchema } from 'zod';
+
+interface DataPackageContext {
+  builder: MessageStructureBuilder;
+  validator: DataPackageValidator;
+}
 
 export class FileBasedMessageStructureRepository implements IMessageStructureRepository {
+  private contextCache = new Map<string, DataPackageContext>();
+
+  // Non-standard package names that don't follow {standard}-{version} pattern
+  private static readonly PACKAGE_ALIASES = new Map<string, string>([
+    ['x12:005010', 'hipaa-x12-005010'],
+    ['edifact:eancom2002', 'eancom-2002'],
+    ['edifact:d02b',       'eancom-2002'],   // EANCOM 2002 messages use EDIFACT D.02B syntax
+  ]);
+
   constructor(private readonly basePath: string) {}
 
-  async getMessageDefinition(
+  async getMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<MessageStructureDTO | null> {
-    try {
-      const filePath = this.getMessageFilePath(standard, version, messageType);
-      const content = await fs.readFile(filePath, 'utf-8');
-      return JSON.parse(content) as MessageStructureDTO;
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-        return null;
-      }
-      throw error;
+    const messageFile = await this.loadMessageFile(standard, version, messageType);
+    if (!messageFile) {
+      return null;
     }
+
+    const { builder, validator } = await this.getOrCreateContext(standard, version);
+
+    const issues = validator.validate(messageFile);
+    if (issues.length > 0) {
+      throw new DataPackageValidationError(standard, version, messageType, issues);
+    }
+
+    return builder.build(messageFile);
   }
 
   async getAllMessageTypes(standard: string, version: string): Promise<string[]> {
@@ -39,7 +74,7 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
     }
   }
 
-  async hasMessageDefinition(
+  async hasMessageStructure(
     standard: string,
     version: string,
     messageType: string
@@ -49,18 +84,125 @@ export class FileBasedMessageStructureRepository implements IMessageStructureRep
       await fs.access(filePath);
       return true;
     } catch {
-      return false;
+      // Try qualifier fallback
+      const result = await this.loadMessageFileWithQualifierFallback(standard, version, messageType);
+      return result !== null;
     }
   }
 
-  private getMessageDirPath(standard: string, version: string): string {
+  async getCodeList(standard: string, version: string, codeListCode: string): Promise<Set<string> | null> {
+    try {
+      const filePath = path.join(
+        this.getDataDirPath(standard, version),
+        'codes',
+        `${codeListCode}.json`
+      );
+      const content = await fs.readFile(filePath, 'utf-8');
+      const codeList = CodeListSchema.parse(JSON.parse(content));
+      return new Set(codeList.values.map(v => v.code));
+    } catch {
+      return null;
+    }
+  }
+
+  private async loadMessageFile(
+    standard: string,
+    version: string,
+    messageType: string
+  ): Promise<MessageFile | null> {
+    try {
+      const filePath = this.getMessageFilePath(standard, version, messageType);
+      const content = await fs.readFile(filePath, 'utf-8');
+      return MessageFileSchema.parse(JSON.parse(content));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+        return this.loadMessageFileWithQualifierFallback(standard, version, messageType);
+      }
+      throw error;
+    }
+  }
+
+  /**
+   * Fallback for data packages that use qualifier suffixes in message file names
+   * (e.g. HIPAA 837-Q1.json, 270-B1.json instead of 837.json).
+   * Returns the first alphabetically matching file for the given message type prefix.
+   */
+  private async loadMessageFileWithQualifierFallback(
+    standard: string,
+    version: string,
+    messageType: string
+  ): Promise<MessageFile | null> {
+    try {
+      const dirPath = this.getMessageDirPath(standard, version);
+      const files = await fs.readdir(dirPath);
+      const prefix = messageType.toUpperCase() + '-';
+      const match = files.filter(f => f.startsWith(prefix) && f.endsWith('.json')).sort()[0];
+      if (!match) {
+        return null;
+      }
+      const content = await fs.readFile(path.join(dirPath, match), 'utf-8');
+      return MessageFileSchema.parse(JSON.parse(content));
+    } catch {
+      return null;
+    }
+  }
+
+  private async getOrCreateContext(standard: string, version: string): Promise<DataPackageContext> {
+    const cacheKey = `${standard.toLowerCase()}:${version.toLowerCase()}`;
+    const cached = this.contextCache.get(cacheKey);
+    if (cached) {
+      return cached;
+    }
+
+    const dataDir = this.getDataDirPath(standard, version);
+    const [segments, elements, composites, syntaxRules] = await Promise.all([
+      this.loadJsonFile<Record<string, SegmentDefinition>>(path.join(dataDir, 'segments.json'), SegmentsFileSchema),
+      this.loadJsonFile<Record<string, ElementDefinition>>(path.join(dataDir, 'elements.json'), ElementsFileSchema),
+      this.loadJsonFile<Record<string, CompositeDefinition>>(path.join(dataDir, 'composites.json'), CompositesFileSchema),
+      this.loadOptionalJsonFile<Record<string, SyntaxRule[]>>(path.join(dataDir, 'segment-syntax-rules.json'), SyntaxRulesFileSchema)
+    ]);
+
+    const context: DataPackageContext = {
+      builder: new MessageStructureBuilder(segments, elements, composites, syntaxRules),
+      validator: new DataPackageValidator(segments, elements, composites)
+    };
+
+    this.contextCache.set(cacheKey, context);
+    return context;
+  }
+
+  private async loadJsonFile<T>(filePath: string, schema: ZodSchema<T>): Promise<T> {
+    const content = await fs.readFile(filePath, 'utf-8');
+    return schema.parse(JSON.parse(content));
+  }
+
+  private async loadOptionalJsonFile<T>(filePath: string, schema: ZodSchema<T>): Promise<T | null> {
+    try {
+      const content = await fs.readFile(filePath, 'utf-8');
+      return schema.parse(JSON.parse(content));
+    } catch {
+      return null;
+    }
+  }
+
+  private getDataDirPath(standard: string, version: string): string {
+    const aliasKey = `${standard.toLowerCase()}:${version.toLowerCase().replace(/\./g, '')}`;
+    const alias = FileBasedMessageStructureRepository.PACKAGE_ALIASES.get(aliasKey);
+
+    if (alias) {
+      return path.join(this.basePath, alias, 'data');
+    }
+
     const normalizedVersion = version.toLowerCase().replace(/\./g, '');
     return path.join(
       this.basePath,
       `${standard.toLowerCase()}-${normalizedVersion}`,
-      'data',
-      'messages'
+      'data'
     );
+  }
+
+  private getMessageDirPath(standard: string, version: string): string {
+    return path.join(this.getDataDirPath(standard, version), 'messages');
   }
 
   private getMessageFilePath(

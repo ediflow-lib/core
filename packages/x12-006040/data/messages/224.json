@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "224",
+  "name": "Motor Carrier Summary Freight Bill Manifest",
+  "description": "Motor Carrier Summary Freight Bill Manifest",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CF1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "CF2",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "CF2",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "L11",
+          "mandatory": false,
+          "maxOccurrences": 99,
+          "position": 2
+        }
+      ]
+    }
+  ]
+}

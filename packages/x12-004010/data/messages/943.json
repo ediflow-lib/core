@@ -1,0 +1,171 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "943",
+  "name": "Warehouse Stock Transfer Shipment Advice",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Warehouse Stock Transfer Shipment Advice Transaction Set (943) for use within the context of an Electronic Data Interchange (EDI) environment.\nThe transaction set can be used by a depositor or an agent of the depositor to advise the recipient that a transfer shipment has been made. This transaction set provides a receiving location with detail information concerning product being shipped to that location.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "W06",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "N1",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G61",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "NTE",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "W27",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "W28",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "W10",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 10
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0200",
+      "name": "Loop0200",
+      "triggerSegment": "W04",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 11,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "W04",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G69",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 200,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "W20",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "W03",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 13
+    }
+  ]
+}

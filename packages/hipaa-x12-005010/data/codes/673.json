@@ -1,0 +1,4554 @@
+{
+  "code": "673",
+  "name": "Code specifying the type of quantity",
+  "values": [
+    {
+      "code": "00",
+      "name": "Hospital/Homebound Individuals"
+    },
+    {
+      "code": "01",
+      "name": "Discrete Quantity"
+    },
+    {
+      "code": "02",
+      "name": "Cumulative Quantity"
+    },
+    {
+      "code": "03",
+      "name": "Discreet Quantity - Rejected Material"
+    },
+    {
+      "code": "04",
+      "name": "Discrete Quantity - Rejected Material: Disposition Replacement"
+    },
+    {
+      "code": "05",
+      "name": "Discrete Quantity - Rejected Material: Disposition Credit"
+    },
+    {
+      "code": "06",
+      "name": "Discrete Quantity - Rejected Material: Disposition Pending"
+    },
+    {
+      "code": "07",
+      "name": "Cumulative Quantity - Rejected Material"
+    },
+    {
+      "code": "08",
+      "name": "Cumulative Quantity - Rejected Material: Disposition Replacement"
+    },
+    {
+      "code": "09",
+      "name": "Cumulative Quantity - Rejected Material: Disposition Credit"
+    },
+    {
+      "code": "0A",
+      "name": "Number of Hours Per Day"
+    },
+    {
+      "code": "0B",
+      "name": "Number of Hours Per Week"
+    },
+    {
+      "code": "0C",
+      "name": "Number of Months Per Year"
+    },
+    {
+      "code": "0D",
+      "name": "Number of Periods Per Week"
+    },
+    {
+      "code": "0E",
+      "name": "Expected Expenditure Quantity"
+    },
+    {
+      "code": "0F",
+      "name": "Number of Hours Per Year"
+    },
+    {
+      "code": "0G",
+      "name": "Pre-Kindergarten Students"
+    },
+    {
+      "code": "0H",
+      "name": "First Grade Students"
+    },
+    {
+      "code": "0I",
+      "name": "Second Grade Students"
+    },
+    {
+      "code": "0J",
+      "name": "Third Grade Students"
+    },
+    {
+      "code": "0K",
+      "name": "Fourth Grade Students"
+    },
+    {
+      "code": "0L",
+      "name": "Fifth Grade Students"
+    },
+    {
+      "code": "0M",
+      "name": "Sixth Grade Students"
+    },
+    {
+      "code": "0N",
+      "name": "Seventh Grade Students"
+    },
+    {
+      "code": "0O",
+      "name": "Eighth Grade Students"
+    },
+    {
+      "code": "0P",
+      "name": "Ninth Grade Students"
+    },
+    {
+      "code": "0Q",
+      "name": "Carnegie Units"
+    },
+    {
+      "code": "0R",
+      "name": "Number of Disability Types"
+    },
+    {
+      "code": "0S",
+      "name": "Number of Males"
+    },
+    {
+      "code": "0T",
+      "name": "Number of Females"
+    },
+    {
+      "code": "0U",
+      "name": "Individuals with Multiple Disabilities"
+    },
+    {
+      "code": "0V",
+      "name": "Individuals with Serious Emotional Disturbance"
+    },
+    {
+      "code": "0W",
+      "name": "Individuals with Speech or Language Impairment"
+    },
+    {
+      "code": "0X",
+      "name": "Individuals with Traumatic Brain Injury"
+    },
+    {
+      "code": "0Y",
+      "name": "Blind Individuals"
+    },
+    {
+      "code": "0Z",
+      "name": "Deaf Individuals"
+    },
+    {
+      "code": "10",
+      "name": "Cumulative Quantity - Rejected Material: Disposition Pending"
+    },
+    {
+      "code": "11",
+      "name": "Split Quantity"
+    },
+    {
+      "code": "12",
+      "name": "Ship Notice Quantity"
+    },
+    {
+      "code": "13",
+      "name": "Collateral Requirements"
+    },
+    {
+      "code": "14",
+      "name": "Quantity in Float"
+    },
+    {
+      "code": "15",
+      "name": "Quantity in Hold Out"
+    },
+    {
+      "code": "16",
+      "name": "Line Thread Quantity"
+    },
+    {
+      "code": "17",
+      "name": "Quantity on Hand"
+    },
+    {
+      "code": "18",
+      "name": "Previous Week Quantity"
+    },
+    {
+      "code": "19",
+      "name": "Unverified Receipts"
+    },
+    {
+      "code": "1A",
+      "name": "Original Duration (in calendar units)"
+    },
+    {
+      "code": "1B",
+      "name": "Current Duration (in calendar units)"
+    },
+    {
+      "code": "1C",
+      "name": "Remaining Duration (in calendar units)"
+    },
+    {
+      "code": "1D",
+      "name": "Total Float (in calendar units)"
+    },
+    {
+      "code": "1E",
+      "name": "Free Float (in calendar units)"
+    },
+    {
+      "code": "1F",
+      "name": "Lag (as in Lag Time - in calendar units)"
+    },
+    {
+      "code": "1G",
+      "name": "Lead Time (in calendar units)"
+    },
+    {
+      "code": "1H",
+      "name": "Started"
+    },
+    {
+      "code": "1I",
+      "name": "Completed"
+    },
+    {
+      "code": "1J",
+      "name": "Due"
+    },
+    {
+      "code": "1K",
+      "name": "Time Units"
+    },
+    {
+      "code": "1L",
+      "name": "Shifts"
+    },
+    {
+      "code": "1M",
+      "name": "Time units per shift"
+    },
+    {
+      "code": "1N",
+      "name": "Scrap allowed"
+    },
+    {
+      "code": "1O",
+      "name": "Calendar Units"
+    },
+    {
+      "code": "1P",
+      "name": "Resource (Quantity) available"
+    },
+    {
+      "code": "1Q",
+      "name": "Total Resource (Quantity)"
+    },
+    {
+      "code": "1R",
+      "name": "Level Resource (Quantity)"
+    },
+    {
+      "code": "1S",
+      "name": "Late"
+    },
+    {
+      "code": "1T",
+      "name": "Number of Delinquent Installments"
+    },
+    {
+      "code": "1U",
+      "name": "Number of Loans"
+    },
+    {
+      "code": "1V",
+      "name": "Total Number of Mortgagees"
+    },
+    {
+      "code": "1W",
+      "name": "Total Number of Loan Detail Records"
+    },
+    {
+      "code": "1X",
+      "name": "Prescription Effective Period"
+    },
+    {
+      "code": "1Y",
+      "name": "Rate Per Day (RPD)"
+    },
+    {
+      "code": "1Z",
+      "name": "End Of Month Inventory Prior To Ship"
+    },
+    {
+      "code": "20",
+      "name": "Unusable Quantity"
+    },
+    {
+      "code": "21",
+      "name": "Cumulative Quantity Shipped Short - Disposition Pending"
+    },
+    {
+      "code": "22",
+      "name": "Cumulative Quantity Shipped Short - Disposition Challenged"
+    },
+    {
+      "code": "23",
+      "name": "Cumulative Quantity Shipped Long - Disposition Pending"
+    },
+    {
+      "code": "24",
+      "name": "Cumulative Quantity Shipped Long - Disposition Challenged"
+    },
+    {
+      "code": "25",
+      "name": "OEM Inventory"
+    },
+    {
+      "code": "26",
+      "name": "Total Inventory"
+    },
+    {
+      "code": "27",
+      "name": "Committed Quantity"
+    },
+    {
+      "code": "28",
+      "name": "Quantity Available for Return"
+    },
+    {
+      "code": "29",
+      "name": "Projected Available Inventory"
+    },
+    {
+      "code": "2A",
+      "name": "Commitment Period"
+    },
+    {
+      "code": "2B",
+      "name": "Number of Borrowers"
+    },
+    {
+      "code": "2C",
+      "name": "Number of Adjustment Periods"
+    },
+    {
+      "code": "2D",
+      "name": "Age Nearest"
+    },
+    {
+      "code": "2E",
+      "name": "Total Other Properties Owned and Financed"
+    },
+    {
+      "code": "2F",
+      "name": "Age Next"
+    },
+    {
+      "code": "2G",
+      "name": "Reconsideration Period"
+    },
+    {
+      "code": "2H",
+      "name": "Flat Extra Premium"
+    },
+    {
+      "code": "2I",
+      "name": "CO2 Injection Volume"
+    },
+    {
+      "code": "2J",
+      "name": "Accounts Placed for Collection"
+    },
+    {
+      "code": "2K",
+      "name": "Changes"
+    },
+    {
+      "code": "2L",
+      "name": "Companies in Same Activity for a Period"
+    },
+    {
+      "code": "2M",
+      "name": "Comparison Period"
+    },
+    {
+      "code": "2N",
+      "name": "Departments"
+    },
+    {
+      "code": "2O",
+      "name": "Employees Shared"
+    },
+    {
+      "code": "2P",
+      "name": "Estimated Accounts"
+    },
+    {
+      "code": "2Q",
+      "name": "Installed Capacity"
+    },
+    {
+      "code": "2R",
+      "name": "Levels Occupied"
+    },
+    {
+      "code": "2S",
+      "name": "Registered Brands Distributed"
+    },
+    {
+      "code": "2T",
+      "name": "Electronic Signatures"
+    },
+    {
+      "code": "2U",
+      "name": "Bytes"
+    },
+    {
+      "code": "2V",
+      "name": "Employed at this Location"
+    },
+    {
+      "code": "2W",
+      "name": "Segments"
+    },
+    {
+      "code": "2X",
+      "name": "Registered Brands Manufactured"
+    },
+    {
+      "code": "2Y",
+      "name": "Functional Groups"
+    },
+    {
+      "code": "2Z",
+      "name": "Transaction Sets"
+    },
+    {
+      "code": "30",
+      "name": "Quote Quantity on Inventory"
+    },
+    {
+      "code": "31",
+      "name": "Additional Demand Quantity"
+    },
+    {
+      "code": "32",
+      "name": "Quantity Sold"
+    },
+    {
+      "code": "33",
+      "name": "Quantity Available for Sale (stock quantity)"
+    },
+    {
+      "code": "34",
+      "name": "Noncommitted Inventory on Shelf"
+    },
+    {
+      "code": "35",
+      "name": "Inventory on Shelf + Work in Progress"
+    },
+    {
+      "code": "36",
+      "name": "Distributor Inventory"
+    },
+    {
+      "code": "37",
+      "name": "Work In Process"
+    },
+    {
+      "code": "38",
+      "name": "Original Quantity"
+    },
+    {
+      "code": "39",
+      "name": "Shipped Quantity"
+    },
+    {
+      "code": "3A",
+      "name": "Total Credits Accepted"
+    },
+    {
+      "code": "3B",
+      "name": "Total Credits Rejected"
+    },
+    {
+      "code": "3C",
+      "name": "Total Debits Accepted"
+    },
+    {
+      "code": "3D",
+      "name": "Total Debits Rejected"
+    },
+    {
+      "code": "3E",
+      "name": "Total Payments Rejected"
+    },
+    {
+      "code": "3F",
+      "name": "Total Pre-advices Accepted"
+    },
+    {
+      "code": "3G",
+      "name": "Total Pre-advices Rejected"
+    },
+    {
+      "code": "3H",
+      "name": "Total Prenotes Accepted"
+    },
+    {
+      "code": "3I",
+      "name": "Total Prenotes Rejected"
+    },
+    {
+      "code": "3J",
+      "name": "Total Post-advices Accepted"
+    },
+    {
+      "code": "3K",
+      "name": "Total Post-advices Rejected"
+    },
+    {
+      "code": "3L",
+      "name": "Total Unidentified Transactions Rejected"
+    },
+    {
+      "code": "3M",
+      "name": "Total Credits Received"
+    },
+    {
+      "code": "3N",
+      "name": "Total Debits Received"
+    },
+    {
+      "code": "3O",
+      "name": "Individuals with Noncategorical Preschool Disability"
+    },
+    {
+      "code": "3P",
+      "name": "Total Pre-advices Received"
+    },
+    {
+      "code": "3Q",
+      "name": "Total Prenotes Received"
+    },
+    {
+      "code": "3R",
+      "name": "Total Post-advices Received"
+    },
+    {
+      "code": "3S",
+      "name": "Total Debits"
+    },
+    {
+      "code": "3T",
+      "name": "Total Credits"
+    },
+    {
+      "code": "3V",
+      "name": "Minimum Transfer"
+    },
+    {
+      "code": "3W",
+      "name": "Maximum Transfer"
+    },
+    {
+      "code": "3X",
+      "name": "Speed Capacity"
+    },
+    {
+      "code": "3Y",
+      "name": "Subcontractors"
+    },
+    {
+      "code": "3Z",
+      "name": "Students"
+    },
+    {
+      "code": "40",
+      "name": "Remaining Quantity"
+    },
+    {
+      "code": "41",
+      "name": "Number of Batches"
+    },
+    {
+      "code": "42",
+      "name": "Number of Checks"
+    },
+    {
+      "code": "43",
+      "name": "Talk Paths"
+    },
+    {
+      "code": "44",
+      "name": "Number of Patient Admissions"
+    },
+    {
+      "code": "45",
+      "name": "Cumulative quantity on order"
+    },
+    {
+      "code": "46",
+      "name": "Total transactions"
+    },
+    {
+      "code": "47",
+      "name": "Primary Net Quantity"
+    },
+    {
+      "code": "48",
+      "name": "Secondary Net Quantity"
+    },
+    {
+      "code": "49",
+      "name": "Number of Signed Bills of Lading"
+    },
+    {
+      "code": "4A",
+      "name": "Accounts"
+    },
+    {
+      "code": "4B",
+      "name": "Agents"
+    },
+    {
+      "code": "4C",
+      "name": "Authorized Shares"
+    },
+    {
+      "code": "4D",
+      "name": "Clerks"
+    },
+    {
+      "code": "4E",
+      "name": "Design Employees"
+    },
+    {
+      "code": "4F",
+      "name": "Foreign Related Entities"
+    },
+    {
+      "code": "4G",
+      "name": "Group Employees"
+    },
+    {
+      "code": "4H",
+      "name": "Issued Shares"
+    },
+    {
+      "code": "4I",
+      "name": "Laborers"
+    },
+    {
+      "code": "4J",
+      "name": "Other Employee Type"
+    },
+    {
+      "code": "4K",
+      "name": "Part Time Employees"
+    },
+    {
+      "code": "4L",
+      "name": "Related Entities"
+    },
+    {
+      "code": "4M",
+      "name": "Relatives Employed"
+    },
+    {
+      "code": "4N",
+      "name": "Salespersons"
+    },
+    {
+      "code": "4O",
+      "name": "Space Occupied"
+    },
+    {
+      "code": "4P",
+      "name": "Special Partners"
+    },
+    {
+      "code": "4Q",
+      "name": "Suppliers' Credit"
+    },
+    {
+      "code": "4R",
+      "name": "Technicians"
+    },
+    {
+      "code": "4S",
+      "name": "Trainees"
+    },
+    {
+      "code": "4T",
+      "name": "Warehouse Employees"
+    },
+    {
+      "code": "4U",
+      "name": "Shareholders"
+    },
+    {
+      "code": "4V",
+      "name": "Available Units"
+    },
+    {
+      "code": "4W",
+      "name": "Total Unduplicated Headcount"
+    },
+    {
+      "code": "4X",
+      "name": "Meals Per Week"
+    },
+    {
+      "code": "4Y",
+      "name": "Programs Offered"
+    },
+    {
+      "code": "4Z",
+      "name": "Typical Credit Hours Taken per Graduate Student (Full Time)"
+    },
+    {
+      "code": "50",
+      "name": "Number of Copies of Bill of Lading"
+    },
+    {
+      "code": "51",
+      "name": "Number of Unsigned Bills of Lading"
+    },
+    {
+      "code": "52",
+      "name": "Number of Originals"
+    },
+    {
+      "code": "53",
+      "name": "Original payment item count."
+    },
+    {
+      "code": "54",
+      "name": "Bank reject item count."
+    },
+    {
+      "code": "55",
+      "name": "Net to pay item count."
+    },
+    {
+      "code": "56",
+      "name": "Minimum Contract Quantity"
+    },
+    {
+      "code": "57",
+      "name": "Minimum Order Quantity"
+    },
+    {
+      "code": "58",
+      "name": "Payment Cancellation Item Count"
+    },
+    {
+      "code": "59",
+      "name": "Individuals with Developmental Delay"
+    },
+    {
+      "code": "5A",
+      "name": "Aggregate Benefit Period"
+    },
+    {
+      "code": "5B",
+      "name": "Anticipated Length of Service"
+    },
+    {
+      "code": "5C",
+      "name": "Approval/Offer Duration"
+    },
+    {
+      "code": "5D",
+      "name": "Benefit Amount"
+    },
+    {
+      "code": "5E",
+      "name": "Benefit Period"
+    },
+    {
+      "code": "5F",
+      "name": "Brothers Deceased"
+    },
+    {
+      "code": "5G",
+      "name": "Brothers Living"
+    },
+    {
+      "code": "5H",
+      "name": "Children"
+    },
+    {
+      "code": "5I",
+      "name": "Citations"
+    },
+    {
+      "code": "5J",
+      "name": "Claim Period"
+    },
+    {
+      "code": "5K",
+      "name": "Coverage"
+    },
+    {
+      "code": "5L",
+      "name": "Elimination Period"
+    },
+    {
+      "code": "5M",
+      "name": "Elimination Period - Accident"
+    },
+    {
+      "code": "5N",
+      "name": "Elimination Period - Sickness"
+    },
+    {
+      "code": "5O",
+      "name": "Employees - Nonowner"
+    },
+    {
+      "code": "5P",
+      "name": "Employees - Owner"
+    },
+    {
+      "code": "5Q",
+      "name": "Employees - Part Time"
+    },
+    {
+      "code": "5R",
+      "name": "Employees - Same Duties"
+    },
+    {
+      "code": "5S",
+      "name": "Employees - Same Occupation"
+    },
+    {
+      "code": "5T",
+      "name": "Expense"
+    },
+    {
+      "code": "5U",
+      "name": "Frequency"
+    },
+    {
+      "code": "5V",
+      "name": "General Elimination Period"
+    },
+    {
+      "code": "5W",
+      "name": "Guarantee Period"
+    },
+    {
+      "code": "5X",
+      "name": "Height"
+    },
+    {
+      "code": "5Y",
+      "name": "Hours Flown - Aircraft Type/Life"
+    },
+    {
+      "code": "5Z",
+      "name": "Hours Flown - Aircraft Type/Period"
+    },
+    {
+      "code": "60",
+      "name": "Total Authorized Quantity"
+    },
+    {
+      "code": "61",
+      "name": "Remaining Authorized Quantity"
+    },
+    {
+      "code": "62",
+      "name": "Number of Days Covered by Inventory"
+    },
+    {
+      "code": "63",
+      "name": "On Order Quantity"
+    },
+    {
+      "code": "64",
+      "name": "Past Due Quantity"
+    },
+    {
+      "code": "65",
+      "name": "Previous Month's Usage"
+    },
+    {
+      "code": "66",
+      "name": "Minimum Fabrication Quantity"
+    },
+    {
+      "code": "67",
+      "name": "Minimum Ship Quantity"
+    },
+    {
+      "code": "68",
+      "name": "Maximum Number of Shipments Allowed"
+    },
+    {
+      "code": "69",
+      "name": "Incremental Order Quantity"
+    },
+    {
+      "code": "6A",
+      "name": "Hours Flown - Aircraft/Type Flying"
+    },
+    {
+      "code": "6B",
+      "name": "Hours Flown - Lifetime"
+    },
+    {
+      "code": "6C",
+      "name": "Hours Flown - Type Flying"
+    },
+    {
+      "code": "6D",
+      "name": "Impairment Duration"
+    },
+    {
+      "code": "6E",
+      "name": "Impairment Frequency"
+    },
+    {
+      "code": "6F",
+      "name": "Installment Frequency"
+    },
+    {
+      "code": "6G",
+      "name": "Installments"
+    },
+    {
+      "code": "6H",
+      "name": "Intended Change Time Period"
+    },
+    {
+      "code": "6I",
+      "name": "Interim Term Period"
+    },
+    {
+      "code": "6J",
+      "name": "Involvement Period"
+    },
+    {
+      "code": "6K",
+      "name": "Loan Rate"
+    },
+    {
+      "code": "6L",
+      "name": "Maximum Age"
+    },
+    {
+      "code": "6M",
+      "name": "Maximum Benefit Period - Accident"
+    },
+    {
+      "code": "6N",
+      "name": "Maximum Benefit Period - Sickness"
+    },
+    {
+      "code": "6O",
+      "name": "Maximum Benefit Period"
+    },
+    {
+      "code": "6P",
+      "name": "Medication Duration"
+    },
+    {
+      "code": "6Q",
+      "name": "Minimum Age"
+    },
+    {
+      "code": "6R",
+      "name": "Own Occupation Qualification Period"
+    },
+    {
+      "code": "6S",
+      "name": "Owner's Equity"
+    },
+    {
+      "code": "6T",
+      "name": "Ownership Change Age"
+    },
+    {
+      "code": "6U",
+      "name": "Ownership Duration"
+    },
+    {
+      "code": "6V",
+      "name": "Ownership Percentage"
+    },
+    {
+      "code": "6W",
+      "name": "Payment Frequency"
+    },
+    {
+      "code": "6X",
+      "name": "Payments Number"
+    },
+    {
+      "code": "6Y",
+      "name": "Arrests"
+    },
+    {
+      "code": "6Z",
+      "name": "Placement Period Expiration"
+    },
+    {
+      "code": "70",
+      "name": "Maximum Order Quantity"
+    },
+    {
+      "code": "71",
+      "name": "Educable Mentally Retarded Individuals"
+    },
+    {
+      "code": "72",
+      "name": "Minimum Stock Level"
+    },
+    {
+      "code": "73",
+      "name": "Maximum Stock Level"
+    },
+    {
+      "code": "74",
+      "name": "Damaged Goods"
+    },
+    {
+      "code": "75",
+      "name": "Receipts"
+    },
+    {
+      "code": "76",
+      "name": "Returns"
+    },
+    {
+      "code": "77",
+      "name": "Stock Transfers In"
+    },
+    {
+      "code": "78",
+      "name": "Stock Transfers Out"
+    },
+    {
+      "code": "79",
+      "name": "Billing Unit(s) Per Pricing Unit"
+    },
+    {
+      "code": "7A",
+      "name": "Previous Benefits"
+    },
+    {
+      "code": "7B",
+      "name": "Qualification Period"
+    },
+    {
+      "code": "7C",
+      "name": "Range Average"
+    },
+    {
+      "code": "7D",
+      "name": "Range Maximum"
+    },
+    {
+      "code": "7E",
+      "name": "Range Minimum"
+    },
+    {
+      "code": "7F",
+      "name": "Relationship Duration"
+    },
+    {
+      "code": "7G",
+      "name": "Replaced Amount"
+    },
+    {
+      "code": "7H",
+      "name": "Residence Duration"
+    },
+    {
+      "code": "7I",
+      "name": "Sisters Deceased"
+    },
+    {
+      "code": "7J",
+      "name": "Sisters Living"
+    },
+    {
+      "code": "7K",
+      "name": "Time Frame"
+    },
+    {
+      "code": "7L",
+      "name": "Time in Country"
+    },
+    {
+      "code": "7M",
+      "name": "Time Since Hospitalization"
+    },
+    {
+      "code": "7N",
+      "name": "Time Since Last Application"
+    },
+    {
+      "code": "7O",
+      "name": "Time Since Last Civilian Flight"
+    },
+    {
+      "code": "7P",
+      "name": "Time Since Last Insurance Medical"
+    },
+    {
+      "code": "7Q",
+      "name": "Time Since Last Military Flight"
+    },
+    {
+      "code": "7R",
+      "name": "Time Since Medical Consult"
+    },
+    {
+      "code": "7S",
+      "name": "Time Since Medication End"
+    },
+    {
+      "code": "7T",
+      "name": "Time Since Medication Start"
+    },
+    {
+      "code": "7U",
+      "name": "Time Since Onset"
+    },
+    {
+      "code": "7V",
+      "name": "Time Since Surgery"
+    },
+    {
+      "code": "7W",
+      "name": "Time Since Trip"
+    },
+    {
+      "code": "7X",
+      "name": "Travel Frequency"
+    },
+    {
+      "code": "7Y",
+      "name": "Travel Period"
+    },
+    {
+      "code": "7Z",
+      "name": "Trip Duration"
+    },
+    {
+      "code": "80",
+      "name": "Pricing Unit(s) Per Billing Unit"
+    },
+    {
+      "code": "81",
+      "name": "Prepaid Quantity Shipped"
+    },
+    {
+      "code": "82",
+      "name": "Prepaid Quantity Not Shipped"
+    },
+    {
+      "code": "83",
+      "name": "Submitted Quantity Sold"
+    },
+    {
+      "code": "84",
+      "name": "Submitted Quantity Returned"
+    },
+    {
+      "code": "85",
+      "name": "Lot Size"
+    },
+    {
+      "code": "86",
+      "name": "Nonconformance Quantity"
+    },
+    {
+      "code": "87",
+      "name": "Quantity Received"
+    },
+    {
+      "code": "88",
+      "name": "Beds"
+    },
+    {
+      "code": "89",
+      "name": "Operating Beds"
+    },
+    {
+      "code": "8A",
+      "name": "Visitation Frequency"
+    },
+    {
+      "code": "8B",
+      "name": "Weight"
+    },
+    {
+      "code": "8C",
+      "name": "Weight Change Period"
+    },
+    {
+      "code": "8D",
+      "name": "Work Period"
+    },
+    {
+      "code": "8E",
+      "name": "Existence Limit Period"
+    },
+    {
+      "code": "8F",
+      "name": "Shares"
+    },
+    {
+      "code": "8G",
+      "name": "Directors"
+    },
+    {
+      "code": "8H",
+      "name": "Minimum"
+    },
+    {
+      "code": "8I",
+      "name": "Voting Shares Held"
+    },
+    {
+      "code": "8J",
+      "name": "Outstanding Shares"
+    },
+    {
+      "code": "8K",
+      "name": "Shares Held as Treasury Stock"
+    },
+    {
+      "code": "8L",
+      "name": "Shares Subscribed but Not Issued"
+    },
+    {
+      "code": "8M",
+      "name": "Total Shares of Stock"
+    },
+    {
+      "code": "8N",
+      "name": "Shares Owned by In-State Residents"
+    },
+    {
+      "code": "8O",
+      "name": "Shares Owned by Out-of-State Residents"
+    },
+    {
+      "code": "8P",
+      "name": "Partners"
+    },
+    {
+      "code": "8Q",
+      "name": "Land Holding"
+    },
+    {
+      "code": "8R",
+      "name": "Non-Domestic Stockholders"
+    },
+    {
+      "code": "8S",
+      "name": "Shares Subscribed"
+    },
+    {
+      "code": "8T",
+      "name": "Maximum Number Free Miles"
+    },
+    {
+      "code": "8U",
+      "name": "Typical Credit Hours Taken per Undergraduate Student (Full Time)"
+    },
+    {
+      "code": "8V",
+      "name": "Typical Credit Hours Taken per First-Professional Student (Full Time)"
+    },
+    {
+      "code": "8W",
+      "name": "Full-time Equivalents"
+    },
+    {
+      "code": "8X",
+      "name": "Total Credit Hours"
+    },
+    {
+      "code": "8Y",
+      "name": "Total Non-Credit Hours"
+    },
+    {
+      "code": "8Z",
+      "name": "Total Contact Hours"
+    },
+    {
+      "code": "90",
+      "name": "Acknowledged Quantity"
+    },
+    {
+      "code": "91",
+      "name": "Additional Usage Quantity"
+    },
+    {
+      "code": "92",
+      "name": "Allotted Usage Quantity"
+    },
+    {
+      "code": "93",
+      "name": "Attendant-Handled Quantity"
+    },
+    {
+      "code": "94",
+      "name": "Billable Quantity"
+    },
+    {
+      "code": "95",
+      "name": "Data Storage Quantity"
+    },
+    {
+      "code": "96",
+      "name": "Non-Billable Quantity"
+    },
+    {
+      "code": "97",
+      "name": "Non-Urgent Delivery Quantity"
+    },
+    {
+      "code": "98",
+      "name": "Overflow Quantity"
+    },
+    {
+      "code": "99",
+      "name": "Quantity Used"
+    },
+    {
+      "code": "9A",
+      "name": "Time Expended"
+    },
+    {
+      "code": "9C",
+      "name": "Primary Meter Reading Value"
+    },
+    {
+      "code": "9D",
+      "name": "Engineered Standard"
+    },
+    {
+      "code": "9E",
+      "name": "Active Maintenance Time"
+    },
+    {
+      "code": "9F",
+      "name": "Actual Duration"
+    },
+    {
+      "code": "9H",
+      "name": "Estimated Duration"
+    },
+    {
+      "code": "9J",
+      "name": "Gross Estimate"
+    },
+    {
+      "code": "9K",
+      "name": "Finish Offset"
+    },
+    {
+      "code": "9L",
+      "name": "Start Offset"
+    },
+    {
+      "code": "9M",
+      "name": "Picture Count"
+    },
+    {
+      "code": "9N",
+      "name": "Component Meter Reading Count"
+    },
+    {
+      "code": "9P",
+      "name": "Total Clock Hours"
+    },
+    {
+      "code": "9R",
+      "name": "Enrollees"
+    },
+    {
+      "code": "9S",
+      "name": "Total Days Submitted"
+    },
+    {
+      "code": "9V",
+      "name": "Total Days Approved"
+    },
+    {
+      "code": "A0",
+      "name": "Severely Mentally Retarded Individuals"
+    },
+    {
+      "code": "A1",
+      "name": "Acceptable Unserviceable Quantity"
+    },
+    {
+      "code": "A2",
+      "name": "Optimistic Duration"
+    },
+    {
+      "code": "A3",
+      "name": "Most Likely Duration"
+    },
+    {
+      "code": "A4",
+      "name": "Pessimistic Duration"
+    },
+    {
+      "code": "A5",
+      "name": "Adjusted Quantity"
+    },
+    {
+      "code": "A6",
+      "name": "Accidents"
+    },
+    {
+      "code": "A7",
+      "name": "Years in School"
+    },
+    {
+      "code": "A8",
+      "name": "Number of Dependents"
+    },
+    {
+      "code": "A9",
+      "name": "Years on Job"
+    },
+    {
+      "code": "AA",
+      "name": "Unacknowledged Quantity"
+    },
+    {
+      "code": "AB",
+      "name": "Urgent Delivery Quantity"
+    },
+    {
+      "code": "AC",
+      "name": "Voice Storage Quantity"
+    },
+    {
+      "code": "AD",
+      "name": "Maintenance Units"
+    },
+    {
+      "code": "AE",
+      "name": "Minimum Average Time Requirement (MATR) Units"
+    },
+    {
+      "code": "AF",
+      "name": "Wide Area Telephone Service (WATS)/800 Service Units"
+    },
+    {
+      "code": "AG",
+      "name": "Number of End Users"
+    },
+    {
+      "code": "AH",
+      "name": "Number of Message Recipients"
+    },
+    {
+      "code": "AI",
+      "name": "Number of Operator Credits"
+    },
+    {
+      "code": "AJ",
+      "name": "Daily Adjustments"
+    },
+    {
+      "code": "AK",
+      "name": "Years in this Line of Work/Profession"
+    },
+    {
+      "code": "AL",
+      "name": "Area per Units"
+    },
+    {
+      "code": "AM",
+      "name": "Trainable Mentally Retarded Individuals"
+    },
+    {
+      "code": "AN",
+      "name": "Age at Death"
+    },
+    {
+      "code": "AO",
+      "name": "Verified Receipts"
+    },
+    {
+      "code": "AP",
+      "name": "Order Quantity Multiple"
+    },
+    {
+      "code": "AQ",
+      "name": "Contribution Total"
+    },
+    {
+      "code": "AR",
+      "name": "Loan Repayment Total"
+    },
+    {
+      "code": "AS",
+      "name": "Participant Total"
+    },
+    {
+      "code": "AT",
+      "name": "Actual"
+    },
+    {
+      "code": "AU",
+      "name": "Cumulative Actual"
+    },
+    {
+      "code": "AV",
+      "name": "Budget"
+    },
+    {
+      "code": "AW",
+      "name": "Cumulative Budget"
+    },
+    {
+      "code": "AX",
+      "name": "Number of Insured Lives"
+    },
+    {
+      "code": "AY",
+      "name": "Forecast"
+    },
+    {
+      "code": "AZ",
+      "name": "Forecast at Complete"
+    },
+    {
+      "code": "B1",
+      "name": "Number of Mortgagors"
+    },
+    {
+      "code": "B2",
+      "name": "Mortgage Pool Count"
+    },
+    {
+      "code": "B3",
+      "name": "Requested Amount"
+    },
+    {
+      "code": "B4",
+      "name": "Approved Amount"
+    },
+    {
+      "code": "B5",
+      "name": "Additional Amount"
+    },
+    {
+      "code": "B6",
+      "name": "Pre-op Days"
+    },
+    {
+      "code": "B7",
+      "name": "Post-op Days"
+    },
+    {
+      "code": "B8",
+      "name": "Average"
+    },
+    {
+      "code": "B9",
+      "name": "Period Beginning Imbalance Quantity"
+    },
+    {
+      "code": "BA",
+      "name": "Due-In"
+    },
+    {
+      "code": "BB",
+      "name": "Contractor Cumulative to Date"
+    },
+    {
+      "code": "BC",
+      "name": "Budget At Complete"
+    },
+    {
+      "code": "BD",
+      "name": "Contractor at Complete"
+    },
+    {
+      "code": "BE",
+      "name": "Subcontractor Cumulative to Date"
+    },
+    {
+      "code": "BF",
+      "name": "Age Modifying Units"
+    },
+    {
+      "code": "BG",
+      "name": "Subcontractor at Complete"
+    },
+    {
+      "code": "BH",
+      "name": "Book Order Quantity"
+    },
+    {
+      "code": "BI",
+      "name": "Book Inventory"
+    },
+    {
+      "code": "BJ",
+      "name": "Bedroom Count"
+    },
+    {
+      "code": "BK",
+      "name": "Bathroom Count"
+    },
+    {
+      "code": "BL",
+      "name": "Betterment Hours"
+    },
+    {
+      "code": "BM",
+      "name": "Depreciation Hours"
+    },
+    {
+      "code": "BN",
+      "name": "System Adjusted Hours"
+    },
+    {
+      "code": "BO",
+      "name": "User Adjusted Hours"
+    },
+    {
+      "code": "BP",
+      "name": "Period Ending Imbalance Quantity"
+    },
+    {
+      "code": "BQ",
+      "name": "Backorder Quantity"
+    },
+    {
+      "code": "BR",
+      "name": "Blood Record"
+    },
+    {
+      "code": "BS",
+      "name": "Cumulative Beginning Imbalance Quantity"
+    },
+    {
+      "code": "BT",
+      "name": "Cumulative Current Period Imbalance Quantity"
+    },
+    {
+      "code": "BU",
+      "name": "Cumulative Prior Period Adjustment"
+    },
+    {
+      "code": "BV",
+      "name": "Cumulative Ending Imbalance Quantity"
+    },
+    {
+      "code": "BW",
+      "name": "Birth Weight"
+    },
+    {
+      "code": "BX",
+      "name": "Current Period Imbalance Quantity"
+    },
+    {
+      "code": "BY",
+      "name": "Production Delivery Quantity"
+    },
+    {
+      "code": "BZ",
+      "name": "Entitlement Quantity"
+    },
+    {
+      "code": "C0",
+      "name": "Creditors"
+    },
+    {
+      "code": "C1",
+      "name": "Payment Experiences in Last 12 Months"
+    },
+    {
+      "code": "C2",
+      "name": "Payment Experiences in Last 3 Months"
+    },
+    {
+      "code": "C3",
+      "name": "Area Damaged"
+    },
+    {
+      "code": "C4",
+      "name": "Other Unlisted Stockholders"
+    },
+    {
+      "code": "C5",
+      "name": "Other Unlisted Participants"
+    },
+    {
+      "code": "CA",
+      "name": "Covered - Actual"
+    },
+    {
+      "code": "CB",
+      "name": "Closing Statement Balance"
+    },
+    {
+      "code": "CC",
+      "name": "Current Days on Market"
+    },
+    {
+      "code": "CD",
+      "name": "Co-insured - Actual"
+    },
+    {
+      "code": "CE",
+      "name": "Covered - Estimated"
+    },
+    {
+      "code": "CF",
+      "name": "Co-insured - Estimated"
+    },
+    {
+      "code": "CG",
+      "name": "Cumulative Gas Volume"
+    },
+    {
+      "code": "CH",
+      "name": "Cumulative Effect of Prior Period Adjustment"
+    },
+    {
+      "code": "CI",
+      "name": "Cumulative Gas Injection Volume"
+    },
+    {
+      "code": "CL",
+      "name": "Cumulative Liquid Injection Volume"
+    },
+    {
+      "code": "CN",
+      "name": "Continuance Duration"
+    },
+    {
+      "code": "CO",
+      "name": "Cumulative Oil/Condensate Volume"
+    },
+    {
+      "code": "CP",
+      "name": "Current Period Imbalance"
+    },
+    {
+      "code": "CR",
+      "name": "Certified Registered Nurse Anesthetist (CRNA) Number of Concurrent Procedures"
+    },
+    {
+      "code": "CS",
+      "name": "Current Service Life"
+    },
+    {
+      "code": "CW",
+      "name": "Cumulative Water Volume"
+    },
+    {
+      "code": "CY",
+      "name": "Convictions Sent"
+    },
+    {
+      "code": "CZ",
+      "name": "Total Number of Convictions"
+    },
+    {
+      "code": "D0",
+      "name": "Engineers"
+    },
+    {
+      "code": "D1",
+      "name": "Billed"
+    },
+    {
+      "code": "D2",
+      "name": "Executives"
+    },
+    {
+      "code": "D3",
+      "name": "Number of Co-insurance Days"
+    },
+    {
+      "code": "D4",
+      "name": "Field Workers"
+    },
+    {
+      "code": "D5",
+      "name": "Installers"
+    },
+    {
+      "code": "D6",
+      "name": "Members in Group"
+    },
+    {
+      "code": "D7",
+      "name": "Non-Consolidated Total-Domestic Subsidiaries"
+    },
+    {
+      "code": "D8",
+      "name": "Non-Consolidated Total-Foreign Subsidiaries"
+    },
+    {
+      "code": "D9",
+      "name": "Non-Union Employees"
+    },
+    {
+      "code": "DA",
+      "name": "Dependent's Age"
+    },
+    {
+      "code": "DB",
+      "name": "Deductible Blood Units"
+    },
+    {
+      "code": "DC",
+      "name": "Dependent Count"
+    },
+    {
+      "code": "DD",
+      "name": "Distributed"
+    },
+    {
+      "code": "DE",
+      "name": "Debited"
+    },
+    {
+      "code": "DF",
+      "name": "Deleted"
+    },
+    {
+      "code": "DG",
+      "name": "Gas Used for Drilling"
+    },
+    {
+      "code": "DH",
+      "name": "Maximum Benefit Period Accident to Age"
+    },
+    {
+      "code": "DI",
+      "name": "Disposed"
+    },
+    {
+      "code": "DJ",
+      "name": "Maximum Benefit Period Sickness to Age"
+    },
+    {
+      "code": "DK",
+      "name": "Airline Attendants"
+    },
+    {
+      "code": "DL",
+      "name": "Companies Included in Consolidation"
+    },
+    {
+      "code": "DM",
+      "name": "Total Consolidated Domestic Subsidiaries"
+    },
+    {
+      "code": "DN",
+      "name": "Default Notification Response Period"
+    },
+    {
+      "code": "DO",
+      "name": "Days Operated"
+    },
+    {
+      "code": "DP",
+      "name": "Days Produced"
+    },
+    {
+      "code": "DQ",
+      "name": "Total Consolidated Foreign Subsidiaries"
+    },
+    {
+      "code": "DR",
+      "name": "Direct Workers"
+    },
+    {
+      "code": "DS",
+      "name": "Dose"
+    },
+    {
+      "code": "DT",
+      "name": "Dependent Total"
+    },
+    {
+      "code": "DU",
+      "name": "Counter Clerks"
+    },
+    {
+      "code": "DW",
+      "name": "Domestic Affiliated Companies"
+    },
+    {
+      "code": "DX",
+      "name": "Drivers"
+    },
+    {
+      "code": "DY",
+      "name": "Days"
+    },
+    {
+      "code": "DZ",
+      "name": "Employed at Location"
+    },
+    {
+      "code": "E1",
+      "name": "Course Segments"
+    },
+    {
+      "code": "E2",
+      "name": "Degree Segments"
+    },
+    {
+      "code": "E3",
+      "name": "Employed on this job"
+    },
+    {
+      "code": "E4",
+      "name": "Employed in this Profession"
+    },
+    {
+      "code": "E5",
+      "name": "Employed by this Company"
+    },
+    {
+      "code": "E8",
+      "name": "Number of Entitled Exemptions"
+    },
+    {
+      "code": "E9",
+      "name": "Number of Withholding Exemptions"
+    },
+    {
+      "code": "EA",
+      "name": "Exclusive Uses"
+    },
+    {
+      "code": "EB",
+      "name": "Nonexclusive Uses"
+    },
+    {
+      "code": "EC",
+      "name": "Use of Extracorporeal Circulation"
+    },
+    {
+      "code": "ED",
+      "name": "Domestic Uses"
+    },
+    {
+      "code": "EE",
+      "name": "Small Business Uses"
+    },
+    {
+      "code": "EF",
+      "name": "Nurses"
+    },
+    {
+      "code": "EG",
+      "name": "Office Workers"
+    },
+    {
+      "code": "EH",
+      "name": "Paid in Common Shares"
+    },
+    {
+      "code": "EI",
+      "name": "Paid in Preferred Shares"
+    },
+    {
+      "code": "EJ",
+      "name": "Pilots"
+    },
+    {
+      "code": "EK",
+      "name": "Plant Workers"
+    },
+    {
+      "code": "EL",
+      "name": "Principals Included as Employees"
+    },
+    {
+      "code": "EM",
+      "name": "Emergency Modifying Units"
+    },
+    {
+      "code": "EN",
+      "name": "Suppliers"
+    },
+    {
+      "code": "EO",
+      "name": "Teachers"
+    },
+    {
+      "code": "EP",
+      "name": "Product Exchange Amount"
+    },
+    {
+      "code": "EQ",
+      "name": "Equity Security Holder"
+    },
+    {
+      "code": "ER",
+      "name": "Estimated Remaining Economic Life"
+    },
+    {
+      "code": "ES",
+      "name": "Ending Stock"
+    },
+    {
+      "code": "ET",
+      "name": "Employee Total"
+    },
+    {
+      "code": "EU",
+      "name": "Total Consolidated Subsidiaries"
+    },
+    {
+      "code": "EV",
+      "name": "Total Non-Consolidated Subsidiaries"
+    },
+    {
+      "code": "EW",
+      "name": "Evaporated Water"
+    },
+    {
+      "code": "EX",
+      "name": "Union Employees"
+    },
+    {
+      "code": "EY",
+      "name": "Ported Telephone Lines"
+    },
+    {
+      "code": "EZ",
+      "name": "Service Resale"
+    },
+    {
+      "code": "F0",
+      "name": "Total claims with skin diseases or disorders"
+    },
+    {
+      "code": "F1",
+      "name": "Off Lease Fuel"
+    },
+    {
+      "code": "F3",
+      "name": "Total deaths as a Result of Injury"
+    },
+    {
+      "code": "F4",
+      "name": "Total deaths as a Result of Illness"
+    },
+    {
+      "code": "F5",
+      "name": "Total injury Claims with Days Away from Work or Restricted Work Activity"
+    },
+    {
+      "code": "F6",
+      "name": "Total injury Claims with Days Away from Work"
+    },
+    {
+      "code": "F7",
+      "name": "Total injury Claims without Lost Work Days"
+    },
+    {
+      "code": "F8",
+      "name": "Total Days Away from Work Due to Injury"
+    },
+    {
+      "code": "F9",
+      "name": "Total Days with Restricted Work Activity Due to Injury"
+    },
+    {
+      "code": "FA",
+      "name": "Full Baths"
+    },
+    {
+      "code": "FB",
+      "name": "Furnished Blood Units"
+    },
+    {
+      "code": "FC",
+      "name": "Fuel Consumed or Burned Amount"
+    },
+    {
+      "code": "FD",
+      "name": "Vehicular Radios"
+    },
+    {
+      "code": "FE",
+      "name": "Portable Radios"
+    },
+    {
+      "code": "FF",
+      "name": "Flare or Flash"
+    },
+    {
+      "code": "FG",
+      "name": "Marine Radios"
+    },
+    {
+      "code": "FH",
+      "name": "Pagers"
+    },
+    {
+      "code": "FI",
+      "name": "Conventional Mobiles"
+    },
+    {
+      "code": "FJ",
+      "name": "Trunked Channels"
+    },
+    {
+      "code": "FK",
+      "name": "Mobile Loading Allocation"
+    },
+    {
+      "code": "FL",
+      "name": "Units"
+    },
+    {
+      "code": "FM",
+      "name": "Aircraft Radios"
+    },
+    {
+      "code": "FN",
+      "name": "Total Claims with Dust Diseases of the Lungs"
+    },
+    {
+      "code": "FO",
+      "name": "Total Claims with Respiratory Conditions Due to Toxic Agents"
+    },
+    {
+      "code": "FP",
+      "name": "Total Claims with Poisoning Illnesses"
+    },
+    {
+      "code": "FQ",
+      "name": "Total Claims with Disorders Due to Physical Agents"
+    },
+    {
+      "code": "FS",
+      "name": "Gas Used for Fuel System"
+    },
+    {
+      "code": "FT",
+      "name": "Forecast to Complete"
+    },
+    {
+      "code": "FU",
+      "name": "Total Claims Associated with Repeated Trauma"
+    },
+    {
+      "code": "FV",
+      "name": "Total illness Claims with occupational illnesses not otherwise classified"
+    },
+    {
+      "code": "FW",
+      "name": "Total Days Away from Work Due to Illness"
+    },
+    {
+      "code": "FX",
+      "name": "Total Days of Restricted Work Activity Due to Illness"
+    },
+    {
+      "code": "FY",
+      "name": "Total illness with Lost Work Days or Restricted Work Activity"
+    },
+    {
+      "code": "FZ",
+      "name": "Total illness Claims with Days Away from Work"
+    },
+    {
+      "code": "G0",
+      "name": "Discharge Quantity"
+    },
+    {
+      "code": "G1",
+      "name": "Estimated Discharge Quantity"
+    },
+    {
+      "code": "G2",
+      "name": "Estimated Transfer Quantity"
+    },
+    {
+      "code": "G3",
+      "name": "Excursions"
+    },
+    {
+      "code": "G4",
+      "name": "Non-production Quantity"
+    },
+    {
+      "code": "G5",
+      "name": "Number of Deaths"
+    },
+    {
+      "code": "G6",
+      "name": "Number of Hospitalizations"
+    },
+    {
+      "code": "G7",
+      "name": "Number of Injuries"
+    },
+    {
+      "code": "G8",
+      "name": "Number of Injuries Requiring Medical Treatment"
+    },
+    {
+      "code": "G9",
+      "name": "Number of People Evacuated"
+    },
+    {
+      "code": "GA",
+      "name": "Gross Building Area"
+    },
+    {
+      "code": "GB",
+      "name": "Gross Annual Income Multiplier"
+    },
+    {
+      "code": "GC",
+      "name": "Gross Living Area"
+    },
+    {
+      "code": "GD",
+      "name": "Total illness Claims without Lost Work Days"
+    },
+    {
+      "code": "GE",
+      "name": "Original Term In Years"
+    },
+    {
+      "code": "GF",
+      "name": "Years Remaining"
+    },
+    {
+      "code": "GG",
+      "name": "Average Number of Employees"
+    },
+    {
+      "code": "GH",
+      "name": "Total Worked by All Employees"
+    },
+    {
+      "code": "GI",
+      "name": "Gas Injection Volume"
+    },
+    {
+      "code": "GL",
+      "name": "Gas Lift Volume"
+    },
+    {
+      "code": "GP",
+      "name": "Gross Production"
+    },
+    {
+      "code": "GQ",
+      "name": "Government Reporting Quantity"
+    },
+    {
+      "code": "GR",
+      "name": "Gas Receipt Volume"
+    },
+    {
+      "code": "GS",
+      "name": "Gas Sold"
+    },
+    {
+      "code": "GT",
+      "name": "Grade Transfer Amount"
+    },
+    {
+      "code": "GU",
+      "name": "Employee Total First Month of Quarter"
+    },
+    {
+      "code": "GV",
+      "name": "Gas Volume"
+    },
+    {
+      "code": "GW",
+      "name": "Employee Total Second Month of Quarter"
+    },
+    {
+      "code": "GX",
+      "name": "Employee Total Third Month of Quarter"
+    },
+    {
+      "code": "GZ",
+      "name": "Active Listings"
+    },
+    {
+      "code": "H0",
+      "name": "Number of People Sheltered-in-Place"
+    },
+    {
+      "code": "H1",
+      "name": "Quantity Recovered"
+    },
+    {
+      "code": "H2",
+      "name": "Quantity Recycled"
+    },
+    {
+      "code": "H3",
+      "name": "Quantity Released"
+    },
+    {
+      "code": "H4",
+      "name": "Quantity Treated"
+    },
+    {
+      "code": "H5",
+      "name": "Total Hazardous Waste Generated"
+    },
+    {
+      "code": "H6",
+      "name": "Operational Quantity"
+    },
+    {
+      "code": "H7",
+      "name": "Penalty Variance Quantity"
+    },
+    {
+      "code": "H8",
+      "name": "Allocated Quantity"
+    },
+    {
+      "code": "H9",
+      "name": "Scheduled Quantity"
+    },
+    {
+      "code": "HA",
+      "name": "Market Price Change"
+    },
+    {
+      "code": "HB",
+      "name": "Unpaid"
+    },
+    {
+      "code": "HC",
+      "name": "Branches"
+    },
+    {
+      "code": "HD",
+      "name": "Subsidiaries"
+    },
+    {
+      "code": "HE",
+      "name": "Age of Financial Information"
+    },
+    {
+      "code": "HF",
+      "name": "Invoices"
+    },
+    {
+      "code": "HG",
+      "name": "Financial Coverage Period"
+    },
+    {
+      "code": "HH",
+      "name": "Maximum Number of Employees at Location"
+    },
+    {
+      "code": "HI",
+      "name": "Previous Number of Accounts"
+    },
+    {
+      "code": "HJ",
+      "name": "Collection Period"
+    },
+    {
+      "code": "HK",
+      "name": "Disbursement Period"
+    },
+    {
+      "code": "HL",
+      "name": "Seats"
+    },
+    {
+      "code": "HM",
+      "name": "Use of Hypothermia"
+    },
+    {
+      "code": "HN",
+      "name": "Previous Number of Employees"
+    },
+    {
+      "code": "HO",
+      "name": "Use of Hypotension"
+    },
+    {
+      "code": "HP",
+      "name": "Use of Hyperbaric Pressurization"
+    },
+    {
+      "code": "HQ",
+      "name": "Kindergarten Students"
+    },
+    {
+      "code": "HR",
+      "name": "Use of Hypertension"
+    },
+    {
+      "code": "HS",
+      "name": "Hours"
+    },
+    {
+      "code": "HT",
+      "name": "Employee's Age"
+    },
+    {
+      "code": "HU",
+      "name": "Employee's Number of Days Away from Work Due to Injury"
+    },
+    {
+      "code": "HV",
+      "name": "Employee's Number of Days of Restricted Work Activity Due to Injury"
+    },
+    {
+      "code": "HW",
+      "name": "Employee's Total Number of Days Away from Work Due to Illness"
+    },
+    {
+      "code": "HY",
+      "name": "Total Death Claims"
+    },
+    {
+      "code": "HZ",
+      "name": "Total Claims with Days Away from Work"
+    },
+    {
+      "code": "I0",
+      "name": "Tenth Grade Students"
+    },
+    {
+      "code": "I1",
+      "name": "Eleventh Grade Students"
+    },
+    {
+      "code": "I2",
+      "name": "Twelfth Grade Students"
+    },
+    {
+      "code": "I3",
+      "name": "Prior Teaching Experience"
+    },
+    {
+      "code": "I4",
+      "name": "Prior Full-time Teaching Experience"
+    },
+    {
+      "code": "I5",
+      "name": "Prior Part-time Teaching Experience"
+    },
+    {
+      "code": "I6",
+      "name": "Prior Experience in Education"
+    },
+    {
+      "code": "I7",
+      "name": "Prior Full-time Experience in Education"
+    },
+    {
+      "code": "I8",
+      "name": "Prior Part-time Experience in Education"
+    },
+    {
+      "code": "I9",
+      "name": "Prior Experience Related to Job"
+    },
+    {
+      "code": "IA",
+      "name": "Local Country Employees"
+    },
+    {
+      "code": "IB",
+      "name": "Foreign Employees"
+    },
+    {
+      "code": "IC",
+      "name": "Prior Full-time Experience Related to Job"
+    },
+    {
+      "code": "ID",
+      "name": "Prior Part-time Experience Related to Job"
+    },
+    {
+      "code": "IE",
+      "name": "Total Prior Experience"
+    },
+    {
+      "code": "IF",
+      "name": "Total Full-time Prior Experience"
+    },
+    {
+      "code": "IG",
+      "name": "Total Part-time Prior Experience"
+    },
+    {
+      "code": "IH",
+      "name": "Total Years of Educational Service"
+    },
+    {
+      "code": "II",
+      "name": "Number of Irregular Interest Payments"
+    },
+    {
+      "code": "IJ",
+      "name": "Total Years of Educational Service in this District"
+    },
+    {
+      "code": "IK",
+      "name": "Years of Experience as School Principal"
+    },
+    {
+      "code": "IL",
+      "name": "Years of Experience as Classroom Teacher"
+    },
+    {
+      "code": "IM",
+      "name": "Years Worked for this System"
+    },
+    {
+      "code": "IN",
+      "name": "Indirect Workers"
+    },
+    {
+      "code": "IP",
+      "name": "Number of Interest Payments"
+    },
+    {
+      "code": "IQ",
+      "name": "In-Transit Quantity"
+    },
+    {
+      "code": "IS",
+      "name": "Information Provider Standardized Motor Vehicle Penalty Points"
+    },
+    {
+      "code": "IT",
+      "name": "Intertank Transfer Amount"
+    },
+    {
+      "code": "J0",
+      "name": "Ending Storage Balance"
+    },
+    {
+      "code": "J1",
+      "name": "Location Ending Storage Balance"
+    },
+    {
+      "code": "J2",
+      "name": "Location Ending Storage Balance - Firm"
+    },
+    {
+      "code": "J3",
+      "name": "Location Ending Storage Balance - Interruptible"
+    },
+    {
+      "code": "J4",
+      "name": "Maximum Available Daily Injection Quantity"
+    },
+    {
+      "code": "J5",
+      "name": "Maximum Available Daily Withdrawal Quantity"
+    },
+    {
+      "code": "J6",
+      "name": "Minimum Required Daily Injection Quantity"
+    },
+    {
+      "code": "J7",
+      "name": "Minimum Required Daily Withdrawal Quantity"
+    },
+    {
+      "code": "JA",
+      "name": "Activity Codes"
+    },
+    {
+      "code": "JB",
+      "name": "Associates"
+    },
+    {
+      "code": "JC",
+      "name": "Average Employees"
+    },
+    {
+      "code": "JD",
+      "name": "Cooperative Shares"
+    },
+    {
+      "code": "JE",
+      "name": "Estimated Employees at Location"
+    },
+    {
+      "code": "JF",
+      "name": "Estimated Total Employees"
+    },
+    {
+      "code": "JG",
+      "name": "Financial Institutions"
+    },
+    {
+      "code": "JH",
+      "name": "Judgments"
+    },
+    {
+      "code": "JI",
+      "name": "Land Size"
+    },
+    {
+      "code": "JJ",
+      "name": "Liens"
+    },
+    {
+      "code": "JK",
+      "name": "Minimum Employees at Location"
+    },
+    {
+      "code": "JL",
+      "name": "Office Size"
+    },
+    {
+      "code": "JM",
+      "name": "Owner"
+    },
+    {
+      "code": "JN",
+      "name": "Plant Size"
+    },
+    {
+      "code": "JO",
+      "name": "Previous Number of Branches"
+    },
+    {
+      "code": "JP",
+      "name": "Protested Bills"
+    },
+    {
+      "code": "JQ",
+      "name": "Suits"
+    },
+    {
+      "code": "JR",
+      "name": "Uniform Commercial Code (UCC) Filings"
+    },
+    {
+      "code": "JS",
+      "name": "Judicial Stay Duration"
+    },
+    {
+      "code": "JT",
+      "name": "Warehouse Size"
+    },
+    {
+      "code": "JU",
+      "name": "Total Days Away from Work"
+    },
+    {
+      "code": "JV",
+      "name": "Total Days of Restricted Work Activity"
+    },
+    {
+      "code": "JW",
+      "name": "Total Claims without Days Away from Work and without Restricted Work Activity"
+    },
+    {
+      "code": "JX",
+      "name": "Secretaries"
+    },
+    {
+      "code": "JY",
+      "name": "Mechanics"
+    },
+    {
+      "code": "JZ",
+      "name": "Auditors"
+    },
+    {
+      "code": "K1",
+      "name": "Messengers"
+    },
+    {
+      "code": "K2",
+      "name": "Primary Managers"
+    },
+    {
+      "code": "K3",
+      "name": "Participation Shares"
+    },
+    {
+      "code": "K4",
+      "name": "Detrimental Legal Filings"
+    },
+    {
+      "code": "K5",
+      "name": "Petitions Filed"
+    },
+    {
+      "code": "K6",
+      "name": "Drafts"
+    },
+    {
+      "code": "K7",
+      "name": "Business Failure National Average Incidence"
+    },
+    {
+      "code": "K8",
+      "name": "Business Failure Industry Incidence"
+    },
+    {
+      "code": "K9",
+      "name": "Business Failure Class Incidence"
+    },
+    {
+      "code": "KA",
+      "name": "Estimated"
+    },
+    {
+      "code": "KB",
+      "name": "Net Quantity Increase"
+    },
+    {
+      "code": "KC",
+      "name": "Net Quantity Decrease"
+    },
+    {
+      "code": "KD",
+      "name": "Expenditure Quantity"
+    },
+    {
+      "code": "KE",
+      "name": "Originals"
+    },
+    {
+      "code": "KF",
+      "name": "Duplicates"
+    },
+    {
+      "code": "KG",
+      "name": "Completed Line Items"
+    },
+    {
+      "code": "KH",
+      "name": "Completed Contracts"
+    },
+    {
+      "code": "KI",
+      "name": "Active Contracts Delinquent-Buying Party Caused"
+    },
+    {
+      "code": "KJ",
+      "name": "Active Contracts Delinquent"
+    },
+    {
+      "code": "KK",
+      "name": "Active Contracts Delinquent-Contractor Caused"
+    },
+    {
+      "code": "KL",
+      "name": "Active Contracts Delinquent-Unknown Causes"
+    },
+    {
+      "code": "KM",
+      "name": "Active Line Items Delinquent"
+    },
+    {
+      "code": "KN",
+      "name": "Active Line Items Delinquent-Buying Party Caused"
+    },
+    {
+      "code": "KO",
+      "name": "Active Line Items Delinquent-Contractor Caused"
+    },
+    {
+      "code": "KP",
+      "name": "Active Line Items Delinquent-Unknown Causes"
+    },
+    {
+      "code": "KQ",
+      "name": "Contracts Completed Delinquent-Buying Party Caused"
+    },
+    {
+      "code": "KR",
+      "name": "Contract Completed Delinquent-Contractor Caused"
+    },
+    {
+      "code": "KS",
+      "name": "Contracts Completed Delinquent-Unknown Causes"
+    },
+    {
+      "code": "KU",
+      "name": "Reported Deficiencies"
+    },
+    {
+      "code": "KV",
+      "name": "Line Items Completed Delinquent-Buying Party Caused"
+    },
+    {
+      "code": "KW",
+      "name": "Line Items Completed Delinquent-Contractor Caused"
+    },
+    {
+      "code": "KX",
+      "name": "Line Items Completed Delinquent-Unknown Causes"
+    },
+    {
+      "code": "KY",
+      "name": "Corrective Action Requests-Verbal"
+    },
+    {
+      "code": "KZ",
+      "name": "Corrective Action Requests-Written"
+    },
+    {
+      "code": "L2",
+      "name": "Guarantee Fee Buyup Maximum"
+    },
+    {
+      "code": "L3",
+      "name": "Contract Buyup"
+    },
+    {
+      "code": "L4",
+      "name": "Contract Buydown"
+    },
+    {
+      "code": "L5",
+      "name": "Guarantee Fee Rate after Alternate Payment Method"
+    },
+    {
+      "code": "L6",
+      "name": "Guarantee Fee Rate after Buyup or Buydown"
+    },
+    {
+      "code": "L7",
+      "name": "Buyup or Buydown Rate per Basis Point"
+    },
+    {
+      "code": "L8",
+      "name": "Location Net Capacity"
+    },
+    {
+      "code": "L9",
+      "name": "Subject to loss or elimination"
+    },
+    {
+      "code": "LA",
+      "name": "Life-time Reserve - Actual"
+    },
+    {
+      "code": "LB",
+      "name": "Loss Allowance"
+    },
+    {
+      "code": "LC",
+      "name": "Late Payment Period"
+    },
+    {
+      "code": "LD",
+      "name": "Limit Value"
+    },
+    {
+      "code": "LE",
+      "name": "Life-time Reserve - Estimated"
+    },
+    {
+      "code": "LG",
+      "name": "Loss or Gain"
+    },
+    {
+      "code": "LH",
+      "name": "Lost Gas"
+    },
+    {
+      "code": "LI",
+      "name": "Liquid Injection Volume"
+    },
+    {
+      "code": "LK",
+      "name": "Corrective Action Requests-Method C"
+    },
+    {
+      "code": "LL",
+      "name": "Corrective Action Requests-Method D"
+    },
+    {
+      "code": "LM",
+      "name": "Corrective Action Requests-Method E"
+    },
+    {
+      "code": "LN",
+      "name": "Aged Active Line Items Delinquent-Contractor Caused"
+    },
+    {
+      "code": "LO",
+      "name": "Lost Oil"
+    },
+    {
+      "code": "LP",
+      "name": "Lease Periods"
+    },
+    {
+      "code": "LQ",
+      "name": "Aged Line Items Delinquent"
+    },
+    {
+      "code": "LR",
+      "name": "Aged Line Items Completed-Contractor Caused"
+    },
+    {
+      "code": "LS",
+      "name": "Oil Condensate Sold"
+    },
+    {
+      "code": "LT",
+      "name": "Tariff Loss Allowance"
+    },
+    {
+      "code": "LU",
+      "name": "Lifetime Reserve Days - Applied to this Claim"
+    },
+    {
+      "code": "LV",
+      "name": "Oil/Condensate Volume"
+    },
+    {
+      "code": "LW",
+      "name": "Lost Work Time Actual"
+    },
+    {
+      "code": "LX",
+      "name": "Lost Work Time Estimated"
+    },
+    {
+      "code": "LY",
+      "name": "Length of Residency"
+    },
+    {
+      "code": "LZ",
+      "name": "Lanes"
+    },
+    {
+      "code": "M1",
+      "name": "Matching Equipment"
+    },
+    {
+      "code": "M2",
+      "name": "Maximum"
+    },
+    {
+      "code": "M3",
+      "name": "Total Federal Points"
+    },
+    {
+      "code": "M4",
+      "name": "Contributions"
+    },
+    {
+      "code": "M5",
+      "name": "Contributors"
+    },
+    {
+      "code": "M6",
+      "name": "Endorsers"
+    },
+    {
+      "code": "M7",
+      "name": "Functions"
+    },
+    {
+      "code": "M8",
+      "name": "Guarantors"
+    },
+    {
+      "code": "M9",
+      "name": "Points"
+    },
+    {
+      "code": "MA",
+      "name": "Miscellaneous Allowance"
+    },
+    {
+      "code": "MB",
+      "name": "Number of Public Officials"
+    },
+    {
+      "code": "MC",
+      "name": "Total Non-Federal Points"
+    },
+    {
+      "code": "MD",
+      "name": "Million Dollar Roundtable Credits"
+    },
+    {
+      "code": "ME",
+      "name": "Minimum Number of Employees"
+    },
+    {
+      "code": "MF",
+      "name": "Manufactured"
+    },
+    {
+      "code": "MG",
+      "name": "Pledges"
+    },
+    {
+      "code": "MH",
+      "name": "Total Points"
+    },
+    {
+      "code": "MI",
+      "name": "Miles"
+    },
+    {
+      "code": "MJ",
+      "name": "Attendees"
+    },
+    {
+      "code": "MK",
+      "name": "Tickets Sold"
+    },
+    {
+      "code": "ML",
+      "name": "Total Number of Manifest Lines"
+    },
+    {
+      "code": "MM",
+      "name": "Maximum Maturity Extension"
+    },
+    {
+      "code": "MN",
+      "name": "Month"
+    },
+    {
+      "code": "MO",
+      "name": "Minimum Order Package Level"
+    },
+    {
+      "code": "MP",
+      "name": "Total Number of Maps in a Pack"
+    },
+    {
+      "code": "MQ",
+      "name": "Maximum Ship Quantity"
+    },
+    {
+      "code": "MS",
+      "name": "Measured Quantity"
+    },
+    {
+      "code": "MX",
+      "name": "Maximum Number of Employees"
+    },
+    {
+      "code": "N1",
+      "name": "Number of Attacks or Occurrences"
+    },
+    {
+      "code": "N2",
+      "name": "Number of Dead"
+    },
+    {
+      "code": "N3",
+      "name": "Number of Living"
+    },
+    {
+      "code": "N4",
+      "name": "Number of Times"
+    },
+    {
+      "code": "N5",
+      "name": "Minimum Forecast Quantity"
+    },
+    {
+      "code": "N6",
+      "name": "Maximum Forecast Quantity"
+    },
+    {
+      "code": "NA",
+      "name": "Number of Non-covered Days"
+    },
+    {
+      "code": "NB",
+      "name": "Number of Units (Housing)"
+    },
+    {
+      "code": "NC",
+      "name": "Number of Claimants"
+    },
+    {
+      "code": "ND",
+      "name": "Number of Late Charges"
+    },
+    {
+      "code": "NE",
+      "name": "Non-Covered - Estimated"
+    },
+    {
+      "code": "NF",
+      "name": "Number of Full-Time Employees"
+    },
+    {
+      "code": "NG",
+      "name": "Number of Nonsufficient Fund Items"
+    },
+    {
+      "code": "NH",
+      "name": "Noncovered - Actual"
+    },
+    {
+      "code": "NL",
+      "name": "Number of Levels"
+    },
+    {
+      "code": "NN",
+      "name": "Number of Hospitals"
+    },
+    {
+      "code": "NO",
+      "name": "Number of Physicians"
+    },
+    {
+      "code": "NP",
+      "name": "Number of Members"
+    },
+    {
+      "code": "NQ",
+      "name": "Number of Franchisees"
+    },
+    {
+      "code": "NR",
+      "name": "Not Replaced Blood Units"
+    },
+    {
+      "code": "NS",
+      "name": "Number of Stations"
+    },
+    {
+      "code": "NT",
+      "name": "Reports"
+    },
+    {
+      "code": "NU",
+      "name": "Since Last Travel"
+    },
+    {
+      "code": "NV",
+      "name": "Net"
+    },
+    {
+      "code": "NW",
+      "name": "Until Next Travel"
+    },
+    {
+      "code": "O1",
+      "name": "Scheduled Receipt"
+    },
+    {
+      "code": "O2",
+      "name": "Scheduled Delivery"
+    },
+    {
+      "code": "O3",
+      "name": "Operational Receipt"
+    },
+    {
+      "code": "O4",
+      "name": "Operational Delivery"
+    },
+    {
+      "code": "O5",
+      "name": "Allocated Receipt"
+    },
+    {
+      "code": "O6",
+      "name": "Allocated Delivery"
+    },
+    {
+      "code": "O7",
+      "name": "Distributed Confirmed Receipt"
+    },
+    {
+      "code": "O8",
+      "name": "Distributed Confirmed Delivery"
+    },
+    {
+      "code": "O9",
+      "name": "Scheduling Tolerance Receipt"
+    },
+    {
+      "code": "OA",
+      "name": "Scheduling Tolerance Delivery"
+    },
+    {
+      "code": "OB",
+      "name": "Energy"
+    },
+    {
+      "code": "OC",
+      "name": "Order Count"
+    },
+    {
+      "code": "OD",
+      "name": "Other Miscellaneous Disposition"
+    },
+    {
+      "code": "OE",
+      "name": "Number of Weeks Per Year"
+    },
+    {
+      "code": "OF",
+      "name": "Off Premise Sales Quantity"
+    },
+    {
+      "code": "OG",
+      "name": "Other Gas Disposition"
+    },
+    {
+      "code": "OH",
+      "name": "Other Injection Volume"
+    },
+    {
+      "code": "OI",
+      "name": "Opening Statement Balance"
+    },
+    {
+      "code": "OL",
+      "name": "Original Loan Term"
+    },
+    {
+      "code": "ON",
+      "name": "On Premise Sales Quantity"
+    },
+    {
+      "code": "OO",
+      "name": "Other Oil Condensate Disposition"
+    },
+    {
+      "code": "OQ",
+      "name": "Optimum Order Quantity"
+    },
+    {
+      "code": "OR",
+      "name": "Original"
+    },
+    {
+      "code": "OT",
+      "name": "Number of Operating Periods at Failure"
+    },
+    {
+      "code": "OU",
+      "name": "Outlier Days"
+    },
+    {
+      "code": "OV",
+      "name": "Overage"
+    },
+    {
+      "code": "OW",
+      "name": "Other Water Disposition"
+    },
+    {
+      "code": "P1",
+      "name": "Project Phases"
+    },
+    {
+      "code": "P3",
+      "name": "Physical Status III"
+    },
+    {
+      "code": "P4",
+      "name": "Physical Status IV"
+    },
+    {
+      "code": "P5",
+      "name": "Physical Status V"
+    },
+    {
+      "code": "P6",
+      "name": "Number of Services or Procedures"
+    },
+    {
+      "code": "P7",
+      "name": "Prescription Dosage"
+    },
+    {
+      "code": "P8",
+      "name": "Prescription Frequency"
+    },
+    {
+      "code": "P9",
+      "name": "Number of People Living at Residence"
+    },
+    {
+      "code": "PA",
+      "name": "Pipeline Adjustment or Allowance"
+    },
+    {
+      "code": "PB",
+      "name": "Pressure Base"
+    },
+    {
+      "code": "PC",
+      "name": "Prior Cumulative Imbalance"
+    },
+    {
+      "code": "PD",
+      "name": "Payment Duration Weeks"
+    },
+    {
+      "code": "PE",
+      "name": "Period of Employment"
+    },
+    {
+      "code": "PF",
+      "name": "Gas Used for Plant Fuel"
+    },
+    {
+      "code": "PG",
+      "name": "Persistency"
+    },
+    {
+      "code": "PH",
+      "name": "Promotional"
+    },
+    {
+      "code": "PK",
+      "name": "Parking Spaces"
+    },
+    {
+      "code": "PL",
+      "name": "Partial Baths"
+    },
+    {
+      "code": "PO",
+      "name": "Percentage of Ordered Quantity"
+    },
+    {
+      "code": "PP",
+      "name": "Purchase of Product"
+    },
+    {
+      "code": "PQ",
+      "name": "Cumulative Quantity Required Prior to the First Scheduled Period"
+    },
+    {
+      "code": "PR",
+      "name": "Requirement Quantity that was Previously Released"
+    },
+    {
+      "code": "PS",
+      "name": "Prescription"
+    },
+    {
+      "code": "PT",
+      "name": "Patients"
+    },
+    {
+      "code": "PW",
+      "name": "Pitted Water"
+    },
+    {
+      "code": "PX",
+      "name": "Prior Units Accepted"
+    },
+    {
+      "code": "PY",
+      "name": "Paid"
+    },
+    {
+      "code": "Q1",
+      "name": "Minimum quantity to which tax rate applies"
+    },
+    {
+      "code": "Q2",
+      "name": "Maximum quantity to which tax rate applies"
+    },
+    {
+      "code": "Q3",
+      "name": "Quantity Earned"
+    },
+    {
+      "code": "Q4",
+      "name": "Quantity Carried Forward"
+    },
+    {
+      "code": "Q5",
+      "name": "Number of 3 to 4 Year Olds"
+    },
+    {
+      "code": "Q6",
+      "name": "Autistic Individuals"
+    },
+    {
+      "code": "Q7",
+      "name": "Deaf-blind Individuals"
+    },
+    {
+      "code": "Q8",
+      "name": "Hearing Impaired Individuals"
+    },
+    {
+      "code": "Q9",
+      "name": "Mentally Retarded Individuals"
+    },
+    {
+      "code": "QA",
+      "name": "Quantity Approved"
+    },
+    {
+      "code": "QB",
+      "name": "Quantity Dispensed"
+    },
+    {
+      "code": "QC",
+      "name": "Quantity Disapproved"
+    },
+    {
+      "code": "QD",
+      "name": "Quantity Delivered"
+    },
+    {
+      "code": "QE",
+      "name": "Quantity Deferred"
+    },
+    {
+      "code": "QF",
+      "name": "High Fabrication Authorization Quantity"
+    },
+    {
+      "code": "QH",
+      "name": "Quantity on Hold"
+    },
+    {
+      "code": "QI",
+      "name": "Community Service Duration"
+    },
+    {
+      "code": "QJ",
+      "name": "Number of Times Deported"
+    },
+    {
+      "code": "QL",
+      "name": "Jail Sentence Duration"
+    },
+    {
+      "code": "QM",
+      "name": "Probation Duration"
+    },
+    {
+      "code": "QN",
+      "name": "Restriction Duration"
+    },
+    {
+      "code": "QO",
+      "name": "Operating Quantity"
+    },
+    {
+      "code": "QP",
+      "name": "Quantity by Position"
+    },
+    {
+      "code": "QQ",
+      "name": "Suspended Duration"
+    },
+    {
+      "code": "QR",
+      "name": "High Raw Material Authorization Quantity"
+    },
+    {
+      "code": "QS",
+      "name": "Quantity Per Skid"
+    },
+    {
+      "code": "QT",
+      "name": "Plant Thermal Reduction"
+    },
+    {
+      "code": "QU",
+      "name": "Quantity Serviced"
+    },
+    {
+      "code": "QV",
+      "name": "Quantity Cancelled"
+    },
+    {
+      "code": "QW",
+      "name": "Quantity Withdrawn"
+    },
+    {
+      "code": "QX",
+      "name": "Qualifying Weeks"
+    },
+    {
+      "code": "QY",
+      "name": "Repayment Plan Term"
+    },
+    {
+      "code": "R1",
+      "name": "Replenishment (Fill)"
+    },
+    {
+      "code": "R2",
+      "name": "Individuals with Orthopedic Impairment"
+    },
+    {
+      "code": "R3",
+      "name": "Estimated Remaining Physical Life"
+    },
+    {
+      "code": "R4",
+      "name": "Individuals with Specific Learning Disability"
+    },
+    {
+      "code": "R5",
+      "name": "Axles"
+    },
+    {
+      "code": "R6",
+      "name": "Platform Count"
+    },
+    {
+      "code": "R7",
+      "name": "Individuals with Visual Impairment"
+    },
+    {
+      "code": "R8",
+      "name": "Individuals with Other Health Impairment"
+    },
+    {
+      "code": "R9",
+      "name": "Fuel"
+    },
+    {
+      "code": "RA",
+      "name": "Refills Authorized"
+    },
+    {
+      "code": "RB",
+      "name": "Replaced Blood Units"
+    },
+    {
+      "code": "RC",
+      "name": "Number of Items Authorized at Store"
+    },
+    {
+      "code": "RD",
+      "name": "Number of Items Authorized at Warehouse"
+    },
+    {
+      "code": "RE",
+      "name": "Gas Returned to Earth"
+    },
+    {
+      "code": "RF",
+      "name": "Number of Items in Stock"
+    },
+    {
+      "code": "RG",
+      "name": "Gas Used for Repressuring or Pressure Maintenance"
+    },
+    {
+      "code": "RH",
+      "name": "Number of Shelf Tags"
+    },
+    {
+      "code": "RJ",
+      "name": "Quantity Available on Shelf"
+    },
+    {
+      "code": "RL",
+      "name": "Gas Returned to Property for fuel"
+    },
+    {
+      "code": "RM",
+      "name": "Room Count"
+    },
+    {
+      "code": "RN",
+      "name": "Units Rented"
+    },
+    {
+      "code": "RP",
+      "name": "Retail Demand Quantity"
+    },
+    {
+      "code": "RQ",
+      "name": "Royalty"
+    },
+    {
+      "code": "RS",
+      "name": "Number of Shelf Facings"
+    },
+    {
+      "code": "RT",
+      "name": "Retail Sales Quantity"
+    },
+    {
+      "code": "RW",
+      "name": "Water Re-injected on Property"
+    },
+    {
+      "code": "RY",
+      "name": "Requirement Quantity"
+    },
+    {
+      "code": "S1",
+      "name": "Planned Unit Development (PUD) Units"
+    },
+    {
+      "code": "S2",
+      "name": "Rooms, Finished Area Above Grade"
+    },
+    {
+      "code": "S3",
+      "name": "Dwelling Area"
+    },
+    {
+      "code": "S4",
+      "name": "Garage or Carport Area"
+    },
+    {
+      "code": "S5",
+      "name": "Units for Sale"
+    },
+    {
+      "code": "S6",
+      "name": "Gross Rent Multiplier"
+    },
+    {
+      "code": "S7",
+      "name": "Age, High Value"
+    },
+    {
+      "code": "S8",
+      "name": "Age, Low Value"
+    },
+    {
+      "code": "S9",
+      "name": "Bedrooms, Finished Area Above Grade"
+    },
+    {
+      "code": "SA",
+      "name": "Shipments"
+    },
+    {
+      "code": "SB",
+      "name": "Solicited"
+    },
+    {
+      "code": "SC",
+      "name": "Bathrooms, Finished Area Above Grade"
+    },
+    {
+      "code": "SD",
+      "name": "Criminal Sentence Duration"
+    },
+    {
+      "code": "SE",
+      "name": "Gross Living, Finished Area Above Grade"
+    },
+    {
+      "code": "SF",
+      "name": "Site"
+    },
+    {
+      "code": "SG",
+      "name": "Swan-Ganz"
+    },
+    {
+      "code": "SH",
+      "name": "Shortage"
+    },
+    {
+      "code": "SI",
+      "name": "Rooms"
+    },
+    {
+      "code": "SJ",
+      "name": "Area of Level"
+    },
+    {
+      "code": "SK",
+      "name": "Gas Shrinkage"
+    },
+    {
+      "code": "SL",
+      "name": "Predominate Age"
+    },
+    {
+      "code": "SM",
+      "name": "Minimum Criminal Sentence Duration"
+    },
+    {
+      "code": "SN",
+      "name": "Age"
+    },
+    {
+      "code": "SO",
+      "name": "Oil Sedimentation"
+    },
+    {
+      "code": "SP",
+      "name": "Days Supply"
+    },
+    {
+      "code": "SQ",
+      "name": "Product Sales Amount"
+    },
+    {
+      "code": "SR",
+      "name": "Effective Age"
+    },
+    {
+      "code": "SS",
+      "name": "Shares of Preferred Stock"
+    },
+    {
+      "code": "ST",
+      "name": "Standard"
+    },
+    {
+      "code": "SU",
+      "name": "Forecasted Scanned Quantity"
+    },
+    {
+      "code": "SV",
+      "name": "Shares of Common Stock"
+    },
+    {
+      "code": "SW",
+      "name": "Sample Amount"
+    },
+    {
+      "code": "SX",
+      "name": "Maximum Criminal Sentence Duration"
+    },
+    {
+      "code": "SY",
+      "name": "State or Province Motor Vehicle Penalty Points"
+    },
+    {
+      "code": "SZ",
+      "name": "Seasonal"
+    },
+    {
+      "code": "T1",
+      "name": "Time Units Known"
+    },
+    {
+      "code": "T2",
+      "name": "Time Units Spent on Duty"
+    },
+    {
+      "code": "T3",
+      "name": "Total Days on Market"
+    },
+    {
+      "code": "T4",
+      "name": "Total Rooms"
+    },
+    {
+      "code": "T5",
+      "name": "Total Number of Units"
+    },
+    {
+      "code": "T6",
+      "name": "Total Number of Units for Sale"
+    },
+    {
+      "code": "T7",
+      "name": "Tires"
+    },
+    {
+      "code": "TA",
+      "name": "Tank Allowance"
+    },
+    {
+      "code": "TB",
+      "name": "Oil Theft"
+    },
+    {
+      "code": "TC",
+      "name": "Total at Complete"
+    },
+    {
+      "code": "TD",
+      "name": "Total to Date"
+    },
+    {
+      "code": "TE",
+      "name": "Number of Theatres"
+    },
+    {
+      "code": "TG",
+      "name": "Total Gas Injection Volume"
+    },
+    {
+      "code": "TH",
+      "name": "Theoretical Quantity"
+    },
+    {
+      "code": "TI",
+      "name": "Total Oil and/or Condensate Injection Volume"
+    },
+    {
+      "code": "TJ",
+      "name": "Duration in Current Job"
+    },
+    {
+      "code": "TK",
+      "name": "Total Oil and/or Condensate Disposition"
+    },
+    {
+      "code": "TM",
+      "name": "Total Water Disposition"
+    },
+    {
+      "code": "TN",
+      "name": "Total Beginning Inventory"
+    },
+    {
+      "code": "TO",
+      "name": "Total"
+    },
+    {
+      "code": "TP",
+      "name": "Time in Position"
+    },
+    {
+      "code": "TQ",
+      "name": "Total Quantity of All Buys"
+    },
+    {
+      "code": "TR",
+      "name": "Trips"
+    },
+    {
+      "code": "TS",
+      "name": "Total Number of Parking Spaces"
+    },
+    {
+      "code": "TT",
+      "name": "Total Production Volume"
+    },
+    {
+      "code": "TU",
+      "name": "Total Adjustments Volume"
+    },
+    {
+      "code": "TV",
+      "name": "Total Gas Disposition"
+    },
+    {
+      "code": "TW",
+      "name": "Total Water Injection Volume"
+    },
+    {
+      "code": "TX",
+      "name": "Total Ending Inventory"
+    },
+    {
+      "code": "TY",
+      "name": "Total Sales Volume"
+    },
+    {
+      "code": "U1",
+      "name": "Freelance Collectors"
+    },
+    {
+      "code": "U2",
+      "name": "Branch Locations Owned"
+    },
+    {
+      "code": "U3",
+      "name": "Branch Locations Leased"
+    },
+    {
+      "code": "UA",
+      "name": "Units Completed"
+    },
+    {
+      "code": "UB",
+      "name": "Poultry"
+    },
+    {
+      "code": "UC",
+      "name": "Livestock"
+    },
+    {
+      "code": "UD",
+      "name": "Passengers"
+    },
+    {
+      "code": "UE",
+      "name": "Trainers"
+    },
+    {
+      "code": "UF",
+      "name": "Operators"
+    },
+    {
+      "code": "UG",
+      "name": "Gas Used on Property"
+    },
+    {
+      "code": "UH",
+      "name": "Inspectors"
+    },
+    {
+      "code": "UI",
+      "name": "Collectors"
+    },
+    {
+      "code": "UJ",
+      "name": "Professionals"
+    },
+    {
+      "code": "UK",
+      "name": "Supervisors"
+    },
+    {
+      "code": "UL",
+      "name": "Approximate Number of Units for Sale Projected"
+    },
+    {
+      "code": "UM",
+      "name": "Administrators"
+    },
+    {
+      "code": "UN",
+      "name": "Promoters"
+    },
+    {
+      "code": "UO",
+      "name": "Oil Condensate Used on Property"
+    },
+    {
+      "code": "UP",
+      "name": "Divisions"
+    },
+    {
+      "code": "UQ",
+      "name": "Tables"
+    },
+    {
+      "code": "UR",
+      "name": "Fuel Pumps"
+    },
+    {
+      "code": "US",
+      "name": "In-Use"
+    },
+    {
+      "code": "UT",
+      "name": "Machines"
+    },
+    {
+      "code": "UU",
+      "name": "Used"
+    },
+    {
+      "code": "UV",
+      "name": "Trademarks Used"
+    },
+    {
+      "code": "UW",
+      "name": "Available for Cultivation"
+    },
+    {
+      "code": "UX",
+      "name": "Foremen"
+    },
+    {
+      "code": "UY",
+      "name": "Travelling Employees"
+    },
+    {
+      "code": "UZ",
+      "name": "Freelance Salespersons"
+    },
+    {
+      "code": "V1",
+      "name": "Retention Quantity"
+    },
+    {
+      "code": "V2",
+      "name": "Available Quantity"
+    },
+    {
+      "code": "V3",
+      "name": "Transfer Quantity"
+    },
+    {
+      "code": "V4",
+      "name": "Surveys in Average Rating"
+    },
+    {
+      "code": "V5",
+      "name": "Vacancies"
+    },
+    {
+      "code": "V8",
+      "name": "Unsubscribed Capacity"
+    },
+    {
+      "code": "VA",
+      "name": "Volume Shrinkage Adjustment or Allowance"
+    },
+    {
+      "code": "VB",
+      "name": "Blank Votes"
+    },
+    {
+      "code": "VC",
+      "name": "Cumulative Earned Value"
+    },
+    {
+      "code": "VD",
+      "name": "Scattered Votes"
+    },
+    {
+      "code": "VE",
+      "name": "Earned Value"
+    },
+    {
+      "code": "VF",
+      "name": "Federal Votes"
+    },
+    {
+      "code": "VG",
+      "name": "Gas Vented"
+    },
+    {
+      "code": "VH",
+      "name": "Schedule Variance"
+    },
+    {
+      "code": "VI",
+      "name": "Cumulative Schedule Variance"
+    },
+    {
+      "code": "VJ",
+      "name": "Cumulative Variance"
+    },
+    {
+      "code": "VK",
+      "name": "Estimate at Complete"
+    },
+    {
+      "code": "VL",
+      "name": "At Complete Variance"
+    },
+    {
+      "code": "VM",
+      "name": "Variance Adjustment"
+    },
+    {
+      "code": "VN",
+      "name": "No Votes"
+    },
+    {
+      "code": "VP",
+      "name": "Presidential Votes"
+    },
+    {
+      "code": "VR",
+      "name": "Variance"
+    },
+    {
+      "code": "VS",
+      "name": "Visits"
+    },
+    {
+      "code": "VT",
+      "name": "Votes"
+    },
+    {
+      "code": "VV",
+      "name": "Void Votes"
+    },
+    {
+      "code": "VY",
+      "name": "Yes Votes"
+    },
+    {
+      "code": "W0",
+      "name": "Bankruptcy Petitions"
+    },
+    {
+      "code": "W1",
+      "name": "Buyers"
+    },
+    {
+      "code": "W2",
+      "name": "Debentures"
+    },
+    {
+      "code": "W3",
+      "name": "Debentures Filed against Directors"
+    },
+    {
+      "code": "W4",
+      "name": "Detrimental Legal Filings against Directors"
+    },
+    {
+      "code": "W5",
+      "name": "Failed Businesses of Directors"
+    },
+    {
+      "code": "W6",
+      "name": "Professors"
+    },
+    {
+      "code": "W7",
+      "name": "Sellers"
+    },
+    {
+      "code": "W8",
+      "name": "Skilled Workers"
+    },
+    {
+      "code": "W9",
+      "name": "Trademarks Represented"
+    },
+    {
+      "code": "WA",
+      "name": "Total number of Workers' Compensation First Reports"
+    },
+    {
+      "code": "WB",
+      "name": "Total number of Workers' Compensation Subsequent Reports"
+    },
+    {
+      "code": "WC",
+      "name": "Total number of Workers' Compensation Combined Reports"
+    },
+    {
+      "code": "WD",
+      "name": "Units Worked per Day"
+    },
+    {
+      "code": "WE",
+      "name": "Limited Quantity"
+    },
+    {
+      "code": "WG",
+      "name": "Weight Gain"
+    },
+    {
+      "code": "WL",
+      "name": "Weight Loss"
+    },
+    {
+      "code": "WO",
+      "name": "Operator's Working Interest"
+    },
+    {
+      "code": "WP",
+      "name": "Number of Producing Wells Remaining on Property or Facility"
+    },
+    {
+      "code": "WR",
+      "name": "Number of Producing Wells Remaining on Royalty Account"
+    },
+    {
+      "code": "WT",
+      "name": "Total Working Interest"
+    },
+    {
+      "code": "WV",
+      "name": "Water Volume"
+    },
+    {
+      "code": "WW",
+      "name": "Weeks Worked"
+    },
+    {
+      "code": "WX",
+      "name": "License Withdrawal Duration"
+    },
+    {
+      "code": "WY",
+      "name": "License Withdrawals Sent"
+    },
+    {
+      "code": "X1",
+      "name": "Producing Wells"
+    },
+    {
+      "code": "X2",
+      "name": "Gross"
+    },
+    {
+      "code": "X6",
+      "name": "Assessment Hours"
+    },
+    {
+      "code": "X7",
+      "name": "Duty Days"
+    },
+    {
+      "code": "X8",
+      "name": "Contract Days"
+    },
+    {
+      "code": "X9",
+      "name": "Number of Days Employed"
+    },
+    {
+      "code": "XA",
+      "name": "Total of Issuable Assets"
+    },
+    {
+      "code": "XB",
+      "name": "Total System Backorder Quantity, High Priority"
+    },
+    {
+      "code": "XC",
+      "name": "Total Service Backorder Quantity, High Priority"
+    },
+    {
+      "code": "XD",
+      "name": "Total System Backorder Quantity, Low Priority"
+    },
+    {
+      "code": "XE",
+      "name": "Total Service Backorder Quantity, Low Priority"
+    },
+    {
+      "code": "XG",
+      "name": "On Hand and Due-In"
+    },
+    {
+      "code": "XI",
+      "name": "Installment Payments"
+    },
+    {
+      "code": "XJ",
+      "name": "Other War Reserve Material Requirements Protectable (OWRMRP) Quantity"
+    },
+    {
+      "code": "XL",
+      "name": "Approximate Number of Units Projected"
+    },
+    {
+      "code": "XN",
+      "name": "Approximate Number of Holders"
+    },
+    {
+      "code": "XO",
+      "name": "Circulating Oil"
+    },
+    {
+      "code": "XR",
+      "name": "Stock Objective and Insurance Quantity"
+    },
+    {
+      "code": "XT",
+      "name": "Protected Quantity"
+    },
+    {
+      "code": "XU",
+      "name": "Reserved"
+    },
+    {
+      "code": "XV",
+      "name": "Requisitioning Objective"
+    },
+    {
+      "code": "XX",
+      "name": "Authorized Retention Level"
+    },
+    {
+      "code": "XY",
+      "name": "Safety Level"
+    },
+    {
+      "code": "XZ",
+      "name": "Backorder Lines"
+    },
+    {
+      "code": "Y1",
+      "name": "Number of Lost Cards"
+    },
+    {
+      "code": "Y2",
+      "name": "Number of Stolen Cards"
+    },
+    {
+      "code": "Y3",
+      "name": "Number of Cards not Received"
+    },
+    {
+      "code": "Y4",
+      "name": "Number of Active Accounts This Cycle"
+    },
+    {
+      "code": "Y5",
+      "name": "Number of Open Accounts"
+    },
+    {
+      "code": "Y6",
+      "name": "Number of Accounts Past Due"
+    },
+    {
+      "code": "Y7",
+      "name": "Number of Cards Outstanding"
+    },
+    {
+      "code": "YA",
+      "name": "Total Demand Quantity"
+    },
+    {
+      "code": "YB",
+      "name": "Total Demand Orders"
+    },
+    {
+      "code": "YC",
+      "name": "First Quarter Recurring Demand"
+    },
+    {
+      "code": "YD",
+      "name": "First Quarter Recurring Orders"
+    },
+    {
+      "code": "YE",
+      "name": "First Quarter Non-recurring Demand"
+    },
+    {
+      "code": "YF",
+      "name": "First Quarter Non-recurring Orders"
+    },
+    {
+      "code": "YG",
+      "name": "Second Quarter Recurring Demand"
+    },
+    {
+      "code": "YH",
+      "name": "Second Quarter Recurring Orders"
+    },
+    {
+      "code": "YJ",
+      "name": "Second Quarter Non-recurring Demand"
+    },
+    {
+      "code": "YK",
+      "name": "Second Quarter Non-recurring Orders"
+    },
+    {
+      "code": "YL",
+      "name": "Third Quarter Recurring Demand"
+    },
+    {
+      "code": "YM",
+      "name": "Third Quarter Recurring Orders"
+    },
+    {
+      "code": "YN",
+      "name": "Third Quarter Non-recurring Demand"
+    },
+    {
+      "code": "YP",
+      "name": "Third Quarter Non-recurring Orders"
+    },
+    {
+      "code": "YQ",
+      "name": "Fourth Quarter Recurring Demand"
+    },
+    {
+      "code": "YR",
+      "name": "Fourth Quarter Recurring Orders"
+    },
+    {
+      "code": "YS",
+      "name": "Fourth Quarter Non-recurring Demand"
+    },
+    {
+      "code": "YT",
+      "name": "Fourth Quarter Non-recurring Orders"
+    },
+    {
+      "code": "YU",
+      "name": "Trailers"
+    },
+    {
+      "code": "YW",
+      "name": "Reorder Point Quantity"
+    },
+    {
+      "code": "YX",
+      "name": "Contract Line Item Quantity"
+    },
+    {
+      "code": "YY",
+      "name": "Years"
+    },
+    {
+      "code": "YZ",
+      "name": "Maximum Quantity of Free Service Calls"
+    },
+    {
+      "code": "Z1",
+      "name": "Units Worked Last Day"
+    },
+    {
+      "code": "Z2",
+      "name": "Units Worked per Week"
+    },
+    {
+      "code": "Z3",
+      "name": "Units Worked per Quarter"
+    },
+    {
+      "code": "Z4",
+      "name": "Number Weeks Paid"
+    },
+    {
+      "code": "Z6",
+      "name": "Unused Accumulated Sick Days"
+    },
+    {
+      "code": "Z7",
+      "name": "Delivery Point Reduction Quantity"
+    },
+    {
+      "code": "Z8",
+      "name": "Receipt Point Reduction Quantity"
+    },
+    {
+      "code": "Z9",
+      "name": "Reduction Quantity"
+    },
+    {
+      "code": "ZA",
+      "name": "Federal Medicare or Medicaid Claim Mandate - Category 1"
+    },
+    {
+      "code": "ZB",
+      "name": "Federal Medicare or Medicaid Claim Mandate - Category 2"
+    },
+    {
+      "code": "ZC",
+      "name": "Federal Medicare or Medicaid Claim Mandate - Category 3"
+    },
+    {
+      "code": "ZD",
+      "name": "Federal Medicare or Medicaid Claim Mandate - Category 4"
+    },
+    {
+      "code": "ZE",
+      "name": "Federal Medicare or Medicaid Claim Mandate - Category 5"
+    },
+    {
+      "code": "ZF",
+      "name": "Federal Pension Mandate - Category 1"
+    },
+    {
+      "code": "ZG",
+      "name": "Federal Pension Mandate - Category 2"
+    },
+    {
+      "code": "ZH",
+      "name": "Federal Pension Mandate - Category 3"
+    },
+    {
+      "code": "ZI",
+      "name": "Holding Period"
+    },
+    {
+      "code": "ZJ",
+      "name": "Federal Pension Mandate - Category 5"
+    },
+    {
+      "code": "ZK",
+      "name": "Federal Medicare or Medicaid Payment Mandate - Category 1"
+    },
+    {
+      "code": "ZL",
+      "name": "Federal Medicare or Medicaid Payment Mandate - Category 2"
+    },
+    {
+      "code": "ZM",
+      "name": "Federal Medicare or Medicaid Payment Mandate - Category 3"
+    },
+    {
+      "code": "ZN",
+      "name": "Federal Medicare or Medicaid Payment Mandate - Category 4"
+    },
+    {
+      "code": "ZO",
+      "name": "Federal Medicare or Medicaid Payment Mandate - Category 5"
+    },
+    {
+      "code": "ZP",
+      "name": "Federal Pension Mandate - Category 4"
+    },
+    {
+      "code": "ZQ",
+      "name": "Shares Added"
+    },
+    {
+      "code": "ZR",
+      "name": "Extended Term"
+    },
+    {
+      "code": "ZS",
+      "name": "Amortization Term"
+    },
+    {
+      "code": "ZT",
+      "name": "Beginning Shares"
+    },
+    {
+      "code": "ZU",
+      "name": "Shares Deleted"
+    },
+    {
+      "code": "ZV",
+      "name": "Quantity of Dealer License Plates"
+    },
+    {
+      "code": "ZW",
+      "name": "Current Share Balance"
+    },
+    {
+      "code": "ZX",
+      "name": "Size of Household"
+    },
+    {
+      "code": "ZY",
+      "name": "Project Units Sold"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

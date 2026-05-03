@@ -1,0 +1,2198 @@
+{
+  "code": "640",
+  "name": "Code specifying the type of transaction",
+  "values": [
+    {
+      "code": "01",
+      "name": "Location Address Message"
+    },
+    {
+      "code": "02",
+      "name": "Location Relation Information"
+    },
+    {
+      "code": "03",
+      "name": "Report Message"
+    },
+    {
+      "code": "04",
+      "name": "Electronic Mail Message"
+    },
+    {
+      "code": "05",
+      "name": "Request for Co-op"
+    },
+    {
+      "code": "06",
+      "name": "Guidelines"
+    },
+    {
+      "code": "07",
+      "name": "Budget"
+    },
+    {
+      "code": "08",
+      "name": "Commitment"
+    },
+    {
+      "code": "09",
+      "name": "Co-op Actual"
+    },
+    {
+      "code": "10",
+      "name": "Distribution"
+    },
+    {
+      "code": "11",
+      "name": "National Property Registry System Real Estate Property Transaction"
+    },
+    {
+      "code": "12",
+      "name": "Physician's Report"
+    },
+    {
+      "code": "13",
+      "name": "Maintenance Request"
+    },
+    {
+      "code": "14",
+      "name": "Maintenance Response"
+    },
+    {
+      "code": "15",
+      "name": "Request with Immediate Response Required (No Follow-up)"
+    },
+    {
+      "code": "16",
+      "name": "Request with Immediate Response Required (Follow-up Required)"
+    },
+    {
+      "code": "17",
+      "name": "Request with Immediate Response to Mailbox"
+    },
+    {
+      "code": "18",
+      "name": "Response - No Further Updates to Follow"
+    },
+    {
+      "code": "19",
+      "name": "Response - Further Updates to Follow"
+    },
+    {
+      "code": "1A",
+      "name": "Unique Item Tracking Control Report"
+    },
+    {
+      "code": "1B",
+      "name": "Unique Item Tracking Report Reconciliation"
+    },
+    {
+      "code": "1C",
+      "name": "Unique Item Tracking Item Data Change"
+    },
+    {
+      "code": "1E",
+      "name": "New Group Initial Enrollment"
+    },
+    {
+      "code": "20",
+      "name": "Air Export Waybill and Invoice"
+    },
+    {
+      "code": "21",
+      "name": "Air Import Invoice"
+    },
+    {
+      "code": "22",
+      "name": "Ocean Export Direct Invoice"
+    },
+    {
+      "code": "23",
+      "name": "Ocean Export Indirect Invoice"
+    },
+    {
+      "code": "24",
+      "name": "Ocean Export Brokerage Invoice"
+    },
+    {
+      "code": "25",
+      "name": "Ocean Import Invoice"
+    },
+    {
+      "code": "26",
+      "name": "Miscellaneous Services Invoice"
+    },
+    {
+      "code": "27",
+      "name": "Warehouse Services Invoice"
+    },
+    {
+      "code": "28",
+      "name": "Pre-registration"
+    },
+    {
+      "code": "30",
+      "name": "Delivery"
+    },
+    {
+      "code": "31",
+      "name": "Subrogation Demand"
+    },
+    {
+      "code": "33",
+      "name": "Normal"
+    },
+    {
+      "code": "34",
+      "name": "Emergency Request"
+    },
+    {
+      "code": "35",
+      "name": "Short Notice Request"
+    },
+    {
+      "code": "36",
+      "name": "Damage Notification"
+    },
+    {
+      "code": "37",
+      "name": "Design Report"
+    },
+    {
+      "code": "38",
+      "name": "Test"
+    },
+    {
+      "code": "39",
+      "name": "Notice of Occupational Disease"
+    },
+    {
+      "code": "3M",
+      "name": "Supporting Information"
+    },
+    {
+      "code": "40",
+      "name": "Notice of Traumatic Injury"
+    },
+    {
+      "code": "41",
+      "name": "Statement of Financial Affairs"
+    },
+    {
+      "code": "42",
+      "name": "Customer Shipment"
+    },
+    {
+      "code": "43",
+      "name": "International Shipment"
+    },
+    {
+      "code": "44",
+      "name": "Interplant Shipment"
+    },
+    {
+      "code": "45",
+      "name": "Production to Carrier Shipment"
+    },
+    {
+      "code": "46",
+      "name": "Advanced Payment"
+    },
+    {
+      "code": "47",
+      "name": "Delinquency"
+    },
+    {
+      "code": "48",
+      "name": "Payment Information"
+    },
+    {
+      "code": "49",
+      "name": "Audit"
+    },
+    {
+      "code": "50",
+      "name": "Transfer Loan In"
+    },
+    {
+      "code": "51",
+      "name": "Transfer Loan Out"
+    },
+    {
+      "code": "52",
+      "name": "Mailing Address Services"
+    },
+    {
+      "code": "54",
+      "name": "Information Only, No Response Required"
+    },
+    {
+      "code": "55",
+      "name": "New Service Order"
+    },
+    {
+      "code": "56",
+      "name": "Denied Request"
+    },
+    {
+      "code": "57",
+      "name": "Service Termination"
+    },
+    {
+      "code": "58",
+      "name": "Tax Billing or Remittance"
+    },
+    {
+      "code": "60",
+      "name": "Material In Transit"
+    },
+    {
+      "code": "62",
+      "name": "Preaward Notification"
+    },
+    {
+      "code": "63",
+      "name": "Postaward Notification"
+    },
+    {
+      "code": "64",
+      "name": "Small Business Award Notification"
+    },
+    {
+      "code": "65",
+      "name": "Award Notification"
+    },
+    {
+      "code": "66",
+      "name": "Notification to Late Bidders"
+    },
+    {
+      "code": "67",
+      "name": "Notification of Protest Receipt"
+    },
+    {
+      "code": "68",
+      "name": "Abstract of Offers"
+    },
+    {
+      "code": "69",
+      "name": "Bid Rejection Notice"
+    },
+    {
+      "code": "6A",
+      "name": "Accomplishment Based Renewal"
+    },
+    {
+      "code": "6C",
+      "name": "Competitive Renewal"
+    },
+    {
+      "code": "6N",
+      "name": "Non-competitive Renewal"
+    },
+    {
+      "code": "6R",
+      "name": "Resubmission"
+    },
+    {
+      "code": "6S",
+      "name": "Supplemental"
+    },
+    {
+      "code": "70",
+      "name": "Unsolicited Bid Notice"
+    },
+    {
+      "code": "71",
+      "name": "Filing and Search Request"
+    },
+    {
+      "code": "72",
+      "name": "Termination"
+    },
+    {
+      "code": "73",
+      "name": "Filing Officer Confirmation"
+    },
+    {
+      "code": "74",
+      "name": "Amendment"
+    },
+    {
+      "code": "75",
+      "name": "Full Assignment"
+    },
+    {
+      "code": "76",
+      "name": "Partial Assignment"
+    },
+    {
+      "code": "77",
+      "name": "Full Release of Collateral"
+    },
+    {
+      "code": "78",
+      "name": "Partial Release of Collateral"
+    },
+    {
+      "code": "79",
+      "name": "Continuation"
+    },
+    {
+      "code": "80",
+      "name": "Uniform Commercial Code Filing with Broad Collateral Description"
+    },
+    {
+      "code": "81",
+      "name": "Uniform Commercial Code Filing with Specific Collateral Description"
+    },
+    {
+      "code": "82",
+      "name": "Segregation by Purchase Order Number"
+    },
+    {
+      "code": "83",
+      "name": "Segregation by Carrier PRO Number"
+    },
+    {
+      "code": "85",
+      "name": "Response - No Action Taken"
+    },
+    {
+      "code": "87",
+      "name": "Disability Benefits Proof of Coverage Notification"
+    },
+    {
+      "code": "88",
+      "name": "Debtor Filing"
+    },
+    {
+      "code": "89",
+      "name": "Federal Occupational Reporting"
+    },
+    {
+      "code": "91",
+      "name": "Secured Party Filing"
+    },
+    {
+      "code": "94",
+      "name": "Partial Release Filing"
+    },
+    {
+      "code": "95",
+      "name": "Full (Total) Release"
+    },
+    {
+      "code": "97",
+      "name": "Multiple Listing"
+    },
+    {
+      "code": "98",
+      "name": "Sale"
+    },
+    {
+      "code": "99",
+      "name": "Loan"
+    },
+    {
+      "code": "A0",
+      "name": "Requisition"
+    },
+    {
+      "code": "A1",
+      "name": "Storage Item Data Change"
+    },
+    {
+      "code": "A3",
+      "name": "Administrative Fees"
+    },
+    {
+      "code": "A4",
+      "name": "Amended Return"
+    },
+    {
+      "code": "A5",
+      "name": "Notice of Charge"
+    },
+    {
+      "code": "A6",
+      "name": "Protest or Response to Charge"
+    },
+    {
+      "code": "A7",
+      "name": "Charge Decision"
+    },
+    {
+      "code": "AA",
+      "name": "Due to Analysis"
+    },
+    {
+      "code": "AB",
+      "name": "Advance Shipment and Billing Notice"
+    },
+    {
+      "code": "AC",
+      "name": "Requisition Cancellation"
+    },
+    {
+      "code": "AD",
+      "name": "Notice of Availability"
+    },
+    {
+      "code": "AE",
+      "name": "Due to Reconciliation (Full)"
+    },
+    {
+      "code": "AF",
+      "name": "Requisition Follow-Up"
+    },
+    {
+      "code": "AG",
+      "name": "Due to Reconciliation (Partial)"
+    },
+    {
+      "code": "AH",
+      "name": "Pre-Employment Screening"
+    },
+    {
+      "code": "AI",
+      "name": "Adjusted Invoice"
+    },
+    {
+      "code": "AJ",
+      "name": "Student Loan Interest Statement (1098-E)"
+    },
+    {
+      "code": "AK",
+      "name": "Tuition Payments Statement (1098-T)"
+    },
+    {
+      "code": "AL",
+      "name": "Arbitration"
+    },
+    {
+      "code": "AM",
+      "name": "Requisition Modification"
+    },
+    {
+      "code": "AN",
+      "name": "Material Obligation Inquiry"
+    },
+    {
+      "code": "AP",
+      "name": "Material Obligation Advice"
+    },
+    {
+      "code": "AQ",
+      "name": "Quantity Verification Inquiry"
+    },
+    {
+      "code": "AR",
+      "name": "Supply Assistance"
+    },
+    {
+      "code": "AS",
+      "name": "Shipment Advice"
+    },
+    {
+      "code": "AT",
+      "name": "Administrative Action"
+    },
+    {
+      "code": "AV",
+      "name": "Quantity Verification Advice"
+    },
+    {
+      "code": "AW",
+      "name": "Material Obligation Reinstatement"
+    },
+    {
+      "code": "AZ",
+      "name": "Disposal Shipment Advice"
+    },
+    {
+      "code": "BA",
+      "name": "Backbill Invoice"
+    },
+    {
+      "code": "BB",
+      "name": "Billback"
+    },
+    {
+      "code": "BD",
+      "name": "Statement of Balance Due"
+    },
+    {
+      "code": "BF",
+      "name": "Best and Final Offer"
+    },
+    {
+      "code": "BG",
+      "name": "Non-escrow or Non-impound Tracking"
+    },
+    {
+      "code": "BH",
+      "name": "Bill and Hold Goods"
+    },
+    {
+      "code": "BJ",
+      "name": "Bankruptcy Petition"
+    },
+    {
+      "code": "BK",
+      "name": "Bankruptcy Schedules"
+    },
+    {
+      "code": "BL",
+      "name": "Blanket Lease Schedule"
+    },
+    {
+      "code": "BM",
+      "name": "Requisition Passing Order"
+    },
+    {
+      "code": "BN",
+      "name": "Requisition Referral Order"
+    },
+    {
+      "code": "BO",
+      "name": "Procurement Cancellation"
+    },
+    {
+      "code": "BP",
+      "name": "Procurement Modification"
+    },
+    {
+      "code": "BR",
+      "name": "Business Taxpayer Registration"
+    },
+    {
+      "code": "BS",
+      "name": "Bill of Sale Schedule"
+    },
+    {
+      "code": "BT",
+      "name": "Balance and Transaction Report"
+    },
+    {
+      "code": "BU",
+      "name": "Workers' Compensation 1st Report of Injury"
+    },
+    {
+      "code": "BV",
+      "name": "Workers' Compensation Subsequent Report"
+    },
+    {
+      "code": "BW",
+      "name": "Workers' Compensation Combined 1st and Subsequent Report"
+    },
+    {
+      "code": "BX",
+      "name": "Not for Resale Invoice"
+    },
+    {
+      "code": "BZ",
+      "name": "Freight Invoice"
+    },
+    {
+      "code": "C0",
+      "name": "Customs Entry Detail"
+    },
+    {
+      "code": "C1",
+      "name": "Claim Information"
+    },
+    {
+      "code": "C2",
+      "name": "Case Opening"
+    },
+    {
+      "code": "C3",
+      "name": "Consignment"
+    },
+    {
+      "code": "C4",
+      "name": "Escrow or Impound Service Reporting"
+    },
+    {
+      "code": "C5",
+      "name": "Tax Assessment Bill"
+    },
+    {
+      "code": "C6",
+      "name": "Fixed Assets Tax Return"
+    },
+    {
+      "code": "C7",
+      "name": "Service Cancellation"
+    },
+    {
+      "code": "C8",
+      "name": "Conformed Copy"
+    },
+    {
+      "code": "C9",
+      "name": "Subject to Availability of Funds"
+    },
+    {
+      "code": "CA",
+      "name": "Cash"
+    },
+    {
+      "code": "CB",
+      "name": "Contribution"
+    },
+    {
+      "code": "CC",
+      "name": "Credit Commission Invoice"
+    },
+    {
+      "code": "CD",
+      "name": "Consolidated Debit Invoice"
+    },
+    {
+      "code": "CE",
+      "name": "Consolidated Credit Invoice"
+    },
+    {
+      "code": "CF",
+      "name": "Consolidated Debit Memo"
+    },
+    {
+      "code": "CG",
+      "name": "Consolidated Credit Memo"
+    },
+    {
+      "code": "CH",
+      "name": "Chargeable"
+    },
+    {
+      "code": "CI",
+      "name": "Consolidated Invoice"
+    },
+    {
+      "code": "CJ",
+      "name": "Confirmation"
+    },
+    {
+      "code": "CK",
+      "name": "Claim Submission"
+    },
+    {
+      "code": "CL",
+      "name": "Customer Allocation"
+    },
+    {
+      "code": "CM",
+      "name": "Call Detail Memo"
+    },
+    {
+      "code": "CN",
+      "name": "Credit Invoice"
+    },
+    {
+      "code": "CO",
+      "name": "Corrected"
+    },
+    {
+      "code": "CP",
+      "name": "Commission Payment"
+    },
+    {
+      "code": "CR",
+      "name": "Credit Memo"
+    },
+    {
+      "code": "CS",
+      "name": "Cash Surrender Distribution"
+    },
+    {
+      "code": "CT",
+      "name": "Cost Type Invoice"
+    },
+    {
+      "code": "CU",
+      "name": "Cargo Outturn Report"
+    },
+    {
+      "code": "CV",
+      "name": "Cost Voucher"
+    },
+    {
+      "code": "CW",
+      "name": "Cash Letter"
+    },
+    {
+      "code": "CX",
+      "name": "Check List"
+    },
+    {
+      "code": "CY",
+      "name": "Citation to Pay or Appear"
+    },
+    {
+      "code": "CZ",
+      "name": "Conviction Notice"
+    },
+    {
+      "code": "D1",
+      "name": "Dividend Payment"
+    },
+    {
+      "code": "D4",
+      "name": "Receipt"
+    },
+    {
+      "code": "DA",
+      "name": "Due-In"
+    },
+    {
+      "code": "DB",
+      "name": "Detour Billing"
+    },
+    {
+      "code": "DC",
+      "name": "Debit Commission Invoice"
+    },
+    {
+      "code": "DD",
+      "name": "Interdistrict (Pre-Kindergarten - Grade 12) Student Record"
+    },
+    {
+      "code": "DE",
+      "name": "Advance Receipt"
+    },
+    {
+      "code": "DF",
+      "name": "Diesel Fuel Bill"
+    },
+    {
+      "code": "DG",
+      "name": "Response"
+    },
+    {
+      "code": "DH",
+      "name": "Discretionary Additional Company Contribution"
+    },
+    {
+      "code": "DI",
+      "name": "Debit Invoice"
+    },
+    {
+      "code": "DK",
+      "name": "Duty Drawback"
+    },
+    {
+      "code": "DL",
+      "name": "Deposit List"
+    },
+    {
+      "code": "DM",
+      "name": "Prior Damage Report"
+    },
+    {
+      "code": "DN",
+      "name": "Direct Nonqualified Rollover"
+    },
+    {
+      "code": "DO",
+      "name": "Drop Shipment Invoice"
+    },
+    {
+      "code": "DP",
+      "name": "District to Postsecondary Student Record"
+    },
+    {
+      "code": "DQ",
+      "name": "Direct Qualified Rollover"
+    },
+    {
+      "code": "DR",
+      "name": "Debit Memo"
+    },
+    {
+      "code": "DS",
+      "name": "Disposition"
+    },
+    {
+      "code": "DT",
+      "name": "Detail"
+    },
+    {
+      "code": "DU",
+      "name": "Duplicate"
+    },
+    {
+      "code": "E1",
+      "name": "Administrative Records Submission"
+    },
+    {
+      "code": "EA",
+      "name": "Excess Interest Allocation"
+    },
+    {
+      "code": "EB",
+      "name": "Engineering Final Bill"
+    },
+    {
+      "code": "EC",
+      "name": "Campaign Filing"
+    },
+    {
+      "code": "ED",
+      "name": "Lobbyist Filing"
+    },
+    {
+      "code": "EF",
+      "name": "Engineering Installation, Right to Use, Final Bill"
+    },
+    {
+      "code": "EI",
+      "name": "Engineering Installation, Final Bill"
+    },
+    {
+      "code": "EM",
+      "name": "Estimate of Record"
+    },
+    {
+      "code": "EP",
+      "name": "Expense Payment"
+    },
+    {
+      "code": "ER",
+      "name": "Engineering Right to Use, Final Bill"
+    },
+    {
+      "code": "EX",
+      "name": "Excess Material Notification"
+    },
+    {
+      "code": "F1",
+      "name": "Final Report"
+    },
+    {
+      "code": "F2",
+      "name": "Pre-approved Bidders List"
+    },
+    {
+      "code": "F4",
+      "name": "Pre-determined Allocation"
+    },
+    {
+      "code": "F5",
+      "name": "Allocation"
+    },
+    {
+      "code": "F6",
+      "name": "Shipper Imbalance"
+    },
+    {
+      "code": "F7",
+      "name": "Producer Imbalance"
+    },
+    {
+      "code": "F8",
+      "name": "Storage Report"
+    },
+    {
+      "code": "FA",
+      "name": "Forfeiture Allocation"
+    },
+    {
+      "code": "FB",
+      "name": "Final Bill"
+    },
+    {
+      "code": "FC",
+      "name": "Forfeiture Credit"
+    },
+    {
+      "code": "FD",
+      "name": "Consolidated Invoice, Final Bill"
+    },
+    {
+      "code": "FE",
+      "name": "Memorandum, Final Bill"
+    },
+    {
+      "code": "FF",
+      "name": "Full Assignment Filing"
+    },
+    {
+      "code": "FG",
+      "name": "Filing"
+    },
+    {
+      "code": "FI",
+      "name": "First Cost Invoice"
+    },
+    {
+      "code": "FL",
+      "name": "Final Notice"
+    },
+    {
+      "code": "FM",
+      "name": "Funding Modification"
+    },
+    {
+      "code": "FN",
+      "name": "First Notice of Loss"
+    },
+    {
+      "code": "FP",
+      "name": "Flat Rate Per Unit Bill"
+    },
+    {
+      "code": "FQ",
+      "name": "Full Enrollment File"
+    },
+    {
+      "code": "FR",
+      "name": "Federal Royalty"
+    },
+    {
+      "code": "FS",
+      "name": "Financial Statement Report"
+    },
+    {
+      "code": "FT",
+      "name": "Material Returns"
+    },
+    {
+      "code": "G1",
+      "name": "Nomination"
+    },
+    {
+      "code": "G2",
+      "name": "Request for Confirmation"
+    },
+    {
+      "code": "G3",
+      "name": "Confirmation Response"
+    },
+    {
+      "code": "GA",
+      "name": "Government Furnished Material Inquiry Advice"
+    },
+    {
+      "code": "GI",
+      "name": "Government Furnished Material Inquiry"
+    },
+    {
+      "code": "GR",
+      "name": "Garnishment"
+    },
+    {
+      "code": "GS",
+      "name": "Credit Report"
+    },
+    {
+      "code": "GT",
+      "name": "Disability Notice"
+    },
+    {
+      "code": "GU",
+      "name": "Black Lung Claim"
+    },
+    {
+      "code": "GV",
+      "name": "Claim Experience Report"
+    },
+    {
+      "code": "GW",
+      "name": "Employer's Report"
+    },
+    {
+      "code": "GX",
+      "name": "Longshore Report"
+    },
+    {
+      "code": "GY",
+      "name": "Unit Report"
+    },
+    {
+      "code": "HA",
+      "name": "Hazardous Waste Report"
+    },
+    {
+      "code": "HB",
+      "name": "Discharge Monitoring Report"
+    },
+    {
+      "code": "HC",
+      "name": "Risk Management Plan"
+    },
+    {
+      "code": "HD",
+      "name": "Self Monitoring Report"
+    },
+    {
+      "code": "HE",
+      "name": "Hazardous Air Pollutant Inventory Report"
+    },
+    {
+      "code": "HF",
+      "name": "Stationary Point Source Inventory Report"
+    },
+    {
+      "code": "HG",
+      "name": "Toxic Release Inventory Report"
+    },
+    {
+      "code": "HP",
+      "name": "Horsepower Equalization Bill"
+    },
+    {
+      "code": "HX",
+      "name": "Handling Carrier Agreement Update"
+    },
+    {
+      "code": "I1",
+      "name": "In-Ad Coupon Notification"
+    },
+    {
+      "code": "IA",
+      "name": "Inventory"
+    },
+    {
+      "code": "IB",
+      "name": "Installation Final Bill"
+    },
+    {
+      "code": "IC",
+      "name": "Insurance Coverage Notification"
+    },
+    {
+      "code": "ID",
+      "name": "Employers Report of Disability"
+    },
+    {
+      "code": "IE",
+      "name": "Indian Royalty"
+    },
+    {
+      "code": "IF",
+      "name": "Material, Engineering, Installation, Final Bill"
+    },
+    {
+      "code": "II",
+      "name": "Interfund Transfer In"
+    },
+    {
+      "code": "IM",
+      "name": "Incident Notice"
+    },
+    {
+      "code": "IN",
+      "name": "Inquiry"
+    },
+    {
+      "code": "IO",
+      "name": "Interfund Transfer Out"
+    },
+    {
+      "code": "IR",
+      "name": "Installation, Right to Use, Final Bill"
+    },
+    {
+      "code": "IU",
+      "name": "Material, Installation, Right to Use, Final Bill"
+    },
+    {
+      "code": "IW",
+      "name": "Workers Compensation Report of Injury or Illness"
+    },
+    {
+      "code": "IX",
+      "name": "Interchange Update"
+    },
+    {
+      "code": "IZ",
+      "name": "Investment Fees"
+    },
+    {
+      "code": "JM",
+      "name": "Maintenance and Operations Bill"
+    },
+    {
+      "code": "JO",
+      "name": "Joint Facility Miscellaneous Bill or Other"
+    },
+    {
+      "code": "JR",
+      "name": "Rental Bill"
+    },
+    {
+      "code": "JS",
+      "name": "Junction Settlement Update"
+    },
+    {
+      "code": "JU",
+      "name": "Judgment"
+    },
+    {
+      "code": "JX",
+      "name": "Junction Update"
+    },
+    {
+      "code": "KB",
+      "name": "Termination for Default"
+    },
+    {
+      "code": "KC",
+      "name": "Definitization of Contract"
+    },
+    {
+      "code": "KD",
+      "name": "Definitization of Order"
+    },
+    {
+      "code": "KE",
+      "name": "Exercise of Option"
+    },
+    {
+      "code": "KF",
+      "name": "Intent to Exercise Option"
+    },
+    {
+      "code": "KG",
+      "name": "Administrative Change"
+    },
+    {
+      "code": "KH",
+      "name": "Change Order"
+    },
+    {
+      "code": "KI",
+      "name": "Supplemental Agreement"
+    },
+    {
+      "code": "KJ",
+      "name": "Amended Shipping Instructions"
+    },
+    {
+      "code": "KK",
+      "name": "Provisioned Item"
+    },
+    {
+      "code": "KL",
+      "name": "Withdrawal of Offer"
+    },
+    {
+      "code": "KM",
+      "name": "Additions to General Provisions"
+    },
+    {
+      "code": "KN",
+      "name": "Request for Price Quote"
+    },
+    {
+      "code": "KS",
+      "name": "Addition to Solicitation Mailing List"
+    },
+    {
+      "code": "KT",
+      "name": "Termination for Convenience"
+    },
+    {
+      "code": "LC",
+      "name": "Due-in Reconciliation Inquiry"
+    },
+    {
+      "code": "LD",
+      "name": "Loan Distribution"
+    },
+    {
+      "code": "LE",
+      "name": "Loan Repayment Expense"
+    },
+    {
+      "code": "LF",
+      "name": "Landed Costs"
+    },
+    {
+      "code": "LN",
+      "name": "Loss Notification"
+    },
+    {
+      "code": "LO",
+      "name": "Loan Repayment to Principal Only"
+    },
+    {
+      "code": "LP",
+      "name": "Loan Repayment"
+    },
+    {
+      "code": "LR",
+      "name": "Logistics Reassignment"
+    },
+    {
+      "code": "LV",
+      "name": "Levy"
+    },
+    {
+      "code": "M1",
+      "name": "Manufacturer Coupon Notification"
+    },
+    {
+      "code": "M5",
+      "name": "Measurement Events and Alarms"
+    },
+    {
+      "code": "MA",
+      "name": "Mailing List"
+    },
+    {
+      "code": "MB",
+      "name": "Maintenance to Business Taxpayer Registration"
+    },
+    {
+      "code": "MC",
+      "name": "Material Credit Invoice"
+    },
+    {
+      "code": "MD",
+      "name": "Market Development Fund"
+    },
+    {
+      "code": "ME",
+      "name": "Memorandum"
+    },
+    {
+      "code": "MF",
+      "name": "Material, Engineering, Final Bill"
+    },
+    {
+      "code": "MI",
+      "name": "Material, Installation, Final Bill"
+    },
+    {
+      "code": "ML",
+      "name": "Membership List"
+    },
+    {
+      "code": "MM",
+      "name": "Multiple Shippers, Multiple Consignees"
+    },
+    {
+      "code": "MP",
+      "name": "Mise En Place (In Place)"
+    },
+    {
+      "code": "MR",
+      "name": "Material, Right to Use, Final Bill"
+    },
+    {
+      "code": "MS",
+      "name": "Material Final Bill"
+    },
+    {
+      "code": "MU",
+      "name": "Multifamily Program"
+    },
+    {
+      "code": "N1",
+      "name": "Bilateral"
+    },
+    {
+      "code": "N2",
+      "name": "Notice of Assessment"
+    },
+    {
+      "code": "N3",
+      "name": "Notice of Warrant"
+    },
+    {
+      "code": "N4",
+      "name": "Notice of Adjustment"
+    },
+    {
+      "code": "N5",
+      "name": "Notice of Determination"
+    },
+    {
+      "code": "N6",
+      "name": "Notice of Settlement"
+    },
+    {
+      "code": "N7",
+      "name": "Notice of Recorded Lien"
+    },
+    {
+      "code": "N8",
+      "name": "Notice of Deficiency"
+    },
+    {
+      "code": "NA",
+      "name": "Material Release Order"
+    },
+    {
+      "code": "NB",
+      "name": "Material Release Inquiry"
+    },
+    {
+      "code": "NC",
+      "name": "Material Release Order Forced Closure"
+    },
+    {
+      "code": "ND",
+      "name": "Material Release Cancellation"
+    },
+    {
+      "code": "NE",
+      "name": "Disposal Release Order"
+    },
+    {
+      "code": "NF",
+      "name": "Disposal Release Inquiry"
+    },
+    {
+      "code": "NG",
+      "name": "Disposal Release Cancellation"
+    },
+    {
+      "code": "NH",
+      "name": "Disposal Shipment Confirmation Inquiry"
+    },
+    {
+      "code": "NI",
+      "name": "Redistribution Order"
+    },
+    {
+      "code": "NJ",
+      "name": "Material Release Confirmation"
+    },
+    {
+      "code": "NK",
+      "name": "Material Release Denial"
+    },
+    {
+      "code": "NL",
+      "name": "Material Release Advice"
+    },
+    {
+      "code": "NM",
+      "name": "Disposal Release Confirmation"
+    },
+    {
+      "code": "NO",
+      "name": "Notice"
+    },
+    {
+      "code": "NP",
+      "name": "Disposal Release Denial"
+    },
+    {
+      "code": "NQ",
+      "name": "Disposal Release Advice"
+    },
+    {
+      "code": "NR",
+      "name": "Material Release Cancellation Advice"
+    },
+    {
+      "code": "NS",
+      "name": "In-Transit"
+    },
+    {
+      "code": "NT",
+      "name": "Disposal Release Cancellation Advice"
+    },
+    {
+      "code": "NU",
+      "name": "Inventory Adjustment"
+    },
+    {
+      "code": "OA",
+      "name": "Operational Capacity"
+    },
+    {
+      "code": "OC",
+      "name": "On Approval"
+    },
+    {
+      "code": "OF",
+      "name": "Offer"
+    },
+    {
+      "code": "OP",
+      "name": "Opinion"
+    },
+    {
+      "code": "OR",
+      "name": "Order"
+    },
+    {
+      "code": "P1",
+      "name": "Preliminary"
+    },
+    {
+      "code": "P2",
+      "name": "Employer Group Change"
+    },
+    {
+      "code": "P3",
+      "name": "Individual Change"
+    },
+    {
+      "code": "P4",
+      "name": "Employer Open Enrollment"
+    },
+    {
+      "code": "PA",
+      "name": "Progress Payment Invoice"
+    },
+    {
+      "code": "PB",
+      "name": "Partial Bill"
+    },
+    {
+      "code": "PC",
+      "name": "Invention Report"
+    },
+    {
+      "code": "PD",
+      "name": "Product Allocation"
+    },
+    {
+      "code": "PE",
+      "name": "Pleading"
+    },
+    {
+      "code": "PF",
+      "name": "Partial Assignment Filing"
+    },
+    {
+      "code": "PG",
+      "name": "Premium Routing Guide"
+    },
+    {
+      "code": "PH",
+      "name": "Prospective Student Information"
+    },
+    {
+      "code": "PI",
+      "name": "Personal Injury Bill"
+    },
+    {
+      "code": "PJ",
+      "name": "Component Packing Confirmation"
+    },
+    {
+      "code": "PL",
+      "name": "Plan Allocation"
+    },
+    {
+      "code": "PM",
+      "name": "Premium Payment"
+    },
+    {
+      "code": "PO",
+      "name": "Plan Takeover"
+    },
+    {
+      "code": "PP",
+      "name": "Prepaid Invoice"
+    },
+    {
+      "code": "PQ",
+      "name": "Partial Enrollment File"
+    },
+    {
+      "code": "PR",
+      "name": "Product (or Service)"
+    },
+    {
+      "code": "PS",
+      "name": "Postsecondary Student Academic Record"
+    },
+    {
+      "code": "PT",
+      "name": "Plan-to-plan Transfer"
+    },
+    {
+      "code": "PU",
+      "name": "Notice of Claim"
+    },
+    {
+      "code": "PV",
+      "name": "Protest or Response to Claim"
+    },
+    {
+      "code": "PW",
+      "name": "Claim Decision"
+    },
+    {
+      "code": "PX",
+      "name": "Wage Verification Notice"
+    },
+    {
+      "code": "PZ",
+      "name": "Purchase Report"
+    },
+    {
+      "code": "Q1",
+      "name": "Scheduled Quantity"
+    },
+    {
+      "code": "Q2",
+      "name": "Scheduled Quantity for Operator"
+    },
+    {
+      "code": "QA",
+      "name": "Coupon Regular Clearinghouse Invoice"
+    },
+    {
+      "code": "QB",
+      "name": "Coupon Direct Retailer Invoice"
+    },
+    {
+      "code": "QC",
+      "name": "Coupon Clearinghouse Pay Direct Invoice"
+    },
+    {
+      "code": "QD",
+      "name": "Product Quality Deficiency"
+    },
+    {
+      "code": "QE",
+      "name": "Coupon Scan Validate Invoice"
+    },
+    {
+      "code": "QF",
+      "name": "Scan Validate Adjustment"
+    },
+    {
+      "code": "QG",
+      "name": "Quick Response Routing Guide"
+    },
+    {
+      "code": "QH",
+      "name": "Full Coupon Redemption (No Adjustments)"
+    },
+    {
+      "code": "QJ",
+      "name": "Adjusted Coupon Redemption"
+    },
+    {
+      "code": "QK",
+      "name": "Coupon Redemption Detail"
+    },
+    {
+      "code": "QL",
+      "name": "Adjustments to Previous Coupon Redemption"
+    },
+    {
+      "code": "QP",
+      "name": "Coupon Quick Pay Invoice"
+    },
+    {
+      "code": "QR",
+      "name": "Product Quality Deficiency Response"
+    },
+    {
+      "code": "R1",
+      "name": "Request for Enrollment Verification"
+    },
+    {
+      "code": "R2",
+      "name": "Response to Request for Enrollment Verification"
+    },
+    {
+      "code": "R3",
+      "name": "Response to Garnishment"
+    },
+    {
+      "code": "R4",
+      "name": "Release of Garnishment"
+    },
+    {
+      "code": "R5",
+      "name": "Response to Levy"
+    },
+    {
+      "code": "R6",
+      "name": "Release of Levy"
+    },
+    {
+      "code": "R7",
+      "name": "Response to Order to Withhold"
+    },
+    {
+      "code": "R8",
+      "name": "Release of Order to Withhold"
+    },
+    {
+      "code": "RA",
+      "name": "Request for Credit"
+    },
+    {
+      "code": "RB",
+      "name": "Right to Use"
+    },
+    {
+      "code": "RC",
+      "name": "Request for Quote"
+    },
+    {
+      "code": "RD",
+      "name": "Returns Detail"
+    },
+    {
+      "code": "RE",
+      "name": "Rebill"
+    },
+    {
+      "code": "RF",
+      "name": "Material, Engineering, Right to Use, Final Bill"
+    },
+    {
+      "code": "RG",
+      "name": "Revised Final Bill"
+    },
+    {
+      "code": "RH",
+      "name": "Request for Additional Funds"
+    },
+    {
+      "code": "RI",
+      "name": "Routing Instructions"
+    },
+    {
+      "code": "RJ",
+      "name": "Response to Request for Routing Instructions"
+    },
+    {
+      "code": "RK",
+      "name": "Registration"
+    },
+    {
+      "code": "RM",
+      "name": "Reminder to File"
+    },
+    {
+      "code": "RP",
+      "name": "Reporting"
+    },
+    {
+      "code": "RQ",
+      "name": "Request"
+    },
+    {
+      "code": "RS",
+      "name": "Response - Additional Response(s) Available"
+    },
+    {
+      "code": "RT",
+      "name": "Spend Down"
+    },
+    {
+      "code": "RU",
+      "name": "Medical Services Reservation"
+    },
+    {
+      "code": "RZ",
+      "name": "Removed from Solicitation Mailing List"
+    },
+    {
+      "code": "S1",
+      "name": "Special Routing Guide"
+    },
+    {
+      "code": "S2",
+      "name": "Standard Routing Guide"
+    },
+    {
+      "code": "S3",
+      "name": "Supplemental Loan Repayment"
+    },
+    {
+      "code": "S4",
+      "name": "Submission"
+    },
+    {
+      "code": "SA",
+      "name": "Stand-alone Lease Schedule"
+    },
+    {
+      "code": "SB",
+      "name": "Second Notice of Balance Due"
+    },
+    {
+      "code": "SC",
+      "name": "Deprescription"
+    },
+    {
+      "code": "SD",
+      "name": "Supply Process Deficiency"
+    },
+    {
+      "code": "SE",
+      "name": "Special Bilateral"
+    },
+    {
+      "code": "SF",
+      "name": "Single Family Program"
+    },
+    {
+      "code": "SG",
+      "name": "Sample Goods Invoice"
+    },
+    {
+      "code": "SH",
+      "name": "Shipment Status Notification"
+    },
+    {
+      "code": "SI",
+      "name": "Sight Certification Request"
+    },
+    {
+      "code": "SL",
+      "name": "Summary Lease Schedule"
+    },
+    {
+      "code": "SM",
+      "name": "Single Shipper, Multiple Consignees"
+    },
+    {
+      "code": "SO",
+      "name": "Spot Rate"
+    },
+    {
+      "code": "SP",
+      "name": "Supplier Rating"
+    },
+    {
+      "code": "SQ",
+      "name": "Schedule Query"
+    },
+    {
+      "code": "SR",
+      "name": "Supply Process Deficiency Response"
+    },
+    {
+      "code": "SS",
+      "name": "Single Shipper, Single Consignee"
+    },
+    {
+      "code": "ST",
+      "name": "State Royalty"
+    },
+    {
+      "code": "SU",
+      "name": "Survey"
+    },
+    {
+      "code": "SV",
+      "name": "Supplemental Invoice"
+    },
+    {
+      "code": "T1",
+      "name": "Report sent by National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T2",
+      "name": "Report sent to National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T3",
+      "name": "Common Core of Data (CCD) Report from the National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T4",
+      "name": "Common Core of Data (CCD) Report to the National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T5",
+      "name": "Integrated Postsecondary Education Database System (IPEDS) Report from National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T6",
+      "name": "Integrated Postsecondary Education Database System (IPEDS) Report to National Center for Education Statistics (NCES)"
+    },
+    {
+      "code": "T7",
+      "name": "Transportation Invoice"
+    },
+    {
+      "code": "T8",
+      "name": "Sales Invoice"
+    },
+    {
+      "code": "T9",
+      "name": "Service Requester Level Invoice"
+    },
+    {
+      "code": "TD",
+      "name": "Shipment or Movement Deficiency"
+    },
+    {
+      "code": "TF",
+      "name": "Tax or Fee Exemption Certification"
+    },
+    {
+      "code": "TG",
+      "name": "Receipt Acknowledgment Inquiry"
+    },
+    {
+      "code": "TH",
+      "name": "Receipt Acknowledgment Advice"
+    },
+    {
+      "code": "TI",
+      "name": "Delinquent Due-in Advice"
+    },
+    {
+      "code": "TJ",
+      "name": "Delinquent Due-in Inquiry"
+    },
+    {
+      "code": "TK",
+      "name": "Due-in Reconciliation Advice"
+    },
+    {
+      "code": "TL",
+      "name": "Total Loss Evaluation"
+    },
+    {
+      "code": "TP",
+      "name": "Trading Partner Information"
+    },
+    {
+      "code": "TR",
+      "name": "Shipment or Movement Deficiency Response"
+    },
+    {
+      "code": "TS",
+      "name": "Transfer Statement"
+    },
+    {
+      "code": "TT",
+      "name": "Testing Service Report"
+    },
+    {
+      "code": "TX",
+      "name": "Request for Testing Service Report"
+    },
+    {
+      "code": "U1",
+      "name": "Contract Abstract"
+    },
+    {
+      "code": "U2",
+      "name": "Shipment Performance Notice"
+    },
+    {
+      "code": "U4",
+      "name": "Acceptance Alert"
+    },
+    {
+      "code": "U5",
+      "name": "Update"
+    },
+    {
+      "code": "U9",
+      "name": "Contract Payment Notice"
+    },
+    {
+      "code": "UA",
+      "name": "Amendment Filing"
+    },
+    {
+      "code": "UC",
+      "name": "Uniform Commercial Code Filing"
+    },
+    {
+      "code": "UD",
+      "name": "Unsalable Detail"
+    },
+    {
+      "code": "UF",
+      "name": "Material, Engineering, Installation, Right to Use, Final Bill"
+    },
+    {
+      "code": "UI",
+      "name": "Uniform Commercial Code Filing Inquiry"
+    },
+    {
+      "code": "UM",
+      "name": "Termination Filing"
+    },
+    {
+      "code": "UO",
+      "name": "Original Filing"
+    },
+    {
+      "code": "UP",
+      "name": "Unsalable Product Invoice"
+    },
+    {
+      "code": "UR",
+      "name": "Uniform Commercial Code Filing Response to Inquiry"
+    },
+    {
+      "code": "US",
+      "name": "Unsubscribed Capacity"
+    },
+    {
+      "code": "UT",
+      "name": "Continuation Filing"
+    },
+    {
+      "code": "V1",
+      "name": "Contract Completion Report"
+    },
+    {
+      "code": "V2",
+      "name": "Nomination Quick Response"
+    },
+    {
+      "code": "V3",
+      "name": "Confirmation Response Quick Response"
+    },
+    {
+      "code": "V4",
+      "name": "Pre-determined Allocation Quick Response"
+    },
+    {
+      "code": "V5",
+      "name": "Request for Confirmation Quick Response"
+    },
+    {
+      "code": "VH",
+      "name": "Public Voucher"
+    },
+    {
+      "code": "VJ",
+      "name": "Commercial Invoice"
+    },
+    {
+      "code": "VL",
+      "name": "Violation Notice"
+    },
+    {
+      "code": "VM",
+      "name": "Voluntary MEDWATCH Report"
+    },
+    {
+      "code": "VN",
+      "name": "Mandatory MEDWATCH Report"
+    },
+    {
+      "code": "VO",
+      "name": "Medical Device New Baseline Report"
+    },
+    {
+      "code": "VP",
+      "name": "Medical Device Annual Baseline Report"
+    },
+    {
+      "code": "VQ",
+      "name": "User Facility Annual Medical Device Report"
+    },
+    {
+      "code": "VR",
+      "name": "Annual Certification of Medical Device Report"
+    },
+    {
+      "code": "W1",
+      "name": "Weapons Data Change"
+    },
+    {
+      "code": "W4",
+      "name": "Weapons Control Report"
+    },
+    {
+      "code": "W5",
+      "name": "Weapons Control Report Reconciliation"
+    },
+    {
+      "code": "WA",
+      "name": "Work Assignment"
+    },
+    {
+      "code": "WC",
+      "name": "Workers Compensation Proof of Coverage Notification"
+    },
+    {
+      "code": "WD",
+      "name": "Withdrawal"
+    },
+    {
+      "code": "WH",
+      "name": "Order to Withhold"
+    },
+    {
+      "code": "WO",
+      "name": "Work Order"
+    },
+    {
+      "code": "WS",
+      "name": "Waste"
+    },
+    {
+      "code": "WT",
+      "name": "Warrant"
+    },
+    {
+      "code": "X1",
+      "name": "Consolidator's Invoice"
+    },
+    {
+      "code": "XA",
+      "name": "Cancel Pending New Offer"
+    },
+    {
+      "code": "XB",
+      "name": "Bilateral Spot Rate"
+    },
+    {
+      "code": "XC",
+      "name": "Automatic Concurrence"
+    },
+    {
+      "code": "XD",
+      "name": "Special Deprescription"
+    },
+    {
+      "code": "XX",
+      "name": "Firm Order Confirmation with Facility Information"
+    },
+    {
+      "code": "XY",
+      "name": "Firm Order Confirmation"
+    },
+    {
+      "code": "XZ",
+      "name": "Facility Confirmation"
+    },
+    {
+      "code": "YI",
+      "name": "Funds Validation Inquiry"
+    },
+    {
+      "code": "YR",
+      "name": "Funds Validation Response"
+    },
+    {
+      "code": "Z1",
+      "name": "Military Interdepartmental Purchase Request (MIPR)"
+    },
+    {
+      "code": "Z2",
+      "name": "Project Directive"
+    },
+    {
+      "code": "Z3",
+      "name": "Request for Contractual Procurement"
+    },
+    {
+      "code": "Z4",
+      "name": "Reimbursable Work Order"
+    },
+    {
+      "code": "ZA",
+      "name": "Request Initiation of Work Candidate"
+    },
+    {
+      "code": "ZB",
+      "name": "Report of Work Candidate"
+    },
+    {
+      "code": "ZC",
+      "name": "Report of Assignment or Deletion of Work Candidate to Maintenance Period"
+    },
+    {
+      "code": "ZD",
+      "name": "Request Assignment of Work Candidate to Planning Maintenance Activity"
+    },
+    {
+      "code": "ZE",
+      "name": "Request for Full Work Candidate Detail"
+    },
+    {
+      "code": "ZF",
+      "name": "Report of Full Work Candidate Detail"
+    },
+    {
+      "code": "ZG",
+      "name": "Report of Approved Work Candidate"
+    },
+    {
+      "code": "ZH",
+      "name": "Request Work Candidate Cost/Duration Estimate"
+    },
+    {
+      "code": "ZI",
+      "name": "Report of Work Candidate Cost/Duration Estimate"
+    },
+    {
+      "code": "ZJ",
+      "name": "Request Work Candidate Planning Services"
+    },
+    {
+      "code": "ZK",
+      "name": "Report of Work Candidate Planning Services"
+    },
+    {
+      "code": "ZL",
+      "name": "Report of Assignment or Deletion of Work Candidate to Planning/Maintenance Activity"
+    },
+    {
+      "code": "ZM",
+      "name": "Request of Assignment or Deletion of Work Candidate to Maintenance Period"
+    },
+    {
+      "code": "ZN",
+      "name": "Stop Work Order"
+    },
+    {
+      "code": "ZO",
+      "name": "Authorization to Continue Work"
+    },
+    {
+      "code": "ZP",
+      "name": "Request for Departure From Specification"
+    },
+    {
+      "code": "ZQ",
+      "name": "Report of Authorized Departure From Specification"
+    },
+    {
+      "code": "ZR",
+      "name": "Request Work Progress Status"
+    },
+    {
+      "code": "ZS",
+      "name": "Report of Work Progress Status"
+    },
+    {
+      "code": "ZT",
+      "name": "Report of Rejection or Return of Work Candidate"
+    },
+    {
+      "code": "ZU",
+      "name": "Request Work Candidate Change"
+    },
+    {
+      "code": "ZV",
+      "name": "Lien Filing"
+    },
+    {
+      "code": "ZW",
+      "name": "Sort and Segregate Detail"
+    },
+    {
+      "code": "ZX",
+      "name": "Expungement of Prior Filing"
+    },
+    {
+      "code": "ZY",
+      "name": "Cancellation of Filing"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

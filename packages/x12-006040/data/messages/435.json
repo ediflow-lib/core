@@ -1,0 +1,147 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "435",
+  "name": "Standard Transportation Commodity Code Master",
+  "description": "Standard Transportation Commodity Code Master",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopSID",
+      "name": "LoopSID",
+      "triggerSegment": "SID",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "SID",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 30,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopLQ",
+          "name": "LoopLQ",
+          "triggerSegment": "LQ",
+          "mandatory": false,
+          "maxOccurrences": 100,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "LQ",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "MSG",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopLX",
+          "name": "LoopLX",
+          "triggerSegment": "LX",
+          "mandatory": false,
+          "maxOccurrences": 4,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "LX",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": false,
+              "maxOccurrences": 50,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LH3",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LH2",
+              "mandatory": false,
+              "maxOccurrences": 8,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LFH",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LEP",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 6
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LH4",
+              "mandatory": false,
+              "maxOccurrences": 4,
+              "position": 7
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CRC",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

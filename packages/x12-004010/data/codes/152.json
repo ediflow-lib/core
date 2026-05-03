@@ -1,0 +1,2326 @@
+{
+  "code": "152",
+  "name": "Code specifying special transportation handling instructions",
+  "values": [
+    {
+      "code": "00",
+      "name": "Delivery of Fuel into Underground Storage Tank"
+    },
+    {
+      "code": "01",
+      "name": "Delivery of Fuel into Above Ground Storage Tank"
+    },
+    {
+      "code": "15",
+      "name": "Speed Restricted to 15 Miles per Hour"
+    },
+    {
+      "code": "25",
+      "name": "Speed Restricted to 25 Miles per Hour"
+    },
+    {
+      "code": "35",
+      "name": "Speed Restricted to 35 Miles per Hour"
+    },
+    {
+      "code": "45",
+      "name": "Speed Restricted to 45 Miles per Hour"
+    },
+    {
+      "code": "AA",
+      "name": "No Facial Hair"
+    },
+    {
+      "code": "AB",
+      "name": "Car is Air Brake Controlled"
+    },
+    {
+      "code": "AC",
+      "name": "Customer Required Packing List"
+    },
+    {
+      "code": "AD",
+      "name": "Customer Required PRO Number"
+    },
+    {
+      "code": "AE",
+      "name": "Customer Required Appointment Number"
+    },
+    {
+      "code": "AF",
+      "name": "Load on Top of Residue (Heel)"
+    },
+    {
+      "code": "AG",
+      "name": "Dispose of Residue (Heel)"
+    },
+    {
+      "code": "AH",
+      "name": "Humidity Sensitive Shipment"
+    },
+    {
+      "code": "AJ",
+      "name": "Do Not Stack"
+    },
+    {
+      "code": "AK",
+      "name": "Attachment - Auto Keys"
+    },
+    {
+      "code": "AT",
+      "name": "Attachment to Move with Car"
+    },
+    {
+      "code": "AV",
+      "name": "Annual Volume"
+    },
+    {
+      "code": "AW",
+      "name": "Attachments - Advance Only Waybill"
+    },
+    {
+      "code": "BA",
+      "name": "Clearinghouse Balance"
+    },
+    {
+      "code": "BL",
+      "name": "Blowable Load"
+    },
+    {
+      "code": "BN",
+      "name": "If Bad Ordered Notify Shipper"
+    },
+    {
+      "code": "BU",
+      "name": "Buffer Car Service"
+    },
+    {
+      "code": "BW",
+      "name": "Bill Shipper for Weigh Charge"
+    },
+    {
+      "code": "CC",
+      "name": "Container, Consolidator Load"
+    },
+    {
+      "code": "CD",
+      "name": "Attachment - Customer's Document"
+    },
+    {
+      "code": "CE",
+      "name": "Cleared for Export"
+    },
+    {
+      "code": "CF",
+      "name": "Container, Factory Load"
+    },
+    {
+      "code": "CH",
+      "name": "Carrier"
+    },
+    {
+      "code": "CI",
+      "name": "Customs Inspection"
+    },
+    {
+      "code": "CM",
+      "name": "Attachment - Cotton Manifest"
+    },
+    {
+      "code": "CO",
+      "name": "No Marshalling Required for Hazardous Materials"
+    },
+    {
+      "code": "CR",
+      "name": "Circus Ramp Only (TOFC Van)"
+    },
+    {
+      "code": "CW",
+      "name": "Bill Consignee for Weigh Charges"
+    },
+    {
+      "code": "CX",
+      "name": "Top Load Only"
+    },
+    {
+      "code": "CY",
+      "name": "Certification that this Shipment is for Recycling as Defined in Applicable Tariffs Containing Such Provisions"
+    },
+    {
+      "code": "DA",
+      "name": "Dangerous"
+    },
+    {
+      "code": "DE",
+      "name": "Demurrage"
+    },
+    {
+      "code": "DM",
+      "name": "Domestic"
+    },
+    {
+      "code": "DN",
+      "name": "Shipper Authorization Required for Diversion or Consignment"
+    },
+    {
+      "code": "DR",
+      "name": "Drop Yard"
+    },
+    {
+      "code": "DS",
+      "name": "Delivery Only on Surrender of Written Order"
+    },
+    {
+      "code": "DT",
+      "name": "Dead in Tow"
+    },
+    {
+      "code": "DU",
+      "name": "Do Not Uncouple"
+    },
+    {
+      "code": "DV",
+      "name": "Equipment"
+    },
+    {
+      "code": "DW",
+      "name": "Destination Weights Apply"
+    },
+    {
+      "code": "EB",
+      "name": "Embargo Shipment"
+    },
+    {
+      "code": "ED",
+      "name": "Excessive Dimensions"
+    },
+    {
+      "code": "EE",
+      "name": "Electronic Equipment Transfer"
+    },
+    {
+      "code": "EL",
+      "name": "Environmental Control Limits"
+    },
+    {
+      "code": "EP",
+      "name": "Expedite"
+    },
+    {
+      "code": "ER",
+      "name": "Return Empty Via Reverse Route"
+    },
+    {
+      "code": "EV",
+      "name": "Damages Incurred if Shipment Fails to Meet Vessel Loading"
+    },
+    {
+      "code": "EW",
+      "name": "Excessive Weight"
+    },
+    {
+      "code": "EX",
+      "name": "Explosive Flammable Gas"
+    },
+    {
+      "code": "FA",
+      "name": "Face \"A-end\" to Head of Train"
+    },
+    {
+      "code": "FB",
+      "name": "Face \"B-end\" to Head of Train"
+    },
+    {
+      "code": "FC",
+      "name": "Moving Under \"For Furtherance Instructions\" and May Be Delivered"
+    },
+    {
+      "code": "FD",
+      "name": "Full Service"
+    },
+    {
+      "code": "FG",
+      "name": "Flammable Gas"
+    },
+    {
+      "code": "FL",
+      "name": "Flammable"
+    },
+    {
+      "code": "FP",
+      "name": "Flammable Poison Gas"
+    },
+    {
+      "code": "FR",
+      "name": "Fragile - Handle with Care"
+    },
+    {
+      "code": "FS",
+      "name": "Nontransit Flat Shipment"
+    },
+    {
+      "code": "GA",
+      "name": "Goods Astray"
+    },
+    {
+      "code": "GI",
+      "name": "Grain Inspection"
+    },
+    {
+      "code": "HE",
+      "name": "Head End Car"
+    },
+    {
+      "code": "HH",
+      "name": "Household"
+    },
+    {
+      "code": "HM",
+      "name": "Endorsed as Hazardous Material"
+    },
+    {
+      "code": "HO",
+      "name": "Hold for Orders"
+    },
+    {
+      "code": "HP",
+      "name": "Heated Prior to Loading"
+    },
+    {
+      "code": "HR",
+      "name": "Home for Repair"
+    },
+    {
+      "code": "HT",
+      "name": "Heat"
+    },
+    {
+      "code": "HV",
+      "name": "High Value Load"
+    },
+    {
+      "code": "HW",
+      "name": "High Wide Load"
+    },
+    {
+      "code": "IB",
+      "name": "In-bond"
+    },
+    {
+      "code": "IC",
+      "name": "Ice"
+    },
+    {
+      "code": "ID",
+      "name": "Shipment to be Inspected at Destination and Disposition Instructions will be Furnished"
+    },
+    {
+      "code": "IM",
+      "name": "Interoffice Move"
+    },
+    {
+      "code": "IP",
+      "name": "Import Shipment"
+    },
+    {
+      "code": "IR",
+      "name": "Rail Incentive Rate"
+    },
+    {
+      "code": "IS",
+      "name": "Surveillance Service"
+    },
+    {
+      "code": "IT",
+      "name": "Intermediate Switch Service"
+    },
+    {
+      "code": "JS",
+      "name": "Junction Settlement Account"
+    },
+    {
+      "code": "LB",
+      "name": "Land Bridge (Import/Export)"
+    },
+    {
+      "code": "LC",
+      "name": "Car Trip Leased to Consignee"
+    },
+    {
+      "code": "LD",
+      "name": "Loading Devices"
+    },
+    {
+      "code": "LF",
+      "name": "Loaded to Full Visible Capacity"
+    },
+    {
+      "code": "LN",
+      "name": "Less Than Container, Consolidator Load"
+    },
+    {
+      "code": "LP",
+      "name": "Protect Lowest Through Rate"
+    },
+    {
+      "code": "LR",
+      "name": "Less Than Container, Factory Load"
+    },
+    {
+      "code": "LS",
+      "name": "Local Service Only"
+    },
+    {
+      "code": "LT",
+      "name": "Less Than Full Carload"
+    },
+    {
+      "code": "MC",
+      "name": "Person in Charge of Car"
+    },
+    {
+      "code": "MF",
+      "name": "Cleared for Border Crossing"
+    },
+    {
+      "code": "MP",
+      "name": "Multiple Pickup"
+    },
+    {
+      "code": "MR",
+      "name": "Mechanical Refrigeration"
+    },
+    {
+      "code": "NC",
+      "name": "Notify Consignee Before Delivery"
+    },
+    {
+      "code": "ND",
+      "name": "Do Not Divert"
+    },
+    {
+      "code": "NE",
+      "name": "No Special Entrainment Required"
+    },
+    {
+      "code": "NG",
+      "name": "Night Delivery Service"
+    },
+    {
+      "code": "NH",
+      "name": "Do Not Hump"
+    },
+    {
+      "code": "NI",
+      "name": "New Equipment First Transborder Movement"
+    },
+    {
+      "code": "NL",
+      "name": "Navalock"
+    },
+    {
+      "code": "NP",
+      "name": "Do Not Pool"
+    },
+    {
+      "code": "NS",
+      "name": "Notify Shipper Before Reconsignment"
+    },
+    {
+      "code": "NT",
+      "name": "Do Not Transfer Contents"
+    },
+    {
+      "code": "NW",
+      "name": "In Case of Fire Do Not Use Water"
+    },
+    {
+      "code": "NX",
+      "name": "Not for Export"
+    },
+    {
+      "code": "OS",
+      "name": "Commodity Loaded Less Than or Equal To the Car Ordered"
+    },
+    {
+      "code": "OV",
+      "name": "Overweight"
+    },
+    {
+      "code": "PB",
+      "name": "Perishable in Box Car"
+    },
+    {
+      "code": "PD",
+      "name": "Privately Controlled Private Equipment Subject to Demurrage"
+    },
+    {
+      "code": "PG",
+      "name": "Poisonous Gas"
+    },
+    {
+      "code": "PI",
+      "name": "Iced Prior to Loading"
+    },
+    {
+      "code": "PS",
+      "name": "Product Protection Service"
+    },
+    {
+      "code": "PW",
+      "name": "Attachment - Prepaid Waybill"
+    },
+    {
+      "code": "RA",
+      "name": "Return Authorization"
+    },
+    {
+      "code": "RB",
+      "name": "Render Bill for Charges"
+    },
+    {
+      "code": "RC",
+      "name": "Railroad Controlled Private Equipment Subject to Demurrage"
+    },
+    {
+      "code": "RE",
+      "name": "Shipper Steam Ship Released"
+    },
+    {
+      "code": "RM",
+      "name": "Radioactive Material"
+    },
+    {
+      "code": "RO",
+      "name": "Rush Order"
+    },
+    {
+      "code": "RP",
+      "name": "Rail Asset Management Process - Equipment Distribution (RAMP-ED) Traffic"
+    },
+    {
+      "code": "RR",
+      "name": "Rear Rider"
+    },
+    {
+      "code": "RS",
+      "name": "Inspect Hourly if Car Stopped"
+    },
+    {
+      "code": "RT",
+      "name": "Record for Transit"
+    },
+    {
+      "code": "SA",
+      "name": "STARS Traffic"
+    },
+    {
+      "code": "SB",
+      "name": "Shipper Load/Carrier Count"
+    },
+    {
+      "code": "SC",
+      "name": "Shove to Rest and Cover"
+    },
+    {
+      "code": "SD",
+      "name": "Subject to Special Detention Rules/Charges"
+    },
+    {
+      "code": "SE",
+      "name": "Attachment - Shipper's Export Document"
+    },
+    {
+      "code": "SH",
+      "name": "Shiftable Load"
+    },
+    {
+      "code": "SI",
+      "name": "Ship to Cross Dock or Pool"
+    },
+    {
+      "code": "SJ",
+      "name": "Ship to Furthest Destination First"
+    },
+    {
+      "code": "SK",
+      "name": "Requires Shelf Couplers"
+    },
+    {
+      "code": "SM",
+      "name": "Attachment - Shipper's Manifest"
+    },
+    {
+      "code": "SP",
+      "name": "Attachment - Shipper's Packing Instructions"
+    },
+    {
+      "code": "SR",
+      "name": "Speed Restricted"
+    },
+    {
+      "code": "ST",
+      "name": "Stack Train"
+    },
+    {
+      "code": "SW",
+      "name": "Stretch Wrap"
+    },
+    {
+      "code": "TA",
+      "name": "Cars Temporarily Articulated"
+    },
+    {
+      "code": "TC",
+      "name": "Trailer, Consolidator Load"
+    },
+    {
+      "code": "TF",
+      "name": "Trailer, Factory Load"
+    },
+    {
+      "code": "TK",
+      "name": "Intermodal Tank Service"
+    },
+    {
+      "code": "TN",
+      "name": "Turn Car"
+    },
+    {
+      "code": "TS",
+      "name": "Transit Shipment"
+    },
+    {
+      "code": "TT",
+      "name": "Team Track Delivery"
+    },
+    {
+      "code": "TV",
+      "name": "Time Volume Rates Only"
+    },
+    {
+      "code": "UB",
+      "name": "Unload at Bumper (Circus Ramp)"
+    },
+    {
+      "code": "UI",
+      "name": "Unitized"
+    },
+    {
+      "code": "UL",
+      "name": "Unload from Left Side of Car"
+    },
+    {
+      "code": "UN",
+      "name": "Unload as Placarded"
+    },
+    {
+      "code": "UP",
+      "name": "Unprotected Perishable"
+    },
+    {
+      "code": "UR",
+      "name": "Unload from Right Side of Car"
+    },
+    {
+      "code": "US",
+      "name": "Shipper Certifies Gross Weight under 240,000 pounds"
+    },
+    {
+      "code": "UT",
+      "name": "Unit Train"
+    },
+    {
+      "code": "VN",
+      "name": "Verification Weigh"
+    },
+    {
+      "code": "VT",
+      "name": "Ventilation Instructions"
+    },
+    {
+      "code": "WB",
+      "name": "Wide-Body Pickup Truck (Applies to Finished Vehicle Loading"
+    },
+    {
+      "code": "WD",
+      "name": "Waived Inspection - Set Direct"
+    },
+    {
+      "code": "WE",
+      "name": "Weigh Empty"
+    },
+    {
+      "code": "WH",
+      "name": "Attachments - High Wide Notice"
+    },
+    {
+      "code": "WI",
+      "name": "Waive Inspection"
+    },
+    {
+      "code": "WM",
+      "name": "Manifest Must Accompany Waybill"
+    },
+    {
+      "code": "WO",
+      "name": "Weigh to Check for Overload"
+    },
+    {
+      "code": "WW",
+      "name": "Waste Water"
+    },
+    {
+      "code": "XP",
+      "name": "Export"
+    },
+    {
+      "code": "XT",
+      "name": "Cross Town"
+    },
+    {
+      "code": "045",
+      "name": "Advanced Fee"
+    },
+    {
+      "code": "170",
+      "name": "Certificate of Origin"
+    },
+    {
+      "code": "405",
+      "name": "Fuel Surcharge Authorized"
+    },
+    {
+      "code": "510",
+      "name": "Offshore - Alaska/Hawaii Service"
+    },
+    {
+      "code": "520",
+      "name": "Oversized Premium"
+    },
+    {
+      "code": "550",
+      "name": "Preparation of Air Waybill - Origin"
+    },
+    {
+      "code": "555",
+      "name": "Preparation of Canadian Customs Invoice"
+    },
+    {
+      "code": "565",
+      "name": "Preparation of Export Entry"
+    },
+    {
+      "code": "570",
+      "name": "Preparation of Insurance Certificate"
+    },
+    {
+      "code": "585",
+      "name": "Preparation of U.S. Export Documentation"
+    },
+    {
+      "code": "665",
+      "name": "Saturday Delivery"
+    },
+    {
+      "code": "670",
+      "name": "Saturday Pickup"
+    },
+    {
+      "code": "675",
+      "name": "Security Signature Service"
+    },
+    {
+      "code": "761",
+      "name": "Written Proof of Delivery"
+    },
+    {
+      "code": "A1M",
+      "name": "Aggregate 1000"
+    },
+    {
+      "code": "A3M",
+      "name": "Aggregate 3000"
+    },
+    {
+      "code": "A5M",
+      "name": "Aggregate 5000"
+    },
+    {
+      "code": "AAM",
+      "name": "Additional Material"
+    },
+    {
+      "code": "AAS",
+      "name": "Attendants Accompanying"
+    },
+    {
+      "code": "ADL",
+      "name": "Advance Loading"
+    },
+    {
+      "code": "AFN",
+      "name": "Air Craft Furnished and Not Used"
+    },
+    {
+      "code": "AGG",
+      "name": "Aggregate Tender Discount"
+    },
+    {
+      "code": "AGS",
+      "name": "Armed Guard Service"
+    },
+    {
+      "code": "AIB",
+      "name": "Additional Injection/Blending Service"
+    },
+    {
+      "code": "ALP",
+      "name": "Port Changes"
+    },
+    {
+      "code": "ALT",
+      "name": "Use of Alternate Terminal"
+    },
+    {
+      "code": "AMM",
+      "name": "A.M. Delivery Requirement"
+    },
+    {
+      "code": "ANC",
+      "name": "Anchoring and Unanchoring"
+    },
+    {
+      "code": "APD",
+      "name": "Additional Copy of Shipping Papers for Proof of Delivery"
+    },
+    {
+      "code": "APL",
+      "name": "Appliance Servicing"
+    },
+    {
+      "code": "ARC",
+      "name": "Air Conditioning Disconnect and Connect"
+    },
+    {
+      "code": "ARG",
+      "name": "Rail Armed Guard Service"
+    },
+    {
+      "code": "ARR",
+      "name": "Air Ride Tractor Service"
+    },
+    {
+      "code": "ART",
+      "name": "Air Ride Truck Service"
+    },
+    {
+      "code": "ASY",
+      "name": "Assembly Service Requested"
+    },
+    {
+      "code": "AUX",
+      "name": "Auxiliary Service"
+    },
+    {
+      "code": "BCP",
+      "name": "Bypass Consolidation Point"
+    },
+    {
+      "code": "BKA",
+      "name": "Bulky Article"
+    },
+    {
+      "code": "BLK",
+      "name": "Blocking and Bracing"
+    },
+    {
+      "code": "BLS",
+      "name": "Blind Shipment"
+    },
+    {
+      "code": "BNS",
+      "name": "Bolster Load, Do Not Switch"
+    },
+    {
+      "code": "BOX",
+      "name": "Boxing Service - Dry Bulk"
+    },
+    {
+      "code": "BSC",
+      "name": "Bunker Surcharge Authorized"
+    },
+    {
+      "code": "BU2",
+      "name": "Bunker Adjustment - 20 Foot Container"
+    },
+    {
+      "code": "BU4",
+      "name": "Bunker Adjustment - 40 Foot Container"
+    },
+    {
+      "code": "BUA",
+      "name": "Bunker Adjustment"
+    },
+    {
+      "code": "CA2",
+      "name": "Currency Adjustment - 20 Foot Container"
+    },
+    {
+      "code": "CA4",
+      "name": "Currency Adjustment - 40 Foot Container"
+    },
+    {
+      "code": "CAR",
+      "name": "ROEE Car or Pickup Truck"
+    },
+    {
+      "code": "CBC",
+      "name": "Case Label Bar Code"
+    },
+    {
+      "code": "CCB",
+      "name": "Convert Commercial Bill of Lading (BOL) to Government BOL"
+    },
+    {
+      "code": "CCH",
+      "name": "Certification"
+    },
+    {
+      "code": "CCS",
+      "name": "Carrier Caboose"
+    },
+    {
+      "code": "CDD",
+      "name": "Corrosion Additive Service"
+    },
+    {
+      "code": "CFC",
+      "name": "Customs Fees - Container Level"
+    },
+    {
+      "code": "CFL",
+      "name": "Customs Fees - Lift Level"
+    },
+    {
+      "code": "CGC",
+      "name": "Carrier Guard Car Service"
+    },
+    {
+      "code": "CGR",
+      "name": "Return Carrier Guard Car Service"
+    },
+    {
+      "code": "CGT",
+      "name": "Cargo Taxes"
+    },
+    {
+      "code": "CHN",
+      "name": "Chain and Binders"
+    },
+    {
+      "code": "CIP",
+      "name": "Commercial Invoice Preparation"
+    },
+    {
+      "code": "CIS",
+      "name": "Constant Surveillance"
+    },
+    {
+      "code": "CLN",
+      "name": "Cleaning"
+    },
+    {
+      "code": "CLS",
+      "name": "Class Rates Applied"
+    },
+    {
+      "code": "CMD",
+      "name": "Comb. Rates over Detroit"
+    },
+    {
+      "code": "CNL",
+      "name": "Consolidation and Line Haul"
+    },
+    {
+      "code": "CNS",
+      "name": "Consolidation"
+    },
+    {
+      "code": "CON",
+      "name": "Contract Rates Apply"
+    },
+    {
+      "code": "COR",
+      "name": "Certification That the Newsprint Winding Cores Being Returned Empty Were Received Filled by Rail Freight Service"
+    },
+    {
+      "code": "COU",
+      "name": "Consignee Unload"
+    },
+    {
+      "code": "COV",
+      "name": "Courier, Overnight"
+    },
+    {
+      "code": "CPC",
+      "name": "Copilot Service"
+    },
+    {
+      "code": "CPM",
+      "name": "Customs Papers Mailed"
+    },
+    {
+      "code": "CRD",
+      "name": "Crane at Destination"
+    },
+    {
+      "code": "CRL",
+      "name": "Container Lease"
+    },
+    {
+      "code": "CRO",
+      "name": "Crane at Origin"
+    },
+    {
+      "code": "CSD",
+      "name": "Courier, Same Day"
+    },
+    {
+      "code": "CSP",
+      "name": "Government Caboose"
+    },
+    {
+      "code": "CTL",
+      "name": "Controlled Atmosphere"
+    },
+    {
+      "code": "CTM",
+      "name": "Container Mounting"
+    },
+    {
+      "code": "CTR",
+      "name": "Circuitous Routing"
+    },
+    {
+      "code": "CUF",
+      "name": "Currency Adjustment - Break Bulk"
+    },
+    {
+      "code": "DBL",
+      "name": "Double Wide Separate and Reassemble"
+    },
+    {
+      "code": "DBP",
+      "name": "Delivery of Fuel From Barge to Pipeline"
+    },
+    {
+      "code": "DCD",
+      "name": "Dedicated Switch Engine Crew at Destination"
+    },
+    {
+      "code": "DCO",
+      "name": "Dedicated Switch Engine Crew at Origin"
+    },
+    {
+      "code": "DCS",
+      "name": "DOD Constant Surveillance Service"
+    },
+    {
+      "code": "DDN",
+      "name": "Dual Driver with National Agency Check"
+    },
+    {
+      "code": "DDP",
+      "name": "Dual Driver Protective Service"
+    },
+    {
+      "code": "DDS",
+      "name": "Direct Delivery"
+    },
+    {
+      "code": "DDZ",
+      "name": "Drayage at Port of Debarkation (Rate Zone)"
+    },
+    {
+      "code": "DEL",
+      "name": "Delivery Service"
+    },
+    {
+      "code": "DEP",
+      "name": "Detention of Conveying Equipment and the Power Unit"
+    },
+    {
+      "code": "DET",
+      "name": "Detention of Conveying Equipment Excluding the Power Unit"
+    },
+    {
+      "code": "DEZ",
+      "name": "Drayage at Port of Embarkation (Rate Zone)"
+    },
+    {
+      "code": "DFD",
+      "name": "Keep From Freezing Percent Differential"
+    },
+    {
+      "code": "DFM",
+      "name": "410 Dromedary with Mechanical Restraining Devices"
+    },
+    {
+      "code": "DFS",
+      "name": "410 Dromedary"
+    },
+    {
+      "code": "DIS",
+      "name": "Distribution Service Requested"
+    },
+    {
+      "code": "DLP",
+      "name": "Delivery of Fuel From Rail Tank Car to Pipeline"
+    },
+    {
+      "code": "DLR",
+      "name": "Notify Shipper Immediately if Shipment is Delayed en Route"
+    },
+    {
+      "code": "DNC",
+      "name": "Do Not Couple to Other Diaphragmed Cars"
+    },
+    {
+      "code": "DNF",
+      "name": "Do Not Freeze"
+    },
+    {
+      "code": "DNT",
+      "name": "Do Not Couple to Tank Cars"
+    },
+    {
+      "code": "DOC",
+      "name": "Documentation - Special"
+    },
+    {
+      "code": "DOV",
+      "name": "Container Diversion"
+    },
+    {
+      "code": "DPB",
+      "name": "Delivery of Fuel From Pipeline to Barge"
+    },
+    {
+      "code": "DPD",
+      "name": "Drayage at Port of Debarkation"
+    },
+    {
+      "code": "DPE",
+      "name": "Drayage at Port of Embarkation"
+    },
+    {
+      "code": "DPL",
+      "name": "Delivery of Fuel From Pipeline to Rail Tank Car"
+    },
+    {
+      "code": "DPT",
+      "name": "Delivery of Fuel From Pipeline to Tank Truck or Trailer"
+    },
+    {
+      "code": "DPU",
+      "name": "Detention With Power Units (30 minute periods)"
+    },
+    {
+      "code": "DRO",
+      "name": "Drop-Off Delivery"
+    },
+    {
+      "code": "DRU",
+      "name": "Drumming Service"
+    },
+    {
+      "code": "DSK",
+      "name": "Do Not Couple to Double Shelf Couples"
+    },
+    {
+      "code": "DSM",
+      "name": "Dromedary with Mechanical Restraining Devices"
+    },
+    {
+      "code": "DSR",
+      "name": "Dromedary Service Requested"
+    },
+    {
+      "code": "DSV",
+      "name": "Door Side Vanning"
+    },
+    {
+      "code": "DTB",
+      "name": "Labor Associated with Detention of Conveying Equipment"
+    },
+    {
+      "code": "DTP",
+      "name": "Delivery of Fuel From Tank Truck or Trailer to Pipeline"
+    },
+    {
+      "code": "DTV",
+      "name": "Detention (Vehicle)"
+    },
+    {
+      "code": "DWP",
+      "name": "Detention With Power Units (60 minute periods)"
+    },
+    {
+      "code": "EAX",
+      "name": "Extra Axles"
+    },
+    {
+      "code": "ECR",
+      "name": "Escort/Courier Service"
+    },
+    {
+      "code": "ECS",
+      "name": "Empty Railcar Ordered But Not Used"
+    },
+    {
+      "code": "EDD",
+      "name": "Equipment Hose at Destination"
+    },
+    {
+      "code": "EDO",
+      "name": "Equipment Hose at Origin"
+    },
+    {
+      "code": "EED",
+      "name": "Exclusive Use"
+    },
+    {
+      "code": "EGD",
+      "name": "Dedicated Switch Engine at Destination"
+    },
+    {
+      "code": "EGO",
+      "name": "Dedicated Switch Engine at Origin"
+    },
+    {
+      "code": "ELS",
+      "name": "Extra Lights"
+    },
+    {
+      "code": "EMR",
+      "name": "Emergency Service"
+    },
+    {
+      "code": "EMT",
+      "name": "Empty Movement"
+    },
+    {
+      "code": "END",
+      "name": "Endorsement"
+    },
+    {
+      "code": "ERS",
+      "name": "Empty Return"
+    },
+    {
+      "code": "ERT",
+      "name": "Satisfactory Service Standards"
+    },
+    {
+      "code": "EVC",
+      "name": "Excessive Valuation Authorized"
+    },
+    {
+      "code": "EXC",
+      "name": "Exclusive Use of Vehicle"
+    },
+    {
+      "code": "EXD",
+      "name": "Extra Driver"
+    },
+    {
+      "code": "EXL",
+      "name": "Extra Length Surcharge"
+    },
+    {
+      "code": "EXO",
+      "name": "Export Preparation"
+    },
+    {
+      "code": "EXP",
+      "name": "Expedited Rates Applied"
+    },
+    {
+      "code": "EXQ",
+      "name": "Expedited Service"
+    },
+    {
+      "code": "EXT",
+      "name": "Extra Labor"
+    },
+    {
+      "code": "EXU",
+      "name": "Exclusive Use of Vehicle Damaged"
+    },
+    {
+      "code": "EXZ",
+      "name": "Expand Remove and Install"
+    },
+    {
+      "code": "EZE",
+      "name": "Roadway Easy Rates Applied"
+    },
+    {
+      "code": "FAK",
+      "name": "Barge Freight All Kinds Service"
+    },
+    {
+      "code": "FAS",
+      "name": "Firearms"
+    },
+    {
+      "code": "FCS",
+      "name": "Furnishing Chassis"
+    },
+    {
+      "code": "FDD",
+      "name": "Flat Deck Delivery"
+    },
+    {
+      "code": "FFC",
+      "name": "Fuel Filters Furnished by Carrier"
+    },
+    {
+      "code": "FFS",
+      "name": "Fuel Filters Furnished by Shipper"
+    },
+    {
+      "code": "FLS",
+      "name": "Flatrack Surcharge"
+    },
+    {
+      "code": "FPT",
+      "name": "For Processing in Transit"
+    },
+    {
+      "code": "FRZ",
+      "name": "Accepted by Carrier at Owner's Risk of Freezing"
+    },
+    {
+      "code": "FST",
+      "name": "For Storage in Transit"
+    },
+    {
+      "code": "FTR",
+      "name": "Filtration Service"
+    },
+    {
+      "code": "GMS",
+      "name": "Garment Surcharge"
+    },
+    {
+      "code": "GOC",
+      "name": "Government-Owned Containers"
+    },
+    {
+      "code": "GSP",
+      "name": "Government Guard Car"
+    },
+    {
+      "code": "GSS",
+      "name": "Greater Security Service"
+    },
+    {
+      "code": "HAL",
+      "name": "Hold at Location"
+    },
+    {
+      "code": "HAN",
+      "name": "Handling"
+    },
+    {
+      "code": "HAZ",
+      "name": "Hazardous Cargo"
+    },
+    {
+      "code": "HBB",
+      "name": "Handling Freight Not Adjacent to Vehicle"
+    },
+    {
+      "code": "HBR",
+      "name": "Hand Brakes at Each End Must Be Released"
+    },
+    {
+      "code": "HDH",
+      "name": "Shipment Holdover for Holidays"
+    },
+    {
+      "code": "HDW",
+      "name": "Shipment Holdover for Weekends"
+    },
+    {
+      "code": "HEA",
+      "name": "Heat in Transit"
+    },
+    {
+      "code": "HES",
+      "name": "Heat - Special"
+    },
+    {
+      "code": "HET",
+      "name": "Heat With Steam"
+    },
+    {
+      "code": "HMA",
+      "name": "Accessible Hazardous Material"
+    },
+    {
+      "code": "HMI",
+      "name": "Inaccessible Hazardous Material"
+    },
+    {
+      "code": "HOL",
+      "name": "Sunday or Holiday Pickup or Delivery"
+    },
+    {
+      "code": "HOR",
+      "name": "24 Hour Availability"
+    },
+    {
+      "code": "HOS",
+      "name": "Hose"
+    },
+    {
+      "code": "HOX",
+      "name": "Special Hose"
+    },
+    {
+      "code": "HQT",
+      "name": "High Cube Trailer Rates"
+    },
+    {
+      "code": "HRS",
+      "name": "Heater or Refrigeration"
+    },
+    {
+      "code": "HTI",
+      "name": "Hitch Installation"
+    },
+    {
+      "code": "HZC",
+      "name": "Hazardous Materials Surcharge"
+    },
+    {
+      "code": "HZD",
+      "name": "Hazardous Cargo On Deck"
+    },
+    {
+      "code": "IDC",
+      "name": "Idler Car"
+    },
+    {
+      "code": "IDL",
+      "name": "Inside Delivery"
+    },
+    {
+      "code": "IIH",
+      "name": "Icing Inhibitor Service"
+    },
+    {
+      "code": "IMP",
+      "name": "Impactographs"
+    },
+    {
+      "code": "IMS",
+      "name": "Intermodal Shipment Service"
+    },
+    {
+      "code": "INL",
+      "name": "Inspector Requested for Loading"
+    },
+    {
+      "code": "INT",
+      "name": "Intra-Plant Move"
+    },
+    {
+      "code": "IPU",
+      "name": "Inside Pickup"
+    },
+    {
+      "code": "ITS",
+      "name": "Interline Transfer Service"
+    },
+    {
+      "code": "JIT",
+      "name": "Just-In-Time (JIT)"
+    },
+    {
+      "code": "JLX",
+      "name": "Joint Line Exception"
+    },
+    {
+      "code": "KEG",
+      "name": "Certification that the Containers Being Returned Empty Were Received Filled by Rail Freight Service"
+    },
+    {
+      "code": "KMD",
+      "name": "Keep Material Dry"
+    },
+    {
+      "code": "LAB",
+      "name": "Labor Disturbance"
+    },
+    {
+      "code": "LAS",
+      "name": "Commingling/Loss Allowance"
+    },
+    {
+      "code": "LAY",
+      "name": "Layover"
+    },
+    {
+      "code": "LBL",
+      "name": "Apply a Uniform Code Council/International Article Numbering Association (UCC/EAN) Serial Shipping Container Label to the Shipping Containers"
+    },
+    {
+      "code": "LBR",
+      "name": "Light Bar Service"
+    },
+    {
+      "code": "LBT",
+      "name": "Low Boy Trailer/Flat Bed"
+    },
+    {
+      "code": "LC2",
+      "name": "Land Currency Adjustment Factor - 20 Foot Container"
+    },
+    {
+      "code": "LC4",
+      "name": "Land Currency Adjustment - 40 Foot Container"
+    },
+    {
+      "code": "LCL",
+      "name": "Percent Differential - Less Than Container"
+    },
+    {
+      "code": "LDA",
+      "name": "Carrier to Load"
+    },
+    {
+      "code": "LDL",
+      "name": "Carrier to Unload"
+    },
+    {
+      "code": "LEC",
+      "name": "Less Than Container"
+    },
+    {
+      "code": "LFD",
+      "name": "Linehaul from Port of Debarkation"
+    },
+    {
+      "code": "LHS",
+      "name": "Linehaul Service"
+    },
+    {
+      "code": "LIE",
+      "name": "Liability of Carrier"
+    },
+    {
+      "code": "LMD",
+      "name": "Liner Terms at Port of Debarkation"
+    },
+    {
+      "code": "LME",
+      "name": "Liner Terms at Port of Embarkation"
+    },
+    {
+      "code": "LPD",
+      "name": "Linehaul Percent Differential"
+    },
+    {
+      "code": "LTE",
+      "name": "Linehaul To Port of Embarkation"
+    },
+    {
+      "code": "LTT",
+      "name": "Less Than Truckload"
+    },
+    {
+      "code": "LYC",
+      "name": "Layover Service"
+    },
+    {
+      "code": "MAT",
+      "name": "Modified Atmosphere"
+    },
+    {
+      "code": "MEN",
+      "name": "Escort Service with Overnight Subsistence"
+    },
+    {
+      "code": "MES",
+      "name": "Escort"
+    },
+    {
+      "code": "MET",
+      "name": "Escort Services (Telephone)"
+    },
+    {
+      "code": "MIN",
+      "name": "Insulated"
+    },
+    {
+      "code": "MNS",
+      "name": "Motor Surveillance Service"
+    },
+    {
+      "code": "MOT",
+      "name": "Other"
+    },
+    {
+      "code": "MRF",
+      "name": "Refrigerated"
+    },
+    {
+      "code": "MTE",
+      "name": "Military Traffic Expediting Service"
+    },
+    {
+      "code": "MVS",
+      "name": "Special Motor Surveillance"
+    },
+    {
+      "code": "NHC",
+      "name": "Do not Hump or Hump into"
+    },
+    {
+      "code": "NHL",
+      "name": "Do Not Use Helper Locomotive to Push"
+    },
+    {
+      "code": "NPR",
+      "name": "No Placards Required"
+    },
+    {
+      "code": "NSV",
+      "name": "Nose Side Vanning"
+    },
+    {
+      "code": "OAH",
+      "name": "Stow Away from Heat"
+    },
+    {
+      "code": "OBL",
+      "name": "Block Stowage"
+    },
+    {
+      "code": "OCA",
+      "name": "Cargo Aboard"
+    },
+    {
+      "code": "OCL",
+      "name": "Carrier Load and Consignee Unload"
+    },
+    {
+      "code": "OCN",
+      "name": "Over Height Container"
+    },
+    {
+      "code": "OCS",
+      "name": "Completing Shipment"
+    },
+    {
+      "code": "OCV",
+      "name": "Delivery Verification Not Required"
+    },
+    {
+      "code": "ODI",
+      "name": "Stow with Doors Facing Inward"
+    },
+    {
+      "code": "OEH",
+      "name": "Exempt Commodity"
+    },
+    {
+      "code": "OFH",
+      "name": "In Front of House Stowage"
+    },
+    {
+      "code": "OFU",
+      "name": "Fumigation"
+    },
+    {
+      "code": "OHC",
+      "name": "Harmless"
+    },
+    {
+      "code": "OIL",
+      "name": "Oil Field Service"
+    },
+    {
+      "code": "ONC",
+      "name": "Use No Hooks"
+    },
+    {
+      "code": "ONS",
+      "name": "Not Restricted Cargo"
+    },
+    {
+      "code": "OOB",
+      "name": "Cargo on Board Certification Required"
+    },
+    {
+      "code": "OOD",
+      "name": "On Deck Stowage"
+    },
+    {
+      "code": "OOL",
+      "name": "Carrier Load and Carrier Unload"
+    },
+    {
+      "code": "OPR",
+      "name": "Perishable"
+    },
+    {
+      "code": "OPT",
+      "name": "Partial Shipment"
+    },
+    {
+      "code": "ORS",
+      "name": "Receipt/Issue Overtime Normal Business Hours"
+    },
+    {
+      "code": "OSB",
+      "name": "Stow Below Deck"
+    },
+    {
+      "code": "OST",
+      "name": "Stow Between Decks"
+    },
+    {
+      "code": "OTC",
+      "name": "Temperature Control"
+    },
+    {
+      "code": "OTD",
+      "name": "Time of Delivery and Signature Required"
+    },
+    {
+      "code": "OTH",
+      "name": "On Top In-hatch Stowage"
+    },
+    {
+      "code": "OTO",
+      "name": "On Top On-deck Stowage"
+    },
+    {
+      "code": "OTS",
+      "name": "Total Shipment"
+    },
+    {
+      "code": "OUC",
+      "name": "Under Container On-deck Stowage"
+    },
+    {
+      "code": "OUW",
+      "name": "Below Water Line Stowage"
+    },
+    {
+      "code": "OVR",
+      "name": "Overflow"
+    },
+    {
+      "code": "OWC",
+      "name": "Over Width Container"
+    },
+    {
+      "code": "OWR",
+      "name": "One Way Rates Applied"
+    },
+    {
+      "code": "PAJ",
+      "name": "Pumping Equipment"
+    },
+    {
+      "code": "PAV",
+      "name": "Pickup of Shipments on Saturday, Sunday, and/or Holidays Requiring Absolute Next Day Delivery"
+    },
+    {
+      "code": "PBC",
+      "name": "Pallet Label Bar Code"
+    },
+    {
+      "code": "PDS",
+      "name": "Pickup and Delivery From Storage in Transit"
+    },
+    {
+      "code": "PDY",
+      "name": "Pickup and Delivery Beyond Service Area"
+    },
+    {
+      "code": "PER",
+      "name": "Special Permits"
+    },
+    {
+      "code": "PFH",
+      "name": "Protect From Heat"
+    },
+    {
+      "code": "PHR",
+      "name": "Per Hour Rates Applied"
+    },
+    {
+      "code": "PIR",
+      "name": "Pier Time"
+    },
+    {
+      "code": "PLT",
+      "name": "Pallets/Skids/Platforms"
+    },
+    {
+      "code": "PMM",
+      "name": "P.M. Delivery Requirement"
+    },
+    {
+      "code": "PMR",
+      "name": "Per Mile Rates Apply"
+    },
+    {
+      "code": "PMS",
+      "name": "Pickup of Shipments Requiring Same Day Delivery Service"
+    },
+    {
+      "code": "PMT",
+      "name": "Pickup of Shipments Requiring Same Day Delivery Service and/or Delivery at a Specified Time"
+    },
+    {
+      "code": "POC",
+      "name": "Piano/Organ Carry"
+    },
+    {
+      "code": "POS",
+      "name": "Positioning at Origin"
+    },
+    {
+      "code": "PPD",
+      "name": "Pickup and Delivery Service for Perishables"
+    },
+    {
+      "code": "PRD",
+      "name": "Portable Ramps at Destination"
+    },
+    {
+      "code": "PRL",
+      "name": "Prelodge"
+    },
+    {
+      "code": "PRO",
+      "name": "Portable Ramps at Origin"
+    },
+    {
+      "code": "PRT",
+      "name": "Stuffing Charge"
+    },
+    {
+      "code": "PSG",
+      "name": "Protective Service Security with Armed Guards"
+    },
+    {
+      "code": "PSS",
+      "name": "Protective Security Service"
+    },
+    {
+      "code": "PTS",
+      "name": "Protective Tarp For Security Purposes"
+    },
+    {
+      "code": "PUC",
+      "name": "Pickup"
+    },
+    {
+      "code": "PUD",
+      "name": "Pickup and Delivery"
+    },
+    {
+      "code": "PUK",
+      "name": "Pack and Unpack"
+    },
+    {
+      "code": "PUP",
+      "name": "PUP Trailer Rates Apply"
+    },
+    {
+      "code": "PVB",
+      "name": "Bonded Privately Owned Vehicle"
+    },
+    {
+      "code": "PVD",
+      "name": "Detention of Privately Owned Vehicle"
+    },
+    {
+      "code": "PVI",
+      "name": "Inoperable Privately Owned Vehicle"
+    },
+    {
+      "code": "PVL",
+      "name": "Loading/Unloading of Privately Owned Vehicle"
+    },
+    {
+      "code": "PVP",
+      "name": "Private Owned Vehicle Processing"
+    },
+    {
+      "code": "PVS",
+      "name": "Stop-offs for Privately Owned Vehicle Shipment"
+    },
+    {
+      "code": "PVT",
+      "name": "Privately Owned Vehicle in Truckaway Service"
+    },
+    {
+      "code": "PYS",
+      "name": "Priority Service"
+    },
+    {
+      "code": "RCC",
+      "name": "Reconsignment"
+    },
+    {
+      "code": "RCL",
+      "name": "Redelivery"
+    },
+    {
+      "code": "RDH",
+      "name": "Railhead Handling"
+    },
+    {
+      "code": "RDR",
+      "name": "Roadrailer Service"
+    },
+    {
+      "code": "REP",
+      "name": "Respotting"
+    },
+    {
+      "code": "RES",
+      "name": "Residential Delivery"
+    },
+    {
+      "code": "RFM",
+      "name": "Reefer Maintenance"
+    },
+    {
+      "code": "RIE",
+      "name": "Released Value Charge in Excess of Carrier Maximum Liability"
+    },
+    {
+      "code": "RIS",
+      "name": "Rail Inspection Service"
+    },
+    {
+      "code": "RLS",
+      "name": "Relocation of Vehicle"
+    },
+    {
+      "code": "RMC",
+      "name": "Return of Empty Container"
+    },
+    {
+      "code": "RMP",
+      "name": "Return Movement of Pallet"
+    },
+    {
+      "code": "RMS",
+      "name": "Rail Surveillance"
+    },
+    {
+      "code": "RPD",
+      "name": "Reefer Cargo Percent Differential"
+    },
+    {
+      "code": "RRR",
+      "name": "Round Trip Service"
+    },
+    {
+      "code": "RSP",
+      "name": "Reshipment"
+    },
+    {
+      "code": "RSS",
+      "name": "Restricted Speeds"
+    },
+    {
+      "code": "RSV",
+      "name": "Reservations"
+    },
+    {
+      "code": "RWR",
+      "name": "Reweight Requested"
+    },
+    {
+      "code": "S18",
+      "name": "Apply Serial Shipping Container Code SSCC-18 Bar Code"
+    },
+    {
+      "code": "SAS",
+      "name": "Shipment Holdover on Weekends"
+    },
+    {
+      "code": "SAT",
+      "name": "Saturday Pickup or Delivery"
+    },
+    {
+      "code": "SCC",
+      "name": "Special Containers"
+    },
+    {
+      "code": "SCL",
+      "name": "Shipper Load and Consignee Unload"
+    },
+    {
+      "code": "SDL",
+      "name": "Split Delivery"
+    },
+    {
+      "code": "SDS",
+      "name": "Special Dromedary Service"
+    },
+    {
+      "code": "SEC",
+      "name": "Special Equipment Charge"
+    },
+    {
+      "code": "SED",
+      "name": "Shipper Export Declaration Required"
+    },
+    {
+      "code": "SEE",
+      "name": "Stairs, Elevator, Excess Carry"
+    },
+    {
+      "code": "SER",
+      "name": "Service Charge Applies"
+    },
+    {
+      "code": "SEV",
+      "name": "Security Escort Vehicle Service"
+    },
+    {
+      "code": "SFB",
+      "name": "Single Factor Origination/Destination"
+    },
+    {
+      "code": "SFD",
+      "name": "Single Factor Origination/Port of Debarkation"
+    },
+    {
+      "code": "SFE",
+      "name": "Single Factor Port of Embarkation/Destination"
+    },
+    {
+      "code": "SFT",
+      "name": "Special Train Movement"
+    },
+    {
+      "code": "SGL",
+      "name": "Single Shipment"
+    },
+    {
+      "code": "SHH",
+      "name": "Shipment Holdover on Holidays"
+    },
+    {
+      "code": "SHL",
+      "name": "Shipper Load"
+    },
+    {
+      "code": "SHW",
+      "name": "Shipment Holdover on Weekdays"
+    },
+    {
+      "code": "SKT",
+      "name": "Skirting and Unskirting"
+    },
+    {
+      "code": "SLC",
+      "name": "Shipper Load and Count"
+    },
+    {
+      "code": "SMP",
+      "name": "Small Package"
+    },
+    {
+      "code": "SNM",
+      "name": "Transmit a Ship Notice/Manifest Transaction Set"
+    },
+    {
+      "code": "SNS",
+      "name": "Satellite Surveillance Service"
+    },
+    {
+      "code": "SNT",
+      "name": "Shipment from Non-Temp Storage"
+    },
+    {
+      "code": "SOC",
+      "name": "Stop-off"
+    },
+    {
+      "code": "SOL",
+      "name": "Shipper Load and Carrier Unload"
+    },
+    {
+      "code": "SPA",
+      "name": "Special Allowance"
+    },
+    {
+      "code": "SPC",
+      "name": "Special Permit"
+    },
+    {
+      "code": "SPR",
+      "name": "Spreader Service"
+    },
+    {
+      "code": "SPT",
+      "name": "Spot for Storage - No Shipment"
+    },
+    {
+      "code": "SPU",
+      "name": "Split Pickup"
+    },
+    {
+      "code": "SRG",
+      "name": "Storage"
+    },
+    {
+      "code": "SRS",
+      "name": "Surveying Routes"
+    },
+    {
+      "code": "SSC",
+      "name": "Stripping, Sorting & Consolidation"
+    },
+    {
+      "code": "SSN",
+      "name": "Substitute Service Not to be Used"
+    },
+    {
+      "code": "SSR",
+      "name": "Safe Haven Secure Holding Refusal"
+    },
+    {
+      "code": "SSU",
+      "name": "Pole Lashing Equipment (PLE) Surcharge"
+    },
+    {
+      "code": "STA",
+      "name": "Conductivity/Anti-static Additive"
+    },
+    {
+      "code": "STD",
+      "name": "Stop-off at Destination"
+    },
+    {
+      "code": "STO",
+      "name": "Stowage"
+    },
+    {
+      "code": "STP",
+      "name": "Stop-off at Origination"
+    },
+    {
+      "code": "STR",
+      "name": "Signature and Tally Record"
+    },
+    {
+      "code": "SUA",
+      "name": "Spot for Unloading from A End"
+    },
+    {
+      "code": "SUB",
+      "name": "Spot for Unloading from B Brake End"
+    },
+    {
+      "code": "SUP",
+      "name": "Supervisor Requested"
+    },
+    {
+      "code": "SVS",
+      "name": "Storage of Vehicles"
+    },
+    {
+      "code": "TDC",
+      "name": "Truckload-Double Operator-Common Carrier"
+    },
+    {
+      "code": "TDP",
+      "name": "Truckload-Double Operator-Padded Van"
+    },
+    {
+      "code": "TER",
+      "name": "Terminal Handling Charges"
+    },
+    {
+      "code": "TLS",
+      "name": "Tendered as Truckload (Truckload Service Requested)"
+    },
+    {
+      "code": "TMS",
+      "name": "Multi-Tank Surveillance Service"
+    },
+    {
+      "code": "TMV",
+      "name": "Tendering of Multiple Vehicles"
+    },
+    {
+      "code": "TOF",
+      "name": "Trailer on Flat Car"
+    },
+    {
+      "code": "TOW",
+      "name": "Motor Tow Away Service"
+    },
+    {
+      "code": "TPS",
+      "name": "Third Party Service"
+    },
+    {
+      "code": "TRA",
+      "name": "Tractor Only"
+    },
+    {
+      "code": "TRK",
+      "name": "Truck Rates Applicable"
+    },
+    {
+      "code": "TRL",
+      "name": "Trailer Preparation - Special"
+    },
+    {
+      "code": "TRM",
+      "name": "Termination"
+    },
+    {
+      "code": "TRN",
+      "name": "Transfer Product"
+    },
+    {
+      "code": "TRP",
+      "name": "Tire Repair and Replace"
+    },
+    {
+      "code": "TRS",
+      "name": "Trade Show"
+    },
+    {
+      "code": "TRT",
+      "name": "Tractor and Trailer"
+    },
+    {
+      "code": "TRU",
+      "name": "Truck to Rack Unit"
+    },
+    {
+      "code": "TSC",
+      "name": "Truckload-Single Operator-Common Carrier"
+    },
+    {
+      "code": "TSL",
+      "name": "Technical Assistance for Loading Rail Cars"
+    },
+    {
+      "code": "TSP",
+      "name": "Truckload-Single Operator-Padded Van"
+    },
+    {
+      "code": "TSS",
+      "name": "Tank Surveillance Service"
+    },
+    {
+      "code": "TTS",
+      "name": "Trailer Tracking Service"
+    },
+    {
+      "code": "UBL",
+      "name": "Carrier to Unblock, Unbrace, and Untie"
+    },
+    {
+      "code": "UFC",
+      "name": "Under Carriage Furnished By Carrier"
+    },
+    {
+      "code": "UPK",
+      "name": "Unpacking"
+    },
+    {
+      "code": "URC",
+      "name": "Unloading or Reloading"
+    },
+    {
+      "code": "UTL",
+      "name": "Utilities Disconnect and Connect"
+    },
+    {
+      "code": "VAC",
+      "name": "Vacuum Service"
+    },
+    {
+      "code": "VAN",
+      "name": "ROEE Van Type Truck"
+    },
+    {
+      "code": "VCL",
+      "name": "Van Cleaning"
+    },
+    {
+      "code": "VFN",
+      "name": "Vehicles Furnished But Not Used"
+    },
+    {
+      "code": "VIS",
+      "name": "Vehicles Inoperable"
+    },
+    {
+      "code": "VSO",
+      "name": "Stop-off Delivery of Personal Vehicles"
+    },
+    {
+      "code": "VTS",
+      "name": "Vehicles in Truckaway"
+    },
+    {
+      "code": "WBB",
+      "name": "Wharfage - Breakbulk"
+    },
+    {
+      "code": "WCT",
+      "name": "Wharfage - Container"
+    },
+    {
+      "code": "WDS",
+      "name": "Waterfront Delivery"
+    },
+    {
+      "code": "WFG",
+      "name": "Wharfage"
+    },
+    {
+      "code": "WRB",
+      "name": "War Risk Crew Bonus"
+    },
+    {
+      "code": "WRI",
+      "name": "War Risk Insurance"
+    },
+    {
+      "code": "WTG",
+      "name": "Waiting Time Authorized"
+    },
+    {
+      "code": "WTV",
+      "name": "Weight Verification"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

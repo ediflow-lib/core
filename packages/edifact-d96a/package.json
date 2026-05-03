@@ -1,29 +1,25 @@
 {
   "name": "@ediflow/edifact-d96a",
-  "version": "0.2.1",
-  "description": "EDIFACT D.96A (1996) Standard Definitions - 7 Message Types",
+  "version": "0.3.0",
+  "description": "UN/EDIFACT D.96A standard definitions — 126 messages, 139 segments, 172 composites, 505 elements",
   "main": "./data/index.json",
   "files": [
     "data",
     "README.md"
   ],
   "keywords": [
+    "ediflow",
     "edi",
     "edifact",
     "d96a",
-    "edifact-d96a",
-    "standard-definitions",
-    "message-structures",
     "un-edifact",
-    "edifact-parser",
-    "orders",
     "invoic",
-    "invoice",
+    "orders",
     "desadv",
     "pricat",
-    "ordrsp",
-    "retail",
-    "typescript"
+    "aperak",
+    "standard-definitions",
+    "message-structures"
   ],
   "author": "EDIFlow Contributors",
   "license": "MIT",
@@ -36,6 +32,8 @@
   },
   "homepage": "https://github.com/ediflow-lib/core#readme",
   "peerDependencies": {
-    "@ediflow/core": "^0.1.0"
+    "@ediflow/core": ">=0.1.0"
   }
 }
+
+

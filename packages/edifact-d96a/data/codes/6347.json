@@ -1,0 +1,41 @@
+{
+  "elementCode": "6347",
+  "elementName": "Currency details qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Charge payment currency",
+      "description": "The currency in which charges are to be paid."
+    },
+    {
+      "code": "2",
+      "name": "Reference currency",
+      "description": "The currency applicable to amounts stated. It may have to be converted."
+    },
+    {
+      "code": "3",
+      "name": "Target currency",
+      "description": "The currency which should be used to the target destination of the transaction."
+    },
+    {
+      "code": "4",
+      "name": "Transport document currency",
+      "description": "Currency applicable to amounts stated in a transport document/message."
+    },
+    {
+      "code": "5",
+      "name": "Calculation base currency",
+      "description": "Currency on which the calculation is based."
+    },
+    {
+      "code": "6",
+      "name": "Information Currency",
+      "description": "Additional currency the message recipient needs for information purposes. The actual message amount(s) is/are not based upon this currency."
+    },
+    {
+      "code": "7",
+      "name": "Currency of the account",
+      "description": "Currency in which the account is held."
+    }
+  ]
+}

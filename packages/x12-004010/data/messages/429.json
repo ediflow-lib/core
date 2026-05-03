@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "429",
+  "name": "Railroad Retirement Activity",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Railroad Retirement Activity Transaction Set (429) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides the sender with the capability to transmit information pertaining to the processing of railroad employee sickness and unemployment benefit claims against retirement funds. This transaction set will support the transfer of claim information from the Retirement Board to carriers as well as supporting corresponding response from a carrier to the Retirement Board.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "RU1",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopRU2",
+      "name": "LoopRU2",
+      "triggerSegment": "RU2",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "RU2",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "RU3",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NTE",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

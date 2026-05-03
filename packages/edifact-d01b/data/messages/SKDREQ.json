@@ -1,0 +1,114 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.01B",
+  "messageType": "SKDREQ",
+  "name": "Schedule request ",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UIH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "MSD",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ORG",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "HDR",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "POP",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ODI",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 6
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG1",
+      "name": "SG1",
+      "triggerSegment": "RFR",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 7,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "RFR",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "LKP",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "SG2",
+      "name": "SG2",
+      "triggerSegment": "ERI",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 8,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ERI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "RFR",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IFT",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UIT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 9
+    }
+  ]
+}

@@ -1,5 +1,46 @@
 {
-  "code": "5283",
-  "name": "Duty or tax or fee function code qualifier",
-  "values": []
+  "elementCode": "5283",
+  "elementName": "Duty or tax or fee function code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Individual duty, tax or fee (Customs item)",
+      "description": "Individual duty, tax or fee charged on a single Customs item line of the goods declaration (CCC)."
+    },
+    {
+      "code": "2",
+      "name": "Total of all duties, taxes and fees (Customs item)",
+      "description": "Total of all duties, taxes and fees charged on a single Customs item line of the goods declaration (CCC)."
+    },
+    {
+      "code": "3",
+      "name": "Total of each duty, tax or fee type (Customs declaration)",
+      "description": "Total of each duty, tax or fee charged on the goods declaration (CCC)."
+    },
+    {
+      "code": "4",
+      "name": "Total of all duties, taxes and fee types (Customs declaration)",
+      "description": "Total of all duties, taxes and fees charged on the goods declaration (CCC)."
+    },
+    {
+      "code": "5",
+      "name": "Customs duty",
+      "description": "Duties laid down in the Customs tariff to which goods are liable on entering or leaving the Customs territory (CCC)."
+    },
+    {
+      "code": "6",
+      "name": "Fee",
+      "description": "Charge for services rendered."
+    },
+    {
+      "code": "7",
+      "name": "Tax",
+      "description": "Contribution levied by an authority."
+    },
+    {
+      "code": "9",
+      "name": "Tax related information",
+      "description": "Code specifying information related to tax."
+    }
+  ]
 }

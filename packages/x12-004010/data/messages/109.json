@@ -1,0 +1,108 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "109",
+  "name": "Vessel Content Details",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Vessel Content Details Transaction Set (109) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide all the information necessary to report event details for a shipment and status for one or more containers bound for a port.\nIt is intended to accommodate the details for one status or event associated with many containers, as well as more than one status or event for one shipment.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B4",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 30,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "Q2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR4",
+      "name": "LoopR4",
+      "triggerSegment": "R4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 15,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "V9",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN9",
+          "name": "LoopN9",
+          "triggerSegment": "N9",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "SG",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

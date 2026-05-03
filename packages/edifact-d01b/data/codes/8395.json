@@ -1,5 +1,24 @@
 {
-  "code": "8395",
-  "name": "Returnable package freight payment responsibility code",
-  "values": []
+  "elementCode": "8395",
+  "elementName": "Returnable package freight payment responsibility code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Paid by customer"
+    },
+    {
+      "code": "2",
+      "name": "Free"
+    },
+    {
+      "code": "3",
+      "name": "Paid by supplier",
+      "description": "The responsibility for the freight for returning the packaging is to be paid by the supplier."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "A code assigned within a code list to be used on an interim basis and as defined among trading partners until a precise code can be assigned to the code list."
+    }
+  ]
 }

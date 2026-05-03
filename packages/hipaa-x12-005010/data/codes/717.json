@@ -1,0 +1,30 @@
+{
+  "code": "717",
+  "name": "Code indicating accept or reject condition based on the syntax editing of the transaction set",
+  "values": [
+    {
+      "code": "A",
+      "name": "Accepted"
+    },
+    {
+      "code": "E",
+      "name": "Accepted But Errors Were Noted"
+    },
+    {
+      "code": "M",
+      "name": "Rejected, Message Authentication Code (MAC) Failed"
+    },
+    {
+      "code": "R",
+      "name": "Rejected"
+    },
+    {
+      "code": "W",
+      "name": "Rejected, Assurance Failed Validity Tests"
+    },
+    {
+      "code": "X",
+      "name": "Rejected, Content After Decryption Could Not Be Analyzed"
+    }
+  ]
+}

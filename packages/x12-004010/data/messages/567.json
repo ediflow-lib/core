@@ -1,0 +1,168 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "567",
+  "name": "Contract Completion Status",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Contract Completion Status Transaction Set (567) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to report administrative closure status on completed contracts. The originator can use this transaction set to close contract files, to indicate why contract files will not be closed within established milestones, or to extend contract closeout milestone dates.\n\nThis transaction set may be used to convey contract summary data, financial information, dates pertinent to the administrative closing of a contract file, and logistics information necessary to evaluate contract closeout status.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BC",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G61",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "NTE",
+      "mandatory": false,
+      "maxOccurrences": 100,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopCS",
+      "name": "LoopCS",
+      "triggerSegment": "CS",
+      "mandatory": true,
+      "maxOccurrences": 100,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "CS",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "AMT",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G62",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G61",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NTE",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 6
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopLM",
+          "name": "LoopLM",
+          "triggerSegment": "LM",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 7,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "LM",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LQ",
+              "mandatory": true,
+              "maxOccurrences": 100,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN1",
+          "name": "LoopN1",
+          "triggerSegment": "N1",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 8,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N2",
+              "mandatory": false,
+              "maxOccurrences": 2,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N3",
+              "mandatory": false,
+              "maxOccurrences": 2,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

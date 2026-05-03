@@ -1,0 +1,118 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "144",
+  "name": "Student Loan Transfer and Status Verification",
+  "description": "Student Loan Transfer and Status Verification",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "GR",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LV",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DB",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "IDB",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 9
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopENT",
+      "name": "LoopENT",
+      "triggerSegment": "ENT",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 10,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ENT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IN2",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DMG",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    }
+  ]
+}

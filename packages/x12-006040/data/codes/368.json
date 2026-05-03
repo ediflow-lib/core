@@ -1,0 +1,414 @@
+{
+  "code": "368",
+  "name": "Code indicating the status of an order or shipment or the disposition of any difference between the quantity ordered and the quantity shipped for a line item or transaction",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Multiple Pickup Same Destination"
+    },
+    {
+      "code": "AB",
+      "name": "Available to Ship - Billed Quantity"
+    },
+    {
+      "code": "AN",
+      "name": "Available Now - No Shipping Schedule"
+    },
+    {
+      "code": "AP",
+      "name": "Allocation"
+    },
+    {
+      "code": "AS",
+      "name": "Available Now - Scheduled to Ship (date)"
+    },
+    {
+      "code": "AU",
+      "name": "Available to Ship - Unbilled Quantity"
+    },
+    {
+      "code": "AV",
+      "name": "Available"
+    },
+    {
+      "code": "BK",
+      "name": "Back Ordered from Previous Order"
+    },
+    {
+      "code": "BM",
+      "name": "Backordered, Manufacturer, Out-of-Stock"
+    },
+    {
+      "code": "BO",
+      "name": "Back Ordered"
+    },
+    {
+      "code": "BP",
+      "name": "Shipment Partial, Back Order to Ship on (Date)"
+    },
+    {
+      "code": "BT",
+      "name": "Billed total"
+    },
+    {
+      "code": "BW",
+      "name": "Billed week-to-date"
+    },
+    {
+      "code": "CA",
+      "name": "Customer Inquiry - All Items"
+    },
+    {
+      "code": "CB",
+      "name": "Components Missing"
+    },
+    {
+      "code": "CC",
+      "name": "Shipment Complete on (Date)"
+    },
+    {
+      "code": "CD",
+      "name": "Consolidated Freight"
+    },
+    {
+      "code": "CE",
+      "name": "Shipment Includes Extra Items to Meet Price Break"
+    },
+    {
+      "code": "CF",
+      "name": "Consolidated Load"
+    },
+    {
+      "code": "CI",
+      "name": "Customer Inquiry - Shipped Items Only"
+    },
+    {
+      "code": "CK",
+      "name": "Cancelled from Previous Order"
+    },
+    {
+      "code": "CL",
+      "name": "Complete"
+    },
+    {
+      "code": "CM",
+      "name": "Shipment Complete with Additional Quantity"
+    },
+    {
+      "code": "CN",
+      "name": "Next Carrier Move on (Date)"
+    },
+    {
+      "code": "CO",
+      "name": "Customer Inquiry - Unshipped Items Only"
+    },
+    {
+      "code": "CP",
+      "name": "Partial Shipment on (Date), Considered No Backorder"
+    },
+    {
+      "code": "CS",
+      "name": "Shipment Complete with Substitution"
+    },
+    {
+      "code": "CT",
+      "name": "Combination"
+    },
+    {
+      "code": "CU",
+      "name": "Cancelled Line Item"
+    },
+    {
+      "code": "DA",
+      "name": "Due for Assortment"
+    },
+    {
+      "code": "DD",
+      "name": "Delivered to Destination on (Date)"
+    },
+    {
+      "code": "DE",
+      "name": "Deleted Order"
+    },
+    {
+      "code": "DI",
+      "name": "Discontinued"
+    },
+    {
+      "code": "DO",
+      "name": "Diverted Order"
+    },
+    {
+      "code": "DP",
+      "name": "Dispose"
+    },
+    {
+      "code": "DR",
+      "name": "Dating Requirements"
+    },
+    {
+      "code": "DS",
+      "name": "Out Of Stock Condition"
+    },
+    {
+      "code": "EC",
+      "name": "Equipment Capacity"
+    },
+    {
+      "code": "ED",
+      "name": "Expect to Ship By (Date)"
+    },
+    {
+      "code": "EW",
+      "name": "Expect To Ship Week of (Date)"
+    },
+    {
+      "code": "EX",
+      "name": "Expect to Deliver by"
+    },
+    {
+      "code": "FS",
+      "name": "Units Not Shipped By Agent - To Be Shipped From Factory"
+    },
+    {
+      "code": "HQ",
+      "name": "Held Awaiting Qualification"
+    },
+    {
+      "code": "IC",
+      "name": "Item Canceled"
+    },
+    {
+      "code": "ID",
+      "name": "Insufficient Information"
+    },
+    {
+      "code": "IN",
+      "name": "In Process"
+    },
+    {
+      "code": "IP",
+      "name": "Inquiry by Purchase Order"
+    },
+    {
+      "code": "IS",
+      "name": "Item Represents Substitution from Original Order"
+    },
+    {
+      "code": "LM",
+      "name": "Shipment late"
+    },
+    {
+      "code": "LS",
+      "name": "Last Shipment on (Date)"
+    },
+    {
+      "code": "LW",
+      "name": "Number of Late Weeks"
+    },
+    {
+      "code": "MC",
+      "name": "Missing Components Furnished"
+    },
+    {
+      "code": "NF",
+      "name": "Not Yet Published"
+    },
+    {
+      "code": "NN",
+      "name": "Not in Process - No Shipping Schedule"
+    },
+    {
+      "code": "NS",
+      "name": "Not In Process, Scheduled to Ship on (Date)"
+    },
+    {
+      "code": "NY",
+      "name": "No Shipping Schedule"
+    },
+    {
+      "code": "OB",
+      "name": "Out of Bill & Hold Goods"
+    },
+    {
+      "code": "OF",
+      "name": "Order Sent to Factory for Production on (Date)"
+    },
+    {
+      "code": "OP",
+      "name": "Out of Print"
+    },
+    {
+      "code": "OR",
+      "name": "Temporarily Out of Stock - Reorder"
+    },
+    {
+      "code": "PA",
+      "name": "Purchase Order Inquiry - All Items"
+    },
+    {
+      "code": "PC",
+      "name": "Production"
+    },
+    {
+      "code": "PD",
+      "name": "Purchase Order Complete"
+    },
+    {
+      "code": "PH",
+      "name": "Product On Hold"
+    },
+    {
+      "code": "PI",
+      "name": "Purchase Order Inquiry - Shipped Items Only"
+    },
+    {
+      "code": "PK",
+      "name": "Packed-to-Date as of (Date)"
+    },
+    {
+      "code": "PL",
+      "name": "Part Lot, Stop Off"
+    },
+    {
+      "code": "PN",
+      "name": "In Process - No Shipping Schedule"
+    },
+    {
+      "code": "PO",
+      "name": "Purchase Order Inquiry - Unshipped Items Only"
+    },
+    {
+      "code": "PP",
+      "name": "Purchase Order Inquiry - Specific Items"
+    },
+    {
+      "code": "PR",
+      "name": "Partial Shipment"
+    },
+    {
+      "code": "PS",
+      "name": "In Process, Scheduled to Ship On (Date)"
+    },
+    {
+      "code": "PT",
+      "name": "Part Lot"
+    },
+    {
+      "code": "QN",
+      "name": "Quantity Net Due"
+    },
+    {
+      "code": "QP",
+      "name": "Quantity Past Due"
+    },
+    {
+      "code": "RC",
+      "name": "Released to Carrier (Date)"
+    },
+    {
+      "code": "RD",
+      "name": "Revised Expect to Ship By (Date)"
+    },
+    {
+      "code": "RI",
+      "name": "Recall"
+    },
+    {
+      "code": "RT",
+      "name": "Received Total"
+    },
+    {
+      "code": "RW",
+      "name": "Revised Expect to Ship Week of (Date)"
+    },
+    {
+      "code": "SA",
+      "name": "Shipment Quantity Increase"
+    },
+    {
+      "code": "SB",
+      "name": "Seconds Available to Ship - Billed Quantity"
+    },
+    {
+      "code": "SC",
+      "name": "Shipment Quantity Decrease"
+    },
+    {
+      "code": "SD",
+      "name": "Shipped Damaged"
+    },
+    {
+      "code": "SE",
+      "name": "Replacement Shipment"
+    },
+    {
+      "code": "SF",
+      "name": "Shipped and Held in Bond at Contractor's Plant"
+    },
+    {
+      "code": "SG",
+      "name": "Shipped and Held as Government-Furnished Property"
+    },
+    {
+      "code": "SH",
+      "name": "Shipped (Date)"
+    },
+    {
+      "code": "SI",
+      "name": "Shipment Late, Scheduled to Ship on (Date)"
+    },
+    {
+      "code": "SJ",
+      "name": "Shipped or Performed as Indicated"
+    },
+    {
+      "code": "SK",
+      "name": "Shipment Underrun Quantity"
+    },
+    {
+      "code": "SL",
+      "name": "Shipped - to - Date through (Date)"
+    },
+    {
+      "code": "SP",
+      "name": "Scheduled for Production at Factory on (Date)"
+    },
+    {
+      "code": "SQ",
+      "name": "Scheduled to ship (Summary quantity)"
+    },
+    {
+      "code": "SS",
+      "name": "Split Shipment"
+    },
+    {
+      "code": "ST",
+      "name": "Stop Off"
+    },
+    {
+      "code": "SU",
+      "name": "Seconds Available to Ship - Unbilled Quantity"
+    },
+    {
+      "code": "UB",
+      "name": "Unbilled Quantity Balance"
+    },
+    {
+      "code": "UN",
+      "name": "Unavailable"
+    },
+    {
+      "code": "UR",
+      "name": "Unsolicited Report"
+    },
+    {
+      "code": "WS",
+      "name": "Item Invoiced - Shipment to Follow"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

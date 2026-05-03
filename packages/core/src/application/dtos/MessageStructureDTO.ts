@@ -30,6 +30,7 @@ export interface ElementNode {
   mandatory: boolean;
   position: number;
   dataType?: string;
+  minLength?: number;
   maxLength?: number;
   codeListCode?: string;
 }
@@ -46,6 +47,16 @@ export interface CompositeElementNode {
 export type ElementOrComposite = ElementNode | CompositeElementNode;
 
 // ============================================================================
+// SYNTAX RULES (optional, attached to segments)
+// ============================================================================
+
+export interface SyntaxRuleDefinition {
+  type: string;
+  positions: number[];
+  description: string;
+}
+
+// ============================================================================
 // SEGMENT LEVEL
 // ============================================================================
 
@@ -57,7 +68,8 @@ export interface SegmentNode {
   maxOccurrences: number;
   position: number;
   elements: ElementOrComposite[];
-  mapping?: MappingRule;  // Phase 2: How to map to business object field
+  syntaxRules?: SyntaxRuleDefinition[];
+  mapping?: MappingRule;
 }
 
 export interface SegmentGroupNode {

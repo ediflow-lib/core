@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "468",
+  "name": "Rate Docket Journal Log",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Rate Docket Journal Log Transaction Set (468) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to transmit comments about rates contained in a rate docket.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DK",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "JL",
+      "mandatory": true,
+      "maxOccurrences": 7,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "JL",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": true,
+          "maxOccurrences": 100,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "436",
+  "name": "Locomotive Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Locomotive Information Transaction Set (436) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to provide the rail carriers with locomotive status and location information.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LFI",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N7",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "K3",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

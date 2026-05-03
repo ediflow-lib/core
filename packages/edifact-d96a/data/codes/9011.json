@@ -1,5 +1,521 @@
 {
-  "code": "9011",
-  "name": "Status event, coded",
-  "values": []
+  "elementCode": "9011",
+  "elementName": "Status event, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Arrived",
+      "description": "The means of transport has arrived at a location."
+    },
+    {
+      "code": "2",
+      "name": "Authorized to load",
+      "description": "Permission to load has been given by the responsible party."
+    },
+    {
+      "code": "3",
+      "name": "Arrived in defective condition",
+      "description": "Goods/consignments/equipment have been received or a means of transport has arrived in a defective condition."
+    },
+    {
+      "code": "4",
+      "name": "Defective equipment release",
+      "description": "Equipment previously the subject of a 'defective condition' status has been returned to service."
+    },
+    {
+      "code": "5",
+      "name": "Begun",
+      "description": "The process has begun."
+    },
+    {
+      "code": "6",
+      "name": "Booked",
+      "description": "Goods/consignments/equipment or means of transport have been booked for subsequent movements."
+    },
+    {
+      "code": "7",
+      "name": "Booking cancelled",
+      "description": "The booking of goods/consignments/equipment or means of transport previously booked has been cancelled."
+    },
+    {
+      "code": "8",
+      "name": "Cleared import restrictions",
+      "description": "Goods/consignments/equipment held for import restriction purposes have been released for import."
+    },
+    {
+      "code": "9",
+      "name": "Cleared export restrictions",
+      "description": "Goods/consignments/equipment held prior to loading have now been cleared for export."
+    },
+    {
+      "code": "10",
+      "name": "Cleared by agriculture, food or fisheries authorities",
+      "description": "Goods/consignments/equipment have been held prior to shipment and are now cleared for shipment following examination by relevant authority."
+    },
+    {
+      "code": "11",
+      "name": "Cleared by port authority",
+      "description": "The port authority has given permission for the goods/consignments/equipment/means of transport to leave the port."
+    },
+    {
+      "code": "12",
+      "name": "Cleared by customs",
+      "description": "Customs have cleared goods/consignments for import/export."
+    },
+    {
+      "code": "13",
+      "name": "Collected",
+      "description": "Goods/consignments/equipment have been collected from a predetermined location."
+    },
+    {
+      "code": "14",
+      "name": "Completed",
+      "description": "The process has been completed."
+    },
+    {
+      "code": "15",
+      "name": "Consolidated",
+      "description": "Goods/consignments have been added to other goods/ consignments to form a larger consignment and/or have been incorporated into one or more containers/units."
+    },
+    {
+      "code": "16",
+      "name": "Crossed border",
+      "description": "Goods/consignments/equipment have crossed a border from one country to another."
+    },
+    {
+      "code": "17",
+      "name": "Customs refusal",
+      "description": "The Customs authorities have refused to clear the goods/consignments/equipment."
+    },
+    {
+      "code": "18",
+      "name": "Damaged",
+      "description": "Goods/consignments/equipment have been damaged in the course of transportation."
+    },
+    {
+      "code": "19",
+      "name": "Damaged equipment quoted",
+      "description": "Damaged equipment has been assessed and the quotation sent to lessor."
+    },
+    {
+      "code": "20",
+      "name": "Delayed",
+      "description": "Goods/consignments/equipment have been delayed in the course of transportation."
+    },
+    {
+      "code": "21",
+      "name": "Delivered",
+      "description": "The goods/consignments/equipment have been delivered to a location/party in the transport chain."
+    },
+    {
+      "code": "22",
+      "name": "Delivery completed",
+      "description": "Delivery of the goods/consignments/equipment has been completed as per instructions."
+    },
+    {
+      "code": "23",
+      "name": "Delivery not completed",
+      "description": "Delivery of the goods/consignments/equipment has not been completed in accordance with instructions."
+    },
+    {
+      "code": "24",
+      "name": "Departed",
+      "description": "The means of transport has departed from a location in the transport chain."
+    },
+    {
+      "code": "25",
+      "name": "Departure delay",
+      "description": "The transport has been delayed in departing on the arranged transport action."
+    },
+    {
+      "code": "26",
+      "name": "Deramped",
+      "description": "Equipment has been removed from a position above other equipment on a means of transport."
+    },
+    {
+      "code": "27",
+      "name": "Despatched",
+      "description": "The goods/consignments/equipment have departed from a location in the transport chain."
+    },
+    {
+      "code": "28",
+      "name": "Stripped",
+      "description": "The goods/consignments/equipment have been unloaded from equipment in which they were transported."
+    },
+    {
+      "code": "29",
+      "name": "Discharged",
+      "description": "The goods/consignments/equipment have been unloaded from a means of transport."
+    },
+    {
+      "code": "30",
+      "name": "Empty on inspection",
+      "description": "The package/equipment has been found to be empty."
+    },
+    {
+      "code": "31",
+      "name": "En route",
+      "description": "The goods/consignments/equipment are in the normal course of transportation to the next destination."
+    },
+    {
+      "code": "32",
+      "name": "Equipment in from repair",
+      "description": "A piece of equipment has been received in after having been sent out for repair."
+    },
+    {
+      "code": "33",
+      "name": "Equipment out for repair",
+      "description": "A piece of equipment has been sent out for repair."
+    },
+    {
+      "code": "34",
+      "name": "Equipment repaired",
+      "description": "A damaged piece of equipment has been repaired."
+    },
+    {
+      "code": "35",
+      "name": "Expedited to destination",
+      "description": "The goods/consignments/equipment have been expedited to the next/final destination in the transport chain."
+    },
+    {
+      "code": "36",
+      "name": "Not found",
+      "description": "The goods/consignments/equipment notified to be missing have not been located."
+    },
+    {
+      "code": "37",
+      "name": "Found",
+      "description": "The goods/consignments/equipment previously notified missing have now been located."
+    },
+    {
+      "code": "38",
+      "name": "Freight paid",
+      "description": "The freight charges on goods/consignments/equipment have been paid."
+    },
+    {
+      "code": "39",
+      "name": "From bond",
+      "description": "The goods/consignments/equipment have been moved/are available to be moved from bond."
+    },
+    {
+      "code": "40",
+      "name": "Goods/consignments/equipment at port",
+      "description": "The goods/consignments/equipment have arrived/are available at port."
+    },
+    {
+      "code": "41",
+      "name": "Handover",
+      "description": "The goods/consignments/equipment have been formally passed from one point in the transport chain to another under responsibility of the same transporter. (See also 'handover delivered'.)"
+    },
+    {
+      "code": "42",
+      "name": "Handover delivered",
+      "description": "The goods/consignments/equipment from one transport operator have been passed to another transport operator. (see also 'handover'.)"
+    },
+    {
+      "code": "43",
+      "name": "Handover received",
+      "description": "The goods/consignments/equipment have been received by one transport operator from another transport operator."
+    },
+    {
+      "code": "44",
+      "name": "Ill-routed consignment reforwarded",
+      "description": "The goods/consignments/equipment which were previously sent to a wrong destination are on the way to correct destination."
+    },
+    {
+      "code": "45",
+      "name": "Informed Consignee of arrival",
+      "description": "The consignee has been informed formally of the arrival at a transit or final destination of goods/consignments/equipment."
+    },
+    {
+      "code": "46",
+      "name": "Into bond",
+      "description": "The goods/consignments/equipment have been moved/is available to be moved into bond."
+    },
+    {
+      "code": "47",
+      "name": "Into packing depot",
+      "description": "The goods/consignments/equipment have been moved into a LCL (less than container load)/packing depot."
+    },
+    {
+      "code": "48",
+      "name": "Loaded",
+      "description": "The goods/consignments/equipment have been loaded onto a means of transport."
+    },
+    {
+      "code": "49",
+      "name": "Lost",
+      "description": "The goods/consignments/equipment have been lost in the course of a movement along the transport chain."
+    },
+    {
+      "code": "50",
+      "name": "Manifested",
+      "description": "The goods/consignments/equipment have been included on the list of units moving from one location to another in the transport chain."
+    },
+    {
+      "code": "51",
+      "name": "Means of transport damaged",
+      "description": "The means of transport on which the goods/consignments/equipment was being (was to be) moved has been damaged."
+    },
+    {
+      "code": "52",
+      "name": "Mechanical breakdown",
+      "description": "There has been a mechanical breakdown of the means of transport/equipment on which the goods/consignments/equipment was being (was to be) moved."
+    },
+    {
+      "code": "53",
+      "name": "No pick-up",
+      "description": "The goods/consignments/equipment expected to be picked up and conveyed from location to location in the transport chain have not been picked up."
+    },
+    {
+      "code": "54",
+      "name": "Not identified",
+      "description": "The goods/consignments/equipment expected to be located and identified in the transport chain cannot be identified."
+    },
+    {
+      "code": "55",
+      "name": "Not collected",
+      "description": "The goods/consignments/equipment expected to be collected after transportation have not been collected."
+    },
+    {
+      "code": "56",
+      "name": "Not delivered",
+      "description": "The goods/consignments/equipment have not been delivered."
+    },
+    {
+      "code": "57",
+      "name": "Not loaded",
+      "description": "The goods/consignments/equipment to be loaded onto a means of transport have not been loaded on the expected transport."
+    },
+    {
+      "code": "58",
+      "name": "Off hire",
+      "description": "Equipment previously under hire to a customer has been returned to the lessor and the contract has been terminated."
+    },
+    {
+      "code": "59",
+      "name": "Off loaded",
+      "description": "The goods/consignments/equipment previously loaded to a means of transport have been removed from that means of transport before completion of the planned transport."
+    },
+    {
+      "code": "60",
+      "name": "On hire",
+      "description": "Equipment has been hired out to a hirer/customer."
+    },
+    {
+      "code": "61",
+      "name": "Outstanding claims settled",
+      "description": "Outstanding claims in respect of goods/consignments/equipment have been settled."
+    },
+    {
+      "code": "62",
+      "name": "Over landed",
+      "description": "Goods/consignments/equipment have been discharged from a means of transport at a specific location when they were not expected to be discharged."
+    },
+    {
+      "code": "63",
+      "name": "Package not ready",
+      "description": "The package was not available for collection."
+    },
+    {
+      "code": "64",
+      "name": "Pick-up awaited",
+      "description": "Goods/consignments/equipment are awaiting pick-up."
+    },
+    {
+      "code": "65",
+      "name": "Plugged equipment",
+      "description": "Equipment, e.g. a refrigerated container, has been plugged into the power source."
+    },
+    {
+      "code": "66",
+      "name": "Plundered",
+      "description": "The goods/consignments/equipment have been plundered."
+    },
+    {
+      "code": "67",
+      "name": "Positioned goods/consignments/equipment",
+      "description": "Goods/consignments/equipment have been positioned on a means of transport."
+    },
+    {
+      "code": "68",
+      "name": "Pre-informed",
+      "description": "The consignor/consignee has been advised in advance of a transport action."
+    },
+    {
+      "code": "69",
+      "name": "Put to refuse",
+      "description": "The goods/consignments/equipment have been written off and disposed of."
+    },
+    {
+      "code": "70",
+      "name": "Ramped equipment",
+      "description": "Equipment has been placed above other equipment and placed on a means of transport."
+    },
+    {
+      "code": "71",
+      "name": "Ready for transportation",
+      "description": "Goods/consignments/equipment have been made ready for transportation."
+    },
+    {
+      "code": "72",
+      "name": "Receipt fully acknowledged",
+      "description": "The consignee has given full acknowledgement for the receipt of goods."
+    },
+    {
+      "code": "73",
+      "name": "Receipt partially acknowledged",
+      "description": "The consignee has not given full acknowledgement for the receipt of goods."
+    },
+    {
+      "code": "74",
+      "name": "Received",
+      "description": "Goods/consignments/equipment have been received at a location/party in the transport chain."
+    },
+    {
+      "code": "75",
+      "name": "Reconsigned",
+      "description": "Goods/consignments/equipment have been consigned to a party other than the original or subsequent consignees."
+    },
+    {
+      "code": "76",
+      "name": "Reforwarding on request",
+      "description": "The goods/consignments/equipment which have been delayed will be/have been reforwarded on request by appropriate authority."
+    },
+    {
+      "code": "77",
+      "name": "Refused without reason given",
+      "description": "The transport action/documentation has been refused without explanation."
+    },
+    {
+      "code": "78",
+      "name": "Released",
+      "description": "Goods/consignments/equipment have been released to an authorized party."
+    },
+    {
+      "code": "79",
+      "name": "Reloaded",
+      "description": "Goods/consignments/equipment have been reloaded onto a means of transport."
+    },
+    {
+      "code": "80",
+      "name": "Returned as instructed",
+      "description": "The goods/consignments/equipment have been returned to a location as per instructions."
+    },
+    {
+      "code": "81",
+      "name": "Returned as wreck",
+      "description": "The goods/consignments/equipment have been returned in a wrecked condition to a location as per instructions."
+    },
+    {
+      "code": "82",
+      "name": "Returned",
+      "description": "Goods/consignments/equipment have been returned to a previous location."
+    },
+    {
+      "code": "83",
+      "name": "Sealed equipment",
+      "description": "The equipment has been sealed according to operational and governmental requirements."
+    },
+    {
+      "code": "84",
+      "name": "Service ordered",
+      "description": "A service has been ordered in relation to the transportation of goods/consignments/equipment."
+    },
+    {
+      "code": "85",
+      "name": "Short landed",
+      "description": "Goods/consignments/equipment expected to be discharged from a means of transport at a specific location have not been discharged."
+    },
+    {
+      "code": "86",
+      "name": "Short shipped",
+      "description": "The goods/consignments/equipment expected to be sent to a specific destination on a selected means of transport from a specific location have not been loaded for onward delivery."
+    },
+    {
+      "code": "87",
+      "name": "Sorted wrong route",
+      "description": "The goods/consignments/equipment have been sorted erroneously to an incorrect route."
+    },
+    {
+      "code": "88",
+      "name": "Split",
+      "description": "The consignment of goods has been split into two or more consignments."
+    },
+    {
+      "code": "89",
+      "name": "Steam cleaned",
+      "description": "The equipment, e.g. a container, has been steam cleaned."
+    },
+    {
+      "code": "90",
+      "name": "Stopped",
+      "description": "The goods/consignments/equipment have been stopped from further movement in the transport chain."
+    },
+    {
+      "code": "91",
+      "name": "Stored",
+      "description": "The goods/consignments/equipment have been stored at a location."
+    },
+    {
+      "code": "92",
+      "name": "Stowed",
+      "description": "The goods/consignments/equipment have been stowed for transportation in the selected equipment/means of transport."
+    },
+    {
+      "code": "93",
+      "name": "Stuffed",
+      "description": "The goods/consignments/equipment have been loaded into a piece of equipment, e.g. a container."
+    },
+    {
+      "code": "94",
+      "name": "Stuffed and sealed",
+      "description": "The goods/consignments/equipment have been loaded into a piece of equipment and the equipment has been sealed."
+    },
+    {
+      "code": "95",
+      "name": "Sub-lease in",
+      "description": "In the leasing of equipment a sub-lease has been notified to the lessor."
+    },
+    {
+      "code": "96",
+      "name": "Sub-lease out",
+      "description": "In the leasing of equipment a sub-lease has been notified by a lessee."
+    },
+    {
+      "code": "97",
+      "name": "Surveyed damage",
+      "description": "Damaged goods/consignments/equipment have been officially surveyed by a third party to assess the extent of damage."
+    },
+    {
+      "code": "98",
+      "name": "Transferred in",
+      "description": "The goods/consignments/equipment have been transferred in from another location."
+    },
+    {
+      "code": "99",
+      "name": "Transferred out",
+      "description": "The goods/consignments/equipment have been transferred out to another location."
+    },
+    {
+      "code": "100",
+      "name": "Transhipment",
+      "description": "The goods/consignments/equipment have been transhipped to another means of transport."
+    },
+    {
+      "code": "101",
+      "name": "Transit delay",
+      "description": "The goods/consignments/equipment has been delayed in transit."
+    },
+    {
+      "code": "102",
+      "name": "Unknown goods/consignments/equipment",
+      "description": "The goods/consignments/equipment are not known to the source being enquired upon."
+    },
+    {
+      "code": "103",
+      "name": "Unplugged equipment",
+      "description": "Equipment, e.g. a refrigerated container, has been unplugged from the power source at a given location."
+    }
+  ]
 }

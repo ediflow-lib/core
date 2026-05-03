@@ -193,7 +193,7 @@ describe('BuildCommand - TDD (US-5.3)', () => {
       expect(() => parseStandard('INVALID')).toThrow('Unsupported standard: INVALID');
     });
 
-    it('should throw error when build use case fails', () => {
+    it('should throw error when build use case fails', async () => {
       mockBuildUseCase.execute.mockReturnValue({
         success: false,
         errors: [{ code: 'BUILD_ERROR', message: 'Build failed' }],
@@ -201,7 +201,7 @@ describe('BuildCommand - TDD (US-5.3)', () => {
 
       const execute = (buildCommand as any).execute.bind(buildCommand);
 
-      expect(() => execute('test.json', {})).rejects.toThrow();
+      await expect(() => execute('test.json', {})).rejects.toThrow();
     });
   });
 

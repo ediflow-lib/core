@@ -1,0 +1,37 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "225",
+  "name": "Response to a Cartage Work Assignment",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Response to a Cartage Work Assignment Transaction Set (225) for use within the context of an Electronic Data Interchange (EDI) environment.\nThis transaction set can be used by a cartage carrier to provide for customary and established business practice relative to a response to a cartage work assignment. The transaction set includes either acceptance or decline of the work assignment and any related reference numbers.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SCP",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "L11",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

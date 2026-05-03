@@ -1,0 +1,1233 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "304",
+  "name": "Shipping Instructions",
+  "description": "Shipping Instructions",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B2",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B2A",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "Y6",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G3",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 100,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "YNQ",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V3",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 11
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M0",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 12
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CUR",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 13
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 14
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "C2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 15
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ITD",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 16
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 17
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "R2A",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 18
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "R2",
+      "mandatory": false,
+      "maxOccurrences": 13,
+      "position": 19
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "K1",
+      "mandatory": false,
+      "maxOccurrences": 12,
+      "position": 20
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "L11",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 21
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "H3",
+      "mandatory": false,
+      "maxOccurrences": 6,
+      "position": 22
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "L5",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 23
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "X1",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 24
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "X2",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 25
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 26
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopM1",
+      "name": "LoopM1",
+      "triggerSegment": "M1",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 27,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "M1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "CUR",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopN1",
+      "name": "LoopN1",
+      "triggerSegment": "N1",
+      "mandatory": false,
+      "maxOccurrences": 100,
+      "position": 28,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G61",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR4",
+      "name": "LoopR4",
+      "triggerSegment": "R4",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 29,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 15,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopC8",
+      "name": "LoopC8",
+      "triggerSegment": "C8",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 30,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "C8",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "C8C",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SUP",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopLX",
+      "name": "LoopLX",
+      "triggerSegment": "LX",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 31,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "LX",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "Y2",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "L11",
+          "mandatory": false,
+          "maxOccurrences": 100,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 4
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN7",
+          "name": "LoopN7",
+          "triggerSegment": "N7",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N7",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N12",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "M7",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "M7A",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 6
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "W09",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 7
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LH6",
+              "mandatory": false,
+              "maxOccurrences": 6,
+              "position": 8
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L7",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 9
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "X1",
+              "mandatory": false,
+              "maxOccurrences": 25,
+              "position": 10
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "X2",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 11
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 12
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopL1",
+              "name": "LoopL1",
+              "triggerSegment": "L1",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 13,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "L1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopH1",
+              "name": "LoopH1",
+              "triggerSegment": "H1",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 14,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "H1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "H2",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopLH1",
+              "name": "LoopLH1",
+              "triggerSegment": "LH1",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 15,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH2",
+                  "mandatory": false,
+                  "maxOccurrences": 4,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH3",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LFH",
+                  "mandatory": false,
+                  "maxOccurrences": 25,
+                  "position": 4
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LEP",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 5
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH4",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 6
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LHT",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 7
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LHR",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 8
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PER",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopPO4",
+          "name": "LoopPO4",
+          "triggerSegment": "PO4",
+          "mandatory": false,
+          "maxOccurrences": 100,
+          "position": 6,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "PO4",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "MEA",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "MAN",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 4
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopL0",
+          "name": "LoopL0",
+          "triggerSegment": "L0",
+          "mandatory": false,
+          "maxOccurrences": 120,
+          "position": 7,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "L0",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "MEA",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LH6",
+              "mandatory": false,
+              "maxOccurrences": 6,
+              "position": 6
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L5",
+              "mandatory": false,
+              "maxOccurrences": 999,
+              "position": 7
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LIN",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 8
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L12",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 9
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "YNQ",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 10
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L7",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 11
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "X1",
+              "mandatory": false,
+              "maxOccurrences": 25,
+              "position": 12
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "X2",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 13
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopPO4",
+              "name": "LoopPO4",
+              "triggerSegment": "PO4",
+              "mandatory": false,
+              "maxOccurrences": 100,
+              "position": 14,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PO4",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "MEA",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "MAN",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N9",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 4
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopPAL",
+              "name": "LoopPAL",
+              "triggerSegment": "PAL",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 15,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PAL",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "QTY",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopCTP",
+              "name": "LoopCTP",
+              "triggerSegment": "CTP",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 16,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CTP",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopL1",
+              "name": "LoopL1",
+              "triggerSegment": "L1",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 17,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "L1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopSAC",
+              "name": "LoopSAC",
+              "triggerSegment": "SAC",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 18,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "SAC",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopL9",
+              "name": "LoopL9",
+              "triggerSegment": "L9",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 19,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "L9",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopC8",
+              "name": "LoopC8",
+              "triggerSegment": "C8",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 20,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "C8",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "C8C",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "SUP",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 3
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopH1",
+              "name": "LoopH1",
+              "triggerSegment": "H1",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 21,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "H1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "H2",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 2
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopLH1",
+              "name": "LoopLH1",
+              "triggerSegment": "LH1",
+              "mandatory": false,
+              "maxOccurrences": 1000,
+              "position": 22,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH2",
+                  "mandatory": false,
+                  "maxOccurrences": 4,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH3",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LFH",
+                  "mandatory": false,
+                  "maxOccurrences": 25,
+                  "position": 4
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LEP",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 5
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LH4",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 6
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LHT",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 7
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LHR",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 8
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PER",
+                  "mandatory": false,
+                  "maxOccurrences": 5,
+                  "position": 9
+                }
+              ]
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopN1",
+              "name": "LoopN1",
+              "triggerSegment": "N1",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 23,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N2",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N3",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N4",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 4
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "G61",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopL3",
+      "name": "LoopL3",
+      "triggerSegment": "L3",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 32,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "L3",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "CUR",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "MEA",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PWK",
+          "mandatory": false,
+          "maxOccurrences": 50,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SUP",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ISS",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 6
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "V9",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 7
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 8
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "L11",
+          "mandatory": false,
+          "maxOccurrences": 24,
+          "position": 9
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopL1",
+          "name": "LoopL1",
+          "triggerSegment": "L1",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 10,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "L1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CUR",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopTDS",
+          "name": "LoopTDS",
+          "triggerSegment": "TDS",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 11,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "TDS",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CUR",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopSAC",
+          "name": "LoopSAC",
+          "triggerSegment": "SAC",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 12,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "SAC",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CUR",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopL9",
+          "name": "LoopL9",
+          "triggerSegment": "L9",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 13,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "L9",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CUR",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

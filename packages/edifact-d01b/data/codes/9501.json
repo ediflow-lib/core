@@ -1,5 +1,61 @@
 {
-  "code": "9501",
-  "name": "Formula type code qualifier",
-  "values": []
+  "elementCode": "9501",
+  "elementName": "Formula type code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Order price revision",
+      "description": "The formula which enables the revision of a price from the date of order through to the date of delivery."
+    },
+    {
+      "code": "2",
+      "name": "Penalty payment",
+      "description": "The formula for the calculation of a penalty payment."
+    },
+    {
+      "code": "3",
+      "name": "Coefficient",
+      "description": "The formula for a coefficient calculation."
+    },
+    {
+      "code": "4",
+      "name": "Catalogue adjustment",
+      "description": "The formula to adjust a catalogue."
+    },
+    {
+      "code": "5",
+      "name": "Ceiling amount",
+      "description": "The formula for the calculation of a ceiling amount."
+    },
+    {
+      "code": "6",
+      "name": "Provisional instalment payment",
+      "description": "The formula for the calculation of a provisional instalment."
+    },
+    {
+      "code": "7",
+      "name": "Final instalment payment",
+      "description": "The formula for the calculation of a final instalment payment."
+    },
+    {
+      "code": "8",
+      "name": "Bonus payment",
+      "description": "The formula for the calculation of a bonus payment."
+    },
+    {
+      "code": "9",
+      "name": "Offer price revision",
+      "description": "The formula which enables the revision of a price from the date of offer through to the date of acceptance or award."
+    },
+    {
+      "code": "10",
+      "name": "Adjustment",
+      "description": "The formula for the calculation of an adjustment."
+    },
+    {
+      "code": "11",
+      "name": "Non-revisable instalment payment",
+      "description": "The formula for the calculation of an instalment payment that cannot be revised."
+    }
+  ]
 }

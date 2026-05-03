@@ -1,0 +1,235 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "190",
+  "name": "Student Enrollment Verification",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Student Enrollment Verification Transaction Set (190) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by guarantee agencies (\"guarantors\"), lending institutions (\"lenders\"), educational institutions (\"schools\"), secondary markets, and others to request and receive information required to verify a student's enrollment status.\n\nFederal regulations require lenders, guarantors, and schools to exchange student enrollment status information. This information includes, but is not limited to, student identification, enrollment status and dates, and school detail. The student's current enrollment status affects various aspects of the student loan process, such as the student's disbursement terms, deferment terms, deferment status, and repayment terms. Other entities such as insurance companies and student lending processors require additional information including student address, grade point average, and expected degree date.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ENR",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "ERP",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SST",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SUM",
+      "mandatory": false,
+      "maxOccurrences": 6,
+      "position": 7
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopN1",
+      "name": "LoopN1",
+      "triggerSegment": "N1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 8,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopENT",
+      "name": "LoopENT",
+      "triggerSegment": "ENT",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ENT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IN2",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DMG",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopSES",
+      "name": "LoopSES",
+      "triggerSegment": "SES",
+      "mandatory": false,
+      "maxOccurrences": 100,
+      "position": 10,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "SES",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SUM",
+          "mandatory": false,
+          "maxOccurrences": 6,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "ENR",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "FOS",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NTE",
+          "mandatory": false,
+          "maxOccurrences": 100,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopDEG",
+      "name": "LoopDEG",
+      "triggerSegment": "DEG",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 11,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "DEG",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "FOS",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NTE",
+          "mandatory": false,
+          "maxOccurrences": 100,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    }
+  ]
+}

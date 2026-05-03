@@ -1,0 +1,34 @@
+{
+  "code": "715",
+  "name": "Code indicating accept or reject condition based on the syntax editing of the functional group",
+  "values": [
+    {
+      "code": "A",
+      "name": "Accepted"
+    },
+    {
+      "code": "E",
+      "name": "Accepted, But Errors Were Noted."
+    },
+    {
+      "code": "M",
+      "name": "Rejected, Message Authentication Code (MAC) Failed"
+    },
+    {
+      "code": "P",
+      "name": "Partially Accepted, At Least One Transaction Set Was Rejected"
+    },
+    {
+      "code": "R",
+      "name": "Rejected"
+    },
+    {
+      "code": "W",
+      "name": "Rejected, Assurance Failed Validity Tests"
+    },
+    {
+      "code": "X",
+      "name": "Rejected, Content After Decryption Could Not Be Analyzed"
+    }
+  ]
+}

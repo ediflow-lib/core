@@ -5,4 +5,8 @@ export { MessageStructureService } from './MessageStructureService';
 export { StructureMappingService } from './StructureMappingService';
 export { StructureMappingService as StructureMapper } from './StructureMappingService';
 export { SchemaGenerationService } from './SchemaGenerationService';
+export { SchemaCache } from './SchemaCache';
 export type { JSONSchema, JSONSchemaType } from './JSONSchema';
+export type { MappingKeyStrategy } from './mapping/OutputKeyStrategy';
+export { DEFAULT_MAPPING_KEY_STRATEGY } from './mapping/OutputKeyStrategy';
+export { MappingKeyTransformer, mappingKeyTransformer } from './mapping/MappingKeyTransformer';

@@ -1,5 +1,26 @@
 {
-  "code": "4037",
-  "name": "Priority description code",
-  "values": []
+  "elementCode": "4037",
+  "elementName": "Priority description code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Immediate",
+      "description": "To be done immediately."
+    },
+    {
+      "code": "2",
+      "name": "Urgent",
+      "description": "To be performed before any non-urgent task."
+    },
+    {
+      "code": "3",
+      "name": "Normal",
+      "description": "To be done as routine work."
+    },
+    {
+      "code": "4",
+      "name": "Scheduled",
+      "description": "To be done as part of a scheduled plan."
+    }
+  ]
 }

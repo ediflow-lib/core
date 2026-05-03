@@ -7,4 +7,9 @@ export interface ValidateMessageInputDTO {
 
   messageStructure?: MessageStructureDTO;
   enableStructuralValidation?: boolean;
+
+  /** Opt-in: validate element values against code lists */
+  validateCodes?: boolean;
+  /** Pre-loaded code lists: Map<codeListCode, Set<validValues>> */
+  codeLists?: Map<string, Set<string>>;
 }

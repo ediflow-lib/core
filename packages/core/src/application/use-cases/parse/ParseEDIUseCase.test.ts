@@ -4,6 +4,8 @@ import { ParseEDIInputDTO } from './ParseEDIInputDTO';
 import { IMessageParser } from '@application/ports';
 import type { ParserConfig } from '@application/configuration';
 import { Standard, EDIMessage, Version, MessageType } from '@domain';
+import { StructureMappingService } from '@application/services/StructureMappingService';
+import type { MessageStructureDTO } from '@application/dtos';
 describe('ParseEDIUseCase', () => {
   let useCase: ParseEDIUseCase;
   let mockMessageParser: IMessageParser;
@@ -18,7 +20,7 @@ describe('ParseEDIUseCase', () => {
   });
   describe('execute', () => {
     it('should parse message successfully via IMessageParser', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       mockMessageParser.parse = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);
       const input: ParseEDIInputDTO = { message: "UNH+1+ORDERS:D:96A:UN'BGM+220'UNT+3+1'", standard: Standard.EDIFACT };
@@ -54,7 +56,7 @@ describe('ParseEDIUseCase', () => {
     });
 
     it('should pass ParserConfig to parser when provided', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       const parseSpy = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.parse = parseSpy;
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);
@@ -77,7 +79,7 @@ describe('ParseEDIUseCase', () => {
     });
 
     it('should work without ParserConfig (backward compatibility)', () => {
-      const mockMessage = new EDIMessage(Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
       const parseSpy = vi.fn().mockReturnValue(mockMessage);
       mockMessageParser.parse = parseSpy;
       mockMessageParser.canParse = vi.fn().mockReturnValue(true);
@@ -91,6 +93,33 @@ describe('ParseEDIUseCase', () => {
 
       expect(result.success).toBe(true);
       expect(parseSpy).toHaveBeenCalledWith(input.message, undefined);
+    });
+
+    it('maps to typed business object when returnTypedObject=true and structureMappingService provided', () => {
+      const mockMessage = new EDIMessage('mock-id', Standard.EDIFACT, new Version(Standard.EDIFACT, 'D.96A'), new MessageType(Standard.EDIFACT, 'ORDERS'));
+      mockMessageParser.parse = vi.fn().mockReturnValue(mockMessage);
+      mockMessageParser.canParse = vi.fn().mockReturnValue(true);
+
+      const expectedBusinessObject = { documentNumber: 'PO-001' };
+      const mapper = { map: vi.fn().mockReturnValue(expectedBusinessObject) } as unknown as StructureMappingService;
+      const useCaseWithMapper = new ParseEDIUseCase(mockMessageParser, mapper);
+
+      const structure: MessageStructureDTO = {
+        standard: 'EDIFACT', version: 'D.96A', messageType: 'ORDERS', name: 'ORDERS', structure: [],
+      };
+
+      const result = useCaseWithMapper.execute({
+        message: "UNH+1+ORDERS:D:96A:UN'",
+        standard: Standard.EDIFACT,
+        returnTypedObject: true,
+        messageStructure: structure,
+      });
+
+      expect(result.success).toBe(true);
+      if (result.success) {
+        expect(result.businessObject).toEqual(expectedBusinessObject);
+        expect(mapper.map).toHaveBeenCalledOnce();
+      }
     });
   });
 });

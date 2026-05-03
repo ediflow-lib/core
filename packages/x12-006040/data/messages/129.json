@@ -1,0 +1,62 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "129",
+  "name": "Vehicle Carrier Rate Update",
+  "description": "Vehicle Carrier Rate Update",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "VR",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": true,
+      "maxOccurrences": 3,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopRT",
+      "name": "LoopRT",
+      "triggerSegment": "RT",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "RT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "RT1",
+          "mandatory": true,
+          "maxOccurrences": 99,
+          "position": 2
+        }
+      ]
+    }
+  ]
+}

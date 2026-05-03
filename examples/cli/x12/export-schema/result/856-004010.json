@@ -1,0 +1,4419 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ship Notice/Manifest",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Ship Notice/Manifest Transaction Set (856) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to list the contents of a shipment of goods as well as additional information relating to the shipment, such as order information, product description, physical characteristics, type of packaging, marking, carrier information, and configuration of goods within the transportation equipment. The transaction set enables the sender to describe the contents and configuration of a shipment in various levels of detail and provides an ordered flexibility to convey information.\n\nThe sender of this transaction is the organization responsible for detailing and communicating the contents of a shipment, or shipments, to one or more receivers of the transaction set. The receiver of this transaction set can be any organization having an interest in the contents of a shipment or information about the contents of a shipment.",
+  "type": "object",
+  "properties": {
+    "ST": {
+      "type": "object",
+      "properties": {
+        "143": {
+          "type": "string",
+          "title": "Transaction Set Identifier Code",
+          "maxLength": 3,
+          "minLength": 3,
+          "x-position": 1,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "329": {
+          "type": "string",
+          "title": "Transaction Set Control Number",
+          "maxLength": 9,
+          "minLength": 4,
+          "x-position": 2,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        }
+      },
+      "required": [
+        "143",
+        "329"
+      ],
+      "title": "Transaction Set Header",
+      "x-position": 1,
+      "x-mandatory": true,
+      "x-maxOccurrences": 1,
+      "x-nodeType": "segment"
+    },
+    "BSN": {
+      "type": "object",
+      "properties": {
+        "337": {
+          "type": "string",
+          "title": "Time",
+          "maxLength": 8,
+          "minLength": 4,
+          "x-position": 4,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "353": {
+          "type": "string",
+          "title": "Transaction Set Purpose Code",
+          "maxLength": 2,
+          "minLength": 2,
+          "x-position": 1,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "373": {
+          "type": "string",
+          "title": "Date",
+          "maxLength": 8,
+          "minLength": 8,
+          "x-position": 3,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "396": {
+          "type": "string",
+          "title": "Shipment Identification",
+          "maxLength": 30,
+          "minLength": 2,
+          "x-position": 2,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "640": {
+          "type": "string",
+          "title": "Transaction Type Code",
+          "maxLength": 2,
+          "minLength": 2,
+          "x-position": 6,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "641": {
+          "type": "string",
+          "title": "Status Reason Code",
+          "maxLength": 3,
+          "minLength": 3,
+          "x-position": 7,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "1005": {
+          "type": "string",
+          "title": "Hierarchical Structure Code",
+          "maxLength": 4,
+          "minLength": 4,
+          "x-position": 5,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        }
+      },
+      "required": [
+        "353",
+        "396",
+        "373",
+        "337"
+      ],
+      "title": "Beginning Segment for Ship Notice",
+      "x-position": 2,
+      "x-mandatory": true,
+      "x-maxOccurrences": 1,
+      "x-nodeType": "segment"
+    },
+    "DTM": {
+      "type": "array",
+      "title": "Date/Time Reference",
+      "items": {
+        "type": "object",
+        "properties": {
+          "337": {
+            "type": "string",
+            "title": "Time",
+            "maxLength": 8,
+            "minLength": 4,
+            "x-position": 3,
+            "x-mandatory": false,
+            "x-nodeType": "element"
+          },
+          "373": {
+            "type": "string",
+            "title": "Date",
+            "maxLength": 8,
+            "minLength": 8,
+            "x-position": 2,
+            "x-mandatory": false,
+            "x-nodeType": "element"
+          },
+          "374": {
+            "type": "string",
+            "title": "Date/Time Qualifier",
+            "maxLength": 3,
+            "minLength": 3,
+            "x-position": 1,
+            "x-mandatory": true,
+            "x-nodeType": "element"
+          },
+          "623": {
+            "type": "string",
+            "title": "Time Code",
+            "maxLength": 2,
+            "minLength": 2,
+            "x-position": 4,
+            "x-mandatory": false,
+            "x-nodeType": "element"
+          },
+          "1250": {
+            "type": "string",
+            "title": "Date Time Period Format Qualifier",
+            "maxLength": 3,
+            "minLength": 2,
+            "x-position": 5,
+            "x-mandatory": false,
+            "x-nodeType": "element"
+          },
+          "1251": {
+            "type": "string",
+            "title": "Date Time Period",
+            "maxLength": 35,
+            "minLength": 1,
+            "x-position": 6,
+            "x-mandatory": false,
+            "x-nodeType": "element"
+          }
+        },
+        "required": [
+          "374"
+        ],
+        "x-position": 3,
+        "x-mandatory": false,
+        "x-maxOccurrences": 10,
+        "x-nodeType": "segment"
+      },
+      "maxItems": 10,
+      "x-position": 3,
+      "x-mandatory": false,
+      "x-maxOccurrences": 10,
+      "x-nodeType": "segment"
+    },
+    "LoopHL": {
+      "type": "array",
+      "title": "LoopHL",
+      "items": {
+        "type": "object",
+        "properties": {
+          "HL": {
+            "type": "object",
+            "properties": {
+              "628": {
+                "type": "string",
+                "title": "Hierarchical ID Number",
+                "maxLength": 12,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "734": {
+                "type": "string",
+                "title": "Hierarchical Parent ID Number",
+                "maxLength": 12,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "735": {
+                "type": "string",
+                "title": "Hierarchical Level Code",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 3,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "736": {
+                "type": "string",
+                "title": "Hierarchical Child Code",
+                "maxLength": 1,
+                "minLength": 1,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "628",
+              "735"
+            ],
+            "title": "Hierarchical Level",
+            "x-position": 1,
+            "x-mandatory": true,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "LIN": {
+            "type": "object",
+            "properties": {
+              "234": {
+                "type": "string",
+                "title": "Product/Service ID",
+                "maxLength": 48,
+                "minLength": 1,
+                "x-position": 31,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "235": {
+                "type": "string",
+                "title": "Product/Service ID Qualifier",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 30,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "350": {
+                "type": "string",
+                "title": "Assigned Identification",
+                "maxLength": 20,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "235",
+              "234"
+            ],
+            "title": "Item Identification",
+            "x-position": 2,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "SN1": {
+            "type": "object",
+            "properties": {
+              "330": {
+                "type": "string",
+                "title": "Quantity Ordered",
+                "maxLength": 15,
+                "minLength": 1,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "350": {
+                "type": "string",
+                "title": "Assigned Identification",
+                "maxLength": 20,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "355": {
+                "type": "string",
+                "title": "Unit or Basis for Measurement Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 6,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "382": {
+                "type": "string",
+                "title": "Number of Units Shipped",
+                "maxLength": 10,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "646": {
+                "type": "string",
+                "title": "Quantity Shipped to Date",
+                "maxLength": 15,
+                "minLength": 1,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "668": {
+                "type": "string",
+                "title": "Line Item Status Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 8,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "728": {
+                "type": "string",
+                "title": "Returnable Container Load Make-Up Code",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 7,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "382",
+              "355"
+            ],
+            "title": "Item Detail (Shipment)",
+            "x-position": 3,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "SLN": {
+            "type": "array",
+            "title": "Subline Item Detail",
+            "items": {
+              "type": "object",
+              "properties": {
+                "212": {
+                  "type": "string",
+                  "title": "Unit Price",
+                  "maxLength": 17,
+                  "minLength": 1,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "234": {
+                  "type": "string",
+                  "title": "Product/Service ID",
+                  "maxLength": 48,
+                  "minLength": 1,
+                  "x-position": 28,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "235": {
+                  "type": "string",
+                  "title": "Product/Service ID Qualifier",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 27,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "350": {
+                  "type": "string",
+                  "title": "Assigned Identification",
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "380": {
+                  "type": "string",
+                  "title": "Quantity",
+                  "maxLength": 15,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "639": {
+                  "type": "string",
+                  "title": "Basis of Unit Price Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "662": {
+                  "type": "string",
+                  "title": "Relationship Code",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "C001": {
+                  "type": "object",
+                  "title": "Composite Unit of Measure",
+                  "properties": {
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 13,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "649": {
+                      "type": "string",
+                      "title": "Multiplier",
+                      "maxLength": 10,
+                      "minLength": 1,
+                      "x-position": 15,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "1018": {
+                      "type": "string",
+                      "title": "Exponent",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 14,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "355"
+                  ],
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "composite"
+                }
+              },
+              "required": [
+                "350",
+                "662"
+              ],
+              "x-position": 4,
+              "x-mandatory": false,
+              "x-maxOccurrences": 1000,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 1000,
+            "x-position": 4,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1000,
+            "x-nodeType": "segment"
+          },
+          "PRF": {
+            "type": "object",
+            "properties": {
+              "92": {
+                "type": "string",
+                "title": "Purchase Order Type Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 7,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "324": {
+                "type": "string",
+                "title": "Purchase Order Number",
+                "maxLength": 22,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "327": {
+                "type": "string",
+                "title": "Change Order Sequence Number",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 3,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "328": {
+                "type": "string",
+                "title": "Release Number",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "350": {
+                "type": "string",
+                "title": "Assigned Identification",
+                "maxLength": 20,
+                "minLength": 1,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "367": {
+                "type": "string",
+                "title": "Contract Number",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 6,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "373": {
+                "type": "string",
+                "title": "Date",
+                "maxLength": 8,
+                "minLength": 8,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "324"
+            ],
+            "title": "Purchase Order Reference",
+            "x-position": 5,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "PO4": {
+            "type": "object",
+            "properties": {
+              "65": {
+                "type": "string",
+                "title": "Height",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 12,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "82": {
+                "type": "string",
+                "title": "Length",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 10,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "103": {
+                "type": "string",
+                "title": "Packaging Code",
+                "maxLength": 5,
+                "minLength": 3,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "187": {
+                "type": "string",
+                "title": "Weight Qualifier",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "189": {
+                "type": "string",
+                "title": "Width",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 11,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "350": {
+                "type": "string",
+                "title": "Assigned Identification",
+                "maxLength": 20,
+                "minLength": 1,
+                "x-position": 17,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "355": {
+                "type": "string",
+                "title": "Unit or Basis for Measurement Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 13,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "356": {
+                "type": "number",
+                "title": "Pack",
+                "maxLength": 6,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "357": {
+                "type": "string",
+                "title": "Size",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "384": {
+                "type": "string",
+                "title": "Gross Weight per Pack",
+                "maxLength": 9,
+                "minLength": 1,
+                "x-position": 6,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "385": {
+                "type": "string",
+                "title": "Gross Volume per Pack",
+                "maxLength": 9,
+                "minLength": 1,
+                "x-position": 8,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "752": {
+                "type": "string",
+                "title": "Surface/Layer/Position Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 15,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "810": {
+                "type": "number",
+                "title": "Inner Pack",
+                "maxLength": 6,
+                "minLength": 1,
+                "x-position": 14,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "1470": {
+                "type": "number",
+                "title": "Number",
+                "maxLength": 9,
+                "minLength": 1,
+                "x-position": 18,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "title": "Item Physical Details",
+            "x-position": 6,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "PID": {
+            "type": "array",
+            "title": "Product/Item Description",
+            "items": {
+              "type": "object",
+              "properties": {
+                "349": {
+                  "type": "string",
+                  "title": "Item Description Type",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "352": {
+                  "type": "string",
+                  "title": "Description",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "559": {
+                  "type": "string",
+                  "title": "Agency Qualifier Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "750": {
+                  "type": "string",
+                  "title": "Product/Process Characteristic Code",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "751": {
+                  "type": "string",
+                  "title": "Product Description Code",
+                  "maxLength": 12,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "752": {
+                  "type": "string",
+                  "title": "Surface/Layer/Position Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "819": {
+                  "type": "string",
+                  "title": "Language Code",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "822": {
+                  "type": "string",
+                  "title": "Source Subqualifier",
+                  "maxLength": 15,
+                  "minLength": 1,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1073": {
+                  "type": "string",
+                  "title": "Yes/No Condition or Response Code",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "349"
+              ],
+              "x-position": 7,
+              "x-mandatory": false,
+              "x-maxOccurrences": 200,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 200,
+            "x-position": 7,
+            "x-mandatory": false,
+            "x-maxOccurrences": 200,
+            "x-nodeType": "segment"
+          },
+          "MEA": {
+            "type": "array",
+            "title": "Measurements",
+            "items": {
+              "type": "object",
+              "properties": {
+                "737": {
+                  "type": "string",
+                  "title": "Measurement Reference ID Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "738": {
+                  "type": "string",
+                  "title": "Measurement Qualifier",
+                  "maxLength": 3,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "739": {
+                  "type": "string",
+                  "title": "Measurement Value",
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "740": {
+                  "type": "string",
+                  "title": "Range Minimum",
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "741": {
+                  "type": "string",
+                  "title": "Range Maximum",
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "752": {
+                  "type": "string",
+                  "title": "Surface/Layer/Position Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "935": {
+                  "type": "string",
+                  "title": "Measurement Significance Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "936": {
+                  "type": "string",
+                  "title": "Measurement Attribute Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1373": {
+                  "type": "string",
+                  "title": "Measurement Method or Device",
+                  "maxLength": 4,
+                  "minLength": 2,
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "C001": {
+                  "type": "object",
+                  "title": "Composite Unit of Measure",
+                  "properties": {
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 13,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "649": {
+                      "type": "string",
+                      "title": "Multiplier",
+                      "maxLength": 10,
+                      "minLength": 1,
+                      "x-position": 15,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "1018": {
+                      "type": "string",
+                      "title": "Exponent",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 14,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "355"
+                  ],
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "composite"
+                }
+              },
+              "x-position": 8,
+              "x-mandatory": false,
+              "x-maxOccurrences": 40,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 40,
+            "x-position": 8,
+            "x-mandatory": false,
+            "x-maxOccurrences": 40,
+            "x-nodeType": "segment"
+          },
+          "PWK": {
+            "type": "array",
+            "title": "Paperwork",
+            "items": {
+              "type": "object",
+              "properties": {
+                "66": {
+                  "type": "string",
+                  "title": "Identification Code Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "67": {
+                  "type": "string",
+                  "title": "Identification Code",
+                  "maxLength": 80,
+                  "minLength": 2,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "98": {
+                  "type": "string",
+                  "title": "Entity Identifier Code",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "352": {
+                  "type": "string",
+                  "title": "Description",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "755": {
+                  "type": "string",
+                  "title": "Report Type Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "756": {
+                  "type": "string",
+                  "title": "Report Transmission Code",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "757": {
+                  "type": "number",
+                  "title": "Report Copies Needed",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1525": {
+                  "type": "string",
+                  "title": "Request Category Code",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "C002": {
+                  "type": "object",
+                  "title": "Actions Indicated",
+                  "properties": {
+                    "704": {
+                      "type": "string",
+                      "title": "Paperwork/Report Action Code",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "704"
+                  ],
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "composite"
+                }
+              },
+              "required": [
+                "755"
+              ],
+              "x-position": 9,
+              "x-mandatory": false,
+              "x-maxOccurrences": 25,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 25,
+            "x-position": 9,
+            "x-mandatory": false,
+            "x-maxOccurrences": 25,
+            "x-nodeType": "segment"
+          },
+          "PKG": {
+            "type": "array",
+            "title": "Marking, Packaging, Loading",
+            "items": {
+              "type": "object",
+              "properties": {
+                "349": {
+                  "type": "string",
+                  "title": "Item Description Type",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "352": {
+                  "type": "string",
+                  "title": "Description",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "400": {
+                  "type": "string",
+                  "title": "Unit Load Option Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "559": {
+                  "type": "string",
+                  "title": "Agency Qualifier Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "753": {
+                  "type": "string",
+                  "title": "Packaging Characteristic Code",
+                  "maxLength": 5,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "754": {
+                  "type": "string",
+                  "title": "Packaging Description Code",
+                  "maxLength": 7,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "x-position": 10,
+              "x-mandatory": false,
+              "x-maxOccurrences": 25,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 25,
+            "x-position": 10,
+            "x-mandatory": false,
+            "x-maxOccurrences": 25,
+            "x-nodeType": "segment"
+          },
+          "TD1": {
+            "type": "array",
+            "title": "Carrier Details (Quantity and Weight)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "22": {
+                  "type": "string",
+                  "title": "Commodity Code",
+                  "maxLength": 30,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "23": {
+                  "type": "string",
+                  "title": "Commodity Code Qualifier",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "79": {
+                  "type": "string",
+                  "title": "Lading Description",
+                  "maxLength": 50,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "80": {
+                  "type": "number",
+                  "title": "Lading Quantity",
+                  "maxLength": 7,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "81": {
+                  "type": "string",
+                  "title": "Weight",
+                  "maxLength": 10,
+                  "minLength": 1,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "103": {
+                  "type": "string",
+                  "title": "Packaging Code",
+                  "maxLength": 5,
+                  "minLength": 3,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "183": {
+                  "type": "string",
+                  "title": "Volume",
+                  "maxLength": 8,
+                  "minLength": 1,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "187": {
+                  "type": "string",
+                  "title": "Weight Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "355": {
+                  "type": "string",
+                  "title": "Unit or Basis for Measurement Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "x-position": 11,
+              "x-mandatory": false,
+              "x-maxOccurrences": 20,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 20,
+            "x-position": 11,
+            "x-mandatory": false,
+            "x-maxOccurrences": 20,
+            "x-nodeType": "segment"
+          },
+          "TD5": {
+            "type": "array",
+            "title": "Carrier Details (Routing Sequence/Transit Time)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "26": {
+                  "type": "string",
+                  "title": "Country Code",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 15,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "66": {
+                  "type": "string",
+                  "title": "Identification Code Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "67": {
+                  "type": "string",
+                  "title": "Identification Code",
+                  "maxLength": 80,
+                  "minLength": 2,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "91": {
+                  "type": "string",
+                  "title": "Transportation Method/Type Code",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "133": {
+                  "type": "string",
+                  "title": "Routing Sequence Code",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "284": {
+                  "type": "string",
+                  "title": "Service Level Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 14,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "309": {
+                  "type": "string",
+                  "title": "Location Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "310": {
+                  "type": "string",
+                  "title": "Location Identifier",
+                  "maxLength": 30,
+                  "minLength": 1,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "368": {
+                  "type": "string",
+                  "title": "Shipment/Order Status Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "387": {
+                  "type": "string",
+                  "title": "Routing",
+                  "maxLength": 35,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "731": {
+                  "type": "string",
+                  "title": "Transit Direction Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "732": {
+                  "type": "string",
+                  "title": "Transit Time Direction Qualifier",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "733": {
+                  "type": "string",
+                  "title": "Transit Time",
+                  "maxLength": 4,
+                  "minLength": 1,
+                  "x-position": 11,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "x-position": 12,
+              "x-mandatory": false,
+              "x-maxOccurrences": 12,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 12,
+            "x-position": 12,
+            "x-mandatory": false,
+            "x-maxOccurrences": 12,
+            "x-nodeType": "segment"
+          },
+          "TD3": {
+            "type": "array",
+            "title": "Carrier Details (Equipment)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "24": {
+                  "type": "string",
+                  "title": "Equipment Type",
+                  "maxLength": 4,
+                  "minLength": 4,
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "40": {
+                  "type": "string",
+                  "title": "Equipment Description Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "81": {
+                  "type": "string",
+                  "title": "Weight",
+                  "maxLength": 10,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "102": {
+                  "type": "string",
+                  "title": "Ownership Code",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "187": {
+                  "type": "string",
+                  "title": "Weight Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "206": {
+                  "type": "string",
+                  "title": "Equipment Initial",
+                  "maxLength": 4,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "207": {
+                  "type": "string",
+                  "title": "Equipment Number",
+                  "maxLength": 10,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "225": {
+                  "type": "string",
+                  "title": "Seal Number",
+                  "maxLength": 15,
+                  "minLength": 2,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "355": {
+                  "type": "string",
+                  "title": "Unit or Basis for Measurement Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "407": {
+                  "type": "string",
+                  "title": "Seal Status Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "x-position": 13,
+              "x-mandatory": false,
+              "x-maxOccurrences": 12,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 12,
+            "x-position": 13,
+            "x-mandatory": false,
+            "x-maxOccurrences": 12,
+            "x-nodeType": "segment"
+          },
+          "TD4": {
+            "type": "array",
+            "title": "Carrier Details (Special Handling, or Hazardous Materials, or Both)",
+            "items": {
+              "type": "object",
+              "properties": {
+                "152": {
+                  "type": "string",
+                  "title": "Special Handling Code",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "208": {
+                  "type": "string",
+                  "title": "Hazardous Material Code Qualifier",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "209": {
+                  "type": "string",
+                  "title": "Hazardous Material Class Code",
+                  "maxLength": 4,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "352": {
+                  "type": "string",
+                  "title": "Description",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1073": {
+                  "type": "string",
+                  "title": "Yes/No Condition or Response Code",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "x-position": 14,
+              "x-mandatory": false,
+              "x-maxOccurrences": 5,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 5,
+            "x-position": 14,
+            "x-mandatory": false,
+            "x-maxOccurrences": 5,
+            "x-nodeType": "segment"
+          },
+          "TSD": {
+            "type": "object",
+            "properties": {
+              "219": {
+                "type": "string",
+                "title": "Position",
+                "maxLength": 3,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "350": {
+                "type": "string",
+                "title": "Assigned Identification",
+                "maxLength": 20,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "title": "Trailer Shipment Details",
+            "x-position": 15,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "REF": {
+            "type": "array",
+            "title": "Reference Identification",
+            "items": {
+              "type": "object",
+              "properties": {
+                "127": {
+                  "type": "string",
+                  "title": "Reference Identification",
+                  "maxLength": 30,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "128": {
+                  "type": "string",
+                  "title": "Reference Identification Qualifier",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "352": {
+                  "type": "string",
+                  "title": "Description",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "C040": {
+                  "type": "object",
+                  "title": "Reference Identifier",
+                  "properties": {
+                    "127": {
+                      "type": "string",
+                      "title": "Reference Identification",
+                      "maxLength": 30,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "128": {
+                      "type": "string",
+                      "title": "Reference Identification Qualifier",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "128",
+                    "127"
+                  ],
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "composite"
+                }
+              },
+              "required": [
+                "128"
+              ],
+              "x-position": 16,
+              "x-mandatory": false,
+              "x-maxOccurrences": 999999,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 999999,
+            "x-position": 16,
+            "x-mandatory": false,
+            "x-maxOccurrences": 999999,
+            "x-nodeType": "segment"
+          },
+          "PER": {
+            "type": "array",
+            "title": "Administrative Communications Contact",
+            "items": {
+              "type": "object",
+              "properties": {
+                "93": {
+                  "type": "string",
+                  "title": "Name",
+                  "maxLength": 60,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "364": {
+                  "type": "string",
+                  "title": "Communication Number",
+                  "maxLength": 80,
+                  "minLength": 1,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "365": {
+                  "type": "string",
+                  "title": "Communication Number Qualifier",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "366": {
+                  "type": "string",
+                  "title": "Contact Function Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "443": {
+                  "type": "string",
+                  "title": "Contact Inquiry Reference",
+                  "maxLength": 20,
+                  "minLength": 1,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "366"
+              ],
+              "x-position": 17,
+              "x-mandatory": false,
+              "x-maxOccurrences": 3,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 3,
+            "x-position": 17,
+            "x-mandatory": false,
+            "x-maxOccurrences": 3,
+            "x-nodeType": "segment"
+          },
+          "LoopLH1": {
+            "type": "array",
+            "title": "LoopLH1",
+            "items": {
+              "type": "object",
+              "properties": {
+                "LH1": {
+                  "type": "object",
+                  "properties": {
+                    "22": {
+                      "type": "string",
+                      "title": "Commodity Code",
+                      "maxLength": 30,
+                      "minLength": 1,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "80": {
+                      "type": "number",
+                      "title": "Lading Quantity",
+                      "maxLength": 7,
+                      "minLength": 1,
+                      "x-position": 2,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "200": {
+                      "type": "string",
+                      "title": "Hazardous Materials Page",
+                      "maxLength": 6,
+                      "minLength": 1,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "254": {
+                      "type": "string",
+                      "title": "Packing Group Code",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "x-position": 10,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "277": {
+                      "type": "string",
+                      "title": "UN/NA Identification Code",
+                      "maxLength": 6,
+                      "minLength": 6,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "380": {
+                      "type": "string",
+                      "title": "Quantity",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 7,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "595": {
+                      "type": "string",
+                      "title": "Compartment ID Code",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 8,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "665": {
+                      "type": "string",
+                      "title": "Residue Indicator Code",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 9,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "1375": {
+                      "type": "string",
+                      "title": "Interim Hazardous Material Regulatory Number",
+                      "maxLength": 5,
+                      "minLength": 1,
+                      "x-position": 11,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "355",
+                    "80"
+                  ],
+                  "title": "Hazardous Identification Information",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "LH2": {
+                  "type": "array",
+                  "title": "Hazardous Classification Information",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "215": {
+                        "type": "string",
+                        "title": "Hazardous Classification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 1,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "218": {
+                        "type": "string",
+                        "title": "Hazardous Placard Notation",
+                        "maxLength": 40,
+                        "minLength": 14,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "222": {
+                        "type": "string",
+                        "title": "Hazardous Endorsement",
+                        "maxLength": 25,
+                        "minLength": 4,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "355": {
+                        "type": "string",
+                        "title": "Unit or Basis for Measurement Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 10,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "408": {
+                        "type": "string",
+                        "title": "Temperature",
+                        "maxLength": 4,
+                        "minLength": 1,
+                        "x-position": 11,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "759": {
+                        "type": "string",
+                        "title": "Reportable Quantity Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 5,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "983": {
+                        "type": "string",
+                        "title": "Hazardous Class Qualifier",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "x-position": 2,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 4,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 4,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 4,
+                  "x-nodeType": "segment"
+                },
+                "LH3": {
+                  "type": "array",
+                  "title": "Hazardous Material Shipping Name",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "224": {
+                        "type": "string",
+                        "title": "Hazardous Material Shipping Name",
+                        "maxLength": 25,
+                        "minLength": 1,
+                        "x-position": 1,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "984": {
+                        "type": "string",
+                        "title": "Hazardous Material Shipping Name Qualifier",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "985": {
+                        "type": "string",
+                        "title": "N.O.S. Indicator Code",
+                        "maxLength": 3,
+                        "minLength": 3,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "1073": {
+                        "type": "string",
+                        "title": "Yes/No Condition or Response Code",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "x-position": 3,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 12,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 12,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 12,
+                  "x-nodeType": "segment"
+                },
+                "LFH": {
+                  "type": "array",
+                  "title": "Freeform Hazardous Material Information",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "355": {
+                        "type": "string",
+                        "title": "Unit or Basis for Measurement Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 5,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "380": {
+                        "type": "string",
+                        "title": "Quantity",
+                        "maxLength": 15,
+                        "minLength": 1,
+                        "x-position": 7,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "808": {
+                        "type": "string",
+                        "title": "Hazardous Material Shipment Information Qualifier",
+                        "maxLength": 3,
+                        "minLength": 3,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "809": {
+                        "type": "string",
+                        "title": "Hazardous Material Shipment Information",
+                        "maxLength": 25,
+                        "minLength": 1,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "1023": {
+                        "type": "string",
+                        "title": "Hazard Zone Code",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "808",
+                      "809"
+                    ],
+                    "x-position": 4,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 20,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 20,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 20,
+                  "x-nodeType": "segment"
+                },
+                "LEP": {
+                  "type": "array",
+                  "title": "EPA Required Data",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "127": {
+                        "type": "string",
+                        "title": "Reference Identification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "156": {
+                        "type": "string",
+                        "title": "State or Province Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "806": {
+                        "type": "string",
+                        "title": "EPA Waste Stream Number Code",
+                        "maxLength": 6,
+                        "minLength": 4,
+                        "x-position": 1,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "807": {
+                        "type": "string",
+                        "title": "Waste Characteristics Code",
+                        "maxLength": 16,
+                        "minLength": 12,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "x-position": 5,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 999999,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 999999,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 999999,
+                  "x-nodeType": "segment"
+                },
+                "LH4": {
+                  "type": "object",
+                  "properties": {
+                    "230": {
+                      "type": "string",
+                      "title": "Subsidiary Classification",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "238": {
+                      "type": "string",
+                      "title": "Emergency Response Plan Number",
+                      "maxLength": 12,
+                      "minLength": 1,
+                      "x-position": 1,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "254": {
+                      "type": "string",
+                      "title": "Packing Group Code",
+                      "maxLength": 3,
+                      "minLength": 1,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "267": {
+                      "type": "number",
+                      "title": "Net Explosive Quantity",
+                      "maxLength": 6,
+                      "minLength": 1,
+                      "x-position": 8,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "271": {
+                      "type": "string",
+                      "title": "Subsidiary Risk Indicator",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 7,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 12,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "364": {
+                      "type": "string",
+                      "title": "Communication Number",
+                      "maxLength": 80,
+                      "minLength": 1,
+                      "x-position": 11,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "805": {
+                      "type": "string",
+                      "title": "Canadian Hazardous Notation",
+                      "maxLength": 25,
+                      "minLength": 1,
+                      "x-position": 9,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "986": {
+                      "type": "string",
+                      "title": "Special Commodity Indicator Code",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 10,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "title": "Canadian Dangerous Requirements",
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "LHT": {
+                  "type": "array",
+                  "title": "Transborder Hazardous Requirements",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "215": {
+                        "type": "string",
+                        "title": "Hazardous Classification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 1,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "218": {
+                        "type": "string",
+                        "title": "Hazardous Placard Notation",
+                        "maxLength": 40,
+                        "minLength": 14,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "222": {
+                        "type": "string",
+                        "title": "Hazardous Endorsement",
+                        "maxLength": 25,
+                        "minLength": 4,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "x-position": 7,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 3,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 3,
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 3,
+                  "x-nodeType": "segment"
+                },
+                "LHR": {
+                  "type": "array",
+                  "title": "Hazardous Material Identifying Reference Numbers",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "127": {
+                        "type": "string",
+                        "title": "Reference Identification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "128": {
+                        "type": "string",
+                        "title": "Reference Identification Qualifier",
+                        "maxLength": 3,
+                        "minLength": 2,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "373": {
+                        "type": "string",
+                        "title": "Date",
+                        "maxLength": 8,
+                        "minLength": 8,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "128",
+                      "127"
+                    ],
+                    "x-position": 8,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 10,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 10,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 10,
+                  "x-nodeType": "segment"
+                },
+                "PER": {
+                  "type": "array",
+                  "title": "Administrative Communications Contact",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "93": {
+                        "type": "string",
+                        "title": "Name",
+                        "maxLength": 60,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "364": {
+                        "type": "string",
+                        "title": "Communication Number",
+                        "maxLength": 80,
+                        "minLength": 1,
+                        "x-position": 8,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "365": {
+                        "type": "string",
+                        "title": "Communication Number Qualifier",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 7,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "366": {
+                        "type": "string",
+                        "title": "Contact Function Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "443": {
+                        "type": "string",
+                        "title": "Contact Inquiry Reference",
+                        "maxLength": 20,
+                        "minLength": 1,
+                        "x-position": 9,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "366"
+                    ],
+                    "x-position": 9,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 5,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 5,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 5,
+                  "x-nodeType": "segment"
+                },
+                "LHE": {
+                  "type": "object",
+                  "properties": {
+                    "127": {
+                      "type": "string",
+                      "title": "Reference Identification",
+                      "maxLength": 30,
+                      "minLength": 1,
+                      "x-position": 4,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "128": {
+                      "type": "string",
+                      "title": "Reference Identification Qualifier",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 3,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "218": {
+                      "type": "string",
+                      "title": "Hazardous Placard Notation",
+                      "maxLength": 40,
+                      "minLength": 14,
+                      "x-position": 2,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "224": {
+                      "type": "string",
+                      "title": "Hazardous Material Shipping Name",
+                      "maxLength": 25,
+                      "minLength": 1,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "759": {
+                      "type": "string",
+                      "title": "Reportable Quantity Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "224",
+                    "218",
+                    "128",
+                    "127"
+                  ],
+                  "title": "Empty Equipment Hazardous Material Information",
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "LH1"
+              ],
+              "x-position": 18,
+              "x-mandatory": false,
+              "x-maxOccurrences": 100,
+              "x-triggerSegment": "LH1",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 100,
+            "x-position": 18,
+            "x-mandatory": false,
+            "x-maxOccurrences": 100,
+            "x-triggerSegment": "LH1",
+            "x-nodeType": "segmentGroup"
+          },
+          "LoopCLD": {
+            "type": "array",
+            "title": "LoopCLD",
+            "items": {
+              "type": "object",
+              "properties": {
+                "CLD": {
+                  "type": "object",
+                  "properties": {
+                    "103": {
+                      "type": "string",
+                      "title": "Packaging Code",
+                      "maxLength": 5,
+                      "minLength": 3,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "357": {
+                      "type": "string",
+                      "title": "Size",
+                      "maxLength": 8,
+                      "minLength": 1,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "382": {
+                      "type": "string",
+                      "title": "Number of Units Shipped",
+                      "maxLength": 10,
+                      "minLength": 1,
+                      "x-position": 2,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "622": {
+                      "type": "number",
+                      "title": "Number of Loads",
+                      "maxLength": 5,
+                      "minLength": 1,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "622",
+                    "382"
+                  ],
+                  "title": "Load Detail",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "REF": {
+                  "type": "array",
+                  "title": "Reference Identification",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "127": {
+                        "type": "string",
+                        "title": "Reference Identification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "128": {
+                        "type": "string",
+                        "title": "Reference Identification Qualifier",
+                        "maxLength": 3,
+                        "minLength": 2,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "352": {
+                        "type": "string",
+                        "title": "Description",
+                        "maxLength": 80,
+                        "minLength": 1,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "C040": {
+                        "type": "object",
+                        "title": "Reference Identifier",
+                        "properties": {
+                          "127": {
+                            "type": "string",
+                            "title": "Reference Identification",
+                            "maxLength": 30,
+                            "minLength": 1,
+                            "x-position": 6,
+                            "x-mandatory": false,
+                            "x-nodeType": "element"
+                          },
+                          "128": {
+                            "type": "string",
+                            "title": "Reference Identification Qualifier",
+                            "maxLength": 3,
+                            "minLength": 2,
+                            "x-position": 5,
+                            "x-mandatory": false,
+                            "x-nodeType": "element"
+                          }
+                        },
+                        "required": [
+                          "128",
+                          "127"
+                        ],
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "composite"
+                      }
+                    },
+                    "required": [
+                      "128"
+                    ],
+                    "x-position": 2,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 200,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 200,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 200,
+                  "x-nodeType": "segment"
+                },
+                "DTP": {
+                  "type": "object",
+                  "properties": {
+                    "374": {
+                      "type": "string",
+                      "title": "Date/Time Qualifier",
+                      "maxLength": 3,
+                      "minLength": 3,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "1250": {
+                      "type": "string",
+                      "title": "Date Time Period Format Qualifier",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 2,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "1251": {
+                      "type": "string",
+                      "title": "Date Time Period",
+                      "maxLength": 35,
+                      "minLength": 1,
+                      "x-position": 3,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "374",
+                    "1250",
+                    "1251"
+                  ],
+                  "title": "Date or Time or Period",
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "CLD"
+              ],
+              "x-position": 19,
+              "x-mandatory": false,
+              "x-maxOccurrences": 200,
+              "x-triggerSegment": "CLD",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 200,
+            "x-position": 19,
+            "x-mandatory": false,
+            "x-maxOccurrences": 200,
+            "x-triggerSegment": "CLD",
+            "x-nodeType": "segmentGroup"
+          },
+          "MAN": {
+            "type": "array",
+            "title": "Marks and Numbers",
+            "items": {
+              "type": "object",
+              "properties": {
+                "87": {
+                  "type": "string",
+                  "title": "Marks and Numbers",
+                  "maxLength": 48,
+                  "minLength": 1,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "88": {
+                  "type": "string",
+                  "title": "Marks and Numbers Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "88",
+                "87"
+              ],
+              "x-position": 20,
+              "x-mandatory": false,
+              "x-maxOccurrences": 999999,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 999999,
+            "x-position": 20,
+            "x-mandatory": false,
+            "x-maxOccurrences": 999999,
+            "x-nodeType": "segment"
+          },
+          "DTM": {
+            "type": "array",
+            "title": "Date/Time Reference",
+            "items": {
+              "type": "object",
+              "properties": {
+                "337": {
+                  "type": "string",
+                  "title": "Time",
+                  "maxLength": 8,
+                  "minLength": 4,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "373": {
+                  "type": "string",
+                  "title": "Date",
+                  "maxLength": 8,
+                  "minLength": 8,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "374": {
+                  "type": "string",
+                  "title": "Date/Time Qualifier",
+                  "maxLength": 3,
+                  "minLength": 3,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "623": {
+                  "type": "string",
+                  "title": "Time Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1250": {
+                  "type": "string",
+                  "title": "Date Time Period Format Qualifier",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1251": {
+                  "type": "string",
+                  "title": "Date Time Period",
+                  "maxLength": 35,
+                  "minLength": 1,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "374"
+              ],
+              "x-position": 21,
+              "x-mandatory": false,
+              "x-maxOccurrences": 10,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 10,
+            "x-position": 21,
+            "x-mandatory": false,
+            "x-maxOccurrences": 10,
+            "x-nodeType": "segment"
+          },
+          "FOB": {
+            "type": "object",
+            "properties": {
+              "54": {
+                "type": "string",
+                "title": "Risk of Loss Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 8,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "146": {
+                "type": "string",
+                "title": "Shipment Method of Payment",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 1,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "309": {
+                "type": "string",
+                "title": "Location Qualifier",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 6,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "334": {
+                "type": "string",
+                "title": "Transportation Terms Qualifier Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "335": {
+                "type": "string",
+                "title": "Transportation Terms Code",
+                "maxLength": 3,
+                "minLength": 3,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "352": {
+                "type": "string",
+                "title": "Description",
+                "maxLength": 80,
+                "minLength": 1,
+                "x-position": 9,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "146"
+            ],
+            "title": "F.O.B. Related Instructions",
+            "x-position": 22,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "PAL": {
+            "type": "object",
+            "properties": {
+              "65": {
+                "type": "string",
+                "title": "Height",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 9,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "82": {
+                "type": "string",
+                "title": "Length",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 7,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "189": {
+                "type": "string",
+                "title": "Width",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 8,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "355": {
+                "type": "string",
+                "title": "Unit or Basis for Measurement Code",
+                "maxLength": 2,
+                "minLength": 2,
+                "x-position": 14,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "356": {
+                "type": "number",
+                "title": "Pack",
+                "maxLength": 6,
+                "minLength": 1,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "384": {
+                "type": "string",
+                "title": "Gross Weight per Pack",
+                "maxLength": 9,
+                "minLength": 1,
+                "x-position": 11,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "385": {
+                "type": "string",
+                "title": "Gross Volume per Pack",
+                "maxLength": 9,
+                "minLength": 1,
+                "x-position": 13,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "395": {
+                "type": "string",
+                "title": "Unit Weight",
+                "maxLength": 8,
+                "minLength": 1,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "399": {
+                "type": "string",
+                "title": "Pallet Exchange Code",
+                "maxLength": 1,
+                "minLength": 1,
+                "x-position": 15,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "810": {
+                "type": "number",
+                "title": "Inner Pack",
+                "maxLength": 6,
+                "minLength": 1,
+                "x-position": 16,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "883": {
+                "type": "string",
+                "title": "Pallet Type Code",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "884": {
+                "type": "number",
+                "title": "Pallet Tiers",
+                "maxLength": 3,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "885": {
+                "type": "number",
+                "title": "Pallet Blocks",
+                "maxLength": 3,
+                "minLength": 1,
+                "x-position": 3,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "title": "Pallet Information",
+            "x-position": 23,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "LoopN1": {
+            "type": "array",
+            "title": "LoopN1",
+            "items": {
+              "type": "object",
+              "properties": {
+                "N1": {
+                  "type": "object",
+                  "properties": {
+                    "66": {
+                      "type": "string",
+                      "title": "Identification Code Qualifier",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "67": {
+                      "type": "string",
+                      "title": "Identification Code",
+                      "maxLength": 80,
+                      "minLength": 2,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "93": {
+                      "type": "string",
+                      "title": "Name",
+                      "maxLength": 60,
+                      "minLength": 1,
+                      "x-position": 2,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "98": {
+                      "type": "string",
+                      "title": "Entity Identifier Code",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "706": {
+                      "type": "string",
+                      "title": "Entity Relationship Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "98"
+                  ],
+                  "title": "Name",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "N2": {
+                  "type": "array",
+                  "title": "Additional Name Information",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "93": {
+                        "type": "string",
+                        "title": "Name",
+                        "maxLength": 60,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "93"
+                    ],
+                    "x-position": 2,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 2,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 2,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 2,
+                  "x-nodeType": "segment"
+                },
+                "N3": {
+                  "type": "array",
+                  "title": "Address Information",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "166": {
+                        "type": "string",
+                        "title": "Address Information",
+                        "maxLength": 55,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "166"
+                    ],
+                    "x-position": 3,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 2,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 2,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 2,
+                  "x-nodeType": "segment"
+                },
+                "N4": {
+                  "type": "object",
+                  "properties": {
+                    "19": {
+                      "type": "string",
+                      "title": "City Name",
+                      "maxLength": 30,
+                      "minLength": 2,
+                      "x-position": 1,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "26": {
+                      "type": "string",
+                      "title": "Country Code",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "116": {
+                      "type": "string",
+                      "title": "Postal Code",
+                      "maxLength": 15,
+                      "minLength": 3,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "156": {
+                      "type": "string",
+                      "title": "State or Province Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 2,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "309": {
+                      "type": "string",
+                      "title": "Location Qualifier",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "310": {
+                      "type": "string",
+                      "title": "Location Identifier",
+                      "maxLength": 30,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "title": "Geographic Location",
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "REF": {
+                  "type": "array",
+                  "title": "Reference Identification",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "127": {
+                        "type": "string",
+                        "title": "Reference Identification",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "128": {
+                        "type": "string",
+                        "title": "Reference Identification Qualifier",
+                        "maxLength": 3,
+                        "minLength": 2,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "352": {
+                        "type": "string",
+                        "title": "Description",
+                        "maxLength": 80,
+                        "minLength": 1,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "C040": {
+                        "type": "object",
+                        "title": "Reference Identifier",
+                        "properties": {
+                          "127": {
+                            "type": "string",
+                            "title": "Reference Identification",
+                            "maxLength": 30,
+                            "minLength": 1,
+                            "x-position": 6,
+                            "x-mandatory": false,
+                            "x-nodeType": "element"
+                          },
+                          "128": {
+                            "type": "string",
+                            "title": "Reference Identification Qualifier",
+                            "maxLength": 3,
+                            "minLength": 2,
+                            "x-position": 5,
+                            "x-mandatory": false,
+                            "x-nodeType": "element"
+                          }
+                        },
+                        "required": [
+                          "128",
+                          "127"
+                        ],
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "composite"
+                      }
+                    },
+                    "required": [
+                      "128"
+                    ],
+                    "x-position": 5,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 12,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 12,
+                  "x-position": 5,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 12,
+                  "x-nodeType": "segment"
+                },
+                "PER": {
+                  "type": "array",
+                  "title": "Administrative Communications Contact",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "93": {
+                        "type": "string",
+                        "title": "Name",
+                        "maxLength": 60,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "364": {
+                        "type": "string",
+                        "title": "Communication Number",
+                        "maxLength": 80,
+                        "minLength": 1,
+                        "x-position": 8,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "365": {
+                        "type": "string",
+                        "title": "Communication Number Qualifier",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 7,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "366": {
+                        "type": "string",
+                        "title": "Contact Function Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "443": {
+                        "type": "string",
+                        "title": "Contact Inquiry Reference",
+                        "maxLength": 20,
+                        "minLength": 1,
+                        "x-position": 9,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "366"
+                    ],
+                    "x-position": 6,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 3,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 3,
+                  "x-position": 6,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 3,
+                  "x-nodeType": "segment"
+                },
+                "FOB": {
+                  "type": "object",
+                  "properties": {
+                    "54": {
+                      "type": "string",
+                      "title": "Risk of Loss Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 8,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "146": {
+                      "type": "string",
+                      "title": "Shipment Method of Payment",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "309": {
+                      "type": "string",
+                      "title": "Location Qualifier",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "334": {
+                      "type": "string",
+                      "title": "Transportation Terms Qualifier Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "335": {
+                      "type": "string",
+                      "title": "Transportation Terms Code",
+                      "maxLength": 3,
+                      "minLength": 3,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "352": {
+                      "type": "string",
+                      "title": "Description",
+                      "maxLength": 80,
+                      "minLength": 1,
+                      "x-position": 9,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "146"
+                  ],
+                  "title": "F.O.B. Related Instructions",
+                  "x-position": 7,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "N1"
+              ],
+              "x-position": 24,
+              "x-mandatory": false,
+              "x-maxOccurrences": 200,
+              "x-triggerSegment": "N1",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 200,
+            "x-position": 24,
+            "x-mandatory": false,
+            "x-maxOccurrences": 200,
+            "x-triggerSegment": "N1",
+            "x-nodeType": "segmentGroup"
+          },
+          "SDQ": {
+            "type": "array",
+            "title": "Destination Quantity",
+            "items": {
+              "type": "object",
+              "properties": {
+                "66": {
+                  "type": "string",
+                  "title": "Identification Code Qualifier",
+                  "maxLength": 2,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "67": {
+                  "type": "string",
+                  "title": "Identification Code",
+                  "maxLength": 80,
+                  "minLength": 2,
+                  "x-position": 21,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "310": {
+                  "type": "string",
+                  "title": "Location Identifier",
+                  "maxLength": 30,
+                  "minLength": 1,
+                  "x-position": 23,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "355": {
+                  "type": "string",
+                  "title": "Unit or Basis for Measurement Code",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "380": {
+                  "type": "string",
+                  "title": "Quantity",
+                  "maxLength": 15,
+                  "minLength": 1,
+                  "x-position": 22,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "355",
+                "67",
+                "380"
+              ],
+              "x-position": 25,
+              "x-mandatory": false,
+              "x-maxOccurrences": 50,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 50,
+            "x-position": 25,
+            "x-mandatory": false,
+            "x-maxOccurrences": 50,
+            "x-nodeType": "segment"
+          },
+          "ETD": {
+            "type": "object",
+            "properties": {
+              "127": {
+                "type": "string",
+                "title": "Reference Identification",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "128": {
+                "type": "string",
+                "title": "Reference Identification Qualifier",
+                "maxLength": 3,
+                "minLength": 2,
+                "x-position": 3,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "626": {
+                "type": "string",
+                "title": "Excess Transportation Reason Code",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 1,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "627": {
+                "type": "string",
+                "title": "Excess Transportation Responsibility Code",
+                "maxLength": 1,
+                "minLength": 1,
+                "x-position": 2,
+                "x-mandatory": true,
+                "x-nodeType": "element"
+              },
+              "743": {
+                "type": "string",
+                "title": "Returnable Container Freight Payment Responsibility Code",
+                "maxLength": 2,
+                "minLength": 1,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "626",
+              "627"
+            ],
+            "title": "Excess Transportation Detail",
+            "x-position": 26,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "CUR": {
+            "type": "object",
+            "properties": {
+              "98": {
+                "type": "string",
+                "title": "Entity Identifier Code",
+                "maxLength": 3,
+                "minLength": 2,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "100": {
+                "type": "string",
+                "title": "Currency Code",
+                "maxLength": 3,
+                "minLength": 3,
+                "x-position": 5,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "280": {
+                "type": "string",
+                "title": "Exchange Rate",
+                "maxLength": 10,
+                "minLength": 4,
+                "x-position": 3,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "337": {
+                "type": "string",
+                "title": "Time",
+                "maxLength": 8,
+                "minLength": 4,
+                "x-position": 21,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "373": {
+                "type": "string",
+                "title": "Date",
+                "maxLength": 8,
+                "minLength": 8,
+                "x-position": 20,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "374": {
+                "type": "string",
+                "title": "Date/Time Qualifier",
+                "maxLength": 3,
+                "minLength": 3,
+                "x-position": 19,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "669": {
+                "type": "string",
+                "title": "Currency Market/Exchange Code",
+                "maxLength": 3,
+                "minLength": 3,
+                "x-position": 6,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "required": [
+              "98",
+              "100"
+            ],
+            "title": "Currency",
+            "x-position": 27,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "LoopSAC": {
+            "type": "array",
+            "title": "LoopSAC",
+            "items": {
+              "type": "object",
+              "properties": {
+                "SAC": {
+                  "type": "object",
+                  "properties": {
+                    "118": {
+                      "type": "string",
+                      "title": "Rate",
+                      "maxLength": 9,
+                      "minLength": 1,
+                      "x-position": 8,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "127": {
+                      "type": "string",
+                      "title": "Reference Identification",
+                      "maxLength": 30,
+                      "minLength": 1,
+                      "x-position": 13,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "248": {
+                      "type": "string",
+                      "title": "Allowance or Charge Indicator",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "331": {
+                      "type": "string",
+                      "title": "Allowance or Charge Method of Handling Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 12,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "332": {
+                      "type": "string",
+                      "title": "Percent",
+                      "maxLength": 6,
+                      "minLength": 1,
+                      "x-position": 7,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "352": {
+                      "type": "string",
+                      "title": "Description",
+                      "maxLength": 80,
+                      "minLength": 1,
+                      "x-position": 15,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "355": {
+                      "type": "string",
+                      "title": "Unit or Basis for Measurement Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 9,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "378": {
+                      "type": "string",
+                      "title": "Allowance/Charge Percent Qualifier",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "380": {
+                      "type": "string",
+                      "title": "Quantity",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 11,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "559": {
+                      "type": "string",
+                      "title": "Agency Qualifier Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "610": {
+                      "type": "number",
+                      "title": "Amount",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "770": {
+                      "type": "string",
+                      "title": "Option Number",
+                      "maxLength": 20,
+                      "minLength": 1,
+                      "x-position": 14,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "819": {
+                      "type": "string",
+                      "title": "Language Code",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 16,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "1300": {
+                      "type": "string",
+                      "title": "Service, Promotion, Allowance, or Charge Code",
+                      "maxLength": 4,
+                      "minLength": 4,
+                      "x-position": 2,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "1301": {
+                      "type": "string",
+                      "title": "Agency Service, Promotion, Allowance, or Charge Code",
+                      "maxLength": 10,
+                      "minLength": 1,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "248"
+                  ],
+                  "title": "Service, Promotion, Allowance, or Charge Information",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "CUR": {
+                  "type": "object",
+                  "properties": {
+                    "98": {
+                      "type": "string",
+                      "title": "Entity Identifier Code",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "100": {
+                      "type": "string",
+                      "title": "Currency Code",
+                      "maxLength": 3,
+                      "minLength": 3,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "280": {
+                      "type": "string",
+                      "title": "Exchange Rate",
+                      "maxLength": 10,
+                      "minLength": 4,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "337": {
+                      "type": "string",
+                      "title": "Time",
+                      "maxLength": 8,
+                      "minLength": 4,
+                      "x-position": 21,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "373": {
+                      "type": "string",
+                      "title": "Date",
+                      "maxLength": 8,
+                      "minLength": 8,
+                      "x-position": 20,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "374": {
+                      "type": "string",
+                      "title": "Date/Time Qualifier",
+                      "maxLength": 3,
+                      "minLength": 3,
+                      "x-position": 19,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "669": {
+                      "type": "string",
+                      "title": "Currency Market/Exchange Code",
+                      "maxLength": 3,
+                      "minLength": 3,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "98",
+                    "100"
+                  ],
+                  "title": "Currency",
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "SAC"
+              ],
+              "x-position": 28,
+              "x-mandatory": false,
+              "x-maxOccurrences": 999999,
+              "x-triggerSegment": "SAC",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 999999,
+            "x-position": 28,
+            "x-mandatory": false,
+            "x-maxOccurrences": 999999,
+            "x-triggerSegment": "SAC",
+            "x-nodeType": "segmentGroup"
+          },
+          "GF": {
+            "type": "object",
+            "properties": {
+              "127": {
+                "type": "string",
+                "title": "Reference Identification",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 9,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "128": {
+                "type": "string",
+                "title": "Reference Identification Qualifier",
+                "maxLength": 3,
+                "minLength": 2,
+                "x-position": 8,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "328": {
+                "type": "string",
+                "title": "Release Number",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 7,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "367": {
+                "type": "string",
+                "title": "Contract Number",
+                "maxLength": 30,
+                "minLength": 1,
+                "x-position": 3,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              },
+              "782": {
+                "type": "string",
+                "title": "Monetary Amount",
+                "maxLength": 18,
+                "minLength": 1,
+                "x-position": 4,
+                "x-mandatory": false,
+                "x-nodeType": "element"
+              }
+            },
+            "title": "Furnished Goods and Services",
+            "x-position": 29,
+            "x-mandatory": false,
+            "x-maxOccurrences": 1,
+            "x-nodeType": "segment"
+          },
+          "YNQ": {
+            "type": "array",
+            "title": "Yes/No Question",
+            "items": {
+              "type": "object",
+              "properties": {
+                "933": {
+                  "type": "string",
+                  "title": "Free-Form Message Text",
+                  "maxLength": 264,
+                  "minLength": 1,
+                  "x-position": 10,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1073": {
+                  "type": "string",
+                  "title": "Yes/No Condition or Response Code",
+                  "maxLength": 1,
+                  "minLength": 1,
+                  "x-position": 2,
+                  "x-mandatory": true,
+                  "x-nodeType": "element"
+                },
+                "1250": {
+                  "type": "string",
+                  "title": "Date Time Period Format Qualifier",
+                  "maxLength": 3,
+                  "minLength": 2,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1251": {
+                  "type": "string",
+                  "title": "Date Time Period",
+                  "maxLength": 35,
+                  "minLength": 1,
+                  "x-position": 4,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1270": {
+                  "type": "string",
+                  "title": "Code List Qualifier Code",
+                  "maxLength": 3,
+                  "minLength": 1,
+                  "x-position": 8,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1271": {
+                  "type": "string",
+                  "title": "Industry Code",
+                  "maxLength": 30,
+                  "minLength": 1,
+                  "x-position": 9,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                },
+                "1321": {
+                  "type": "string",
+                  "title": "Condition Indicator",
+                  "maxLength": 2,
+                  "minLength": 2,
+                  "x-position": 1,
+                  "x-mandatory": false,
+                  "x-nodeType": "element"
+                }
+              },
+              "required": [
+                "1073"
+              ],
+              "x-position": 30,
+              "x-mandatory": false,
+              "x-maxOccurrences": 10,
+              "x-nodeType": "segment"
+            },
+            "maxItems": 10,
+            "x-position": 30,
+            "x-mandatory": false,
+            "x-maxOccurrences": 10,
+            "x-nodeType": "segment"
+          },
+          "LoopLM": {
+            "type": "array",
+            "title": "LoopLM",
+            "items": {
+              "type": "object",
+              "properties": {
+                "LM": {
+                  "type": "object",
+                  "properties": {
+                    "559": {
+                      "type": "string",
+                      "title": "Agency Qualifier Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 1,
+                      "x-mandatory": true,
+                      "x-nodeType": "element"
+                    },
+                    "822": {
+                      "type": "string",
+                      "title": "Source Subqualifier",
+                      "maxLength": 15,
+                      "minLength": 1,
+                      "x-position": 2,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "required": [
+                    "559"
+                  ],
+                  "title": "Code Source Information",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "LQ": {
+                  "type": "array",
+                  "title": "Industry Code",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "1270": {
+                        "type": "string",
+                        "title": "Code List Qualifier Code",
+                        "maxLength": 3,
+                        "minLength": 1,
+                        "x-position": 1,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "1271": {
+                        "type": "string",
+                        "title": "Industry Code",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "x-position": 2,
+                    "x-mandatory": true,
+                    "x-maxOccurrences": 100,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 100,
+                  "x-position": 2,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 100,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "LM",
+                "LQ"
+              ],
+              "x-position": 31,
+              "x-mandatory": false,
+              "x-maxOccurrences": 10,
+              "x-triggerSegment": "LM",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 10,
+            "x-position": 31,
+            "x-mandatory": false,
+            "x-maxOccurrences": 10,
+            "x-triggerSegment": "LM",
+            "x-nodeType": "segmentGroup"
+          },
+          "LoopV1": {
+            "type": "array",
+            "title": "LoopV1",
+            "items": {
+              "type": "object",
+              "properties": {
+                "V1": {
+                  "type": "object",
+                  "properties": {
+                    "26": {
+                      "type": "string",
+                      "title": "Country Code",
+                      "maxLength": 3,
+                      "minLength": 2,
+                      "x-position": 3,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "55": {
+                      "type": "string",
+                      "title": "Flight/Voyage Number",
+                      "maxLength": 10,
+                      "minLength": 2,
+                      "x-position": 4,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "91": {
+                      "type": "string",
+                      "title": "Transportation Method/Type Code",
+                      "maxLength": 2,
+                      "minLength": 1,
+                      "x-position": 9,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "140": {
+                      "type": "string",
+                      "title": "Standard Carrier Alpha Code",
+                      "maxLength": 4,
+                      "minLength": 2,
+                      "x-position": 5,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "182": {
+                      "type": "string",
+                      "title": "Vessel Name",
+                      "maxLength": 28,
+                      "minLength": 2,
+                      "x-position": 2,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "249": {
+                      "type": "string",
+                      "title": "Vessel Requirement Code",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 6,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "597": {
+                      "type": "string",
+                      "title": "Vessel Code",
+                      "maxLength": 8,
+                      "minLength": 1,
+                      "x-position": 1,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "854": {
+                      "type": "string",
+                      "title": "Vessel Type Code",
+                      "maxLength": 2,
+                      "minLength": 2,
+                      "x-position": 7,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    },
+                    "897": {
+                      "type": "string",
+                      "title": "Vessel Code Qualifier",
+                      "maxLength": 1,
+                      "minLength": 1,
+                      "x-position": 8,
+                      "x-mandatory": false,
+                      "x-nodeType": "element"
+                    }
+                  },
+                  "title": "Vessel Identification",
+                  "x-position": 1,
+                  "x-mandatory": true,
+                  "x-maxOccurrences": 1,
+                  "x-nodeType": "segment"
+                },
+                "R4": {
+                  "type": "array",
+                  "title": "Port or Terminal",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "26": {
+                        "type": "string",
+                        "title": "Country Code",
+                        "maxLength": 3,
+                        "minLength": 2,
+                        "x-position": 5,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "113": {
+                        "type": "string",
+                        "title": "Pier Number",
+                        "maxLength": 4,
+                        "minLength": 1,
+                        "x-position": 7,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "114": {
+                        "type": "string",
+                        "title": "Port Name",
+                        "maxLength": 24,
+                        "minLength": 2,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "115": {
+                        "type": "string",
+                        "title": "Port or Terminal Function Code",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "156": {
+                        "type": "string",
+                        "title": "State or Province Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 8,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "174": {
+                        "type": "string",
+                        "title": "Terminal Name",
+                        "maxLength": 30,
+                        "minLength": 2,
+                        "x-position": 6,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "309": {
+                        "type": "string",
+                        "title": "Location Qualifier",
+                        "maxLength": 2,
+                        "minLength": 1,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "310": {
+                        "type": "string",
+                        "title": "Location Identifier",
+                        "maxLength": 30,
+                        "minLength": 1,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "115"
+                    ],
+                    "x-position": 2,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 999999,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 999999,
+                  "x-position": 2,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 999999,
+                  "x-nodeType": "segment"
+                },
+                "DTM": {
+                  "type": "array",
+                  "title": "Date/Time Reference",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "337": {
+                        "type": "string",
+                        "title": "Time",
+                        "maxLength": 8,
+                        "minLength": 4,
+                        "x-position": 3,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "373": {
+                        "type": "string",
+                        "title": "Date",
+                        "maxLength": 8,
+                        "minLength": 8,
+                        "x-position": 2,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "374": {
+                        "type": "string",
+                        "title": "Date/Time Qualifier",
+                        "maxLength": 3,
+                        "minLength": 3,
+                        "x-position": 1,
+                        "x-mandatory": true,
+                        "x-nodeType": "element"
+                      },
+                      "623": {
+                        "type": "string",
+                        "title": "Time Code",
+                        "maxLength": 2,
+                        "minLength": 2,
+                        "x-position": 4,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "1250": {
+                        "type": "string",
+                        "title": "Date Time Period Format Qualifier",
+                        "maxLength": 3,
+                        "minLength": 2,
+                        "x-position": 5,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      },
+                      "1251": {
+                        "type": "string",
+                        "title": "Date Time Period",
+                        "maxLength": 35,
+                        "minLength": 1,
+                        "x-position": 6,
+                        "x-mandatory": false,
+                        "x-nodeType": "element"
+                      }
+                    },
+                    "required": [
+                      "374"
+                    ],
+                    "x-position": 3,
+                    "x-mandatory": false,
+                    "x-maxOccurrences": 999999,
+                    "x-nodeType": "segment"
+                  },
+                  "maxItems": 999999,
+                  "x-position": 3,
+                  "x-mandatory": false,
+                  "x-maxOccurrences": 999999,
+                  "x-nodeType": "segment"
+                }
+              },
+              "required": [
+                "V1"
+              ],
+              "x-position": 32,
+              "x-mandatory": false,
+              "x-maxOccurrences": 999999,
+              "x-triggerSegment": "V1",
+              "x-nodeType": "segmentGroup"
+            },
+            "maxItems": 999999,
+            "x-position": 32,
+            "x-mandatory": false,
+            "x-maxOccurrences": 999999,
+            "x-triggerSegment": "V1",
+            "x-nodeType": "segmentGroup"
+          }
+        },
+        "required": [
+          "HL"
+        ],
+        "x-position": 4,
+        "x-mandatory": true,
+        "x-maxOccurrences": 200000,
+        "x-triggerSegment": "HL",
+        "x-nodeType": "segmentGroup"
+      },
+      "maxItems": 200000,
+      "x-position": 4,
+      "x-mandatory": true,
+      "x-maxOccurrences": 200000,
+      "x-triggerSegment": "HL",
+      "x-nodeType": "segmentGroup"
+    },
+    "CTT": {
+      "type": "object",
+      "properties": {
+        "81": {
+          "type": "string",
+          "title": "Weight",
+          "maxLength": 10,
+          "minLength": 1,
+          "x-position": 3,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "183": {
+          "type": "string",
+          "title": "Volume",
+          "maxLength": 8,
+          "minLength": 1,
+          "x-position": 5,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "347": {
+          "type": "string",
+          "title": "Hash Total",
+          "maxLength": 10,
+          "minLength": 1,
+          "x-position": 2,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "352": {
+          "type": "string",
+          "title": "Description",
+          "maxLength": 80,
+          "minLength": 1,
+          "x-position": 7,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        },
+        "354": {
+          "type": "number",
+          "title": "Number of Line Items",
+          "maxLength": 6,
+          "minLength": 1,
+          "x-position": 1,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "355": {
+          "type": "string",
+          "title": "Unit or Basis for Measurement Code",
+          "maxLength": 2,
+          "minLength": 2,
+          "x-position": 6,
+          "x-mandatory": false,
+          "x-nodeType": "element"
+        }
+      },
+      "required": [
+        "354"
+      ],
+      "title": "Transaction Totals",
+      "x-position": 5,
+      "x-mandatory": false,
+      "x-maxOccurrences": 1,
+      "x-nodeType": "segment"
+    },
+    "SE": {
+      "type": "object",
+      "properties": {
+        "96": {
+          "type": "number",
+          "title": "Number of Included Segments",
+          "maxLength": 10,
+          "minLength": 1,
+          "x-position": 1,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        },
+        "329": {
+          "type": "string",
+          "title": "Transaction Set Control Number",
+          "maxLength": 9,
+          "minLength": 4,
+          "x-position": 2,
+          "x-mandatory": true,
+          "x-nodeType": "element"
+        }
+      },
+      "required": [
+        "96",
+        "329"
+      ],
+      "title": "Transaction Set Trailer",
+      "x-position": 6,
+      "x-mandatory": true,
+      "x-maxOccurrences": 1,
+      "x-nodeType": "segment"
+    }
+  },
+  "required": [
+    "ST",
+    "BSN",
+    "LoopHL",
+    "SE"
+  ],
+  "additionalProperties": false
+}

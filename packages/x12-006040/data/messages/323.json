@@ -1,0 +1,69 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "323",
+  "name": "Vessel Schedule and Itinerary (Ocean)",
+  "description": "Vessel Schedule and Itinerary (Ocean)",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "K1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR4",
+      "name": "LoopR4",
+      "triggerSegment": "R4",
+      "mandatory": true,
+      "maxOccurrences": 999,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 15,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "V9",
+          "mandatory": true,
+          "maxOccurrences": 5,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

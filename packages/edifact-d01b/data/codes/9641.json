@@ -1,5 +1,31 @@
 {
-  "code": "9641",
-  "name": "Service basis code qualifier",
-  "values": []
+  "elementCode": "9641",
+  "elementName": "Service basis code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Condition",
+      "description": "The service was performed based on a condition."
+    },
+    {
+      "code": "2",
+      "name": "Occurrence",
+      "description": "The service was performed based on an occurrence."
+    },
+    {
+      "code": "3",
+      "name": "Occurrence span",
+      "description": "The service was performed based on an event occurring over a period of time."
+    },
+    {
+      "code": "4",
+      "name": "Procedure",
+      "description": "The service was performed based on a procedure."
+    },
+    {
+      "code": "5",
+      "name": "Value code",
+      "description": "The service was performed based on a value code."
+    }
+  ]
 }

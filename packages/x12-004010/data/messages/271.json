@@ -1,0 +1,397 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "271",
+  "name": "Eligibility, Coverage or Benefit Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Eligibility, Coverage or Benefit Information Transaction Set (271) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to communicate information about or changes to eligibility, coverage or benefits from information sources (such as - insurers, sponsors, payors) to information receivers (such as - physicians, hospitals, repair facilities, third party administrators, governmental agencies). This information includes but is not limited to: benefit status, explanation of benefits, coverages, dependent coverage level, effective dates, amounts for co-insurance, co-pays, deductibles, exclusions and limitations.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BHT",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop2000",
+      "name": "Loop2000",
+      "triggerSegment": "HL",
+      "mandatory": true,
+      "maxOccurrences": 999999,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "HL",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "TRN",
+          "mandatory": false,
+          "maxOccurrences": 9,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "AAA",
+          "mandatory": false,
+          "maxOccurrences": 9,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "Loop2100",
+          "name": "Loop2100",
+          "triggerSegment": "NM1",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "NM1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 9,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N2",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N3",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "PER",
+              "mandatory": false,
+              "maxOccurrences": 3,
+              "position": 6
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "AAA",
+              "mandatory": false,
+              "maxOccurrences": 9,
+              "position": 7
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "PRV",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 8
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "DMG",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 9
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "INS",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 10
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "DTP",
+              "mandatory": false,
+              "maxOccurrences": 9,
+              "position": 11
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "Loop2110",
+              "name": "Loop2110",
+              "triggerSegment": "EB",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 12,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "EB",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "HSD",
+                  "mandatory": false,
+                  "maxOccurrences": 9,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "REF",
+                  "mandatory": false,
+                  "maxOccurrences": 9,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "DTP",
+                  "mandatory": false,
+                  "maxOccurrences": 20,
+                  "position": 4
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "AAA",
+                  "mandatory": false,
+                  "maxOccurrences": 9,
+                  "position": 5
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "VEH",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 6
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PID",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 7
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PDR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 8
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PDP",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 9
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LIN",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 10
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "EM",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 11
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "SD1",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 12
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PKD",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 13
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "MSG",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 14
+                },
+                {
+                  "nodeType": "segmentGroup",
+                  "id": "Loop2115",
+                  "name": "Loop2115",
+                  "triggerSegment": "III",
+                  "mandatory": false,
+                  "maxOccurrences": 999999,
+                  "position": 15,
+                  "structure": [
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "III",
+                      "mandatory": true,
+                      "maxOccurrences": 1,
+                      "position": 1
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "DTP",
+                      "mandatory": false,
+                      "maxOccurrences": 5,
+                      "position": 2
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "AMT",
+                      "mandatory": false,
+                      "maxOccurrences": 5,
+                      "position": 3
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "PCT",
+                      "mandatory": false,
+                      "maxOccurrences": 5,
+                      "position": 4
+                    },
+                    {
+                      "nodeType": "segmentGroup",
+                      "id": "Loop2117",
+                      "name": "Loop2117",
+                      "triggerSegment": "LQ",
+                      "mandatory": false,
+                      "maxOccurrences": 999999,
+                      "position": 5,
+                      "structure": [
+                        {
+                          "nodeType": "segment",
+                          "segmentRef": "LQ",
+                          "mandatory": true,
+                          "maxOccurrences": 1,
+                          "position": 1
+                        },
+                        {
+                          "nodeType": "segment",
+                          "segmentRef": "AMT",
+                          "mandatory": false,
+                          "maxOccurrences": 5,
+                          "position": 2
+                        },
+                        {
+                          "nodeType": "segment",
+                          "segmentRef": "PCT",
+                          "mandatory": false,
+                          "maxOccurrences": 5,
+                          "position": 3
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LS",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 16
+                },
+                {
+                  "nodeType": "segmentGroup",
+                  "id": "Loop2120",
+                  "name": "Loop2120",
+                  "triggerSegment": "NM1",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 17,
+                  "structure": [
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "NM1",
+                      "mandatory": true,
+                      "maxOccurrences": 1,
+                      "position": 1
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "N2",
+                      "mandatory": false,
+                      "maxOccurrences": 1,
+                      "position": 2
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "N3",
+                      "mandatory": false,
+                      "maxOccurrences": 1,
+                      "position": 3
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "N4",
+                      "mandatory": false,
+                      "maxOccurrences": 1,
+                      "position": 4
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "PER",
+                      "mandatory": false,
+                      "maxOccurrences": 3,
+                      "position": 5
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "PRV",
+                      "mandatory": false,
+                      "maxOccurrences": 1,
+                      "position": 6
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LE",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 18
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

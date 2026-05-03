@@ -1,0 +1,73 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "352",
+  "name": "U.S. Customs Carrier General Order Status",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the U.S. Customs Carrier General Order Status Transaction Set (352) for use within the context of an Electronic Data Interchange (EDI) environment.\nThe transaction set can be used by carriers, terminal operators, port authorities, or service centers to provide U.S. Customs or consignees with bill of lading status information for cargo in or about to go into \"General Order\" and entry and release information.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopP4",
+      "name": "LoopP4",
+      "triggerSegment": "P4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "P4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopM14",
+          "name": "LoopM14",
+          "triggerSegment": "M14",
+          "mandatory": true,
+          "maxOccurrences": 9999,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "M14",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "K1",
+              "mandatory": false,
+              "maxOccurrences": 4,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

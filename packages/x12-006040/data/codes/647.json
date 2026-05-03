@@ -1,0 +1,830 @@
+{
+  "code": "647",
+  "name": "Code indicating application error condition",
+  "values": [
+    {
+      "code": "A",
+      "name": "Missing or Invalid Report Type Code"
+    },
+    {
+      "code": "B",
+      "name": "Missing or Invalid Physical Inventory Code"
+    },
+    {
+      "code": "C",
+      "name": "Missing or Invalid Consignee"
+    },
+    {
+      "code": "D",
+      "name": "Missing or Invalid Fund Code"
+    },
+    {
+      "code": "E",
+      "name": "Missing or Invalid Material Condition Code"
+    },
+    {
+      "code": "F",
+      "name": "Missing or Invalid Management Code"
+    },
+    {
+      "code": "G",
+      "name": "Missing or Invalid Processing (Count) Date Code"
+    },
+    {
+      "code": "H",
+      "name": "Missing or Invalid Unit of Measure Code"
+    },
+    {
+      "code": "I",
+      "name": "Missing or Invalid Source of Supply Code"
+    },
+    {
+      "code": "J",
+      "name": "Missing or Invalid Purpose Code"
+    },
+    {
+      "code": "K",
+      "name": "Missing or Invalid Ownership Code"
+    },
+    {
+      "code": "L",
+      "name": "Missing or Invalid Support Request Code"
+    },
+    {
+      "code": "M",
+      "name": "Missing or Invalid Supply Condition Code"
+    },
+    {
+      "code": "N",
+      "name": "Missing or Invalid Payer Identification"
+    },
+    {
+      "code": "O",
+      "name": "Missing or Invalid Issuer Identification"
+    },
+    {
+      "code": "P",
+      "name": "Missing or Invalid Item Quantity"
+    },
+    {
+      "code": "Q",
+      "name": "Missing or Invalid Item Identification"
+    },
+    {
+      "code": "R",
+      "name": "Missing or Invalid Support Date"
+    },
+    {
+      "code": "S",
+      "name": "Missing or Unauthorized Transportation Mode/Method Code"
+    },
+    {
+      "code": "T",
+      "name": "Unauthorized Transaction Set Purpose Code"
+    },
+    {
+      "code": "U",
+      "name": "Missing or Unauthorized Transaction Type Code"
+    },
+    {
+      "code": "V",
+      "name": "Missing or Unauthorized Action Code"
+    },
+    {
+      "code": "W",
+      "name": "Outside Ship Window"
+    },
+    {
+      "code": "MA",
+      "name": "Missing or Invalid Store Number"
+    },
+    {
+      "code": "MB",
+      "name": "Missing or Invalid Purchase Order Number"
+    },
+    {
+      "code": "MC",
+      "name": "Missing or Invalid Bill of Lading Number"
+    },
+    {
+      "code": "MD",
+      "name": "Missing or Invalid Invoice Date"
+    },
+    {
+      "code": "ME",
+      "name": "Missing or Invalid Department Number"
+    },
+    {
+      "code": "MF",
+      "name": "Missing or Invalid Internal Vendor Number"
+    },
+    {
+      "code": "MG",
+      "name": "Missing or Invalid U.P.C. Code"
+    },
+    {
+      "code": "MH",
+      "name": "Missing or Invalid DUNS Number"
+    },
+    {
+      "code": "MI",
+      "name": "Missing or Invalid SCAC"
+    },
+    {
+      "code": "MJ",
+      "name": "Missing or Invalid Terms"
+    },
+    {
+      "code": "MK",
+      "name": "Missing or Invalid Ship Date Location"
+    },
+    {
+      "code": "ML",
+      "name": "Missing or Invalid Sell to Location"
+    },
+    {
+      "code": "MM",
+      "name": "Missing or Invalid Bill to Location"
+    },
+    {
+      "code": "MN",
+      "name": "Missing or Invalid Unit Cost"
+    },
+    {
+      "code": "MP",
+      "name": "Missing or Invalid Non-merchandise Code"
+    },
+    {
+      "code": "MQ",
+      "name": "Missing or Invalid Non-merchandise Cost"
+    },
+    {
+      "code": "MR",
+      "name": "Missing GTIN (Global Trade Item Number)"
+    },
+    {
+      "code": "MS",
+      "name": "Invalid GTIN (Global Trade Item Number)"
+    },
+    {
+      "code": "MT",
+      "name": "Missing GLN (Global Location Number)"
+    },
+    {
+      "code": "MU",
+      "name": "Invalid GLN (Global Location Number)"
+    },
+    {
+      "code": "RU",
+      "name": "Rate Unverifiable"
+    },
+    {
+      "code": "001",
+      "name": "Car Not in Umler"
+    },
+    {
+      "code": "002",
+      "name": "Car Not in Correct Status for Billing"
+    },
+    {
+      "code": "003",
+      "name": "Duplicate Billing"
+    },
+    {
+      "code": "004",
+      "name": "Invalid Commodity Code"
+    },
+    {
+      "code": "005",
+      "name": "Route Error"
+    },
+    {
+      "code": "006",
+      "name": "Duplicate"
+    },
+    {
+      "code": "007",
+      "name": "Missing Data"
+    },
+    {
+      "code": "008",
+      "name": "Out of Range"
+    },
+    {
+      "code": "009",
+      "name": "Invalid Date"
+    },
+    {
+      "code": "010",
+      "name": "Total Out of Balance"
+    },
+    {
+      "code": "011",
+      "name": "Not Matching"
+    },
+    {
+      "code": "012",
+      "name": "Invalid Combination"
+    },
+    {
+      "code": "024",
+      "name": "Other Unlisted Reason"
+    },
+    {
+      "code": "026",
+      "name": "Customer Identification Number is Invalid"
+    },
+    {
+      "code": "027",
+      "name": "Customer Identification Number Does not Exist"
+    },
+    {
+      "code": "028",
+      "name": "Customer Identification Number and Entity Name Do not Match"
+    },
+    {
+      "code": "029",
+      "name": "Customer Identification Number Is Missing"
+    },
+    {
+      "code": "036",
+      "name": "Invalid Serial Number"
+    },
+    {
+      "code": "101",
+      "name": "Effective Date Too Early"
+    },
+    {
+      "code": "102",
+      "name": "Improper Placement of Labels"
+    },
+    {
+      "code": "104",
+      "name": "Item Already Exists"
+    },
+    {
+      "code": "105",
+      "name": "Item Marked For Delete"
+    },
+    {
+      "code": "106",
+      "name": "Item Not Authorized For Buyer Assigned Vendor Number"
+    },
+    {
+      "code": "107",
+      "name": "Missing or Invalid Location"
+    },
+    {
+      "code": "108",
+      "name": "Location Received Not On Order"
+    },
+    {
+      "code": "109",
+      "name": "Negative Value"
+    },
+    {
+      "code": "110",
+      "name": "Missing Marking Identification at Pack Level"
+    },
+    {
+      "code": "111",
+      "name": "Duplicate Purchase Order Number"
+    },
+    {
+      "code": "112",
+      "name": "Missing Product Description 1"
+    },
+    {
+      "code": "113",
+      "name": "Missing Product Description 2"
+    },
+    {
+      "code": "114",
+      "name": "Code Not Mapped to Application"
+    },
+    {
+      "code": "115",
+      "name": "Missing Code for Application"
+    },
+    {
+      "code": "116",
+      "name": "Retail Price Is Greater Than Suggested Retail Price"
+    },
+    {
+      "code": "117",
+      "name": "Sender Not Authorized To Submit Ship Notice Data For Buyer Assigned Vendor Number"
+    },
+    {
+      "code": "118",
+      "name": "Sender Not Authorized To Submit Ship Notice For Item(s)"
+    },
+    {
+      "code": "119",
+      "name": "Duplicate Shipment Identification Number"
+    },
+    {
+      "code": "120",
+      "name": "Ship-To Location Not Consistent With Purchase Order Ship-To"
+    },
+    {
+      "code": "121",
+      "name": "Duplicate SSCC (formerly known as Serial Shipping Container Code)"
+    },
+    {
+      "code": "122",
+      "name": "Invalid SSCC (formerly known as Serial Shipping Container Code) Range"
+    },
+    {
+      "code": "123",
+      "name": "Invalid SSCC (formerly known as Serial Shipping Container Code) Structure"
+    },
+    {
+      "code": "124",
+      "name": "Missing Marking Identification at Tare Level"
+    },
+    {
+      "code": "125",
+      "name": "Unscannable Labels"
+    },
+    {
+      "code": "126",
+      "name": "Incorrect Label Format"
+    },
+    {
+      "code": "128",
+      "name": "Missing Labels on Shipping Container"
+    },
+    {
+      "code": "129",
+      "name": "Cost Change Not Accepted"
+    },
+    {
+      "code": "130",
+      "name": "UCC-12 Change Not Allowed"
+    },
+    {
+      "code": "131",
+      "name": "Zero Value"
+    },
+    {
+      "code": "133",
+      "name": "Item Not Found On Purchase Order"
+    },
+    {
+      "code": "134",
+      "name": "Missing or Invalid Invoice Number"
+    },
+    {
+      "code": "136",
+      "name": "Receiving Location Not On Order"
+    },
+    {
+      "code": "137",
+      "name": "Allowance Errors"
+    },
+    {
+      "code": "138",
+      "name": "Purchase Order Closed"
+    },
+    {
+      "code": "139",
+      "name": "Missing or Invalid Vendor Pack Quantity"
+    },
+    {
+      "code": "140",
+      "name": "Missing or Invalid Ship-To Location"
+    },
+    {
+      "code": "141",
+      "name": "Purchase Order Cancelled"
+    },
+    {
+      "code": "142",
+      "name": "GTIN (Global Trade Item Number) Change Not Allowed"
+    },
+    {
+      "code": "500",
+      "name": "Misrouted Freight Bill"
+    },
+    {
+      "code": "801",
+      "name": "Missing or Invalid Transaction Handling Code"
+    },
+    {
+      "code": "802",
+      "name": "Invalid Debit or Credit Flag Code"
+    },
+    {
+      "code": "803",
+      "name": "Missing or Invalid Payment Method Code"
+    },
+    {
+      "code": "804",
+      "name": "Missing or Invalid Payment Format"
+    },
+    {
+      "code": "805",
+      "name": "Missing Depository Financial Institution (DFI) Qualifier"
+    },
+    {
+      "code": "806",
+      "name": "Missing or Invalid Financial Institution Transit Routing Number"
+    },
+    {
+      "code": "807",
+      "name": "Missing or Invalid Originating Account Number"
+    },
+    {
+      "code": "808",
+      "name": "Missing or Invalid Receiving Account Number"
+    },
+    {
+      "code": "809",
+      "name": "Missing Effective Entry Date"
+    },
+    {
+      "code": "810",
+      "name": "Effective Payment Date is Past"
+    },
+    {
+      "code": "811",
+      "name": "Payment Received Too Far in Advance"
+    },
+    {
+      "code": "812",
+      "name": "Missing Transaction Reference or Trace Number"
+    },
+    {
+      "code": "813",
+      "name": "Missing or Invalid Payee Name and Address"
+    },
+    {
+      "code": "814",
+      "name": "Received After Cutoff Date or Time"
+    },
+    {
+      "code": "815",
+      "name": "Duplicate Batch"
+    },
+    {
+      "code": "817",
+      "name": "Duplicate Trace Number"
+    },
+    {
+      "code": "818",
+      "name": "Missing Control Totals"
+    },
+    {
+      "code": "819",
+      "name": "Control Totals Amount Error"
+    },
+    {
+      "code": "820",
+      "name": "Control Totals Count Error"
+    },
+    {
+      "code": "821",
+      "name": "Control Totals Out of Sequence"
+    },
+    {
+      "code": "822",
+      "name": "Transaction Set Payment Amount Error"
+    },
+    {
+      "code": "823",
+      "name": "Payment Pending Credit Approval"
+    },
+    {
+      "code": "824",
+      "name": "Payment Passed Credit Approval"
+    },
+    {
+      "code": "825",
+      "name": "Payment Amount Exceeds Approved Credit Limit; Refused"
+    },
+    {
+      "code": "826",
+      "name": "Non-Sufficient Funds in Account; Refused"
+    },
+    {
+      "code": "827",
+      "name": "Account Frozen"
+    },
+    {
+      "code": "828",
+      "name": "Account Transferred"
+    },
+    {
+      "code": "829",
+      "name": "Payee Deceased"
+    },
+    {
+      "code": "830",
+      "name": "Refused by Payee"
+    },
+    {
+      "code": "831",
+      "name": "Missing or Invalid Cancellation Type Code"
+    },
+    {
+      "code": "832",
+      "name": "Invalid Request or Cancellation Flag"
+    },
+    {
+      "code": "833",
+      "name": "Invalid Cancellation Request (Item Not in Financial Warehouse to Cancel)"
+    },
+    {
+      "code": "834",
+      "name": "Missing or Invalid Effective Payment Date"
+    },
+    {
+      "code": "847",
+      "name": "Closed/Non-Existent Account Number"
+    },
+    {
+      "code": "848",
+      "name": "Incorrect Data"
+    },
+    {
+      "code": "849",
+      "name": "Corrected Data"
+    },
+    {
+      "code": "ASA",
+      "name": "Associated Authorization"
+    },
+    {
+      "code": "ASV",
+      "name": "Associated Vehicle Identification Number(s) Unknown"
+    },
+    {
+      "code": "AVE",
+      "name": "Associated Vehicle Identification Number(s) Invalid"
+    },
+    {
+      "code": "CAL",
+      "name": "Currency Calculation"
+    },
+    {
+      "code": "CHK",
+      "name": "Check Being Returned"
+    },
+    {
+      "code": "COV",
+      "name": "Conflicting Authorizations"
+    },
+    {
+      "code": "CUR",
+      "name": "Invalid Currency Code"
+    },
+    {
+      "code": "DBL",
+      "name": "Duplicate Bill of Lading Number"
+    },
+    {
+      "code": "DDT",
+      "name": "Departure Date Invalid"
+    },
+    {
+      "code": "DRC",
+      "name": "Duplicate Railcar Departure"
+    },
+    {
+      "code": "DTE",
+      "name": "Incorrect Date"
+    },
+    {
+      "code": "DUP",
+      "name": "Duplicate Transaction"
+    },
+    {
+      "code": "HUG",
+      "name": "Quantity of Handling Units Shipped Greater Than the Quantity Specified"
+    },
+    {
+      "code": "HUL",
+      "name": "Quantity of Handling Units Shipped Less Than the Quantity Specified"
+    },
+    {
+      "code": "ICA",
+      "name": "Invalid Claim Amount"
+    },
+    {
+      "code": "ICG",
+      "name": "Invalid Charge Allowance Qualifier"
+    },
+    {
+      "code": "IDC",
+      "name": "Invalid Decline/Amend Reason Code"
+    },
+    {
+      "code": "IDN",
+      "name": "Invalid Department Number"
+    },
+    {
+      "code": "IID",
+      "name": "Invalid Identification Code"
+    },
+    {
+      "code": "IMD",
+      "name": "Invalid Railcar Type"
+    },
+    {
+      "code": "INC",
+      "name": "Incomplete Transaction"
+    },
+    {
+      "code": "INF",
+      "name": "Invalid Status Code"
+    },
+    {
+      "code": "IPR",
+      "name": "Status Code Previously Reported"
+    },
+    {
+      "code": "IQT",
+      "name": "Invalid Quantity"
+    },
+    {
+      "code": "IWT",
+      "name": "Invalid Weight"
+    },
+    {
+      "code": "LOC",
+      "name": "Invalid Damage Area Code"
+    },
+    {
+      "code": "MBL",
+      "name": "Multiple Bills of Lading"
+    },
+    {
+      "code": "MDN",
+      "name": "Missing Department Number"
+    },
+    {
+      "code": "MID",
+      "name": "Missing Identification Code"
+    },
+    {
+      "code": "MQT",
+      "name": "Missing Quantity"
+    },
+    {
+      "code": "MWT",
+      "name": "Missing Weight"
+    },
+    {
+      "code": "NAU",
+      "name": "Not Authorized"
+    },
+    {
+      "code": "NCL",
+      "name": "No Clearance Authorization"
+    },
+    {
+      "code": "NCR",
+      "name": "No Clearance Reported"
+    },
+    {
+      "code": "NDP",
+      "name": "No Departure Reported"
+    },
+    {
+      "code": "NDT",
+      "name": "No Termination Date"
+    },
+    {
+      "code": "NIF",
+      "name": "Invalid Status Location"
+    },
+    {
+      "code": "NOC",
+      "name": "Automated Clearinghouse (ACH) Notification of Change"
+    },
+    {
+      "code": "NOD",
+      "name": "Not on Departure"
+    },
+    {
+      "code": "NRA",
+      "name": "No Railcar Arrival"
+    },
+    {
+      "code": "NRS",
+      "name": "Product is Not in the Receiver's System"
+    },
+    {
+      "code": "OTH",
+      "name": "Other"
+    },
+    {
+      "code": "PND",
+      "name": "Pending Payment"
+    },
+    {
+      "code": "POI",
+      "name": "Purchase Order Number Invalid"
+    },
+    {
+      "code": "PPD",
+      "name": "Previously Paid"
+    },
+    {
+      "code": "PRM",
+      "name": "Primary Inspection Not Received"
+    },
+    {
+      "code": "QTY",
+      "name": "Quantity"
+    },
+    {
+      "code": "RAT",
+      "name": "No Rate Available"
+    },
+    {
+      "code": "RTE",
+      "name": "Invalid Shipper's Route Code"
+    },
+    {
+      "code": "RTN",
+      "name": "Automated Clearinghouse (ACH) Return Items"
+    },
+    {
+      "code": "SCA",
+      "name": "Invalid SCAC"
+    },
+    {
+      "code": "SCD",
+      "name": "Invalid Vehicle Service Code"
+    },
+    {
+      "code": "SEV",
+      "name": "Invalid Damage Severity Code"
+    },
+    {
+      "code": "SPL",
+      "name": "Invalid SPLC Code"
+    },
+    {
+      "code": "STA",
+      "name": "Shipment Picked Up After the Date Specified by the Ship Window"
+    },
+    {
+      "code": "STP",
+      "name": "Shipment Picked Up Prior to the Date Specified by the Ship Window"
+    },
+    {
+      "code": "STR",
+      "name": "Invalid Storage Days Calculation"
+    },
+    {
+      "code": "TRN",
+      "name": "Turnover"
+    },
+    {
+      "code": "TYP",
+      "name": "Invalid Damage Type Code"
+    },
+    {
+      "code": "UAU",
+      "name": "Used Authorization"
+    },
+    {
+      "code": "UCN",
+      "name": "Unknown Claim Number"
+    },
+    {
+      "code": "UKN",
+      "name": "Unknown Move/Service"
+    },
+    {
+      "code": "UNP",
+      "name": "Invalid Unit Price"
+    },
+    {
+      "code": "UNV",
+      "name": "Unknown Vehicle Identification Number"
+    },
+    {
+      "code": "VIN",
+      "name": "Invalid Vehicle Identification Number"
+    },
+    {
+      "code": "VND",
+      "name": "Vehicle Not Departed"
+    },
+    {
+      "code": "VOS",
+      "name": "Offsite Storage"
+    },
+    {
+      "code": "ZDS",
+      "name": "Zero Storage Days"
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

@@ -4,24 +4,24 @@ import type { MessageStructureDTO } from '@application/dtos';
 export class MessageStructureService {
   constructor(private readonly repository: IMessageStructureRepository) {}
 
-  async getMessageDefinition(
+  async getMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<MessageStructureDTO | null> {
-    const definition = await this.repository.getMessageDefinition(
+    const structure = await this.repository.getMessageStructure(
       standard,
       version,
       messageType
     );
 
-    if (!definition) {
+    if (!structure) {
       throw new Error(
-        `Message definition not found: ${standard} ${version} ${messageType}`
+        `Message structure not found: ${standard} ${version} ${messageType}`
       );
     }
 
-    return definition;
+    return structure;
   }
 
   async getAllMessageTypes(
@@ -31,11 +31,11 @@ export class MessageStructureService {
     return this.repository.getAllMessageTypes(standard, version);
   }
 
-  async hasMessageDefinition(
+  async hasMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<boolean> {
-    return this.repository.hasMessageDefinition(standard, version, messageType);
+    return this.repository.hasMessageStructure(standard, version, messageType);
   }
 }

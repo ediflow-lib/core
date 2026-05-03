@@ -1,0 +1,76 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "993",
+  "name": "Secured Receipt or Acknowledgment",
+  "description": "Secured Receipt or Acknowledgment",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AK1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AK2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SPE",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "APE",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopS4A",
+      "name": "LoopS4A",
+      "triggerSegment": "S4A",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 7,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "S4A",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SVA",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "242",
+  "name": "Data Status Tracking",
+  "description": "Data Status Tracking",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "IRP",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "MSG",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopHL",
+      "name": "LoopHL",
+      "triggerSegment": "HL",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 8,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "HL",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IIS",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "QTY",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 5
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopSTS",
+          "name": "LoopSTS",
+          "triggerSegment": "STS",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 6,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "STS",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N1",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

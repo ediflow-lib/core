@@ -1,0 +1,44 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "440",
+  "name": "Shipment Weights",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Shipment Weights Transaction Set (440) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to transmit weights and scale information between any two interested parties.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BW",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G4",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G5",
+      "mandatory": true,
+      "maxOccurrences": 255,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

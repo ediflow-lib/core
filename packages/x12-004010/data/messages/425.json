@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "425",
+  "name": "Rail Waybill Request",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Rail Waybill Request Transaction Set (425) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to request a copy of a revenue or movement waybill from the origin or previous rail carrier. This will be used only when the requesting carrier is unable to locate the original transmission.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopZT",
+      "name": "LoopZT",
+      "triggerSegment": "ZT",
+      "mandatory": true,
+      "maxOccurrences": 255,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ZT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "F9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "D9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

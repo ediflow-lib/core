@@ -1,0 +1,786 @@
+{
+  "code": "157",
+  "name": "Code indicating the status of a shipment",
+  "values": [
+    {
+      "code": "2",
+      "name": "Returned to Carrier's Terminal"
+    },
+    {
+      "code": "3",
+      "name": "Returned to Shipper"
+    },
+    {
+      "code": "A",
+      "name": "Arrived"
+    },
+    {
+      "code": "B",
+      "name": "Bad Order (Inoperative or Damaged)"
+    },
+    {
+      "code": "C",
+      "name": "Estimated To Depart Terminal Location"
+    },
+    {
+      "code": "D",
+      "name": "Completed Unloading at Delivery Location"
+    },
+    {
+      "code": "E",
+      "name": "Estimated to Arrive (En Route)"
+    },
+    {
+      "code": "F",
+      "name": "In Flight"
+    },
+    {
+      "code": "G",
+      "name": "Repaired and/or Released from Bad Order"
+    },
+    {
+      "code": "H",
+      "name": "Equipment Shopped for Heavy Repair"
+    },
+    {
+      "code": "I",
+      "name": "In-Gate"
+    },
+    {
+      "code": "J",
+      "name": "Delivered to Connecting Line"
+    },
+    {
+      "code": "K",
+      "name": "Arrived at Customs"
+    },
+    {
+      "code": "L",
+      "name": "Loading"
+    },
+    {
+      "code": "N",
+      "name": "No Paperwork Received with Shipment or Equipment"
+    },
+    {
+      "code": "O",
+      "name": "Paperwork Received- Did Not Receive Shipment or Equipment"
+    },
+    {
+      "code": "P",
+      "name": "Departed Terminal Location"
+    },
+    {
+      "code": "R",
+      "name": "Received from Prior Carrier"
+    },
+    {
+      "code": "S",
+      "name": "Spotted at Consignee's Location"
+    },
+    {
+      "code": "T",
+      "name": "At Terminal; Intra-Terminal Movement"
+    },
+    {
+      "code": "U",
+      "name": "Unloading"
+    },
+    {
+      "code": "V",
+      "name": "Vessel Rehandle"
+    },
+    {
+      "code": "W",
+      "name": "Released by Customer"
+    },
+    {
+      "code": "X",
+      "name": "Removed from Customer Dock or Siding"
+    },
+    {
+      "code": "Y",
+      "name": "Constructively Placed"
+    },
+    {
+      "code": "Z",
+      "name": "Actually Placed"
+    },
+    {
+      "code": "A1",
+      "name": "Agriculture Canada Hold"
+    },
+    {
+      "code": "A2",
+      "name": "Agriculture Canada Released"
+    },
+    {
+      "code": "A3",
+      "name": "Agriculture Canada Refused Entry"
+    },
+    {
+      "code": "A4",
+      "name": "Agriculture Canada Conditional Release"
+    },
+    {
+      "code": "AA",
+      "name": "Pickup Appointment Date and Time"
+    },
+    {
+      "code": "AC",
+      "name": "Awaiting Clearance"
+    },
+    {
+      "code": "AD",
+      "name": "Delivery Appointment Date and Time"
+    },
+    {
+      "code": "AE",
+      "name": "Loaded on Vessel"
+    },
+    {
+      "code": "AF",
+      "name": "Departed Pickup Location"
+    },
+    {
+      "code": "AG",
+      "name": "Estimated Delivery"
+    },
+    {
+      "code": "AH",
+      "name": "Attempted Delivery"
+    },
+    {
+      "code": "AI",
+      "name": "Shipment Has Been Reconsigned"
+    },
+    {
+      "code": "AJ",
+      "name": "Tendered for Delivery"
+    },
+    {
+      "code": "AL",
+      "name": "Loaded on Rail"
+    },
+    {
+      "code": "AM",
+      "name": "Loaded on Truck"
+    },
+    {
+      "code": "AN",
+      "name": "Delivered to Air Carrier"
+    },
+    {
+      "code": "AO",
+      "name": "Loaded on Barge"
+    },
+    {
+      "code": "AP",
+      "name": "Loaded on Feeder Vessel"
+    },
+    {
+      "code": "AR",
+      "name": "Rail Arrival at Destination Intermodal Ramp"
+    },
+    {
+      "code": "AU",
+      "name": "Shipment Available for Pickup"
+    },
+    {
+      "code": "AV",
+      "name": "Available for Delivery"
+    },
+    {
+      "code": "AW",
+      "name": "Awaiting Export"
+    },
+    {
+      "code": "BA",
+      "name": "Set Off at Agent"
+    },
+    {
+      "code": "BC",
+      "name": "Storage - in - Transit"
+    },
+    {
+      "code": "BD",
+      "name": "Recommitted Delivery Date"
+    },
+    {
+      "code": "BE",
+      "name": "Estimated Time of Arrival at Scheduled Pickup Location"
+    },
+    {
+      "code": "BF",
+      "name": "Booking Confirmed"
+    },
+    {
+      "code": "BO",
+      "name": "Rail Conveying Car Bad Ordered"
+    },
+    {
+      "code": "BR",
+      "name": "Bill of Lading Released"
+    },
+    {
+      "code": "C1",
+      "name": "Canada Customs Hold"
+    },
+    {
+      "code": "C2",
+      "name": "Canada Customs Inspection Scheduled"
+    },
+    {
+      "code": "CA",
+      "name": "Shipment Cancelled"
+    },
+    {
+      "code": "CB",
+      "name": "Chassis Tie"
+    },
+    {
+      "code": "CC",
+      "name": "Chassis Un-Tie"
+    },
+    {
+      "code": "CD",
+      "name": "Received at Origin"
+    },
+    {
+      "code": "CI",
+      "name": "Passing"
+    },
+    {
+      "code": "CO",
+      "name": "Cargo Received at Contractual Place of Receipt"
+    },
+    {
+      "code": "CR",
+      "name": "Carrier Release"
+    },
+    {
+      "code": "CS",
+      "name": "Container Sealed"
+    },
+    {
+      "code": "CT",
+      "name": "Customs Released"
+    },
+    {
+      "code": "CU",
+      "name": "Carrier and Customs Release"
+    },
+    {
+      "code": "CV",
+      "name": "Container Rehandled"
+    },
+    {
+      "code": "DA",
+      "name": "Repair Authorization Requested"
+    },
+    {
+      "code": "DC",
+      "name": "Unit Cleaned"
+    },
+    {
+      "code": "DI",
+      "name": "Delivery Order Issued"
+    },
+    {
+      "code": "DN",
+      "name": "Delivery Not Confirmed"
+    },
+    {
+      "code": "DO",
+      "name": "Destination Stop-off"
+    },
+    {
+      "code": "DP",
+      "name": "Unit Pre-Tripped"
+    },
+    {
+      "code": "DR",
+      "name": "Repair Authorization Received"
+    },
+    {
+      "code": "DS",
+      "name": "Damage Survey Requested"
+    },
+    {
+      "code": "DT",
+      "name": "Damage Survey Completed"
+    },
+    {
+      "code": "EA",
+      "name": "Estimate Approved"
+    },
+    {
+      "code": "EC",
+      "name": "Empty Container Available for Pickup at Consignee Location"
+    },
+    {
+      "code": "ED",
+      "name": "Early Delivery Appointment Date and/or Time"
+    },
+    {
+      "code": "EE",
+      "name": "Empty Equipment Dispatched"
+    },
+    {
+      "code": "EI",
+      "name": "Interchange Information Received"
+    },
+    {
+      "code": "EP",
+      "name": "Early Pickup Appointment Date and/or Time"
+    },
+    {
+      "code": "ER",
+      "name": "Estimate Received"
+    },
+    {
+      "code": "EX",
+      "name": "Export"
+    },
+    {
+      "code": "FD",
+      "name": "Food and Drug Release"
+    },
+    {
+      "code": "FP",
+      "name": "Freight Paid"
+    },
+    {
+      "code": "FT",
+      "name": "Free Time Expired"
+    },
+    {
+      "code": "GI",
+      "name": "Terminal Gate Inspection"
+    },
+    {
+      "code": "GO",
+      "name": "General Order"
+    },
+    {
+      "code": "HA",
+      "name": "Held - Protective Service"
+    },
+    {
+      "code": "HE",
+      "name": "Held-Awaiting Shipper's Export Document"
+    },
+    {
+      "code": "HF",
+      "name": "Held-Awaiting Recount/Weight/Description"
+    },
+    {
+      "code": "HG",
+      "name": "Held on Ground"
+    },
+    {
+      "code": "HH",
+      "name": "Held-No Booking Number"
+    },
+    {
+      "code": "HI",
+      "name": "Held-Title Clearance"
+    },
+    {
+      "code": "HR",
+      "name": "Hold Released"
+    },
+    {
+      "code": "IB",
+      "name": "U.S. Customs and Border Protection (CBP), In-bond Movement Authorized"
+    },
+    {
+      "code": "IM",
+      "name": "Import"
+    },
+    {
+      "code": "IR",
+      "name": "Movement Type Changed from In-bond to Not In-bond"
+    },
+    {
+      "code": "IS",
+      "name": "Ordered Stuffed"
+    },
+    {
+      "code": "IT",
+      "name": "Ordered Stripped"
+    },
+    {
+      "code": "IU",
+      "name": "Confirmed Stuffed"
+    },
+    {
+      "code": "IV",
+      "name": "Confirmed Stripped"
+    },
+    {
+      "code": "IW",
+      "name": "Shopped for Heavy Repair"
+    },
+    {
+      "code": "K3",
+      "name": "Complete Customs Paperwork has been Provided"
+    },
+    {
+      "code": "LD",
+      "name": "Late Delivery Appointment Date and/or Time"
+    },
+    {
+      "code": "LP",
+      "name": "Late Pickup Appointment Date and/or Time"
+    },
+    {
+      "code": "MT",
+      "name": "Empty Committed"
+    },
+    {
+      "code": "NC",
+      "name": "Confirmation of Notification"
+    },
+    {
+      "code": "ND",
+      "name": "Technical Charges Due"
+    },
+    {
+      "code": "NF",
+      "name": "Free Time to Expire"
+    },
+    {
+      "code": "NG",
+      "name": "Non-Gate Inspection"
+    },
+    {
+      "code": "NH",
+      "name": "No Hazardous Material Document Received"
+    },
+    {
+      "code": "NO",
+      "name": "Ocean Charges Paid"
+    },
+    {
+      "code": "NP",
+      "name": "Terminal Charges Paid"
+    },
+    {
+      "code": "NR",
+      "name": "Shipment Information Not Received"
+    },
+    {
+      "code": "NS",
+      "name": "No Seal on Load"
+    },
+    {
+      "code": "NT",
+      "name": "Notification"
+    },
+    {
+      "code": "NU",
+      "name": "Notification Refused"
+    },
+    {
+      "code": "OA",
+      "name": "Out-Gate"
+    },
+    {
+      "code": "OB",
+      "name": "Original Bill of Lading Received"
+    },
+    {
+      "code": "OF",
+      "name": "Off-Hire Container"
+    },
+    {
+      "code": "OH",
+      "name": "On Hand"
+    },
+    {
+      "code": "ON",
+      "name": "On-Hire Container"
+    },
+    {
+      "code": "OP",
+      "name": "All Paperwork has been Provided to Consignee"
+    },
+    {
+      "code": "PA",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Intensive Examination"
+    },
+    {
+      "code": "PB",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Insufficient Paperwork"
+    },
+    {
+      "code": "PC",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Discrepancy in Paperwork"
+    },
+    {
+      "code": "PD",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Discrepancy in Piece Count"
+    },
+    {
+      "code": "PE",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Coast Guard"
+    },
+    {
+      "code": "PF",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by F.B.I."
+    },
+    {
+      "code": "PG",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Local Law Enforcement"
+    },
+    {
+      "code": "PH",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Court Imposed Lien"
+    },
+    {
+      "code": "PI",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Food and Drug"
+    },
+    {
+      "code": "PJ",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Fish and Wildlife"
+    },
+    {
+      "code": "PK",
+      "name": "U.S. Customs and Border Protection (CBP) Hold, Hold by Drug Enforcement"
+    },
+    {
+      "code": "PL",
+      "name": "US Dept. Agr, Hold for Intensive Investigation"
+    },
+    {
+      "code": "PM",
+      "name": "US Dept. Agr, Hold for Unregistered Producer"
+    },
+    {
+      "code": "PN",
+      "name": "US Dept. Agr, Hold for Restricted Commodity"
+    },
+    {
+      "code": "PO",
+      "name": "US Dept. Agr, Hold for Insect Infestation"
+    },
+    {
+      "code": "PP",
+      "name": "US Dept. Agr, Hold for Bacterial Contamination"
+    },
+    {
+      "code": "PQ",
+      "name": "U.S. Customs and Border Protection (CBP) Hold at Place of Vessel Arrival"
+    },
+    {
+      "code": "PR",
+      "name": "U.S. Customs and Border Protection (CBP) Hold at In-Bond Destination"
+    },
+    {
+      "code": "PS",
+      "name": "U.S. Department of Agriculture Hold at Place of Vessel Arrival"
+    },
+    {
+      "code": "PT",
+      "name": "U.S. Department of Agriculture Hold at In-Bond Destination"
+    },
+    {
+      "code": "PU",
+      "name": "Other U.S. Agency Hold at Place of Vessel Arrival"
+    },
+    {
+      "code": "PV",
+      "name": "Other U.S. Agency Hold at In-Bond Destination"
+    },
+    {
+      "code": "PW",
+      "name": "U.S. Department of Agriculture, Hold for Fumigation"
+    },
+    {
+      "code": "PX",
+      "name": "U.S. Department of Agriculture, Hold for Inspection or Documentation Review"
+    },
+    {
+      "code": "RA",
+      "name": "Pickup Appointment Requested"
+    },
+    {
+      "code": "RB",
+      "name": "Delivery Appointment Requested"
+    },
+    {
+      "code": "RC",
+      "name": "Reserve Container Against Booking"
+    },
+    {
+      "code": "RD",
+      "name": "Return Container"
+    },
+    {
+      "code": "RF",
+      "name": "Rail Conveying Car Released from Bad Order"
+    },
+    {
+      "code": "RI",
+      "name": "Movement Type Changed from Not In-bond to In-bond"
+    },
+    {
+      "code": "RL",
+      "name": "Rail Departure from Origin Intermodal Ramp"
+    },
+    {
+      "code": "RN",
+      "name": "Renotification"
+    },
+    {
+      "code": "SA",
+      "name": "Shipment Split"
+    },
+    {
+      "code": "SB",
+      "name": "Shipment Consolidation"
+    },
+    {
+      "code": "SC",
+      "name": "Seals Altered"
+    },
+    {
+      "code": "SD",
+      "name": "Shipment Delayed"
+    },
+    {
+      "code": "SI",
+      "name": "Receipt of Shipping Instructions"
+    },
+    {
+      "code": "SN",
+      "name": "Shipment Not Authorized"
+    },
+    {
+      "code": "SS",
+      "name": "Spotted at Sourcing Location"
+    },
+    {
+      "code": "TC",
+      "name": "Held for Terminal Charges"
+    },
+    {
+      "code": "TM",
+      "name": "Intra-Terminal Movement"
+    },
+    {
+      "code": "TO",
+      "name": "Terminate to Owner"
+    },
+    {
+      "code": "UA",
+      "name": "Unit - Leased to Connecting Line"
+    },
+    {
+      "code": "UB",
+      "name": "Unit - Returned from Connecting Line"
+    },
+    {
+      "code": "UC",
+      "name": "Unit - Shopped Held at Terminal"
+    },
+    {
+      "code": "UD",
+      "name": "Unit - COFC/TOFC Service"
+    },
+    {
+      "code": "UE",
+      "name": "Unit - Pickup/Delivery Service"
+    },
+    {
+      "code": "UP",
+      "name": "Unable to Process Shipment"
+    },
+    {
+      "code": "UR",
+      "name": "Unloaded from a Rail Car"
+    },
+    {
+      "code": "UV",
+      "name": "Unloaded From Vessel"
+    },
+    {
+      "code": "UW",
+      "name": "Intermodal Unit Weighed"
+    },
+    {
+      "code": "VA",
+      "name": "Vessel Arrival"
+    },
+    {
+      "code": "VD",
+      "name": "Vessel Departure"
+    },
+    {
+      "code": "WH",
+      "name": "Weight Too Heavy - Highway"
+    },
+    {
+      "code": "WR",
+      "name": "Weight Too Heavy - Rail"
+    },
+    {
+      "code": "X1",
+      "name": "Arrived at Delivery Location"
+    },
+    {
+      "code": "X2",
+      "name": "Estimated Time of Arrival at Consignee Location"
+    },
+    {
+      "code": "X3",
+      "name": "Arrived at Pickup Location"
+    },
+    {
+      "code": "X4",
+      "name": "Arrived at Terminal Location"
+    },
+    {
+      "code": "X5",
+      "name": "Arrived at Delivery Location Loading Dock"
+    },
+    {
+      "code": "X6",
+      "name": "En Route to Delivery Location"
+    },
+    {
+      "code": "X7",
+      "name": "En Route to Pickup Location"
+    },
+    {
+      "code": "X8",
+      "name": "Arrived at Pickup Location Loading Dock"
+    },
+    {
+      "code": "X9",
+      "name": "Delivery Appointment Secured"
+    },
+    {
+      "code": "XA",
+      "name": "Pickup Appointment Secured"
+    },
+    {
+      "code": "XB",
+      "name": "Shipment Acknowledged"
+    },
+    {
+      "code": "Y1",
+      "name": "Arrived at the Multiple Country Consolidation (MCC) Hub"
+    },
+    {
+      "code": "Y2",
+      "name": "Departure from the Multiple Country Consolidation (MCC) Hub"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "275",
+  "name": "Patient Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Patient Information Transaction Set (275) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to communicate individual patient information requests and patient information (either solicited or unsolicited) between separate health care entities in a variety of settings to be consistent with confidentiality and use requirements. Patient information consists of demographic, clinical, and other supporting data.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "TRN",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopNM1",
+      "name": "LoopNM1",
+      "triggerSegment": "NM1",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "NM1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IN1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DMG",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PRV",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 6
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopNX1",
+          "name": "LoopNX1",
+          "triggerSegment": "NX1",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 7,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "NX1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N3",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopLX",
+      "name": "LoopLX",
+      "triggerSegment": "LX",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "LX",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "NM1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PRV",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 5
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopDTP",
+          "name": "LoopDTP",
+          "triggerSegment": "DTP",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 6,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "DTP",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CAT",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "PID",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopEFI",
+              "name": "LoopEFI",
+              "triggerSegment": "EFI",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 4,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "EFI",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "BIN",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

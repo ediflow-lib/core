@@ -1,5 +1,56 @@
 {
-  "code": "3285",
-  "name": "Recipient of the instruction identification",
-  "values": []
+  "elementCode": "3285",
+  "elementName": "Recipient of the instruction identification",
+  "values": [
+    {
+      "code": "1",
+      "name": "Applicant's bank",
+      "description": "The financial institution which is requested to issue the documentary credit."
+    },
+    {
+      "code": "2",
+      "name": "Issuing bank",
+      "description": "The financial institution which issues the documentary credit, if the applicant's bank is not acting as the issuing bank."
+    },
+    {
+      "code": "3",
+      "name": "Beneficiary's bank",
+      "description": "The financial institution with which the beneficiary maintain an account."
+    },
+    {
+      "code": "4",
+      "name": "Beneficiary",
+      "description": "The party in whose favour the documentary credit is to be issued and the party who must comply with the credit's terms and conditions."
+    },
+    {
+      "code": "5",
+      "name": "Contact party 1",
+      "description": "First party to contact."
+    },
+    {
+      "code": "6",
+      "name": "Contact party 2",
+      "description": "Second party to contact."
+    },
+    {
+      "code": "7",
+      "name": "Contact party 3",
+      "description": "Third party to contact."
+    },
+    {
+      "code": "8",
+      "name": "Contact party 4",
+      "description": "Fourth party to contact."
+    },
+    {
+      "code": "9",
+      "name": "Contact bank 1",
+      "description": "First financial institution to contact."
+    },
+    {
+      "code": "10",
+      "name": "Contact bank 2",
+      "description": "Second financial institution to contact."
+    }
+  ]
 }

@@ -1,0 +1,51 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "125",
+  "name": "Multilevel Railcar Load Details",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Multilevel Railcar Load Details Transaction Set (125) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by the origin rail carrier or loading contractor to report the departure of a multilevel railcar and its contents to the vehicle manufacturer. It is used by the vehicle manufacturer, origin rail carrier, or loading contractor to forward data pertaining to the loaded railcar and its contents to the destination rail carrier or haulaway carrier(s) or both upon departure. It is also used by the destination rail carrier, or unloading contractor to report to the vehicle manufacturer, the arrival of a railcar at the destination rail ramp.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BMM",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N7",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "VC",
+      "mandatory": false,
+      "maxOccurrences": 21,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 6
+    }
+  ]
+}

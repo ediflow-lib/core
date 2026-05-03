@@ -1,0 +1,21 @@
+{
+  "elementCode": "0083",
+  "elementName": "Action, coded",
+  "values": [
+    {
+      "code": "4",
+      "name": "This level and all lower levels rejected",
+      "description": "The corresponding referenced-level and all its lower referenced-levels are rejected. One or more errors are reported at this reporting-level or a lower reporting- level."
+    },
+    {
+      "code": "7",
+      "name": "This level acknowledged, next lower level acknowledged if not explicitly rejected",
+      "description": "The corresponding referenced-level is acknowledged. All messages or functional groups at the next lower referenced-level are acknowledged except those explicitly reported as rejected at the next lower reporting-level in this CONTRL message."
+    },
+    {
+      "code": "8",
+      "name": "Interchange received",
+      "description": "Indication of interchange receipt implies that the recipient of the subject interchange: has received the interchange; and acknowledges the parts of the interchange that have been checked in order to assure that the data elements copied into the reporting UCI segment are syntactically correct; and has accepted liability for notifying the sender of acknowledgement or rejection of the other parts of the interchange; and has taken reasonable precautions in order to ensure that the sender is so notified."
+    }
+  ]
+}

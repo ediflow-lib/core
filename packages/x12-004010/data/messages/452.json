@@ -1,0 +1,58 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "452",
+  "name": "Railroad Problem Log Inquiry or Advice",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Railroad Problem Log Inquiry or Advice Transaction Set (452) for use within the context of an Electronic Data Interchange (EDI) environment.\nThe transaction set can be used in the following ways: (1) for a service provider or sponsor to communicate and register a problem; (2) for a party to a movement event to request information about problem logs created; and (3) to provide problem log data in response to a request.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGP",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "NTE",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

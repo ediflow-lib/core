@@ -1,5 +1,26 @@
 {
-  "code": "3477",
-  "name": "Address format, coded",
-  "values": []
+  "elementCode": "3477",
+  "elementName": "Address format, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Street name followed by number",
+      "description": "Address street name followed by address number."
+    },
+    {
+      "code": "2",
+      "name": "Number, road type, road name in this sequence",
+      "description": "House number followed by type of road and name of the road."
+    },
+    {
+      "code": "3",
+      "name": "Road type, road name, number in this sequence",
+      "description": "Type of the road followed by name of the road and the house number."
+    },
+    {
+      "code": "4",
+      "name": "Post office box",
+      "description": "Post office box."
+    }
+  ]
 }

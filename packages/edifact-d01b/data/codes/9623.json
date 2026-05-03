@@ -1,5 +1,21 @@
 {
-  "code": "9623",
-  "name": "Diagnosis type code",
-  "values": []
+  "elementCode": "9623",
+  "elementName": "Diagnosis type code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Admitting diagnosis",
+      "description": "The type of diagnosis upon admitting."
+    },
+    {
+      "code": "2",
+      "name": "Primary diagnosis",
+      "description": "The primary illness or condition."
+    },
+    {
+      "code": "3",
+      "name": "Secondary diagnosis",
+      "description": "The secondary illness or condition."
+    }
+  ]
 }

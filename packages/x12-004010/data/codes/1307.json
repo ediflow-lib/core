@@ -1,0 +1,762 @@
+{
+  "code": "1307",
+  "name": "Code indicating the loan status",
+  "values": [
+    {
+      "code": "1",
+      "name": "Guaranteed"
+    },
+    {
+      "code": "2",
+      "name": "Guaranteed with Changes"
+    },
+    {
+      "code": "3",
+      "name": "Denied"
+    },
+    {
+      "code": "4",
+      "name": "Rejected"
+    },
+    {
+      "code": "5",
+      "name": "Pending"
+    },
+    {
+      "code": "6",
+      "name": "Disbursed"
+    },
+    {
+      "code": "7",
+      "name": "Grace"
+    },
+    {
+      "code": "8",
+      "name": "Deferred"
+    },
+    {
+      "code": "9",
+      "name": "Forbearance"
+    },
+    {
+      "code": "10",
+      "name": "Preclaim"
+    },
+    {
+      "code": "11",
+      "name": "Claim"
+    },
+    {
+      "code": "12",
+      "name": "Repayment"
+    },
+    {
+      "code": "13",
+      "name": "Paid in Full"
+    },
+    {
+      "code": "14",
+      "name": "Current"
+    },
+    {
+      "code": "15",
+      "name": "Preforeclosure Acceptance Plan Available"
+    },
+    {
+      "code": "16",
+      "name": "Preforeclosure Acceptance Plan Not Available"
+    },
+    {
+      "code": "17",
+      "name": "Preforeclosure Sale Closing Plan Accepted"
+    },
+    {
+      "code": "18",
+      "name": "Preforeclosure Sale Closing Plan Rejected"
+    },
+    {
+      "code": "19",
+      "name": "Partial Reinstatement"
+    },
+    {
+      "code": "1A",
+      "name": "Foreclosure Sale Held"
+    },
+    {
+      "code": "1B",
+      "name": "Foreclosure Sale Confirmed"
+    },
+    {
+      "code": "1C",
+      "name": "Certificate of Title Issued"
+    },
+    {
+      "code": "1D",
+      "name": "Eviction Referral Received"
+    },
+    {
+      "code": "1E",
+      "name": "Eviction Started"
+    },
+    {
+      "code": "1F",
+      "name": "Eviction Scheduled"
+    },
+    {
+      "code": "1G",
+      "name": "Eviction Completed"
+    },
+    {
+      "code": "1H",
+      "name": "Title Package Submitted"
+    },
+    {
+      "code": "1J",
+      "name": "Attorney File Closed"
+    },
+    {
+      "code": "1K",
+      "name": "Bankruptcy Referral Received"
+    },
+    {
+      "code": "1L",
+      "name": "Proof Claim Filing Expires"
+    },
+    {
+      "code": "1M",
+      "name": "Proof of Claim Filed"
+    },
+    {
+      "code": "1N",
+      "name": "Petition Sent"
+    },
+    {
+      "code": "1P",
+      "name": "Creditors Meeting"
+    },
+    {
+      "code": "1Q",
+      "name": "Motion to Lift Bankruptcy Stay Filed"
+    },
+    {
+      "code": "1R",
+      "name": "Preliminary Hearing for Motion to Lift Bankruptcy Stay"
+    },
+    {
+      "code": "1S",
+      "name": "Final Hearing for Motion to Lift Bankruptcy Stay"
+    },
+    {
+      "code": "1T",
+      "name": "Bankruptcy Discharge Hearing"
+    },
+    {
+      "code": "1U",
+      "name": "Bankruptcy Discharge Entered"
+    },
+    {
+      "code": "1V",
+      "name": "Adequate Protection Granted"
+    },
+    {
+      "code": "1W",
+      "name": "Trustee's No Asset Report Filed"
+    },
+    {
+      "code": "1X",
+      "name": "Trustee's Abandonment Requested"
+    },
+    {
+      "code": "1Y",
+      "name": "Court File Closed"
+    },
+    {
+      "code": "1Z",
+      "name": "Case Dismissed"
+    },
+    {
+      "code": "20",
+      "name": "Reinstated by Mortgagor Who Retains Ownership"
+    },
+    {
+      "code": "21",
+      "name": "Reinstated by Assumptor"
+    },
+    {
+      "code": "22",
+      "name": "Servicing Transferred or Sold to Another Mortgagee"
+    },
+    {
+      "code": "23",
+      "name": "Sold"
+    },
+    {
+      "code": "24",
+      "name": "Government Seizure"
+    },
+    {
+      "code": "25",
+      "name": "Cancel"
+    },
+    {
+      "code": "26",
+      "name": "Refinance"
+    },
+    {
+      "code": "27",
+      "name": "Assumption"
+    },
+    {
+      "code": "28",
+      "name": "Modification"
+    },
+    {
+      "code": "29",
+      "name": "Charge-off"
+    },
+    {
+      "code": "2A",
+      "name": "Reaffirmation Hearing"
+    },
+    {
+      "code": "2B",
+      "name": "Reaffirmation Agreement Approved"
+    },
+    {
+      "code": "2C",
+      "name": "Bankruptcy Schedules Reviewed"
+    },
+    {
+      "code": "2D",
+      "name": "Bankruptcy Schedules Sent"
+    },
+    {
+      "code": "2E",
+      "name": "Bankruptcy Confirmation Hearing"
+    },
+    {
+      "code": "2F",
+      "name": "Bankruptcy Objection Filed"
+    },
+    {
+      "code": "2G",
+      "name": "Hearing on Bankruptcy Objection to Confirmation"
+    },
+    {
+      "code": "2H",
+      "name": "Plan and Disclosure Statement Filed"
+    },
+    {
+      "code": "2I",
+      "name": "Hearing on Disclosure Statement"
+    },
+    {
+      "code": "2J",
+      "name": "Ballot Expires"
+    },
+    {
+      "code": "2K",
+      "name": "Motion to Dismiss Bankruptcy Filed"
+    },
+    {
+      "code": "2L",
+      "name": "Contested Bankruptcy"
+    },
+    {
+      "code": "2M",
+      "name": "Deed in Lieu Referral Received"
+    },
+    {
+      "code": "2N",
+      "name": "Deed in Lieu Documents Sent to Borrower"
+    },
+    {
+      "code": "2P",
+      "name": "Deed in Lieu Documents Executed by Borrower"
+    },
+    {
+      "code": "2Q",
+      "name": "Deed in Lieu Documents Received from Borrower"
+    },
+    {
+      "code": "2R",
+      "name": "Deed in Lieu Documents Sent for Recording"
+    },
+    {
+      "code": "2S",
+      "name": "Deed in Lieu Title Package Sent"
+    },
+    {
+      "code": "2U",
+      "name": "Veterans Affairs Notice of Default Sent (VA 6850)"
+    },
+    {
+      "code": "2V",
+      "name": "Veterans Affairs Intention to Foreclose Sent (VA 6851)"
+    },
+    {
+      "code": "2W",
+      "name": "Veterans Affairs Notice of Election to Convey Sent"
+    },
+    {
+      "code": "2X",
+      "name": "Sale of Converted Adjustable Rate Mortgage"
+    },
+    {
+      "code": "2Y",
+      "name": "Resale of Converted Adjustable Rate Mortgage"
+    },
+    {
+      "code": "2Z",
+      "name": "Foreclosure Status Reset"
+    },
+    {
+      "code": "30",
+      "name": "Third Party Sale"
+    },
+    {
+      "code": "31",
+      "name": "Probate"
+    },
+    {
+      "code": "32",
+      "name": "Military Indulgence"
+    },
+    {
+      "code": "33",
+      "name": "Contested Foreclosure"
+    },
+    {
+      "code": "34",
+      "name": "Natural Disaster"
+    },
+    {
+      "code": "35",
+      "name": "Expiration of Redemption"
+    },
+    {
+      "code": "36",
+      "name": "Preclaim - Skip"
+    },
+    {
+      "code": "37",
+      "name": "Preclaim - Past Due Repayment"
+    },
+    {
+      "code": "38",
+      "name": "Preclaim - Failure to Pay Interest"
+    },
+    {
+      "code": "39",
+      "name": "Preclaim - Enrolled"
+    },
+    {
+      "code": "3A",
+      "name": "Reinstated or Modified - Not Reassigned to Mortgage Registrar"
+    },
+    {
+      "code": "3B",
+      "name": "Pre-qualification"
+    },
+    {
+      "code": "3C",
+      "name": "Application"
+    },
+    {
+      "code": "3D",
+      "name": "Processing"
+    },
+    {
+      "code": "3E",
+      "name": "Underwriting"
+    },
+    {
+      "code": "3F",
+      "name": "Document Preparation"
+    },
+    {
+      "code": "3G",
+      "name": "Loan Closing"
+    },
+    {
+      "code": "3H",
+      "name": "Funding"
+    },
+    {
+      "code": "3I",
+      "name": "Quality Control"
+    },
+    {
+      "code": "3J",
+      "name": "Loan Delivery"
+    },
+    {
+      "code": "3K",
+      "name": "Insuring"
+    },
+    {
+      "code": "40",
+      "name": "Preclaim - Ineligible Borrower"
+    },
+    {
+      "code": "41",
+      "name": "Supplemental Preclaim"
+    },
+    {
+      "code": "42",
+      "name": "Delinquent"
+    },
+    {
+      "code": "43",
+      "name": "Foreclosure Started"
+    },
+    {
+      "code": "44",
+      "name": "Deed-in-Lieu Started"
+    },
+    {
+      "code": "45",
+      "name": "Foreclosure Completed"
+    },
+    {
+      "code": "46",
+      "name": "Property Conveyed to Insurer"
+    },
+    {
+      "code": "47",
+      "name": "Deed-in-Lieu Completed"
+    },
+    {
+      "code": "48",
+      "name": "Claims without Conveyance of Title"
+    },
+    {
+      "code": "49",
+      "name": "Assignment Completed"
+    },
+    {
+      "code": "50",
+      "name": "Claim Paid"
+    },
+    {
+      "code": "51",
+      "name": "Claim - Closed School"
+    },
+    {
+      "code": "52",
+      "name": "Claim - False Certification"
+    },
+    {
+      "code": "53",
+      "name": "Claim - Non-payment"
+    },
+    {
+      "code": "54",
+      "name": "Claim - Ineligible Borrower"
+    },
+    {
+      "code": "55",
+      "name": "Claim - Death"
+    },
+    {
+      "code": "56",
+      "name": "Claim - Disability"
+    },
+    {
+      "code": "57",
+      "name": "Foreclosure Pending - Assigned to Servicer"
+    },
+    {
+      "code": "58",
+      "name": "Foreclosure Pending - Retained by Mortgage Registrar"
+    },
+    {
+      "code": "59",
+      "name": "Chapter 12 Bankruptcy"
+    },
+    {
+      "code": "60",
+      "name": "Reinstated or Modified - Reassigned to Mortgage Registrar"
+    },
+    {
+      "code": "61",
+      "name": "Second Lien Considerations"
+    },
+    {
+      "code": "62",
+      "name": "Veterans Affairs -- No Bid"
+    },
+    {
+      "code": "63",
+      "name": "Veterans Affairs -- Refund"
+    },
+    {
+      "code": "64",
+      "name": "Veterans Affairs -- Buydown"
+    },
+    {
+      "code": "65",
+      "name": "Chapter 7 Bankruptcy"
+    },
+    {
+      "code": "66",
+      "name": "Chapter 11 Bankruptcy"
+    },
+    {
+      "code": "67",
+      "name": "Chapter 13 Bankruptcy"
+    },
+    {
+      "code": "68",
+      "name": "First Legal Action to Commence Foreclosure"
+    },
+    {
+      "code": "69",
+      "name": "Bankruptcy Plan Confirmed"
+    },
+    {
+      "code": "70",
+      "name": "Order Lifting Bankruptcy Stay Entered"
+    },
+    {
+      "code": "71",
+      "name": "Foreclosure Sale Scheduled"
+    },
+    {
+      "code": "72",
+      "name": "Redemption or Confirmation Post Sale Ended"
+    },
+    {
+      "code": "73",
+      "name": "Property Redeemed"
+    },
+    {
+      "code": "74",
+      "name": "Broker's Price Opinion or Appraisal Obtained"
+    },
+    {
+      "code": "75",
+      "name": "No Delinquencies to Report"
+    },
+    {
+      "code": "76",
+      "name": "Bankruptcy Court Clearance Obtained"
+    },
+    {
+      "code": "77",
+      "name": "Deed Recorded"
+    },
+    {
+      "code": "78",
+      "name": "State Housing Assistance Program"
+    },
+    {
+      "code": "79",
+      "name": "Foreclosure File Received by Attorney"
+    },
+    {
+      "code": "80",
+      "name": "Breach Letter Sent"
+    },
+    {
+      "code": "81",
+      "name": "Breach Letter Expired"
+    },
+    {
+      "code": "82",
+      "name": "Service By Publication"
+    },
+    {
+      "code": "83",
+      "name": "Service Completed"
+    },
+    {
+      "code": "84",
+      "name": "Hearing Scheduled"
+    },
+    {
+      "code": "85",
+      "name": "Department of Housing and Urban Development Occupancy Letter Sent"
+    },
+    {
+      "code": "86",
+      "name": "Title Search Ordered"
+    },
+    {
+      "code": "87",
+      "name": "Power of Attorney or Substitute of Trustee Recorded"
+    },
+    {
+      "code": "88",
+      "name": "Appraisal Ordered"
+    },
+    {
+      "code": "89",
+      "name": "Veterans Affairs Holder's Statement of Account Sent (VA 567)"
+    },
+    {
+      "code": "90",
+      "name": "Notice of Election and Demand Recorded"
+    },
+    {
+      "code": "91",
+      "name": "Default Entered"
+    },
+    {
+      "code": "92",
+      "name": "Hearing Held"
+    },
+    {
+      "code": "93",
+      "name": "Writ of Seizure Issued"
+    },
+    {
+      "code": "94",
+      "name": "Judgment or Decree Entered"
+    },
+    {
+      "code": "95",
+      "name": "Foreclosure Sale Continued"
+    },
+    {
+      "code": "96",
+      "name": "Foreclosure Publication Commenced"
+    },
+    {
+      "code": "97",
+      "name": "Redemption Pre-sale Expired"
+    },
+    {
+      "code": "98",
+      "name": "Reinstatement Funds Received"
+    },
+    {
+      "code": "99",
+      "name": "Payoff Funds Received by Attorney"
+    },
+    {
+      "code": "AA",
+      "name": "Conversion"
+    },
+    {
+      "code": "AB",
+      "name": "Received Transmission From School"
+    },
+    {
+      "code": "AC",
+      "name": "Received Application and Promissory Note"
+    },
+    {
+      "code": "AD",
+      "name": "Received Application, Awaiting Promissory Note"
+    },
+    {
+      "code": "AE",
+      "name": "Processing for Submission to Guarantor"
+    },
+    {
+      "code": "AF",
+      "name": "Submitted to Guarantor"
+    },
+    {
+      "code": "AG",
+      "name": "Awaiting Credit Approval"
+    },
+    {
+      "code": "AH",
+      "name": "Credit Approved"
+    },
+    {
+      "code": "AI",
+      "name": "Approved by Guarantor"
+    },
+    {
+      "code": "AJ",
+      "name": "Awaiting First Disbursement"
+    },
+    {
+      "code": "AK",
+      "name": "Application and Promissory Note have been Printed and Mailed"
+    },
+    {
+      "code": "AL",
+      "name": "Reprint Request has been Denied"
+    },
+    {
+      "code": "AM",
+      "name": "Servicing"
+    },
+    {
+      "code": "AN",
+      "name": "Reduced Disbursement Amount"
+    },
+    {
+      "code": "AO",
+      "name": "Rejected by Lender"
+    },
+    {
+      "code": "AP",
+      "name": "Rejected by Guarantor"
+    },
+    {
+      "code": "AQ",
+      "name": "Rejected Due to Processing Problems"
+    },
+    {
+      "code": "AR",
+      "name": "Completing Telephone Follow-up to Resolve Problems"
+    },
+    {
+      "code": "AS",
+      "name": "Holding While Resolving Outstanding Problems"
+    },
+    {
+      "code": "AT",
+      "name": "Reprocessing"
+    },
+    {
+      "code": "AU",
+      "name": "Terminated"
+    },
+    {
+      "code": "AV",
+      "name": "Performing Exception Processing"
+    },
+    {
+      "code": "AW",
+      "name": "First Right Party Contact with Delinquent Borrower Completed"
+    },
+    {
+      "code": "AX",
+      "name": "Last Right Party Contact with Delinquent Borrower Completed"
+    },
+    {
+      "code": "AY",
+      "name": "Property Securing the Loan is Listed For Sale"
+    },
+    {
+      "code": "BA",
+      "name": "Foreclosure Resumed"
+    },
+    {
+      "code": "BB",
+      "name": "Foreclosure Sale Requested"
+    },
+    {
+      "code": "BC",
+      "name": "Promise to Pay Broken"
+    },
+    {
+      "code": "BD",
+      "name": "Promise to Pay Made"
+    },
+    {
+      "code": "ZA",
+      "name": "Title Search Received"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

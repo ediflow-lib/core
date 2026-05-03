@@ -1,0 +1,86 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "128",
+  "name": "Dealer Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Dealer Information Transaction Set (128) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by the shipper to notify carriers of the establishment of a new \"Ship To\" Location (e.g. Retail Dealer, Drop Ship Point, or Body Vendor) or profile change to an existing \"Ship To\" Location in the carrier's area of service.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N2",
+      "mandatory": false,
+      "maxOccurrences": 99,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N3",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N4",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DN",
+      "mandatory": false,
+      "maxOccurrences": 7,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "R9",
+      "mandatory": false,
+      "maxOccurrences": 50,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DH",
+      "mandatory": false,
+      "maxOccurrences": 28,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PER",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "K1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 11
+    }
+  ]
+}

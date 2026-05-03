@@ -1,5 +1,51 @@
 {
-  "code": "1049",
-  "name": "Message section code",
-  "values": []
+  "elementCode": "1049",
+  "elementName": "Message section code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Heading section",
+      "description": "The section of the message being referenced is the header."
+    },
+    {
+      "code": "2",
+      "name": "Detail section",
+      "description": "The section of the message being referenced is the detail."
+    },
+    {
+      "code": "5",
+      "name": "Multiple sections",
+      "description": "Multiple sections of the message are being referenced."
+    },
+    {
+      "code": "6",
+      "name": "Summary section",
+      "description": "The section of the message being referenced is the summary."
+    },
+    {
+      "code": "7",
+      "name": "Sub-line item",
+      "description": "The section of the message being referenced refers to the sub-line item."
+    },
+    {
+      "code": "8",
+      "name": "Commercial heading section of CUSDEC",
+      "description": "Group 7 to 14 of CUSDEC message."
+    },
+    {
+      "code": "9",
+      "name": "Commercial line detail section of CUSDEC",
+      "description": "Group 15 to 22 of CUSDEC message."
+    },
+    {
+      "code": "10",
+      "name": "Customs item detail section of CUSDEC",
+      "description": "Group 23 to 33 of CUSDEC message."
+    },
+    {
+      "code": "11",
+      "name": "Customs sub-item detail section of CUSDEC",
+      "description": "Group 34 and 35 of CUSDEC message."
+    }
+  ]
 }

@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "425",
+  "name": "Rail Waybill Request",
+  "description": "Rail Waybill Request",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopZT",
+      "name": "LoopZT",
+      "triggerSegment": "ZT",
+      "mandatory": true,
+      "maxOccurrences": 255,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ZT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "F9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "D9",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

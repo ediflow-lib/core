@@ -1,0 +1,200 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "412",
+  "name": "Trailer or Container Repair Billing",
+  "description": "Trailer or Container Repair Billing",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "R11",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CUR",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopN1",
+      "name": "LoopN1",
+      "triggerSegment": "N1",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR12",
+      "name": "LoopR12",
+      "triggerSegment": "R12",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 7,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R12",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "AMT",
+          "mandatory": true,
+          "maxOccurrences": 6,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 4
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN1",
+          "name": "LoopN1",
+          "triggerSegment": "N1",
+          "mandatory": true,
+          "maxOccurrences": 4,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N1",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N3",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopR13",
+          "name": "LoopR13",
+          "triggerSegment": "R13",
+          "mandatory": true,
+          "maxOccurrences": 50,
+          "position": 6,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "R13",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "IT1",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "AMT",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

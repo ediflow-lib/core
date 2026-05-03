@@ -3,7 +3,6 @@ export { ITokenizer } from './ITokenizer';
 export { ISegmentParser } from './ISegmentParser';
 export { IParser } from './IParser';
 export { IMessageParser } from './IMessageParser';
-export { IDefinitionLoader } from './IDefinitionLoader';
 export { IMessageStructureRepository } from './IMessageStructureRepository';
 export {
   IMessageBuilder,

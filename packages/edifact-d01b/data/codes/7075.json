@@ -1,5 +1,31 @@
 {
-  "code": "7075",
-  "name": "Packaging level code",
-  "values": []
+  "elementCode": "7075",
+  "elementName": "Packaging level code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Inner",
+      "description": "Level of packing, if it exists, that is immediately subordinate to the intermediate packaging level."
+    },
+    {
+      "code": "2",
+      "name": "Intermediate",
+      "description": "Level of packaging, if it exists, that is immediately subordinate to the outer packaging level."
+    },
+    {
+      "code": "3",
+      "name": "Outer",
+      "description": "For packed merchandise, outermost level of packaging for a shipment."
+    },
+    {
+      "code": "4",
+      "name": "No packaging hierarchy",
+      "description": "There is no specifiable level of packaging: packaging is inner and outer level as well."
+    },
+    {
+      "code": "5",
+      "name": "Shipment level",
+      "description": "The packaging level being described is the shipment level."
+    }
+  ]
 }

@@ -1,0 +1,221 @@
+{
+  "elementCode": "0085",
+  "elementName": "Syntax error, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "UNA not supported",
+      "description": "Notification that the UNA character string cannot be understood or complied with."
+    },
+    {
+      "code": "2",
+      "name": "Syntax version or level not supported",
+      "description": "Notification that the syntax version and/or level is not supported by the recipient."
+    },
+    {
+      "code": "3",
+      "name": "Message version/release not supported",
+      "description": "Notification that the message type, version number and/or release number in the UNG and/or UNH segments are not supported by the recipient."
+    },
+    {
+      "code": "4",
+      "name": "Service segment missing/invalid",
+      "description": "Notification that a service segment is missing, contains invalid data or cannot be processed for any reason."
+    },
+    {
+      "code": "5",
+      "name": "Trailer check in error",
+      "description": "Notification that data contained in the trailer does not agree with data in the header and/or that the functional group or message or segment count is incorrect."
+    },
+    {
+      "code": "6",
+      "name": "Data segment missing/invalid",
+      "description": "Notification that a data segment is missing, contains invalid data or cannot be processed for any reason."
+    },
+    {
+      "code": "7",
+      "name": "Interchange recipient not actual recipient",
+      "description": "Notification that the Interchange recipient (S003) is different from the actual recipient."
+    },
+    {
+      "code": "8",
+      "name": "Too many data elements in segment",
+      "description": "Indication that a data segment contains too many data elements."
+    },
+    {
+      "code": "9",
+      "name": "Mandatory data element missing",
+      "description": "Indication that a mandatory data element is missing in a service or data segment."
+    },
+    {
+      "code": "10",
+      "name": "Data element attribute error",
+      "description": "Indication that a data element does not conform to the relevant message or segment specification."
+    },
+    {
+      "code": "11",
+      "name": "Password invalid",
+      "description": "Indication that the password in segment UNB is invalid."
+    },
+    {
+      "code": "12",
+      "name": "Invalid value",
+      "description": "Notification that the value of a simple data element, composite data element or component data element does not conform to the relevant specifications for the value."
+    },
+    {
+      "code": "13",
+      "name": "Missing",
+      "description": "Notification that a mandatory (or otherwise required) service or user segment, data element, composite data element or component data element is missing"
+    },
+    {
+      "code": "14",
+      "name": "Value not supported in this position",
+      "description": "Notification that the recipient does not support use of the specific value of an identified simple data element, composite data element or component data element in the position where it is used. The value may be valid according to the relevant specifications and may be supported if it is used in another position."
+    },
+    {
+      "code": "15",
+      "name": "Not supported in this position",
+      "description": "Notification that the recipient does not support use of the segment type, simple data element type, composite data element type or component data element type in the specific in the identified position."
+    },
+    {
+      "code": "16",
+      "name": "Too many constituents",
+      "description": "Notification that the identified segment contained to many data elements or that the identified composite data element contained too many component data elements."
+    },
+    {
+      "code": "17",
+      "name": "No agreement",
+      "description": "No agreement exist that allows receipt of an interchange, functional group or message with the value of the identified simple data element, composite data element or component data element."
+    },
+    {
+      "code": "18",
+      "name": "Unspecified error",
+      "description": "Notification that an error has been identified, but the nature of the error is not reported."
+    },
+    {
+      "code": "19",
+      "name": "Invalid decimal notation",
+      "description": "Notification that the character indicated as decimal notation in UNA is invalid, or the decimal notation used in a data element is not consistent with the one indicated in UNA."
+    },
+    {
+      "code": "20",
+      "name": "Character invalid as service character",
+      "description": "Notification that a character advised in UNA is invalid as service character."
+    },
+    {
+      "code": "21",
+      "name": "Invalid character(s)",
+      "description": "Notification that one or more character(s) used in the interchange is not a valid character as defined by the syntax level indicated in UNB. The invalid character is part of the referenced-level, or followed immediately after the identified part of the interchange."
+    },
+    {
+      "code": "22",
+      "name": "Invalid service character(s)",
+      "description": "Notification that the service character(s) used in the interchange is not a valid service character as advised in UNA or not one of the service characters in the syntax level indicated in UNB or defined in an interchange agreement. If the code is used in UCS or UCD, the invalid character followed immediately after the identified part of the interchange."
+    },
+    {
+      "code": "23",
+      "name": "Unknown Interchange sender",
+      "description": "Notification that the Interchange sender (S002) is unknown."
+    },
+    {
+      "code": "24",
+      "name": "Too old",
+      "description": "Notification that the received interchange or functional group is older than a limit specified in an IA or determined by the recipient."
+    },
+    {
+      "code": "25",
+      "name": "Test indicator not supported",
+      "description": "Notification that a test processing could not be performed for the identified interchange, functional group or message."
+    },
+    {
+      "code": "26",
+      "name": "Duplicate detected",
+      "description": "Notification that a possible duplication of a previously received interchange, functional group or message has been detected. The earlier transmission may have been rejected."
+    },
+    {
+      "code": "27",
+      "name": "Security function not supported",
+      "description": "Notification that a security function related to the referenced-level or data element is not supported."
+    },
+    {
+      "code": "28",
+      "name": "References do not match",
+      "description": "Notification that the control reference in UNB/UNG/UNH does not match the one in UNZ/UNE/UNT."
+    },
+    {
+      "code": "29",
+      "name": "Control count does not match number of instances received",
+      "description": "Notification that the number of functional groups/ messages/segments does not match the number given in UNZ/UNE/UNT."
+    },
+    {
+      "code": "30",
+      "name": "Functional groups and messages mixed",
+      "description": "Notification that individual messages and functional groups have been mixed at the same level in the interchange."
+    },
+    {
+      "code": "31",
+      "name": "More than one message type in group",
+      "description": "Notification that different message types are contained in a functional group."
+    },
+    {
+      "code": "32",
+      "name": "Lower level empty",
+      "description": "Notification that the interchange did not contain any messages or functional groups, or a functional group did not contain any messages."
+    },
+    {
+      "code": "33",
+      "name": "Invalid occurrence outside message or functional group",
+      "description": "Notification that an invalid segment or data element occurred in the interchange, between messages or between functional groups. Rejection is reported at the level above."
+    },
+    {
+      "code": "34",
+      "name": "Nesting indicator not allowed",
+      "description": "Notification that explicit nesting has been used in a message where it shall not be used."
+    },
+    {
+      "code": "35",
+      "name": "Too many segment repetitions",
+      "description": "Notification that a segment was repeated too many times."
+    },
+    {
+      "code": "36",
+      "name": "Too many segment group repetitions",
+      "description": "Notification that a segment group is repeated to many times."
+    },
+    {
+      "code": "37",
+      "name": "Invalid type of character(s)",
+      "description": "Notification that one or more numeric characters were used in an alphabetic (component) data element or that one or more alphabetic characters were used in a numeric (component) data element."
+    },
+    {
+      "code": "38",
+      "name": "Missing digit in front of decimal sign",
+      "description": "Notification that a decimal sign is not preceded by one or more digits."
+    },
+    {
+      "code": "39",
+      "name": "Data element too long",
+      "description": "Notification that the length of the data element received exceeded the maximum length specified in the data element description."
+    },
+    {
+      "code": "40",
+      "name": "Data element too short",
+      "description": "Notification that the length of the data element received is shorter than the minimum length specified in the data element description."
+    },
+    {
+      "code": "41",
+      "name": "Permanent communication network error",
+      "description": "Notification that a permanent error was reported by the communication network used for transfer of the interchange. Re-transmission of an identical interchange with the same parameters at network level will not succeed."
+    },
+    {
+      "code": "42",
+      "name": "Temporary communication network error",
+      "description": "Notification that a temporary error was reported by the communication network used for transfer of the interchange. Re-transmissions of an identical interchange may succeed."
+    },
+    {
+      "code": "43",
+      "name": "Unknown interchange recipient",
+      "description": "Notification that the interchange recipient is not known by a network provider."
+    }
+  ]
+}

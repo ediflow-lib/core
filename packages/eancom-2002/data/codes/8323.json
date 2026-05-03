@@ -1,0 +1,29 @@
+{
+  "elementCode": "8323",
+  "elementName": "Transport movement code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Export"
+    },
+    {
+      "code": "2",
+      "name": "Import"
+    },
+    {
+      "code": "3",
+      "name": "Transit",
+      "description": "The cargo is moving in transit through a country and will not become part of the commerce of that country."
+    },
+    {
+      "code": "4",
+      "name": "Relay",
+      "description": "The cargo is being moved by more than one transport means in succession under the responsibility of the same carrier."
+    },
+    {
+      "code": "5",
+      "name": "Transshipment",
+      "description": "The cargo is being moved by more than one transport means in succession."
+    }
+  ]
+}

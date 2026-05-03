@@ -1,0 +1,22 @@
+{
+  "code": "I13",
+  "name": "Code indicating sender's request for an interchange acknowledgment",
+  "values": [
+    {
+      "code": "0",
+      "name": "No Interchange Acknowledgment Requested"
+    },
+    {
+      "code": "1",
+      "name": "Interchange Acknowledgment Requested (TA1)"
+    },
+    {
+      "code": "2",
+      "name": "Interchange Acknowledgment Requested only when Interchange is \"Rejected Because Of Errors\""
+    },
+    {
+      "code": "3",
+      "name": "Interchange Acknowledgment Requested only when Interchange is \"Rejected Because Of Errors\" or \"Accepted but Errors are Noted\""
+    }
+  ]
+}

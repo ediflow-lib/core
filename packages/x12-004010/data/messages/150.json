@@ -1,0 +1,236 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "150",
+  "name": "Tax Rate Notification",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Tax Rate Notification Transaction Set (150) for use within an Electronic Data Interchange (EDI) environment. This transaction set can be used by taxing authorities to electronically transmit information concerning tax rates.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N2",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N3",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N4",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PER",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 8
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopTFS",
+      "name": "LoopTFS",
+      "triggerSegment": "TFS",
+      "mandatory": true,
+      "maxOccurrences": 1000,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "TFS",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTP",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopTRS",
+          "name": "LoopTRS",
+          "triggerSegment": "TRS",
+          "mandatory": true,
+          "maxOccurrences": 100000,
+          "position": 3,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "TRS",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "AMT",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 3
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopN1",
+              "name": "LoopN1",
+              "triggerSegment": "N1",
+              "mandatory": false,
+              "maxOccurrences": 1000,
+              "position": 4,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "N1",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "DTP",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopFGS",
+          "name": "LoopFGS",
+          "triggerSegment": "FGS",
+          "mandatory": true,
+          "maxOccurrences": 1000,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "FGS",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "DTP",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopTRS",
+              "name": "LoopTRS",
+              "triggerSegment": "TRS",
+              "mandatory": true,
+              "maxOccurrences": 100000,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "TRS",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "AMT",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "QTY",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segmentGroup",
+                  "id": "LoopN1",
+                  "name": "LoopN1",
+                  "triggerSegment": "N1",
+                  "mandatory": false,
+                  "maxOccurrences": 1000,
+                  "position": 4,
+                  "structure": [
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "N1",
+                      "mandatory": true,
+                      "maxOccurrences": 1,
+                      "position": 1
+                    },
+                    {
+                      "nodeType": "segment",
+                      "segmentRef": "DTP",
+                      "mandatory": false,
+                      "maxOccurrences": 1,
+                      "position": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    }
+  ]
+}

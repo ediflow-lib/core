@@ -1,0 +1,177 @@
+{
+    "messageType":  "850",
+    "standard":  "X12",
+    "version":  "004010",
+    "data":  {
+                 "transactionSetHeader":  {
+                                              "transactionSetIdentifierCode":  "850",
+                                              "transactionSetControlNumber":  "0001"
+                                          },
+                 "beginningSegmentForPurchaseOrder":  {
+                                                          "transactionSetPurposeCode":  "00",
+                                                          "purchaseOrderTypeCode":  "SA",
+                                                          "purchaseOrderNumber":  "PO123456",
+                                                          "releaseNumber":  "",
+                                                          "date":  "20260204"
+                                                      },
+                 "referenceIdentification":  {
+                                                 "referenceIdentificationQualifier":  "DP",
+                                                 "referenceIdentification":  "DEPT001"
+                                             },
+                 "loopSac":  [
+
+                             ],
+                 "dateTimeReference":  {
+                                           "dateTimeQualifier":  "002",
+                                           "date":  "20260210"
+                                       },
+                 "loopAmt":  [
+
+                             ],
+                 "loopN9":  [
+
+                            ],
+                 "loopN1":  [
+                                {
+                                    "name":  {
+                                                 "entityIdentifierCode":  "BY",
+                                                 "name":  "ACME Corporation",
+                                                 "identificationCodeQualifier":  "92",
+                                                 "identificationCode":  "BUYER123"
+                                             },
+                                    "addressInformation":  {
+                                                               "addressInformation":  "123 Main Street"
+                                                           },
+                                    "geographicLocation":  {
+                                                               "cityName":  "New York",
+                                                               "stateOrProvinceCode":  "NY",
+                                                               "postalCode":  "10001"
+                                                           }
+                                },
+                                {
+                                    "name":  {
+                                                 "entityIdentifierCode":  "SE",
+                                                 "name":  "Best Supplier Inc",
+                                                 "identificationCodeQualifier":  "92",
+                                                 "identificationCode":  "SUPP456"
+                                             }
+                                }
+                            ],
+                 "loopLm":  [
+
+                            ],
+                 "loopSpi":  [
+
+                             ],
+                 "loopAdv":  [
+
+                             ],
+                 "loopPo1":  [
+                                 {
+                                     "baselineItemData":  {
+                                                              "assignedIdentification":  "1",
+                                                              "quantityOrdered":  "100",
+                                                              "unitOrBasisForMeasurementCode":  "EA",
+                                                              "unitPrice":  "10.50",
+                                                              "basisOfUnitPriceCode":  "PE",
+                                                              "productServiceIdQualifier":  "BP",
+                                                              "productServiceId":  "WIDGET-A"
+                                                          },
+                                     "loopCtp":  [
+
+                                                 ],
+                                     "loopPid":  [
+
+                                                 ],
+                                     "loopSac":  [
+
+                                                 ],
+                                     "loopQty":  [
+
+                                                 ],
+                                     "loopSch":  [
+
+                                                 ],
+                                     "loopPkg":  [
+
+                                                 ],
+                                     "loopLdt":  [
+
+                                                 ],
+                                     "loopN9":  [
+
+                                                ],
+                                     "loopN1":  [
+
+                                                ],
+                                     "loopSln":  [
+
+                                                 ],
+                                     "loopAmt":  [
+
+                                                 ],
+                                     "loopLm":  [
+
+                                                ]
+                                 },
+                                 {
+                                     "baselineItemData":  {
+                                                              "assignedIdentification":  "2",
+                                                              "quantityOrdered":  "50",
+                                                              "unitOrBasisForMeasurementCode":  "EA",
+                                                              "unitPrice":  "25.00",
+                                                              "basisOfUnitPriceCode":  "PE",
+                                                              "productServiceIdQualifier":  "BP",
+                                                              "productServiceId":  "GADGET-B"
+                                                          },
+                                     "loopCtp":  [
+
+                                                 ],
+                                     "loopPid":  [
+
+                                                 ],
+                                     "loopSac":  [
+
+                                                 ],
+                                     "loopQty":  [
+
+                                                 ],
+                                     "loopSch":  [
+
+                                                 ],
+                                     "loopPkg":  [
+
+                                                 ],
+                                     "loopLdt":  [
+
+                                                 ],
+                                     "loopN9":  [
+
+                                                ],
+                                     "loopN1":  [
+
+                                                ],
+                                     "loopSln":  [
+
+                                                 ],
+                                     "loopAmt":  [
+
+                                                 ],
+                                     "loopLm":  [
+
+                                                ]
+                                 }
+                             ],
+                 "loopCtt":  [
+                                 {
+                                     "transactionTotals":  {
+                                                               "numberOfLineItems":  "2"
+                                                           }
+                                 }
+                             ],
+                 "transactionSetTrailer":  {
+                                               "numberOfIncludedSegments":  "12",
+                                               "transactionSetControlNumber":  "0001"
+                                           }
+             }
+}

@@ -12,7 +12,7 @@ import type { MessageStructureDTO } from '@application/dtos';
  * - Implementations are ADAPTERS (Infrastructure Layer)
  */
 export interface IMessageStructureRepository {
-  getMessageDefinition(
+  getMessageStructure(
     standard: string,
     version: string,
     messageType: string
@@ -20,9 +20,19 @@ export interface IMessageStructureRepository {
 
   getAllMessageTypes(standard: string, version: string): Promise<string[]>;
 
-  hasMessageDefinition(
+  hasMessageStructure(
     standard: string,
     version: string,
     messageType: string
   ): Promise<boolean>;
+
+  /**
+   * Opt-in: Load a code list for code value validation.
+   * Returns null if the code list is not available in this package.
+   */
+  getCodeList(
+    standard: string,
+    version: string,
+    codeListCode: string
+  ): Promise<Set<string> | null>;
 }

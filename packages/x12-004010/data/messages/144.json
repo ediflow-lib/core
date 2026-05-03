@@ -1,0 +1,118 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "144",
+  "name": "Student Loan Transfer and Status Verification",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Student Loan Transfer and Status Verification Transaction Set (144) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used by lending institutions (\"lenders\"), guarantee agencies (\"guarantors\"), and secondary markets to send and receive information regarding the transfer of ownership of a student loan. It can also be used to verify the status of a student loan prior to and subsequent to the purchase of the loan.\n\nThe loan status verification and transfer data includes, but is not limited to, borrower, student, and loan detail information. A potential purchaser of a student loan would use this transaction set to request information, from the guarantor of the loan, regarding loan status. This transaction set would in turn be used by the guarantor to return the verified loan status information to the requester. Subsequent to the purchase of the loan, this transaction set would be used by the purchaser to notify the guarantor of a transfer of ownership.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "GR",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LV",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DB",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTP",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "IDB",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 8
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopENT",
+      "name": "LoopENT",
+      "triggerSegment": "ENT",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "ENT",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IN2",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DMG",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    }
+  ]
+}

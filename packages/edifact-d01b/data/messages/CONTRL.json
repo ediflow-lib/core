@@ -1,0 +1,22 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.01B",
+  "messageType": "CONTRL",
+  "name": "Syntax and service report message for batch EDI",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "UNH",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "UCI",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    }
+  ]
+}

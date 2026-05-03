@@ -5,6 +5,72 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-05-03
+
+### ✨ Added
+
+#### X12 Support (Public Release)
+- `@ediflow/x12@0.3.0` — Full ISA/GS/ST/SE/GE/IEA envelope parsing & validation
+- `@ediflow/x12-004010@0.3.0` — X12 004010 definitions (293 transaction sets: 850, 810, 856, 837, 835, 997, ...)
+- `X12ValidationServiceBuilder` — STRICT and LENIENT validation levels
+- `X12MessageBuilder` — Build X12 transaction sets programmatically
+
+#### HIPAA Support
+- `@ediflow/hipaa-x12-005010@0.3.0` (internal) — 14 HIPAA transaction sets (837P, 837I, 835, ...)
+
+#### EANCOM 2002 Support
+- `@ediflow/eancom-2002@0.3.0` — 50 GS1 retail message types (DESADV, ORDERS, INVOIC, ...)
+
+#### Business Object Mapping (Round-Trip)
+- `StructureMappingService.map()` — EDIMessage → Business Object (JSON)
+- `StructureMappingService.unmap()` — Business Object → EDIMessage
+- Key strategies: `code | name | camelCase | snake_case | kebab-case`
+- `DEFAULT_MAPPING_KEY_STRATEGY = 'code'`
+
+#### CLI Enhancements
+- `parse --output-type business-object --property-parse-mode <strategy>`
+- `build --key-style <strategy>` (aligns with `--property-parse-mode`)
+- `export-schema` for both EDIFACT and X12
+
+#### Examples (new programmatic examples)
+- `examples/x12/` — build-850, parse-850, validate-837, schema-export, multi-message
+- `examples/edifact/` — build-invoic, parse-orders, validate-desadv
+- `examples/eancom/` — parse-desadv, validate-desadv
+- `examples/hipaa/` — parse-837, validate-835
+- Unified `examples/README.md` master index
+
+### 📦 Packages Released
+
+- `@ediflow/core@0.3.0`
+- `@ediflow/edifact@0.3.0`
+- `@ediflow/x12@0.3.0`
+- `@ediflow/infrastructure-shared@0.3.0`
+- `@ediflow/cli@0.3.0`
+- `@ediflow/edifact-d96a@0.3.0`
+- `@ediflow/edifact-d01b@0.3.0`
+- `@ediflow/edifact-d12a@0.3.0`
+- `@ediflow/edifact-d20b@0.3.0`
+- `@ediflow/eancom-2002@0.3.0`
+- `@ediflow/x12-004010@0.3.0`
+- `@ediflow/x12-006040@0.3.0`
+- `@ediflow/hipaa-x12-005010@0.3.0`
+
+### 🔧 Improved
+
+#### Test Quality & Coverage (Sprint 10 / US-15)
+- Unit test coverage for `@ediflow/core` raised to **≥ 90%** (statements, branches, functions)
+- New test files: `MessageStructureNotFoundError`, `UseCaseFactory`, `BuildEDIUseCase`, `ValidateMessageUseCase`, `BasicValidationRules`, `EDISegment`, `ParseEDIUseCase` (extended)
+- Root `vitest.config.ts` with scoped `coverage.include` (only `packages/*/src/**/*.ts`)
+- All TypeScript strict-mode errors in test files resolved
+
+### 📊 Statistics
+
+- **Tests:** 711 passing
+- **Coverage:** ≥ 90% statements/branches/functions (`@ediflow/core`)
+- **TypeScript Errors:** 0
+
+---
+
 ## [0.2.0] - 2026-02-10
 
 ### 🔥 BREAKING CHANGES
@@ -104,13 +170,11 @@ EDIFACT implementation is **functional and tested** but should be considered **b
 
 ## [Unreleased]
 
-### Planned for v0.3.0
-- X12 public release (810, 856, 997 message types)
-- X12 validation rules
-- X12 documentation and examples
-- CLI support for X12
+_No unreleased changes at this time._
 
-## [0.1.2] - 2026-01-31
+---
+
+## [0.2.0] - 2026-02-10
 
 ### Fixed
 - Fixed GitHub repository URLs in all README files (all 5 packages)

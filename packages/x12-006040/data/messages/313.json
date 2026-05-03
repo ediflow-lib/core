@@ -1,0 +1,44 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "313",
+  "name": "Shipment Status Inquiry (Ocean)",
+  "description": "Shipment Status Inquiry (Ocean)",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B4",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

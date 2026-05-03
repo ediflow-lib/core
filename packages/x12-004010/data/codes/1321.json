@@ -1,0 +1,5386 @@
+{
+  "code": "1321",
+  "name": "Code indicating a condition",
+  "values": [
+    {
+      "code": "00",
+      "name": "Requested"
+    },
+    {
+      "code": "01",
+      "name": "Patient was admitted to a hospital"
+    },
+    {
+      "code": "02",
+      "name": "Patient was bed confined before the ambulance service"
+    },
+    {
+      "code": "03",
+      "name": "Patient was bed confined after the ambulance service"
+    },
+    {
+      "code": "04",
+      "name": "Patient was moved by stretcher"
+    },
+    {
+      "code": "05",
+      "name": "Patient was unconscious or in shock"
+    },
+    {
+      "code": "06",
+      "name": "Patient was transported in an emergency situation"
+    },
+    {
+      "code": "07",
+      "name": "Patient had to be physically restrained"
+    },
+    {
+      "code": "08",
+      "name": "Patient had visible hemorrhaging"
+    },
+    {
+      "code": "09",
+      "name": "Ambulance service was medically necessary"
+    },
+    {
+      "code": "0A",
+      "name": "Automated Export System - Post Departure Authorized Special Status (AES-PASS) Standard"
+    },
+    {
+      "code": "0B",
+      "name": "Automated Export System - Post Departure Authorized Special Status (AES-PASS) Expanded"
+    },
+    {
+      "code": "0C",
+      "name": "Automated Export System - Post Departure Authorized Special Status (AES-PASS) Post Departure"
+    },
+    {
+      "code": "0D",
+      "name": "Facility’s Emergency Response Plan Includes Information on Emergency Health Care"
+    },
+    {
+      "code": "0E",
+      "name": "Facility’s Emergency Response Plan Includes Procedures for Informing Public and Local Agencies Responsible for Responding to an Accidental Release"
+    },
+    {
+      "code": "0F",
+      "name": "Facility has a Clean Air Act Title V Operating Permit"
+    },
+    {
+      "code": "0G",
+      "name": "Facility has a Written Emergency Response Plan"
+    },
+    {
+      "code": "0H",
+      "name": "Facility has Reportable Accidents"
+    },
+    {
+      "code": "0I",
+      "name": "Facility is Covered by the Emergency Planning and"
+    },
+    {
+      "code": "0J",
+      "name": "Facility is Covered by the Occupational Safety and"
+    },
+    {
+      "code": "0K",
+      "name": "Facility is Included in the Community Emergency"
+    },
+    {
+      "code": "0L",
+      "name": "Hazardous Waste Mixed with Resource Conservation Recovery Act (RCRA)-Radioactive Material"
+    },
+    {
+      "code": "0M",
+      "name": "Offsite Responders Notified"
+    },
+    {
+      "code": "0N",
+      "name": "Precipitation Present"
+    },
+    {
+      "code": "0O",
+      "name": "Disabled Veteran"
+    },
+    {
+      "code": "0P",
+      "name": "Servicer has Advanced Funds to Pay for Delinquent Taxes on Non-escrowed Mortgage"
+    },
+    {
+      "code": "0Q",
+      "name": "Property Has Fire Insurance Only that was not Lender Placed"
+    },
+    {
+      "code": "0R",
+      "name": "Reported but Unconfirmed"
+    },
+    {
+      "code": "0S",
+      "name": "Has Smoke Alarms"
+    },
+    {
+      "code": "0T",
+      "name": "Operates as a Holding Company"
+    },
+    {
+      "code": "0U",
+      "name": "Optimum"
+    },
+    {
+      "code": "0V",
+      "name": "Renewed"
+    },
+    {
+      "code": "0W",
+      "name": "Highest Educational Level"
+    },
+    {
+      "code": "0X",
+      "name": "Principal Certificate"
+    },
+    {
+      "code": "0Y",
+      "name": "Inservice Education Completed"
+    },
+    {
+      "code": "0Z",
+      "name": "Main Assignment"
+    },
+    {
+      "code": "10",
+      "name": "Patient is ambulatory"
+    },
+    {
+      "code": "11",
+      "name": "Ambulation is Impaired and Walking Aid is Used for Therapy or Mobility"
+    },
+    {
+      "code": "12",
+      "name": "Patient is confined to a bed or chair"
+    },
+    {
+      "code": "13",
+      "name": "Patient is Confined to a Room or an Area Without Bathroom Facilities"
+    },
+    {
+      "code": "14",
+      "name": "Ambulation is Impaired and Walking Aid is Used for Mobility"
+    },
+    {
+      "code": "15",
+      "name": "Patient Condition Requires Positioning of the Body or Attachments Which Would Not be Feasible With the Use of an Ordinary Bed"
+    },
+    {
+      "code": "16",
+      "name": "Patient needs a trapeze bar to sit up due to respiratory condition or change body positions for other medical reasons"
+    },
+    {
+      "code": "17",
+      "name": "Patient's Ability to Breathe is Severely Impaired"
+    },
+    {
+      "code": "18",
+      "name": "Patient condition requires frequent and/or immediate changes in body positions"
+    },
+    {
+      "code": "19",
+      "name": "Patient can operate controls"
+    },
+    {
+      "code": "1A",
+      "name": "Patient is receiving anti-fungal therapy"
+    },
+    {
+      "code": "1B",
+      "name": "Property is occupied by owner"
+    },
+    {
+      "code": "1C",
+      "name": "Property is occupied by tenant"
+    },
+    {
+      "code": "1D",
+      "name": "Property is vacant"
+    },
+    {
+      "code": "1E",
+      "name": "Location is urban"
+    },
+    {
+      "code": "1F",
+      "name": "Location is suburban"
+    },
+    {
+      "code": "1G",
+      "name": "Location is rural"
+    },
+    {
+      "code": "1H",
+      "name": "Built-up over 75%"
+    },
+    {
+      "code": "1I",
+      "name": "Built-up 25 - 75%"
+    },
+    {
+      "code": "1J",
+      "name": "Built-up under 25%"
+    },
+    {
+      "code": "1K",
+      "name": "Growth rate is rapid"
+    },
+    {
+      "code": "1L",
+      "name": "Class I-Left"
+    },
+    {
+      "code": "1M",
+      "name": "Growth rate is stable"
+    },
+    {
+      "code": "1N",
+      "name": "Growth rate is slow"
+    },
+    {
+      "code": "1O",
+      "name": "Property values are increasing"
+    },
+    {
+      "code": "1P",
+      "name": "Property values are stable"
+    },
+    {
+      "code": "1Q",
+      "name": "Property values are declining"
+    },
+    {
+      "code": "1R",
+      "name": "Class I-Right"
+    },
+    {
+      "code": "1S",
+      "name": "Demand or supply is in shortage"
+    },
+    {
+      "code": "1T",
+      "name": "Demand or supply is in balance"
+    },
+    {
+      "code": "1U",
+      "name": "Demand or supply is over supply"
+    },
+    {
+      "code": "1V",
+      "name": "Marketing time is under 3 months"
+    },
+    {
+      "code": "1W",
+      "name": "Marketing time is 3 to 6 months"
+    },
+    {
+      "code": "1X",
+      "name": "Marketing time is over 6 months"
+    },
+    {
+      "code": "1Y",
+      "name": "Predominant occupancy is the owner"
+    },
+    {
+      "code": "1Z",
+      "name": "Predominant occupancy is the tenant"
+    },
+    {
+      "code": "20",
+      "name": "Siderails Are to be Attached to a Hospital Bed Owned by the Beneficiary"
+    },
+    {
+      "code": "21",
+      "name": "Patient owns equipment"
+    },
+    {
+      "code": "22",
+      "name": "Mattress or Siderails are Being Used with Prescribed Medically Necessary Hospital Bed Owned by the Beneficiary"
+    },
+    {
+      "code": "23",
+      "name": "Patient Needs Lift to Get In or Out of Bed or to Assist in Transfer from Bed to Wheelchair"
+    },
+    {
+      "code": "24",
+      "name": "Patient has an orthopedic impairment requiring traction equipment which prevents ambulation during period of use"
+    },
+    {
+      "code": "25",
+      "name": "Item has been prescribed as part of a planned regimen of treatment in patient home"
+    },
+    {
+      "code": "26",
+      "name": "Patient is highly susceptible to decubitus ulcers"
+    },
+    {
+      "code": "27",
+      "name": "Patient or a care-giver has been instructed in use of equipment"
+    },
+    {
+      "code": "28",
+      "name": "Patient has poor diabetic control"
+    },
+    {
+      "code": "29",
+      "name": "A 6-7 hour nocturnal study documents 30 episodes of apnea each lasting more than 10 seconds"
+    },
+    {
+      "code": "2A",
+      "name": "Patient is receiving oral anti-fungal therapy"
+    },
+    {
+      "code": "2B",
+      "name": "Predominant occupancy is vacant (0-5%)"
+    },
+    {
+      "code": "2C",
+      "name": "Predominant occupancy is vacant (over 5%)"
+    },
+    {
+      "code": "2D",
+      "name": "Developer or builder is in control of the Home Owners Association"
+    },
+    {
+      "code": "2E",
+      "name": "Site is a corner lot"
+    },
+    {
+      "code": "2F",
+      "name": "Zoning compliance is legal"
+    },
+    {
+      "code": "2G",
+      "name": "Zoning compliance is legal nonconforming (grandfather use)"
+    },
+    {
+      "code": "2H",
+      "name": "Zoning compliance is illegal"
+    },
+    {
+      "code": "2I",
+      "name": "There is no zoning"
+    },
+    {
+      "code": "2J",
+      "name": "Highest and best use as improved is the present use"
+    },
+    {
+      "code": "2K",
+      "name": "Highest and best use as improved is other use"
+    },
+    {
+      "code": "2L",
+      "name": "Class II-Left"
+    },
+    {
+      "code": "2M",
+      "name": "Property is located in a Federal Emergency Management Administration special flood hazard area"
+    },
+    {
+      "code": "2N",
+      "name": "Appraisal is made \"as is\""
+    },
+    {
+      "code": "2O",
+      "name": "Appraisal is made subject to the repairs, alterations, inspections, or conditions listed"
+    },
+    {
+      "code": "2P",
+      "name": "Appraisal is made subject to the completion per plans and specifications"
+    },
+    {
+      "code": "2Q",
+      "name": "Project type is planned unit development (PUD)"
+    },
+    {
+      "code": "2R",
+      "name": "Class II-Right"
+    },
+    {
+      "code": "2S",
+      "name": "Project type is condominium"
+    },
+    {
+      "code": "2T",
+      "name": "Property rights are fee simple"
+    },
+    {
+      "code": "2U",
+      "name": "Property rights are leasehold"
+    },
+    {
+      "code": "2V",
+      "name": "Supervisor appraiser inspected the property per supervisory appraiser's certification"
+    },
+    {
+      "code": "2W",
+      "name": "Property was sold within last 12 months"
+    },
+    {
+      "code": "2X",
+      "name": "Appraiser signed statement of limiting conditions and disclaimer"
+    },
+    {
+      "code": "2Y",
+      "name": "Ownership interest in a property"
+    },
+    {
+      "code": "2Z",
+      "name": "Termination"
+    },
+    {
+      "code": "30",
+      "name": "Without the equipment, the patient would require surgery"
+    },
+    {
+      "code": "31",
+      "name": "Patient has had a total knee replacement"
+    },
+    {
+      "code": "32",
+      "name": "Patient has intractable lymphedema of the extremities"
+    },
+    {
+      "code": "33",
+      "name": "Patient is in a nursing home"
+    },
+    {
+      "code": "34",
+      "name": "Patient is conscious"
+    },
+    {
+      "code": "35",
+      "name": "This Feeding is the Only Form of Nutritional Intake for This Patient"
+    },
+    {
+      "code": "36",
+      "name": "Patient was administered premix"
+    },
+    {
+      "code": "37",
+      "name": "Oxygen delivery equipment is stationary"
+    },
+    {
+      "code": "38",
+      "name": "Certification signed by the physician is on file at the supplier's office"
+    },
+    {
+      "code": "39",
+      "name": "Patient Has Mobilizing Respiratory Tract Secretions"
+    },
+    {
+      "code": "3A",
+      "name": "Patient is receiving topical anti-fungal therapy"
+    },
+    {
+      "code": "3B",
+      "name": "Points Paid by Seller"
+    },
+    {
+      "code": "3C",
+      "name": "Points Paid by Buyer"
+    },
+    {
+      "code": "3D",
+      "name": "Seller Concession"
+    },
+    {
+      "code": "3E",
+      "name": "Letter of Certification"
+    },
+    {
+      "code": "3F",
+      "name": "Verbal Report Needed"
+    },
+    {
+      "code": "3G",
+      "name": "Any Relationship Between Owner and Occupant"
+    },
+    {
+      "code": "3H",
+      "name": "Map and Directions to Remote Properties to Follow"
+    },
+    {
+      "code": "3I",
+      "name": "Ground Lease to Follow"
+    },
+    {
+      "code": "3J",
+      "name": "Disclosure Statement to Follow"
+    },
+    {
+      "code": "3K",
+      "name": "Copy of Property Listing to Follow"
+    },
+    {
+      "code": "3L",
+      "name": "Class III-Left"
+    },
+    {
+      "code": "3M",
+      "name": "Copy of Title Report Plat Map to Follow"
+    },
+    {
+      "code": "3N",
+      "name": "Property Tax Bill to Follow"
+    },
+    {
+      "code": "3O",
+      "name": "Engineering or Soil Report to Follow"
+    },
+    {
+      "code": "3P",
+      "name": "Sales Contract Available"
+    },
+    {
+      "code": "3Q",
+      "name": "Leave Will be Taken"
+    },
+    {
+      "code": "3R",
+      "name": "Class III-Right"
+    },
+    {
+      "code": "3S",
+      "name": "Approved"
+    },
+    {
+      "code": "3T",
+      "name": "Balance Sheet does not balance"
+    },
+    {
+      "code": "3U",
+      "name": "Banking done through Parent Company"
+    },
+    {
+      "code": "3V",
+      "name": "Banking done through Related Concern"
+    },
+    {
+      "code": "3W",
+      "name": "Banking done through Subsidiary"
+    },
+    {
+      "code": "3X",
+      "name": "Can not determine if subject engaged in business"
+    },
+    {
+      "code": "3Y",
+      "name": "Deteriorated"
+    },
+    {
+      "code": "3Z",
+      "name": "Detrimental Information Received"
+    },
+    {
+      "code": "40",
+      "name": "Patient or Caregiver is Capable of Using the Equipment Without Technical or Professional Supervision"
+    },
+    {
+      "code": "41",
+      "name": "Patient or Caregiver is Unable to Propel or Lift a Standard Weight Wheelchair"
+    },
+    {
+      "code": "42",
+      "name": "Patient Requires Leg Elevation for Edema or Body Alignment"
+    },
+    {
+      "code": "43",
+      "name": "Patient Weight or Usage Needs Necessitate a Heavy Duty Wheelchair"
+    },
+    {
+      "code": "44",
+      "name": "Patient Requires Reclining Function of a Wheelchair"
+    },
+    {
+      "code": "45",
+      "name": "Patient is Unable to Operate a Wheelchair Manually"
+    },
+    {
+      "code": "46",
+      "name": "Patient or Caregiver Requires Side Transfer into Wheelchair, Commode or Other"
+    },
+    {
+      "code": "47",
+      "name": "Advertisement Run Condition"
+    },
+    {
+      "code": "48",
+      "name": "Individual Paid for Last Day Worked"
+    },
+    {
+      "code": "49",
+      "name": "Full Wages Paid for Date of Injury"
+    },
+    {
+      "code": "4A",
+      "name": "Services are rendered within Hospice-elected period of coverage"
+    },
+    {
+      "code": "4B",
+      "name": "Accidents"
+    },
+    {
+      "code": "4C",
+      "name": "Account Representative Transfer"
+    },
+    {
+      "code": "4D",
+      "name": "Additional Coverage"
+    },
+    {
+      "code": "4E",
+      "name": "Advice to Stop"
+    },
+    {
+      "code": "4F",
+      "name": "Agent Replacement"
+    },
+    {
+      "code": "4G",
+      "name": "Backup Withholding"
+    },
+    {
+      "code": "4H",
+      "name": "Current Employer"
+    },
+    {
+      "code": "4I",
+      "name": "Current Occupation"
+    },
+    {
+      "code": "4J",
+      "name": "Employer Reimbursement"
+    },
+    {
+      "code": "4K",
+      "name": "Employee Retirement Income Security Act (ERISA)"
+    },
+    {
+      "code": "4L",
+      "name": "Expected Changes"
+    },
+    {
+      "code": "4M",
+      "name": "Experimental"
+    },
+    {
+      "code": "4N",
+      "name": "Foreign Flight"
+    },
+    {
+      "code": "4O",
+      "name": "Future Involvement"
+    },
+    {
+      "code": "4P",
+      "name": "Grounding, Fine, Reprimand"
+    },
+    {
+      "code": "4Q",
+      "name": "Group Disability Insurance Conversion"
+    },
+    {
+      "code": "4R",
+      "name": "Group Disability Insurance Offset"
+    },
+    {
+      "code": "4S",
+      "name": "Group Disability Insurance Participation"
+    },
+    {
+      "code": "4T",
+      "name": "Group Disability Insurance Top Up"
+    },
+    {
+      "code": "4U",
+      "name": "Home Employment"
+    },
+    {
+      "code": "4V",
+      "name": "Information Omitted"
+    },
+    {
+      "code": "4W",
+      "name": "Injury Benefits"
+    },
+    {
+      "code": "4X",
+      "name": "Issue at Higher Premiums"
+    },
+    {
+      "code": "4Y",
+      "name": "Issue With Exclusions"
+    },
+    {
+      "code": "4Z",
+      "name": "Issue Without Benefits"
+    },
+    {
+      "code": "50",
+      "name": "Citation or Ticket Issued"
+    },
+    {
+      "code": "51",
+      "name": "Individual is Member of Policyholder's Household"
+    },
+    {
+      "code": "52",
+      "name": "Individual Permitted to Use Vehicle"
+    },
+    {
+      "code": "53",
+      "name": "Individual Wore Seatbelt"
+    },
+    {
+      "code": "54",
+      "name": "Child Restraint Device in Vehicle"
+    },
+    {
+      "code": "55",
+      "name": "Child Restraint Device Used"
+    },
+    {
+      "code": "56",
+      "name": "Individual Injured"
+    },
+    {
+      "code": "57",
+      "name": "Individual Transported to Another Location"
+    },
+    {
+      "code": "58",
+      "name": "Durable Medical Equipment (DME) Purchased New"
+    },
+    {
+      "code": "59",
+      "name": "Durable Medical Equipment (DME) Is Under Warranty"
+    },
+    {
+      "code": "5A",
+      "name": "Treatment is rendered related to the terminal illness"
+    },
+    {
+      "code": "5B",
+      "name": "Certified Aftermarket Parts Association (CAPA) Only"
+    },
+    {
+      "code": "5C",
+      "name": "Certified Aftermarket Parts Association (CAPA) Preferred"
+    },
+    {
+      "code": "5D",
+      "name": "Juvenile Seen"
+    },
+    {
+      "code": "5E",
+      "name": "Medical Treatment"
+    },
+    {
+      "code": "5F",
+      "name": "Military Aviation"
+    },
+    {
+      "code": "5G",
+      "name": "New Group"
+    },
+    {
+      "code": "5H",
+      "name": "Other Coverage Offset"
+    },
+    {
+      "code": "5I",
+      "name": "Other Principals Being Insured"
+    },
+    {
+      "code": "5J",
+      "name": "Owner Active in Business"
+    },
+    {
+      "code": "5K",
+      "name": "Payroll Deduction"
+    },
+    {
+      "code": "5L",
+      "name": "Prepaid"
+    },
+    {
+      "code": "5M",
+      "name": "Previous Application"
+    },
+    {
+      "code": "5N",
+      "name": "Primary Occupation"
+    },
+    {
+      "code": "5O",
+      "name": "Racing Accident"
+    },
+    {
+      "code": "5P",
+      "name": "Replacement"
+    },
+    {
+      "code": "5Q",
+      "name": "Resides With Applicant"
+    },
+    {
+      "code": "5R",
+      "name": "Gender Distinct"
+    },
+    {
+      "code": "5S",
+      "name": "Sibling Coverage"
+    },
+    {
+      "code": "5T",
+      "name": "Sickness Benefits"
+    },
+    {
+      "code": "5U",
+      "name": "Special Dating"
+    },
+    {
+      "code": "5V",
+      "name": "Spousal Consent"
+    },
+    {
+      "code": "5W",
+      "name": "Suitability Analysis"
+    },
+    {
+      "code": "5X",
+      "name": "Suitable for Coverage"
+    },
+    {
+      "code": "5Y",
+      "name": "Taxable"
+    },
+    {
+      "code": "5Z",
+      "name": "This Company Replacement"
+    },
+    {
+      "code": "60",
+      "name": "Transportation Was To the Nearest Facility"
+    },
+    {
+      "code": "61",
+      "name": "Employee is Exempt"
+    },
+    {
+      "code": "62",
+      "name": "Claimant is Covered on the Employer's Long-term Disability Plan"
+    },
+    {
+      "code": "63",
+      "name": "Employee's Job Responsibilities Changed Due to the Disabling Condition"
+    },
+    {
+      "code": "64",
+      "name": "Employer Has a Return to Work Policy for Disabled Employees"
+    },
+    {
+      "code": "65",
+      "name": "Open"
+    },
+    {
+      "code": "66",
+      "name": "Normal"
+    },
+    {
+      "code": "67",
+      "name": "Closed-moderate"
+    },
+    {
+      "code": "68",
+      "name": "Severe"
+    },
+    {
+      "code": "69",
+      "name": "Moderate"
+    },
+    {
+      "code": "6A",
+      "name": "Treatment is rendered by a Hospice employed physician"
+    },
+    {
+      "code": "6B",
+      "name": "United States Citizen"
+    },
+    {
+      "code": "6C",
+      "name": "Permanent Resident Alien"
+    },
+    {
+      "code": "6D",
+      "name": "Borrower is First Time Homebuyer"
+    },
+    {
+      "code": "6E",
+      "name": "Unemployment Claims"
+    },
+    {
+      "code": "6F",
+      "name": "Unemployment Insurance Eligibility"
+    },
+    {
+      "code": "6G",
+      "name": "Work Status"
+    },
+    {
+      "code": "6H",
+      "name": "Workers Compensation Eligible"
+    },
+    {
+      "code": "6I",
+      "name": "Factored on Recourse Basis"
+    },
+    {
+      "code": "6J",
+      "name": "Factored with Advances"
+    },
+    {
+      "code": "6K",
+      "name": "Figures are Actual"
+    },
+    {
+      "code": "6L",
+      "name": "Figures are Anticipated"
+    },
+    {
+      "code": "6M",
+      "name": "Figures are Estimated"
+    },
+    {
+      "code": "6N",
+      "name": "Figures are Modified"
+    },
+    {
+      "code": "6O",
+      "name": "Figures are Projected"
+    },
+    {
+      "code": "6P",
+      "name": "Government Business Number Unavailable"
+    },
+    {
+      "code": "6Q",
+      "name": "Goodwill Origin Purchased from Bankrupt Company"
+    },
+    {
+      "code": "6R",
+      "name": "Goodwill Origin Rented"
+    },
+    {
+      "code": "6S",
+      "name": "Has no ownership"
+    },
+    {
+      "code": "6T",
+      "name": "Improved"
+    },
+    {
+      "code": "6U",
+      "name": "Intangibles breakdown available"
+    },
+    {
+      "code": "6V",
+      "name": "Intangibles include Organizational Expense"
+    },
+    {
+      "code": "6W",
+      "name": "Intercompany relations consist of Loans and Advances"
+    },
+    {
+      "code": "6X",
+      "name": "Intercompany relations consist of Merchandise Transactions"
+    },
+    {
+      "code": "6Y",
+      "name": "Intercompany relations consist of Service Transactions"
+    },
+    {
+      "code": "6Z",
+      "name": "Local banking utilized on a transfer account basis"
+    },
+    {
+      "code": "70",
+      "name": "Straight"
+    },
+    {
+      "code": "71",
+      "name": "Convex"
+    },
+    {
+      "code": "72",
+      "name": "Concave"
+    },
+    {
+      "code": "73",
+      "name": "Double Protrusion"
+    },
+    {
+      "code": "74",
+      "name": "No Crossbite"
+    },
+    {
+      "code": "75",
+      "name": "Posterior"
+    },
+    {
+      "code": "76",
+      "name": "Anterior"
+    },
+    {
+      "code": "77",
+      "name": "Maxillary"
+    },
+    {
+      "code": "78",
+      "name": "Mandibular"
+    },
+    {
+      "code": "79",
+      "name": "Right"
+    },
+    {
+      "code": "7A",
+      "name": "Treatment is rendered by a private attending physician"
+    },
+    {
+      "code": "7B",
+      "name": "Medications Ordered are being Administered Intramuscularly"
+    },
+    {
+      "code": "7C",
+      "name": "Medications Ordered are being Administered Intravenously"
+    },
+    {
+      "code": "7D",
+      "name": "Medications Ordered are being Administered Orally"
+    },
+    {
+      "code": "7E",
+      "name": "Maintains no Inventory"
+    },
+    {
+      "code": "7F",
+      "name": "Medications Ordered are being Administered Subcutaneously"
+    },
+    {
+      "code": "7G",
+      "name": "Majority"
+    },
+    {
+      "code": "7H",
+      "name": "Marketable Securities valued at cost"
+    },
+    {
+      "code": "7I",
+      "name": "Marketable Securities valued at lower of cost or market"
+    },
+    {
+      "code": "7J",
+      "name": "Interior Access Denied"
+    },
+    {
+      "code": "7K",
+      "name": "Repairs are Recommended"
+    },
+    {
+      "code": "7L",
+      "name": "Loan Originated under Shared Equity Plan"
+    },
+    {
+      "code": "7M",
+      "name": "Title and or Legal Issues Exist"
+    },
+    {
+      "code": "7N",
+      "name": "Environmental Issues Exist"
+    },
+    {
+      "code": "7O",
+      "name": "Property is Listed As Is"
+    },
+    {
+      "code": "7P",
+      "name": "Property is Listed as Repaired"
+    },
+    {
+      "code": "7Q",
+      "name": "Vacancy Rate is Greater Than 5 Percent to 10 Percent"
+    },
+    {
+      "code": "7R",
+      "name": "Vacancy Rate is Greater Than 10 Percent to 20 Percent"
+    },
+    {
+      "code": "7S",
+      "name": "Vacancy Rate is Greater Than 20 Percent"
+    },
+    {
+      "code": "7T",
+      "name": "Most Comparable Property"
+    },
+    {
+      "code": "7U",
+      "name": "Anticipate Issues which Affect Ability to Secure Financing"
+    },
+    {
+      "code": "7V",
+      "name": "Points are Paid by Seller"
+    },
+    {
+      "code": "7W",
+      "name": "Property Covered by Flood Insurance Policy"
+    },
+    {
+      "code": "7X",
+      "name": "Property Covered by Earthquake Insurance Policy"
+    },
+    {
+      "code": "7Y",
+      "name": "Points are Negotiable"
+    },
+    {
+      "code": "7Z",
+      "name": "Property is Currently Listed with a Real Estate Firm"
+    },
+    {
+      "code": "80",
+      "name": "Left"
+    },
+    {
+      "code": "81",
+      "name": "Maxillary Moderate"
+    },
+    {
+      "code": "82",
+      "name": "Mandibular Moderate"
+    },
+    {
+      "code": "83",
+      "name": "Maxillary Severe"
+    },
+    {
+      "code": "84",
+      "name": "Mandibular Severe"
+    },
+    {
+      "code": "85",
+      "name": "Income Has Been Verified"
+    },
+    {
+      "code": "86",
+      "name": "Person Has Been Interviewed"
+    },
+    {
+      "code": "87",
+      "name": "Rent Has Been Verified"
+    },
+    {
+      "code": "88",
+      "name": "Employer Has Been Verified"
+    },
+    {
+      "code": "89",
+      "name": "Position Has Been Verified"
+    },
+    {
+      "code": "8A",
+      "name": "Treatment is curative"
+    },
+    {
+      "code": "8B",
+      "name": "Income or Assets of Another Used"
+    },
+    {
+      "code": "8C",
+      "name": "Disclosure of Someone Else's Liabilities Required"
+    },
+    {
+      "code": "8D",
+      "name": "Property Improvements \"to be made\""
+    },
+    {
+      "code": "8E",
+      "name": "Property Improvements \"have been made\""
+    },
+    {
+      "code": "8F",
+      "name": "Distant Suburban"
+    },
+    {
+      "code": "8G",
+      "name": "Self Employed"
+    },
+    {
+      "code": "8H",
+      "name": "Liability to be Satisfied"
+    },
+    {
+      "code": "8I",
+      "name": "Are Assets/Liabilities Reported Jointly"
+    },
+    {
+      "code": "8J",
+      "name": "Location is Farm"
+    },
+    {
+      "code": "8K",
+      "name": "Location is Resort"
+    },
+    {
+      "code": "8L",
+      "name": "Shortage Exist for Competing Listings"
+    },
+    {
+      "code": "8M",
+      "name": "Competing Listings are in Balance"
+    },
+    {
+      "code": "8N",
+      "name": "Oversupply Exist for Competing Listings"
+    },
+    {
+      "code": "8O",
+      "name": "Incentives are Offered"
+    },
+    {
+      "code": "8P",
+      "name": "Listed Property has been Inspected"
+    },
+    {
+      "code": "8Q",
+      "name": "Sale Property has been Inspected"
+    },
+    {
+      "code": "8R",
+      "name": "General Marketing Condition is Depressed"
+    },
+    {
+      "code": "8S",
+      "name": "General Marketing Condition is Slow"
+    },
+    {
+      "code": "8T",
+      "name": "General Marketing Condition is Static"
+    },
+    {
+      "code": "8U",
+      "name": "General Marketing Condition is Improving"
+    },
+    {
+      "code": "8V",
+      "name": "General Marketing Condition is Excellent"
+    },
+    {
+      "code": "8W",
+      "name": "Employment Conditions are Stable"
+    },
+    {
+      "code": "8X",
+      "name": "Employment Conditions are Declining"
+    },
+    {
+      "code": "8Y",
+      "name": "Employment Conditions are Increasing"
+    },
+    {
+      "code": "8Z",
+      "name": "Overimprovement Condition Exists"
+    },
+    {
+      "code": "90",
+      "name": "Inquiry Has Been Verified"
+    },
+    {
+      "code": "91",
+      "name": "Outstanding Judgments"
+    },
+    {
+      "code": "92",
+      "name": "Declared Bankruptcy in Past 7 Years"
+    },
+    {
+      "code": "93",
+      "name": "Foreclosure or Deed in Lieu in Past 7 Years"
+    },
+    {
+      "code": "94",
+      "name": "Party to Lawsuit"
+    },
+    {
+      "code": "95",
+      "name": "Obligated on a Loan Foreclosed, Deed in Lieu of Judgment"
+    },
+    {
+      "code": "96",
+      "name": "Currently Delinquent or in Default"
+    },
+    {
+      "code": "97",
+      "name": "Obligated to Pay Alimony, Child Support or Maintenance"
+    },
+    {
+      "code": "98",
+      "name": "Part of Down Payment Borrowed"
+    },
+    {
+      "code": "99",
+      "name": "Co-maker or Endorser on a Note"
+    },
+    {
+      "code": "9A",
+      "name": "Treatment is Palliative"
+    },
+    {
+      "code": "9B",
+      "name": "Involuntary Committal"
+    },
+    {
+      "code": "9C",
+      "name": "Lack of Available Equipment"
+    },
+    {
+      "code": "9D",
+      "name": "Lack of Appropriate Facility within Reasonable Distance to Treat Patient in the Event of Complications"
+    },
+    {
+      "code": "9E",
+      "name": "Sudden Onset of Disorientation"
+    },
+    {
+      "code": "9F",
+      "name": "Sudden Onset of Severe, Incapacitating Pain"
+    },
+    {
+      "code": "9G",
+      "name": "Continuous Hemorrhage from any Site with Abnormal Lab Values"
+    },
+    {
+      "code": "9H",
+      "name": "Patient Requires Intensive IV Therapy"
+    },
+    {
+      "code": "9I",
+      "name": "Patient Requires Volume Expanders"
+    },
+    {
+      "code": "9J",
+      "name": "Patient Requires Protective Isolation"
+    },
+    {
+      "code": "9K",
+      "name": "Patient Requires Frequent Monitoring"
+    },
+    {
+      "code": "9L",
+      "name": "Patient Requires Extended Post-operative Observation"
+    },
+    {
+      "code": "9M",
+      "name": "Foreclosure Proceedings Have Begun"
+    },
+    {
+      "code": "9N",
+      "name": "Underimprovement Condition Exists"
+    },
+    {
+      "code": "9O",
+      "name": "Marketability of Property is Excellent"
+    },
+    {
+      "code": "9P",
+      "name": "Marketability of Property is Good"
+    },
+    {
+      "code": "9Q",
+      "name": "Marketability of Property is Fair"
+    },
+    {
+      "code": "9R",
+      "name": "Marketability of Property is Poor"
+    },
+    {
+      "code": "9S",
+      "name": "Fees are Current"
+    },
+    {
+      "code": "9T",
+      "name": "Fees Include Tennis"
+    },
+    {
+      "code": "9U",
+      "name": "Fees Include Pool"
+    },
+    {
+      "code": "9V",
+      "name": "Fees Include Insurance"
+    },
+    {
+      "code": "9W",
+      "name": "Fees Include Landscape"
+    },
+    {
+      "code": "9X",
+      "name": "Fees Include Other Amenities"
+    },
+    {
+      "code": "9Y",
+      "name": "Most Likely Buyer is Owner Occupant"
+    },
+    {
+      "code": "9Z",
+      "name": "Most Likely Buyer is Investor"
+    },
+    {
+      "code": "A0",
+      "name": "Liability Coverage Will Transfer"
+    },
+    {
+      "code": "A1",
+      "name": "Most Likely Buyer is Other Person or Entity"
+    },
+    {
+      "code": "A2",
+      "name": "Potential Financing is Fannie Mae"
+    },
+    {
+      "code": "A3",
+      "name": "Suppress Paper Endorsement"
+    },
+    {
+      "code": "A4",
+      "name": "Do Not Suppress Paper Endorsement"
+    },
+    {
+      "code": "A5",
+      "name": "Escrow"
+    },
+    {
+      "code": "A6",
+      "name": "Teaching Minor"
+    },
+    {
+      "code": "A7",
+      "name": "Sub-servicer Submitted"
+    },
+    {
+      "code": "A8",
+      "name": "First Mortgage"
+    },
+    {
+      "code": "A9",
+      "name": "Second Mortgage"
+    },
+    {
+      "code": "AA",
+      "name": "Amputation"
+    },
+    {
+      "code": "AB",
+      "name": "Address Skip Begin"
+    },
+    {
+      "code": "AC",
+      "name": "Address Corrected"
+    },
+    {
+      "code": "AD",
+      "name": "Automatic Drill Time Calculated"
+    },
+    {
+      "code": "AE",
+      "name": "Automatic Edging Time Calculated"
+    },
+    {
+      "code": "AF",
+      "name": "Automatically Select"
+    },
+    {
+      "code": "AG",
+      "name": "Agitated"
+    },
+    {
+      "code": "AH",
+      "name": "Automatically Search and List"
+    },
+    {
+      "code": "AI",
+      "name": "Address Incorrect"
+    },
+    {
+      "code": "AJ",
+      "name": "Assumable"
+    },
+    {
+      "code": "AK",
+      "name": "Potential Financing is Cash"
+    },
+    {
+      "code": "AL",
+      "name": "Ambulation Limitations"
+    },
+    {
+      "code": "AM",
+      "name": "Potential Financing is Outside Lender"
+    },
+    {
+      "code": "AN",
+      "name": "Address Incomplete"
+    },
+    {
+      "code": "AO",
+      "name": "Accept Certification without Changes"
+    },
+    {
+      "code": "AP",
+      "name": "Alley is Public"
+    },
+    {
+      "code": "AQ",
+      "name": "Potential Financing is Federal Housing Administration"
+    },
+    {
+      "code": "AR",
+      "name": "Address Skip Resolved"
+    },
+    {
+      "code": "AS",
+      "name": "Address Skip Exhaust"
+    },
+    {
+      "code": "AT",
+      "name": "Accept Statement of Limiting Conditions without Changes"
+    },
+    {
+      "code": "AU",
+      "name": "Automatic Underside Time Calculated"
+    },
+    {
+      "code": "AV",
+      "name": "Available - Not Used"
+    },
+    {
+      "code": "AW",
+      "name": "Accept Certification with Changes"
+    },
+    {
+      "code": "AX",
+      "name": "Accept Statement of Limiting Conditions with Changes"
+    },
+    {
+      "code": "AY",
+      "name": "Adjacent Track Occupied"
+    },
+    {
+      "code": "AZ",
+      "name": "Potential Financing is Veterans Affairs"
+    },
+    {
+      "code": "B0",
+      "name": "Uninsured Motorist Coverage Will Transfer"
+    },
+    {
+      "code": "B1",
+      "name": "Mortgage in Foreclosure"
+    },
+    {
+      "code": "B2",
+      "name": "Real Estate Owned (REO) Mortgage"
+    },
+    {
+      "code": "B3",
+      "name": "Potential Financing is Contract for Deed"
+    },
+    {
+      "code": "B4",
+      "name": "Only the Exterior has been Inspected"
+    },
+    {
+      "code": "B5",
+      "name": "Real Estate Owned Property or Foreclosure Property"
+    },
+    {
+      "code": "B6",
+      "name": "Number of Comparable Listings is Normal"
+    },
+    {
+      "code": "B7",
+      "name": "Number of Comparable Listings is an Oversupply"
+    },
+    {
+      "code": "B8",
+      "name": "Number of Comparable Listings is a Shortage"
+    },
+    {
+      "code": "B9",
+      "name": "Property Management Expenses Outstanding"
+    },
+    {
+      "code": "BA",
+      "name": "Borrower Letter Attempt"
+    },
+    {
+      "code": "BB",
+      "name": "Building or Mobile Home is in a Coastal Barrier Resources Area"
+    },
+    {
+      "code": "BC",
+      "name": "Borrower Telephone Contact"
+    },
+    {
+      "code": "BD",
+      "name": "Business Pending"
+    },
+    {
+      "code": "BE",
+      "name": "Borrower Letter Contact"
+    },
+    {
+      "code": "BF",
+      "name": "Marketable Securities valued at market"
+    },
+    {
+      "code": "BG",
+      "name": "Appropriate Improvement Condition Exists"
+    },
+    {
+      "code": "BH",
+      "name": "Name unknown to local authorities"
+    },
+    {
+      "code": "BI",
+      "name": "No manufacturing done on Premises"
+    },
+    {
+      "code": "BJ",
+      "name": "Occasional"
+    },
+    {
+      "code": "BK",
+      "name": "Officer or owner in other Businesses"
+    },
+    {
+      "code": "BL",
+      "name": "Bowel Limitations, Bladder Limitations, or both (Incontinence)"
+    },
+    {
+      "code": "BM",
+      "name": "Old"
+    },
+    {
+      "code": "BN",
+      "name": "Operates on part time basis"
+    },
+    {
+      "code": "BO",
+      "name": "Parent Financial Statement Used"
+    },
+    {
+      "code": "BP",
+      "name": "Borrower Payment Received"
+    },
+    {
+      "code": "BQ",
+      "name": "Product Information Available"
+    },
+    {
+      "code": "BR",
+      "name": "Bedrest BRP (Bathroom Privileges)"
+    },
+    {
+      "code": "BS",
+      "name": "Revenue derived from Commissions"
+    },
+    {
+      "code": "BT",
+      "name": "Borrower Telephone Attempt"
+    },
+    {
+      "code": "BU",
+      "name": "Revenue derived from Donations"
+    },
+    {
+      "code": "BV",
+      "name": "Revenue derived from Fees"
+    },
+    {
+      "code": "BW",
+      "name": "Revenue derived from Grants"
+    },
+    {
+      "code": "BX",
+      "name": "Revenue derived from Taxes"
+    },
+    {
+      "code": "BY",
+      "name": "Sprinkler Equipped"
+    },
+    {
+      "code": "BZ",
+      "name": "Statement requested from Government Registry"
+    },
+    {
+      "code": "C0",
+      "name": "Collision Coverage Will Transfer"
+    },
+    {
+      "code": "C1",
+      "name": "Advances From Property Management Expenses Outstanding"
+    },
+    {
+      "code": "C2",
+      "name": "Final Demand Letter Sent"
+    },
+    {
+      "code": "C3",
+      "name": "Lender Request for Assistance"
+    },
+    {
+      "code": "C4",
+      "name": "Mortgage has Lender-purchased Mortgage Insurance"
+    },
+    {
+      "code": "C5",
+      "name": "Insufficient Funds"
+    },
+    {
+      "code": "C6",
+      "name": "Credit Enhanced Mortgage"
+    },
+    {
+      "code": "C7",
+      "name": "Corporate Appointment"
+    },
+    {
+      "code": "C8",
+      "name": "Special Servicing Required"
+    },
+    {
+      "code": "C9",
+      "name": "Client Specifically Requested Consideration of Special Financing or an Assumable Loan"
+    },
+    {
+      "code": "CA",
+      "name": "Cane Required"
+    },
+    {
+      "code": "CB",
+      "name": "Complete Bedrest"
+    },
+    {
+      "code": "CC",
+      "name": "Collection Card was Left"
+    },
+    {
+      "code": "CD",
+      "name": "Call to Directory Assistance for Reference Telephone"
+    },
+    {
+      "code": "CE",
+      "name": "Co-signer Telephone Attempt"
+    },
+    {
+      "code": "CF",
+      "name": "Co-signer Telephone Contact"
+    },
+    {
+      "code": "CG",
+      "name": "Co-signer Delinquency Letter Sent"
+    },
+    {
+      "code": "CH",
+      "name": "Co-signer Final Demand Letter Sent"
+    },
+    {
+      "code": "CI",
+      "name": "Call to Directory Assistance for Co-signer Telephone"
+    },
+    {
+      "code": "CJ",
+      "name": "Valid Borrower Address or Phone Attempt with Previous Holder"
+    },
+    {
+      "code": "CK",
+      "name": "Convertible"
+    },
+    {
+      "code": "CL",
+      "name": "Claimant had a Pre-existing Injury"
+    },
+    {
+      "code": "CM",
+      "name": "Comatose"
+    },
+    {
+      "code": "CN",
+      "name": "Common Elements are Leased to or by the Home Owners' Association"
+    },
+    {
+      "code": "CO",
+      "name": "Contracture"
+    },
+    {
+      "code": "CP",
+      "name": "Case Pending"
+    },
+    {
+      "code": "CQ",
+      "name": "Callable"
+    },
+    {
+      "code": "CR",
+      "name": "Crutches Required"
+    },
+    {
+      "code": "CS",
+      "name": "Community Participates in National Flood Insurance Program"
+    },
+    {
+      "code": "CT",
+      "name": "Common Elements are Completed"
+    },
+    {
+      "code": "CU",
+      "name": "Curb and Gutter are Public"
+    },
+    {
+      "code": "CV",
+      "name": "Cooperative"
+    },
+    {
+      "code": "CW",
+      "name": "Cooling Water is Low"
+    },
+    {
+      "code": "CX",
+      "name": "Certification Status"
+    },
+    {
+      "code": "CY",
+      "name": "Car Spaces are Adequate"
+    },
+    {
+      "code": "CZ",
+      "name": "Car Spaces are Inadequate"
+    },
+    {
+      "code": "D0",
+      "name": "Comprehensive Coverage Will Transfer"
+    },
+    {
+      "code": "D1",
+      "name": "Issue Check Payable to Borrower and Return to Servicer"
+    },
+    {
+      "code": "D2",
+      "name": "Issue Check Payable to Servicer and Return to Servicer"
+    },
+    {
+      "code": "D3",
+      "name": "Issue Check Payable to Borrower and Send to Borrower"
+    },
+    {
+      "code": "D4",
+      "name": "Issue Check Payable to Servicer or Borrower and Return to Servicer"
+    },
+    {
+      "code": "D5",
+      "name": "Issue Check Payable to Other Payee"
+    },
+    {
+      "code": "D6",
+      "name": "Positive"
+    },
+    {
+      "code": "D7",
+      "name": "Negative"
+    },
+    {
+      "code": "D8",
+      "name": "Taxes are Typical for the Area and Price Range"
+    },
+    {
+      "code": "D9",
+      "name": "Improvement Conforms to Zoning Regulations"
+    },
+    {
+      "code": "DA",
+      "name": "Call to Directory Assistance for Borrower Telephone"
+    },
+    {
+      "code": "DB",
+      "name": "Deferment or Forbearance Begin"
+    },
+    {
+      "code": "DC",
+      "name": "Declined"
+    },
+    {
+      "code": "DD",
+      "name": "Borrower Furnished Demographic Data"
+    },
+    {
+      "code": "DE",
+      "name": "Deferment or Forbearance End"
+    },
+    {
+      "code": "DF",
+      "name": "Funds available for Unsecured Creditors"
+    },
+    {
+      "code": "DG",
+      "name": "Dynamic Brakes are Out"
+    },
+    {
+      "code": "DH",
+      "name": "Debtor has been Domiciled"
+    },
+    {
+      "code": "DI",
+      "name": "Disoriented"
+    },
+    {
+      "code": "DJ",
+      "name": "Dynamic Brakes are Operational"
+    },
+    {
+      "code": "DK",
+      "name": "Construction Warranty"
+    },
+    {
+      "code": "DL",
+      "name": "Construction Warranty Transferable"
+    },
+    {
+      "code": "DM",
+      "name": "Maintenance Drug under Client's Benefit Plan"
+    },
+    {
+      "code": "DN",
+      "name": "Payment Reduced Because Maximum Allowable Cost Exceeded"
+    },
+    {
+      "code": "DO",
+      "name": "Benefits Terminated Prior to Service Date"
+    },
+    {
+      "code": "DP",
+      "name": "Depressed"
+    },
+    {
+      "code": "DQ",
+      "name": "Drug Part of Formulary Data Base"
+    },
+    {
+      "code": "DR",
+      "name": "Subject not Engaged in Business"
+    },
+    {
+      "code": "DS",
+      "name": "All Door Seals are Intact"
+    },
+    {
+      "code": "DT",
+      "name": "Filing Fee Attached"
+    },
+    {
+      "code": "DU",
+      "name": "Subject not Engaged in Business at Requested Address"
+    },
+    {
+      "code": "DV",
+      "name": "Suspended"
+    },
+    {
+      "code": "DW",
+      "name": "Total"
+    },
+    {
+      "code": "DX",
+      "name": "Unable to Respond"
+    },
+    {
+      "code": "DY",
+      "name": "Dyspnea with Minimal Exertion"
+    },
+    {
+      "code": "DZ",
+      "name": "Uses Own Facilities"
+    },
+    {
+      "code": "E0",
+      "name": "Figures are Total"
+    },
+    {
+      "code": "E1",
+      "name": "Fixed Asset Breakdown Undisclosed"
+    },
+    {
+      "code": "E2",
+      "name": "For the Fiscal Year"
+    },
+    {
+      "code": "E3",
+      "name": "For the Period"
+    },
+    {
+      "code": "E4",
+      "name": "Formed by Consolidation"
+    },
+    {
+      "code": "E5",
+      "name": "Formed by Merger"
+    },
+    {
+      "code": "E6",
+      "name": "Prior Bankruptcy Case Filed in Last 6 Years"
+    },
+    {
+      "code": "E7",
+      "name": "Debtor is not Represented by an Attorney"
+    },
+    {
+      "code": "E8",
+      "name": "A Pending Case has been Filed"
+    },
+    {
+      "code": "E9",
+      "name": "Guaranteed by Parent Company"
+    },
+    {
+      "code": "EA",
+      "name": "Has Authority for All Purchases"
+    },
+    {
+      "code": "EB",
+      "name": "Has Authority to Purchase Supplies"
+    },
+    {
+      "code": "EC",
+      "name": "Equipment Certified"
+    },
+    {
+      "code": "ED",
+      "name": "Has Business Interruption Insurance"
+    },
+    {
+      "code": "EE",
+      "name": "Has Class of Stock"
+    },
+    {
+      "code": "EF",
+      "name": "Has Extended Coverage Insurance"
+    },
+    {
+      "code": "EG",
+      "name": "Has Fire Insurance"
+    },
+    {
+      "code": "EH",
+      "name": "Has Joint Authority"
+    },
+    {
+      "code": "EI",
+      "name": "Has Life Insurance"
+    },
+    {
+      "code": "EJ",
+      "name": "Existence of Preliminary Flood Determination"
+    },
+    {
+      "code": "EK",
+      "name": "Existence of Community Participation in the National Flood Insurance"
+    },
+    {
+      "code": "EL",
+      "name": "Endurance Limitations"
+    },
+    {
+      "code": "EM",
+      "name": "Has Marriage Contract"
+    },
+    {
+      "code": "EN",
+      "name": "Electricity On"
+    },
+    {
+      "code": "EO",
+      "name": "Equipment Is Overhauled"
+    },
+    {
+      "code": "EP",
+      "name": "Exercises Prescribed"
+    },
+    {
+      "code": "EQ",
+      "name": "Has No Par Value"
+    },
+    {
+      "code": "ER",
+      "name": "Engine Start-Up Performed with No Problems Reported"
+    },
+    {
+      "code": "ES",
+      "name": "Engine Start-Up Performed with Problems Reported"
+    },
+    {
+      "code": "ET",
+      "name": "Electrical Control System Shut Down"
+    },
+    {
+      "code": "EU",
+      "name": "Has Other Insurance"
+    },
+    {
+      "code": "EV",
+      "name": "Has Par Value"
+    },
+    {
+      "code": "EW",
+      "name": "Has Sole Authority"
+    },
+    {
+      "code": "EX",
+      "name": "Excellent"
+    },
+    {
+      "code": "EY",
+      "name": "Has Voting Rights"
+    },
+    {
+      "code": "EZ",
+      "name": "Heading Address in Registered Office Only"
+    },
+    {
+      "code": "F0",
+      "name": "High Level"
+    },
+    {
+      "code": "F1",
+      "name": "Homeworkers Employed"
+    },
+    {
+      "code": "F2",
+      "name": "In Subscriber Shares"
+    },
+    {
+      "code": "F3",
+      "name": "Inactive"
+    },
+    {
+      "code": "F4",
+      "name": "Incomplete"
+    },
+    {
+      "code": "F5",
+      "name": "Incorporation Details Requested"
+    },
+    {
+      "code": "F6",
+      "name": "Increase or Up"
+    },
+    {
+      "code": "F7",
+      "name": "Information Cannot Be Provided at This Time"
+    },
+    {
+      "code": "F8",
+      "name": "Information in Date"
+    },
+    {
+      "code": "F9",
+      "name": "Information Requires Investigation"
+    },
+    {
+      "code": "FA",
+      "name": "Actions has a Significant Environmental Effect"
+    },
+    {
+      "code": "FB",
+      "name": "Application Includes Complete System"
+    },
+    {
+      "code": "FC",
+      "name": "Antenna is Mounted on a Structure with an Existing Antenna"
+    },
+    {
+      "code": "FD",
+      "name": "Notice of Construction or Alteration has been Filed"
+    },
+    {
+      "code": "FE",
+      "name": "Applicant Wants to Monitor Frequency"
+    },
+    {
+      "code": "FF",
+      "name": "Applicant has been Denied Government Benefits Due to Use of Drugs"
+    },
+    {
+      "code": "FG",
+      "name": "Application is Certified"
+    },
+    {
+      "code": "FH",
+      "name": "Application is for other Than a New Station"
+    },
+    {
+      "code": "FI",
+      "name": "Fee Required"
+    },
+    {
+      "code": "FJ",
+      "name": "Flood Status"
+    },
+    {
+      "code": "FK",
+      "name": "Flood Insurance Required"
+    },
+    {
+      "code": "FL",
+      "name": "Federal Flood Insurance is Available (Community Participates)"
+    },
+    {
+      "code": "FM",
+      "name": "Inventory Valued Using LIFO (Last In/First Out)"
+    },
+    {
+      "code": "FN",
+      "name": "Not Too High Level"
+    },
+    {
+      "code": "FO",
+      "name": "Forgetful"
+    },
+    {
+      "code": "FP",
+      "name": "Flood Certification with Life of Loan"
+    },
+    {
+      "code": "FQ",
+      "name": "Street Maintenance is Public"
+    },
+    {
+      "code": "FR",
+      "name": "Fair"
+    },
+    {
+      "code": "FS",
+      "name": "Not Yet Registered"
+    },
+    {
+      "code": "FT",
+      "name": "Obliged to File Balance Sheet"
+    },
+    {
+      "code": "FU",
+      "name": "Official Confirmation Received"
+    },
+    {
+      "code": "FV",
+      "name": "Old But Well Kept"
+    },
+    {
+      "code": "FW",
+      "name": "Old Established Business"
+    },
+    {
+      "code": "FX",
+      "name": "Operated at Break Even"
+    },
+    {
+      "code": "FY",
+      "name": "Operates as Agent"
+    },
+    {
+      "code": "FZ",
+      "name": "Flood Zone Status"
+    },
+    {
+      "code": "G0",
+      "name": "Out of Business"
+    },
+    {
+      "code": "G1",
+      "name": "Outstanding Claims"
+    },
+    {
+      "code": "G2",
+      "name": "Gas On"
+    },
+    {
+      "code": "G3",
+      "name": "Hazardous Materials are Used or Produced"
+    },
+    {
+      "code": "G4",
+      "name": "Genetically Engineered Organisms are Used or Produced"
+    },
+    {
+      "code": "G5",
+      "name": "This is a Group Proposal"
+    },
+    {
+      "code": "G6",
+      "name": "Historical Sites Are Affected"
+    },
+    {
+      "code": "G7",
+      "name": "Facilities are Properly Accredited or Authorized"
+    },
+    {
+      "code": "G8",
+      "name": "Proprietary or Privileged Information will be contained in the Application"
+    },
+    {
+      "code": "G9",
+      "name": "This Project has an Actual or Potential Impact on the Environment"
+    },
+    {
+      "code": "GA",
+      "name": "Growth Rate is Fully Developed"
+    },
+    {
+      "code": "GB",
+      "name": "Outstanding Social Security Claims"
+    },
+    {
+      "code": "GC",
+      "name": "Outstanding Value Added Tax (VAT) Claims"
+    },
+    {
+      "code": "GD",
+      "name": "Product Demonstration in Effect"
+    },
+    {
+      "code": "GE",
+      "name": "Ownership Acknowledged in Signed Statement"
+    },
+    {
+      "code": "GF",
+      "name": "Ownership Acknowledged Verbally"
+    },
+    {
+      "code": "GG",
+      "name": "Ownership Not Acknowledged"
+    },
+    {
+      "code": "GH",
+      "name": "Owns No Real Estate"
+    },
+    {
+      "code": "GI",
+      "name": "Owns Real Estate but Details Not Available"
+    },
+    {
+      "code": "GJ",
+      "name": "Prepared from Books Without Audit"
+    },
+    {
+      "code": "GK",
+      "name": "Prepared from Statement by Accountant"
+    },
+    {
+      "code": "GL",
+      "name": "Profits Paid to Group"
+    },
+    {
+      "code": "GM",
+      "name": "Shelf Set to Manufacturer's Standard"
+    },
+    {
+      "code": "GN",
+      "name": "Publicly Traded"
+    },
+    {
+      "code": "GO",
+      "name": "Good"
+    },
+    {
+      "code": "GP",
+      "name": "Purchase Authority is Qualified"
+    },
+    {
+      "code": "GQ",
+      "name": "Purchases on Floor Plan"
+    },
+    {
+      "code": "GR",
+      "name": "Shelf Set to Retailer's Schematic"
+    },
+    {
+      "code": "GS",
+      "name": "Purchases on Letter of Credit"
+    },
+    {
+      "code": "GT",
+      "name": "Real Estate Check is Necessary"
+    },
+    {
+      "code": "GU",
+      "name": "Record of Preferential Claims"
+    },
+    {
+      "code": "GV",
+      "name": "Registered Address is Same as Business Address"
+    },
+    {
+      "code": "GW",
+      "name": "Relatives Help in Business"
+    },
+    {
+      "code": "GX",
+      "name": "Satisfactory"
+    },
+    {
+      "code": "GY",
+      "name": "Seasons are Steady"
+    },
+    {
+      "code": "GZ",
+      "name": "Secured"
+    },
+    {
+      "code": "H0",
+      "name": "Organization Certifies Compliance with Federal Lobbying Regulations"
+    },
+    {
+      "code": "H1",
+      "name": "Project involves International Co-operative Activities"
+    },
+    {
+      "code": "H2",
+      "name": "Human Anatomical Substances Are Used"
+    },
+    {
+      "code": "H3",
+      "name": "Handicap Facilities Are Available"
+    },
+    {
+      "code": "H4",
+      "name": "Lobbying Activities Have Been Conducted Regarding the Proposal"
+    },
+    {
+      "code": "H5",
+      "name": "Organization Certifies Compliance With the Drug-Free Workplace Act"
+    },
+    {
+      "code": "H6",
+      "name": "Organization Certifies Compliance with the Code of Federal Regulations Regarding Research Misconduct"
+    },
+    {
+      "code": "H7",
+      "name": "Organization Provides a Smoke Free Workplace"
+    },
+    {
+      "code": "H8",
+      "name": "Organization Certifies Compliance with Federal Discrimination Regulations"
+    },
+    {
+      "code": "H9",
+      "name": "Organization Certifies Compliance with the Code of Federal Regulations Regarding Responsibility of Applicants for Promoting Objectivity in Research for which Public Health Service (PHS) Funding is Sought"
+    },
+    {
+      "code": "HA",
+      "name": "Well Maintained"
+    },
+    {
+      "code": "HB",
+      "name": "Interest Rate Buydown"
+    },
+    {
+      "code": "HC",
+      "name": "Heating and Cooling for the Individual Units Separately Metered"
+    },
+    {
+      "code": "HD",
+      "name": "High Discharge"
+    },
+    {
+      "code": "HE",
+      "name": "High Engine Water Pressure"
+    },
+    {
+      "code": "HF",
+      "name": "Interest Only"
+    },
+    {
+      "code": "HG",
+      "name": "Graduated Payment"
+    },
+    {
+      "code": "HH",
+      "name": "Principal Balance Exceeds Maximum Negative Amortization"
+    },
+    {
+      "code": "HI",
+      "name": "Last Change"
+    },
+    {
+      "code": "HJ",
+      "name": "Liability Released"
+    },
+    {
+      "code": "HK",
+      "name": "Liability Not Released"
+    },
+    {
+      "code": "HL",
+      "name": "Hearing Limitations"
+    },
+    {
+      "code": "HM",
+      "name": "Liability Determined by Note Holder"
+    },
+    {
+      "code": "HN",
+      "name": "After Conversion"
+    },
+    {
+      "code": "HO",
+      "name": "Hostile"
+    },
+    {
+      "code": "HP",
+      "name": "After Modification"
+    },
+    {
+      "code": "HQ",
+      "name": "Balloon"
+    },
+    {
+      "code": "HR",
+      "name": "Capitalized Mortgage"
+    },
+    {
+      "code": "HS",
+      "name": "Federal Wages in Effect"
+    },
+    {
+      "code": "HT",
+      "name": "Social Security Number (SSN) Never Issued"
+    },
+    {
+      "code": "HU",
+      "name": "Name Does Not Match Social Security Number (SSN)"
+    },
+    {
+      "code": "HV",
+      "name": "Birthdate Does Not Match Social Security Number (SSN)"
+    },
+    {
+      "code": "HW",
+      "name": "Impossible Social Security Number (SSN)"
+    },
+    {
+      "code": "HX",
+      "name": "Employee is Ineligible to Work"
+    },
+    {
+      "code": "HY",
+      "name": "Metes and Bounds"
+    },
+    {
+      "code": "HZ",
+      "name": "Consolidation, Extension, Modification of Mortgage Loan (CEM)"
+    },
+    {
+      "code": "I0",
+      "name": "Based on Operating Data"
+    },
+    {
+      "code": "I1",
+      "name": "Uses Outside Services"
+    },
+    {
+      "code": "I2",
+      "name": "Very High Level"
+    },
+    {
+      "code": "I3",
+      "name": "Very Small"
+    },
+    {
+      "code": "I4",
+      "name": "Voluntary Bankruptcy"
+    },
+    {
+      "code": "I5",
+      "name": "Well Balanced"
+    },
+    {
+      "code": "I6",
+      "name": "Well Regarded in Business Circles"
+    },
+    {
+      "code": "I7",
+      "name": "Organization has Delinquent Federal Debts"
+    },
+    {
+      "code": "I8",
+      "name": "Organization has been Placed on the Federal Debarment and Suspension List"
+    },
+    {
+      "code": "I9",
+      "name": "No-show Indicator"
+    },
+    {
+      "code": "IA",
+      "name": "Interest Paid in Advance"
+    },
+    {
+      "code": "IB",
+      "name": "Interest Paid in Arrears"
+    },
+    {
+      "code": "IC",
+      "name": "Interest Carryover"
+    },
+    {
+      "code": "ID",
+      "name": "Sells Directly"
+    },
+    {
+      "code": "IE",
+      "name": "Sells with Agents"
+    },
+    {
+      "code": "IF",
+      "name": "Sells with Storage"
+    },
+    {
+      "code": "IG",
+      "name": "Small"
+    },
+    {
+      "code": "IH",
+      "name": "Independent at Home"
+    },
+    {
+      "code": "II",
+      "name": "Some Increase"
+    },
+    {
+      "code": "IJ",
+      "name": "Somewhat Declining Tendency"
+    },
+    {
+      "code": "IK",
+      "name": "Started Some Time Ago"
+    },
+    {
+      "code": "IL",
+      "name": "Industry Location"
+    },
+    {
+      "code": "IM",
+      "name": "Sufficient"
+    },
+    {
+      "code": "IN",
+      "name": "Indifferent"
+    },
+    {
+      "code": "IO",
+      "name": "Termination Date Set"
+    },
+    {
+      "code": "IP",
+      "name": "Injury occurred on Employer's Premises"
+    },
+    {
+      "code": "IQ",
+      "name": "Terms Include Lump Sum Payments"
+    },
+    {
+      "code": "IR",
+      "name": "Terms Include Progress Payments"
+    },
+    {
+      "code": "IS",
+      "name": "Terms on Cost Plus Basis"
+    },
+    {
+      "code": "IT",
+      "name": "Terms on Fixed Fee Basis"
+    },
+    {
+      "code": "IU",
+      "name": "Trade Style Registered"
+    },
+    {
+      "code": "IV",
+      "name": "Trading Address of Sole Proprietor"
+    },
+    {
+      "code": "IW",
+      "name": "Unchanged Situation"
+    },
+    {
+      "code": "IX",
+      "name": "Undetermined"
+    },
+    {
+      "code": "IY",
+      "name": "Unsatisfactory"
+    },
+    {
+      "code": "IZ",
+      "name": "Unsecured"
+    },
+    {
+      "code": "J0",
+      "name": "Qualifies as an Energy Efficient Home"
+    },
+    {
+      "code": "J1",
+      "name": "Military Services Barred from Recruitment Activities at the Proposing Organization's Site(s)"
+    },
+    {
+      "code": "J2",
+      "name": "Rate Negotiated"
+    },
+    {
+      "code": "J3",
+      "name": "Under Penalty of Perjury the Information is True and Correct"
+    },
+    {
+      "code": "J4",
+      "name": "Project Requires Inter-Government Review for Activities that affect State or Local Government or Possible National Security Implications"
+    },
+    {
+      "code": "J5",
+      "name": "Filing on Behalf of Debtor is Authorized"
+    },
+    {
+      "code": "J6",
+      "name": "Debtor Understands the Relief available under each Bankruptcy Chapter"
+    },
+    {
+      "code": "J7",
+      "name": "Attorney Declares that Debtor has been Informed"
+    },
+    {
+      "code": "J8",
+      "name": "Attorney has Explained the Relief available under each Bankruptcy Chapter"
+    },
+    {
+      "code": "J9",
+      "name": "There has been a Transfer of a Claim Against the Debtor by or to any Petitioner"
+    },
+    {
+      "code": "JA",
+      "name": "Third Party Originated"
+    },
+    {
+      "code": "JB",
+      "name": "Existing Construction"
+    },
+    {
+      "code": "JC",
+      "name": "Other Lien"
+    },
+    {
+      "code": "JD",
+      "name": "Subject Lien"
+    },
+    {
+      "code": "JE",
+      "name": "No Evidence of Property Damage Observed such as Dampness, Termites, or Structure Settlement"
+    },
+    {
+      "code": "JF",
+      "name": "Primary Underwriting System"
+    },
+    {
+      "code": "JG",
+      "name": "Non New Parts Used"
+    },
+    {
+      "code": "JH",
+      "name": "Pledged Loan"
+    },
+    {
+      "code": "JI",
+      "name": "Security Delivery"
+    },
+    {
+      "code": "JJ",
+      "name": "Secondary Underwriting System"
+    },
+    {
+      "code": "JK",
+      "name": "Distribution is Stopped"
+    },
+    {
+      "code": "JL",
+      "name": "Sentence was Suspended"
+    },
+    {
+      "code": "JM",
+      "name": "Very Negative Information Exists"
+    },
+    {
+      "code": "JN",
+      "name": "Payment Notes Exist"
+    },
+    {
+      "code": "JO",
+      "name": "Immigrated"
+    },
+    {
+      "code": "JP",
+      "name": "Audited with Qualifications"
+    },
+    {
+      "code": "JQ",
+      "name": "Audited"
+    },
+    {
+      "code": "JR",
+      "name": "Temporarily Closed"
+    },
+    {
+      "code": "JS",
+      "name": "Partial"
+    },
+    {
+      "code": "JT",
+      "name": "Telephone Number is Unpublished"
+    },
+    {
+      "code": "JU",
+      "name": "Telephone Number is Not in Service"
+    },
+    {
+      "code": "JV",
+      "name": "Negative Information Exists for the Group"
+    },
+    {
+      "code": "JW",
+      "name": "The More Important Items are Only Included"
+    },
+    {
+      "code": "JX",
+      "name": "Interest Owned by Affiliated Company"
+    },
+    {
+      "code": "JY",
+      "name": "Interest Owned by Subject of Inquiry"
+    },
+    {
+      "code": "JZ",
+      "name": "Qualifies as a Government Approved Condominium or Project"
+    },
+    {
+      "code": "K0",
+      "name": "Account Receivables Breakdown Undisclosed"
+    },
+    {
+      "code": "K1",
+      "name": "Additional Record Items Available"
+    },
+    {
+      "code": "K2",
+      "name": "Address is Qualified"
+    },
+    {
+      "code": "K3",
+      "name": "All Paid In or Issued"
+    },
+    {
+      "code": "K4",
+      "name": "Appears High"
+    },
+    {
+      "code": "K5",
+      "name": "Appears Not to Guarantee Sufficient Coverage"
+    },
+    {
+      "code": "K6",
+      "name": "Appears Sufficiently High"
+    },
+    {
+      "code": "K7",
+      "name": "Appears to Indicate a Strained Situation"
+    },
+    {
+      "code": "K8",
+      "name": "Banks with Main National Banks"
+    },
+    {
+      "code": "K9",
+      "name": "Bills Paid from Branch Office"
+    },
+    {
+      "code": "KA",
+      "name": "Bills Paid from Division Office"
+    },
+    {
+      "code": "KB",
+      "name": "Bills Paid from Headquarters Office"
+    },
+    {
+      "code": "KC",
+      "name": "Bond Information Available"
+    },
+    {
+      "code": "KD",
+      "name": "Changed Accounting Date"
+    },
+    {
+      "code": "KE",
+      "name": "Clear"
+    },
+    {
+      "code": "KF",
+      "name": "Clear Declining Tendency"
+    },
+    {
+      "code": "KG",
+      "name": "Clear Increase"
+    },
+    {
+      "code": "KH",
+      "name": "Cluttered"
+    },
+    {
+      "code": "KI",
+      "name": "Company has No Other Locations"
+    },
+    {
+      "code": "KJ",
+      "name": "Company is Branch of Foreign Entity"
+    },
+    {
+      "code": "KK",
+      "name": "Company is Perpetual"
+    },
+    {
+      "code": "KL",
+      "name": "Company is Tax Exempt"
+    },
+    {
+      "code": "KM",
+      "name": "Compared to Same Period Last Year"
+    },
+    {
+      "code": "KN",
+      "name": "Conducted at a Loss"
+    },
+    {
+      "code": "KO",
+      "name": "Inventory Valued using FIFO (First In/First Out)"
+    },
+    {
+      "code": "KP",
+      "name": "Large"
+    },
+    {
+      "code": "KQ",
+      "name": "Letter of Agreement Present"
+    },
+    {
+      "code": "KR",
+      "name": "Letter of Agreement Withdrawn"
+    },
+    {
+      "code": "KS",
+      "name": "Letter of Liability Present"
+    },
+    {
+      "code": "KT",
+      "name": "Letter of Liability Withdrawn"
+    },
+    {
+      "code": "KU",
+      "name": "Location Inquired Upon is a Branch"
+    },
+    {
+      "code": "KV",
+      "name": "Location Inquired Upon is a Branch; Headquarters is Provided"
+    },
+    {
+      "code": "KW",
+      "name": "Location inquired upon is a Headquarters"
+    },
+    {
+      "code": "KX",
+      "name": "Location is Foreign"
+    },
+    {
+      "code": "KY",
+      "name": "Means Exhausted"
+    },
+    {
+      "code": "KZ",
+      "name": "Medium to Large"
+    },
+    {
+      "code": "L0",
+      "name": "Immunization Mandated by State Law for Employment"
+    },
+    {
+      "code": "L1",
+      "name": "General Standard of 20 Degree or .5 Diopter Sphere or Cylinder Change Met"
+    },
+    {
+      "code": "L2",
+      "name": "Replacement Due to Loss or Theft"
+    },
+    {
+      "code": "L3",
+      "name": "Replacement Due to Breakage or Damage"
+    },
+    {
+      "code": "L4",
+      "name": "Replacement Due to Patient Preference"
+    },
+    {
+      "code": "L5",
+      "name": "Replacement Due to Medical Reason"
+    },
+    {
+      "code": "L6",
+      "name": "Land Contract"
+    },
+    {
+      "code": "L7",
+      "name": "Account Current"
+    },
+    {
+      "code": "L8",
+      "name": "Very Good"
+    },
+    {
+      "code": "L9",
+      "name": "Restored"
+    },
+    {
+      "code": "LA",
+      "name": "Letter of Map Amendment or Letter of Map Revision"
+    },
+    {
+      "code": "LB",
+      "name": "Legally Blind"
+    },
+    {
+      "code": "LC",
+      "name": "Producer of Goods"
+    },
+    {
+      "code": "LD",
+      "name": "Drawback Indicator"
+    },
+    {
+      "code": "LE",
+      "name": "Lethargic"
+    },
+    {
+      "code": "LF",
+      "name": "Customs Rule Applicable"
+    },
+    {
+      "code": "LG",
+      "name": "Exported Pursuant to Law Regulation or to Cancel Customs Bond"
+    },
+    {
+      "code": "LH",
+      "name": "Country of Origin Information Applies to All Prior Shipments"
+    },
+    {
+      "code": "LI",
+      "name": "Price Estimated"
+    },
+    {
+      "code": "LJ",
+      "name": "North American Free Trade Agreement (NAFTA) Preference"
+    },
+    {
+      "code": "LK",
+      "name": "Kit Form"
+    },
+    {
+      "code": "LL",
+      "name": "Lockout Effective"
+    },
+    {
+      "code": "LM",
+      "name": "Letter of Appointment"
+    },
+    {
+      "code": "LN",
+      "name": "Facility’s Emergency Response Plan Includes Specific Actions to be Taken in Response to Accidental Releases of Regulated Substances"
+    },
+    {
+      "code": "LO",
+      "name": "Locomotive is Isolated"
+    },
+    {
+      "code": "LP",
+      "name": "Low Engine Oil Pressure"
+    },
+    {
+      "code": "LQ",
+      "name": "Facility had a Safety Inspection"
+    },
+    {
+      "code": "LR",
+      "name": "Locomotive Engine is Running"
+    },
+    {
+      "code": "LS",
+      "name": "Lessee Signature on File"
+    },
+    {
+      "code": "LT",
+      "name": "Lender or Servicer Transfer"
+    },
+    {
+      "code": "LU",
+      "name": "Evidence of Dampness"
+    },
+    {
+      "code": "LV",
+      "name": "Evidence of Termites"
+    },
+    {
+      "code": "LW",
+      "name": "Evidence of Structure Settlement"
+    },
+    {
+      "code": "LX",
+      "name": "Salvage Moved"
+    },
+    {
+      "code": "LY",
+      "name": "Address is Former Location"
+    },
+    {
+      "code": "LZ",
+      "name": "Address is Occupied by Others"
+    },
+    {
+      "code": "M0",
+      "name": "Facility has an Occupational Safety and Health Act"
+    },
+    {
+      "code": "M1",
+      "name": "Data Corrected"
+    },
+    {
+      "code": "M2",
+      "name": "Servicer Record Selected"
+    },
+    {
+      "code": "M3",
+      "name": "Length of Service is 3 Months or Less"
+    },
+    {
+      "code": "M4",
+      "name": "Length of Service is 3 Months or more, and Less than 1 Year"
+    },
+    {
+      "code": "M5",
+      "name": "Length of Service is 1 Year through 5 Years"
+    },
+    {
+      "code": "M6",
+      "name": "Length of Service is more than 5 Years"
+    },
+    {
+      "code": "M7",
+      "name": "Cataract or Corneal Transplant or Other Condition such as Keratoconus"
+    },
+    {
+      "code": "M8",
+      "name": "Vision in Worse Eye Correctable to 20/40 or Better with Regular Lenses"
+    },
+    {
+      "code": "M9",
+      "name": "Contact Lenses Corrected Vision in Worse Eye to 20/40 or Better"
+    },
+    {
+      "code": "MA",
+      "name": "Major Alarm Flag Reported"
+    },
+    {
+      "code": "MB",
+      "name": "Equipment has Modified Configuration"
+    },
+    {
+      "code": "MC",
+      "name": "Other Mental Condition"
+    },
+    {
+      "code": "MD",
+      "name": "Marketing Time is 4 to 6 Months"
+    },
+    {
+      "code": "ME",
+      "name": "Trend Reversed"
+    },
+    {
+      "code": "MF",
+      "name": "Microprocessor Fault"
+    },
+    {
+      "code": "MG",
+      "name": "Mortgage Insurance Application Included"
+    },
+    {
+      "code": "MH",
+      "name": "Mortgage Credit Report Included"
+    },
+    {
+      "code": "MI",
+      "name": "Residential Loan Application Included"
+    },
+    {
+      "code": "MJ",
+      "name": "Real Estate Information Report Included"
+    },
+    {
+      "code": "MK",
+      "name": "Real Estate Title Evidence Included"
+    },
+    {
+      "code": "ML",
+      "name": "Manually Search and List"
+    },
+    {
+      "code": "MM",
+      "name": "Property is Occupied by Tenant (Market Rent)"
+    },
+    {
+      "code": "MN",
+      "name": "Property is Occupied by Tenant (Regulated Rent)"
+    },
+    {
+      "code": "MO",
+      "name": "Cooperative Project Includes or Owns Any Commercial Units"
+    },
+    {
+      "code": "MP",
+      "name": "Units and Project Amenities are Complete"
+    },
+    {
+      "code": "MQ",
+      "name": "Eligible Trust"
+    },
+    {
+      "code": "MR",
+      "name": "Resale Property"
+    },
+    {
+      "code": "MS",
+      "name": "Miscellaneous Skip-Trace Attempt"
+    },
+    {
+      "code": "MT",
+      "name": "Photos Match Description"
+    },
+    {
+      "code": "MU",
+      "name": "Photos Show Negative Influence"
+    },
+    {
+      "code": "MV",
+      "name": "Exclude from Monthly Debt"
+    },
+    {
+      "code": "MW",
+      "name": "This Broker Market Analysis is being Completed for Home Market Assistance"
+    },
+    {
+      "code": "MX",
+      "name": "This Broker Market Analysis is being Completed for Homesale or Buyout"
+    },
+    {
+      "code": "MY",
+      "name": "Project Type is Single Family"
+    },
+    {
+      "code": "MZ",
+      "name": "Project Type is Other"
+    },
+    {
+      "code": "N0",
+      "name": "Hospitalized over-night"
+    },
+    {
+      "code": "N1",
+      "name": "Claim Involves (a) Day(s) Away From Work"
+    },
+    {
+      "code": "N2",
+      "name": "Claim involves Restricted Work Activity Without Days Away from Work"
+    },
+    {
+      "code": "N3",
+      "name": "Strike or Lockout in Progress"
+    },
+    {
+      "code": "N4",
+      "name": "Shutdown or Layoff in Progress"
+    },
+    {
+      "code": "N5",
+      "name": "Work is Seasonal"
+    },
+    {
+      "code": "N6",
+      "name": "Natural Disaster or Adverse Weather Affecting Work"
+    },
+    {
+      "code": "N7",
+      "name": "Shorter Work Schedules or Fewer Pay Periods than Usual in Effect"
+    },
+    {
+      "code": "N8",
+      "name": "Longer Work Schedules or More Pay Periods than Usual in Effect"
+    },
+    {
+      "code": "N9",
+      "name": "Other Factors Affect Claim Frequency"
+    },
+    {
+      "code": "NA",
+      "name": "No User Available"
+    },
+    {
+      "code": "NB",
+      "name": "Neighborhood Predominately Single Family Dwellings"
+    },
+    {
+      "code": "NC",
+      "name": "Item has Direct Numerical Control"
+    },
+    {
+      "code": "ND",
+      "name": "Note Holder Permission Required"
+    },
+    {
+      "code": "NE",
+      "name": "Notarized"
+    },
+    {
+      "code": "NF",
+      "name": "New Construction"
+    },
+    {
+      "code": "NG",
+      "name": "Mortgage Points are Customarily Paid by Seller"
+    },
+    {
+      "code": "NH",
+      "name": "No National Flood Insurance Program map"
+    },
+    {
+      "code": "NI",
+      "name": "Seasoned Mortgage"
+    },
+    {
+      "code": "NJ",
+      "name": "Issues are Anticipated that would Affect the Ability to Secure Financing of the Subject Property"
+    },
+    {
+      "code": "NK",
+      "name": "Citizenship"
+    },
+    {
+      "code": "NL",
+      "name": "Group Disability Insurance Mandatory"
+    },
+    {
+      "code": "NM",
+      "name": "Retail Origination"
+    },
+    {
+      "code": "NN",
+      "name": "Answer to Referenced Question is \"None\""
+    },
+    {
+      "code": "NO",
+      "name": "Arm's Length Transaction"
+    },
+    {
+      "code": "NP",
+      "name": "Certification of a Non-attorney Bankruptcy Petition Preparer"
+    },
+    {
+      "code": "NQ",
+      "name": "Eligible for the Fannie Mae Neighbors Program"
+    },
+    {
+      "code": "NR",
+      "name": "No Restrictions"
+    },
+    {
+      "code": "NS",
+      "name": "401K Plan in Effect"
+    },
+    {
+      "code": "NT",
+      "name": "Lodging Provided"
+    },
+    {
+      "code": "NU",
+      "name": "Not Used"
+    },
+    {
+      "code": "NV",
+      "name": "Contract Labor"
+    },
+    {
+      "code": "NW",
+      "name": "Bonuses Paid"
+    },
+    {
+      "code": "NX",
+      "name": "Minors Employed"
+    },
+    {
+      "code": "NY",
+      "name": "Meets Requirements for Fannie Mae Community Seconds Program"
+    },
+    {
+      "code": "NZ",
+      "name": "Purchase is a Result of Current Employer Sponsored Relocation"
+    },
+    {
+      "code": "O0",
+      "name": "Teaching Major"
+    },
+    {
+      "code": "O1",
+      "name": "Multiple Unspecified Instances"
+    },
+    {
+      "code": "O2",
+      "name": "Hires Part Time Employees as Needed"
+    },
+    {
+      "code": "O3",
+      "name": "Mexican Request"
+    },
+    {
+      "code": "O4",
+      "name": "Risk Management Plan Requires Predictive Filing"
+    },
+    {
+      "code": "O5",
+      "name": "Sanitized Copy"
+    },
+    {
+      "code": "O6",
+      "name": "Site Treated, Disposed, Recycled Waste On-Site or Discharged Waste to Sewer or Publicly Owned Treatment Works"
+    },
+    {
+      "code": "O7",
+      "name": "Toxic Chemical Claimed as Trade Secret"
+    },
+    {
+      "code": "O8",
+      "name": "Under Control of Reporting Facility or Parent Company"
+    },
+    {
+      "code": "O9",
+      "name": "Weather Conditions Not Known"
+    },
+    {
+      "code": "OA",
+      "name": "Seller Provided Below Market Secondary Financing"
+    },
+    {
+      "code": "OB",
+      "name": "Fixed Site"
+    },
+    {
+      "code": "OC",
+      "name": "Mobile Facility"
+    },
+    {
+      "code": "OD",
+      "name": "Transfer Authorized"
+    },
+    {
+      "code": "OE",
+      "name": "Transfer Complete"
+    },
+    {
+      "code": "OF",
+      "name": "Commercial Driver's License Verified"
+    },
+    {
+      "code": "OG",
+      "name": "Responsibility Accepted"
+    },
+    {
+      "code": "OH",
+      "name": "Waterbody Involved"
+    },
+    {
+      "code": "OI",
+      "name": "Charges Pending"
+    },
+    {
+      "code": "OJ",
+      "name": "Driver has Proper License Class"
+    },
+    {
+      "code": "OK",
+      "name": "Driver Compliant with License Restrictions"
+    },
+    {
+      "code": "OL",
+      "name": "Other Limitation"
+    },
+    {
+      "code": "OM",
+      "name": "Driver has Commercial Driver's License"
+    },
+    {
+      "code": "ON",
+      "name": "Driver has Medical Waiver"
+    },
+    {
+      "code": "OO",
+      "name": "Own other Federal Housing Administration Property"
+    },
+    {
+      "code": "OP",
+      "name": "Out of Range Product Temperature"
+    },
+    {
+      "code": "OQ",
+      "name": "Photographs Taken"
+    },
+    {
+      "code": "OR",
+      "name": "Other Restrictions"
+    },
+    {
+      "code": "OS",
+      "name": "Out of Service"
+    },
+    {
+      "code": "OT",
+      "name": "Oriented"
+    },
+    {
+      "code": "OU",
+      "name": "Police Officer at Scene"
+    },
+    {
+      "code": "OV",
+      "name": "Overridden"
+    },
+    {
+      "code": "OW",
+      "name": "Proposed"
+    },
+    {
+      "code": "OX",
+      "name": "Rating is Affected"
+    },
+    {
+      "code": "OY",
+      "name": "Veteran as Defined by the Federal Housing Administration (FHA), Veterans Administration (VA), or Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "code": "OZ",
+      "name": "Liability is Contingent or has a Co-signer"
+    },
+    {
+      "code": "P0",
+      "name": "Terminal Degree"
+    },
+    {
+      "code": "P1",
+      "name": "Patient was Discharged from the First Facility"
+    },
+    {
+      "code": "P2",
+      "name": "Patient was Admitted to the Second Facility"
+    },
+    {
+      "code": "P3",
+      "name": "Property has a Family Room or Den"
+    },
+    {
+      "code": "P4",
+      "name": "Property has Central Air Conditioning"
+    },
+    {
+      "code": "P5",
+      "name": "Property Typical of Neighborhood"
+    },
+    {
+      "code": "P6",
+      "name": "Property Deferred Maintenance Typical of Neighborhood"
+    },
+    {
+      "code": "P7",
+      "name": "Accepting Existing Patients"
+    },
+    {
+      "code": "P8",
+      "name": "Accepting New Patients"
+    },
+    {
+      "code": "P9",
+      "name": "Property Intended to be Occupied as Primary Residence"
+    },
+    {
+      "code": "PA",
+      "name": "Paralysis"
+    },
+    {
+      "code": "PB",
+      "name": "Phone Skip Begin"
+    },
+    {
+      "code": "PC",
+      "name": "Plan is Attached"
+    },
+    {
+      "code": "PD",
+      "name": "Phone Skip Resolved"
+    },
+    {
+      "code": "PE",
+      "name": "Phone Skip Exhaust"
+    },
+    {
+      "code": "PF",
+      "name": "Paid Outside of Closing"
+    },
+    {
+      "code": "PG",
+      "name": "Project is Subject to Ground Rent"
+    },
+    {
+      "code": "PH",
+      "name": "Prepayable"
+    },
+    {
+      "code": "PI",
+      "name": "Program"
+    },
+    {
+      "code": "PJ",
+      "name": "Provider is Participating"
+    },
+    {
+      "code": "PK",
+      "name": "Preliminary Flood Determination"
+    },
+    {
+      "code": "PL",
+      "name": "Provider Certification in the Taxonomy Has Been Verified"
+    },
+    {
+      "code": "PM",
+      "name": "Project and Services Budget is Maintained"
+    },
+    {
+      "code": "PN",
+      "name": "Atypical Physical Condition"
+    },
+    {
+      "code": "PO",
+      "name": "Personal Property Onsite"
+    },
+    {
+      "code": "PP",
+      "name": "Property Previously Winterized"
+    },
+    {
+      "code": "PQ",
+      "name": "Liability will be Resubordinated to the Loan upon Closing"
+    },
+    {
+      "code": "PR",
+      "name": "Poor"
+    },
+    {
+      "code": "PS",
+      "name": "Publication is Included in Sharing"
+    },
+    {
+      "code": "PT",
+      "name": "Project is Complete"
+    },
+    {
+      "code": "PU",
+      "name": "Not Paid"
+    },
+    {
+      "code": "PV",
+      "name": "Property Vacant 0-5 Percent"
+    },
+    {
+      "code": "PW",
+      "name": "Partial Weight Bearing"
+    },
+    {
+      "code": "PX",
+      "name": "Paid by Borrower Before Closing"
+    },
+    {
+      "code": "PY",
+      "name": "Property for Sale"
+    },
+    {
+      "code": "PZ",
+      "name": "Property Vacant Over 5 Percent"
+    },
+    {
+      "code": "Q0",
+      "name": "Veteran"
+    },
+    {
+      "code": "Q1",
+      "name": "Export Product"
+    },
+    {
+      "code": "Q2",
+      "name": "Distilled Spirit, Beer or Wine"
+    },
+    {
+      "code": "Q3",
+      "name": "U.S. Goods Returned"
+    },
+    {
+      "code": "Q4",
+      "name": "Candidate for U.S. Customs and Border Protection (CBP) Protest"
+    },
+    {
+      "code": "Q5",
+      "name": "Domestic Product"
+    },
+    {
+      "code": "Q6",
+      "name": "Prior Approval Letter and Official Orders on File"
+    },
+    {
+      "code": "Q7",
+      "name": "Importer's Substantiating Statement and Contract are on File"
+    },
+    {
+      "code": "Q8",
+      "name": "International Transport Movement"
+    },
+    {
+      "code": "Q9",
+      "name": "Piece Count should be Included in the Total Packing List Quantity"
+    },
+    {
+      "code": "QA",
+      "name": "Shipment should be Held at the Port"
+    },
+    {
+      "code": "QB",
+      "name": "Multiple States of Origin for this Item"
+    },
+    {
+      "code": "QC",
+      "name": "Multiple Countries of Origin for this Item"
+    },
+    {
+      "code": "QD",
+      "name": "Letter of Credit Restricted to a Specific Bank"
+    },
+    {
+      "code": "QE",
+      "name": "Letter of Credit Permits Transshipment"
+    },
+    {
+      "code": "QF",
+      "name": "Letter of Credit Covers Partial Shipments"
+    },
+    {
+      "code": "QG",
+      "name": "Dutiable Item"
+    },
+    {
+      "code": "QH",
+      "name": "Amounts should be Pro-rated across Line Items"
+    },
+    {
+      "code": "QI",
+      "name": "Toxic Substance Control Act (TSCA) Certification Required"
+    },
+    {
+      "code": "QJ",
+      "name": "Visa Required for this Item"
+    },
+    {
+      "code": "QK",
+      "name": "Item Subject to Quotas"
+    },
+    {
+      "code": "QL",
+      "name": "Item is a Set as Defined by the General Rules of Interpretation Section 3 (GRI3)"
+    },
+    {
+      "code": "QM",
+      "name": "Item is a Set"
+    },
+    {
+      "code": "QN",
+      "name": "Item is an Ensemble"
+    },
+    {
+      "code": "QO",
+      "name": "Item is a Metal Item"
+    },
+    {
+      "code": "QP",
+      "name": "Item is a Machine Part"
+    },
+    {
+      "code": "QQ",
+      "name": "Item is a Hazardous Item"
+    },
+    {
+      "code": "QR",
+      "name": "Item is Eligible under the Generalized System of Preferences (GSP)"
+    },
+    {
+      "code": "QS",
+      "name": "Quantity to be Imported has been Approved by the Necessary Agencies"
+    },
+    {
+      "code": "QT",
+      "name": "Filing Data is to be Withheld from Public Inspection"
+    },
+    {
+      "code": "QU",
+      "name": "Property Type Cooperative"
+    },
+    {
+      "code": "QV",
+      "name": "Paid by Borrower at Closing"
+    },
+    {
+      "code": "QW",
+      "name": "Paid by Other At or Before Closing"
+    },
+    {
+      "code": "QX",
+      "name": "Treated as a Reduction to Income"
+    },
+    {
+      "code": "QY",
+      "name": "Does Organization Receive Income from the Sale or Lease of Tangible Personal Property, the Lease of Real Property, or the Sale of Taxable Services?"
+    },
+    {
+      "code": "QZ",
+      "name": "Is organization a contractor-retailer primarily engaged in retail sales?"
+    },
+    {
+      "code": "R0",
+      "name": "Exempt from Public Records Law"
+    },
+    {
+      "code": "R1",
+      "name": "Debtor Holds Claim to Real Property"
+    },
+    {
+      "code": "R2",
+      "name": "Entity Claims to Hold a Secured Interest"
+    },
+    {
+      "code": "R3",
+      "name": "Debtor has Property of the Type Specified"
+    },
+    {
+      "code": "R4",
+      "name": "Debtor Elects the State Exemption"
+    },
+    {
+      "code": "R5",
+      "name": "Debtor Elects the Federal Exemption"
+    },
+    {
+      "code": "R6",
+      "name": "Co-debtor may be Jointly Liable"
+    },
+    {
+      "code": "R7",
+      "name": "Claim is Contingent"
+    },
+    {
+      "code": "R8",
+      "name": "Claim is Unliquidated"
+    },
+    {
+      "code": "R9",
+      "name": "Claim is Disputed"
+    },
+    {
+      "code": "RA",
+      "name": "Reference Telephone Attempt"
+    },
+    {
+      "code": "RB",
+      "name": "Debtor has No Creditors Holding Unsecured Priority Claims"
+    },
+    {
+      "code": "RC",
+      "name": "Reference Telephone Contact"
+    },
+    {
+      "code": "RD",
+      "name": "Rent Delinquent"
+    },
+    {
+      "code": "RE",
+      "name": "Claim is Subject to Setoff"
+    },
+    {
+      "code": "RF",
+      "name": "Debtor has No Executory Contracts or Unexpired Leases"
+    },
+    {
+      "code": "RG",
+      "name": "Lease is for Nonresidential Real Property"
+    },
+    {
+      "code": "RH",
+      "name": "Debtor has No Co-debtors"
+    },
+    {
+      "code": "RI",
+      "name": "Debtor is Married"
+    },
+    {
+      "code": "RJ",
+      "name": "Debtor's Spouse Maintains a Separate Household"
+    },
+    {
+      "code": "RK",
+      "name": "Real Estate Taxes are Included"
+    },
+    {
+      "code": "RL",
+      "name": "Property Insurance is Included"
+    },
+    {
+      "code": "RM",
+      "name": "Debtor has No Creditors Holding Secured Claims"
+    },
+    {
+      "code": "RN",
+      "name": "Rent Control"
+    },
+    {
+      "code": "RO",
+      "name": "Equipment is Rebuilt"
+    },
+    {
+      "code": "RP",
+      "name": "Individual Injured in Performance of Duty"
+    },
+    {
+      "code": "RQ",
+      "name": "Individual Injured by Third Party"
+    },
+    {
+      "code": "RR",
+      "name": "Quality of Management and its Enforcement of Rules and Regulations Based on General Appearances"
+    },
+    {
+      "code": "RS",
+      "name": "Pay Continued"
+    },
+    {
+      "code": "RT",
+      "name": "Sick Leave Taken"
+    },
+    {
+      "code": "RU",
+      "name": "Signature on File"
+    },
+    {
+      "code": "RV",
+      "name": "Low Refrigerant Capacity Shutdown"
+    },
+    {
+      "code": "RW",
+      "name": "Recent Defrost"
+    },
+    {
+      "code": "RX",
+      "name": "Rated Horsepower can be Produced"
+    },
+    {
+      "code": "RY",
+      "name": "Foreign Military Sale"
+    },
+    {
+      "code": "RZ",
+      "name": "Waiver of Prior Notice"
+    },
+    {
+      "code": "S0",
+      "name": "Alternate Certification Program Participant"
+    },
+    {
+      "code": "S1",
+      "name": "Services Provided at the Second Facility were available at the First Facility"
+    },
+    {
+      "code": "S2",
+      "name": "Under Treatment"
+    },
+    {
+      "code": "S3",
+      "name": "First Time Vacant"
+    },
+    {
+      "code": "S4",
+      "name": "Adverse Easement"
+    },
+    {
+      "code": "S5",
+      "name": "Disclosure Indicator"
+    },
+    {
+      "code": "S6",
+      "name": "Atypical Off Site Improvements"
+    },
+    {
+      "code": "S7",
+      "name": "Toxic Substances"
+    },
+    {
+      "code": "S8",
+      "name": "Adverse Encroachment"
+    },
+    {
+      "code": "S9",
+      "name": "Atypical Functional Condition"
+    },
+    {
+      "code": "SA",
+      "name": "Subject Property is Currently Listed"
+    },
+    {
+      "code": "SB",
+      "name": "Debtor is a Small Business as Defined in 11 U.S.C. Section 101"
+    },
+    {
+      "code": "SC",
+      "name": "Special Services are Mobile Home Only"
+    },
+    {
+      "code": "SD",
+      "name": "Special Services are Leasehold or Mobile Home or Both"
+    },
+    {
+      "code": "SE",
+      "name": "Debtor Elects to be Considered as a Small Business Under 11 U.S.C. Section 1121(e)"
+    },
+    {
+      "code": "SF",
+      "name": "Sensor Fault"
+    },
+    {
+      "code": "SG",
+      "name": "Street Lights are Public"
+    },
+    {
+      "code": "SH",
+      "name": "Special Services are Leasehold or Subleasehold or Both"
+    },
+    {
+      "code": "SI",
+      "name": "Hazardous Waste"
+    },
+    {
+      "code": "SJ",
+      "name": "Pest Infestation"
+    },
+    {
+      "code": "SK",
+      "name": "Road Maintenance Required"
+    },
+    {
+      "code": "SL",
+      "name": "Speech Limitations"
+    },
+    {
+      "code": "SM",
+      "name": "Currently Serving in Military"
+    },
+    {
+      "code": "SN",
+      "name": "Major Base Support"
+    },
+    {
+      "code": "SO",
+      "name": "Critical Support Level Met"
+    },
+    {
+      "code": "SP",
+      "name": "Street is Public"
+    },
+    {
+      "code": "SQ",
+      "name": "Local Wages in Effect"
+    },
+    {
+      "code": "SR",
+      "name": "Federal Worker Displacement"
+    },
+    {
+      "code": "SS",
+      "name": "Adverse Zoning"
+    },
+    {
+      "code": "ST",
+      "name": "New Services Requested"
+    },
+    {
+      "code": "SU",
+      "name": "Continued Services Requested"
+    },
+    {
+      "code": "SV",
+      "name": "Major Corporation/High Tech"
+    },
+    {
+      "code": "SW",
+      "name": "Sidewalk is Public"
+    },
+    {
+      "code": "SX",
+      "name": "Collective Bargaining Agreement Sent by Mail"
+    },
+    {
+      "code": "SY",
+      "name": "Collective Bargaining Agreement Sent by Facsimile"
+    },
+    {
+      "code": "SZ",
+      "name": "Contract"
+    },
+    {
+      "code": "T0",
+      "name": "Under Contract"
+    },
+    {
+      "code": "T1",
+      "name": "Road Test Performed with No Problems Reported"
+    },
+    {
+      "code": "T2",
+      "name": "Road Test Performed with Problems Reported"
+    },
+    {
+      "code": "T3",
+      "name": "Tires' Brand Match"
+    },
+    {
+      "code": "T4",
+      "name": "Real Estate Taxes are Current"
+    },
+    {
+      "code": "T5",
+      "name": "Hazard Insurance is Current"
+    },
+    {
+      "code": "T6",
+      "name": "Terminate Guarantee"
+    },
+    {
+      "code": "T7",
+      "name": "Atypical External Condition"
+    },
+    {
+      "code": "T8",
+      "name": "Subsidence (Settlement of Ground Surface Caused by Loss of Support)"
+    },
+    {
+      "code": "T9",
+      "name": "Utilities Inadequate"
+    },
+    {
+      "code": "TA",
+      "name": "Collective Bargaining Agreement Sent by Electronic Bulletin Board"
+    },
+    {
+      "code": "TB",
+      "name": "Debtor has No Creditors Holding Unsecured Nonpriority Claims"
+    },
+    {
+      "code": "TC",
+      "name": "Transport via Cargo Aircraft"
+    },
+    {
+      "code": "TD",
+      "name": "Annual Leave Taken"
+    },
+    {
+      "code": "TE",
+      "name": "Item is Special Test Equipment"
+    },
+    {
+      "code": "TF",
+      "name": "Operates as Representative For Others"
+    },
+    {
+      "code": "TG",
+      "name": "Claim Involves Work Related Death"
+    },
+    {
+      "code": "TH",
+      "name": "Claim Does Not Involve Work Related Death, Days Away from Work, or Restricted Work Activity"
+    },
+    {
+      "code": "TI",
+      "name": "Employee Has Not Recovered to Return to Work"
+    },
+    {
+      "code": "TJ",
+      "name": "Employee Has Retired"
+    },
+    {
+      "code": "TK",
+      "name": "Employee Has Resigned"
+    },
+    {
+      "code": "TL",
+      "name": "Employee is Permanently and Totally Disabled"
+    },
+    {
+      "code": "TM",
+      "name": "Traction Motor is Cut Out"
+    },
+    {
+      "code": "TN",
+      "name": "Atypical Quality of Construction"
+    },
+    {
+      "code": "TO",
+      "name": "Atypical Remodeling"
+    },
+    {
+      "code": "TP",
+      "name": "Transport via Passenger Aircraft"
+    },
+    {
+      "code": "TQ",
+      "name": "Atypical Additions"
+    },
+    {
+      "code": "TR",
+      "name": "Transfer to Bed, or Chair, or Both"
+    },
+    {
+      "code": "TS",
+      "name": "Adverse Marketing Conditions in Subject Property's Neighborhood"
+    },
+    {
+      "code": "TT",
+      "name": "Neighborhood Water Source is Public"
+    },
+    {
+      "code": "TU",
+      "name": "Neighborhood Sewage Treatment is Public"
+    },
+    {
+      "code": "TV",
+      "name": "Telephone Number Verified"
+    },
+    {
+      "code": "TW",
+      "name": "Neighborhood Street is Public"
+    },
+    {
+      "code": "TX",
+      "name": "Other Miscellaneous Adverse Characteristics"
+    },
+    {
+      "code": "TY",
+      "name": "Subject Property's Street is Public"
+    },
+    {
+      "code": "TZ",
+      "name": "Subject Property's Sewage Treatment is Public"
+    },
+    {
+      "code": "U0",
+      "name": "Disability"
+    },
+    {
+      "code": "U1",
+      "name": "Minimal Change"
+    },
+    {
+      "code": "U2",
+      "name": "Neat Appearance"
+    },
+    {
+      "code": "U3",
+      "name": "Net Worth Computed after Exemptions"
+    },
+    {
+      "code": "U4",
+      "name": "Net Worth Considerably Higher"
+    },
+    {
+      "code": "U5",
+      "name": "Net Worth Higher"
+    },
+    {
+      "code": "U6",
+      "name": "No Employees"
+    },
+    {
+      "code": "U7",
+      "name": "No Employees - Business Managed by Owner"
+    },
+    {
+      "code": "U8",
+      "name": "No Employees - Business Managed by Partners"
+    },
+    {
+      "code": "U9",
+      "name": "Not Out of Business"
+    },
+    {
+      "code": "UA",
+      "name": "Uninsurable, 1316 Property"
+    },
+    {
+      "code": "UB",
+      "name": "Conducted at a Profit"
+    },
+    {
+      "code": "UC",
+      "name": "Contingent Debt Indicated"
+    },
+    {
+      "code": "UD",
+      "name": "Continue"
+    },
+    {
+      "code": "UE",
+      "name": "Contracts Obtained by Bid"
+    },
+    {
+      "code": "UF",
+      "name": "Contracts Obtained by Negotiation"
+    },
+    {
+      "code": "UG",
+      "name": "Converted to Holding Company"
+    },
+    {
+      "code": "UH",
+      "name": "Cross Claim Filed"
+    },
+    {
+      "code": "UI",
+      "name": "Declining Tendency"
+    },
+    {
+      "code": "UJ",
+      "name": "Detrimental Events in Past, Relating to Business"
+    },
+    {
+      "code": "UK",
+      "name": "Detrimental Events in Past, Relating to Management"
+    },
+    {
+      "code": "UL",
+      "name": "Down or Decline or Decreased"
+    },
+    {
+      "code": "UM",
+      "name": "Employees Include Officers"
+    },
+    {
+      "code": "UN",
+      "name": "Uncooperative"
+    },
+    {
+      "code": "UO",
+      "name": "Employees Include Owners"
+    },
+    {
+      "code": "UP",
+      "name": "Employees Include Partners"
+    },
+    {
+      "code": "UQ",
+      "name": "Employees Include Temporary Workers"
+    },
+    {
+      "code": "UR",
+      "name": "Employees Vary According to Needs"
+    },
+    {
+      "code": "US",
+      "name": "Enclosed"
+    },
+    {
+      "code": "UT",
+      "name": "Up as Tolerated"
+    },
+    {
+      "code": "UU",
+      "name": "Extent of Audit, if any, Not Indicated"
+    },
+    {
+      "code": "UV",
+      "name": "Favorable Personal Reputation"
+    },
+    {
+      "code": "UW",
+      "name": "Figures are Abbreviated"
+    },
+    {
+      "code": "UX",
+      "name": "Figures are Converted to Agency Format"
+    },
+    {
+      "code": "UY",
+      "name": "Figures are Individual"
+    },
+    {
+      "code": "UZ",
+      "name": "Figures are Restated"
+    },
+    {
+      "code": "V0",
+      "name": "Ultimate Parent Company Financial Statement Used"
+    },
+    {
+      "code": "V1",
+      "name": "Valid Borrower Address or Phone Attempt with School Attended"
+    },
+    {
+      "code": "V2",
+      "name": "Lender Determined Borrower Moved Out of State"
+    },
+    {
+      "code": "V3",
+      "name": "Lender Determined Borrower Moved Back into State"
+    },
+    {
+      "code": "V4",
+      "name": "Lender Determined Borrower Incarcerated"
+    },
+    {
+      "code": "V5",
+      "name": "Lender Determined Borrower No Longer Incarcerated"
+    },
+    {
+      "code": "V6",
+      "name": "Original"
+    },
+    {
+      "code": "V7",
+      "name": "True and Exact Copy"
+    },
+    {
+      "code": "V8",
+      "name": "Subject Property's Water Source is Public"
+    },
+    {
+      "code": "V9",
+      "name": "Pictures Required"
+    },
+    {
+      "code": "VA",
+      "name": "Intercompany Relations Exist"
+    },
+    {
+      "code": "VB",
+      "name": "Inventory Valued at Lower of Cost or Market"
+    },
+    {
+      "code": "VC",
+      "name": "Inventory Valued at Other Methods"
+    },
+    {
+      "code": "VD",
+      "name": "Operates as Sole Agent"
+    },
+    {
+      "code": "VE",
+      "name": "Without Personal Judgment"
+    },
+    {
+      "code": "VF",
+      "name": "Work is Subcontracted"
+    },
+    {
+      "code": "VG",
+      "name": "Not Registered"
+    },
+    {
+      "code": "VH",
+      "name": "Immediate Attention Required"
+    },
+    {
+      "code": "VI",
+      "name": "Vehicle Inspection Report Completed"
+    },
+    {
+      "code": "VJ",
+      "name": "Middle to Medium"
+    },
+    {
+      "code": "VK",
+      "name": "Rent Control Likely"
+    },
+    {
+      "code": "VL",
+      "name": "Furnished"
+    },
+    {
+      "code": "VM",
+      "name": "Price Range Single Family or Planned Unit Development Not Applicable"
+    },
+    {
+      "code": "VN",
+      "name": "Price Range Condominium Not Applicable"
+    },
+    {
+      "code": "VO",
+      "name": "Price Range Two to Four Family Not Applicable"
+    },
+    {
+      "code": "VP",
+      "name": "Financial Figures are Projected Based on Sales"
+    },
+    {
+      "code": "VQ",
+      "name": "Financial Figures are Projected Based on Employees"
+    },
+    {
+      "code": "VR",
+      "name": "Parent Company has Bankruptcy"
+    },
+    {
+      "code": "VS",
+      "name": "Headquarters has Bankruptcy"
+    },
+    {
+      "code": "VT",
+      "name": "Commercial Motor Vehicle was Involved in this Conviction"
+    },
+    {
+      "code": "VU",
+      "name": "Commercial Motor Vehicle was Carrying Hazardous Materials when the Offense was Committed"
+    },
+    {
+      "code": "VV",
+      "name": "Prepared from Internal Book Figures"
+    },
+    {
+      "code": "VW",
+      "name": "Quantity Declined"
+    },
+    {
+      "code": "VX",
+      "name": "Quantity Details Unknown"
+    },
+    {
+      "code": "VY",
+      "name": "Was tax paid when purchased by seller?"
+    },
+    {
+      "code": "VZ",
+      "name": "Was item depreciable?"
+    },
+    {
+      "code": "W0",
+      "name": "Statement is on a Trading Trust"
+    },
+    {
+      "code": "W1",
+      "name": "New Registration"
+    },
+    {
+      "code": "W2",
+      "name": "Mailing Address Change"
+    },
+    {
+      "code": "W3",
+      "name": "Residence Address Change"
+    },
+    {
+      "code": "W4",
+      "name": "Name Change"
+    },
+    {
+      "code": "W5",
+      "name": "Party Enrollment Change"
+    },
+    {
+      "code": "W6",
+      "name": "Needs Absentee Ballot"
+    },
+    {
+      "code": "W7",
+      "name": "Would Like to be Election Day Worker"
+    },
+    {
+      "code": "W8",
+      "name": "Duplicate Registration"
+    },
+    {
+      "code": "W9",
+      "name": "Forwarded Application"
+    },
+    {
+      "code": "WA",
+      "name": "Walker Required"
+    },
+    {
+      "code": "WB",
+      "name": "Water On"
+    },
+    {
+      "code": "WC",
+      "name": "Application Incomplete"
+    },
+    {
+      "code": "WD",
+      "name": "Vehicle Plate Surrendered"
+    },
+    {
+      "code": "WE",
+      "name": "Written Notice to Note Holder"
+    },
+    {
+      "code": "WF",
+      "name": "Written Notice to Borrower"
+    },
+    {
+      "code": "WG",
+      "name": "Within Specified Time Period"
+    },
+    {
+      "code": "WH",
+      "name": "Within Specified Range"
+    },
+    {
+      "code": "WI",
+      "name": "Injury was Work Related"
+    },
+    {
+      "code": "WJ",
+      "name": "Dealer Pricing Authorization"
+    },
+    {
+      "code": "WK",
+      "name": "Summary Level Information"
+    },
+    {
+      "code": "WL",
+      "name": "Detail Level Information"
+    },
+    {
+      "code": "WM",
+      "name": "Non-occupant Co-borrower"
+    },
+    {
+      "code": "WN",
+      "name": "Unit is a Studio (Efficiency)"
+    },
+    {
+      "code": "WO",
+      "name": "Equipment in Working Order"
+    },
+    {
+      "code": "WP",
+      "name": "To be Watched"
+    },
+    {
+      "code": "WQ",
+      "name": "Undetermined Out of Business Status"
+    },
+    {
+      "code": "WR",
+      "name": "Wheelchair Required"
+    },
+    {
+      "code": "WS",
+      "name": "Balance Sheet Filed"
+    },
+    {
+      "code": "WT",
+      "name": "Winterized Tag Observed"
+    },
+    {
+      "code": "WU",
+      "name": "Material Safety Data Sheet"
+    },
+    {
+      "code": "WV",
+      "name": "Accepts Credit Cards"
+    },
+    {
+      "code": "WW",
+      "name": "All Purchases Made from Headquarters"
+    },
+    {
+      "code": "WX",
+      "name": "Busy"
+    },
+    {
+      "code": "WY",
+      "name": "Excessive"
+    },
+    {
+      "code": "WZ",
+      "name": "Fairly new"
+    },
+    {
+      "code": "X0",
+      "name": "No Employees - Business Managed by Director(s)"
+    },
+    {
+      "code": "X1",
+      "name": "Gross Weekly Amount is Estimated"
+    },
+    {
+      "code": "X2",
+      "name": "Waiting Period Disability Days are Non-consecutive"
+    },
+    {
+      "code": "X3",
+      "name": "Report Depicts Most Recent Data - Interim Period(s) Omitted"
+    },
+    {
+      "code": "X4",
+      "name": "Permanent Impairment Paid at Minimum"
+    },
+    {
+      "code": "X5",
+      "name": "Employee's Death is a Result of Work Injury or Illness"
+    },
+    {
+      "code": "X6",
+      "name": "Employee's Written Social Security Number Release is on File"
+    },
+    {
+      "code": "X7",
+      "name": "Employee's Medical Records Release Authorization is on File"
+    },
+    {
+      "code": "X8",
+      "name": "Employee Returned to Work with Pre-Injury Employer"
+    },
+    {
+      "code": "X9",
+      "name": "\"Cafe\" Plan in Effect"
+    },
+    {
+      "code": "XA",
+      "name": "Figures are Average"
+    },
+    {
+      "code": "XB",
+      "name": "Imports"
+    },
+    {
+      "code": "XC",
+      "name": "In Process of Establishing"
+    },
+    {
+      "code": "XD",
+      "name": "Intercompany Relations Consist of Endorsements"
+    },
+    {
+      "code": "XE",
+      "name": "Intercompany Relations Consist of Guarantees"
+    },
+    {
+      "code": "XF",
+      "name": "Intercompany Relations Consist of Leasing Arrangements"
+    },
+    {
+      "code": "XG",
+      "name": "Intercompany Relations Consist of Sharing Accounting"
+    },
+    {
+      "code": "XH",
+      "name": "Intercompany Relations Consist of Sharing Facilities"
+    },
+    {
+      "code": "XI",
+      "name": "Intercompany Relations Consist of Sharing Management"
+    },
+    {
+      "code": "XJ",
+      "name": "Intercompany Relations Consist of Sharing Personnel"
+    },
+    {
+      "code": "XK",
+      "name": "Interest in Other Business(es) Along with Family"
+    },
+    {
+      "code": "XL",
+      "name": "Interest in Other Business(es) Along with Others in Reported Company"
+    },
+    {
+      "code": "XM",
+      "name": "Inventory Valued at Company's Estimates"
+    },
+    {
+      "code": "XN",
+      "name": "Inventory Valued at Cost"
+    },
+    {
+      "code": "XO",
+      "name": "Inventory Valued using AVCO (Average Cost)"
+    },
+    {
+      "code": "XP",
+      "name": "Joint Ownership"
+    },
+    {
+      "code": "XQ",
+      "name": "Leases with No Rent Payments"
+    },
+    {
+      "code": "XR",
+      "name": "Leases with Option to Buy"
+    },
+    {
+      "code": "XS",
+      "name": "Leases with Token Payment"
+    },
+    {
+      "code": "XT",
+      "name": "Limited"
+    },
+    {
+      "code": "XU",
+      "name": "Located for Several Years"
+    },
+    {
+      "code": "XV",
+      "name": "Located Since Opening"
+    },
+    {
+      "code": "XW",
+      "name": "Modern"
+    },
+    {
+      "code": "XX",
+      "name": "Non-Existent"
+    },
+    {
+      "code": "XY",
+      "name": "Officer or Owner in Other Businesses in the Same Field"
+    },
+    {
+      "code": "XZ",
+      "name": "Operates as a Distributor for Others"
+    },
+    {
+      "code": "Y0",
+      "name": "Insured Cooperative"
+    },
+    {
+      "code": "Y1",
+      "name": "Worked in Industry for Several Years"
+    },
+    {
+      "code": "Y2",
+      "name": "Aircraft Operation"
+    },
+    {
+      "code": "Y3",
+      "name": "All Classifications on Policy Accounted For"
+    },
+    {
+      "code": "Y4",
+      "name": "Board Provided"
+    },
+    {
+      "code": "Y5",
+      "name": "Casual Labor"
+    },
+    {
+      "code": "Y6",
+      "name": "Certificates on File for All Subcontractors"
+    },
+    {
+      "code": "Y7",
+      "name": "Commissions Paid"
+    },
+    {
+      "code": "Y8",
+      "name": "Condition or Type of Records Cause Additional Audit Time"
+    },
+    {
+      "code": "Y9",
+      "name": "Domestic Workers Employed"
+    },
+    {
+      "code": "YA",
+      "name": "Operates from Residence"
+    },
+    {
+      "code": "YB",
+      "name": "Operates under License by Others"
+    },
+    {
+      "code": "YC",
+      "name": "Rents from Month to Month"
+    },
+    {
+      "code": "YD",
+      "name": "Semi-modern"
+    },
+    {
+      "code": "YE",
+      "name": "Under Construction"
+    },
+    {
+      "code": "YF",
+      "name": "Unlimited"
+    },
+    {
+      "code": "YG",
+      "name": "Used"
+    },
+    {
+      "code": "YH",
+      "name": "Variable"
+    },
+    {
+      "code": "YI",
+      "name": "Holder is a Subsidiary of Reporting Agent"
+    },
+    {
+      "code": "YJ",
+      "name": "Contact is Unchanged From Previous Report"
+    },
+    {
+      "code": "YK",
+      "name": "Report was Filed Last Year by This Agent"
+    },
+    {
+      "code": "YL",
+      "name": "Party is Authorized to do Business in This State"
+    },
+    {
+      "code": "YM",
+      "name": "Clear Decrease"
+    },
+    {
+      "code": "YN",
+      "name": "Employees Temporarily Laid Off"
+    },
+    {
+      "code": "YO",
+      "name": "Established in the Industry"
+    },
+    {
+      "code": "YP",
+      "name": "Global Business"
+    },
+    {
+      "code": "YQ",
+      "name": "Information to be Followed Up"
+    },
+    {
+      "code": "YR",
+      "name": "Known Details are Listed"
+    },
+    {
+      "code": "YS",
+      "name": "Land is Rented"
+    },
+    {
+      "code": "YT",
+      "name": "Low"
+    },
+    {
+      "code": "YU",
+      "name": "Prime Commercial Area"
+    },
+    {
+      "code": "YV",
+      "name": "Shares with Affiliated Company(ies)"
+    },
+    {
+      "code": "YW",
+      "name": "Slightly Higher"
+    },
+    {
+      "code": "YX",
+      "name": "Slightly Lower"
+    },
+    {
+      "code": "YY",
+      "name": "Stagnant"
+    },
+    {
+      "code": "YZ",
+      "name": "Territory Information is Available"
+    },
+    {
+      "code": "Z0",
+      "name": "Subcontractors Used"
+    },
+    {
+      "code": "Z1",
+      "name": "Insured Is a Subcontractor"
+    },
+    {
+      "code": "Z2",
+      "name": "Insured Has Multiple Entries"
+    },
+    {
+      "code": "Z3",
+      "name": "Insured Has Retail Operations"
+    },
+    {
+      "code": "Z4",
+      "name": "Insured Requested Division of Payroll of Employee(s)"
+    },
+    {
+      "code": "Z5",
+      "name": "Owner or Officer Interviewed"
+    },
+    {
+      "code": "Z6",
+      "name": "Premium Overtime Excluded"
+    },
+    {
+      "code": "Z7",
+      "name": "Records Reflect Proper Division of Employee(s) Payroll"
+    },
+    {
+      "code": "Z8",
+      "name": "Records Satisfactory for Audit"
+    },
+    {
+      "code": "Z9",
+      "name": "Relatives Employed"
+    },
+    {
+      "code": "ZA",
+      "name": "Customer - Configuration Change is Required"
+    },
+    {
+      "code": "ZB",
+      "name": "Condition Board of Inspection and Survey (INSURV) is Mission Degrading"
+    },
+    {
+      "code": "ZC",
+      "name": "Condition Board of Inspection and Survey (INSURV) is Maintenance Related"
+    },
+    {
+      "code": "ZD",
+      "name": "Condition Board of Inspection and Survey (INSURV) is Safety Related"
+    },
+    {
+      "code": "ZE",
+      "name": "Repair is Mission Essential"
+    },
+    {
+      "code": "ZF",
+      "name": "Repair is Safety Essential"
+    },
+    {
+      "code": "ZG",
+      "name": "Periodic Maintenance is Required"
+    },
+    {
+      "code": "ZH",
+      "name": "Condition Board of Inspection and Survey (INSURV) Discrepancy is Corrected"
+    },
+    {
+      "code": "ZI",
+      "name": "Progress is in Jeopardy"
+    },
+    {
+      "code": "ZJ",
+      "name": "Employee's Injury or Illness is Work Related"
+    },
+    {
+      "code": "ZK",
+      "name": "Final - Configuration Change is Required"
+    },
+    {
+      "code": "ZL",
+      "name": "Final - Delivery to Shop is Required"
+    },
+    {
+      "code": "ZM",
+      "name": "Final - Requestor Workforce will Assist"
+    },
+    {
+      "code": "ZN",
+      "name": "Job is Level 2"
+    },
+    {
+      "code": "ZO",
+      "name": "Preliminary - Configuration Change is Required"
+    },
+    {
+      "code": "ZP",
+      "name": "Preliminary - Delivery to Shop is Required"
+    },
+    {
+      "code": "ZQ",
+      "name": "Preliminary - Requestor Workforce will Assist"
+    },
+    {
+      "code": "ZR",
+      "name": "Configuration Change is Associated with Time Meter"
+    },
+    {
+      "code": "ZS",
+      "name": "Shop Has Lead Responsibility"
+    },
+    {
+      "code": "ZT",
+      "name": "Estimate is Derived From Job Template"
+    },
+    {
+      "code": "ZU",
+      "name": "Requestor Holds Technical Documentation"
+    },
+    {
+      "code": "ZV",
+      "name": "Replacement Item"
+    },
+    {
+      "code": "ZW",
+      "name": "Canadian Standards Association (CSA) Approved"
+    },
+    {
+      "code": "ZX",
+      "name": "Non-convertible"
+    },
+    {
+      "code": "ZY",
+      "name": "Underwriters Laboratory (UL) Approved"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    },
+    {
+      "code": "000",
+      "name": "In Progress"
+    },
+    {
+      "code": "AFM",
+      "name": "Accepting Family Members"
+    },
+    {
+      "code": "ATR",
+      "name": "Atrophy"
+    },
+    {
+      "code": "BPD",
+      "name": "Beneficiary is Partially Dependent"
+    },
+    {
+      "code": "BTD",
+      "name": "Beneficiary is Totally Dependent"
+    },
+    {
+      "code": "CAI",
+      "name": "Component Assembly Inspection Required"
+    },
+    {
+      "code": "CFD",
+      "name": "Claim is Fraudulent"
+    },
+    {
+      "code": "CLD",
+      "name": "Contractor Liable for Discrepancy"
+    },
+    {
+      "code": "CNJ",
+      "name": "Cumulative Injury"
+    },
+    {
+      "code": "COS",
+      "name": "Cost"
+    },
+    {
+      "code": "DDS",
+      "name": "Defined Distribution"
+    },
+    {
+      "code": "DFR",
+      "name": "Deductible Amount Fully Recovered"
+    },
+    {
+      "code": "DNR",
+      "name": "Deductible Amount Not Fully Recovered"
+    },
+    {
+      "code": "EQR",
+      "name": "Equipment is Remanufactured or has been Assigned a New Equipment Initial"
+    },
+    {
+      "code": "HOM",
+      "name": "Homicidal"
+    },
+    {
+      "code": "JCA",
+      "name": "Joint Coverage Applies"
+    },
+    {
+      "code": "LPC",
+      "name": "Legislative Price Control in Effect"
+    },
+    {
+      "code": "LSD",
+      "name": "List Specialty in Directory"
+    },
+    {
+      "code": "MDR",
+      "name": "Mild Retardation"
+    },
+    {
+      "code": "NDP",
+      "name": "No Deductible Program"
+    },
+    {
+      "code": "ODS",
+      "name": "Open Distribution"
+    },
+    {
+      "code": "ODZ",
+      "name": "Occupational Disease"
+    },
+    {
+      "code": "ORG",
+      "name": "Organic Product"
+    },
+    {
+      "code": "ORH",
+      "name": "One Hundred Percent Organic"
+    },
+    {
+      "code": "ORI",
+      "name": "Product is Made with Organic Ingredients"
+    },
+    {
+      "code": "PAL",
+      "name": "Patient Is Allowed To Leave Residence"
+    },
+    {
+      "code": "PAR",
+      "name": "Paraplegia"
+    },
+    {
+      "code": "PFB",
+      "name": "Previously Failed Board Certification"
+    },
+    {
+      "code": "PNA",
+      "name": "Product Substitution is Not Allowed"
+    },
+    {
+      "code": "POC",
+      "name": "Purchase Order Carton Consolidation (POCC) for this Carton"
+    },
+    {
+      "code": "POS",
+      "name": "Purchase Order Carton Consolidation (POCC) for this Shipment"
+    },
+    {
+      "code": "PRD",
+      "name": "Prior Damage"
+    },
+    {
+      "code": "PSA",
+      "name": "Product Substitution is Allowed"
+    },
+    {
+      "code": "PSE",
+      "name": "Product Substitution is Allowed as Specified"
+    },
+    {
+      "code": "PTH",
+      "name": "Patient Is Homebound"
+    },
+    {
+      "code": "RCA",
+      "name": "Rental Car Arranged"
+    },
+    {
+      "code": "REF",
+      "name": "Referral Required"
+    },
+    {
+      "code": "SEL",
+      "name": "Sell"
+    },
+    {
+      "code": "SER",
+      "name": "Manufacturer Product Serial Numbers are Included"
+    },
+    {
+      "code": "SPP",
+      "name": "Specialty is Primary"
+    },
+    {
+      "code": "SPS",
+      "name": "Specialty is Secondary"
+    },
+    {
+      "code": "STB",
+      "name": "Self-Threatening Behavior"
+    },
+    {
+      "code": "SUB",
+      "name": "Subrogation Open"
+    },
+    {
+      "code": "SUD",
+      "name": "Suicidal"
+    },
+    {
+      "code": "TBO",
+      "name": "Threatening Behavior Toward Others"
+    },
+    {
+      "code": "TNJ",
+      "name": "Traumatic Injury"
+    },
+    {
+      "code": "VOD",
+      "name": "Volume Decrease"
+    },
+    {
+      "code": "VOI",
+      "name": "Volume Increase"
+    },
+    {
+      "code": "VTL",
+      "name": "Vehicle was Declared a Total Loss"
+    }
+  ]
+}

@@ -1,5 +1,50 @@
 {
-  "code": "4403",
-  "name": "Instruction qualifier",
-  "values": []
+  "elementCode": "4403",
+  "elementName": "Instruction qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Action required",
+      "description": "Instruction requires action."
+    },
+    {
+      "code": "2",
+      "name": "Party instructions"
+    },
+    {
+      "code": "3",
+      "name": "Maximum value exceeded instructions",
+      "description": "Instruction how to act if maximum value will be or has been exceeded."
+    },
+    {
+      "code": "4",
+      "name": "Confirmation instructions",
+      "description": "Documentary credit confirmation instructions."
+    },
+    {
+      "code": "5",
+      "name": "Method of issuance",
+      "description": "Documentary credit confirmation of issuance."
+    },
+    {
+      "code": "6",
+      "name": "Pre-advice instructions",
+      "description": "Documentary credit pre-advice instructions."
+    },
+    {
+      "code": "7",
+      "name": "Documents delivery instruction",
+      "description": "Delivery instructions for documents required under a documentary credit."
+    },
+    {
+      "code": "8",
+      "name": "Additional terms and/or conditions documentary credit",
+      "description": "Additional terms and/or  conditions to the documentary credit."
+    },
+    {
+      "code": "9",
+      "name": "Investment instruction",
+      "description": "Instruction refers to an investment."
+    }
+  ]
 }

@@ -1,0 +1,642 @@
+{
+  "code": "1129",
+  "name": "Code specifying an additional characteristic of the adjustment reason",
+  "values": [
+    {
+      "code": "1",
+      "name": "Primary Disability - Frozen"
+    },
+    {
+      "code": "2",
+      "name": "Primary Disability - Non-frozen"
+    },
+    {
+      "code": "3",
+      "name": "Dependent Disability - Frozen"
+    },
+    {
+      "code": "4",
+      "name": "Dependent Disability - Non-frozen"
+    },
+    {
+      "code": "5",
+      "name": "Retirement - Frozen"
+    },
+    {
+      "code": "6",
+      "name": "Retirement - Non-frozen"
+    },
+    {
+      "code": "7",
+      "name": "Permanent"
+    },
+    {
+      "code": "8",
+      "name": "Temporary"
+    },
+    {
+      "code": "9",
+      "name": "Canadian"
+    },
+    {
+      "code": "10",
+      "name": "Joint"
+    },
+    {
+      "code": "11",
+      "name": "Deferred"
+    },
+    {
+      "code": "12",
+      "name": "Eligible"
+    },
+    {
+      "code": "13",
+      "name": "Applied"
+    },
+    {
+      "code": "14",
+      "name": "Receiving"
+    },
+    {
+      "code": "15",
+      "name": "Defense Medical Evaluation"
+    },
+    {
+      "code": "16",
+      "name": "Delayed Reporting Penalty (Insured)"
+    },
+    {
+      "code": "17",
+      "name": "Engineering Services"
+    },
+    {
+      "code": "18",
+      "name": "Expert Test (Trial)"
+    },
+    {
+      "code": "19",
+      "name": "Expert Fees and Expenses (excluding tests and testimony)"
+    },
+    {
+      "code": "22",
+      "name": "Fee Schedule Savings"
+    },
+    {
+      "code": "23",
+      "name": "Fatal"
+    },
+    {
+      "code": "24",
+      "name": "Permanent Total"
+    },
+    {
+      "code": "25",
+      "name": "Permanent Total Supplemental"
+    },
+    {
+      "code": "26",
+      "name": "Permanent Partial Scheduled"
+    },
+    {
+      "code": "27",
+      "name": "Permanent Partial Unscheduled"
+    },
+    {
+      "code": "28",
+      "name": "Temporary Total"
+    },
+    {
+      "code": "29",
+      "name": "Temporary Partial"
+    },
+    {
+      "code": "30",
+      "name": "Employer Liability"
+    },
+    {
+      "code": "31",
+      "name": "Permanent Partial Disfigurement"
+    },
+    {
+      "code": "32",
+      "name": "Unspecified Employer Payments"
+    },
+    {
+      "code": "34",
+      "name": "Funeral Expenses"
+    },
+    {
+      "code": "35",
+      "name": "Penalties"
+    },
+    {
+      "code": "36",
+      "name": "Interest"
+    },
+    {
+      "code": "37",
+      "name": "Employer's Legal Expenses"
+    },
+    {
+      "code": "38",
+      "name": "Claimant's Legal Expenses"
+    },
+    {
+      "code": "39",
+      "name": "Payments to Physicians"
+    },
+    {
+      "code": "40",
+      "name": "Hospital Costs"
+    },
+    {
+      "code": "41",
+      "name": "Other Medical"
+    },
+    {
+      "code": "42",
+      "name": "Vocational Rehabilitation Evaluation"
+    },
+    {
+      "code": "43",
+      "name": "Vocational Rehabilitation Education"
+    },
+    {
+      "code": "44",
+      "name": "Other Vocational Rehabilitation"
+    },
+    {
+      "code": "45",
+      "name": "Total Temporary Catastrophic"
+    },
+    {
+      "code": "46",
+      "name": "Unknown Payment Type"
+    },
+    {
+      "code": "57",
+      "name": "Vocational Rehabilitation Maintenance"
+    },
+    {
+      "code": "58",
+      "name": "Claim Value Recovery"
+    },
+    {
+      "code": "60",
+      "name": "Deductible Recovery"
+    },
+    {
+      "code": "61",
+      "name": "Additional Living Expense"
+    },
+    {
+      "code": "62",
+      "name": "Alternative Dispute Resolution Services"
+    },
+    {
+      "code": "63",
+      "name": "Anesthesiologist"
+    },
+    {
+      "code": "64",
+      "name": "Annuity"
+    },
+    {
+      "code": "65",
+      "name": "Attorney Expenses"
+    },
+    {
+      "code": "66",
+      "name": "Attorney Fees"
+    },
+    {
+      "code": "67",
+      "name": "Auto Liability Subrogation"
+    },
+    {
+      "code": "69",
+      "name": "Not Eligible"
+    },
+    {
+      "code": "71",
+      "name": "Catastrophic Benefits"
+    },
+    {
+      "code": "72",
+      "name": "Central Index Bureau Filing Fees"
+    },
+    {
+      "code": "73",
+      "name": "Chiropractor"
+    },
+    {
+      "code": "74",
+      "name": "Indemnity Reserves"
+    },
+    {
+      "code": "75",
+      "name": "Medical Reserves"
+    },
+    {
+      "code": "76",
+      "name": "Expense Reserves"
+    },
+    {
+      "code": "77",
+      "name": "Vocational Rehabilitation Reserves"
+    },
+    {
+      "code": "78",
+      "name": "Indemnity Payments"
+    },
+    {
+      "code": "79",
+      "name": "Medical Payments"
+    },
+    {
+      "code": "80",
+      "name": "Expense Payments"
+    },
+    {
+      "code": "81",
+      "name": "Vocational Rehabilitation Payments"
+    },
+    {
+      "code": "82",
+      "name": "Claim Payment"
+    },
+    {
+      "code": "83",
+      "name": "Claim Reserve"
+    },
+    {
+      "code": "84",
+      "name": "Bodily Injury Payment"
+    },
+    {
+      "code": "85",
+      "name": "Bodily Injury Reserve"
+    },
+    {
+      "code": "86",
+      "name": "Property Damage Payment"
+    },
+    {
+      "code": "87",
+      "name": "Property Damage Reserve"
+    },
+    {
+      "code": "88",
+      "name": "Comprehensive Payment"
+    },
+    {
+      "code": "89",
+      "name": "Comprehensive Reserve"
+    },
+    {
+      "code": "90",
+      "name": "Collision Payment"
+    },
+    {
+      "code": "91",
+      "name": "Collision Reserve"
+    },
+    {
+      "code": "92",
+      "name": "Salvage"
+    },
+    {
+      "code": "93",
+      "name": "Expert Witness Fees"
+    },
+    {
+      "code": "94",
+      "name": "Claimant Legal Expense"
+    },
+    {
+      "code": "95",
+      "name": "Claimant Medical Evaluation"
+    },
+    {
+      "code": "96",
+      "name": "Commercial Photographers"
+    },
+    {
+      "code": "97",
+      "name": "Mandated Medical Exam"
+    },
+    {
+      "code": "98",
+      "name": "Death Benefits"
+    },
+    {
+      "code": "99",
+      "name": "Defense Attorney Fees and Expenses"
+    },
+    {
+      "code": "A1",
+      "name": "Funeral Benefits"
+    },
+    {
+      "code": "A2",
+      "name": "Hearing Attendance or Representation Fees"
+    },
+    {
+      "code": "A3",
+      "name": "Hospital - Inpatient Charges"
+    },
+    {
+      "code": "A4",
+      "name": "Hospital - Outpatient Charges"
+    },
+    {
+      "code": "A5",
+      "name": "Hospital Bill Audit"
+    },
+    {
+      "code": "A6",
+      "name": "Impairment Income Benefits"
+    },
+    {
+      "code": "A7",
+      "name": "Independent Adjustor Expense"
+    },
+    {
+      "code": "A8",
+      "name": "Independent Medical Exam"
+    },
+    {
+      "code": "A9",
+      "name": "Legal Expenses - Miscellaneous"
+    },
+    {
+      "code": "AA",
+      "name": "Chiropractic Expenses"
+    },
+    {
+      "code": "AB",
+      "name": "Dental Expenses"
+    },
+    {
+      "code": "AC",
+      "name": "Physical Therapy Costs"
+    },
+    {
+      "code": "AD",
+      "name": "Pharmaceutical Costs"
+    },
+    {
+      "code": "AE",
+      "name": "Durable Medical Costs"
+    },
+    {
+      "code": "AF",
+      "name": "Medical Travel Costs"
+    },
+    {
+      "code": "AG",
+      "name": "Employee Medical-Legal Costs"
+    },
+    {
+      "code": "AH",
+      "name": "Employer-Claim Administrator Medical-Legal Costs"
+    },
+    {
+      "code": "AI",
+      "name": "Agreed upon or Directed Medical-Legal Costs"
+    },
+    {
+      "code": "AJ",
+      "name": "Unallocated Funds"
+    },
+    {
+      "code": "AK",
+      "name": "Future Credit Recovery"
+    },
+    {
+      "code": "B1",
+      "name": "Liability Settlement"
+    },
+    {
+      "code": "B2",
+      "name": "Life Pension"
+    },
+    {
+      "code": "B3",
+      "name": "Lump Sum Remarriage Payment"
+    },
+    {
+      "code": "B4",
+      "name": "Lump Sum Settlement Amount"
+    },
+    {
+      "code": "B5",
+      "name": "Major Case of Individual Case Reporting"
+    },
+    {
+      "code": "B6",
+      "name": "Medical Equipment"
+    },
+    {
+      "code": "B7",
+      "name": "Peer Review Board Expenses"
+    },
+    {
+      "code": "B8",
+      "name": "Medical Management Services"
+    },
+    {
+      "code": "B9",
+      "name": "Medical Records or Reports"
+    },
+    {
+      "code": "C1",
+      "name": "Medical Rehabilitation"
+    },
+    {
+      "code": "C2",
+      "name": "Medical Test (Trial)"
+    },
+    {
+      "code": "C3",
+      "name": "No-fault benefit or expense (Non-Workers Compensation)"
+    },
+    {
+      "code": "C4",
+      "name": "Nursing Care"
+    },
+    {
+      "code": "C5",
+      "name": "Extended Care Facility"
+    },
+    {
+      "code": "C6",
+      "name": "State Fund - Other"
+    },
+    {
+      "code": "C7",
+      "name": "Penalties Paid on Medical Benefits"
+    },
+    {
+      "code": "C8",
+      "name": "Penalties Paid on Indemnity Benefits"
+    },
+    {
+      "code": "C9",
+      "name": "Pension Indemnity Benefit"
+    },
+    {
+      "code": "D2",
+      "name": "Personal Property or Contents"
+    },
+    {
+      "code": "D3",
+      "name": "Pharmacy"
+    },
+    {
+      "code": "D4",
+      "name": "Photographs other than Commercial"
+    },
+    {
+      "code": "D5",
+      "name": "Physiotherapy"
+    },
+    {
+      "code": "D6",
+      "name": "PPO (Preferred Provider Organization) Fees or Expenses"
+    },
+    {
+      "code": "D7",
+      "name": "Product Liability Subrogation"
+    },
+    {
+      "code": "D8",
+      "name": "Property Adjustment"
+    },
+    {
+      "code": "D9",
+      "name": "Provider Bill Audit Expense"
+    },
+    {
+      "code": "E1",
+      "name": "Radiology"
+    },
+    {
+      "code": "E2",
+      "name": "Time and Expense Fees"
+    },
+    {
+      "code": "E3",
+      "name": "Scheduled Award"
+    },
+    {
+      "code": "E4",
+      "name": "Social Security"
+    },
+    {
+      "code": "E5",
+      "name": "State Second Injury Fund"
+    },
+    {
+      "code": "E6",
+      "name": "State Supplemental Fund"
+    },
+    {
+      "code": "E7",
+      "name": "Supplemental Permanent Total Benefits"
+    },
+    {
+      "code": "E9",
+      "name": "Employee Interest"
+    },
+    {
+      "code": "F1",
+      "name": "Testing Lab"
+    },
+    {
+      "code": "F2",
+      "name": "Third Party Contribution"
+    },
+    {
+      "code": "F3",
+      "name": "Transportation - Other"
+    },
+    {
+      "code": "F4",
+      "name": "Transportation - Medical Treatment"
+    },
+    {
+      "code": "F5",
+      "name": "Treating or Panel Physician"
+    },
+    {
+      "code": "F6",
+      "name": "Utilization Review - Hospital"
+    },
+    {
+      "code": "F7",
+      "name": "Utilization Review - Physician"
+    },
+    {
+      "code": "F8",
+      "name": "Unallocated Indemnity"
+    },
+    {
+      "code": "F9",
+      "name": "Unallocated Medical"
+    },
+    {
+      "code": "G2",
+      "name": "Witness Fees and Expenses - Other than Expert Witness"
+    },
+    {
+      "code": "G3",
+      "name": "Vocational Rehabilitation Training"
+    },
+    {
+      "code": "G4",
+      "name": "Appraisal Fees"
+    },
+    {
+      "code": "G5",
+      "name": "Autopsy Fees"
+    },
+    {
+      "code": "G6",
+      "name": "Surveillance Special Investigation Fees and Expenses"
+    },
+    {
+      "code": "G7",
+      "name": "Temporary Income Benefits"
+    },
+    {
+      "code": "G9",
+      "name": "Federal Second Injury Fund"
+    },
+    {
+      "code": "H2",
+      "name": "Federal Supplemental Fund"
+    },
+    {
+      "code": "H3",
+      "name": "Flat Rate"
+    },
+    {
+      "code": "H4",
+      "name": "Employer Paid Temporary Total Disability"
+    },
+    {
+      "code": "H5",
+      "name": "Employer Paid Temporary Partial Disability"
+    },
+    {
+      "code": "H6",
+      "name": "Court Reporter Fees"
+    },
+    {
+      "code": "H7",
+      "name": "Private Investigator Fees"
+    }
+  ]
+}

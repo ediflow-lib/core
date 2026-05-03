@@ -1,0 +1,162 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "350",
+  "name": "U.S. Customs Status Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the U.S. Customs Status Information Transaction Set (350) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by the U.S. Customs Service (USCS) to supply carriers, terminal operators, port authorities and service providers with cargo release and cargo hold information for import shipments. It can also be used by the USCS to provide exporters or their agents, carriers, and service providers with information pertaining to export shipments.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "M10",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopP4",
+      "name": "LoopP4",
+      "triggerSegment": "P4",
+      "mandatory": false,
+      "maxOccurrences": 20,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "P4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "V9",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": false,
+          "maxOccurrences": 4,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN9",
+          "name": "LoopN9",
+          "triggerSegment": "N9",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N9",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "K1",
+              "mandatory": false,
+              "maxOccurrences": 4,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopX4",
+          "name": "LoopX4",
+          "triggerSegment": "X4",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "X4",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "K1",
+              "mandatory": false,
+              "maxOccurrences": 4,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N7",
+              "mandatory": true,
+              "maxOccurrences": 999,
+              "position": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopBA1",
+      "name": "LoopBA1",
+      "triggerSegment": "BA1",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "BA1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopX4",
+          "name": "LoopX4",
+          "triggerSegment": "X4",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "X4",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "K1",
+              "mandatory": false,
+              "maxOccurrences": 4,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

@@ -1,5 +1,70 @@
 {
-  "code": "5379",
-  "name": "Product group type code",
-  "values": []
+  "elementCode": "5379",
+  "elementName": "Product group type code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Base x coefficient",
+      "description": "The product is grouped based on price multiplied with a coefficient."
+    },
+    {
+      "code": "2",
+      "name": "No price group used",
+      "description": "Code specifying that the product is not subject to price group."
+    },
+    {
+      "code": "3",
+      "name": "Catalogue",
+      "description": "Code specifying that the product is indexed in a catalogue."
+    },
+    {
+      "code": "4",
+      "name": "Group of products with same price",
+      "description": "Code specifying that all the products of the group have the same price."
+    },
+    {
+      "code": "5",
+      "name": "Itemized",
+      "description": "Code specifying that the product group is itemized."
+    },
+    {
+      "code": "6",
+      "name": "Base price plus"
+    },
+    {
+      "code": "7",
+      "name": "Current discount group",
+      "description": "Items in this discount group are available to the buyer at a common discount percentage."
+    },
+    {
+      "code": "8",
+      "name": "Previous discount group",
+      "description": "The common discount percentage group to which an item previously belonged."
+    },
+    {
+      "code": "9",
+      "name": "No group used",
+      "description": "No grouping is being used."
+    },
+    {
+      "code": "10",
+      "name": "Price group",
+      "description": "Products grouped together on the basis of price."
+    },
+    {
+      "code": "11",
+      "name": "Product group",
+      "description": "A code indicating a product group."
+    },
+    {
+      "code": "12",
+      "name": "Promotional group",
+      "description": "Grouping of products for promotional reasons."
+    },
+    {
+      "code": "13",
+      "name": "Legal",
+      "description": "A product group governed by a common set of legal rules."
+    }
+  ]
 }

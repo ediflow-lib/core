@@ -1,0 +1,256 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "852",
+  "name": "Product Activity Data",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Product Activity Data Transaction Set (852) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by a distributor, warehouse, or retailer to advise a trading partner of inventory, sales, and other product activity information. Product activity data enables a trading partner to plan and ship, or propose inventory replenishment quantities, for distribution centers, warehouses or retail outlets.\n\nThe receiver of the transaction set will maintain some type of inventory/product movement records for its trading partners to enable replenishment calculations based on data provided by the distributor, warehouse or retailer.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "XQ",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "XPO",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PER",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopN1",
+      "name": "LoopN1",
+      "triggerSegment": "N1",
+      "mandatory": false,
+      "maxOccurrences": 200,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "N1",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N2",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N3",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "FOB",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "TD5",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 6
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 7
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 8
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PER",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 9
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopLIN",
+      "name": "LoopLIN",
+      "triggerSegment": "LIN",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 7,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "LIN",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "CTP",
+          "mandatory": false,
+          "maxOccurrences": 25,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PO4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "AMT",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 5
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PAL",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 6
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "QTY",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 7
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopZA",
+          "name": "LoopZA",
+          "triggerSegment": "ZA",
+          "mandatory": true,
+          "maxOccurrences": 999999,
+          "position": 8,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "ZA",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CTP",
+              "mandatory": false,
+              "maxOccurrences": 25,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "SDQ",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 4
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopG95",
+              "name": "LoopG95",
+              "triggerSegment": "G95",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 5,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "G95",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "DTM",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CTT",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 9
+    }
+  ]
+}

@@ -1,5 +1,52 @@
 {
-  "code": "6167",
-  "name": "Range type qualifier",
-  "values": []
+  "elementCode": "6167",
+  "elementName": "Range type qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Allowance range"
+    },
+    {
+      "code": "2",
+      "name": "Charge range"
+    },
+    {
+      "code": "3",
+      "name": "Monetary range"
+    },
+    {
+      "code": "4",
+      "name": "Quantity range"
+    },
+    {
+      "code": "5",
+      "name": "Temperature range",
+      "description": "The range of a temperature."
+    },
+    {
+      "code": "6",
+      "name": "Order quantity range",
+      "description": "The minimum to maximum order quantity."
+    },
+    {
+      "code": "7",
+      "name": "Delivery quantity range",
+      "description": "The minimum to maximum delivery quantity."
+    },
+    {
+      "code": "8",
+      "name": "Production batch range",
+      "description": "The minimum to maximum quantity in a single production run."
+    },
+    {
+      "code": "9",
+      "name": "Monthly quantity range",
+      "description": "The minimum to maximum monthly quantity."
+    },
+    {
+      "code": "10",
+      "name": "Annual quantity range",
+      "description": "The minimum to maximum yearly quantity."
+    }
+  ]
 }

@@ -1,0 +1,121 @@
+{
+  "elementCode": "4017",
+  "elementName": "Delivery plan commitment level code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Firm",
+      "description": "Indicates that the scheduling information is a firm commitment."
+    },
+    {
+      "code": "2",
+      "name": "Commitment for manufacturing and material",
+      "description": "Authorizes the supplier to start the manufacturing of goods."
+    },
+    {
+      "code": "3",
+      "name": "Commitment for material",
+      "description": "Authorizes the manufacturer to order material required for manufacturing specified goods."
+    },
+    {
+      "code": "4",
+      "name": "Planning/forecast",
+      "description": "An estimate of future requirements based on trends and actual information."
+    },
+    {
+      "code": "5",
+      "name": "Short delivered on previous delivery",
+      "description": "Part of a consignment which was not delivered when the original delivery was made."
+    },
+    {
+      "code": "6",
+      "name": "Capacity available",
+      "description": "Capacity is available to meet the requested scheduling demands."
+    },
+    {
+      "code": "9",
+      "name": "User defined",
+      "description": "The user can interpret the meaning of the values from information exchanged previously."
+    },
+    {
+      "code": "10",
+      "name": "Immediate",
+      "description": "Indicates that the scheduling information is for immediate execution."
+    },
+    {
+      "code": "11",
+      "name": "Pilot/Pre-volume",
+      "description": "Initial products required in advance of the normal production process."
+    },
+    {
+      "code": "12",
+      "name": "Planning",
+      "description": "An estimate of future requirements."
+    },
+    {
+      "code": "13",
+      "name": "Potential order increase",
+      "description": "The possibility and magnitude of a schedule fluctuation."
+    },
+    {
+      "code": "14",
+      "name": "Average plant usage",
+      "description": "The usual amount that a manufacturing facility will use over a specified duration."
+    },
+    {
+      "code": "15",
+      "name": "First time reported firm",
+      "description": "Initial confirmation of a material requirement."
+    },
+    {
+      "code": "16",
+      "name": "Maximum",
+      "description": "The highest attainable amount."
+    },
+    {
+      "code": "17",
+      "name": "Tooling capacity",
+      "description": "The maximum amount that the process was designed to accommodate."
+    },
+    {
+      "code": "18",
+      "name": "Normal tooling capacity",
+      "description": "The anticipated amount that the process was designed to accommodate over a specific period of time."
+    },
+    {
+      "code": "19",
+      "name": "Prototype",
+      "description": "The preliminary version of a product or service."
+    },
+    {
+      "code": "20",
+      "name": "Strike protection",
+      "description": "Product level that is set aside as protection in the event of a work stoppage."
+    },
+    {
+      "code": "21",
+      "name": "Required tooling capacity",
+      "description": "The contracted amount that the process was designed to accommodate over a specific period of time."
+    },
+    {
+      "code": "22",
+      "name": "Deliver to schedule",
+      "description": "Deliver to schedule separately supplied."
+    },
+    {
+      "code": "23",
+      "name": "Await manual pull",
+      "description": "Await non-EDI instruction before shipping."
+    },
+    {
+      "code": "24",
+      "name": "Reference to commercial agreement between partners",
+      "description": "The buyer's commitment is the one defined in the commercial agreement."
+    },
+    {
+      "code": "26",
+      "name": "Proposed",
+      "description": "Indicates that the scheduling information is a proposal."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "419",
+  "name": "Advance Car Disposition",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Advance Car Disposition Transaction Set (419) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide the receiving rail carrier with advance notification of cars being offered for interchange directly or via a switching carrier, to allow for disposition prior to the actual interchange.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopE6",
+      "name": "LoopE6",
+      "triggerSegment": "E6",
+      "mandatory": true,
+      "maxOccurrences": 150,
+      "position": 2,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "E6",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "W3",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "W5",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    }
+  ]
+}

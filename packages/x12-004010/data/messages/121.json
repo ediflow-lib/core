@@ -1,0 +1,97 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "121",
+  "name": "Vehicle Service",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Vehicle Service Transaction Set (121) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a carrier to notify a Vehicle Manufacturer that a requested movement or service has been performed on motor vehicles or that a change in status has occurred.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BVS",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N7",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": false,
+      "maxOccurrences": 3,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopVC",
+      "name": "LoopVC",
+      "triggerSegment": "VC",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "VC",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DEL",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "CGS",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 4
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 5
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

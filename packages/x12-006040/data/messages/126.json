@@ -1,0 +1,80 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "126",
+  "name": "Vehicle Application Advice",
+  "description": "Vehicle Application Advice",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopBVA",
+      "name": "LoopBVA",
+      "triggerSegment": "BVA",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "BVA",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "V1",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "L7",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopVAD",
+          "name": "LoopVAD",
+          "triggerSegment": "VAD",
+          "mandatory": true,
+          "maxOccurrences": 99,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "VAD",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "L7",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

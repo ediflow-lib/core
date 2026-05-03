@@ -1,5 +1,26 @@
 {
-  "code": "4453",
-  "name": "Text function, coded",
-  "values": []
+  "elementCode": "4453",
+  "elementName": "Text function, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Text for subsequent use",
+      "description": "The occurrence of this text does not affect message processing."
+    },
+    {
+      "code": "2",
+      "name": "Text replacing missing code",
+      "description": "Text description of a coded data item for which there is no currently available code."
+    },
+    {
+      "code": "3",
+      "name": "Text for immediate use",
+      "description": "Text must be read before actioning message."
+    },
+    {
+      "code": "4",
+      "name": "No action required",
+      "description": "Pass text on to later recipient."
+    }
+  ]
 }

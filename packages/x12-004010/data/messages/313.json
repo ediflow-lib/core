@@ -1,0 +1,44 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "313",
+  "name": "Shipment Status Inquiry (Ocean)",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Shipment Status Inquiry (Ocean) Transaction Set (313) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide all the information necessary for an authorized party to an ocean shipment to inquire of the ocean carrier as to the status of a shipment.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B4",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 25,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

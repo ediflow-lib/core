@@ -1,0 +1,335 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "field": "Loop1000A",
+      "message": "Segment group Loop1000A occurs 4 times (max: 1)",
+      "code": "MAX_GROUP_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop1000B",
+      "message": "Segment group Loop1000B occurs 4 times (max: 1)",
+      "code": "MAX_GROUP_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.REF[0]",
+      "message": "Mandatory segment REF is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AB.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AB.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.REF[0]",
+      "message": "Mandatory segment REF is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.SBR[0]",
+      "message": "Mandatory segment SBR is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.PAT[0]",
+      "message": "Mandatory segment PAT is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.DMG[0]",
+      "message": "Mandatory segment DMG is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300",
+      "message": "Mandatory segment group Loop2300 is missing",
+      "code": "MISSING_MANDATORY_GROUP"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.CLM[0]",
+      "message": "Mandatory segment CLM is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.HI[0]",
+      "message": "Mandatory segment HI is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310C.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310C.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310E.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310E.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310F.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2310F.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400",
+      "message": "Mandatory segment group Loop2400 is missing",
+      "code": "MISSING_MANDATORY_GROUP"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.LX[0]",
+      "message": "Mandatory segment LX is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.SV1[0]",
+      "message": "Mandatory segment SV1 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.DTP[0]",
+      "message": "Mandatory segment DTP is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420C.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420C.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420G.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420G.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420H.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.Loop2420H.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AA.REF[0]",
+      "message": "Mandatory segment REF is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AB.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AB.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2010AC.REF[0]",
+      "message": "Mandatory segment REF is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.PAT[0]",
+      "message": "Mandatory segment PAT is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.N3[0]",
+      "message": "Mandatory segment N3 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.N4[0]",
+      "message": "Mandatory segment N4 is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2010CA.DMG[0]",
+      "message": "Mandatory segment DMG is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.CLM[0].1073[5]",
+      "message": "Element 1073 exceeds max length 1 (actual: 6)",
+      "code": "ELEMENT_TOO_LONG"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 2)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.DTP[0]",
+      "message": "Segment DTP occurs 3 times (max: 1)",
+      "code": "MAX_OCCURRENCES_EXCEEDED"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.HI[0]",
+      "message": "Mandatory segment HI is missing",
+      "code": "MISSING_MANDATORY_SEGMENT"
+    },
+    {
+      "field": "Loop2000A.Loop2000B.Loop2000C.Loop2300.Loop2400.SV1[0].355[2]",
+      "message": "Element 355 exceeds max length 2 (actual: 3)",
+      "code": "ELEMENT_TOO_LONG"
+    }
+  ],
+  "metadata": {
+    "standard": "X12",
+    "version": "005010",
+    "messageType": "837-Q1"
+  }
+}

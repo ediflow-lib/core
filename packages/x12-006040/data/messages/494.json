@@ -1,0 +1,193 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "494",
+  "name": "Rail Scale Rates",
+  "description": "Rail Scale Rates",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DK",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PI",
+      "mandatory": true,
+      "maxOccurrences": 25,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PR",
+      "mandatory": false,
+      "maxOccurrences": 200,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SS",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SA",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CD",
+      "mandatory": false,
+      "maxOccurrences": 150,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "GY",
+      "mandatory": false,
+      "maxOccurrences": 150,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "RAB",
+      "mandatory": false,
+      "maxOccurrences": 12,
+      "position": 10
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PT",
+      "mandatory": false,
+      "maxOccurrences": 50,
+      "position": 11
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 12
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR9",
+      "name": "LoopR9",
+      "triggerSegment": "R9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 13,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R9",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopR2B",
+          "name": "LoopR2B",
+          "triggerSegment": "R2B",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "R2B",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "R2C",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopLX",
+      "name": "LoopLX",
+      "triggerSegment": "LX",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 14,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "LX",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "PI",
+          "mandatory": true,
+          "maxOccurrences": 15,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N4",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopSCL",
+          "name": "LoopSCL",
+          "triggerSegment": "SCL",
+          "mandatory": false,
+          "maxOccurrences": 999,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "SCL",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "RD",
+              "mandatory": false,
+              "maxOccurrences": 6,
+              "position": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "160",
+  "name": "Transportation Automatic Equipment Identification",
+  "description": "Transportation Automatic Equipment Identification",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BAX",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AES",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "YNQ",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "QTY",
+      "mandatory": false,
+      "maxOccurrences": 5,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "MEA",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AEI",
+      "mandatory": false,
+      "maxOccurrences": 16,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 9
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopEI",
+      "name": "LoopEI",
+      "triggerSegment": "EI",
+      "mandatory": true,
+      "maxOccurrences": 500,
+      "position": 10,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "EI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "QTY",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "MEA",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 4
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopTSI",
+          "name": "LoopTSI",
+          "triggerSegment": "TSI",
+          "mandatory": false,
+          "maxOccurrences": 25,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "TSI",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "YNQ",
+              "mandatory": false,
+              "maxOccurrences": 25,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "LQ",
+              "mandatory": false,
+              "maxOccurrences": 25,
+              "position": 3
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopQTY",
+              "name": "LoopQTY",
+              "triggerSegment": "QTY",
+              "mandatory": false,
+              "maxOccurrences": 20,
+              "position": 4,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "QTY",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "DTM",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+type: object
+description: Map of segment tag to segment definition.
+additionalProperties:
+  type: object
+  properties:
+    tag:
+      type: string
+      description: Segment tag (e.g. "REF", "NAD", "BGM")
+    name:
+      type: string
+      description: Segment name
+    description:
+      type: string
+      description: Segment description (optional)
+    elements:
+      type: array
+      description: Ordered list of elements and composite elements within this segment
+      items:
+        oneOf:
+          - type: object
+            description: Simple element reference
+            properties:
+              nodeType:
+                type: string
+                const: element
+              elementCode:
+                type: string
+                description: Reference to element code from elements.json
+              mandatory:
+                type: boolean
+              position:
+                type: integer
+                minimum: 1
+            required:
+              - nodeType
+              - elementCode
+              - mandatory
+              - position
+          - type: object
+            description: Composite element reference
+            properties:
+              nodeType:
+                type: string
+                const: composite
+              compositeCode:
+                type: string
+                description: Reference to composite code from composites.json
+              mandatory:
+                type: boolean
+              position:
+                type: integer
+                minimum: 1
+            required:
+              - nodeType
+              - compositeCode
+              - mandatory
+              - position
+  required:
+    - tag
+    - name
+    - elements
+
+example:
+  "REF":
+    tag: "REF"
+    name: "Reference Identification"
+    description: "To specify identifying information"
+    elements:
+      - nodeType: "element"
+        elementCode: "128"
+        mandatory: true
+        position: 1
+      - nodeType: "element"
+        elementCode: "127"
+        mandatory: false
+        position: 2
+      - nodeType: "composite"
+        compositeCode: "C040"
+        mandatory: false
+        position: 3
+  "NAD":
+    tag: "NAD"
+    name: "Name and address"
+    elements:
+      - nodeType: "element"
+        elementCode: "3035"
+        mandatory: true
+        position: 1
+      - nodeType: "composite"
+        compositeCode: "C082"
+        mandatory: false
+        position: 2

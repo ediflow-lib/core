@@ -9,3 +9,7 @@ export { Validator } from './Validator';
 
 // Basic Validation Rules
 export * from './rules/BasicValidationRules';
+export { ElementDataTypeRule } from './rules/ElementDataTypeRule';
+export { ElementLengthRule } from './rules/ElementLengthRule';
+export { MandatoryElementRule } from './rules/MandatoryElementRule';
+export { CodeListRule } from './rules/CodeListRule';

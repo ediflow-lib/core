@@ -1,0 +1,129 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "715",
+  "name": "Intermodal Group Loading Plan",
+  "description": "This Draft Standard for Trial Use provides the format and establishes the data contents of the Intermodal Group Loading Plan Transaction Set (715) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by intermodal or domestic shippers and carriers to provide detailed information on the stowage of containers and other equipment aboard a train. The stowage information may be planned or actual and may be by block or by railcar.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "GR2",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N4",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopGR4",
+      "name": "LoopGR4",
+      "triggerSegment": "GR4",
+      "mandatory": true,
+      "maxOccurrences": 100,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "GR4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 5,
+          "position": 2
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopN7",
+          "name": "LoopN7",
+          "triggerSegment": "N7",
+          "mandatory": false,
+          "maxOccurrences": 9999,
+          "position": 3,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "N7",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "GR5",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "V1",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 3
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "N4",
+              "mandatory": false,
+              "maxOccurrences": 1,
+              "position": 4
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "R4",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 5
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 5,
+              "position": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    }
+  ]
+}

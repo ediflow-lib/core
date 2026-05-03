@@ -1,0 +1,61 @@
+type: object
+description: >
+  Map of segment tag to its syntax/dependency rules.
+  Stored separately from segments.json and merged at runtime.
+
+  X12 uses relational conditions (P, R, E, C, L).
+  EDIFACT uses dependency notes (D1–D6).
+additionalProperties:
+  type: array
+  description: List of syntax rules for this segment
+  items:
+    type: object
+    properties:
+      type:
+        type: string
+        enum: [P, R, E, C, L, D1, D2, D3, D4, D5, D6]
+        description: >
+          X12 relational conditions:
+            P  = Paired:            If any listed element is present, all must be present.
+            R  = Required:          At least one of the listed elements must be present.
+            E  = Exclusive:         Only one of the listed elements may be present.
+            C  = Conditional:       If the first element is present, all others must be present.
+            L  = List Conditional:  If the first element is present, at least one other must be present.
+
+          EDIFACT dependency notes:
+            D1 = One and only one:  Exactly one of the listed elements must be present.
+            D2 = One or more:       At least one of the listed elements must be present.
+            D3 = One or none:       At most one of the listed elements may be present.
+            D4 = If first then all: If the first element is present, all others must be present.
+            D5 = If first then one: If the first element is present, at least one other must be present.
+            D6 = If first then none:If the first element is present, none of the others may be present.
+      positions:
+        type: array
+        description: >
+          Element positions involved in this rule (1-based).
+          For C and L rules, the first position is the condition trigger.
+        items:
+          type: integer
+          minimum: 1
+        minItems: 2
+      description:
+        type: string
+        description: Human-readable description of the rule
+    required:
+      - type
+      - positions
+      - description
+
+example:
+  "REF":
+    - type: "C"
+      positions: [2, 3]
+      description: "If element 02 is present, then element 03 is required."
+  "DTM":
+    - type: "P"
+      positions: [2, 3]
+      description: "If either element 02 or 03 is present, then both are required."
+  "NAD":
+    - type: "D4"
+      positions: [2, 3]
+      description: "If element 02 is present, then element 03 is required."

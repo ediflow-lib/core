@@ -1,0 +1,61 @@
+{
+  "elementCode": "4499",
+  "elementName": "Inventory movement reason code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Reception",
+      "description": "Goods received at warehouse from another party or warehouse."
+    },
+    {
+      "code": "2",
+      "name": "Delivery",
+      "description": "Goods which have been delivered from the inventory to another party or warehouse."
+    },
+    {
+      "code": "3",
+      "name": "Scrapped parts",
+      "description": "Adjustment due to scrapped parts."
+    },
+    {
+      "code": "4",
+      "name": "Difference",
+      "description": "The difference between the inventory, as physically counted, and the inventory recorded by the system."
+    },
+    {
+      "code": "5",
+      "name": "Property transfer within warehouse",
+      "description": "An inventory movement issued when goods are moved (physically or logically) from one owner to another, whenever inventories are held in account of several owners of the same product within the same warehouse."
+    },
+    {
+      "code": "6",
+      "name": "Inventory recycling",
+      "description": "This inventory movement is due to recycling of goods. For instance, defective goods have been repaired and are put back to the available inventory."
+    },
+    {
+      "code": "7",
+      "name": "Reversal of previous movement",
+      "description": "This inventory movement is issued to cancel a previously processed movement."
+    },
+    {
+      "code": "8",
+      "name": "Defects (technical)",
+      "description": "This inventory movement corresponds to parts with technical defect."
+    },
+    {
+      "code": "9",
+      "name": "Commercial",
+      "description": "The inventory movement has been issued for commercial reasons."
+    },
+    {
+      "code": "10",
+      "name": "Conversion",
+      "description": "The inventory movement is due to conversion of goods."
+    },
+    {
+      "code": "11",
+      "name": "Consumption",
+      "description": "The inventory movement corresponds to goods taken out of consigned inventory for consumption."
+    }
+  ]
+}

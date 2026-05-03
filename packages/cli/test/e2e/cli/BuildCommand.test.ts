@@ -1,3 +1,5 @@
+// noinspection ES6RedundantAwait
+
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { writeFileSync, unlinkSync, existsSync, mkdirSync, rmdirSync } from 'fs';
 import { join } from 'path';
@@ -163,13 +165,13 @@ describe('BuildCommand - Integration Tests (US-5.3)', () => {
     it('should throw error for non-existent file', async () => {
       const nonExistentFile = join(testDir, 'does-not-exist.json');
 
-      expect(simulateBuildExecution(nonExistentFile, {})).rejects.toThrow();
+      await expect(simulateBuildExecution(nonExistentFile, {})).rejects.toThrow();
     });
 
     it('should throw error for invalid JSON', async () => {
       writeFileSync(testFile, 'this is not valid JSON {');
 
-      expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should throw error for missing standard field', async () => {
@@ -179,13 +181,13 @@ describe('BuildCommand - Integration Tests (US-5.3)', () => {
 
       writeFileSync(testFile, JSON.stringify(invalidJSON));
 
-      expect(simulateBuildExecution(testFile, {})).rejects.toThrow('Missing required field: standard');
+      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow(/standard/i);
     });
 
     it('should throw error for empty file', async () => {
       writeFileSync(testFile, '');
 
-      expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
     });
 
     it('should throw error for invalid JSON structure', async () => {
@@ -196,7 +198,7 @@ describe('BuildCommand - Integration Tests (US-5.3)', () => {
 
       writeFileSync(testFile, JSON.stringify(invalidStructure));
 
-      expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
+      await expect(simulateBuildExecution(testFile, {})).rejects.toThrow();
     });
   });
 

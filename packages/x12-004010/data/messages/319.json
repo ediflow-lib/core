@@ -1,0 +1,37 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "319",
+  "name": "Terminal Information",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Terminal Information Transaction Set (319) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by terminal operators to provide shipment arrival event information to authorized parties. It can be used to transmit information such as arrival of the shipment, availability for pickup, or the actual pickup of the shipment. Some of the authorized parties to shipment are customs house brokers, freight forwarders, or consignees.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BA2",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CD1",
+      "mandatory": true,
+      "maxOccurrences": 999,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

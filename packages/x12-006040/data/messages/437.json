@@ -1,0 +1,76 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "437",
+  "name": "Railroad Junctions and Interchanges Activity",
+  "description": "Railroad Junctions and Interchanges Activity",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BJF",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "JCT",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopJS",
+      "name": "LoopJS",
+      "triggerSegment": "JS",
+      "mandatory": false,
+      "maxOccurrences": 2,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "JS",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 3,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "SID",
+          "mandatory": false,
+          "maxOccurrences": 20,
+          "position": 3
+        }
+      ]
+    }
+  ]
+}

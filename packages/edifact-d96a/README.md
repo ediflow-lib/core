@@ -113,9 +113,9 @@ if (validation.success) {
 - ✅ Automotive industry (early implementations)
 
 **Consider newer versions if:**
-- 🔄 **D.20B** - Latest standard (2020) - More message types
-- 🔄 **D.12A** - Comprehensive (196 message types)
-- 🔄 **D.01B** - Intermediate standard (2001)
+- 🔄 **D.01B** - More message types (226 messages)
+- 🔄 **D.12A** - Comprehensive (198 message types)
+- 🔄 **D.20B** - Latest standard (196 messages, 2020)
 
 ---
 
@@ -126,8 +126,9 @@ if (validation.success) {
 
 **Other EDIFACT Standards:**
 - [`@ediflow/edifact-d01b`](https://npmjs.com/package/@ediflow/edifact-d01b) - D.01B (2001) - 4 messages
-- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 messages
 - [`@ediflow/edifact-d12a`](https://npmjs.com/package/@ediflow/edifact-d12a) - D.12A (2012) - 196 messages
+- [`@ediflow/edifact-d20b`](https://npmjs.com/package/@ediflow/edifact-d20b) - D.20B (2020) - 7 messages
+- [`@ediflow/eancom-2002`](https://npmjs.com/package/@ediflow/eancom-2002) - EANCOM 2002 - 50 messages (GS1 Retail)
 
 ---
 

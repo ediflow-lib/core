@@ -1,0 +1,46 @@
+{
+  "elementCode": "4457",
+  "elementName": "Substitution condition code",
+  "values": [
+    {
+      "code": "1",
+      "name": "No substitution allowed",
+      "description": "Notice to supplier to fill order exactly as specified."
+    },
+    {
+      "code": "2",
+      "name": "Supply any binding if edition ordered not available",
+      "description": "Indicates that substitute bindings are acceptable if the edition of a book originally ordered is unavailable."
+    },
+    {
+      "code": "3",
+      "name": "Supply paper binding if edition ordered not available",
+      "description": "Indicates that a paper back edition of a book is acceptable if the edition ordered is unavailable."
+    },
+    {
+      "code": "4",
+      "name": "Supply cloth binding if edition ordered not available",
+      "description": "Indicates that the cloth bound edition of a book is acceptable if the edition ordered is unavailable."
+    },
+    {
+      "code": "5",
+      "name": "Supply library binding if edition ordered not available",
+      "description": "Indicates that a library binding of a book is acceptable if the edition ordered is unavailable."
+    },
+    {
+      "code": "6",
+      "name": "Equivalent item substitution",
+      "description": "Indicates that an item of the same value and performance may be substituted for the item specified."
+    },
+    {
+      "code": "7",
+      "name": "Alternate item substitution allowed",
+      "description": "Indicates that an item of equal or greater value and performance may be substituted for the item specified."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined",
+      "description": "A code reserved for special trading partner requirements when pre-defined codes do not exist."
+    }
+  ]
+}

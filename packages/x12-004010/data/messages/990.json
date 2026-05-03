@@ -1,0 +1,111 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "990",
+  "name": "Response to a Load Tender",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Response to a Load Tender Transaction Set (990) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide general information relative to a specific shipment. The Response to a Load Tender is used as the response to a Motor Carrier Shipment Information Transaction Set (204) which has been used as a load tender.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "G62",
+      "mandatory": false,
+      "maxOccurrences": 6,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N7",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "L9",
+      "mandatory": false,
+      "maxOccurrences": 40,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "K1",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 8
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "Loop0100",
+      "name": "Loop0100",
+      "triggerSegment": "S5",
+      "mandatory": false,
+      "maxOccurrences": 999,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "S5",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "N9",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "G62",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "K1",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    }
+  ]
+}

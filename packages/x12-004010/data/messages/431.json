@@ -1,0 +1,79 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "431",
+  "name": "Railroad Station Master File",
+  "description": "This Draft Standard for Trial Use provides the format and establishes the data contents of the Railroad Station Master File Transaction Set (431) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set will be used by the Association of American Railroads (AAR) and the rail carriers to apply and disseminate information concerning the railroad stations. Rail carriers report to the AAR the addition or deletion of, or changes to, the list of stations they serve as updates to the centrally maintained master file. The AAR in turn provides all updates to the rail carriers and other subscribers to the system.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SMB",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N4",
+      "mandatory": true,
+      "maxOccurrences": 10,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "CD",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SMS",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SMA",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SMR",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 8
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SMO",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 9
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 10
+    }
+  ]
+}

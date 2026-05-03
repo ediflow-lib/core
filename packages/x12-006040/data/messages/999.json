@@ -1,0 +1,112 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "999",
+  "name": "Implementation Acknowledgment",
+  "description": "Implementation Acknowledgment",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AK1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AK9",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopAK2",
+      "name": "LoopAK2",
+      "triggerSegment": "AK2",
+      "mandatory": false,
+      "maxOccurrences": 999999,
+      "position": 5,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "AK2",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "IK5",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 2
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopIK3",
+          "name": "LoopIK3",
+          "triggerSegment": "IK3",
+          "mandatory": false,
+          "maxOccurrences": 999999,
+          "position": 3,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "IK3",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "CTX",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopIK4",
+              "name": "LoopIK4",
+              "triggerSegment": "IK4",
+              "mandatory": false,
+              "maxOccurrences": 999999,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "IK4",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CTX",
+                  "mandatory": false,
+                  "maxOccurrences": 10,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

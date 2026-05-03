@@ -1,0 +1,8954 @@
+{
+  "C002": {
+    "code": "C002",
+    "name": "Document/message name",
+    "description": "Identification of a type of document/message by code or name. Code preferred.",
+    "components": [
+      {
+        "elementCode": "1001",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1000",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C004": {
+    "code": "C004",
+    "name": "Event category",
+    "description": "To specify the event category.",
+    "components": [
+      {
+        "elementCode": "9637",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9636",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C008": {
+    "code": "C008",
+    "name": "Monetary amount function detail",
+    "description": "To provide the detail of a monetary amount function.",
+    "components": [
+      {
+        "elementCode": "5105",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5104",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C009": {
+    "code": "C009",
+    "name": "Information category",
+    "description": "To specify the category of information.",
+    "components": [
+      {
+        "elementCode": "9615",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9614",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C010": {
+    "code": "C010",
+    "name": "Information type",
+    "description": "To specify the type of information.",
+    "components": [
+      {
+        "elementCode": "9613",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9612",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C011": {
+    "code": "C011",
+    "name": "Information detail",
+    "description": "To provide the information details.",
+    "components": [
+      {
+        "elementCode": "9617",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9616",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C012": {
+    "code": "C012",
+    "name": "Processing indicator",
+    "description": "Identification of the processing indicator.",
+    "components": [
+      {
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7364",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C019": {
+    "code": "C019",
+    "name": "Payment terms",
+    "description": "Terms of payment information.",
+    "components": [
+      {
+        "elementCode": "4277",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4276",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C030": {
+    "code": "C030",
+    "name": "Event type",
+    "description": "To specify the type of event.",
+    "components": [
+      {
+        "elementCode": "9171",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9170",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C040": {
+    "code": "C040",
+    "name": "Carrier",
+    "description": "Identification of a carrier by code and/or by name. Code preferred.",
+    "components": [
+      {
+        "elementCode": "3127",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3128",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C042": {
+    "code": "C042",
+    "name": "Nationality details",
+    "description": "To specify a nationality.",
+    "components": [
+      {
+        "elementCode": "3293",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3292",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C045": {
+    "code": "C045",
+    "name": "Bill level identification",
+    "description": "A sequenced collection of facetted codes used for multiple indexing purposes.",
+    "components": [
+      {
+        "elementCode": "7436",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7438",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7440",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7442",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7444",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7446",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C049": {
+    "code": "C049",
+    "name": "Remuneration type identification",
+    "description": "Identification of the type of a remuneration.",
+    "components": [
+      {
+        "elementCode": "5315",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5314",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "5314",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C056": {
+    "code": "C056",
+    "name": "Department or employee details",
+    "description": "Code and/or name of a department or employee. Code preferred.",
+    "components": [
+      {
+        "elementCode": "3413",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3412",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C058": {
+    "code": "C058",
+    "name": "Name and address",
+    "description": "Unstructured name and address: one to five lines.",
+    "components": [
+      {
+        "elementCode": "3124",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3124",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3124",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3124",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3124",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C059": {
+    "code": "C059",
+    "name": "Street",
+    "description": "Street address and/or PO Box number in a structured address: one to four lines.",
+    "components": [
+      {
+        "elementCode": "3042",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3042",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3042",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3042",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C063": {
+    "code": "C063",
+    "name": "Event identification",
+    "description": "To identify an event.",
+    "components": [
+      {
+        "elementCode": "9173",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9172",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C076": {
+    "code": "C076",
+    "name": "Communication contact",
+    "description": "Communication number of a department or employee in a specified channel.",
+    "components": [
+      {
+        "elementCode": "3148",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3155",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "C077": {
+    "code": "C077",
+    "name": "File identification",
+    "description": "To identify a file.",
+    "components": [
+      {
+        "elementCode": "1508",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7008",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C078": {
+    "code": "C078",
+    "name": "Account holder identification",
+    "description": "Identification of an account holder by account number and/or account holder name in one or two lines. Number preferred.",
+    "components": [
+      {
+        "elementCode": "3194",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3192",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3192",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C079": {
+    "code": "C079",
+    "name": "Computer environment identification",
+    "description": "To identify parts of a computer environment.",
+    "components": [
+      {
+        "elementCode": "1511",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1510",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1058",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "C080": {
+    "code": "C080",
+    "name": "Party name",
+    "description": "Identification of a transaction party by name, one to five lines. Party name may be formatted.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3045",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C082": {
+    "code": "C082",
+    "name": "Party identification details",
+    "description": "Identification of a transaction party by code.",
+    "components": [
+      {
+        "elementCode": "3039",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C085": {
+    "code": "C085",
+    "name": "Marital status details",
+    "description": "To specify the marital status of a person.",
+    "components": [
+      {
+        "elementCode": "3479",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3478",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C088": {
+    "code": "C088",
+    "name": "Institution identification",
+    "description": "Identification of a financial institution by code branch number, or name and name of place. Code or branch number preferred.",
+    "components": [
+      {
+        "elementCode": "3433",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3434",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3432",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "3436",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "C090": {
+    "code": "C090",
+    "name": "Address details",
+    "description": "To specify the details of an address.",
+    "components": [
+      {
+        "elementCode": "3477",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C099": {
+    "code": "C099",
+    "name": "File details",
+    "description": "To define details relevant to a file.",
+    "components": [
+      {
+        "elementCode": "1516",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1503",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1502",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C100": {
+    "code": "C100",
+    "name": "Terms of delivery or transport",
+    "description": "Terms of delivery or transport code from a specified source.",
+    "components": [
+      {
+        "elementCode": "4053",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4052",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4052",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C101": {
+    "code": "C101",
+    "name": "Religion details",
+    "description": "To specify the religion of a person.",
+    "components": [
+      {
+        "elementCode": "3483",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3482",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C106": {
+    "code": "C106",
+    "name": "Document/message identification",
+    "description": "Identification of a document/message by its number and eventually its version or revision.",
+    "components": [
+      {
+        "elementCode": "1004",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C107": {
+    "code": "C107",
+    "name": "Text reference",
+    "description": "Coded reference to a standard text and its source.",
+    "components": [
+      {
+        "elementCode": "4441",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C108": {
+    "code": "C108",
+    "name": "Text literal",
+    "description": "Free text; one to five lines.",
+    "components": [
+      {
+        "elementCode": "4440",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C110": {
+    "code": "C110",
+    "name": "Payment terms",
+    "description": "Terms of payment code from a specified source.",
+    "components": [
+      {
+        "elementCode": "4277",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4276",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4276",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C112": {
+    "code": "C112",
+    "name": "Terms/time information",
+    "description": "Time details in payment terms.",
+    "components": [
+      {
+        "elementCode": "2475",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2009",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2151",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2152",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C128": {
+    "code": "C128",
+    "name": "Rate details",
+    "description": "Rate per unit and rate basis.",
+    "components": [
+      {
+        "elementCode": "5419",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5420",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "5284",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C138": {
+    "code": "C138",
+    "name": "Price multiplier information",
+    "description": "Price multiplier and its identification.",
+    "components": [
+      {
+        "elementCode": "5394",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5393",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C174": {
+    "code": "C174",
+    "name": "Value/range",
+    "description": "Measurement value and relevant minimum and maximum values of the measurement range.",
+    "components": [
+      {
+        "elementCode": "6411",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6314",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6162",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6152",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "6432",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C186": {
+    "code": "C186",
+    "name": "Quantity details",
+    "description": "Quantity information in a transaction, qualified when relevant.",
+    "components": [
+      {
+        "elementCode": "6063",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C200": {
+    "code": "C200",
+    "name": "Charge",
+    "description": "Identification of a charge by code and/or by name.",
+    "components": [
+      {
+        "elementCode": "8023",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "8022",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4237",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7140",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C202": {
+    "code": "C202",
+    "name": "Package type",
+    "description": "Type of package by name or by code from a specified source.",
+    "components": [
+      {
+        "elementCode": "7065",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7064",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C203": {
+    "code": "C203",
+    "name": "Rate/tariff class",
+    "description": "Identification of the applicable rate/tariff class.",
+    "components": [
+      {
+        "elementCode": "5243",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5242",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "5275",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "5275",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "C205": {
+    "code": "C205",
+    "name": "Hazard code",
+    "description": "The identification of the dangerous goods in code.",
+    "components": [
+      {
+        "elementCode": "8351",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "8078",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "8092",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C206": {
+    "code": "C206",
+    "name": "Identification number",
+    "description": "The identification of an object.",
+    "components": [
+      {
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C208": {
+    "code": "C208",
+    "name": "Identity number range",
+    "description": "Goods item identification numbers, start and end of consecutively numbered range.",
+    "components": [
+      {
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C210": {
+    "code": "C210",
+    "name": "Marks & labels",
+    "description": "Shipping marks on packages in free text; one to ten lines.",
+    "components": [
+      {
+        "elementCode": "7102",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "7102",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "C211": {
+    "code": "C211",
+    "name": "Dimensions",
+    "description": "Specification of the dimensions of a transportable unit.",
+    "components": [
+      {
+        "elementCode": "6411",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6168",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6140",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6008",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C212": {
+    "code": "C212",
+    "name": "Item number identification",
+    "description": "Goods identification for a specified source.",
+    "components": [
+      {
+        "elementCode": "7140",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7143",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C213": {
+    "code": "C213",
+    "name": "Number and type of packages",
+    "description": "Number and type of individual parts of a shipment.",
+    "components": [
+      {
+        "elementCode": "7224",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7065",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7064",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7233",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C214": {
+    "code": "C214",
+    "name": "Special services identification",
+    "description": "Identification of a special service by a code from a specified source or by description.",
+    "components": [
+      {
+        "elementCode": "7161",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7160",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7160",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C215": {
+    "code": "C215",
+    "name": "Seal issuer",
+    "description": "Identification of the issuer of a seal on equipment either by code or by name.",
+    "components": [
+      {
+        "elementCode": "9303",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9302",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C218": {
+    "code": "C218",
+    "name": "Hazardous material",
+    "description": "To specify a hazardous material.",
+    "components": [
+      {
+        "elementCode": "7419",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7418",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C219": {
+    "code": "C219",
+    "name": "Movement type",
+    "description": "Description of type of service for movement of cargo.",
+    "components": [
+      {
+        "elementCode": "8335",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8334",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C220": {
+    "code": "C220",
+    "name": "Mode of transport",
+    "description": "Method of transport code or name. Code preferred.",
+    "components": [
+      {
+        "elementCode": "8067",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8066",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C222": {
+    "code": "C222",
+    "name": "Transport identification",
+    "description": "Code and/or name identifying the means of transport.",
+    "components": [
+      {
+        "elementCode": "8213",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "8212",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "8453",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C223": {
+    "code": "C223",
+    "name": "Dangerous goods shipment flashpoint",
+    "description": "Temperature at which a vapor can be ignited as per ISO 1523/73.",
+    "components": [
+      {
+        "elementCode": "7106",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C224": {
+    "code": "C224",
+    "name": "Equipment size and type",
+    "description": "Code and or name identifying size and type of equipment. Code preferred.",
+    "components": [
+      {
+        "elementCode": "8155",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "8154",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C228": {
+    "code": "C228",
+    "name": "Transport means",
+    "description": "Code and/or name identifying the type of means of transport.",
+    "components": [
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8178",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C229": {
+    "code": "C229",
+    "name": "Charge category",
+    "description": "Identification of a category or a zone of charges.",
+    "components": [
+      {
+        "elementCode": "5237",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C231": {
+    "code": "C231",
+    "name": "Method of payment",
+    "description": "Code identifying the method of payment.",
+    "components": [
+      {
+        "elementCode": "4215",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C232": {
+    "code": "C232",
+    "name": "Government action",
+    "description": "Code indicating a type of government action.",
+    "components": [
+      {
+        "elementCode": "9415",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "9411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "9417",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9353",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C233": {
+    "code": "C233",
+    "name": "Service",
+    "description": "To identify a service (which may constitute an additional component to a basic contract).",
+    "components": [
+      {
+        "elementCode": "7273",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7273",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C234": {
+    "code": "C234",
+    "name": "UNDG information",
+    "description": "Information on dangerous goods, taken from the United Nations Dangerous Goods classification.",
+    "components": [
+      {
+        "elementCode": "7124",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7088",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C235": {
+    "code": "C235",
+    "name": "Hazard identification placard details",
+    "description": "These numbers appear on the hazard identification placard required on the means of transport.",
+    "components": [
+      {
+        "elementCode": "8158",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8186",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C236": {
+    "code": "C236",
+    "name": "Dangerous goods label",
+    "description": "Markings identifying the type of hazardous goods and similar information.",
+    "components": [
+      {
+        "elementCode": "8246",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8246",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "8246",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C237": {
+    "code": "C237",
+    "name": "Equipment identification",
+    "description": "Marks (letters/numbers) identifying equipment.",
+    "components": [
+      {
+        "elementCode": "8260",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C239": {
+    "code": "C239",
+    "name": "Temperature setting",
+    "description": "The temperature under which the goods are (to be) stored or shipped.",
+    "components": [
+      {
+        "elementCode": "6246",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C240": {
+    "code": "C240",
+    "name": "Product characteristic",
+    "description": "Specific product characteristic data.",
+    "components": [
+      {
+        "elementCode": "7037",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7036",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C241": {
+    "code": "C241",
+    "name": "Duty/tax/fee type",
+    "description": "Code and/or name identifying duty, tax or fee.",
+    "components": [
+      {
+        "elementCode": "5153",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5152",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C242": {
+    "code": "C242",
+    "name": "Process type and description",
+    "description": "Identification of process type and description.",
+    "components": [
+      {
+        "elementCode": "7187",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7186",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7186",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C243": {
+    "code": "C243",
+    "name": "Duty/tax/fee detail",
+    "description": "Rate of duty/tax/fee applicable to commodities or of tax applicable to services.",
+    "components": [
+      {
+        "elementCode": "5279",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5278",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "5273",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "C244": {
+    "code": "C244",
+    "name": "Test method",
+    "description": "Specification of the test method employed.",
+    "components": [
+      {
+        "elementCode": "4415",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4416",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C246": {
+    "code": "C246",
+    "name": "Customs identity codes",
+    "description": "Specification of goods in terms of customs identity.",
+    "components": [
+      {
+        "elementCode": "7361",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C270": {
+    "code": "C270",
+    "name": "Control",
+    "description": "Control total for checking integrity of a message or part of a message.",
+    "components": [
+      {
+        "elementCode": "6069",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6066",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C272": {
+    "code": "C272",
+    "name": "Item characteristic",
+    "description": "To provide the characteristic of the item being described.",
+    "components": [
+      {
+        "elementCode": "7081",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C273": {
+    "code": "C273",
+    "name": "Item description",
+    "description": "Description of an item.",
+    "components": [
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7008",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7008",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C279": {
+    "code": "C279",
+    "name": "Quantity difference information",
+    "description": "Information on quantity difference.",
+    "components": [
+      {
+        "elementCode": "6064",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6063",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C280": {
+    "code": "C280",
+    "name": "Range",
+    "description": "Range minimum and maximum limits.",
+    "components": [
+      {
+        "elementCode": "6411",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6162",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6152",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C286": {
+    "code": "C286",
+    "name": "Sequence information",
+    "description": "Identification of a sequence and source for sequencing.",
+    "components": [
+      {
+        "elementCode": "1050",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1159",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C288": {
+    "code": "C288",
+    "name": "Product group",
+    "description": "To give product group information.",
+    "components": [
+      {
+        "elementCode": "5389",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5388",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C292": {
+    "code": "C292",
+    "name": "Price change information",
+    "description": "A value assigned by the seller to indicate movement of prices from a previous price catalogue.",
+    "components": [
+      {
+        "elementCode": "5377",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C329": {
+    "code": "C329",
+    "name": "Pattern description",
+    "description": "Shipment, delivery or production interval pattern and timing.",
+    "components": [
+      {
+        "elementCode": "2013",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2015",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2017",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C330": {
+    "code": "C330",
+    "name": "Insurance cover type",
+    "description": "To provide the insurance cover type.",
+    "components": [
+      {
+        "elementCode": "4497",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C331": {
+    "code": "C331",
+    "name": "Insurance cover details",
+    "description": "To provide the insurance cover details.",
+    "components": [
+      {
+        "elementCode": "4495",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4494",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4494",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C332": {
+    "code": "C332",
+    "name": "Sales channel identification",
+    "description": "Identification of sales channel for marketing data, sales, forecast, planning...",
+    "components": [
+      {
+        "elementCode": "3496",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C333": {
+    "code": "C333",
+    "name": "Information request",
+    "description": "To specify the information requested in a responding message.",
+    "components": [
+      {
+        "elementCode": "4511",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4510",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C401": {
+    "code": "C401",
+    "name": "Excess transportation information",
+    "description": "To provide details of reason for, and responsibility for, use of transportation other than normally utilized.",
+    "components": [
+      {
+        "elementCode": "8457",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "8459",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "7130",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C402": {
+    "code": "C402",
+    "name": "Package type identification",
+    "description": "Identification of the form in which goods are described.",
+    "components": [
+      {
+        "elementCode": "7077",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7064",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "7143",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7064",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7143",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C501": {
+    "code": "C501",
+    "name": "Percentage details",
+    "description": "Percentage relating to a specified basis.",
+    "components": [
+      {
+        "elementCode": "5245",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "5249",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C502": {
+    "code": "C502",
+    "name": "Measurement details",
+    "description": "Identification of measurement type.",
+    "components": [
+      {
+        "elementCode": "6313",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6321",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6155",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6154",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C503": {
+    "code": "C503",
+    "name": "Document/message details",
+    "description": "Identification of document/message by number, status, source and/or language.",
+    "components": [
+      {
+        "elementCode": "1004",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1373",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1366",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C504": {
+    "code": "C504",
+    "name": "Currency details",
+    "description": "The usage to which a currency relates.",
+    "components": [
+      {
+        "elementCode": "6347",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6343",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6348",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C506": {
+    "code": "C506",
+    "name": "Reference",
+    "description": "Identification of a reference.",
+    "components": [
+      {
+        "elementCode": "1153",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1156",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4000",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C507": {
+    "code": "C507",
+    "name": "Date/time/period",
+    "description": "Date and/or time, or period relevant to the specified date/time/period type.",
+    "components": [
+      {
+        "elementCode": "2005",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2379",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C508": {
+    "code": "C508",
+    "name": "Language details",
+    "description": "To identify a language.",
+    "components": [
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3452",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C509": {
+    "code": "C509",
+    "name": "Price information",
+    "description": "Identification of price type, price and related details.",
+    "components": [
+      {
+        "elementCode": "5125",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5118",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "5375",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5387",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "5284",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C512": {
+    "code": "C512",
+    "name": "Size details",
+    "description": "Information about the number of observations.",
+    "components": [
+      {
+        "elementCode": "6173",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6174",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C514": {
+    "code": "C514",
+    "name": "Sample location details",
+    "description": "Identification of location within the specimen, from which the sample was taken.",
+    "components": [
+      {
+        "elementCode": "3237",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3236",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C515": {
+    "code": "C515",
+    "name": "Test reason",
+    "description": "To identify the reason for the test as specified.",
+    "components": [
+      {
+        "elementCode": "4425",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4424",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C516": {
+    "code": "C516",
+    "name": "Monetary amount",
+    "description": "Amount of goods or services stated as a monetary amount in a specified currency.",
+    "components": [
+      {
+        "elementCode": "5025",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6343",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C517": {
+    "code": "C517",
+    "name": "Location identification",
+    "description": "Identification of a location by code or name.",
+    "components": [
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C519": {
+    "code": "C519",
+    "name": "Related location one identification",
+    "description": "Identification the first related location by code or name.",
+    "components": [
+      {
+        "elementCode": "3223",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3222",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C521": {
+    "code": "C521",
+    "name": "Business function",
+    "description": "To specify a business reason.",
+    "components": [
+      {
+        "elementCode": "4027",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4025",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4022",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C522": {
+    "code": "C522",
+    "name": "Instruction",
+    "description": "To specify an instruction.",
+    "components": [
+      {
+        "elementCode": "4403",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4401",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4400",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C523": {
+    "code": "C523",
+    "name": "Number of unit details",
+    "description": "Identification of number of units and its purpose.",
+    "components": [
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6353",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C524": {
+    "code": "C524",
+    "name": "Handling instructions",
+    "description": "Instruction for the handling of goods, products or articles in shipment, storage etc.",
+    "components": [
+      {
+        "elementCode": "4079",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4078",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C525": {
+    "code": "C525",
+    "name": "Purpose of conveyance call",
+    "description": "Description of the purpose of the call of the conveyance.",
+    "components": [
+      {
+        "elementCode": "8025",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "8024",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C526": {
+    "code": "C526",
+    "name": "Frequency details",
+    "description": "Number of samples collected per specified unit of measure.",
+    "components": [
+      {
+        "elementCode": "6071",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6072",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C527": {
+    "code": "C527",
+    "name": "Statistical details",
+    "description": "Specifications related to statistical measurements.",
+    "components": [
+      {
+        "elementCode": "6314",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6313",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6321",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C528": {
+    "code": "C528",
+    "name": "Commodity/rate detail",
+    "description": "Identification of commodity/rates.",
+    "components": [
+      {
+        "elementCode": "7357",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C529": {
+    "code": "C529",
+    "name": "Processing indicator",
+    "description": "Type of process indication.",
+    "components": [
+      {
+        "elementCode": "7365",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7187",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C531": {
+    "code": "C531",
+    "name": "Packaging details",
+    "description": "Packaging level and details, terms and conditions.",
+    "components": [
+      {
+        "elementCode": "7075",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7233",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7073",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C532": {
+    "code": "C532",
+    "name": "Returnable package details",
+    "description": "Indication of responsibility for payment and load contents of returnable packages.",
+    "components": [
+      {
+        "elementCode": "8395",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8393",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C533": {
+    "code": "C533",
+    "name": "Duty/tax/fee account detail",
+    "description": "Indication of account reference for duties, taxes and/or fees.",
+    "components": [
+      {
+        "elementCode": "5289",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C534": {
+    "code": "C534",
+    "name": "Payment instruction details",
+    "description": "Indication of method of payment employed or to be employed.",
+    "components": [
+      {
+        "elementCode": "4439",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "4431",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4461",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "4435",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C536": {
+    "code": "C536",
+    "name": "Contract and carriage condition",
+    "description": "To identify a contract and carriage condition.",
+    "components": [
+      {
+        "elementCode": "4065",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C537": {
+    "code": "C537",
+    "name": "Transport priority",
+    "description": "To indicate the priority of requested transport service.",
+    "components": [
+      {
+        "elementCode": "4219",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C543": {
+    "code": "C543",
+    "name": "Agreement type identification",
+    "description": "Identification of specific agreement type by code or name.",
+    "components": [
+      {
+        "elementCode": "7431",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7433",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7434",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C545": {
+    "code": "C545",
+    "name": "Index identification",
+    "description": "To identify an index.",
+    "components": [
+      {
+        "elementCode": "5013",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5027",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C546": {
+    "code": "C546",
+    "name": "Index value",
+    "description": "To identify the value of an index.",
+    "components": [
+      {
+        "elementCode": "5030",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5039",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C549": {
+    "code": "C549",
+    "name": "Monetary amount function",
+    "description": "To identify the function of a monetary amount.",
+    "components": [
+      {
+        "elementCode": "5007",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5006",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C550": {
+    "code": "C550",
+    "name": "Requirement/condition identification",
+    "description": "To identify the specific rule/condition requirement.",
+    "components": [
+      {
+        "elementCode": "7295",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7294",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C551": {
+    "code": "C551",
+    "name": "Bank operation",
+    "description": "Identification of a bank operation by code.",
+    "components": [
+      {
+        "elementCode": "4383",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C552": {
+    "code": "C552",
+    "name": "Allowance/charge information",
+    "description": "Identification of allowance/charge information by number and/or code.",
+    "components": [
+      {
+        "elementCode": "1230",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "5189",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C553": {
+    "code": "C553",
+    "name": "Related location two identification",
+    "description": "Identification of second related location by code or name.",
+    "components": [
+      {
+        "elementCode": "3233",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3232",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C554": {
+    "code": "C554",
+    "name": "Rate/tariff class detail",
+    "description": "Identification of the applicable rate/tariff class.",
+    "components": [
+      {
+        "elementCode": "5243",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C555": {
+    "code": "C555",
+    "name": "Status",
+    "description": "To specify a status.",
+    "components": [
+      {
+        "elementCode": "4405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4404",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C556": {
+    "code": "C556",
+    "name": "Status reason",
+    "description": "To specify the reason for a status.",
+    "components": [
+      {
+        "elementCode": "9013",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9012",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C564": {
+    "code": "C564",
+    "name": "Physical or logical state information",
+    "description": "To give information in coded or clear text form on the physical or logical state.",
+    "components": [
+      {
+        "elementCode": "7007",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7006",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C585": {
+    "code": "C585",
+    "name": "Priority details",
+    "description": "To indicate a priority.",
+    "components": [
+      {
+        "elementCode": "4037",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4036",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C593": {
+    "code": "C593",
+    "name": "Account identification",
+    "description": "Identification of an account.",
+    "components": [
+      {
+        "elementCode": "1147",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1148",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1146",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1146",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "C595": {
+    "code": "C595",
+    "name": "Accounting journal identification",
+    "description": "Identification of an accounting journal.",
+    "components": [
+      {
+        "elementCode": "1171",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1170",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C596": {
+    "code": "C596",
+    "name": "Accounting entry type details",
+    "description": "Identification of the type of entry included in an accounting journal.",
+    "components": [
+      {
+        "elementCode": "4475",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4474",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C601": {
+    "code": "C601",
+    "name": "Status category",
+    "description": "To specify the category of the status.",
+    "components": [
+      {
+        "elementCode": "9015",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C701": {
+    "code": "C701",
+    "name": "Error point details",
+    "description": "Indication of the point of error in a message.",
+    "components": [
+      {
+        "elementCode": "1049",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1052",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1054",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C702": {
+    "code": "C702",
+    "name": "Code set identification",
+    "description": "To identify a code set.",
+    "components": [
+      {
+        "elementCode": "9150",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C703": {
+    "code": "C703",
+    "name": "Nature of cargo",
+    "description": "Rough classification of a type of cargo.",
+    "components": [
+      {
+        "elementCode": "7085",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C709": {
+    "code": "C709",
+    "name": "Message identifier",
+    "description": "Identification of the message.",
+    "components": [
+      {
+        "elementCode": "1475",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1056",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1058",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1476",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1523",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1060",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "1373",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "C770": {
+    "code": "C770",
+    "name": "Array cell details",
+    "description": "To contain the data for a contiguous set of cells in an array.",
+    "components": [
+      {
+        "elementCode": "9424",
+        "mandatory": false,
+        "position": 1
+      }
+    ]
+  },
+  "C778": {
+    "code": "C778",
+    "name": "Position identification",
+    "description": "To identify the position of an object in a structure containing the object.",
+    "components": [
+      {
+        "elementCode": "7164",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C779": {
+    "code": "C779",
+    "name": "Array structure identification",
+    "description": "The identification of an array structure.",
+    "components": [
+      {
+        "elementCode": "9428",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C780": {
+    "code": "C780",
+    "name": "Value list identification",
+    "description": "The identification of a coded or non coded value list.",
+    "components": [
+      {
+        "elementCode": "1518",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C782": {
+    "code": "C782",
+    "name": "Data set identification",
+    "description": "The identification of a data set.",
+    "components": [
+      {
+        "elementCode": "1520",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C783": {
+    "code": "C783",
+    "name": "Footnote set identification",
+    "description": "The identification of a set of footnotes.",
+    "components": [
+      {
+        "elementCode": "9430",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C784": {
+    "code": "C784",
+    "name": "Footnote identification",
+    "description": "The identification of a footnote.",
+    "components": [
+      {
+        "elementCode": "9432",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C785": {
+    "code": "C785",
+    "name": "Statistical concept identification",
+    "description": "The identification of a statistical concept.",
+    "components": [
+      {
+        "elementCode": "6434",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C786": {
+    "code": "C786",
+    "name": "Structure component identification",
+    "description": "The identification of a structure component.",
+    "components": [
+      {
+        "elementCode": "7512",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C811": {
+    "code": "C811",
+    "name": "Question details",
+    "description": "To specify a question.",
+    "components": [
+      {
+        "elementCode": "4057",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4056",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C812": {
+    "code": "C812",
+    "name": "Response details",
+    "description": "To specify a response to a question, in code or text.",
+    "components": [
+      {
+        "elementCode": "4345",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4344",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C814": {
+    "code": "C814",
+    "name": "Safety section",
+    "description": "To identify the safety section to which information relates.",
+    "components": [
+      {
+        "elementCode": "4046",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4044",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C815": {
+    "code": "C815",
+    "name": "Additional safety information",
+    "description": "To identify additional safety information.",
+    "components": [
+      {
+        "elementCode": "4039",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4038",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C816": {
+    "code": "C816",
+    "name": "Name component details",
+    "description": "To specify a name component.",
+    "components": [
+      {
+        "elementCode": "3405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3398",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3401",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3295",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C817": {
+    "code": "C817",
+    "name": "Address usage",
+    "description": "To describe the usage of an address.",
+    "components": [
+      {
+        "elementCode": "3299",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3475",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C818": {
+    "code": "C818",
+    "name": "Person inherited characteristic details",
+    "description": "To specify an inherited characteristic of a person.",
+    "components": [
+      {
+        "elementCode": "3311",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3310",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C819": {
+    "code": "C819",
+    "name": "Country sub-entity details",
+    "description": "To specify a part of a country (eg county or part of a city).",
+    "components": [
+      {
+        "elementCode": "3229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3228",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C820": {
+    "code": "C820",
+    "name": "Premium calculation component",
+    "description": "To identify the component affecting premium calculation.",
+    "components": [
+      {
+        "elementCode": "4521",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C821": {
+    "code": "C821",
+    "name": "Type of damage",
+    "description": "To specify the type of damage to an object.",
+    "components": [
+      {
+        "elementCode": "7501",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7500",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C822": {
+    "code": "C822",
+    "name": "Damage area",
+    "description": "To specify where the damage is on an object.",
+    "components": [
+      {
+        "elementCode": "7503",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7502",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C823": {
+    "code": "C823",
+    "name": "Type of unit/component",
+    "description": "To identify the type of unit/component of an object (e.g. lock, door, tyre).",
+    "components": [
+      {
+        "elementCode": "7505",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7504",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C824": {
+    "code": "C824",
+    "name": "Component material",
+    "description": "To identify the material of which a component is composed (e.g. steel, plastics).",
+    "components": [
+      {
+        "elementCode": "7507",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7506",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C825": {
+    "code": "C825",
+    "name": "Damage severity",
+    "description": "To specify the severity of damage to an object.",
+    "components": [
+      {
+        "elementCode": "7509",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7508",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C826": {
+    "code": "C826",
+    "name": "Action",
+    "description": "To indicate an action which has been taken or is to be taken (e.g. in relation to a certain object).",
+    "components": [
+      {
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1228",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C827": {
+    "code": "C827",
+    "name": "Type of marking",
+    "description": "Specification of the type of marking that reflects the method that was used and the conventions adhered to for marking (e.g. of packages).",
+    "components": [
+      {
+        "elementCode": "7511",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C828": {
+    "code": "C828",
+    "name": "Clinical intervention details",
+    "description": "To specify a clinical intervention.",
+    "components": [
+      {
+        "elementCode": "9437",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9436",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C829": {
+    "code": "C829",
+    "name": "Sub-line information",
+    "description": "To provide an indication that a segment or segment group is used to contain sub-line or sub-line item information and to optionally enable the sub-line to be identified.",
+    "components": [
+      {
+        "elementCode": "5495",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1082",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C830": {
+    "code": "C830",
+    "name": "Process identification details",
+    "description": "To identify the details of a specific process.",
+    "components": [
+      {
+        "elementCode": "7191",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7190",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C831": {
+    "code": "C831",
+    "name": "Result details",
+    "description": "To specify a value.",
+    "components": [
+      {
+        "elementCode": "6314",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6321",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6155",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "6154",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "C836": {
+    "code": "C836",
+    "name": "Clinical information details",
+    "description": "To specify an item of clinical information.",
+    "components": [
+      {
+        "elementCode": "6413",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6412",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C837": {
+    "code": "C837",
+    "name": "Certainty details",
+    "description": "To specify the certainty.",
+    "components": [
+      {
+        "elementCode": "4049",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4048",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C838": {
+    "code": "C838",
+    "name": "Dosage details",
+    "description": "To specify a dosage.",
+    "components": [
+      {
+        "elementCode": "6083",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6082",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C839": {
+    "code": "C839",
+    "name": "Attendee category",
+    "description": "To specify the category of the attendee.",
+    "components": [
+      {
+        "elementCode": "7459",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7458",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C840": {
+    "code": "C840",
+    "name": "Attendance admission details",
+    "description": "To specify type of admission.",
+    "components": [
+      {
+        "elementCode": "9445",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9444",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C841": {
+    "code": "C841",
+    "name": "Attendance discharge details",
+    "description": "To specify type of discharge.",
+    "components": [
+      {
+        "elementCode": "9447",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9446",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C844": {
+    "code": "C844",
+    "name": "Organisation classification detail",
+    "description": "To specify details regarding the class of an organisation.",
+    "components": [
+      {
+        "elementCode": "3083",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3082",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C848": {
+    "code": "C848",
+    "name": "Measurement unit details",
+    "description": "To specify a measurement unit.",
+    "components": [
+      {
+        "elementCode": "6417",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6416",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C849": {
+    "code": "C849",
+    "name": "Parties to instruction",
+    "description": "Identify the sending and receiving parties of the instruction.",
+    "components": [
+      {
+        "elementCode": "3301",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3285",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C850": {
+    "code": "C850",
+    "name": "Status of instruction",
+    "description": "Provides information regarding the status of an instruction.",
+    "components": [
+      {
+        "elementCode": "4405",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "C851": {
+    "code": "C851",
+    "name": "Risk object type",
+    "description": "Specification of a type of risk object.",
+    "components": [
+      {
+        "elementCode": "7179",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C852": {
+    "code": "C852",
+    "name": "Risk object sub-type",
+    "description": "To provide identification details for a risk object sub-type.",
+    "components": [
+      {
+        "elementCode": "7177",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7176",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C853": {
+    "code": "C853",
+    "name": "Error segment point details",
+    "description": "To indicate the exact segment location of an application error within a message.",
+    "components": [
+      {
+        "elementCode": "9166",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1159",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C878": {
+    "code": "C878",
+    "name": "Charge/allowance account",
+    "description": "Identification of the account for charge or allowance.",
+    "components": [
+      {
+        "elementCode": "3434",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3194",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C889": {
+    "code": "C889",
+    "name": "Characteristic value",
+    "description": "To provide the value of a characteristic.",
+    "components": [
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7110",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7110",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C901": {
+    "code": "C901",
+    "name": "Application error detail",
+    "description": "Code assigned by the recipient of a message to indicate a data validation error condition.",
+    "components": [
+      {
+        "elementCode": "9321",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C941": {
+    "code": "C941",
+    "name": "Relationship",
+    "description": "Identification and/or description of a relationship.",
+    "components": [
+      {
+        "elementCode": "9143",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9142",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C942": {
+    "code": "C942",
+    "name": "Membership category",
+    "description": "Identification and/or description of a membership category for a member of a scheme or group.",
+    "components": [
+      {
+        "elementCode": "7451",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7450",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C944": {
+    "code": "C944",
+    "name": "Membership status",
+    "description": "Code and/or description of membership status.",
+    "components": [
+      {
+        "elementCode": "7453",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7452",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C945": {
+    "code": "C945",
+    "name": "Membership level",
+    "description": "Identification of a membership level.",
+    "components": [
+      {
+        "elementCode": "7455",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7457",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7456",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C948": {
+    "code": "C948",
+    "name": "Employment category",
+    "description": "Code and/or description of an employment category.",
+    "components": [
+      {
+        "elementCode": "9005",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9004",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C950": {
+    "code": "C950",
+    "name": "Qualification classification",
+    "description": "Qualification classification description and/or code. This specifies the trade, skill, professional or similar qualification category.",
+    "components": [
+      {
+        "elementCode": "9007",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9006",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "9006",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C951": {
+    "code": "C951",
+    "name": "Occupation",
+    "description": "Description of an occupation.",
+    "components": [
+      {
+        "elementCode": "9009",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9008",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "9008",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "C953": {
+    "code": "C953",
+    "name": "Contribution type",
+    "description": "Identification of the type of a contribution to a scheme or group.",
+    "components": [
+      {
+        "elementCode": "5049",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5048",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C955": {
+    "code": "C955",
+    "name": "Attribute type",
+    "description": "Identification of the type of attribute.",
+    "components": [
+      {
+        "elementCode": "9021",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9020",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C956": {
+    "code": "C956",
+    "name": "Attribute detail",
+    "description": "Identification of the attribute related to an entity.",
+    "components": [
+      {
+        "elementCode": "9019",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9018",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C960": {
+    "code": "C960",
+    "name": "Reason for change",
+    "description": "Code and/or description of the reason for a change.",
+    "components": [
+      {
+        "elementCode": "4295",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4294",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C961": {
+    "code": "C961",
+    "name": "Formula complexity",
+    "description": "Identification of the complexity of a formula.",
+    "components": [
+      {
+        "elementCode": "9505",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "C970": {
+    "code": "C970",
+    "name": "Clause name",
+    "description": "Identification of a clause in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "4069",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4068",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C971": {
+    "code": "C971",
+    "name": "Proviso type",
+    "description": "Specification of the proviso type in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "4073",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4072",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C972": {
+    "code": "C972",
+    "name": "Proviso calculation",
+    "description": "Specification of the proviso calculation in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "4075",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4074",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C973": {
+    "code": "C973",
+    "name": "Applicability type",
+    "description": "Specification of the applicability type in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "9049",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9048",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C974": {
+    "code": "C974",
+    "name": "Basis type",
+    "description": "Specification of the basis in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "9047",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9046",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "C977": {
+    "code": "C977",
+    "name": "Period detail",
+    "description": "Specification of the period detail in coded or clear form.",
+    "components": [
+      {
+        "elementCode": "2025",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2024",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E001": {
+    "code": "E001",
+    "name": "Address details",
+    "description": "To specify the details of an address.",
+    "components": [
+      {
+        "elementCode": "3477",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3286",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "E002": {
+    "code": "E002",
+    "name": "Commission details",
+    "description": "To specify the commission conditions, amount, currency, party paying, and any related free text.",
+    "components": [
+      {
+        "elementCode": "4439",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E003": {
+    "code": "E003",
+    "name": "Attribute information",
+    "description": "To identify the type of attribute and the attribute.",
+    "components": [
+      {
+        "elementCode": "9021",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "9018",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E004": {
+    "code": "E004",
+    "name": "Rule details",
+    "description": "To indicate the coded rule, a number and it's relation to the rule, a start day of service, a monetary amount associated to the rule, and additional information associated with the rule.",
+    "components": [
+      {
+        "elementCode": "4183",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6353",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5479",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "5025",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 17
+      }
+    ]
+  },
+  "E005": {
+    "code": "E005",
+    "name": "Rule text",
+    "description": "To specify the text rule.",
+    "components": [
+      {
+        "elementCode": "4183",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4473",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E006": {
+    "code": "E006",
+    "name": "Rule status",
+    "description": "To specify the status of the rule.",
+    "components": [
+      {
+        "elementCode": "4183",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E007": {
+    "code": "E007",
+    "name": "Traffic restriction details",
+    "description": "To provide details which restrict traffic.",
+    "components": [
+      {
+        "elementCode": "8015",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8017",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "8035",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E008": {
+    "code": "E008",
+    "name": "Geographic details",
+    "description": "To specify a type of location, the actual location, the direction, distance, travel time and transportation to the location.",
+    "components": [
+      {
+        "elementCode": "3227",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "5479",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "6063",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "6000",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "elementCode": "6002",
+        "mandatory": false,
+        "position": 13
+      }
+    ]
+  },
+  "E009": {
+    "code": "E009",
+    "name": "Daily availability information",
+    "description": "To specify availability on a daily basis.",
+    "components": [
+      {
+        "elementCode": "2000",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4510",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E010": {
+    "code": "E010",
+    "name": "Selection details information",
+    "description": "To specify a selected option and associated information.",
+    "components": [
+      {
+        "elementCode": "4009",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4018",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E011": {
+    "code": "E011",
+    "name": "Rate class details",
+    "description": "To identify rate classes and how they should be processed.",
+    "components": [
+      {
+        "elementCode": "5243",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E012": {
+    "code": "E012",
+    "name": "Name information",
+    "description": "To identify the type of name, the actual name or a code to identify the name, and the status of the name.",
+    "components": [
+      {
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3039",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3397",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E013": {
+    "code": "E013",
+    "name": "Date and time information",
+    "description": "To specify a date and time, and related text.",
+    "components": [
+      {
+        "elementCode": "2005",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "2379",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E014": {
+    "code": "E014",
+    "name": "Time reference details",
+    "description": "To specify a time reference to a corresponding time indication.",
+    "components": [
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1153",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E015": {
+    "code": "E015",
+    "name": "Product data information",
+    "description": "To specify the product data in coded or text form, the number available, and the charge for usage.",
+    "components": [
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7008",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2155",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "5261",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "4473",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "E016": {
+    "code": "E016",
+    "name": "Insurance cover requirement",
+    "description": "To specify the type of and requirement for insurance cover.",
+    "components": [
+      {
+        "elementCode": "4497",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E017": {
+    "code": "E017",
+    "name": "Monetary amount",
+    "description": "Amount of goods or services stated as a monetary amount in a specified currency.",
+    "components": [
+      {
+        "elementCode": "5025",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6343",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E018": {
+    "code": "E018",
+    "name": "Price information",
+    "description": "Identification of price type, price and related details.",
+    "components": [
+      {
+        "elementCode": "5125",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5118",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "5375",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E019": {
+    "code": "E019",
+    "name": "Promotion details",
+    "description": "To specify the provider of a promotion, the promotion reference number, and associated text.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "9607",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "E020": {
+    "code": "E020",
+    "name": "Tax details",
+    "description": "To specify the type of tax, the tax amount and the rate.",
+    "components": [
+      {
+        "elementCode": "5153",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "5278",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E021": {
+    "code": "E021",
+    "name": "Service",
+    "description": "To identify a service and any modifications.",
+    "components": [
+      {
+        "elementCode": "7135",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "9629",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9629",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "9629",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "9629",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E022": {
+    "code": "E022",
+    "name": "Instruction information",
+    "description": "To specify an instruction.",
+    "components": [
+      {
+        "elementCode": "4401",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4403",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E023": {
+    "code": "E023",
+    "name": "Party demographic information",
+    "description": "To provide demographic information about a party.",
+    "components": [
+      {
+        "elementCode": "9143",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3499",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "9005",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3479",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "9607",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E024": {
+    "code": "E024",
+    "name": "Supporting evidence",
+    "description": "To identify the type of evidence, a unique reference number and the communication method.",
+    "components": [
+      {
+        "elementCode": "9643",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "3153",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E025": {
+    "code": "E025",
+    "name": "Basis of service information",
+    "description": "To identify the basis of service including the type, date and charge.",
+    "components": [
+      {
+        "elementCode": "9641",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7135",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2379",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E026": {
+    "code": "E026",
+    "name": "Admission",
+    "description": "To identify admission information.",
+    "components": [
+      {
+        "elementCode": "9445",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "9627",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E027": {
+    "code": "E027",
+    "name": "Invoice type",
+    "description": "To identify the type of invoice and its frequency.",
+    "components": [
+      {
+        "elementCode": "9631",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2013",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E028": {
+    "code": "E028",
+    "name": "Related cause",
+    "description": "To identify a related cause and the date and location.",
+    "components": [
+      {
+        "elementCode": "9625",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3229",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E029": {
+    "code": "E029",
+    "name": "Diagnosis",
+    "description": "To identify the diagnosis and its type.",
+    "components": [
+      {
+        "elementCode": "7135",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "9623",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E030": {
+    "code": "E030",
+    "name": "Adjustment information",
+    "description": "To identify the adjustment category, reason and related monetary amount.",
+    "components": [
+      {
+        "elementCode": "9619",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4465",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E031": {
+    "code": "E031",
+    "name": "Message application product specification",
+    "description": "To specify a message function, a dialogue, or a scenario.",
+    "components": [
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7191",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7191",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E032": {
+    "code": "E032",
+    "name": "Party identification",
+    "description": "To specify a party identification.",
+    "components": [
+      {
+        "elementCode": "3039",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3035",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E033": {
+    "code": "E033",
+    "name": "Language details",
+    "description": "To identify a language.",
+    "components": [
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3452",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E034": {
+    "code": "E034",
+    "name": "Time zone",
+    "description": "To specify a time zone.",
+    "components": [
+      {
+        "elementCode": "2029",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2020",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E035": {
+    "code": "E035",
+    "name": "Quantity details",
+    "description": "To convey information about a quantity.",
+    "components": [
+      {
+        "elementCode": "6063",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E080": {
+    "code": "E080",
+    "name": "Party name",
+    "description": "Identification of a transaction party by name.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3045",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E082": {
+    "code": "E082",
+    "name": "Party identification details",
+    "description": "Identification of a transaction party by code.",
+    "components": [
+      {
+        "elementCode": "3039",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E175": {
+    "code": "E175",
+    "name": "Measurement value and details",
+    "description": "Specification of a measurement value and identification of its type.",
+    "components": [
+      {
+        "elementCode": "6314",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6313",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6321",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E206": {
+    "code": "E206",
+    "name": "Object identification",
+    "description": "The identification of an object.",
+    "components": [
+      {
+        "elementCode": "7402",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "7405",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E211": {
+    "code": "E211",
+    "name": "Dimensions",
+    "description": "Specification of the dimensions of a transportable unit.",
+    "components": [
+      {
+        "elementCode": "6411",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6168",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6140",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6008",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E212": {
+    "code": "E212",
+    "name": "Item number identification",
+    "description": "Goods identification for a specified source.",
+    "components": [
+      {
+        "elementCode": "7140",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7143",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E362": {
+    "code": "E362",
+    "name": "Related time information",
+    "description": "To specify information about related times and their variation.",
+    "components": [
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2020",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2148",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E504": {
+    "code": "E504",
+    "name": "Currency details",
+    "description": "The usage to which a currency relates.",
+    "components": [
+      {
+        "elementCode": "6347",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6343",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6348",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E506": {
+    "code": "E506",
+    "name": "Reference",
+    "description": "Identification of a reference.",
+    "components": [
+      {
+        "elementCode": "1153",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1156",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4000",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E507": {
+    "code": "E507",
+    "name": "Date/time/period",
+    "description": "Date and/or time, or period relevant to the specified date/time/period type.",
+    "components": [
+      {
+        "elementCode": "2005",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2379",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E517": {
+    "code": "E517",
+    "name": "Location identification",
+    "description": "Identification of a location by code or name.",
+    "components": [
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E520": {
+    "code": "E520",
+    "name": "Frequency",
+    "description": "To specify a frequency and the time window in which it applies.",
+    "components": [
+      {
+        "elementCode": "6072",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2379",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E523": {
+    "code": "E523",
+    "name": "Number of unit details",
+    "description": "Identification of number of units and its purpose.",
+    "components": [
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6353",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E778": {
+    "code": "E778",
+    "name": "Position identification",
+    "description": "To identify the position of an object in a structure containing the object.",
+    "components": [
+      {
+        "elementCode": "7164",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E817": {
+    "code": "E817",
+    "name": "Address usage",
+    "description": "To describe the usage of an address.",
+    "components": [
+      {
+        "elementCode": "3299",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3475",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E819": {
+    "code": "E819",
+    "name": "Country sub-entity details",
+    "description": "To specify a part of a country (eg county or part of a city).",
+    "components": [
+      {
+        "elementCode": "3229",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3228",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E901": {
+    "code": "E901",
+    "name": "Application error details",
+    "description": "Code assigned by the recipient of a message to indicate a data validation error condition.",
+    "components": [
+      {
+        "elementCode": "9321",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E941": {
+    "code": "E941",
+    "name": "Relationship",
+    "description": "Specification of a relationship in coded and/or free form.",
+    "components": [
+      {
+        "elementCode": "9143",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1131",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "9142",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E946": {
+    "code": "E946",
+    "name": "Certainty",
+    "description": "To specify the certainty in coded and/or free form.",
+    "components": [
+      {
+        "elementCode": "4049",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "4048",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E958": {
+    "code": "E958",
+    "name": "Quantity and action details",
+    "description": "To specify quantity and action required for a product or service.",
+    "components": [
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E959": {
+    "code": "E959",
+    "name": "Additional service details",
+    "description": "To specify additional service details, such as the reserved date, starting time, ending time and location information.",
+    "components": [
+      {
+        "elementCode": "7161",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3227",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "7037",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "3223",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "7160",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "7036",
+        "mandatory": false,
+        "position": 12
+      },
+      {
+        "elementCode": "1229",
+        "mandatory": false,
+        "position": 13
+      },
+      {
+        "elementCode": "3233",
+        "mandatory": false,
+        "position": 14
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 15
+      },
+      {
+        "elementCode": "6072",
+        "mandatory": false,
+        "position": 16
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 17
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 18
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 19
+      }
+    ]
+  },
+  "E961": {
+    "code": "E961",
+    "name": "Transport details",
+    "description": "Details describing a specific means of transport.",
+    "components": [
+      {
+        "elementCode": "8179",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "8216",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2162",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "2380",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "8215",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 10
+      }
+    ]
+  },
+  "E962": {
+    "code": "E962",
+    "name": "Terminal information",
+    "description": "To specify departure or arrival information relative to a terminal.",
+    "components": [
+      {
+        "elementCode": "3463",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3223",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3223",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E963": {
+    "code": "E963",
+    "name": "Distance or time details",
+    "description": "Information about distance or duration.",
+    "components": [
+      {
+        "elementCode": "6314",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E964": {
+    "code": "E964",
+    "name": "Traveller time details",
+    "description": "Gate departure time, gate arrival time, and check-in date and time, in this sequence relevant to a traveller.",
+    "components": [
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2156",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E965": {
+    "code": "E965",
+    "name": "Facilities",
+    "description": "To convey information about the facilities of a service.",
+    "components": [
+      {
+        "elementCode": "9039",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "9038",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7133",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7037",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E966": {
+    "code": "E966",
+    "name": "Contact information",
+    "description": "To specify communication number, type of number, to whom the number belongs and a related reference number.",
+    "components": [
+      {
+        "elementCode": "3035",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3148",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "3153",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E967": {
+    "code": "E967",
+    "name": "Consumer reference identification",
+    "description": "Identification of consumer references by type, company, number and reference to a traveller.",
+    "components": [
+      {
+        "elementCode": "1153",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E968": {
+    "code": "E968",
+    "name": "Document information",
+    "description": "Identification of a document by coded name, number, classification and place of issue.",
+    "components": [
+      {
+        "elementCode": "1001",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3164",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "E969": {
+    "code": "E969",
+    "name": "Validity dates",
+    "description": "Identification of the effective and expiration dates, effective date first.",
+    "components": [
+      {
+        "elementCode": "2000",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E970": {
+    "code": "E970",
+    "name": "Frequent traveller identification",
+    "description": "Identification of the frequent traveller by company with the capability to reference to a specific traveller.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3459",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E971": {
+    "code": "E971",
+    "name": "Free text qualification",
+    "description": "To specify the type, purpose, status, and language of free text.",
+    "components": [
+      {
+        "elementCode": "4451",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4473",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E972": {
+    "code": "E972",
+    "name": "Message processing details",
+    "description": "To indicate message processing information.",
+    "components": [
+      {
+        "elementCode": "4025",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3055",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "1225",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "E973": {
+    "code": "E973",
+    "name": "Delivering system details",
+    "description": "To specify the system and its location that originates or delivers the message for a third party.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E974": {
+    "code": "E974",
+    "name": "Originator identification details",
+    "description": "To identify the assigned agent identification code, the originating system identification, booking source and agent name, in that sequence.",
+    "components": [
+      {
+        "elementCode": "3197",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3465",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3197",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E975": {
+    "code": "E975",
+    "name": "Location",
+    "description": "To identify a location.",
+    "components": [
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3227",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E976": {
+    "code": "E976",
+    "name": "Originator details",
+    "description": "To specify details about the originator.",
+    "components": [
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E977": {
+    "code": "E977",
+    "name": "Payment details",
+    "description": "To identify the method, type, amount, currency and due date of payment.",
+    "components": [
+      {
+        "elementCode": "4467",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "4469",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "5267",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "E978": {
+    "code": "E978",
+    "name": "Credit card information",
+    "description": "To identify the relevant information of a credit card and relate it to a traveller.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3449",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E979": {
+    "code": "E979",
+    "name": "Reservation control information",
+    "description": "To specify information about a reservation such as identification, date and time, and reasons of modifications.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "9040",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "9043",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2164",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1154",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "4465",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "E980": {
+    "code": "E980",
+    "name": "Special requirement type details",
+    "description": "To specify special requirements on services, the quantity required, action to be taken and where the requirement should be administered.",
+    "components": [
+      {
+        "elementCode": "4187",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "7037",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "E981": {
+    "code": "E981",
+    "name": "Special requirement details",
+    "description": "To specify requirements concerning a special request or requirement and to reference to a traveller.",
+    "components": [
+      {
+        "elementCode": "4184",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6411",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "E982": {
+    "code": "E982",
+    "name": "Tariff information",
+    "description": "To identify the rates or tariff details.",
+    "components": [
+      {
+        "elementCode": "5263",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "5501",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "5025",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "2152",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "5377",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "5160",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "4183",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "E983": {
+    "code": "E983",
+    "name": "Rate information",
+    "description": "To identify the rate or tariff categories, rate or tariff range, processing information, and currency code.",
+    "components": [
+      {
+        "elementCode": "5243",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6162",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6152",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7365",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E984": {
+    "code": "E984",
+    "name": "Associated charges information",
+    "description": "Identification of the additional charges that are associated to a product or service.",
+    "components": [
+      {
+        "elementCode": "5261",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "5004",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7008",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2155",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "6345",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "4440",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "4513",
+        "mandatory": false,
+        "position": 9
+      },
+      {
+        "elementCode": "7299",
+        "mandatory": false,
+        "position": 10
+      },
+      {
+        "elementCode": "2018",
+        "mandatory": false,
+        "position": 11
+      },
+      {
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 12
+      }
+    ]
+  },
+  "E985": {
+    "code": "E985",
+    "name": "Traveller surname and related information",
+    "description": "Identification of the surname of traveller, the type of traveller, number of travellers per surname, status of the surname, and surname language.",
+    "components": [
+      {
+        "elementCode": "3500",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3035",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "4405",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E986": {
+    "code": "E986",
+    "name": "Traveller details",
+    "description": "To identify the given or first name and title of a traveller, the traveller type, the traveller language, and the sex and age of the traveller.",
+    "components": [
+      {
+        "elementCode": "3460",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3035",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1145",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "3504",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "8219",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3453",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3499",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "2018",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "E987": {
+    "code": "E987",
+    "name": "Product date and time",
+    "description": "To specify first the beginning date and time followed by the ending date and time associated with a product or service.",
+    "components": [
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2148",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E988": {
+    "code": "E988",
+    "name": "Company identification",
+    "description": "To identify the company and any associated companies.",
+    "components": [
+      {
+        "elementCode": "3036",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E989": {
+    "code": "E989",
+    "name": "Product identification details",
+    "description": "Code, number or name to identify a specific product or service and a code to identify the level or type of product or service.",
+    "components": [
+      {
+        "elementCode": "7135",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7037",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7139",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "9608",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "E990": {
+    "code": "E990",
+    "name": "Sequence number details",
+    "description": "To specify sequence number information about a product or service.",
+    "components": [
+      {
+        "elementCode": "1050",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 8
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 9
+      }
+    ]
+  },
+  "E991": {
+    "code": "E991",
+    "name": "Vehicle information",
+    "description": "To identify a vehicle by make or model and vehicle identification number.",
+    "components": [
+      {
+        "elementCode": "8154",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "7402",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E992": {
+    "code": "E992",
+    "name": "Position",
+    "description": "To identify the position of an item.",
+    "components": [
+      {
+        "elementCode": "3223",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3233",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E993": {
+    "code": "E993",
+    "name": "Tour details",
+    "description": "To provide details of a tour by code, name of the tour provider, length, number of stops, room occupancy and number of rooms.",
+    "components": [
+      {
+        "elementCode": "7135",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "6168",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "8216",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "2160",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "6060",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "E994": {
+    "code": "E994",
+    "name": "Stopover information",
+    "description": "To specify location of and number of nights at a stopover.",
+    "components": [
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "E995": {
+    "code": "E995",
+    "name": "Movement details",
+    "description": "To specify information concerning delivery.",
+    "components": [
+      {
+        "elementCode": "7273",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "2000",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "E996": {
+    "code": "E996",
+    "name": "Product class details",
+    "description": "To specify details for a product class.",
+    "components": [
+      {
+        "elementCode": "7037",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "4510",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "7161",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "7009",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "E997": {
+    "code": "E997",
+    "name": "Accommodation allocation information",
+    "description": "To specify references, type and characteristics of accommodations allocated.",
+    "components": [
+      {
+        "elementCode": "1154",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "9143",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "4187",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "7111",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "4184",
+        "mandatory": false,
+        "position": 5
+      }
+    ]
+  },
+  "E998": {
+    "code": "E998",
+    "name": "Discount information",
+    "description": "To specify the reason for, amount, the company granting, and a number related to the reason for a discount.",
+    "components": [
+      {
+        "elementCode": "4465",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "5482",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "6350",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "E999": {
+    "code": "E999",
+    "name": "Connection details",
+    "description": "To specify a location for connections and stopovers, the designated supplier, associated times, and travel sequence.",
+    "components": [
+      {
+        "elementCode": "3225",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "3036",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "2002",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "3224",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "3227",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "3207",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "1050",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "S001": {
+    "code": "S001",
+    "name": "Syntax identifier",
+    "description": "Identification of the agency controlling the syntax, the syntax level and version number, and the service code directory.",
+    "components": [
+      {
+        "elementCode": "0001",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0002",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "0080",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0133",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S002": {
+    "code": "S002",
+    "name": "Interchange sender",
+    "description": "Identification of the sender of the interchange.",
+    "components": [
+      {
+        "elementCode": "0004",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0007",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0008",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0042",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S003": {
+    "code": "S003",
+    "name": "Interchange recipient",
+    "description": "Identification of the recipient of the interchange.",
+    "components": [
+      {
+        "elementCode": "0010",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0007",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0014",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0046",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S004": {
+    "code": "S004",
+    "name": "Date and time of preparation",
+    "description": "Date and time of preparation of the interchange.",
+    "components": [
+      {
+        "elementCode": "0017",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0019",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "S005": {
+    "code": "S005",
+    "name": "Recipient reference/password details",
+    "description": "Reference or password as agreed between the communicating partners.",
+    "components": [
+      {
+        "elementCode": "0022",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0025",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "S006": {
+    "code": "S006",
+    "name": "Application sender identification",
+    "description": "Sender identification of for example a division, branch or application computer system/process.",
+    "components": [
+      {
+        "elementCode": "0040",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0007",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "S007": {
+    "code": "S007",
+    "name": "Application recipient identification",
+    "description": "Recipient identification of for example a division, branch or application computer system/process.",
+    "components": [
+      {
+        "elementCode": "0044",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0007",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "S008": {
+    "code": "S008",
+    "name": "Message version",
+    "description": "Specification of the version and release numbers of all of the messages of a single type in the group.",
+    "components": [
+      {
+        "elementCode": "0052",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0054",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "0057",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S009": {
+    "code": "S009",
+    "name": "Message identifier",
+    "description": "Identification of the type, version, etc. of the message being interchanged.",
+    "components": [
+      {
+        "elementCode": "0065",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0052",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "0054",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": true,
+        "position": 4
+      },
+      {
+        "elementCode": "0057",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "0110",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "0113",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "S010": {
+    "code": "S010",
+    "name": "Status of the transfer",
+    "description": "Statement that the message is one in a sequence of transfers relating to the same topic.",
+    "components": [
+      {
+        "elementCode": "0070",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0073",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  },
+  "S011": {
+    "code": "S011",
+    "name": "Data element identification",
+    "description": "Identification of the position for an erroneous data element. This can be the position of a stand-alone or composite data element in the definition of a segment or a component data element in the definition of a composite data element.",
+    "components": [
+      {
+        "elementCode": "0098",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0104",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0136",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S016": {
+    "code": "S016",
+    "name": "Message subset identification",
+    "description": "Identification of a message subset by its identifier, version, release and source.",
+    "components": [
+      {
+        "elementCode": "0115",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0116",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0118",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S017": {
+    "code": "S017",
+    "name": "Message implementation guideline identification",
+    "description": "Identification of a message implementation guideline by its identifier, version, release and source.",
+    "components": [
+      {
+        "elementCode": "0121",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0122",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0124",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S018": {
+    "code": "S018",
+    "name": "Scenario identification",
+    "description": "Identification of a scenario.",
+    "components": [
+      {
+        "elementCode": "0127",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0128",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0130",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S020": {
+    "code": "S020",
+    "name": "Reference identification",
+    "description": "Identification of the reference relating to the object.",
+    "components": [
+      {
+        "elementCode": "0813",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0802",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "S021": {
+    "code": "S021",
+    "name": "Object type identification",
+    "description": "Identification of the attribute related to the object type.",
+    "components": [
+      {
+        "elementCode": "0805",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0809",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0808",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S022": {
+    "code": "S022",
+    "name": "Status of the object",
+    "description": "Identification of the length and if required the transfer status of the object.",
+    "components": [
+      {
+        "elementCode": "0810",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0814",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0070",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0073",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S300": {
+    "code": "S300",
+    "name": "Date and/or time of initiation",
+    "description": "Date and/or time of event initiation.",
+    "components": [
+      {
+        "elementCode": "0338",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "0314",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0336",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S301": {
+    "code": "S301",
+    "name": "Status of transfer - interactive",
+    "description": "Identifies the sequence of the message/package within the sender's interchange and the position in a multi-message and/or package transfer.",
+    "components": [
+      {
+        "elementCode": "0320",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "0323",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0325",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S302": {
+    "code": "S302",
+    "name": "Dialogue reference",
+    "description": "Unique reference for the dialogue between co-operating parties within the interactive EDI transaction.",
+    "components": [
+      {
+        "elementCode": "0300",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0303",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0304",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S303": {
+    "code": "S303",
+    "name": "Transaction reference",
+    "description": "Unique reference for the business transaction to which the dialogue belongs.",
+    "components": [
+      {
+        "elementCode": "0306",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0303",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S305": {
+    "code": "S305",
+    "name": "Dialogue identification",
+    "description": "Identification of the dialogue type being used for the interactive EDI transaction.",
+    "components": [
+      {
+        "elementCode": "0311",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0342",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0344",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S306": {
+    "code": "S306",
+    "name": "Interactive message identifier",
+    "description": "Identification of the type, version and details of the message being interchanged.",
+    "components": [
+      {
+        "elementCode": "0065",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0052",
+        "mandatory": true,
+        "position": 2
+      },
+      {
+        "elementCode": "0054",
+        "mandatory": true,
+        "position": 3
+      },
+      {
+        "elementCode": "0113",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "0051",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "0057",
+        "mandatory": false,
+        "position": 6
+      }
+    ]
+  },
+  "S307": {
+    "code": "S307",
+    "name": "Report reason",
+    "description": "Reason for status or error report.",
+    "components": [
+      {
+        "elementCode": "0333",
+        "mandatory": false,
+        "position": 1
+      },
+      {
+        "elementCode": "0332",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0335",
+        "mandatory": false,
+        "position": 3
+      }
+    ]
+  },
+  "S500": {
+    "code": "S500",
+    "name": "Security identification details",
+    "description": "Identification of parties involved in the security process.",
+    "components": [
+      {
+        "elementCode": "0577",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0538",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0511",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0513",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "0515",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "0586",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "0586",
+        "mandatory": false,
+        "position": 7
+      },
+      {
+        "elementCode": "0586",
+        "mandatory": false,
+        "position": 8
+      }
+    ]
+  },
+  "S501": {
+    "code": "S501",
+    "name": "Security date and time",
+    "description": "Security related date and time.",
+    "components": [
+      {
+        "elementCode": "0517",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0338",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0314",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0336",
+        "mandatory": false,
+        "position": 4
+      }
+    ]
+  },
+  "S502": {
+    "code": "S502",
+    "name": "Security algorithm",
+    "description": "Identification of a security algorithm.",
+    "components": [
+      {
+        "elementCode": "0523",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0525",
+        "mandatory": false,
+        "position": 2
+      },
+      {
+        "elementCode": "0533",
+        "mandatory": false,
+        "position": 3
+      },
+      {
+        "elementCode": "0527",
+        "mandatory": false,
+        "position": 4
+      },
+      {
+        "elementCode": "0529",
+        "mandatory": false,
+        "position": 5
+      },
+      {
+        "elementCode": "0591",
+        "mandatory": false,
+        "position": 6
+      },
+      {
+        "elementCode": "0601",
+        "mandatory": false,
+        "position": 7
+      }
+    ]
+  },
+  "S503": {
+    "code": "S503",
+    "name": "Algorithm parameter",
+    "description": "Parameter required by a security algorithm.",
+    "components": [
+      {
+        "elementCode": "0531",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0554",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "S504": {
+    "code": "S504",
+    "name": "List parameter",
+    "description": "Identification of a parameter for a list request or delivery",
+    "components": [
+      {
+        "elementCode": "0575",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0558",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "S505": {
+    "code": "S505",
+    "name": "Service character for signature",
+    "description": "Identification of the characters used as syntactical service characters when a signature was computed.",
+    "components": [
+      {
+        "elementCode": "0551",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0548",
+        "mandatory": true,
+        "position": 2
+      }
+    ]
+  },
+  "S508": {
+    "code": "S508",
+    "name": "Validation result",
+    "description": "Result of the application of the security mechanism.",
+    "components": [
+      {
+        "elementCode": "0563",
+        "mandatory": true,
+        "position": 1
+      },
+      {
+        "elementCode": "0560",
+        "mandatory": false,
+        "position": 2
+      }
+    ]
+  }
+}

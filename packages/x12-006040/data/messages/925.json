@@ -1,0 +1,48 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "925",
+  "name": "Claim Tracer",
+  "description": "Claim Tracer",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopF10",
+      "name": "LoopF10",
+      "triggerSegment": "F10",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "F10",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "F02",
+          "mandatory": false,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    }
+  ]
+}

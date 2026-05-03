@@ -1,5 +1,26 @@
 {
-  "code": "1159",
-  "name": "Sequence number source, coded",
-  "values": []
+  "elementCode": "1159",
+  "elementName": "Sequence number source, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Broadcast 1",
+      "description": "Report from workstation 1."
+    },
+    {
+      "code": "2",
+      "name": "Broadcast 2",
+      "description": "Report from workstation 2."
+    },
+    {
+      "code": "3",
+      "name": "Manufacturer sequence number",
+      "description": "The manufacturer's plant requesting the delivery of the item has allocated the sequence number."
+    },
+    {
+      "code": "4",
+      "name": "Manufacturer production sequence number",
+      "description": "The plant requesting the delivery of an item assigns a number indicating the sequence of the finished article."
+    }
+  ]
 }

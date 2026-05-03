@@ -1,0 +1,1302 @@
+{
+  "code": "306",
+  "name": "Code indicating type of action",
+  "values": [
+    {
+      "code": "0",
+      "name": "Authorize"
+    },
+    {
+      "code": "1",
+      "name": "Add"
+    },
+    {
+      "code": "2",
+      "name": "Change (Update)"
+    },
+    {
+      "code": "3",
+      "name": "Delete"
+    },
+    {
+      "code": "4",
+      "name": "Verify"
+    },
+    {
+      "code": "5",
+      "name": "Send"
+    },
+    {
+      "code": "6",
+      "name": "Receive"
+    },
+    {
+      "code": "7",
+      "name": "Request"
+    },
+    {
+      "code": "8",
+      "name": "In Production Send"
+    },
+    {
+      "code": "9",
+      "name": "Not Capable of Taking Action"
+    },
+    {
+      "code": "A",
+      "name": "Add A Bill of Lading"
+    },
+    {
+      "code": "B",
+      "name": "Cancel Balance of Order/Item that Exceeds Value Specified in Data Element 610"
+    },
+    {
+      "code": "C",
+      "name": "Cancelled"
+    },
+    {
+      "code": "D",
+      "name": "Delete a Bill of Lading"
+    },
+    {
+      "code": "E",
+      "name": "Eliminate/Expire"
+    },
+    {
+      "code": "F",
+      "name": "Final"
+    },
+    {
+      "code": "G",
+      "name": "Cancel Entire Order/Item"
+    },
+    {
+      "code": "H",
+      "name": "Master-In-Bond (MIB) Arrival"
+    },
+    {
+      "code": "I",
+      "name": "Reissue"
+    },
+    {
+      "code": "J",
+      "name": "Record"
+    },
+    {
+      "code": "K",
+      "name": "In Production Send and Receive"
+    },
+    {
+      "code": "L",
+      "name": "In Development/Send"
+    },
+    {
+      "code": "M",
+      "name": "In Development/Receive"
+    },
+    {
+      "code": "N",
+      "name": "In Development/Send and Receive"
+    },
+    {
+      "code": "O",
+      "name": "In Test/Send"
+    },
+    {
+      "code": "P",
+      "name": "In Test/Receive"
+    },
+    {
+      "code": "Q",
+      "name": "In Test/Send and Receive"
+    },
+    {
+      "code": "R",
+      "name": "In Production Receive"
+    },
+    {
+      "code": "S",
+      "name": "Re-record"
+    },
+    {
+      "code": "T",
+      "name": "Status Query"
+    },
+    {
+      "code": "U",
+      "name": "Reject"
+    },
+    {
+      "code": "V",
+      "name": "Respond"
+    },
+    {
+      "code": "W",
+      "name": "Reverse"
+    },
+    {
+      "code": "X",
+      "name": "Recommend"
+    },
+    {
+      "code": "Y",
+      "name": "Not Recommend"
+    },
+    {
+      "code": "Z",
+      "name": "Mutually Defined"
+    },
+    {
+      "code": "00",
+      "name": "Authorize and Settle Combination"
+    },
+    {
+      "code": "10",
+      "name": "Adjourn"
+    },
+    {
+      "code": "11",
+      "name": "Approve"
+    },
+    {
+      "code": "12",
+      "name": "Auction"
+    },
+    {
+      "code": "13",
+      "name": "Cleared"
+    },
+    {
+      "code": "14",
+      "name": "Compose"
+    },
+    {
+      "code": "15",
+      "name": "Correct and Resubmit Claim"
+    },
+    {
+      "code": "16",
+      "name": "Consider"
+    },
+    {
+      "code": "17",
+      "name": "Create"
+    },
+    {
+      "code": "18",
+      "name": "Decide"
+    },
+    {
+      "code": "19",
+      "name": "Declare"
+    },
+    {
+      "code": "20",
+      "name": "Decree Recall"
+    },
+    {
+      "code": "21",
+      "name": "Disapprove"
+    },
+    {
+      "code": "22",
+      "name": "Dissolve"
+    },
+    {
+      "code": "23",
+      "name": "Escalation"
+    },
+    {
+      "code": "24",
+      "name": "On-Hold"
+    },
+    {
+      "code": "25",
+      "name": "Dropped"
+    },
+    {
+      "code": "26",
+      "name": "Bankruptcy Filed - Review Account"
+    },
+    {
+      "code": "27",
+      "name": "Moved - Follow Up"
+    },
+    {
+      "code": "28",
+      "name": "Change Phone Number"
+    },
+    {
+      "code": "29",
+      "name": "Payment Received - Follow Up"
+    },
+    {
+      "code": "30",
+      "name": "Account Active - Pursue"
+    },
+    {
+      "code": "31",
+      "name": "Return per Client Request"
+    },
+    {
+      "code": "32",
+      "name": "Pursue Legal Action"
+    },
+    {
+      "code": "33",
+      "name": "Active"
+    },
+    {
+      "code": "34",
+      "name": "Pursue Garnishment"
+    },
+    {
+      "code": "35",
+      "name": "New Assignment - Proceed"
+    },
+    {
+      "code": "36",
+      "name": "Repossess Merchandise"
+    },
+    {
+      "code": "37",
+      "name": "Adjust Payment"
+    },
+    {
+      "code": "38",
+      "name": "Change Address"
+    },
+    {
+      "code": "39",
+      "name": "Skiptrace Account"
+    },
+    {
+      "code": "40",
+      "name": "Close Account - Deceased"
+    },
+    {
+      "code": "41",
+      "name": "Update to Inactive"
+    },
+    {
+      "code": "42",
+      "name": "Account Paid in Full - Close Account"
+    },
+    {
+      "code": "43",
+      "name": "Refused to Pay - Review Account"
+    },
+    {
+      "code": "44",
+      "name": "Account Disputed - Review"
+    },
+    {
+      "code": "45",
+      "name": "Do Not Contact - Fair Debt Collection Practices Act (FDCPA)"
+    },
+    {
+      "code": "46",
+      "name": "Forward Account"
+    },
+    {
+      "code": "47",
+      "name": "Enforce"
+    },
+    {
+      "code": "48",
+      "name": "Extinguish"
+    },
+    {
+      "code": "49",
+      "name": "Judgment for Defendant"
+    },
+    {
+      "code": "50",
+      "name": "Judgment for Plaintiff"
+    },
+    {
+      "code": "51",
+      "name": "Complete"
+    },
+    {
+      "code": "52",
+      "name": "Justified"
+    },
+    {
+      "code": "53",
+      "name": "Legal Moratorium on Debts Incurred to Date"
+    },
+    {
+      "code": "54",
+      "name": "Meeting Held"
+    },
+    {
+      "code": "55",
+      "name": "Meeting Held and Opened"
+    },
+    {
+      "code": "56",
+      "name": "Moratorium"
+    },
+    {
+      "code": "57",
+      "name": "Not Filed"
+    },
+    {
+      "code": "58",
+      "name": "Not Justified"
+    },
+    {
+      "code": "59",
+      "name": "Partial Release"
+    },
+    {
+      "code": "60",
+      "name": "Provisional Moratorium"
+    },
+    {
+      "code": "61",
+      "name": "Readjudicate"
+    },
+    {
+      "code": "62",
+      "name": "Resolve"
+    },
+    {
+      "code": "63",
+      "name": "Resulted in a Suit"
+    },
+    {
+      "code": "64",
+      "name": "Resulted in No Liquidation"
+    },
+    {
+      "code": "65",
+      "name": "Set Aside"
+    },
+    {
+      "code": "66",
+      "name": "Settled out of Court"
+    },
+    {
+      "code": "67",
+      "name": "Sold"
+    },
+    {
+      "code": "68",
+      "name": "Stayed"
+    },
+    {
+      "code": "69",
+      "name": "Subordination"
+    },
+    {
+      "code": "70",
+      "name": "Surrender"
+    },
+    {
+      "code": "71",
+      "name": "Term Expired"
+    },
+    {
+      "code": "72",
+      "name": "Unsatisfied"
+    },
+    {
+      "code": "73",
+      "name": "Void"
+    },
+    {
+      "code": "74",
+      "name": "Suspended, 24 Hours"
+    },
+    {
+      "code": "75",
+      "name": "Dispute"
+    },
+    {
+      "code": "76",
+      "name": "Assign"
+    },
+    {
+      "code": "77",
+      "name": "Agent Change"
+    },
+    {
+      "code": "78",
+      "name": "Agent Hierarchy Change"
+    },
+    {
+      "code": "79",
+      "name": "Reactivate"
+    },
+    {
+      "code": "80",
+      "name": "Reconcile"
+    },
+    {
+      "code": "81",
+      "name": "Renew"
+    },
+    {
+      "code": "82",
+      "name": "Follow Up"
+    },
+    {
+      "code": "83",
+      "name": "Future"
+    },
+    {
+      "code": "84",
+      "name": "Letter of Authority Sent"
+    },
+    {
+      "code": "85",
+      "name": "New Premium Only"
+    },
+    {
+      "code": "86",
+      "name": "Pended for Follow Up"
+    },
+    {
+      "code": "87",
+      "name": "Countersue"
+    },
+    {
+      "code": "88",
+      "name": "Contact via Telephone Call"
+    },
+    {
+      "code": "89",
+      "name": "Contact via Fax"
+    },
+    {
+      "code": "90",
+      "name": "Mark"
+    },
+    {
+      "code": "91",
+      "name": "In Progress"
+    },
+    {
+      "code": "92",
+      "name": "Reconfirm"
+    },
+    {
+      "code": "93",
+      "name": "Send Record at End of the Fall Term"
+    },
+    {
+      "code": "94",
+      "name": "Send Record at End of the Winter Term"
+    },
+    {
+      "code": "95",
+      "name": "Send Record at End of the Spring Term"
+    },
+    {
+      "code": "96",
+      "name": "Send Record at End of the Summer Term"
+    },
+    {
+      "code": "97",
+      "name": "Send Record at End of the Intersession Term"
+    },
+    {
+      "code": "A1",
+      "name": "Certified in total"
+    },
+    {
+      "code": "A2",
+      "name": "Certified - partial"
+    },
+    {
+      "code": "A3",
+      "name": "Not Certified"
+    },
+    {
+      "code": "A4",
+      "name": "Pended"
+    },
+    {
+      "code": "A5",
+      "name": "Upheld"
+    },
+    {
+      "code": "A6",
+      "name": "Modified"
+    },
+    {
+      "code": "A7",
+      "name": "Approved with Errors"
+    },
+    {
+      "code": "AA",
+      "name": "Award"
+    },
+    {
+      "code": "AB",
+      "name": "Abandon"
+    },
+    {
+      "code": "AC",
+      "name": "Acknowledge"
+    },
+    {
+      "code": "AD",
+      "name": "Decrease in Amount"
+    },
+    {
+      "code": "AE",
+      "name": "Activate"
+    },
+    {
+      "code": "AF",
+      "name": "Affirm"
+    },
+    {
+      "code": "AG",
+      "name": "Added Commodity Codes"
+    },
+    {
+      "code": "AH",
+      "name": "Added Equipment"
+    },
+    {
+      "code": "AI",
+      "name": "Increase in Amount"
+    },
+    {
+      "code": "AJ",
+      "name": "Added Points Served"
+    },
+    {
+      "code": "AL",
+      "name": "Allow"
+    },
+    {
+      "code": "AN",
+      "name": "Annual Location Reconciliation"
+    },
+    {
+      "code": "AP",
+      "name": "Appeal"
+    },
+    {
+      "code": "AQ",
+      "name": "Acquitted"
+    },
+    {
+      "code": "AR",
+      "name": "Advanced Payment"
+    },
+    {
+      "code": "AS",
+      "name": "Discovered"
+    },
+    {
+      "code": "AT",
+      "name": "Appoint"
+    },
+    {
+      "code": "AV",
+      "name": "Cancellation Not Effected"
+    },
+    {
+      "code": "AW",
+      "name": "Mass Cancellation"
+    },
+    {
+      "code": "AX",
+      "name": "Partial Cancellation"
+    },
+    {
+      "code": "BD",
+      "name": "Board"
+    },
+    {
+      "code": "BE",
+      "name": "Producer Reporting Structure Change"
+    },
+    {
+      "code": "BF",
+      "name": "Background Investigation"
+    },
+    {
+      "code": "BG",
+      "name": "License Request"
+    },
+    {
+      "code": "BH",
+      "name": "Book of Business Transfer"
+    },
+    {
+      "code": "BI",
+      "name": "Bifurcate"
+    },
+    {
+      "code": "BJ",
+      "name": "Print Loan Application Only"
+    },
+    {
+      "code": "BK",
+      "name": "Guarantee Application Only"
+    },
+    {
+      "code": "BL",
+      "name": "Guarantee Before Sending Application"
+    },
+    {
+      "code": "BM",
+      "name": "Return Loan Application with Certification Data"
+    },
+    {
+      "code": "BN",
+      "name": "Guarantee After Receiving Application"
+    },
+    {
+      "code": "BO",
+      "name": "Use Both Date and Meter Criteria"
+    },
+    {
+      "code": "C1",
+      "name": "Community Service Required"
+    },
+    {
+      "code": "C2",
+      "name": "Convicted"
+    },
+    {
+      "code": "CA",
+      "name": "Change Name"
+    },
+    {
+      "code": "CB",
+      "name": "Cut"
+    },
+    {
+      "code": "CC",
+      "name": "Concur"
+    },
+    {
+      "code": "CD",
+      "name": "Completed Docket (Proposer Only and on Current Docket)"
+    },
+    {
+      "code": "CE",
+      "name": "Charge"
+    },
+    {
+      "code": "CF",
+      "name": "Confirm"
+    },
+    {
+      "code": "CG",
+      "name": "Conditionally Grant"
+    },
+    {
+      "code": "CL",
+      "name": "Closed"
+    },
+    {
+      "code": "CM",
+      "name": "Commence"
+    },
+    {
+      "code": "CN",
+      "name": "Consolidated"
+    },
+    {
+      "code": "CO",
+      "name": "Correct"
+    },
+    {
+      "code": "CP",
+      "name": "Counter Proposal"
+    },
+    {
+      "code": "CR",
+      "name": "Process Immediate, Critical"
+    },
+    {
+      "code": "CS",
+      "name": "Transfer of Claim for Security"
+    },
+    {
+      "code": "CT",
+      "name": "Contact Payer"
+    },
+    {
+      "code": "CU",
+      "name": "Continue"
+    },
+    {
+      "code": "CV",
+      "name": "Convert"
+    },
+    {
+      "code": "CX",
+      "name": "Claim Transferred"
+    },
+    {
+      "code": "D1",
+      "name": "Deported"
+    },
+    {
+      "code": "D2",
+      "name": "Dismissed"
+    },
+    {
+      "code": "DA",
+      "name": "Division Adjustment Only"
+    },
+    {
+      "code": "DB",
+      "name": "Shorten Expiration Date"
+    },
+    {
+      "code": "DC",
+      "name": "Delivered to Another Carrier"
+    },
+    {
+      "code": "DD",
+      "name": "Delete and Docket (Proposer Only on Unconcurred Docket)"
+    },
+    {
+      "code": "DE",
+      "name": "Deny"
+    },
+    {
+      "code": "DF",
+      "name": "Defer"
+    },
+    {
+      "code": "DG",
+      "name": "Decrease"
+    },
+    {
+      "code": "DH",
+      "name": "Extended Expiration Date"
+    },
+    {
+      "code": "DI",
+      "name": "Dismissed with Prejudice"
+    },
+    {
+      "code": "DJ",
+      "name": "Dismissed without Prejudice"
+    },
+    {
+      "code": "DK",
+      "name": "Dispose"
+    },
+    {
+      "code": "DL",
+      "name": "Divert"
+    },
+    {
+      "code": "DP",
+      "name": "Delivered to Public Warehouse"
+    },
+    {
+      "code": "DR",
+      "name": "Direct"
+    },
+    {
+      "code": "DS",
+      "name": "Discarded"
+    },
+    {
+      "code": "DT",
+      "name": "Discontinue"
+    },
+    {
+      "code": "DX",
+      "name": "Discharged"
+    },
+    {
+      "code": "EA",
+      "name": "Establish Address"
+    },
+    {
+      "code": "EB",
+      "name": "Establish Additional Address"
+    },
+    {
+      "code": "EC",
+      "name": "Establish Electronic Address"
+    },
+    {
+      "code": "ED",
+      "name": "Suppress Correspondence"
+    },
+    {
+      "code": "EE",
+      "name": "Suppress Forms"
+    },
+    {
+      "code": "EN",
+      "name": "Enter"
+    },
+    {
+      "code": "EO",
+      "name": "End of Day Processing"
+    },
+    {
+      "code": "EP",
+      "name": "Entire Patient Information"
+    },
+    {
+      "code": "ER",
+      "name": "Extension Request"
+    },
+    {
+      "code": "EV",
+      "name": "Evaluate"
+    },
+    {
+      "code": "EX",
+      "name": "Extend"
+    },
+    {
+      "code": "EZ",
+      "name": "Exception Occurred"
+    },
+    {
+      "code": "F1",
+      "name": "Fined"
+    },
+    {
+      "code": "FA",
+      "name": "Fail"
+    },
+    {
+      "code": "FC",
+      "name": "Factor Change"
+    },
+    {
+      "code": "FI",
+      "name": "File"
+    },
+    {
+      "code": "FO",
+      "name": "Forfeit"
+    },
+    {
+      "code": "FR",
+      "name": "Patient Follow-Up Required"
+    },
+    {
+      "code": "GR",
+      "name": "Grant"
+    },
+    {
+      "code": "HM",
+      "name": "Process Manually"
+    },
+    {
+      "code": "HR",
+      "name": "Hold Until Released"
+    },
+    {
+      "code": "I1",
+      "name": "Found Not Guilty"
+    },
+    {
+      "code": "IA",
+      "name": "Deactivate"
+    },
+    {
+      "code": "IM",
+      "name": "Increase"
+    },
+    {
+      "code": "IN",
+      "name": "Interim"
+    },
+    {
+      "code": "IS",
+      "name": "Issue"
+    },
+    {
+      "code": "IT",
+      "name": "Initiate"
+    },
+    {
+      "code": "JA",
+      "name": "Jailed"
+    },
+    {
+      "code": "JO",
+      "name": "Join"
+    },
+    {
+      "code": "JU",
+      "name": "Judgment"
+    },
+    {
+      "code": "KA",
+      "name": "Registration Confirmed"
+    },
+    {
+      "code": "LC",
+      "name": "Left at Consignee"
+    },
+    {
+      "code": "LQ",
+      "name": "Liquidate"
+    },
+    {
+      "code": "ME",
+      "name": "Merge"
+    },
+    {
+      "code": "MO",
+      "name": "Mooting"
+    },
+    {
+      "code": "NA",
+      "name": "No Action Required"
+    },
+    {
+      "code": "NC",
+      "name": "Process Routinely, Not Critical"
+    },
+    {
+      "code": "ND",
+      "name": "No Change"
+    },
+    {
+      "code": "NP",
+      "name": "Not Present"
+    },
+    {
+      "code": "NS",
+      "name": "Do Not Send"
+    },
+    {
+      "code": "OD",
+      "name": "Order"
+    },
+    {
+      "code": "OP",
+      "name": "Open"
+    },
+    {
+      "code": "OR",
+      "name": "Use Date or Meter Criteria (whichever occurs first)"
+    },
+    {
+      "code": "OT",
+      "name": "Other Unlisted Action"
+    },
+    {
+      "code": "P1",
+      "name": "Sentenced to Probation"
+    },
+    {
+      "code": "PA",
+      "name": "Tariff Publisher Add"
+    },
+    {
+      "code": "PB",
+      "name": "Partial Transfer of Claim"
+    },
+    {
+      "code": "PC",
+      "name": "Previously Converted"
+    },
+    {
+      "code": "PD",
+      "name": "Tariff Publisher Delete"
+    },
+    {
+      "code": "PF",
+      "name": "Preliminary Final"
+    },
+    {
+      "code": "PI",
+      "name": "Provide Additional Information"
+    },
+    {
+      "code": "PJ",
+      "name": "Progress Payment"
+    },
+    {
+      "code": "PO",
+      "name": "Proposed"
+    },
+    {
+      "code": "PP",
+      "name": "Partial Patient Information"
+    },
+    {
+      "code": "PR",
+      "name": "Present"
+    },
+    {
+      "code": "PS",
+      "name": "Proposal"
+    },
+    {
+      "code": "PT",
+      "name": "Proposal Trace"
+    },
+    {
+      "code": "PU",
+      "name": "Publish Changes"
+    },
+    {
+      "code": "PV",
+      "name": "Provisional Payment"
+    },
+    {
+      "code": "R1",
+      "name": "Reopened"
+    },
+    {
+      "code": "R2",
+      "name": "Send Record Now"
+    },
+    {
+      "code": "R3",
+      "name": "Send Record at End of the Term"
+    },
+    {
+      "code": "R4",
+      "name": "Send Record After Degree is Posted"
+    },
+    {
+      "code": "R5",
+      "name": "Send Vocational Record Only"
+    },
+    {
+      "code": "R6",
+      "name": "Transfer"
+    },
+    {
+      "code": "R7",
+      "name": "Assumption"
+    },
+    {
+      "code": "R8",
+      "name": "Terminate"
+    },
+    {
+      "code": "R9",
+      "name": "Reinstate"
+    },
+    {
+      "code": "RA",
+      "name": "Remove"
+    },
+    {
+      "code": "RB",
+      "name": "Resecure"
+    },
+    {
+      "code": "RC",
+      "name": "Returned to Carrier Facility"
+    },
+    {
+      "code": "RD",
+      "name": "Rate and Division Adjustment"
+    },
+    {
+      "code": "RE",
+      "name": "Released"
+    },
+    {
+      "code": "RF",
+      "name": "Returned to Shipper's Facility (Other Than Original Shipping Location)"
+    },
+    {
+      "code": "RG",
+      "name": "Refer"
+    },
+    {
+      "code": "RH",
+      "name": "Recall"
+    },
+    {
+      "code": "RI",
+      "name": "Restricted"
+    },
+    {
+      "code": "RJ",
+      "name": "Rate Adjustment"
+    },
+    {
+      "code": "RK",
+      "name": "Rate Adjustment with a Sequence Change"
+    },
+    {
+      "code": "RL",
+      "name": "Reschedule"
+    },
+    {
+      "code": "RM",
+      "name": "Remand"
+    },
+    {
+      "code": "RN",
+      "name": "Reject Proposal with Counter Proposal to Follow"
+    },
+    {
+      "code": "RO",
+      "name": "Returned to Original Shipping Location"
+    },
+    {
+      "code": "RP",
+      "name": "Request To Publish"
+    },
+    {
+      "code": "RQ",
+      "name": "Tariff Publisher Reissue"
+    },
+    {
+      "code": "RR",
+      "name": "Reverse and Remand"
+    },
+    {
+      "code": "RS",
+      "name": "Report Status"
+    },
+    {
+      "code": "RT",
+      "name": "Restrain"
+    },
+    {
+      "code": "RU",
+      "name": "Return"
+    },
+    {
+      "code": "RV",
+      "name": "Revoke"
+    },
+    {
+      "code": "RW",
+      "name": "Rescind"
+    },
+    {
+      "code": "RX",
+      "name": "Replace"
+    },
+    {
+      "code": "RZ",
+      "name": "Reject - Header Level Errors"
+    },
+    {
+      "code": "S1",
+      "name": "Secure"
+    },
+    {
+      "code": "S2",
+      "name": "Suspended"
+    },
+    {
+      "code": "SA",
+      "name": "Satisfy"
+    },
+    {
+      "code": "SB",
+      "name": "Subrogate"
+    },
+    {
+      "code": "SC",
+      "name": "Screen"
+    },
+    {
+      "code": "SD",
+      "name": "Seal"
+    },
+    {
+      "code": "SE",
+      "name": "Settle"
+    },
+    {
+      "code": "SL",
+      "name": "Schedule"
+    },
+    {
+      "code": "SR",
+      "name": "Serve"
+    },
+    {
+      "code": "SS",
+      "name": "Sustain"
+    },
+    {
+      "code": "SU",
+      "name": "Suspend"
+    },
+    {
+      "code": "SV",
+      "name": "Sever"
+    },
+    {
+      "code": "SZ",
+      "name": "Seize"
+    },
+    {
+      "code": "TD",
+      "name": "Temporarily Deny"
+    },
+    {
+      "code": "TE",
+      "name": "Oppose"
+    },
+    {
+      "code": "TG",
+      "name": "Temporarily Grant"
+    },
+    {
+      "code": "TN",
+      "name": "Annul"
+    },
+    {
+      "code": "TP",
+      "name": "Temporarily Grant, in Part"
+    },
+    {
+      "code": "TR",
+      "name": "Trim"
+    },
+    {
+      "code": "TS",
+      "name": "Disallow"
+    },
+    {
+      "code": "TU",
+      "name": "Take Under Advisement"
+    },
+    {
+      "code": "VA",
+      "name": "Vacate"
+    },
+    {
+      "code": "VC",
+      "name": "Sight Verification Completed"
+    },
+    {
+      "code": "W1",
+      "name": "Reconcile Historical Records"
+    },
+    {
+      "code": "WD",
+      "name": "Withdrawn"
+    },
+    {
+      "code": "WI",
+      "name": "Winterize"
+    },
+    {
+      "code": "WQ",
+      "name": "Accept"
+    },
+    {
+      "code": "WV",
+      "name": "Waive"
+    }
+  ]
+}

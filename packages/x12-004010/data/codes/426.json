@@ -1,0 +1,2534 @@
+{
+  "code": "426",
+  "name": "Code indicating reason for debit or credit memo or adjustment to invoice, debit or credit memo, or payment",
+  "values": [
+    {
+      "code": "00",
+      "name": "Automated Credit Card Transaction"
+    },
+    {
+      "code": "01",
+      "name": "Pricing Error"
+    },
+    {
+      "code": "02",
+      "name": "Allowance/Charge Error"
+    },
+    {
+      "code": "03",
+      "name": "Extension Error"
+    },
+    {
+      "code": "04",
+      "name": "Item Not Accepted - Damaged"
+    },
+    {
+      "code": "05",
+      "name": "Item Not Accepted - Quality"
+    },
+    {
+      "code": "06",
+      "name": "Quantity Contested"
+    },
+    {
+      "code": "07",
+      "name": "Incorrect Product"
+    },
+    {
+      "code": "08",
+      "name": "Substitute Product"
+    },
+    {
+      "code": "09",
+      "name": "Terms of Sale Error"
+    },
+    {
+      "code": "10",
+      "name": "Pallet/Container Charge Error"
+    },
+    {
+      "code": "11",
+      "name": "Returns - Damage"
+    },
+    {
+      "code": "12",
+      "name": "Returns - Quality"
+    },
+    {
+      "code": "13",
+      "name": "Returns - Dating"
+    },
+    {
+      "code": "14",
+      "name": "Returns - Promotion"
+    },
+    {
+      "code": "15",
+      "name": "Returns - Recall"
+    },
+    {
+      "code": "16",
+      "name": "Non-Invoice Related Allowance/Charge"
+    },
+    {
+      "code": "17",
+      "name": "Required Data Missing"
+    },
+    {
+      "code": "18",
+      "name": "Not Company Bill"
+    },
+    {
+      "code": "19",
+      "name": "Duplicate Billing"
+    },
+    {
+      "code": "20",
+      "name": "Balance Due Declined"
+    },
+    {
+      "code": "21",
+      "name": "Shipment Method of Payment Incorrect"
+    },
+    {
+      "code": "22",
+      "name": "Weight Error"
+    },
+    {
+      "code": "23",
+      "name": "Special Charge Not Authorized"
+    },
+    {
+      "code": "24",
+      "name": "Incorrect Discount"
+    },
+    {
+      "code": "25",
+      "name": "Item Not Accepted"
+    },
+    {
+      "code": "26",
+      "name": "Invoice Cancelled"
+    },
+    {
+      "code": "27",
+      "name": "Product Transfers Subject to Charge Back"
+    },
+    {
+      "code": "28",
+      "name": "Rebated Shipments"
+    },
+    {
+      "code": "29",
+      "name": "Fee Incorrect"
+    },
+    {
+      "code": "30",
+      "name": "Delivery Charge Incorrect"
+    },
+    {
+      "code": "31",
+      "name": "Pickup Charge Incorrect"
+    },
+    {
+      "code": "32",
+      "name": "Oversize Premium Invalid"
+    },
+    {
+      "code": "33",
+      "name": "Currency Exchange Incorrect"
+    },
+    {
+      "code": "34",
+      "name": "Declared Value Incorrect"
+    },
+    {
+      "code": "35",
+      "name": "Commodity Code Incorrect"
+    },
+    {
+      "code": "36",
+      "name": "Scale Number Incorrect"
+    },
+    {
+      "code": "37",
+      "name": "Dimensions Incorrect"
+    },
+    {
+      "code": "38",
+      "name": "Service Incorrect"
+    },
+    {
+      "code": "39",
+      "name": "Shipper/Consignee Ref. Number Missing"
+    },
+    {
+      "code": "40",
+      "name": "Address Incorrect"
+    },
+    {
+      "code": "41",
+      "name": "Item Not Accepted-Delay"
+    },
+    {
+      "code": "42",
+      "name": "Item Not Accepted - Loss"
+    },
+    {
+      "code": "43",
+      "name": "Missing Discount"
+    },
+    {
+      "code": "44",
+      "name": "Required Documents Missing"
+    },
+    {
+      "code": "45",
+      "name": "Stale Bill Over 180 Days Old"
+    },
+    {
+      "code": "46",
+      "name": "Transportation Charge Incorrect"
+    },
+    {
+      "code": "47",
+      "name": "Advanced Charge Incorrect"
+    },
+    {
+      "code": "48",
+      "name": "Service Charge"
+    },
+    {
+      "code": "49",
+      "name": "Processing Charge"
+    },
+    {
+      "code": "50",
+      "name": "Late Charge"
+    },
+    {
+      "code": "51",
+      "name": "Interest Penalty Charge"
+    },
+    {
+      "code": "52",
+      "name": "Credit for Overpayment"
+    },
+    {
+      "code": "53",
+      "name": "Remittance for Previous Underpayment"
+    },
+    {
+      "code": "54",
+      "name": "Freight Deducted"
+    },
+    {
+      "code": "55",
+      "name": "Tax Deducted"
+    },
+    {
+      "code": "56",
+      "name": "Advertising Allowance Taken"
+    },
+    {
+      "code": "57",
+      "name": "Volume Discount Taken"
+    },
+    {
+      "code": "58",
+      "name": "Invoice billing received after final billing"
+    },
+    {
+      "code": "59",
+      "name": "Item not received"
+    },
+    {
+      "code": "60",
+      "name": "No open item on file"
+    },
+    {
+      "code": "61",
+      "name": "No open order on file"
+    },
+    {
+      "code": "62",
+      "name": "Material/Item Description Error"
+    },
+    {
+      "code": "63",
+      "name": "Customer Paid Invoice Which Was Previously Disputed"
+    },
+    {
+      "code": "64",
+      "name": "Sale of Property"
+    },
+    {
+      "code": "65",
+      "name": "Claim Paid on Appraisal"
+    },
+    {
+      "code": "66",
+      "name": "Disability Insurance or Income"
+    },
+    {
+      "code": "68",
+      "name": "Death Benefit Reduction"
+    },
+    {
+      "code": "69",
+      "name": "Employer Provided Pension"
+    },
+    {
+      "code": "70",
+      "name": "Advanced Ship Notice Not Received"
+    },
+    {
+      "code": "71",
+      "name": "Advertising Allowance"
+    },
+    {
+      "code": "72",
+      "name": "Authorized Return"
+    },
+    {
+      "code": "73",
+      "name": "Bill of Lading Not Received"
+    },
+    {
+      "code": "74",
+      "name": "Cancel or Adjust Prior Credit/Debit Adjustment"
+    },
+    {
+      "code": "75",
+      "name": "Total Order Not Received"
+    },
+    {
+      "code": "76",
+      "name": "Cash Discount"
+    },
+    {
+      "code": "77",
+      "name": "Competitive Allowance"
+    },
+    {
+      "code": "78",
+      "name": "Competitive Price"
+    },
+    {
+      "code": "79",
+      "name": "Cooperative Advertising"
+    },
+    {
+      "code": "80",
+      "name": "Overpayment"
+    },
+    {
+      "code": "81",
+      "name": "Credit as Agreed"
+    },
+    {
+      "code": "82",
+      "name": "Defective Allowance"
+    },
+    {
+      "code": "83",
+      "name": "Evaluated Receipt Settlement (ERS) Delivery Charge"
+    },
+    {
+      "code": "84",
+      "name": "Deviation from Order Date"
+    },
+    {
+      "code": "85",
+      "name": "Distribution Discount/Allowance"
+    },
+    {
+      "code": "86",
+      "name": "Duplicate Payment"
+    },
+    {
+      "code": "87",
+      "name": "Duplicate Shipment"
+    },
+    {
+      "code": "88",
+      "name": "Duty Charge Variance"
+    },
+    {
+      "code": "89",
+      "name": "Early Buy Allowance"
+    },
+    {
+      "code": "90",
+      "name": "Early Payment Allowance"
+    },
+    {
+      "code": "91",
+      "name": "Engraving Charge"
+    },
+    {
+      "code": "92",
+      "name": "Merchandise Not Ordered"
+    },
+    {
+      "code": "93",
+      "name": "Field Destroy"
+    },
+    {
+      "code": "94",
+      "name": "Fixtures Charge"
+    },
+    {
+      "code": "95",
+      "name": "Floor Stock Protection"
+    },
+    {
+      "code": "96",
+      "name": "Goods to Follow"
+    },
+    {
+      "code": "97",
+      "name": "Handling Charge"
+    },
+    {
+      "code": "98",
+      "name": "Labor Charges"
+    },
+    {
+      "code": "99",
+      "name": "Late Shipment of Goods"
+    },
+    {
+      "code": "A1",
+      "name": "Layout/Design Charge"
+    },
+    {
+      "code": "A2",
+      "name": "Misshipped (Wrong Product Received)"
+    },
+    {
+      "code": "A3",
+      "name": "New Store Allowance"
+    },
+    {
+      "code": "A4",
+      "name": "Nonreceipt of Goods"
+    },
+    {
+      "code": "A5",
+      "name": "Overage"
+    },
+    {
+      "code": "A6",
+      "name": "Packing Violations"
+    },
+    {
+      "code": "A7",
+      "name": "Payment on Account"
+    },
+    {
+      "code": "A8",
+      "name": "Promotional Allowance"
+    },
+    {
+      "code": "A9",
+      "name": "Proof of Delivery Not Received"
+    },
+    {
+      "code": "AA",
+      "name": "Prepaid Benefit or Advances"
+    },
+    {
+      "code": "AB",
+      "name": "Partial Wage Continuation"
+    },
+    {
+      "code": "AC",
+      "name": "Apportionment or Contribution"
+    },
+    {
+      "code": "AD",
+      "name": "Non-Automated Credit Card Transaction"
+    },
+    {
+      "code": "AE",
+      "name": "Unemployment Compensation"
+    },
+    {
+      "code": "AF",
+      "name": "Guarantee Fee"
+    },
+    {
+      "code": "AG",
+      "name": "Guaranteed Amount"
+    },
+    {
+      "code": "AH",
+      "name": "Origination Fee"
+    },
+    {
+      "code": "AI",
+      "name": "Hanger - Non Store Approved Hanger"
+    },
+    {
+      "code": "AJ",
+      "name": "Hanger - Missing or Failure to Supply Hanger"
+    },
+    {
+      "code": "AK",
+      "name": "Hanger - Wrong Color"
+    },
+    {
+      "code": "AL",
+      "name": "Released to Borrower"
+    },
+    {
+      "code": "AM",
+      "name": "Applied to Borrower's Account"
+    },
+    {
+      "code": "AN",
+      "name": "Auto No Fault"
+    },
+    {
+      "code": "AO",
+      "name": "Returned to Lender"
+    },
+    {
+      "code": "AP",
+      "name": "Acceleration of Benefits"
+    },
+    {
+      "code": "AQ",
+      "name": "Returns - Overstock"
+    },
+    {
+      "code": "AR",
+      "name": "Acceleration of Reimbursement of Attorney Fees"
+    },
+    {
+      "code": "AS",
+      "name": "Returns - Discontinued"
+    },
+    {
+      "code": "AT",
+      "name": "Account Location Closed"
+    },
+    {
+      "code": "AU",
+      "name": "Accessory Payment"
+    },
+    {
+      "code": "AV",
+      "name": "Advertising Contribution"
+    },
+    {
+      "code": "AW",
+      "name": "Student Card Payment"
+    },
+    {
+      "code": "AX",
+      "name": "Person No Longer Employed"
+    },
+    {
+      "code": "AY",
+      "name": "Employee on Leave"
+    },
+    {
+      "code": "AZ",
+      "name": "Employee on Strike"
+    },
+    {
+      "code": "B1",
+      "name": "Proof of Shipment Not Received"
+    },
+    {
+      "code": "B2",
+      "name": "Rebate"
+    },
+    {
+      "code": "B3",
+      "name": "Recovery Allowance"
+    },
+    {
+      "code": "B4",
+      "name": "Refurbishing Charge"
+    },
+    {
+      "code": "B5",
+      "name": "Repair of Goods"
+    },
+    {
+      "code": "B6",
+      "name": "Repay Discount"
+    },
+    {
+      "code": "B7",
+      "name": "Restocking Charge"
+    },
+    {
+      "code": "B8",
+      "name": "Routing Violation"
+    },
+    {
+      "code": "B9",
+      "name": "Samples Not Received"
+    },
+    {
+      "code": "BA",
+      "name": "Canadian Goods and Services Tax"
+    },
+    {
+      "code": "BB",
+      "name": "Quebec Goods and Services Tax"
+    },
+    {
+      "code": "BC",
+      "name": "Canadian Harmonized Goods and Services Tax"
+    },
+    {
+      "code": "BD",
+      "name": "Bad Debt Adjustment"
+    },
+    {
+      "code": "BE",
+      "name": "Fixture Allowance"
+    },
+    {
+      "code": "BF",
+      "name": "Return Allowance"
+    },
+    {
+      "code": "BG",
+      "name": "Bag Charge"
+    },
+    {
+      "code": "BH",
+      "name": "Opportunity Buy"
+    },
+    {
+      "code": "BI",
+      "name": "Hanger Charge"
+    },
+    {
+      "code": "BJ",
+      "name": "Insurance Charge"
+    },
+    {
+      "code": "BK",
+      "name": "Postage Charge"
+    },
+    {
+      "code": "BL",
+      "name": "Net Check Returned"
+    },
+    {
+      "code": "BM",
+      "name": "Net Collection Expense (Factor)"
+    },
+    {
+      "code": "BN",
+      "name": "Bonus"
+    },
+    {
+      "code": "BO",
+      "name": "Change to Box Office Gross"
+    },
+    {
+      "code": "BP",
+      "name": "Net Chargeback of Client Risk (Factor)"
+    },
+    {
+      "code": "BQ",
+      "name": "Hanger - Wrong Size"
+    },
+    {
+      "code": "BR",
+      "name": "Benefit Rate"
+    },
+    {
+      "code": "BS",
+      "name": "Paid During Period"
+    },
+    {
+      "code": "BT",
+      "name": "Hanger - Quality Issue"
+    },
+    {
+      "code": "BU",
+      "name": "Hanger - Size Tab or Clip Missing"
+    },
+    {
+      "code": "BV",
+      "name": "Hanger - Size Tab or Clip Did Not Match Garment Size"
+    },
+    {
+      "code": "BW",
+      "name": "Hanger - Product Hung Incorrectly"
+    },
+    {
+      "code": "BX",
+      "name": "Excess Packaging - Clips"
+    },
+    {
+      "code": "BY",
+      "name": "Excess Packaging - Tissue"
+    },
+    {
+      "code": "BZ",
+      "name": "Excess Packaging - Foam"
+    },
+    {
+      "code": "C1",
+      "name": "Settlement of Account"
+    },
+    {
+      "code": "C2",
+      "name": "Special Allowance"
+    },
+    {
+      "code": "C3",
+      "name": "Special Finish"
+    },
+    {
+      "code": "C4",
+      "name": "Stock Balance"
+    },
+    {
+      "code": "C5",
+      "name": "Temporary Allowance"
+    },
+    {
+      "code": "C6",
+      "name": "Testing Charge"
+    },
+    {
+      "code": "C7",
+      "name": "Third Party Allowance"
+    },
+    {
+      "code": "C8",
+      "name": "Ticketing Error"
+    },
+    {
+      "code": "C9",
+      "name": "Ticketing Service"
+    },
+    {
+      "code": "CA",
+      "name": "Cancelled Promotion"
+    },
+    {
+      "code": "CB",
+      "name": "Collected Balance Adjustment Incorrect"
+    },
+    {
+      "code": "CC",
+      "name": "Excess Packaging – Cardboard Layer"
+    },
+    {
+      "code": "CD",
+      "name": "Excess Packaging - Pins"
+    },
+    {
+      "code": "CE",
+      "name": "Employer's Legal Expenses Paid to Date"
+    },
+    {
+      "code": "CF",
+      "name": "Excess Packaging - String"
+    },
+    {
+      "code": "CG",
+      "name": "Excess Packaging - Tiebacks"
+    },
+    {
+      "code": "CH",
+      "name": "Product Quality - Excess Wrinkling"
+    },
+    {
+      "code": "CI",
+      "name": "Size Indicator Strips - Missing"
+    },
+    {
+      "code": "CJ",
+      "name": "Size Indicator Strips - Improper Placement"
+    },
+    {
+      "code": "CK",
+      "name": "Valuation As Of"
+    },
+    {
+      "code": "CL",
+      "name": "Size Indicator Strips - Incorrect Size Information"
+    },
+    {
+      "code": "CM",
+      "name": "Covered by Credit Memo"
+    },
+    {
+      "code": "CN",
+      "name": "Item Tickets - Incorrect Information Zone 1 - Description"
+    },
+    {
+      "code": "CO",
+      "name": "Adjusted Compensation Rate"
+    },
+    {
+      "code": "CP",
+      "name": "Employer Paid Benefits due"
+    },
+    {
+      "code": "CQ",
+      "name": "Change"
+    },
+    {
+      "code": "CR",
+      "name": "Capitation Interest"
+    },
+    {
+      "code": "CS",
+      "name": "Adjustment"
+    },
+    {
+      "code": "CT",
+      "name": "Capitation Payment"
+    },
+    {
+      "code": "CU",
+      "name": "Charge for Unrequested Service"
+    },
+    {
+      "code": "CV",
+      "name": "Capital Passthru"
+    },
+    {
+      "code": "CW",
+      "name": "Certified Registered Nurse Anesthetist Passthru"
+    },
+    {
+      "code": "CX",
+      "name": "Item Tickets - Incorrect Information Zone 2 - Vendor Information"
+    },
+    {
+      "code": "CY",
+      "name": "Item Tickets - Incorrect Information Zone 3 - Symbol"
+    },
+    {
+      "code": "CZ",
+      "name": "Item Tickets - Incorrect Information Zone 4 - Consumer Information"
+    },
+    {
+      "code": "D1",
+      "name": "Transfer Between Accounts"
+    },
+    {
+      "code": "D2",
+      "name": "Transportation Direct Billing"
+    },
+    {
+      "code": "D3",
+      "name": "Unauthorized Deduction"
+    },
+    {
+      "code": "D4",
+      "name": "Unauthorized Product"
+    },
+    {
+      "code": "D5",
+      "name": "Volume Discount"
+    },
+    {
+      "code": "D6",
+      "name": "Recovery of Standard Allowances"
+    },
+    {
+      "code": "D7",
+      "name": "Cost Associated with Reworked Material"
+    },
+    {
+      "code": "D8",
+      "name": "Count and Recount Allowance"
+    },
+    {
+      "code": "D9",
+      "name": "Store Stock Price Protection"
+    },
+    {
+      "code": "DA",
+      "name": "Daylight Overdraft Charge Reversed"
+    },
+    {
+      "code": "DB",
+      "name": "Pension or Retirement Plan Disability Benefits"
+    },
+    {
+      "code": "DC",
+      "name": "Canadian Pension Plan"
+    },
+    {
+      "code": "DD",
+      "name": "Railroad Disability"
+    },
+    {
+      "code": "DE",
+      "name": "Deposited Item Price Incorrect"
+    },
+    {
+      "code": "DF",
+      "name": "Family Social Security"
+    },
+    {
+      "code": "DG",
+      "name": "Deduction Film Rental"
+    },
+    {
+      "code": "DH",
+      "name": "District Advance"
+    },
+    {
+      "code": "DI",
+      "name": "Social Security Supplemental Income"
+    },
+    {
+      "code": "DJ",
+      "name": "Jones Act (Merchant Seaman Injured on the Job)"
+    },
+    {
+      "code": "DK",
+      "name": "Damaged Film"
+    },
+    {
+      "code": "DL",
+      "name": "Deposited Item Volume Error"
+    },
+    {
+      "code": "DM",
+      "name": "Direct Medical Education Passthru"
+    },
+    {
+      "code": "DN",
+      "name": "Item Tickets - Incorrect Information Zone 5 - Size or Dimension"
+    },
+    {
+      "code": "DO",
+      "name": "Other Group Insurance"
+    },
+    {
+      "code": "DP",
+      "name": "Pension or Retirement Benefits"
+    },
+    {
+      "code": "DQ",
+      "name": "Item Tickets - Incorrect Information Zone 6 - Retail Price"
+    },
+    {
+      "code": "DR",
+      "name": "Social Security Retirements"
+    },
+    {
+      "code": "DS",
+      "name": "Social Security Disability"
+    },
+    {
+      "code": "DT",
+      "name": "Railroad Retirement"
+    },
+    {
+      "code": "DU",
+      "name": "Discontinued Product"
+    },
+    {
+      "code": "DV",
+      "name": "Civil Servants Plan"
+    },
+    {
+      "code": "DW",
+      "name": "Subrogation"
+    },
+    {
+      "code": "DX",
+      "name": "Royalty Deduction Type"
+    },
+    {
+      "code": "DY",
+      "name": "Distribution Issue"
+    },
+    {
+      "code": "DZ",
+      "name": "Item Tickets - Incorrect Information Zone 7 - Manufacturer's Suggested Price"
+    },
+    {
+      "code": "E1",
+      "name": "Recoupment"
+    },
+    {
+      "code": "E2",
+      "name": "Covered By Debit Memo"
+    },
+    {
+      "code": "E3",
+      "name": "Withholding"
+    },
+    {
+      "code": "E4",
+      "name": "Warehouse Stock Price Protection"
+    },
+    {
+      "code": "E5",
+      "name": "Invoice Price Protection"
+    },
+    {
+      "code": "E6",
+      "name": "Goods and Services Tax 0% Rate, International Documentation Will Follow"
+    },
+    {
+      "code": "E7",
+      "name": "Goods and Services Tax Decreased Due to Billing Error"
+    },
+    {
+      "code": "E8",
+      "name": "Goods and Services Tax Increased Due to Billing Error"
+    },
+    {
+      "code": "E9",
+      "name": "Order Cancelled"
+    },
+    {
+      "code": "EA",
+      "name": "Item Tickets - Missing Information Zone 1 – Description"
+    },
+    {
+      "code": "EB",
+      "name": "Item Tickets - Missing Information Zone 2 - Vendor Information"
+    },
+    {
+      "code": "EC",
+      "name": "Item Tickets - Missing Information Zone 3 - Symbol"
+    },
+    {
+      "code": "ED",
+      "name": "Item Tickets - Missing Information Zone 4 - Consumer Information"
+    },
+    {
+      "code": "EE",
+      "name": "Encoding Error"
+    },
+    {
+      "code": "EF",
+      "name": "Item Tickets - Missing Information Zone 5 - Size or Dimension"
+    },
+    {
+      "code": "EG",
+      "name": "Item Tickets - Missing Information Zone 6 - Retail Price"
+    },
+    {
+      "code": "EH",
+      "name": "Item Tickets - Missing Information Zone 7 - Manufacturer's Suggested Price"
+    },
+    {
+      "code": "EI",
+      "name": "Item Tickets - Incorrect or Missing Multi-Piece Ticket"
+    },
+    {
+      "code": "EJ",
+      "name": "Item Tickets - Information Not Readable"
+    },
+    {
+      "code": "EK",
+      "name": "Item Tickets - Bar Code Degradation"
+    },
+    {
+      "code": "EL",
+      "name": "Item Tickets - Non Perforated"
+    },
+    {
+      "code": "EM",
+      "name": "Item Tickets - Missing Ticket"
+    },
+    {
+      "code": "EN",
+      "name": "Item Tickets - Tickets in Carton - Not Attached"
+    },
+    {
+      "code": "EO",
+      "name": "Item Tickets - Improper Placement"
+    },
+    {
+      "code": "EP",
+      "name": "Expanded Promotion"
+    },
+    {
+      "code": "EQ",
+      "name": "Item Tickets - Item Missing from Catalog at Time of Receipt"
+    },
+    {
+      "code": "ER",
+      "name": "Employer Reimbursement"
+    },
+    {
+      "code": "ES",
+      "name": "Item Tickets - Color-Coding for Size Missing or Incorrect"
+    },
+    {
+      "code": "ET",
+      "name": "Item Tickets - Item Ticket Affixed Improperly"
+    },
+    {
+      "code": "EU",
+      "name": "Ship Notice - Carton Content does not Match Ship Notice"
+    },
+    {
+      "code": "EV",
+      "name": "Ship Notice - Carton Count does not Match Ship Notice"
+    },
+    {
+      "code": "EW",
+      "name": "Ship Notice - Serial Shipping Container Code does not Match Ship Notice"
+    },
+    {
+      "code": "EX",
+      "name": "Expenses"
+    },
+    {
+      "code": "EY",
+      "name": "Ship Notice - Missing Bill of Lading Information"
+    },
+    {
+      "code": "EZ",
+      "name": "Ship Notice - Duplicate Ship Notice"
+    },
+    {
+      "code": "F1",
+      "name": "Defective"
+    },
+    {
+      "code": "F2",
+      "name": "Ship Notice - Received Late"
+    },
+    {
+      "code": "F3",
+      "name": "Social Security"
+    },
+    {
+      "code": "F4",
+      "name": "No-Fault"
+    },
+    {
+      "code": "F5",
+      "name": "Other Long-term Disability Offset"
+    },
+    {
+      "code": "F6",
+      "name": "Indirect Offset Excess"
+    },
+    {
+      "code": "F7",
+      "name": "Black Lung Disease"
+    },
+    {
+      "code": "F8",
+      "name": "Rehabilitation"
+    },
+    {
+      "code": "F9",
+      "name": "Educational Benefit"
+    },
+    {
+      "code": "FA",
+      "name": "Anticipation Taken"
+    },
+    {
+      "code": "FB",
+      "name": "Forwarding Balance"
+    },
+    {
+      "code": "FC",
+      "name": "Fund Allocation"
+    },
+    {
+      "code": "FD",
+      "name": "Purchase Order - Size Not Ordered"
+    },
+    {
+      "code": "FE",
+      "name": "Purchase Order - Color Not Ordered"
+    },
+    {
+      "code": "FF",
+      "name": "Purchase Order - Store Did Not Order"
+    },
+    {
+      "code": "FG",
+      "name": "Purchase Order - Item Overage"
+    },
+    {
+      "code": "FH",
+      "name": "Promotion Violation"
+    },
+    {
+      "code": "FI",
+      "name": "Late Interest Paid"
+    },
+    {
+      "code": "FJ",
+      "name": "Does Not Accept Electronic Funds Transfer"
+    },
+    {
+      "code": "FK",
+      "name": "Logistics Label - Problem with Shipped From Address"
+    },
+    {
+      "code": "FL",
+      "name": "Logistics Label - Problem with Ship To Address"
+    },
+    {
+      "code": "FM",
+      "name": "Logistics Label - Problem with Postal Barcode Code"
+    },
+    {
+      "code": "FN",
+      "name": "Logistics Label - Problem with Carrier Information"
+    },
+    {
+      "code": "FO",
+      "name": "Logistics Label - Problem with Mark For Information"
+    },
+    {
+      "code": "FP",
+      "name": "Logistics Label - Problem with Serial Shipping Container Code"
+    },
+    {
+      "code": "FQ",
+      "name": "Logistics Label - Problem with Barcode"
+    },
+    {
+      "code": "FR",
+      "name": "Film Rental"
+    },
+    {
+      "code": "FS",
+      "name": "Logistics Label - Problem with Purchase Order Number"
+    },
+    {
+      "code": "FT",
+      "name": "Change to Film Rental Terms"
+    },
+    {
+      "code": "FU",
+      "name": "Forward Buy"
+    },
+    {
+      "code": "FV",
+      "name": "Logistics Label - Problem with Mark For Barcode"
+    },
+    {
+      "code": "FW",
+      "name": "Logistics Label - Problem with Product Group Description"
+    },
+    {
+      "code": "FX",
+      "name": "Logistics Label - Problem with Carton Count"
+    },
+    {
+      "code": "FY",
+      "name": "Logistics Label - Incorrect Label Format"
+    },
+    {
+      "code": "FZ",
+      "name": "Logistics Label - Incorrect Font or Print Size"
+    },
+    {
+      "code": "G1",
+      "name": "Profit Sharing"
+    },
+    {
+      "code": "G2",
+      "name": "Workmen's Compensation"
+    },
+    {
+      "code": "G3",
+      "name": "Pension"
+    },
+    {
+      "code": "G4",
+      "name": "Other Disability Plan"
+    },
+    {
+      "code": "G5",
+      "name": "Other Income"
+    },
+    {
+      "code": "G6",
+      "name": "Salary Continuance"
+    },
+    {
+      "code": "G7",
+      "name": "Short-term Disability"
+    },
+    {
+      "code": "G8",
+      "name": "Permanent and Total Disability"
+    },
+    {
+      "code": "G9",
+      "name": "State Disability Plan"
+    },
+    {
+      "code": "GA",
+      "name": "Free Goods"
+    },
+    {
+      "code": "GB",
+      "name": "Coupon Related"
+    },
+    {
+      "code": "GC",
+      "name": "Market Development Fund Deduction"
+    },
+    {
+      "code": "GD",
+      "name": "Samples"
+    },
+    {
+      "code": "GE",
+      "name": "Slotting Charge"
+    },
+    {
+      "code": "GF",
+      "name": "Invalid"
+    },
+    {
+      "code": "GG",
+      "name": "Unsalable Merchandise"
+    },
+    {
+      "code": "GH",
+      "name": "Billback Allowance Deduction"
+    },
+    {
+      "code": "GI",
+      "name": "Logistics Label - Crushed Box, Label Not Usable"
+    },
+    {
+      "code": "GJ",
+      "name": "Unsalable Payments Deduction"
+    },
+    {
+      "code": "GK",
+      "name": "Split Commission Deduction - Basis Amount"
+    },
+    {
+      "code": "GL",
+      "name": "Unresolved Customer Deduction"
+    },
+    {
+      "code": "GM",
+      "name": "Split Commissions Deduction - Commission Amount"
+    },
+    {
+      "code": "GN",
+      "name": "General Advance"
+    },
+    {
+      "code": "GO",
+      "name": "Graduate Medical Education Passthru"
+    },
+    {
+      "code": "GP",
+      "name": "Logistics Label - Label Does Not Scan"
+    },
+    {
+      "code": "GQ",
+      "name": "Logistics Label - Not Human Readable"
+    },
+    {
+      "code": "GR",
+      "name": "Guarantee"
+    },
+    {
+      "code": "GS",
+      "name": "Packing - Ratio Incorrect for Pre-pack Shipment"
+    },
+    {
+      "code": "GT",
+      "name": "Packing - Mixed Items in Carton"
+    },
+    {
+      "code": "GU",
+      "name": "Packing - Crushed Box"
+    },
+    {
+      "code": "GV",
+      "name": "Packing - Missing or Incorrect Pallets"
+    },
+    {
+      "code": "GW",
+      "name": "Packing - Load Not Sorted Correctly"
+    },
+    {
+      "code": "GX",
+      "name": "Packing - Problem with Pack List"
+    },
+    {
+      "code": "GY",
+      "name": "Packing - Multiple Purchase Orders Shipped in Carton"
+    },
+    {
+      "code": "GZ",
+      "name": "Packing - Problem with Bill of Lading Number or Format"
+    },
+    {
+      "code": "H1",
+      "name": "Information Forthcoming"
+    },
+    {
+      "code": "H2",
+      "name": "Payment Previously Sent"
+    },
+    {
+      "code": "H3",
+      "name": "Loan Paid in Full"
+    },
+    {
+      "code": "H4",
+      "name": "Bill Insured"
+    },
+    {
+      "code": "H5",
+      "name": "Loan Service Released"
+    },
+    {
+      "code": "H6",
+      "name": "Partial Payment Remitted"
+    },
+    {
+      "code": "H7",
+      "name": "Payment Forthcoming"
+    },
+    {
+      "code": "H8",
+      "name": "Bill Mortgagee"
+    },
+    {
+      "code": "H9",
+      "name": "Coverage Summary Needed"
+    },
+    {
+      "code": "HA",
+      "name": "Change to House Allowance"
+    },
+    {
+      "code": "HB",
+      "name": "Medical Payment"
+    },
+    {
+      "code": "HC",
+      "name": "Indemnity Payment"
+    },
+    {
+      "code": "HD",
+      "name": "Expense Payment"
+    },
+    {
+      "code": "HE",
+      "name": "Comprehensive Payment"
+    },
+    {
+      "code": "HF",
+      "name": "Collision Payment"
+    },
+    {
+      "code": "HG",
+      "name": "Bodily Injury Payment"
+    },
+    {
+      "code": "HH",
+      "name": "Packing - Carton Not Sealed Correctly"
+    },
+    {
+      "code": "HI",
+      "name": "Property Damage Payment"
+    },
+    {
+      "code": "HJ",
+      "name": "Polybags - Missing or Incorrect Type"
+    },
+    {
+      "code": "HK",
+      "name": "Polybags - Not Sealed or Incorrectly Sealed"
+    },
+    {
+      "code": "HL",
+      "name": "Transportation - Carrier Missed Delivery Appointment"
+    },
+    {
+      "code": "HM",
+      "name": "Hemophilia Clotting Factor Supplement"
+    },
+    {
+      "code": "HN",
+      "name": "Transportation - Carrier Detained"
+    },
+    {
+      "code": "HO",
+      "name": "Transportation - No Shipment Approval Number"
+    },
+    {
+      "code": "HP",
+      "name": "Transportation - Delivery to Wrong Location"
+    },
+    {
+      "code": "HQ",
+      "name": "Transportation - Excessive Shipments or Multiple Shipments on Consecutive Days"
+    },
+    {
+      "code": "IA",
+      "name": "Invoice Amount Does Not Match Account Analysis Statement"
+    },
+    {
+      "code": "IC",
+      "name": "Interest Charge-Rate Reduced to New York Prime Rate"
+    },
+    {
+      "code": "IE",
+      "name": "Interest Charge - Rate Reduced to Earnings Credit Rate"
+    },
+    {
+      "code": "IF",
+      "name": "Insufficient Funds"
+    },
+    {
+      "code": "IL",
+      "name": "Interest Charge-Rate Reduced to London Inter-bank Offer Rate (LIBOR)"
+    },
+    {
+      "code": "IN",
+      "name": "Inventory Policy"
+    },
+    {
+      "code": "IP",
+      "name": "Incentive Premium Payment"
+    },
+    {
+      "code": "IR",
+      "name": "Internal Revenue Service Withholding"
+    },
+    {
+      "code": "IS",
+      "name": "Interim Settlement"
+    },
+    {
+      "code": "IT",
+      "name": "Item Added"
+    },
+    {
+      "code": "J1",
+      "name": "Nonreimbursable"
+    },
+    {
+      "code": "J2",
+      "name": "Transportation Discrepancy Report (TDR) Submitted"
+    },
+    {
+      "code": "J3",
+      "name": "Promised Adjustment Not Received"
+    },
+    {
+      "code": "J4",
+      "name": "Deficiency Report Authorized Adjustment"
+    },
+    {
+      "code": "J5",
+      "name": "Duplicate Summary Billing (Same Bill Number)"
+    },
+    {
+      "code": "J6",
+      "name": "Duplicate Summary Billing (Different Bill Number)"
+    },
+    {
+      "code": "J7",
+      "name": "Duplicate Summary Billing (Second Billing)"
+    },
+    {
+      "code": "J8",
+      "name": "Unable to Process"
+    },
+    {
+      "code": "J9",
+      "name": "Noninterfund Bill"
+    },
+    {
+      "code": "JA",
+      "name": "Recalled Item"
+    },
+    {
+      "code": "JE",
+      "name": "Journal Entry"
+    },
+    {
+      "code": "K1",
+      "name": "Other Coverage Placed"
+    },
+    {
+      "code": "K2",
+      "name": "Invalid Policy Number"
+    },
+    {
+      "code": "K3",
+      "name": "Renewal Not Received"
+    },
+    {
+      "code": "K4",
+      "name": "Return Merchandise Charge"
+    },
+    {
+      "code": "K5",
+      "name": "Refused Merchandise Charge"
+    },
+    {
+      "code": "K6",
+      "name": "Unauthorized Freight Invoice"
+    },
+    {
+      "code": "K7",
+      "name": "Unauthorized Freight on Merchandise Invoice"
+    },
+    {
+      "code": "K8",
+      "name": "Freight Inbound Return Merchandise"
+    },
+    {
+      "code": "K9",
+      "name": "Freight Outbound Return Merchandise"
+    },
+    {
+      "code": "KA",
+      "name": "Full Monetary Difference Between Air and Surface Charges Per Corporate Agreement"
+    },
+    {
+      "code": "KB",
+      "name": "Full Monetary Difference Between Air and Surface Charges Per Purchase Order"
+    },
+    {
+      "code": "KC",
+      "name": "Paper Bill of Lading Missing Department Number"
+    },
+    {
+      "code": "KD",
+      "name": "Paper Bill of Lading Missing Purchase Order Number"
+    },
+    {
+      "code": "KE",
+      "name": "Paper Bill of Lading Non Standard VICS Format"
+    },
+    {
+      "code": "KF",
+      "name": "Paper Bill of Lading Counter/Loader Not Indicated"
+    },
+    {
+      "code": "KG",
+      "name": "Partial Monetary Difference Between Air and Surface Charges Per Corporate Agreement"
+    },
+    {
+      "code": "KH",
+      "name": "Partial Monetary Difference Between Air and Surface Chares Per Purchase Order"
+    },
+    {
+      "code": "KI",
+      "name": "Freight Allowance Per Corporate Agreement"
+    },
+    {
+      "code": "KJ",
+      "name": "Freight Allowance Per Purchase Order"
+    },
+    {
+      "code": "KK",
+      "name": "Prepaid Advance Freight for Consolidator Shipments"
+    },
+    {
+      "code": "KL",
+      "name": "Redelivery Charge"
+    },
+    {
+      "code": "KM",
+      "name": "Charge for Second Delivery on Damaged Furniture"
+    },
+    {
+      "code": "KN",
+      "name": "Surface Freight Allowance Per Corporate Agreement"
+    },
+    {
+      "code": "KO",
+      "name": "Surface Freight Allowance Per Purchase Order"
+    },
+    {
+      "code": "L1",
+      "name": "Audit"
+    },
+    {
+      "code": "L2",
+      "name": "Discount"
+    },
+    {
+      "code": "L3",
+      "name": "Penalty"
+    },
+    {
+      "code": "L4",
+      "name": "Administrative Fees"
+    },
+    {
+      "code": "L5",
+      "name": "Interest Due"
+    },
+    {
+      "code": "L6",
+      "name": "Interest Owed"
+    },
+    {
+      "code": "L7",
+      "name": "Miscellaneous Deductions"
+    },
+    {
+      "code": "L8",
+      "name": "Miscellaneous Credits"
+    },
+    {
+      "code": "L9",
+      "name": "Military Distribution Adjustment"
+    },
+    {
+      "code": "LA",
+      "name": "Loans against Future Compensations"
+    },
+    {
+      "code": "LE",
+      "name": "Levy"
+    },
+    {
+      "code": "LF",
+      "name": "Lawyer or Claimant Attorney Fees"
+    },
+    {
+      "code": "LO",
+      "name": "Ledger Overdraft Charge"
+    },
+    {
+      "code": "LP",
+      "name": "Late Payment"
+    },
+    {
+      "code": "LS",
+      "name": "Lump Sum"
+    },
+    {
+      "code": "M1",
+      "name": "Advertising - Unidentified"
+    },
+    {
+      "code": "M2",
+      "name": "Commissions Deductions"
+    },
+    {
+      "code": "M3",
+      "name": "Gift Certificates"
+    },
+    {
+      "code": "M4",
+      "name": "Salary Deduction"
+    },
+    {
+      "code": "M5",
+      "name": "Late 204 Motor Carrier Load Tender Transmission"
+    },
+    {
+      "code": "M6",
+      "name": "Missing 204 Motor Carrier Load Tender Transmission"
+    },
+    {
+      "code": "M7",
+      "name": "Late 214 Transportation Carrier Shipment Status Message Transmission"
+    },
+    {
+      "code": "M8",
+      "name": "Missing 214 Transportation Carrier Shipment Status Message Transmission"
+    },
+    {
+      "code": "M9",
+      "name": "Freight on Backorder"
+    },
+    {
+      "code": "MA",
+      "name": "Marketing Allowance"
+    },
+    {
+      "code": "MB",
+      "name": "Pickup Allowance"
+    },
+    {
+      "code": "MC",
+      "name": "Miscellaneous Costs"
+    },
+    {
+      "code": "MD",
+      "name": "Incorrect Purchase Order Number on Bill of Lading"
+    },
+    {
+      "code": "ME",
+      "name": "Purchase Order Number Not on Bill of Lading"
+    },
+    {
+      "code": "MF",
+      "name": "Multiple Purchase Order Numbers on Invoice"
+    },
+    {
+      "code": "MG",
+      "name": "Purchase Order Number Incorrect on Invoice"
+    },
+    {
+      "code": "MH",
+      "name": "Purchase Order Number Not on Invoice"
+    },
+    {
+      "code": "MI",
+      "name": "Transfer or Debit Balance"
+    },
+    {
+      "code": "MJ",
+      "name": "Truckload Allowance"
+    },
+    {
+      "code": "MK",
+      "name": "Warehouse Allowance"
+    },
+    {
+      "code": "ML",
+      "name": "Maximum Allowable Levy Exceeded"
+    },
+    {
+      "code": "MM",
+      "name": "Incorrect Product ID on Cartons"
+    },
+    {
+      "code": "MN",
+      "name": "Incorrect Purchase Order Number on Carton"
+    },
+    {
+      "code": "MO",
+      "name": "No Product ID on Cartons"
+    },
+    {
+      "code": "MP",
+      "name": "No Purchase Order Number on Carton"
+    },
+    {
+      "code": "MQ",
+      "name": "Storage Charges"
+    },
+    {
+      "code": "MR",
+      "name": "Manufacturer to Retail Bill-Back Allowance"
+    },
+    {
+      "code": "MV",
+      "name": "Miscellaneous Event"
+    },
+    {
+      "code": "N1",
+      "name": "Second Injury Fund"
+    },
+    {
+      "code": "N2",
+      "name": "Future Credit Amount"
+    },
+    {
+      "code": "N3",
+      "name": "Vocational Rehabilitation"
+    },
+    {
+      "code": "N4",
+      "name": "Uninsured Employer"
+    },
+    {
+      "code": "N5",
+      "name": "Silicosis, Dust Diseases, and Logging Industry Fund"
+    },
+    {
+      "code": "N6",
+      "name": "Vocationally Handicapped Fund"
+    },
+    {
+      "code": "N7",
+      "name": "Non-designated Fund"
+    },
+    {
+      "code": "NA",
+      "name": "Cash Receipt"
+    },
+    {
+      "code": "NB",
+      "name": "Non-Billable"
+    },
+    {
+      "code": "NC",
+      "name": "Negative Charge"
+    },
+    {
+      "code": "ND",
+      "name": "Royalty"
+    },
+    {
+      "code": "NL",
+      "name": "New Location"
+    },
+    {
+      "code": "NO",
+      "name": "New Promotion"
+    },
+    {
+      "code": "NP",
+      "name": "New Product"
+    },
+    {
+      "code": "NR",
+      "name": "Negative Repayment"
+    },
+    {
+      "code": "O1",
+      "name": "Bill of Lading Does Not Match 856 Advance Ship Notice (ASN)"
+    },
+    {
+      "code": "O2",
+      "name": "Incorrect Carton/Weight on Bill of Lading"
+    },
+    {
+      "code": "O3",
+      "name": "Charge for Combined Divisions on One Bill of Lading"
+    },
+    {
+      "code": "O4",
+      "name": "Charge for Consolidation Zone Freight Allowance Per Corporate Agreement"
+    },
+    {
+      "code": "O5",
+      "name": "Charge for Consolidation Zone Freight Allowance Per Purchase Order"
+    },
+    {
+      "code": "O6",
+      "name": "Charge for Exceeding Maximum Shipments Per Agreement"
+    },
+    {
+      "code": "O7",
+      "name": "Charge to Expedite Distribution Centre (DC) to Store"
+    },
+    {
+      "code": "O8",
+      "name": "Charge for Failure to Master Pack"
+    },
+    {
+      "code": "O9",
+      "name": "Inaccurate Cube Information"
+    },
+    {
+      "code": "OA",
+      "name": "Organ Acquisition Passthru"
+    },
+    {
+      "code": "OB",
+      "name": "Offset for Affiliated Providers"
+    },
+    {
+      "code": "OC",
+      "name": "Overstock Condition"
+    },
+    {
+      "code": "OL",
+      "name": "Court Ordered Lien"
+    },
+    {
+      "code": "OP",
+      "name": "Order Policy"
+    },
+    {
+      "code": "OT",
+      "name": "Other Trading-Partner Specific Reason"
+    },
+    {
+      "code": "P1",
+      "name": "Price Change"
+    },
+    {
+      "code": "P2",
+      "name": "Product Changeover"
+    },
+    {
+      "code": "P3",
+      "name": "Production Issue"
+    },
+    {
+      "code": "PA",
+      "name": "Picture Advance"
+    },
+    {
+      "code": "PB",
+      "name": "Materials"
+    },
+    {
+      "code": "PC",
+      "name": "Amendment of Limits"
+    },
+    {
+      "code": "PD",
+      "name": "Paid to Date"
+    },
+    {
+      "code": "PE",
+      "name": "Employment Benefits"
+    },
+    {
+      "code": "PF",
+      "name": "Payment First"
+    },
+    {
+      "code": "PG",
+      "name": "Carrier Filed Limitation"
+    },
+    {
+      "code": "PH",
+      "name": "Commissions"
+    },
+    {
+      "code": "PI",
+      "name": "Periodic Interim Payment"
+    },
+    {
+      "code": "PJ",
+      "name": "Intercompany Sale"
+    },
+    {
+      "code": "PK",
+      "name": "Lodging"
+    },
+    {
+      "code": "PL",
+      "name": "Payment Final"
+    },
+    {
+      "code": "PM",
+      "name": "Previous Month's Earnings Credit Carried Forward"
+    },
+    {
+      "code": "PN",
+      "name": "Meals"
+    },
+    {
+      "code": "PO",
+      "name": "Federal Deposit Insurance Corporation (FDIC) Premium Overcharge"
+    },
+    {
+      "code": "PP",
+      "name": "Quebec Pension Plan"
+    },
+    {
+      "code": "PQ",
+      "name": "Overtime"
+    },
+    {
+      "code": "PR",
+      "name": "Prior Film Rental Payment"
+    },
+    {
+      "code": "PS",
+      "name": "Product Exclusion"
+    },
+    {
+      "code": "PT",
+      "name": "Payment"
+    },
+    {
+      "code": "PU",
+      "name": "Severance"
+    },
+    {
+      "code": "PV",
+      "name": "Special"
+    },
+    {
+      "code": "PW",
+      "name": "State Limitation"
+    },
+    {
+      "code": "PX",
+      "name": "Store Certificates"
+    },
+    {
+      "code": "PY",
+      "name": "Tips"
+    },
+    {
+      "code": "PZ",
+      "name": "Equipment Rental"
+    },
+    {
+      "code": "Q1",
+      "name": "Charge Error"
+    },
+    {
+      "code": "Q2",
+      "name": "Allowance Error"
+    },
+    {
+      "code": "Q3",
+      "name": "Promotional Allowance - Trade Show"
+    },
+    {
+      "code": "Q4",
+      "name": "Promotional Allowance - Flyers"
+    },
+    {
+      "code": "Q5",
+      "name": "Promotional Allowance - New Product"
+    },
+    {
+      "code": "Q6",
+      "name": "Contract Price Error"
+    },
+    {
+      "code": "Q7",
+      "name": "Contract Price Error - Mark Up"
+    },
+    {
+      "code": "Q8",
+      "name": "Contract Price Error - Freight"
+    },
+    {
+      "code": "Q9",
+      "name": "Contract Price Error - Volume Discount"
+    },
+    {
+      "code": "QA",
+      "name": "Contract Price Error - Starting Price Error"
+    },
+    {
+      "code": "QB",
+      "name": "Contract Price Error - Invalid Date Range"
+    },
+    {
+      "code": "QC",
+      "name": "Contract Price Error - Freight Surcharge"
+    },
+    {
+      "code": "QD",
+      "name": "Drop Size"
+    },
+    {
+      "code": "QE",
+      "name": "Drop Frequency"
+    },
+    {
+      "code": "QF",
+      "name": "Manufacturer to Distributor Billback Allowance"
+    },
+    {
+      "code": "QG",
+      "name": "Deduction for Unpaid Receivable"
+    },
+    {
+      "code": "R1",
+      "name": "Returned Deposited Item Price Incorrect"
+    },
+    {
+      "code": "R2",
+      "name": "Returned Deposited Item Volume Error"
+    },
+    {
+      "code": "R3",
+      "name": "Returned Deposited Item Notification Volume Error"
+    },
+    {
+      "code": "R4",
+      "name": "Reduced Promotion"
+    },
+    {
+      "code": "R5",
+      "name": "Revised Plan (Re-plan)"
+    },
+    {
+      "code": "R6",
+      "name": "Revised Promotion"
+    },
+    {
+      "code": "RA",
+      "name": "Retro-activity Adjustment"
+    },
+    {
+      "code": "RB",
+      "name": "Agreed Freight Allowance"
+    },
+    {
+      "code": "RC",
+      "name": "Authorized Air Shipment"
+    },
+    {
+      "code": "RD",
+      "name": "Receiving Discrepancy"
+    },
+    {
+      "code": "RE",
+      "name": "Return on Equity"
+    },
+    {
+      "code": "RF",
+      "name": "Commission Discrepancy"
+    },
+    {
+      "code": "RG",
+      "name": "Difference On Returns"
+    },
+    {
+      "code": "RH",
+      "name": "Early Shipment of Goods"
+    },
+    {
+      "code": "RI",
+      "name": "Excessive Packing Materials"
+    },
+    {
+      "code": "RJ",
+      "name": "Failure to Consolidate"
+    },
+    {
+      "code": "RK",
+      "name": "Freight on Returns Inbound Only"
+    },
+    {
+      "code": "RL",
+      "name": "Freight on Returns Outbound Only"
+    },
+    {
+      "code": "RM",
+      "name": "Returned Material"
+    },
+    {
+      "code": "RN",
+      "name": "Handling Charge for Item Not Received"
+    },
+    {
+      "code": "RO",
+      "name": "Handling Charge for Non Receipt of Goods"
+    },
+    {
+      "code": "RP",
+      "name": "Handling Charge for Late Advance Ship Notice"
+    },
+    {
+      "code": "RQ",
+      "name": "Handling Charge for Samples Not Received"
+    },
+    {
+      "code": "RR",
+      "name": "Handling Charge for Unreadable Advance Ship Notice"
+    },
+    {
+      "code": "RS",
+      "name": "Incorrect Packing Assortment"
+    },
+    {
+      "code": "RT",
+      "name": "In-store Decoration Allowance"
+    },
+    {
+      "code": "RU",
+      "name": "Interest"
+    },
+    {
+      "code": "RV",
+      "name": "Label Placement"
+    },
+    {
+      "code": "RW",
+      "name": "Margin Contribution"
+    },
+    {
+      "code": "RX",
+      "name": "Mark Down Allowance"
+    },
+    {
+      "code": "RY",
+      "name": "Multiple Shipment Penalty"
+    },
+    {
+      "code": "RZ",
+      "name": "Opening Order Allowance"
+    },
+    {
+      "code": "S1",
+      "name": "Incorrect Pickup Address"
+    },
+    {
+      "code": "S2",
+      "name": "Charge for LTL Shipped on Consecutive Days"
+    },
+    {
+      "code": "S3",
+      "name": "Not Shipped on Date Authorized"
+    },
+    {
+      "code": "S4",
+      "name": "Shipped on Pallets"
+    },
+    {
+      "code": "S5",
+      "name": "Small Package Level Detail Insufficient"
+    },
+    {
+      "code": "S6",
+      "name": "Sort and Segregate Handling Charge"
+    },
+    {
+      "code": "S7",
+      "name": "Sort and Segregation Allowance Per Corporate Agreement"
+    },
+    {
+      "code": "S8",
+      "name": "Sort and Segregation Allowance Per Purchase Order"
+    },
+    {
+      "code": "S9",
+      "name": "Wrong Ship Point Per Purchase Order"
+    },
+    {
+      "code": "SA",
+      "name": "Paper Invoice Missing"
+    },
+    {
+      "code": "SC",
+      "name": "Service Cancelled"
+    },
+    {
+      "code": "SD",
+      "name": "Screening Deduction"
+    },
+    {
+      "code": "SE",
+      "name": "Paper Packing Slip Missing"
+    },
+    {
+      "code": "SF",
+      "name": "Shipping and Freight Charge"
+    },
+    {
+      "code": "SG",
+      "name": "Pickup Charge or Advanced Charges"
+    },
+    {
+      "code": "SH",
+      "name": "Presentation of Merchandise Not As Specified"
+    },
+    {
+      "code": "SI",
+      "name": "Purchaser Supplied Raw Material"
+    },
+    {
+      "code": "SJ",
+      "name": "Returns Freight Discrepancy"
+    },
+    {
+      "code": "SK",
+      "name": "Salary Discrepancy"
+    },
+    {
+      "code": "SL",
+      "name": "Student Loan Repayment"
+    },
+    {
+      "code": "SM",
+      "name": "Shipped Past Purchase Order Cancellation Date"
+    },
+    {
+      "code": "SN",
+      "name": "Should Be Shipped Collect, But Was Shipped Prepaid"
+    },
+    {
+      "code": "SO",
+      "name": "Should be Shipped Prepaid, But Was Shipped Collect"
+    },
+    {
+      "code": "SP",
+      "name": "Sales Promotion"
+    },
+    {
+      "code": "SR",
+      "name": "Store Contest Allowance"
+    },
+    {
+      "code": "SS",
+      "name": "Trade Discount"
+    },
+    {
+      "code": "ST",
+      "name": "Unauthorized Air Shipment-Chargeback is the Difference Between Air and Ground"
+    },
+    {
+      "code": "SU",
+      "name": "Unauthorized Air Shipment-Partial Freight Chargeback"
+    },
+    {
+      "code": "SV",
+      "name": "Unauthorized Air Shipment-Full Freight Chargeback"
+    },
+    {
+      "code": "SW",
+      "name": "Unauthorized or Incorrect Carrier"
+    },
+    {
+      "code": "SX",
+      "name": "Volume Break Chargeback"
+    },
+    {
+      "code": "SY",
+      "name": "Weight Break Chargeback"
+    },
+    {
+      "code": "TA",
+      "name": "Theatre Advance"
+    },
+    {
+      "code": "TD",
+      "name": "Total Deductions"
+    },
+    {
+      "code": "TI",
+      "name": "Transportation Issue"
+    },
+    {
+      "code": "TL",
+      "name": "Third Party Liability"
+    },
+    {
+      "code": "UB",
+      "name": "Uncollected Balance Charge Reversed"
+    },
+    {
+      "code": "UL",
+      "name": "Unable to Locate Account"
+    },
+    {
+      "code": "VC",
+      "name": "Value Date Incorrect for Credit"
+    },
+    {
+      "code": "VD",
+      "name": "Value Date Incorrect for Debit"
+    },
+    {
+      "code": "VO",
+      "name": "Void"
+    },
+    {
+      "code": "W6",
+      "name": "Safety Violations"
+    },
+    {
+      "code": "W8",
+      "name": "Intoxication"
+    },
+    {
+      "code": "W9",
+      "name": "Noncooperation: Rehabilitation, Training, Education, Medical"
+    },
+    {
+      "code": "WA",
+      "name": "Actual Reduced Earnings"
+    },
+    {
+      "code": "WB",
+      "name": "Regular Wage Minus Disability Benefit"
+    },
+    {
+      "code": "WC",
+      "name": "Subrogation Recovery"
+    },
+    {
+      "code": "WE",
+      "name": "Weather-related Event"
+    },
+    {
+      "code": "WH",
+      "name": "Payment Partial"
+    },
+    {
+      "code": "WO",
+      "name": "Overpayment Recovery"
+    },
+    {
+      "code": "WR",
+      "name": "Deemed Reduced Earnings"
+    },
+    {
+      "code": "WS",
+      "name": "Special Fund Recovery"
+    },
+    {
+      "code": "WT",
+      "name": "Deductibles Recovery"
+    },
+    {
+      "code": "WU",
+      "name": "Unspecified Recovery"
+    },
+    {
+      "code": "WW",
+      "name": "Overpayment Credit"
+    },
+    {
+      "code": "WX",
+      "name": "Cost of Living"
+    },
+    {
+      "code": "WY",
+      "name": "Continuous Disability Period"
+    },
+    {
+      "code": "WZ",
+      "name": "Illegally Employed Minor"
+    },
+    {
+      "code": "XA",
+      "name": "Age 65 Reduction"
+    },
+    {
+      "code": "XB",
+      "name": "Appeal"
+    },
+    {
+      "code": "XC",
+      "name": "Advance Reimbursement"
+    },
+    {
+      "code": "XD",
+      "name": "Individual Payment"
+    },
+    {
+      "code": "XE",
+      "name": "Employer Credit"
+    },
+    {
+      "code": "XF",
+      "name": "Outlier"
+    },
+    {
+      "code": "XG",
+      "name": "Incorrect Cost"
+    },
+    {
+      "code": "XH",
+      "name": "Incorrect Unit of Measure"
+    },
+    {
+      "code": "ZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

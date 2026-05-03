@@ -1,0 +1,204 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "151",
+  "name": "Electronic Filing of Tax Return Data Acknowledgment",
+  "description": "Electronic Filing of Tax Return Data Acknowledgment",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BTA",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BTI",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "DTM",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "AMT",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "QTY",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 8
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopPBI",
+      "name": "LoopPBI",
+      "triggerSegment": "PBI",
+      "mandatory": false,
+      "maxOccurrences": 1000,
+      "position": 9,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "PBI",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "TIA",
+          "mandatory": false,
+          "maxOccurrences": 2,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopTFS",
+      "name": "LoopTFS",
+      "triggerSegment": "TFS",
+      "mandatory": false,
+      "maxOccurrences": 100000,
+      "position": 10,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "TFS",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "REF",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 2
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 10,
+          "position": 3
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopPBI",
+          "name": "LoopPBI",
+          "triggerSegment": "PBI",
+          "mandatory": false,
+          "maxOccurrences": 1000,
+          "position": 4,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "PBI",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "TIA",
+              "mandatory": false,
+              "maxOccurrences": 2,
+              "position": 2
+            }
+          ]
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopFGS",
+          "name": "LoopFGS",
+          "triggerSegment": "FGS",
+          "mandatory": false,
+          "maxOccurrences": 100000,
+          "position": 5,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "FGS",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "DTM",
+              "mandatory": false,
+              "maxOccurrences": 10,
+              "position": 3
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopPBI",
+              "name": "LoopPBI",
+              "triggerSegment": "PBI",
+              "mandatory": false,
+              "maxOccurrences": 1000,
+              "position": 4,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PBI",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "TIA",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

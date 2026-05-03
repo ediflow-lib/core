@@ -1,0 +1,338 @@
+{
+  "code": "1005",
+  "name": "Code indicating the hierarchical application structure of a transaction set that utilizes the HL segment to define the structure of the transaction set",
+  "values": [
+    {
+      "code": "0001",
+      "name": "Shipment, Order, Packaging, Item"
+    },
+    {
+      "code": "0002",
+      "name": "Shipment, Order, Item, Packaging"
+    },
+    {
+      "code": "0003",
+      "name": "Shipment, Packaging, Order, Item"
+    },
+    {
+      "code": "0004",
+      "name": "Shipment, Order, Item"
+    },
+    {
+      "code": "0005",
+      "name": "Financial Institution; Client or Party; Contract; Component; Account; Item; Coverage, Rider or Supplementary Benefit"
+    },
+    {
+      "code": "0006",
+      "name": "Financial Institution; Client or Party; Contract; Account; Coverage, Rider or Supplementary Benefit"
+    },
+    {
+      "code": "0007",
+      "name": "Information Source, Information Receiver, Subscriber, Dependent, Event, Services"
+    },
+    {
+      "code": "0008",
+      "name": "Shipment, Order, Tare, Pack"
+    },
+    {
+      "code": "0009",
+      "name": "Shipment, Order, Tare, Pack, Batch, Item"
+    },
+    {
+      "code": "0010",
+      "name": "Information Source, Information Receiver, Provider of Service, Subscriber, Dependent"
+    },
+    {
+      "code": "0011",
+      "name": "Information Receiver, Information Source, Provider of Service, Subscriber, Dependent"
+    },
+    {
+      "code": "0012",
+      "name": "Information Source, Provider of Service, Subscriber, Dependent"
+    },
+    {
+      "code": "0013",
+      "name": "Provider of Service, Information Source, Subscriber, Dependent"
+    },
+    {
+      "code": "0014",
+      "name": "Provider of Service, Information Source, Information Receiver, Subscriber, Dependent"
+    },
+    {
+      "code": "0015",
+      "name": "Information Receiver, Provider of Service, Subscriber, Dependent"
+    },
+    {
+      "code": "0016",
+      "name": "Provider of Service, Subscriber, Dependent"
+    },
+    {
+      "code": "0017",
+      "name": "Subscriber, Dependent"
+    },
+    {
+      "code": "0018",
+      "name": "Information Receiver, Subscriber, Dependent"
+    },
+    {
+      "code": "0019",
+      "name": "Information Source, Subscriber, Dependent"
+    },
+    {
+      "code": "0020",
+      "name": "Information Source, Information Receiver, Group Coverage Options, Subscriber, Dependent"
+    },
+    {
+      "code": "0021",
+      "name": "Information Source, Information Receiver, Group Coverage Options"
+    },
+    {
+      "code": "0022",
+      "name": "Information Source, Information Receiver, Subscriber, Dependent"
+    },
+    {
+      "code": "0023",
+      "name": "Information Receiver, Information Source, Subscriber, Dependent"
+    },
+    {
+      "code": "0024",
+      "name": "Information Source, Information Receiver, Provider, Group, Site of Service"
+    },
+    {
+      "code": "0025",
+      "name": "Information Source, Information Receiver, Group, Provider, Site of Service"
+    },
+    {
+      "code": "0026",
+      "name": "Information Source, Information Receiver, Site of Service, Provider, Group"
+    },
+    {
+      "code": "0027",
+      "name": "Information Source, Information Receiver, Provider, Site of Service, Group"
+    },
+    {
+      "code": "0028",
+      "name": "Information Source, Information Receiver, Group, Site of Service, Provider"
+    },
+    {
+      "code": "0029",
+      "name": "Information Source, Information Receiver, Site of Service, Group, Provider"
+    },
+    {
+      "code": "0035",
+      "name": "Address, Shipment, Order"
+    },
+    {
+      "code": "0036",
+      "name": "Address, Transaction Reference Number, Suffix, Serial Number"
+    },
+    {
+      "code": "0055",
+      "name": "Supergroup, Group, Subgroup, Member"
+    },
+    {
+      "code": "0056",
+      "name": "Supergroup, subgroup, member, ancillary facility or department"
+    },
+    {
+      "code": "0057",
+      "name": "Supergroup, subgroup, member"
+    },
+    {
+      "code": "0058",
+      "name": "Group, member, ancillary facility or department"
+    },
+    {
+      "code": "0059",
+      "name": "Group, member"
+    },
+    {
+      "code": "0060",
+      "name": "Hospital, ancillary facility or department"
+    },
+    {
+      "code": "0061",
+      "name": "Health Industry Business Communications Council (HIBCC) Health Industry Number (HIN) database, facility record, location record"
+    },
+    {
+      "code": "0062",
+      "name": "Franchisor, franchisee"
+    },
+    {
+      "code": "0063",
+      "name": "Franchisee association, franchisee"
+    },
+    {
+      "code": "0064",
+      "name": "Company, Company"
+    },
+    {
+      "code": "0065",
+      "name": "Company, Operating Unit"
+    },
+    {
+      "code": "0066",
+      "name": "Operating Unit, Operating Unit"
+    },
+    {
+      "code": "0067",
+      "name": "Company, Property"
+    },
+    {
+      "code": "0068",
+      "name": "Company, Property Property, Property"
+    },
+    {
+      "code": "0069",
+      "name": "Operating Unit, Property"
+    },
+    {
+      "code": "0070",
+      "name": "Property, Property"
+    },
+    {
+      "code": "0071",
+      "name": "Company, Tradename"
+    },
+    {
+      "code": "0072",
+      "name": "Operating Unit, Tradename"
+    },
+    {
+      "code": "0073",
+      "name": "Property, Tradename"
+    },
+    {
+      "code": "0074",
+      "name": "Company, Operating Unit, Operating Unit, Operating Unit"
+    },
+    {
+      "code": "0075",
+      "name": "Operating Unit, Operating Unit, Operating Unit, Operating Unit"
+    },
+    {
+      "code": "0076",
+      "name": "Company, Operating Unit, Operating Unit, Property"
+    },
+    {
+      "code": "0077",
+      "name": "Tradename, Property"
+    },
+    {
+      "code": "0078",
+      "name": "Information Source, Information Receiver, Subscriber, Dependent, Provider of Service, Services"
+    },
+    {
+      "code": "0079",
+      "name": "Information Source, Information Receiver, Company/Corporation, Operating Unit"
+    },
+    {
+      "code": "0080",
+      "name": "Information Source, Employer, Patient"
+    },
+    {
+      "code": "0081",
+      "name": "Information Source, Patient"
+    },
+    {
+      "code": "0082",
+      "name": "Information Source, Employer, Subscriber, Dependent"
+    },
+    {
+      "code": "0083",
+      "name": "Information Source, Information Receiver, Subscriber, Dependent, Referring Provider, Provider of Service, Services"
+    },
+    {
+      "code": "0084",
+      "name": "Report, Site, Sample, Test"
+    },
+    {
+      "code": "0085",
+      "name": "Information Source, Information Receiver, Provider of Service, Patient"
+    },
+    {
+      "code": "0200",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E), Fleet (FL), Jurisdiction (JU)"
+    },
+    {
+      "code": "0201",
+      "name": "Credential Action (AP), Company/Corporation (35), Transportation Equipment (E)"
+    },
+    {
+      "code": "0202",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E), Jurisdiction (JU)"
+    },
+    {
+      "code": "0203",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E)"
+    },
+    {
+      "code": "0204",
+      "name": "Report (RP), Jurisdiction (JU), Company/Corporation (35)"
+    },
+    {
+      "code": "0205",
+      "name": "Report (RP), Company/Corporation (35), Fleet (FL), Jurisdiction (JU), Transportation Equipment (E)"
+    },
+    {
+      "code": "0206",
+      "name": "Credential Action (AP), Company/Corporation (35), Jurisdiction (JU), Transportation Equipment (E)"
+    },
+    {
+      "code": "0207",
+      "name": "Credential Action (AP), Company/Corporation (35), Transportation Equipment (E), Component (F), Measurement (M), Jurisdiction (JU)"
+    },
+    {
+      "code": "0208",
+      "name": "Credential Action (AP), Company/Corporation (35), Cost Type (CT), Jurisdiction (JU)"
+    },
+    {
+      "code": "0209",
+      "name": "Credential Action (AP), Company/Corporation (35)"
+    },
+    {
+      "code": "0210",
+      "name": "Credential Action (AP)"
+    },
+    {
+      "code": "0211",
+      "name": "Reporting Agency, Claim Administrator, Insurer, Insured, Employer, Claimant, Payment"
+    },
+    {
+      "code": "0212",
+      "name": "Reporting Agency, Employer, Claimant"
+    },
+    {
+      "code": "0213",
+      "name": "Reporting Agency, Claim Administrator, Employer, Claimant"
+    },
+    {
+      "code": "0214",
+      "name": "Information Source, Information Receiver, Response Details"
+    },
+    {
+      "code": "0400",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E), Fleet (FL), Jurisdiction (JU), Payment Detail (PY)"
+    },
+    {
+      "code": "0401",
+      "name": "Credential Action (AP), Company/Corporation (35), Transportation Equipment (E), Payment Detail (PY)"
+    },
+    {
+      "code": "0402",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E), Jurisdiction (JU), Payment Detail (PY)"
+    },
+    {
+      "code": "0403",
+      "name": "Credential Action (AP), Company/Corporation (35), Quantity (R), Transportation Equipment (E), Payment Detail (PY)"
+    },
+    {
+      "code": "0407",
+      "name": "Credential Action (AP), Company/Corporation (35), Transportation Equipment (E), Component (F), Measurement (M), Jurisdiction (JU), Payment Detail (PY)"
+    },
+    {
+      "code": "ZZZZ",
+      "name": "Mutually Defined"
+    }
+  ]
+}

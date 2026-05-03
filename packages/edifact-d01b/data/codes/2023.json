@@ -1,5 +1,36 @@
 {
-  "code": "2023",
-  "name": "Period type code qualifier",
-  "values": []
+  "elementCode": "2023",
+  "elementName": "Period type code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Contract period",
+      "description": "Period covered by the contract."
+    },
+    {
+      "code": "2",
+      "name": "Endorsement period",
+      "description": "Period covered by the endorsement."
+    },
+    {
+      "code": "3",
+      "name": "Contract cancellation notice period",
+      "description": "Period before which a cancellation notice must be made in order to avoid automatic renewal."
+    },
+    {
+      "code": "4",
+      "name": "Project period",
+      "description": "Period of a project."
+    },
+    {
+      "code": "5",
+      "name": "Construction period",
+      "description": "Period of construction."
+    },
+    {
+      "code": "6",
+      "name": "Test period",
+      "description": "Period during which testing occurs."
+    }
+  ]
 }

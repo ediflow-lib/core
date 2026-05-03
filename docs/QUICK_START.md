@@ -1,69 +1,69 @@
 # 🚀 Quick Start Guide - EDIFlow
 
-Get started with **EDIFlow** in 5 minutes! Learn how to work with **type-safe TypeScript objects** instead of raw EDIFACT segments.
+Get started with **EDIFlow** in 5 minutes! Learn how to parse **EDIFACT** and **X12** messages with type-safe TypeScript objects.
 
 > **💡 What makes EDIFlow different?**  
-> Most libraries only parse EDIFACT to generic segments. EDIFlow maps directly to **type-safe TypeScript objects** and generates **JSON Schema** for validation!
+> Most libraries only parse EDI to generic segments. EDIFlow maps directly to **type-safe TypeScript objects** and generates **JSON Schema** for validation!
 
 ---
 
 ## 📦 Installation
 
-### Step 1: Install Core Packages
+### EDIFACT Stack
 
 ```bash
-# Core domain + application layer
-npm install @ediflow/core
+# Core + EDIFACT parser + shared infrastructure
+npm install @ediflow/core @ediflow/edifact @ediflow/infrastructure-shared
 
-# EDIFACT parser (format-specific infrastructure)
-npm install @ediflow/edifact
-
-# Shared infrastructure (repositories, loaders)
-npm install @ediflow/infrastructure-shared
-```
-
-### Step 2: Install EDIFACT Standard(s)
-
-```bash
-# Data packages - install the versions you need
+# Data package(s) - install the versions you need
 npm install @ediflow/edifact-d96a  # D.96A - 89 messages
 npm install @ediflow/edifact-d01b  # D.01B - 155 messages  
 npm install @ediflow/edifact-d20b  # D.20B - 178 messages (latest)
-npm install @ediflow/edifact-d12a  # D.12A - 196 messages (most complete)
+npm install @ediflow/edifact-d12a  # D.12A — 196 messages
 ```
 
-### Step 3 (Optional): Install CLI
+### X12 Stack (USA / Healthcare / Retail)
 
 ```bash
-# Command-line interface for parsing/validation
-npm install --global @ediflow/cli
+# Core + X12 parser + shared infrastructure
+npm install @ediflow/core @ediflow/x12 @ediflow/infrastructure-shared
 
-# Or use locally
-npm install --save-dev @ediflow/cli
+# Data package(s) - install the versions you need
+npm install @ediflow/x12-004010    # X12 version 004010
+```
+
+### CLI (Optional)
+
+```bash
+npm install --global @ediflow/cli
 ```
 
 **💡 Tip:** Install only what you need. Each data package is ~5-15 MB.
 
 ---
 
-## 📦 Package Overview (v0.2.0)
+## 📦 Package Overview (v0.3.0)
 
 **Core Packages** (required):
 - `@ediflow/core` - Domain entities, use cases, interfaces
-- `@ediflow/edifact` - EDIFACT parsers and builders
 - `@ediflow/infrastructure-shared` - Repositories, loaders, cache
 
-**Data Packages** (install versions you need):
+**Format Packages** (install one or both):
+- `@ediflow/edifact` - EDIFACT parsers, builders, validation
+- `@ediflow/x12` - X12 parsers, validation (850, 810, 837, 856, ...)
+
+**Data Packages — EDIFACT** (install versions you need):
 - `@ediflow/edifact-d96a` - D.96A standard definitions
 - `@ediflow/edifact-d01b` - D.01B standard definitions
 - `@ediflow/edifact-d12a` - D.12A standard definitions
 - `@ediflow/edifact-d20b` - D.20B standard definitions
 
+**Data Packages — X12** (install versions you need):
+- `@ediflow/x12-004010` - X12 version 004010 definitions
+
 **Optional**:
 - `@ediflow/cli` - Command-line interface
 
-**Coming in v0.3.0**:
-- `@ediflow/x12` - X12 parser (USA market)
 
 ---
 
@@ -90,129 +90,70 @@ console.log(order.lineItems[0].productId);
 ### Example: EDIFACT → TypeScript Object
 
 ```typescript
-import { DIContainer, StructureMapper } from '@ediflow/core';
+import {
+  EdifactMessageParser,
+  EdifactDelimiterDetector,
+  EdifactTokenizer,
+  EdifactSegmentParser,
+} from '@ediflow/edifact';
+import { StructureMappingService } from '@ediflow/core';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
 
-const container = DIContainer.getInstance();
-const parseUseCase = container.resolve('ParseEDIUseCase');
+// 1. Parse EDIFACT string → EDIMessage
+const parser = new EdifactMessageParser(
+  new EdifactDelimiterDetector(), new EdifactTokenizer(), new EdifactSegmentParser(),
+);
+const message = parser.parse(edifact);
 
-const edifact = `UNB+UNOC:3+SENDER:14+RECEIVER:14+20260129:1200+1'
-UNH+1+ORDERS:D:20B:UN'
-BGM+220+PO12345+9'
-DTM+137:20260129:102'
-NAD+BY+BUYER123::92'
-NAD+SU+SUPPLIER456::92'
-LIN+1++PRODUCT001:SA'
-QTY+21:100:PCE'
-PRI+AAA:49.99:EUR'
-UNT+9+1'
-UNZ+1+1'`;
+// 2. Load schema + map to Business Object
+const repository = new FileBasedMessageStructureRepository('./node_modules');
+const structure  = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
+const mapper     = new StructureMappingService();
+const order      = mapper.map(message, structure!, 'camelCase');
 
-const result = parseUseCase.execute({
-  message: edifact,
-  standard: 'EDIFACT'
-});
-
-// Map to Business Object
-const mapper = new StructureMapper();
-const order = mapper.mapToBusinessObject(result.message);
-
-// ✅ Work with type-safe objects!
+// ✅ Work with named properties!
 console.log('📦 Order Details:');
-console.log('  Order Number:', order.documentNumber);        // PO12345
-console.log('  Order Date:', order.orderDate);               // 2026-01-29
-console.log('  Buyer:', order.parties.buyer.id);            // BUYER123
-console.log('  Supplier:', order.parties.supplier.id);      // SUPPLIER456
-
-console.log('\n📋 Line Items:');
-order.lineItems.forEach((item, idx) => {
-  console.log(`  ${idx + 1}. ${item.productId}`);
-  console.log(`     Quantity: ${item.quantity} ${item.quantityUnit}`);
-  console.log(`     Price: ${item.price} ${item.currency}`);
-});
-```
-
-**Output:**
-```
-📦 Order Details:
-  Order Number: PO12345
-  Order Date: 2026-01-29
-  Buyer: BUYER123
-  Supplier: SUPPLIER456
-
-📋 Line Items:
-  1. PRODUCT001
-     Quantity: 100 PCE
-     Price: 49.99 EUR
+console.log('  Message type:', message.messageType.value);     // ORDERS
+console.log('  Version:',      message.version.value);          // D.20B
+console.log('  Segments:',     message.segments.length);
 ```
 
 ### Example: TypeScript Object → EDIFACT
 
 ```typescript
-// Your business object (from database, API, etc.)
-const order = {
-  documentNumber: 'PO12345',
-  documentType: '220',
-  messageFunction: '9',
-  orderDate: new Date('2026-01-29'),
-  parties: {
-    buyer: { id: 'BUYER123', qualifier: '92' },
-    supplier: { id: 'SUPPLIER456', qualifier: '92' }
-  },
-  lineItems: [
-    {
-      lineNumber: 1,
-      productId: 'PRODUCT001',
-      productIdType: 'SA',
-      quantity: 100,
-      quantityUnit: 'PCE',
-      price: 49.99,
-      currency: 'EUR'
-    }
-  ]
-};
+import {
+  EdifactMessageBuilder,
+  EdifactEnvelopeBuilder,
+} from '@ediflow/edifact';
+import { StructureMappingService } from '@ediflow/core';
 
-// Map to EDI Message
-const ediMessage = mapper.mapFromBusinessObject(order, {
-  standard: 'EDIFACT',
-  version: 'D20B',
-  messageType: 'ORDERS'
-});
-
-// Build EDIFACT string
-const buildUseCase = container.resolve('BuildEDIUseCase');
-const edifactString = buildUseCase.execute({
-  message: ediMessage,
-  standard: 'EDIFACT',
-  envelope: {
-    sender: { id: 'MYCOMPANY', qualifier: '14' },
-    receiver: { id: 'PARTNER', qualifier: '14' }
-  }
-});
-
-console.log(edifactString);
+// Map Business Object back to EDIMessage, then build to string
+const mapper    = new StructureMappingService();
+const ediMsg    = mapper.unmap(yourBusinessObject, structure!, 'camelCase');
+const envelope  = new EdifactEnvelopeBuilder();
+const wrapped   = envelope.wrapMessage(ediMsg, { messageRef: '1', messageType: ediMsg.messageType, version: ediMsg.version });
+const builder   = new EdifactMessageBuilder();
+const edifactStr = builder.build(wrapped);
+console.log(edifactStr);  // Ready to send!
 ```
 
 ### Complete Roundtrip
 
 ```typescript
 // 1️⃣ Parse incoming EDIFACT
-const parseResult = parseUseCase.execute({ message: incomingEDI, standard: 'EDIFACT' });
+const message = parser.parse(incomingEDI);
 
-// 2️⃣ Map to Business Object
-const order = mapper.mapToBusinessObject(parseResult.message);
+// 2️⃣ Map to Business Object (schema-aware)
+const structure = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
+const order     = mapper.map(message, structure!, 'camelCase');
 
-// 3️⃣ Modify with type safety! ✨
-order.lineItems[0].quantity = 150;
-order.lineItems.push({
-  lineNumber: 2,
-  productId: 'PRODUCT002',
-  quantity: 50,
-  price: 29.99
-});
+// 3️⃣ Modify ...
+// order is a plain object — modify as needed
 
-// 4️⃣ Map back and send
-const modified = mapper.mapFromBusinessObject(order, {...});
-const outgoing = buildUseCase.execute({ message: modified, ...});
+// 4️⃣ Map back and build
+const ediMsg    = mapper.unmap(order, structure!, 'camelCase');
+const wrapped   = envelopeBuilder.wrapMessage(ediMsg, {...});
+const outgoing  = builder.build(wrapped);
 await sendToPartner(outgoing);
 ```
 
@@ -223,11 +164,15 @@ await sendToPartner(outgoing);
 ### Generate JSON Schema
 
 ```typescript
-const exportSchemaUseCase = container.resolve('ExportSchemaUseCase');
+import { ExportSchemaUseCase } from '@ediflow/core';
+import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
 
-const schema = exportSchemaUseCase.execute({
+const repository = new FileBasedMessageStructureRepository('./node_modules');
+const exportSchemaUseCase = new ExportSchemaUseCase(repository);
+
+const schema = await exportSchemaUseCase.execute({
   standard: 'EDIFACT',
-  version: 'D20B',
+  version: 'D.20B',
   messageType: 'ORDERS',
   format: 'json-schema'
 });
@@ -282,9 +227,9 @@ writeFileSync('./schemas/orders.schema.json', JSON.stringify(schema, null, 2));
 ### Generate TypeScript Types
 
 ```typescript
-const tsSchema = exportSchemaUseCase.execute({
+const tsSchema = await exportSchemaUseCase.execute({
   standard: 'EDIFACT',
-  version: 'D20B',
+  version: 'D.20B',
   messageType: 'ORDERS',
   format: 'typescript'
 });
@@ -341,28 +286,27 @@ await sendToPartner(buildEDI(order));
 ### Parse
 
 ```typescript
-const parseUseCase = container.resolve('ParseEDIUseCase');
-const result = parseUseCase.execute({ message: edifact, standard: 'EDIFACT' });
+import { EdifactMessageParser, EdifactDelimiterDetector, EdifactTokenizer, EdifactSegmentParser } from '@ediflow/edifact';
+const parser  = new EdifactMessageParser(new EdifactDelimiterDetector(), new EdifactTokenizer(), new EdifactSegmentParser());
+const message = parser.parse(edifact);
 ```
 
 ### Validate
 
 ```typescript
-const validateUseCase = container.resolve('ValidateMessageUseCase');
-const validation = validateUseCase.execute({
-  message: result.message,
-  enableStructuralValidation: true
-});
+import { EdifactValidationServiceBuilder } from '@ediflow/edifact';
+const validator = EdifactValidationServiceBuilder.forEDIFACT();
+const result    = validator.validate(message);
 ```
 
 ### Build
 
 ```typescript
-const buildUseCase = container.resolve('BuildEDIUseCase');
-const edifact = buildUseCase.execute({
-  message: ediMessage,
-  envelope: { sender: {...}, receiver: {...} }
-});
+import { EdifactMessageBuilder, EdifactEnvelopeBuilder } from '@ediflow/edifact';
+const builder   = new EdifactMessageBuilder();
+const envelope  = new EdifactEnvelopeBuilder();
+const wrapped   = envelope.wrapMessage(msg, { messageRef: '1', messageType: msg.messageType, version: msg.version });
+const edifact   = builder.build(wrapped);
 ```
 
 ---
@@ -385,7 +329,7 @@ const edifact = buildUseCase.execute({
 
 - [Architecture Guide](ARCHITECTURE.md)
 - [Developer Guide](DEVELOPER_GUIDE.md)
-- [API Reference](API.md)
+- [Examples](https://github.com/ediflow-lib/core/tree/main/examples)
 
 ---
 

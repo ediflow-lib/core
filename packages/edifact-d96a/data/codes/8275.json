@@ -1,5 +1,46 @@
 {
-  "code": "8275",
-  "name": "Container/package status, coded",
-  "values": []
+  "elementCode": "8275",
+  "elementName": "Container/package status, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Full load",
+      "description": "Container represents the full consignment of goods declared on a single Customs declaration (i.e. all goods in the container relate to a single Customs declaration)."
+    },
+    {
+      "code": "2",
+      "name": "Part load",
+      "description": "Container represents part of a consignment declared on a single Customs declaration (i.e. the Customs declaration covers more than one container)."
+    },
+    {
+      "code": "3",
+      "name": "Full load mixed consignments",
+      "description": "Container holds the full consignment related to the Customs declaration but also holds goods related to other declarations."
+    },
+    {
+      "code": "4",
+      "name": "Part load mixed consignments",
+      "description": "Container represents part of the consignment declared on a single Customs declaration with the remainder being in other containers. Other goods, related to other declarations, are also in the container."
+    },
+    {
+      "code": "5",
+      "name": "Single invoiced load",
+      "description": "Merchandise within a container/package covered by a single invoice."
+    },
+    {
+      "code": "6",
+      "name": "Multi invoiced load",
+      "description": "Merchandise within a container/package covered by more than one invoice."
+    },
+    {
+      "code": "7",
+      "name": "Empty",
+      "description": "Container holds no goods."
+    },
+    {
+      "code": "8",
+      "name": "Full load, multiple bills",
+      "description": "A container representing a consignment of goods for one consignee with multiple bill of lading numbers."
+    }
+  ]
 }

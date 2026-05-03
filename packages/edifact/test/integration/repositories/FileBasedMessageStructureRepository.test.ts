@@ -1,5 +1,4 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { SegmentOrGroup } from '@ediflow/core';
 import * as path from 'path';
 import {FileBasedMessageStructureRepository} from "@ediflow/infrastructure-shared";
 describe('FileBasedMessageStructureRepository Integration', () => {
@@ -11,63 +10,58 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     repository = new FileBasedMessageStructureRepository(basePath);
   });
 
-  describe('getMessageDefinition', () => {
+  describe('getMessageStructure', () => {
     it('should load ORDERS message definition from JSON file', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       expect(definition).not.toBeNull();
       expect(definition?.standard).toBe('EDIFACT');
       expect(definition?.version).toBe('D.20B');
       expect(definition?.messageType).toBe('ORDERS');
-      expect(definition?.name).toBe('ORDERS'); // Message name extraction to be improved
+      expect(definition?.name).toBe('Purchase order message'); // Message name extraction to be improved
       expect(definition?.structure).toBeDefined();
       expect(definition?.structure.length).toBeGreaterThan(0);
     });
 
     it('should handle case-insensitive standard and version', async () => {
-      const definition = await repository.getMessageDefinition('edifact', 'd.20b', 'ORDERS');
+      const definition = await repository.getMessageStructure('edifact', 'd.20b', 'ORDERS');
 
       expect(definition).not.toBeNull();
       expect(definition?.messageType).toBe('ORDERS');
     });
 
     it('should return null for non-existing message', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'NONEXIST');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'NONEXIST');
 
       expect(definition).toBeNull();
     });
 
     it('should validate message structure contains segment references', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
-      const unhSegment = definition?.structure.find(
-        (node: SegmentOrGroup) => node.nodeType === 'segment' && 'segmentRef' in node && node.segmentRef === 'UNH'
+      const unhSegment: any = definition?.structure.find(
+        (node: any) => node.nodeType === 'segment' && node.tag === 'UNH'
       );
 
       expect(unhSegment).toBeDefined();
       expect(unhSegment?.nodeType).toBe('segment');
-      if (unhSegment && 'segmentRef' in unhSegment) {
-        expect(unhSegment.segmentRef).toBe('UNH');
-        expect(unhSegment.mandatory).toBe(true);
-      }
+      expect(unhSegment?.tag).toBe('UNH');
+      expect(unhSegment?.mandatory).toBe(true);
     });
 
     it('should validate message structure contains segment groups', async () => {
-      const definition = await repository.getMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const definition = await repository.getMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
-      const segmentGroup = definition?.structure.find(
-        (node: SegmentOrGroup) => node.nodeType === 'segmentGroup' && 'id' in node && node.id === 'SG2'
+      const segmentGroup: any = definition?.structure.find(
+        (node: any) => node.nodeType === 'segmentGroup' && node.id === 'SG2'
       );
 
       expect(segmentGroup).toBeDefined();
       expect(segmentGroup?.nodeType).toBe('segmentGroup');
-      if (segmentGroup && 'id' in segmentGroup) {
-        expect(segmentGroup.id).toBe('SG2');
-        expect(segmentGroup.name).toBe('Segment group 2');
-        expect(segmentGroup.children).toBeDefined();
-        // Note: Detailed segment group children parsing is future enhancement
-        // For now, children array exists but may be empty (flat structure)
-      }
+      expect(segmentGroup?.id).toBe('SG2');
+      expect(segmentGroup?.name).toBe('SG2');
+      expect(segmentGroup?.children).toBeDefined();
+      expect(Array.isArray(segmentGroup?.children)).toBe(true);
     });
   });
 
@@ -86,17 +80,45 @@ describe('FileBasedMessageStructureRepository Integration', () => {
     });
   });
 
-  describe('hasMessageDefinition', () => {
+  describe('hasMessageStructure', () => {
     it('should return true for existing message', async () => {
-      const exists = await repository.hasMessageDefinition('EDIFACT', 'D.20B', 'ORDERS');
+      const exists = await repository.hasMessageStructure('EDIFACT', 'D.20B', 'ORDERS');
 
       expect(exists).toBe(true);
     });
 
     it('should return false for non-existing message', async () => {
-      const exists = await repository.hasMessageDefinition('EDIFACT', 'D.20B', 'NONEXIST');
+      const exists = await repository.hasMessageStructure('EDIFACT', 'D.20B', 'NONEXIST');
 
       expect(exists).toBe(false);
+    });
+  });
+
+  describe('getCodeList', () => {
+    it('should load code list from codes/{code}.json', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '1001');
+
+      expect(codes).not.toBeNull();
+      expect(codes!.size).toBeGreaterThan(0);
+    });
+
+    it('should return valid code values as Set<string>', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '1001');
+
+      expect(codes).not.toBeNull();
+      expect(codes instanceof Set).toBe(true);
+    });
+
+    it('should return null for non-existing code list', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.20B', '9999999');
+
+      expect(codes).toBeNull();
+    });
+
+    it('should return null for non-existing version', async () => {
+      const codes = await repository.getCodeList('EDIFACT', 'D.99Z', '1001');
+
+      expect(codes).toBeNull();
     });
   });
 });

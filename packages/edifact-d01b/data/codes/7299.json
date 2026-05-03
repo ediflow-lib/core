@@ -1,5 +1,61 @@
 {
-  "code": "7299",
-  "name": "Requirement designator code",
-  "values": []
+  "elementCode": "7299",
+  "elementName": "Requirement designator code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Conditional",
+      "description": "Object is conditional."
+    },
+    {
+      "code": "2",
+      "name": "Mandatory",
+      "description": "Object is mandatory."
+    },
+    {
+      "code": "3",
+      "name": "Optional",
+      "description": "Object is optional."
+    },
+    {
+      "code": "4",
+      "name": "Floating",
+      "description": "Object is floating, not at a pre-defined position within a message."
+    },
+    {
+      "code": "5",
+      "name": "Not used",
+      "description": "Object is not used."
+    },
+    {
+      "code": "6",
+      "name": "Required",
+      "description": "Object is required."
+    },
+    {
+      "code": "7",
+      "name": "Advised",
+      "description": "Object use is advised."
+    },
+    {
+      "code": "8",
+      "name": "Not advised",
+      "description": "Object use is not advised."
+    },
+    {
+      "code": "9",
+      "name": "Dependent",
+      "description": "Object use is dependent upon an additional condition or criteria."
+    },
+    {
+      "code": "10",
+      "name": "Default value",
+      "description": "Value to be used when no other value is specified."
+    },
+    {
+      "code": "11",
+      "name": "Preferred",
+      "description": "The value is preferred."
+    }
+  ]
 }

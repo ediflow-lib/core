@@ -1,5 +1,25 @@
 {
-  "code": "6353",
-  "name": "Number of units qualifier",
-  "values": []
+  "elementCode": "6353",
+  "elementName": "Number of units qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Number of pricing units",
+      "description": "[6170] Number of units which multiplied by the unit price gives 5116 Line item amount."
+    },
+    {
+      "code": "2",
+      "name": "Transportable unit"
+    },
+    {
+      "code": "3",
+      "name": "Number of debit units",
+      "description": "The number of units which are debited by the sender of the consignment to the receiving party."
+    },
+    {
+      "code": "4",
+      "name": "Number of received units",
+      "description": "The number of units which are received by the receiving party of the consignment."
+    }
+  ]
 }

@@ -36,14 +36,16 @@ program
   .version(packageJson.version);
 
 // Register commands with dependency injection
-const parseCommand = new ParseCommand(factory);
+const parseCommand = new ParseCommand(factory, container.repository, container.structureMappingService);
 parseCommand.register(program);
 
-const validateCommand = new ValidateCommand(factory);
+const validateCommand = new ValidateCommand(factory, container.repository);
 validateCommand.register(program);
 
-const buildCommand = new BuildCommand(factory);
+const buildCommand = new BuildCommand(factory, container.repository, container.structureMappingService);
 buildCommand.register(program);
+
+container.exportSchemaCommand.register(program);
 
 // Parse CLI arguments
 program.parse();

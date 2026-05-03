@@ -1,16 +1,18 @@
 import { Command } from 'commander';
 import { UseCaseFactory } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
+import type { IMessageStructureRepository } from '@ediflow/core';
 import { readEDIFile, OutputFormatter, ErrorHandler } from '../utils';
 
 /**
  * Validate Command - CLI handler for validating EDI files.
  *
- * Clean Architecture: Presentation Layer
+ * If structure package found → enables structural validation.
  */
 export class ValidateCommand {
   constructor(
-    private readonly useCaseFactory: UseCaseFactory
+    private readonly useCaseFactory: UseCaseFactory,
+    private readonly repository?: IMessageStructureRepository
   ) {}
 
   register(program: Command): void {
@@ -48,10 +50,21 @@ export class ValidateCommand {
       throw new Error('Cannot validate: Message parsing failed');
     }
 
+    // Structure lookup for structural validation
+    const structure = this.repository
+      ? await this.repository.getMessageStructure(
+          standardStr.toUpperCase(),
+          parseResult.metadata.version.value,
+          parseResult.metadata.messageType.value
+        )
+      : null;
+
     const validateUseCase = this.useCaseFactory.createValidateUseCase();
     const result = validateUseCase.execute({
       message: parseResult.message,
       strictMode: options.strict || false,
+      enableStructuralValidation: !!structure,
+      messageStructure: structure ?? undefined,
     });
 
     if (!result.success) {

@@ -1,0 +1,140 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "414",
+  "name": "Rail Carhire Settlements",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Rail Carhire Settlements Transaction Set (414) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide for the exchange of Carhire Settlement data including, but not limited to, the following: Current Settlements, First Adjustment Settlements (no penalty), Prior Settlements (penalty on foreign equipment), Summary Transactions and Reclaim Transactions.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "LEQ",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopCTC",
+      "name": "LoopCTC",
+      "triggerSegment": "CTC",
+      "mandatory": true,
+      "maxOccurrences": 99,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "CTC",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopCIC",
+          "name": "LoopCIC",
+          "triggerSegment": "CIC",
+          "mandatory": true,
+          "maxOccurrences": 1000,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "CIC",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": false,
+              "maxOccurrences": 2,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopLX",
+              "name": "LoopLX",
+              "triggerSegment": "LX",
+              "mandatory": false,
+              "maxOccurrences": 99,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "LX",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CHR",
+                  "mandatory": false,
+                  "maxOccurrences": 3,
+                  "position": 2
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CYC",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 3
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "PRI",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 4
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "L7A",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 5
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "REF",
+                  "mandatory": false,
+                  "maxOccurrences": 2,
+                  "position": 6
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CUR",
+                  "mandatory": false,
+                  "maxOccurrences": 1,
+                  "position": 7
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "CV",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 4
+    }
+  ]
+}

@@ -3,4 +3,7 @@
  *
  * Application-specific error types for use cases and orchestration failures.
  */
-export { DefinitionNotFoundError } from './DefinitionNotFoundError';
+export { MessageStructureNotFoundError } from './MessageStructureNotFoundError';
+
+// Backward compatibility alias (will be removed in next major version)
+export { MessageStructureNotFoundError as DefinitionNotFoundError } from './MessageStructureNotFoundError';

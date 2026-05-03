@@ -1,5 +1,26 @@
 {
-  "code": "9031",
-  "name": "Edit mask representation code",
-  "values": []
+  "elementCode": "9031",
+  "elementName": "Edit mask representation code",
+  "values": [
+    {
+      "code": "1",
+      "name": "COBOL picture",
+      "description": "The associated edit mask is represented as a COBOL picture statement."
+    },
+    {
+      "code": "2",
+      "name": "C printf",
+      "description": "The associated edit mask is represented as a C 'printf' format."
+    },
+    {
+      "code": "3",
+      "name": "FORTRAN format",
+      "description": "The associated edit mask is represented as a FORTRAN format statement."
+    },
+    {
+      "code": "4",
+      "name": "Unix(tm) regular expression",
+      "description": "The associated edit mask is represented as a Unix(tm) regular expression."
+    }
+  ]
 }

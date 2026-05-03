@@ -1,0 +1,65 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "131",
+  "name": "Student Educational Record (Transcript) Acknowledgment",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Student Educational Record (Transcript) Acknowledgment Transaction Set (131) for use within the context of an Electronic Data Interchange (EDI) environment.\n\nThe Student Educational Record (Transcript) Acknowledgment record is used to ensure that the original transcript did, in fact, come from the proper office at the educational institution indicated as the sender and that certain key elements of the transcript were received as they were sent. It also provides the sending institution with confirmation that the original record was received by the intended recipient and the date it was received. This information may then be relayed to the student or other individual who requested the record transfer.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "BGN",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": true,
+      "maxOccurrences": 2,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "REF",
+      "mandatory": true,
+      "maxOccurrences": 2,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "QTY",
+      "mandatory": true,
+      "maxOccurrences": 2,
+      "position": 5
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SUM",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 6
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "IN2",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 8
+    }
+  ]
+}

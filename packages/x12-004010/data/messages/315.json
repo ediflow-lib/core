@@ -1,0 +1,83 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "315",
+  "name": "Status Details (Ocean)",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Status Details (Ocean) Transaction Set (315) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide all the information necessary to report status or event details for selected shipments or containers. It is intended to accommodate the details for one status or event associated with many shipments or containers, as well as more than one status or event for one shipment or container.",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "B4",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N9",
+      "mandatory": false,
+      "maxOccurrences": 30,
+      "position": 3
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "Q2",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 4
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SG",
+      "mandatory": false,
+      "maxOccurrences": 15,
+      "position": 5
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopR4",
+      "name": "LoopR4",
+      "triggerSegment": "R4",
+      "mandatory": true,
+      "maxOccurrences": 20,
+      "position": 6,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "R4",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "DTM",
+          "mandatory": false,
+          "maxOccurrences": 15,
+          "position": 2
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "V9",
+      "mandatory": false,
+      "maxOccurrences": 10,
+      "position": 7
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 8
+    }
+  ]
+}

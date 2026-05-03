@@ -1,6 +1,6 @@
 import {beforeEach, describe, expect, it} from 'vitest';
 import { SchemaGenerationService} from '@application';
-import {SchemaCache} from './SchemaCache';
+import {SchemaCache} from '@application';
 import type {ElementNode, MessageStructureDTO, SegmentNode} from '@application/dtos';
 
 describe('SchemaGenerationService', () => {
@@ -13,7 +13,7 @@ describe('SchemaGenerationService', () => {
   });
 
   describe('fromMessageStructure', () => {
-    it('should generate JSON Schema from simple MessageStructure', () => {
+    it('should generate JSON Schema with segment tag as property key', () => {
       const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -22,26 +22,22 @@ describe('SchemaGenerationService', () => {
         structure: [
           {
             nodeType: 'segment',
-            tag: 'TST',
-            name: 'Test Segment',
+            tag: 'BGM',
+            name: 'Beginning of message',
             mandatory: true,
             maxOccurrences: 1,
             position: 1,
             elements: [
               {
                 nodeType: 'element',
-                code: '1001',
-                name: 'documentNumber',
+                code: '1004',
+                name: 'Document identifier',
                 mandatory: true,
                 position: 1,
                 dataType: 'an',
                 maxLength: 35
               } as ElementNode
-            ],
-            mapping: {
-              targetField: 'documentNumber',
-              elementIndex: 0
-            }
+            ]
           } as SegmentNode
         ]
       };
@@ -49,12 +45,24 @@ describe('SchemaGenerationService', () => {
       const schema = generator.fromMessageStructure(structure);
 
       expect(schema.type).toBe('object');
+      expect(schema.title).toBe('Test Message');
       expect(schema.properties).toBeDefined();
-      expect(schema.properties?.['documentNumber']).toEqual({
-        type: 'string',
-        maxLength: 35
-      });
-      expect(schema.required).toContain('documentNumber');
+      // Property keyed by segment tag
+      expect(schema.properties?.['BGM']).toBeDefined();
+      // Element property keyed by element code
+      const elem = schema.properties?.['BGM']?.properties?.['1004'];
+      expect(elem?.type).toBe('string');
+      expect(elem?.title).toBe('Document identifier');
+      expect(elem?.maxLength).toBe(35);
+      expect(elem?.['x-position']).toBe(1);
+      expect(elem?.['x-mandatory']).toBe(true);
+      expect(elem?.['x-nodeType']).toBe('element');
+      // Segment extension fields
+      const bgm = schema.properties?.['BGM'];
+      expect(bgm?.['x-position']).toBe(1);
+      expect(bgm?.['x-mandatory']).toBe(true);
+      expect(bgm?.['x-nodeType']).toBe('segment');
+      expect(schema.required).toContain('BGM');
     });
 
     it('should cache generated schema', () => {
@@ -72,7 +80,7 @@ describe('SchemaGenerationService', () => {
       expect(firstCall).toBe(secondCall); // Same instance = cached
     });
 
-    it('should handle optional fields (mandatory: false)', () => {
+    it('should not add segment to required when mandatory false', () => {
       const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -81,45 +89,31 @@ describe('SchemaGenerationService', () => {
         structure: [
           {
             nodeType: 'segment',
-            tag: 'TST',
-            name: 'Test Segment',
+            tag: 'FTX',
+            name: 'Free text',
             mandatory: false,
             maxOccurrences: 1,
             position: 1,
             elements: [
               {
                 nodeType: 'element',
-                code: '1001',
-                name: 'optionalField',
+                code: '4451',
+                name: 'Text subject code qualifier',
                 mandatory: false,
                 position: 1,
                 dataType: 'an'
               } as ElementNode
-            ],
-            mapping: {
-              targetField: 'optionalField',
-              elementIndex: 0
-            }
+            ]
           } as SegmentNode
         ]
       };
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.required || []).not.toContain('optionalField');
+      expect(schema.required || []).not.toContain('FTX');
     });
 
-    it('should map dataType "an" to string', () => {
-      const elementNode: ElementNode = {
-        nodeType: 'element',
-        code: '1001',
-        name: 'textField',
-        mandatory: true,
-        position: 1,
-        dataType: 'an',
-        maxLength: 50
-      };
-
+    it('should map dataType "an" to string on element level', () => {
       const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -133,30 +127,27 @@ describe('SchemaGenerationService', () => {
             mandatory: true,
             maxOccurrences: 1,
             position: 1,
-            elements: [elementNode],
-            mapping: {
-              targetField: 'textField',
-              elementIndex: 0
-            }
+            elements: [
+              {
+                nodeType: 'element',
+                code: '1001',
+                name: 'textField',
+                mandatory: true,
+                position: 1,
+                dataType: 'an',
+                maxLength: 50
+              } as ElementNode
+            ]
           } as SegmentNode
         ]
       };
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.['textField']?.type).toBe('string');
+      expect(schema.properties?.['TST']?.properties?.['1001']?.type).toBe('string');
     });
 
-    it('should map dataType "n" to number', () => {
-      const elementNode: ElementNode = {
-        nodeType: 'element',
-        code: '1002',
-        name: 'quantity',
-        mandatory: true,
-        position: 1,
-        dataType: 'n'
-      };
-
+    it('should map dataType "n" to number on element level', () => {
       const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -165,27 +156,32 @@ describe('SchemaGenerationService', () => {
         structure: [
           {
             nodeType: 'segment',
-            tag: 'TST',
-            name: 'Test Segment',
+            tag: 'QTY',
+            name: 'Quantity',
             mandatory: true,
             maxOccurrences: 1,
             position: 1,
-            elements: [elementNode],
-            mapping: {
-              targetField: 'quantity',
-              elementIndex: 0
-            }
+            elements: [
+              {
+                nodeType: 'element',
+                code: '6060',
+                name: 'Quantity',
+                mandatory: true,
+                position: 1,
+                dataType: 'n'
+              } as ElementNode
+            ]
           } as SegmentNode
         ]
       };
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.['quantity']?.type).toBe('number');
+      expect(schema.properties?.['QTY']?.properties?.['6060']?.type).toBe('number');
     });
 
-    it('should handle array fields (maxOccurrences > 1)', () => {
-      const maxLineItems = 999;
+    it('should generate array schema for repeating segment (maxOccurrences > 1)', () => {
+      const maxOccurrences = 999;
       const structure: MessageStructureDTO = {
         standard: 'EDIFACT',
         version: 'D.20B',
@@ -195,33 +191,29 @@ describe('SchemaGenerationService', () => {
           {
             nodeType: 'segment',
             tag: 'LIN',
-            name: 'Line Item',
+            name: 'Line item',
             mandatory: true,
-            maxOccurrences: maxLineItems,
+            maxOccurrences,
             position: 1,
             elements: [
               {
                 nodeType: 'element',
-                code: '1001',
-                name: 'lineNumber',
+                code: '1082',
+                name: 'Line item identifier',
                 mandatory: true,
                 position: 1,
                 dataType: 'n'
               } as ElementNode
-            ],
-            mapping: {
-              targetField: 'lineItems',
-              elementIndex: 0,
-              isArray: true
-            }
+            ]
           } as SegmentNode
         ]
       };
 
       const schema = generator.fromMessageStructure(structure);
 
-      expect(schema.properties?.['lineItems']?.type).toBe('array');
-      expect(schema.properties?.['lineItems']?.maxItems).toBe(maxLineItems);
+      expect(schema.properties?.['LIN']?.type).toBe('array');
+      expect(schema.properties?.['LIN']?.maxItems).toBe(maxOccurrences);
+      expect(schema.properties?.['LIN']?.items).toBeDefined();
     });
   });
 });

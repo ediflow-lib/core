@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import type { IValidationRule } from '@application/validation';
 import type { EDIMessage } from '@domain';
 import { ValidationError } from '@application/validation';
@@ -7,6 +9,10 @@ import { ValidationError } from '@application/validation';
  *
  * These are GENERIC rules that apply to all EDI standards.
  * Format-specific rules (EDIFACT, X12) are in format-specific packages.
+ *
+ * Used by:
+ * - EdifactValidationServiceBuilder (packages/edifact) via withBasicRules()
+ * - X12ValidationServiceBuilder (packages/x12) via withBasicRules()
  */
 
 /**

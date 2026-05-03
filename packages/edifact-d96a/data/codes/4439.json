@@ -1,5 +1,241 @@
 {
-  "code": "4439",
-  "name": "Payment conditions, coded",
-  "values": []
+  "elementCode": "4439",
+  "elementName": "Payment conditions, coded",
+  "values": [
+    {
+      "code": "1",
+      "name": "Direct payment"
+    },
+    {
+      "code": "2",
+      "name": "Automatic clearing house credit"
+    },
+    {
+      "code": "3",
+      "name": "Automatic clearing house debit"
+    },
+    {
+      "code": "4",
+      "name": "Automatic clearing house credit-savings account"
+    },
+    {
+      "code": "5",
+      "name": "Automatic clearing house debit-demand account"
+    },
+    {
+      "code": "6",
+      "name": "Bank book transfer (credit)"
+    },
+    {
+      "code": "7",
+      "name": "Bank book transfer (debit)"
+    },
+    {
+      "code": "8",
+      "name": "Doc collection via 3rd party with bill of EX"
+    },
+    {
+      "code": "9",
+      "name": "Doc collection via 3rd party no bill of EX"
+    },
+    {
+      "code": "10",
+      "name": "Irrevocable documentary credit"
+    },
+    {
+      "code": "11",
+      "name": "Transferable irrevocable documentary credit"
+    },
+    {
+      "code": "12",
+      "name": "Confirmed irrevocable documentary credit"
+    },
+    {
+      "code": "13",
+      "name": "Transferable confirmed irrevocable documentary credit"
+    },
+    {
+      "code": "14",
+      "name": "Revocable documentary credit"
+    },
+    {
+      "code": "15",
+      "name": "Irrevocable letter of credit-confirmed"
+    },
+    {
+      "code": "16",
+      "name": "Letter of guarantee"
+    },
+    {
+      "code": "17",
+      "name": "Revocable letter of credit"
+    },
+    {
+      "code": "18",
+      "name": "Standby letter of credit"
+    },
+    {
+      "code": "19",
+      "name": "Irrevocable letter of credit unconfirmed"
+    },
+    {
+      "code": "20",
+      "name": "Clean collection (ICC)"
+    },
+    {
+      "code": "21",
+      "name": "Documentary collection (ICC)"
+    },
+    {
+      "code": "22",
+      "name": "Documentary sight collection (ICC)"
+    },
+    {
+      "code": "23",
+      "name": "Documentary collection with date of expiry (ICC)"
+    },
+    {
+      "code": "24",
+      "name": "Documentary collection: bill of exchange against acceptance"
+    },
+    {
+      "code": "25",
+      "name": "Documentary collection: bill of exchange against payment"
+    },
+    {
+      "code": "26",
+      "name": "Collection subject to buyer's approval (ICC)",
+      "description": "Self-explanatory."
+    },
+    {
+      "code": "27",
+      "name": "Collection by a bank consignee for the goods (ICC)"
+    },
+    {
+      "code": "28",
+      "name": "Collection under CMEA rules with immediate payment and subsequent AC"
+    },
+    {
+      "code": "29",
+      "name": "Collection under CMEA rules with prior acceptance"
+    },
+    {
+      "code": "30",
+      "name": "Other collection"
+    },
+    {
+      "code": "31",
+      "name": "Open account against payment in advance"
+    },
+    {
+      "code": "32",
+      "name": "Open account for contra"
+    },
+    {
+      "code": "33",
+      "name": "Open account for payment"
+    },
+    {
+      "code": "34",
+      "name": "Seller to advise buyer"
+    },
+    {
+      "code": "35",
+      "name": "Documents through banks"
+    },
+    {
+      "code": "36",
+      "name": "Charging (to account)",
+      "description": "Amount due booked to accounts payable/accounts receivables accordingly."
+    },
+    {
+      "code": "37",
+      "name": "Available with issuing bank",
+      "description": "Documentary credit is available with the issuing bank."
+    },
+    {
+      "code": "38",
+      "name": "Available with advising bank",
+      "description": "Documentary credit is available with the advising bank."
+    },
+    {
+      "code": "39",
+      "name": "Available with named bank",
+      "description": "Documentary credit is available with the financial institution identified in the FII segment."
+    },
+    {
+      "code": "40",
+      "name": "Available with any bank",
+      "description": "Documentary credit is available with any bank."
+    },
+    {
+      "code": "41",
+      "name": "Available with any bank in ...",
+      "description": "Documentary credit is available with any bank located in a place identified in the LOC segment."
+    },
+    {
+      "code": "42",
+      "name": "Indirect payment",
+      "description": "An assigned invoice has been paid by the buyer to the seller or to the seller's agent instead of to the factor."
+    },
+    {
+      "code": "43",
+      "name": "Reassignment",
+      "description": "An invoice or credit note assigned to a factor has been reassigned back to the seller or to another factor."
+    },
+    {
+      "code": "44",
+      "name": "Offset",
+      "description": "An invoice/credit note has been (partly) offset against other items on the seller's or buyer's account."
+    },
+    {
+      "code": "45",
+      "name": "Special entries",
+      "description": "Payment to be treated as special booking entry by the beneficiary."
+    },
+    {
+      "code": "46",
+      "name": "Instalment payment",
+      "description": "Payment is to be made in one or more instalments."
+    },
+    {
+      "code": "47",
+      "name": "Instalment payment with draft",
+      "description": "Payment is to be made by bank draft in one or more instalments."
+    },
+    {
+      "code": "61",
+      "name": "Set-off by exchange of documents"
+    },
+    {
+      "code": "62",
+      "name": "Set-off by reciprocal credits"
+    },
+    {
+      "code": "63",
+      "name": "Set-off by \"linkage\" (against reciprocal benefits)"
+    },
+    {
+      "code": "64",
+      "name": "Set-off by exchange of goods"
+    },
+    {
+      "code": "69",
+      "name": "Other set-off"
+    },
+    {
+      "code": "70",
+      "name": "Supplier to invoice",
+      "description": "To identify in an order that the supplier is required to invoice for payment."
+    },
+    {
+      "code": "71",
+      "name": "Recipient to self bill",
+      "description": "To identify in an order that the receiver of the goods is expected to self bill."
+    },
+    {
+      "code": "ZZZ",
+      "name": "Mutually defined"
+    }
+  ]
 }

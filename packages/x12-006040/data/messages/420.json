@@ -1,0 +1,48 @@
+{
+  "standard": "X12",
+  "version": "006040",
+  "messageType": "420",
+  "name": "Car Handling Information",
+  "description": "Car Handling Information",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopE6",
+      "name": "LoopE6",
+      "triggerSegment": "E6",
+      "mandatory": true,
+      "maxOccurrences": 150,
+      "position": 3,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "E6",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segment",
+          "segmentRef": "E8",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 2
+        }
+      ]
+    }
+  ]
+}

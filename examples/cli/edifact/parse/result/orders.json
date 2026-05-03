@@ -1,0 +1,303 @@
+{
+  "standard": "EDIFACT",
+  "version": "D.96A",
+  "messageType": "ORDERS",
+  "segmentCount": 18,
+  "delimiters": {
+    "segment": "'",
+    "element": "+",
+    "component": ":"
+  },
+  "segments": [
+    {
+      "tag": "UNB",
+      "elements": [
+        {
+          "value": "UNOC:3",
+          "components": [
+            "UNOC",
+            "3"
+          ]
+        },
+        {
+          "value": "ACMECORP:14",
+          "components": [
+            "ACMECORP",
+            "14"
+          ]
+        },
+        {
+          "value": "SUPPLIER:14",
+          "components": [
+            "SUPPLIER",
+            "14"
+          ]
+        },
+        {
+          "value": "260204:1200",
+          "components": [
+            "260204",
+            "1200"
+          ]
+        },
+        {
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "tag": "UNH",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "ORDERS:D:96A:UN",
+          "components": [
+            "ORDERS",
+            "D",
+            "96A",
+            "UN"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "BGM",
+      "elements": [
+        {
+          "value": "220"
+        },
+        {
+          "value": "PO-2026-001"
+        },
+        {
+          "value": "9"
+        }
+      ]
+    },
+    {
+      "tag": "DTM",
+      "elements": [
+        {
+          "value": "137:20260204:102",
+          "components": [
+            "137",
+            "20260204",
+            "102"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "DTM",
+      "elements": [
+        {
+          "value": "2:20260210:102",
+          "components": [
+            "2",
+            "20260210",
+            "102"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "BY"
+        },
+        {
+          "value": "BUYER123::92",
+          "components": [
+            "BUYER123",
+            "92"
+          ]
+        },
+        {
+          "value": "ACME Corporation"
+        },
+        {
+          "value": "123 Main Street"
+        },
+        {
+          "value": "New York"
+        },
+        {
+          "value": "10001"
+        },
+        {
+          "value": "US"
+        }
+      ]
+    },
+    {
+      "tag": "NAD",
+      "elements": [
+        {
+          "value": "SU"
+        },
+        {
+          "value": "SUPP456::92",
+          "components": [
+            "SUPP456",
+            "92"
+          ]
+        },
+        {
+          "value": "Best Supplier Inc"
+        },
+        {
+          "value": "456 Industrial Ave"
+        },
+        {
+          "value": "Chicago"
+        },
+        {
+          "value": "60601"
+        },
+        {
+          "value": "US"
+        }
+      ]
+    },
+    {
+      "tag": "CUX",
+      "elements": [
+        {
+          "value": "2:EUR:4",
+          "components": [
+            "2",
+            "EUR",
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "LIN",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "WIDGET-A:SA",
+          "components": [
+            "WIDGET-A",
+            "SA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "QTY",
+      "elements": [
+        {
+          "value": "21:100:PCE",
+          "components": [
+            "21",
+            "100",
+            "PCE"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "PRI",
+      "elements": [
+        {
+          "value": "AAA:10.50:CA",
+          "components": [
+            "AAA",
+            "10.50",
+            "CA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "LIN",
+      "elements": [
+        {
+          "value": "2"
+        },
+        {
+          "value": "GADGET-B:SA",
+          "components": [
+            "GADGET-B",
+            "SA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "QTY",
+      "elements": [
+        {
+          "value": "21:50:PCE",
+          "components": [
+            "21",
+            "50",
+            "PCE"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "PRI",
+      "elements": [
+        {
+          "value": "AAA:25.00:CA",
+          "components": [
+            "AAA",
+            "25.00",
+            "CA"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "UNS",
+      "elements": [
+        {
+          "value": "S"
+        }
+      ]
+    },
+    {
+      "tag": "CNT",
+      "elements": [
+        {
+          "value": "2:2",
+          "components": [
+            "2",
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "UNT",
+      "elements": [
+        {
+          "value": "15"
+        },
+        {
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "tag": "UNZ",
+      "elements": [
+        {
+          "value": "1"
+        },
+        {
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

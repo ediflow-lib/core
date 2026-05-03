@@ -1,0 +1,50 @@
+type: object
+description: >
+  Code list file — one file per code list, stored as codes/{code}.json.
+  The filename matches the element's codeListCode property.
+properties:
+  code:
+    type: string
+    description: Code list identifier, matches the filename (e.g. "128", "3035")
+  name:
+    type: string
+    description: Code list name
+  description:
+    type: string
+    description: Code list description (optional)
+  values:
+    type: array
+    description: List of valid code values
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Code value
+        name:
+          type: string
+          description: Code value name / label
+        description:
+          type: string
+          description: Code value description (optional)
+      required:
+        - code
+        - name
+required:
+  - code
+  - name
+  - values
+
+example:
+  code: "3035"
+  name: "Party function code qualifier"
+  description: "Code specifying the function of a party"
+  values:
+    - code: "BY"
+      name: "Buyer"
+      description: "Party to whom merchandise or services are sold"
+    - code: "SU"
+      name: "Supplier"
+      description: "Party who supplies goods or services"
+    - code: "CN"
+      name: "Consignee"

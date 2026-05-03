@@ -1,5 +1,46 @@
 {
-  "code": "1501",
-  "name": "Computer environment details code qualifier",
-  "values": []
+  "elementCode": "1501",
+  "elementName": "Computer environment details code qualifier",
+  "values": [
+    {
+      "code": "1",
+      "name": "Hardware platform",
+      "description": "Code to identify the type of hardware installed in a computer environment e.g. PC, Mac, UNIX-Workstation, Mini, Mainframe."
+    },
+    {
+      "code": "2",
+      "name": "Operating system",
+      "description": "Code to identify the operating system, like DOS, VMS, etc. used in a computer environment."
+    },
+    {
+      "code": "3",
+      "name": "Application software",
+      "description": "Code to identify an application software, like AutoCad, WinWord, etc. used in a computer environment."
+    },
+    {
+      "code": "4",
+      "name": "Network",
+      "description": "Code to identify a network like Ethernet, Token Ring, etc. implemented in a computer environment."
+    },
+    {
+      "code": "5",
+      "name": "Sending system",
+      "description": "Code to identify the system, which acts as a sending system in an interchange."
+    },
+    {
+      "code": "6",
+      "name": "File generating software",
+      "description": "Software used to generate a file."
+    },
+    {
+      "code": "7",
+      "name": "File compression software",
+      "description": "Software used for the compression of a file."
+    },
+    {
+      "code": "8",
+      "name": "File compression method",
+      "description": "Method used for the compression of a file."
+    }
+  ]
 }

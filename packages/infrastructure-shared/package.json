@@ -1,15 +1,15 @@
 {
   "name": "@ediflow/infrastructure-shared",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Shared infrastructure utilities for EDIFlow packages (EDIFACT, X12)",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     }
   },
   "scripts": {
@@ -20,13 +20,14 @@
   },
   "dependencies": {
     "@ediflow/core": "*",
-    "lru-cache": "^10.1.0"
+    "lru-cache": "^10.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20.10.6",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitest": "^1.1.0"
+    "vitest": "^2.1.8"
   },
   "keywords": [
     "edi",

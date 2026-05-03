@@ -1,0 +1,66 @@
+{
+  "elementCode": "4493",
+  "elementName": "Delivery instruction code",
+  "values": [
+    {
+      "code": "AA",
+      "name": "Ship on authorization",
+      "description": "A delivery requirement indicating the items should not be shipped without specific authorization."
+    },
+    {
+      "code": "BK",
+      "name": "Ship partial - balance back order",
+      "description": "Partial shipping is allowed. The rest of the order should be delivered as soon as possible."
+    },
+    {
+      "code": "CD",
+      "name": "Cancel if not delivered by date",
+      "description": "An order or the rest of an order should be cancelled if not delivered at specified date."
+    },
+    {
+      "code": "DA",
+      "name": "Do not deliver after",
+      "description": "A requirement that an order should not be delivered after a specified date/time."
+    },
+    {
+      "code": "DB",
+      "name": "Do not deliver before",
+      "description": "A requirement that an order should not be delivered before a specified date/time."
+    },
+    {
+      "code": "DD",
+      "name": "Deliver on date",
+      "description": "An order should be delivered exactly on specified date."
+    },
+    {
+      "code": "IS",
+      "name": "Substitute item",
+      "description": "A substitute item may be delivered, if the ordered item is not available."
+    },
+    {
+      "code": "P1",
+      "name": "No schedule established",
+      "description": "No specified date/time for delivery."
+    },
+    {
+      "code": "P2",
+      "name": "Ship as soon as possible",
+      "description": "The order should be delivered as soon as possible."
+    },
+    {
+      "code": "SC",
+      "name": "Ship complete order",
+      "description": "The order should be delivered only complete, not partial."
+    },
+    {
+      "code": "SF",
+      "name": "Ship partial, if no freight rate increase",
+      "description": "Partial shipping of an order is allowed, if the total freight rate do not increase."
+    },
+    {
+      "code": "SP",
+      "name": "Ship partial - balance cancel",
+      "description": "Partial shipping is allowed. The rest of the order should be cancelled."
+    }
+  ]
+}

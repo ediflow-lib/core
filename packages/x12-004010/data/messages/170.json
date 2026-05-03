@@ -1,0 +1,105 @@
+{
+  "standard": "X12",
+  "version": "004010",
+  "messageType": "170",
+  "name": "Revenue Receipts Statement",
+  "description": "This Draft Standard for Trial Use contains the format and establishes the data content of the Revenue Receipts Statement Transaction Set (170) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used to report daily ticket sales information for each show within a contract week. A contract week is normally a Friday through Thursday and is the period a film is shown in a theatre. Daily information is presented by show and includes ticket category, price, attendance and time of entertainment events.\n\nThe transaction set is designed to report multiple levels of detail from individual points of occurrence or form consolidated points such as holding companies (circuits).",
+  "structure": [
+    {
+      "nodeType": "segment",
+      "segmentRef": "ST",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 1
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "N1",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 2
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "PER",
+      "mandatory": false,
+      "maxOccurrences": 1,
+      "position": 3
+    },
+    {
+      "nodeType": "segmentGroup",
+      "id": "LoopTHE",
+      "name": "LoopTHE",
+      "triggerSegment": "THE",
+      "mandatory": true,
+      "maxOccurrences": 9999,
+      "position": 4,
+      "structure": [
+        {
+          "nodeType": "segment",
+          "segmentRef": "THE",
+          "mandatory": true,
+          "maxOccurrences": 1,
+          "position": 1
+        },
+        {
+          "nodeType": "segmentGroup",
+          "id": "LoopLX",
+          "name": "LoopLX",
+          "triggerSegment": "LX",
+          "mandatory": true,
+          "maxOccurrences": 10,
+          "position": 2,
+          "structure": [
+            {
+              "nodeType": "segment",
+              "segmentRef": "LX",
+              "mandatory": true,
+              "maxOccurrences": 1,
+              "position": 1
+            },
+            {
+              "nodeType": "segment",
+              "segmentRef": "REF",
+              "mandatory": true,
+              "maxOccurrences": 10,
+              "position": 2
+            },
+            {
+              "nodeType": "segmentGroup",
+              "id": "LoopDTM",
+              "name": "LoopDTM",
+              "triggerSegment": "DTM",
+              "mandatory": true,
+              "maxOccurrences": 7,
+              "position": 3,
+              "structure": [
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "DTM",
+                  "mandatory": true,
+                  "maxOccurrences": 1,
+                  "position": 1
+                },
+                {
+                  "nodeType": "segment",
+                  "segmentRef": "BOX",
+                  "mandatory": true,
+                  "maxOccurrences": 250,
+                  "position": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeType": "segment",
+      "segmentRef": "SE",
+      "mandatory": true,
+      "maxOccurrences": 1,
+      "position": 5
+    }
+  ]
+}

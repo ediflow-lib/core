@@ -1,5 +1,21 @@
 {
-  "code": "8281",
-  "name": "Transport means ownership indicator code",
-  "values": []
+  "elementCode": "8281",
+  "elementName": "Transport means ownership indicator code",
+  "values": [
+    {
+      "code": "1",
+      "name": "Transport for the owner's account",
+      "description": "The owner of the transported goods is also the owner of the means of transport or rented it for this transport."
+    },
+    {
+      "code": "2",
+      "name": "Transport for another account",
+      "description": "The owner of the transported goods does not own the means of transport or has not rented it for this transport."
+    },
+    {
+      "code": "3",
+      "name": "Private transport",
+      "description": "A code indicating privately owned transport."
+    }
+  ]
 }
