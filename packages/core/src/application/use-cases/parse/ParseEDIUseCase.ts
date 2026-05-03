@@ -45,7 +45,7 @@ export class ParseEDIUseCase {
       let businessObject: any | undefined;
 
       if (input.returnTypedObject && input.messageStructure && this.structureMappingService) {
-        businessObject = this.structureMappingService.map(message, input.messageStructure);
+        businessObject = this.structureMappingService.map(message, input.messageStructure, input.mappingKeyStrategy);
       }
 
       // Get parser configuration (includes detected delimiters)

@@ -89,7 +89,7 @@ describe('ParseCommand - TDD', () => {
       expect(optionNames).toContain('--format');
       expect(optionNames).toContain('--output');
       expect(optionNames).toContain('--property-parse-mode');
-      expect(optionNames).toContain('--codelist-value-parse-mode');
+      expect(optionNames).toContain('--output-type');
     });
 
     it('should detect EDIFACT from UNB prefix', () => {
@@ -401,14 +401,26 @@ describe('ParseCommand - TDD', () => {
       expect(option?.defaultValue).toBe('code');
     });
 
-    it('should have codelist-value-parse-mode option with default code', () => {
+    it('should have output-type option with default edi-message', () => {
       const program = new Command();
       parseCommand.register(program);
 
       const command = program.commands[0];
       if (!command) throw new Error('Command not registered');
 
-      const option = command.options.find(opt => opt.long === '--codelist-value-parse-mode');
+      const option = command.options.find(opt => opt.long === '--output-type');
+      expect(option).toBeDefined();
+      expect(option?.defaultValue).toBe('edi-message');
+    });
+
+    it('should have property-parse-mode option with default code', () => {
+      const program = new Command();
+      parseCommand.register(program);
+
+      const command = program.commands[0];
+      if (!command) throw new Error('Command not registered');
+
+      const option = command.options.find(opt => opt.long === '--property-parse-mode');
       expect(option).toBeDefined();
       expect(option?.defaultValue).toBe('code');
     });

@@ -1,16 +1,27 @@
-import { Command } from 'commander';
+﻿import { Command } from 'commander';
 import { UseCaseFactory, StructureMappingService } from '@ediflow/core';
 import { Standard } from '@ediflow/core';
 import { ParserConfig, DEFAULT_PARSER_CONFIG } from '@ediflow/core';
 import type { IMessageStructureRepository } from '@ediflow/core';
+import type { MappingKeyStrategy } from '@ediflow/core';
 import { readEDIFile, OutputFormatter, ErrorHandler } from '../utils';
 
+const VALID_OUTPUT_TYPES = ['edi-message', 'business-object'] as const;
+type OutputType = typeof VALID_OUTPUT_TYPES[number];
+
+const VALID_PROPERTY_MODES = ['code', 'name', 'camelCase', 'snake_case', 'kebab-case'] as const;
+
 /**
- * Parse Command - CLI handler for parsing EDI files.
+ * Parse Command
  *
- * Smart output strategy:
- * - If structure package found → returns Business Object under "data" key
- * - If no structure package → returns raw segments with "_warning" key
+ * --output-type edi-message      Raw segments/elements (default, no data package needed)
+ * --output-type business-object  Structure-mapped object keyed by strategy (needs data package)
+ *
+ * --property-parse-mode code        { "BGM": { "1004": "PO-001" } }         (default)
+ * --property-parse-mode name        { "Beginning of message": { "Document identifier": "PO-001" } }
+ * --property-parse-mode camelCase   { "beginningOfMessage": { "documentIdentifier": "PO-001" } }
+ * --property-parse-mode snake_case  { "beginning_of_message": { "document_identifier": "PO-001" } }
+ * --property-parse-mode kebab-case  { "beginning-of-message": { "document-identifier": "PO-001" } }
  */
 export class ParseCommand {
   constructor(
@@ -27,9 +38,16 @@ export class ParseCommand {
       .option('-s, --standard <standard>', 'EDI standard (EDIFACT, X12)', undefined)
       .option('-f, --format <format>', 'Output format (json, yaml)', 'json')
       .option('-o, --output <file>', 'Output file path', undefined)
-      .option('--output-type <type>', 'Output type: edi-message (default), business-object, structure', 'edi-message')
-      .option('--property-parse-mode <mode>', 'Property parsing mode (code, name)', 'code')
-      .option('--codelist-value-parse-mode <mode>', 'CodeList value parsing mode (code, name)', 'code')
+      .option(
+        '--output-type <type>',
+        `Output type: ${VALID_OUTPUT_TYPES.join(' | ')} (default: edi-message)`,
+        'edi-message'
+      )
+      .option(
+        '--property-parse-mode <mode>',
+        `Key naming for business-object output: ${VALID_PROPERTY_MODES.join(' | ')} (default: code)`,
+        'code'
+      )
       .action(async (file: string, options) => {
         try {
           await this.execute(file, options);
@@ -47,34 +65,36 @@ export class ParseCommand {
     const standardEnum = this.parseStandard(standardStr);
 
     const parserConfig: ParserConfig = {
-      propertyParseMode: options.propertyParseMode || DEFAULT_PARSER_CONFIG.propertyParseMode,
-      codeListValueParseMode: options.codelistValueParseMode || DEFAULT_PARSER_CONFIG.codeListValueParseMode,
+      propertyParseMode: DEFAULT_PARSER_CONFIG.propertyParseMode,
+      codeListValueParseMode: DEFAULT_PARSER_CONFIG.codeListValueParseMode,
     };
 
-    // Phase 1: Syntax parse to get version + messageType
+    const outputType: OutputType = VALID_OUTPUT_TYPES.includes(options.outputType)
+      ? options.outputType as OutputType
+      : 'edi-message';
+
+    const mappingKeyStrategy: MappingKeyStrategy = VALID_PROPERTY_MODES.includes(options.propertyParseMode)
+      ? options.propertyParseMode as MappingKeyStrategy
+      : 'code';
+
+    // Phase 1: parse EDI string â†’ EDIMessage
     const rawUseCase = this.useCaseFactory.createParseUseCase(standardStr);
     const rawResult = rawUseCase.execute({ message: content, standard: standardEnum, parserConfig });
 
     if (!rawResult.success) {
-      if (rawResult.errors && rawResult.errors.length > 0) {
-        throw new Error(ErrorHandler.formatMultiple(rawResult.errors));
-      }
-      throw new Error('Parse failed');
+      throw new Error(rawResult.errors?.length
+        ? ErrorHandler.formatMultiple(rawResult.errors)
+        : 'Parse failed'
+      );
     }
 
-    const outputType: string = options.outputType || 'edi-message';
-
-    // Default output: EDIMessage as JSON (no structure package needed)
+    // â”€â”€ edi-message â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     if (outputType === 'edi-message') {
-      const outputData = this.formatEDIMessageResult(rawResult);
-      const outputContent = options.format === 'yaml'
-        ? OutputFormatter.toYAML(outputData)
-        : OutputFormatter.toJSON(outputData);
-      OutputFormatter.output(outputContent, options.output);
+      this.writeOutput(this.formatEDIMessageResult(rawResult), options);
       return;
     }
 
-    // Business Object or Structure output: requires structure package
+    // â”€â”€ business-object â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const structure = this.repository
       ? await this.repository.getMessageStructure(
           standardStr.toUpperCase(),
@@ -83,43 +103,34 @@ export class ParseCommand {
         )
       : null;
 
-    let outputData: any;
-
-    if (outputType === 'structure') {
-      if (structure) {
-        outputData = structure;
-      } else {
-        outputData = { _warning: `No structure definition found for ${standardStr} ${rawResult.metadata.version?.value} ${rawResult.metadata.messageType?.value}. Install the corresponding data package.` };
-      }
-    } else if (outputType === 'business-object') {
-      if (structure && this.structureMappingService) {
-        const mapper = this.structureMappingService;
-        const mappedUseCase = this.useCaseFactory.createParseUseCase(standardStr, mapper);
-        const mappedResult = mappedUseCase.execute({
-          message: content,
-          standard: standardEnum,
-          parserConfig,
-          returnTypedObject: true,
-          messageStructure: structure,
-        });
-
-        if (mappedResult.success) {
-          outputData = mappedResult.businessObject;
-        } else {
-          outputData = { _warning: 'Mapping failed. Falling back to raw EDI message.', ...this.formatEDIMessageResult(rawResult) };
-        }
-      } else {
-        outputData = { _warning: `No structure definition found for ${standardStr} ${rawResult.metadata.version?.value} ${rawResult.metadata.messageType?.value}. Install the corresponding data package.`, ...this.formatEDIMessageResult(rawResult) };
-      }
-    } else {
-      outputData = this.formatEDIMessageResult(rawResult);
+    if (!structure || !this.structureMappingService) {
+      const warning = `No structure definition found for ${standardStr} ${rawResult.metadata.version?.value} ${rawResult.metadata.messageType?.value}. Install the corresponding data package.`;
+      this.writeOutput({ _warning: warning, ...this.formatEDIMessageResult(rawResult) }, options);
+      return;
     }
 
-    const outputContent = options.format === 'yaml'
-      ? OutputFormatter.toYAML(outputData)
-      : OutputFormatter.toJSON(outputData);
+    const mappedUseCase = this.useCaseFactory.createParseUseCase(standardStr, this.structureMappingService);
+    const mappedResult = mappedUseCase.execute({
+      message: content,
+      standard: standardEnum,
+      parserConfig,
+      returnTypedObject: true,
+      messageStructure: structure,
+      mappingKeyStrategy,
+    });
 
-    OutputFormatter.output(outputContent, options.output);
+    const outputData = mappedResult.success && mappedResult.businessObject
+      ? mappedResult.businessObject
+      : { _warning: 'Mapping failed. Falling back to raw EDI message.', ...this.formatEDIMessageResult(rawResult) };
+
+    this.writeOutput(outputData, options);
+  }
+
+  private writeOutput(data: unknown, options: any): void {
+    const content = options.format === 'yaml'
+      ? OutputFormatter.toYAML(data)
+      : OutputFormatter.toJSON(data);
+    OutputFormatter.output(content, options.output);
   }
 
   private formatEDIMessageResult(result: any): any {
@@ -146,12 +157,8 @@ export class ParseCommand {
   }
 
   private detectStandard(content: string): string {
-    if (content.startsWith('UNB') || content.startsWith('UNA')) {
-      return 'EDIFACT';
-    }
-    if (content.startsWith('ISA')) {
-      return 'X12';
-    }
+    if (content.startsWith('UNB') || content.startsWith('UNA')) return 'EDIFACT';
+    if (content.startsWith('ISA')) return 'X12';
     throw new Error('Unable to detect EDI standard. Please specify with --standard flag.');
   }
 
@@ -162,3 +169,12 @@ export class ParseCommand {
     throw new Error(`Unsupported standard: ${standardStr}`);
   }
 }
+
+
+/**
+ * Parse Command - CLI handler for parsing EDI files.
+ *
+ * Smart output strategy:
+ * - If structure package found â†’ returns Business Object under "data" key
+ * - If no structure package â†’ returns raw segments with "_warning" key
+ */
