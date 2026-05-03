@@ -5,16 +5,12 @@
       "messageType": "ORDERS",
       "messageVersionNumber": "D",
       "messageReleaseNumber": "96A",
-      "controllingAgency": "UN",
-      "associationAssignedCode": ""
+      "controllingAgency": "UN"
     }
   },
   "beginningOfMessage": {
     "documentMessageName": {
-      "documentMessageNameCoded": "220",
-      "codeListQualifier": "",
-      "codeListResponsibleAgencyCoded": "",
-      "documentMessageName": ""
+      "documentMessageNameCoded": "220"
     },
     "documentMessageNumber": "PO-2026-001",
     "messageFunctionCoded": "9"
@@ -35,95 +31,50 @@
       }
     }
   ],
-  "sg1": [],
   "sg2": [
     {
       "nameAndAddress": {
         "partyQualifier": "BY",
         "partyIdentificationDetails": {
           "partyIdIdentification": "BUYER123",
-          "codeListQualifier": "",
           "codeListResponsibleAgencyCoded": "92"
         },
-        "nameAndAddress": {
-          "nameAndAddressLine": ""
-        },
-        "partyName": {
-          "partyName": "",
-          "partyNameFormatCoded": ""
-        },
-        "street": {
-          "streetAndNumberPOBox": ""
-        },
         "cityName": "New York",
-        "countrySubEntityIdentification": "",
         "postcodeIdentification": "10001",
         "countryCoded": "US"
-      },
-      "sg3": [],
-      "sg4": [],
-      "sg5": []
+      }
     },
     {
       "nameAndAddress": {
         "partyQualifier": "SU",
         "partyIdentificationDetails": {
           "partyIdIdentification": "SUPP456",
-          "codeListQualifier": "",
           "codeListResponsibleAgencyCoded": "92"
         },
-        "nameAndAddress": {
-          "nameAndAddressLine": ""
-        },
-        "partyName": {
-          "partyName": "",
-          "partyNameFormatCoded": ""
-        },
-        "street": {
-          "streetAndNumberPOBox": ""
-        },
         "cityName": "Chicago",
-        "countrySubEntityIdentification": "",
         "postcodeIdentification": "60601",
         "countryCoded": "US"
-      },
-      "sg3": [],
-      "sg4": [],
-      "sg5": []
+      }
     }
   ],
-  "sg6": [],
   "sg7": [
     {
       "currencies": {
         "currencyDetails": {
           "currencyDetailsQualifier": "2",
           "currencyCoded": "EUR",
-          "currencyQualifier": "4",
-          "currencyRateBase": ""
+          "currencyQualifier": "4"
         }
       }
     }
   ],
-  "sg8": [],
-  "sg9": [],
-  "sg11": [],
-  "sg12": [],
-  "sg14": [],
-  "sg15": [],
-  "sg17": [],
-  "sg18": [],
-  "sg24": [],
   "sg25": [
     {
       "lineItem": {
         "lineItemNumber": "1",
-        "actionRequestNotificationCoded": "",
         "itemNumberIdentification": {
           "itemNumber": "WIDGET-A",
-          "itemNumberTypeCoded": "SA",
-          "codeListQualifier": "",
-          "codeListResponsibleAgencyCoded": ""
+          "itemNumberTypeCoded": "SA"
         }
       },
       "quantity": {
@@ -133,44 +84,24 @@
           "measureUnitQualifier": "PCE"
         }
       },
-      "sg26": [],
-      "sg27": [],
       "sg28": [
         {
           "priceDetails": {
             "priceInformation": {
               "priceQualifier": "AAA",
               "price": "10.50",
-              "priceTypeCoded": "CA",
-              "priceTypeQualifier": "",
-              "unitPriceBasis": "",
-              "measureUnitQualifier": ""
+              "priceTypeCoded": "CA"
             }
           }
         }
-      ],
-      "sg29": [],
-      "sg30": [],
-      "sg33": [],
-      "sg34": [],
-      "sg35": [],
-      "sg39": [],
-      "sg45": [],
-      "sg47": [],
-      "sg48": [],
-      "sg49": [],
-      "sg51": [],
-      "sg52": []
+      ]
     },
     {
       "lineItem": {
         "lineItemNumber": "2",
-        "actionRequestNotificationCoded": "",
         "itemNumberIdentification": {
           "itemNumber": "GADGET-B",
-          "itemNumberTypeCoded": "SA",
-          "codeListQualifier": "",
-          "codeListResponsibleAgencyCoded": ""
+          "itemNumberTypeCoded": "SA"
         }
       },
       "quantity": {
@@ -180,34 +111,17 @@
           "measureUnitQualifier": "PCE"
         }
       },
-      "sg26": [],
-      "sg27": [],
       "sg28": [
         {
           "priceDetails": {
             "priceInformation": {
               "priceQualifier": "AAA",
               "price": "25.00",
-              "priceTypeCoded": "CA",
-              "priceTypeQualifier": "",
-              "unitPriceBasis": "",
-              "measureUnitQualifier": ""
+              "priceTypeCoded": "CA"
             }
           }
         }
-      ],
-      "sg29": [],
-      "sg30": [],
-      "sg33": [],
-      "sg34": [],
-      "sg35": [],
-      "sg39": [],
-      "sg45": [],
-      "sg47": [],
-      "sg48": [],
-      "sg49": [],
-      "sg51": [],
-      "sg52": []
+      ]
     }
   ],
   "sectionControl": {
@@ -216,11 +130,9 @@
   "controlTotal": {
     "control": {
       "controlQualifier": "2",
-      "controlValue": "2",
-      "measureUnitQualifier": ""
+      "controlValue": "2"
     }
   },
-  "sg54": [],
   "messageTrailer": {
     "numberOfSegmentsInTheMessage": "15",
     "messageReferenceNumber": "1"

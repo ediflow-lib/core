@@ -63,6 +63,9 @@ examples/cli/
     validate/
       input/claim-837.edi
       result/claim-837.json
+    build/
+      input/claim-837.json           <- parsed JSON input
+      result/claim-837.edi           <- built X12 output
   errors/
     invalid.edi                     <- malformed EDI
     random.txt                      <- non-EDI content
@@ -313,6 +316,22 @@ node packages/cli/dist/index.js build examples/cli/x12/build/input/purchase-orde
 
 **Input:** [`x12/build/input/purchase-order-850.json`](x12/build/input/purchase-order-850.json)  
 **Result:** [`x12/build/result/purchase-order-850.edi`](x12/build/result/purchase-order-850.edi)
+
+### HIPAA Build
+
+```bash
+# Build to stdout
+node packages/cli/dist/index.js build examples/cli/hipaa/build/input/claim-837.json
+
+# Build to file
+node packages/cli/dist/index.js build examples/cli/hipaa/build/input/claim-837.json \
+  -o examples/cli/hipaa/build/result/claim-837.edi
+```
+
+**Input:** [`hipaa/build/input/claim-837.json`](hipaa/build/input/claim-837.json)  
+**Result:** [`hipaa/build/result/claim-837.edi`](hipaa/build/result/claim-837.edi)
+
+> **Note:** HIPAA 837 uses the X12 builder (`~` segment terminator).
 
 ---
 
