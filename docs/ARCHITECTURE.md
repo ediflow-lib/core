@@ -64,6 +64,7 @@ packages/
 ├── edifact-d12a/              # ✅ Data Package (EDIFACT D.12A)
 ├── edifact-d20b/              # ✅ Data Package (EDIFACT D.20B)
 ├── eancom-2002/               # ✅ Data Package (EANCOM 2002)
+├── hipaa-x12-005010/          # 🔒 Data Package (HIPAA X12 005010, internal)
 ├── x12-004010/                # ✅ Data Package (X12 004010)
 └── x12-006040/                # 🔒 Data Package (X12 006040, internal)
 ```
