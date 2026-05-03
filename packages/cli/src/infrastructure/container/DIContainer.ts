@@ -14,6 +14,7 @@ import {
   X12DelimiterDetector,
   X12SegmentParser,
   X12EnvelopeParser,
+  X12MessageBuilder,
 } from '@ediflow/x12';
 import { FileBasedMessageStructureRepository } from '@ediflow/infrastructure-shared';
 import { ExportSchemaCommand } from '@presentation/cli/commands/ExportSchemaCommand';
@@ -69,6 +70,7 @@ export class DIContainer {
 
     const builders = new Map();
     builders.set('EDIFACT', edifactMessageBuilder);
+    builders.set('X12', new X12MessageBuilder());
 
     const validationService = new EDIMessageValidationService();
     this.useCaseFactory = new UseCaseFactory(parsers, builders, validationService);

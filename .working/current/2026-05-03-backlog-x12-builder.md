@@ -1,24 +1,28 @@
-# Implementation Plan: X12 Builder
+# Implementation Plan: X12 Builder + --skip-empty Option
 
 **Date:** 2026-05-03  
-**Status:** BACKLOG
+**Status:** IN PROGRESS
 
 ## Goal
 
-`build` Command für X12 implementieren: Business Object / EDIMessage → X12 EDI String.
+1. `X12MessageBuilder` implementieren
+2. `--skip-empty` Option (default: `true`) für `parse` Command — entfernt `""`, `[]`, `{}`, `null`
 
-## Problem
+## Files
 
-`builders.set('X12', ...)` fehlt im DIContainer — kein X12 Builder existiert im `@ediflow/x12` Paket.
+| File | Action |
+|---|---|
+| `packages/x12/src/infrastructure/builders/X12MessageBuilder.ts` | NEW |
+| `packages/x12/src/infrastructure/builders/X12MessageBuilder.test.ts` | NEW |
+| `packages/x12/src/index.ts` | MODIFY - export builder |
+| `packages/cli/src/infrastructure/container/DIContainer.ts` | MODIFY - register builder |
+| `packages/cli/src/presentation/cli/commands/ParseCommand.ts` | MODIFY - add --skip-empty |
+| `packages/cli/src/presentation/cli/utils/OutputFormatter.ts` | MODIFY - add skipEmpty filter |
+| `examples/cli/x12/build/input/purchase-order-850.json` | NEW |
+| `examples/cli/x12/build/result/purchase-order-850.edi` | NEW |
 
-## Affected Areas
-
-- `packages/x12/src/infrastructure/builders/` — NEU: `X12MessageBuilder.ts`
-- `packages/cli/src/infrastructure/container/DIContainer.ts` — X12 Builder registrieren
-
-## Definition of Done
-
-- [ ] `X12MessageBuilder` implementiert `IMessageBuilder`
-- [ ] `build x12/build/input/purchase-order-850.json` → gültiger X12 String
-- [ ] Roundtrip: parse → build → parse → gleiche Segmente
-- [ ] Tests grün
+## Implementation Steps
+1. X12MessageBuilder (TDD)
+2. Export + register in container
+3. --skip-empty in ParseCommand + OutputFormatter
+4. Example files + result files

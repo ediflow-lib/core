@@ -51,6 +51,9 @@ examples/cli/
     validate/
       input/purchase-order-850.edi
       result/purchase-order-850.json
+    build/
+      input/purchase-order-850.json  <- parsed JSON input
+      result/purchase-order-850.edi  <- built X12 output
     export-schema/
       result/850-004010.json
   hipaa/
@@ -77,6 +80,7 @@ ediflow parse <file> [options]
   -o, --output <file>                 save to file
   --output-type <type>                edi-message | business-object (default: edi-message)
   --property-parse-mode <mode>        code | name | camelCase | snake_case | kebab-case (default: code)
+  --skip-empty [bool]                 remove empty strings, arrays, objects and null values (default: true)
 ```
 
 > **Output Types:**
@@ -174,6 +178,9 @@ node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.ed
 # Property names instead of codes (for business-object output)
 node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.edi \
   --output-type business-object --property-parse-mode name
+
+# Include empty values (default is to skip them)
+node packages/cli/dist/index.js parse examples/cli/edifact/parse/input/orders.edi --skip-empty false
 ```
 
 ---
@@ -292,6 +299,20 @@ node packages/cli/dist/index.js build examples/cli/edifact/build/input/orders.js
 
 **Input:** [`edifact/build/input/orders.json`](edifact/build/input/orders.json)  
 **Result:** [`edifact/build/result/orders.edi`](edifact/build/result/orders.edi)
+
+### X12 Build
+
+```bash
+# Build to stdout
+node packages/cli/dist/index.js build examples/cli/x12/build/input/purchase-order-850.json
+
+# Build to file
+node packages/cli/dist/index.js build examples/cli/x12/build/input/purchase-order-850.json \
+  -o examples/cli/x12/build/result/purchase-order-850.edi
+```
+
+**Input:** [`x12/build/input/purchase-order-850.json`](x12/build/input/purchase-order-850.json)  
+**Result:** [`x12/build/result/purchase-order-850.edi`](x12/build/result/purchase-order-850.edi)
 
 ---
 

@@ -48,6 +48,11 @@ export class ParseCommand {
         `Key naming for business-object output: ${VALID_PROPERTY_MODES.join(' | ')} (default: code)`,
         'code'
       )
+      .option(
+        '--skip-empty [bool]',
+        'Remove empty strings, arrays, objects and null values from output (default: true)',
+        'true'
+      )
       .action(async (file: string, options) => {
         try {
           await this.execute(file, options);
@@ -127,9 +132,10 @@ export class ParseCommand {
   }
 
   private writeOutput(data: unknown, options: any): void {
+    const skipEmpty = options.skipEmpty !== 'false' && options.skipEmpty !== false;
     const content = options.format === 'yaml'
-      ? OutputFormatter.toYAML(data)
-      : OutputFormatter.toJSON(data);
+      ? OutputFormatter.toYAML(data, skipEmpty)
+      : OutputFormatter.toJSON(data, true, skipEmpty);
     OutputFormatter.output(content, options.output);
   }
 
