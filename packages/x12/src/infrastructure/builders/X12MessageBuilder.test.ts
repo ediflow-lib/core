@@ -59,8 +59,7 @@ describe('X12MessageBuilder', () => {
   });
 
   it('should build composite element with component separator', () => {
-    const composite = new EDIElement('11:B:1');
-    composite.components = ['11', 'B', '1'];
+    const composite = new EDIElement('11>B>1', ['11', 'B', '1']);
     const message = createMessage([
       new EDISegment('CLM', [new EDIElement('CLAIM001'), new EDIElement('1500'), composite])
     ]);
