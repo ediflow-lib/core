@@ -88,3 +88,14 @@ When user says "Sprint X, Story #YY":
 3. Ask: "Should I create feature branch?"
 4. Start implementing with TDD
 
+---
+
+## Marketing & Business Documentation
+
+All marketing tasks, post-release checklists, and business folder conventions are in:
+
+```
+.github/instructions/marketing.instructions.md
+```
+
+Business documentation lives in `docs/private/business/` — see that folder's `README.md` for the structure.
