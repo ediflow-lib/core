@@ -438,6 +438,29 @@ Special thanks to the EDI community for feedback and contributions.
 
 **Made with ❤️ for the EDI community**
 
+---
+
+## 🔍 How Does EDIFlow Compare?
+
+| Feature | EDIFlow | `edifact` | `x12-parser` |
+|---|:---:|:---:|:---:|
+| **EDIFACT parsing** | ✅ 4 versions (D.96A–D.20B) | ⚠️ generic only | ❌ |
+| **X12 parsing** | ✅ 2 versions (004010, 006040) | ❌ | ⚠️ generic only |
+| **HIPAA X12 005010** | ✅ 14 transaction sets | ❌ | ❌ |
+| **EANCOM** | ✅ 50 GS1 messages | ❌ | ❌ |
+| **Validation** | ✅ Structure + code lists | ❌ | ❌ |
+| **Build (JSON → EDI)** | ✅ Round-trip | ❌ | ❌ |
+| **Business Object Mapping** | ✅ Typed JSON keys | ❌ | ❌ |
+| **TypeScript (strict)** | ✅ | ❌ (JS) | ❌ (JS) |
+| **Message types** | 1,000+ across all standards | ~30 | ~20 |
+| **CLI tool** | ✅ | ❌ | ❌ |
+| **Actively maintained** | ✅ (2026) | ❌ (last update 2020) | ❌ (last update 2022) |
+| **License** | MIT | MIT | MIT |
+
+> EDIFlow is the only TypeScript library that handles **multiple EDI standards** with full parse → validate → build round-trip.
+
+---
+
 **Status:** 🚀 Production Ready  
 **Version:** 0.3.0  
 **Released:** May 2026  

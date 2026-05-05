@@ -233,7 +233,7 @@ GitHub Stars without traffic is impossible. HN creates the traffic spike.
 | Dev.to | Technical articles + announcements | 1-2x/month | Draft in devto-series/drafts/ |
 | LinkedIn | Professional reach | Per article + per release | Write LINKEDIN-POST.md |
 | Hacker News | Mass dev exposure | Major releases only | Follow Show HN rules above |
-| Stack Overflow | SEO + dev help | Ongoing | Answer real questions |
+| Stack Overflow | SEO + dev help | ⛔ SUSPENDED | Moderator warning received |
 | NPM | Discovery | Automatic on publish | Maintain keywords + README |
 | ❌ Reddit | **NOT USED** | Never | — |
 
