@@ -20,9 +20,10 @@
 
 | Tier | Max Payload |
 |---|---|
-| Free | 1 MB |
-| Pro | 10 MB |
-| Enterprise | 50 MB |
+| Free | 50 KB |
+| Starter (€19/Mo) | 1 MB |
+| Business (€99/Mo) | 5 MB |
+| Enterprise (ab €499/Mo) | 10 MB+ |
 
 - Applies to **all endpoints equally** (parse, validate, build) — no per-endpoint distinction
 - Requests exceeding the limit are rejected with `413 Payload Too Large` before processing
@@ -51,8 +52,9 @@
 ## Consequences
 
 - Users who need to send large interchanges must split them into multiple requests (and rate limit applies)
-- Tier upgrades unlock larger payloads, not faster rate limits (those are separate)
+- Tier upgrades unlock larger payloads and higher rate limits
 - Streaming architecture is a prerequisite (API-01 dependency)
+- Usage Logging (API-10) tracks request metadata for billing — see `API-10-usage-logging.md`
 
 ---
 
