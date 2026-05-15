@@ -20,10 +20,10 @@
 
 | Tier | Max Payload |
 |---|---|
-| Free | 50 KB |
-| Starter (€19/Mo) | 1 MB |
-| Business (€99/Mo) | 5 MB |
-| Enterprise (ab €499/Mo) | 10 MB+ |
+| Free | 500 KB |
+| Starter (€19/Mo) | 2 MB |
+| Business (€99/Mo) | 10 MB |
+| Enterprise (ab €499/Mo) | 20 MB+ |
 
 - Applies to **all endpoints equally** (parse, validate, build) — no per-endpoint distinction
 - Requests exceeding the limit are rejected with `413 Payload Too Large` before processing
