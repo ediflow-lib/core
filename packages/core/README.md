@@ -32,7 +32,7 @@
 - ✅ **Builder** - EDIMessage → EDIFACT string
 - ✅ **Mapper** - Auto-convert to/from business objects
 - ✅ **Envelope Generator** - UNH/UNT/UNB/UNZ support
-- ✅ **CLI** - Command-line tools
+- ✅ **CLI** - see [`@ediflow/cli`](https://npmjs.com/package/@ediflow/cli) (separate package)
 - ✅ **TypeScript** - Full type safety
 
 **What this package does NOT include:**
@@ -150,13 +150,13 @@ console.log(edifactStr); // UNH+1+ORDERS:D:20B:UN'BGM+220+PO-001+9'UNT+2+1'
 - **Validate** - 3-phase validation (Syntax, Structure, Business)
 - **Build** - EDIMessage → EDIFACT (with envelope generation)
 - **Map** - Business Objects ↔ EDIMessage
-- **CLI** - Command-line interface
+- **CLI** - provided by `@ediflow/cli`
 
 ### Clean Architecture
 - **Domain Layer** - Pure business logic (zero dependencies)
 - **Application Layer** - Use Cases (ParseEDI, ValidateMessage, BuildEDI)
 - **Infrastructure Layer** - Parsers, Repositories
-- **Presentation Layer** - CLI, Future: REST API
+- **Presentation Layer** - provided by `@ediflow/cli` (not part of this package)
 
 ### TypeScript Support
 - Full TypeScript definitions
@@ -200,7 +200,7 @@ console.log(edifactStr); // UNH+1+ORDERS:D:20B:UN'BGM+220+PO-001+9'UNT+2+1'
 
 ```
 ┌─────────────────────────────────────┐
-│      Presentation Layer             │  CLI
+│      Presentation Layer             │  @ediflow/cli (separate)
 └──────────────┬──────────────────────┘
                │
 ┌──────────────▼──────────────────────┐

@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2] - 2026-11-24
+
+### 🐛 Fixed
+
+- `@ediflow/core`: removed dangling `./infrastructure` and `./cli` subpath exports, the `ediflow` `bin` entry, the unused `commander` dependency and the missing CLI entry in `tsup.config.ts` (#76). Infrastructure lives in `@ediflow/infrastructure-shared`, `@ediflow/edifact` and `@ediflow/x12`; the CLI in `@ediflow/cli`.
+
 ## [0.3.0] - 2026-05-03
 
 ### ✨ Added
@@ -168,7 +174,7 @@ EDIFACT implementation is **functional and tested** but should be considered **b
 
 ---
 
-## [Unreleased]
+## [0.3.2] - 2026-11-24
 
 _No unreleased changes at this time._
 
@@ -371,7 +377,7 @@ None (first release).
 
 ---
 
-## [Unreleased]
+## [0.3.2] - 2026-11-24
 
 ### Planned for Next Releases
 
