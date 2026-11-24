@@ -1,6 +1,6 @@
 {
   "name": "@ediflow/core",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Modern EDIFACT Parser, Validator & Builder - Core Library",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -11,20 +11,7 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
-    },
-    "./infrastructure": {
-      "types": "./dist/infrastructure/index.d.ts",
-      "require": "./dist/infrastructure/index.cjs",
-      "import": "./dist/infrastructure/index.js"
-    },
-    "./cli": {
-      "types": "./dist/presentation/cli/index.d.ts",
-      "require": "./dist/presentation/cli/index.cjs",
-      "import": "./dist/presentation/cli/index.js"
     }
-  },
-  "bin": {
-    "ediflow": "./dist/presentation/cli/index.js"
   },
   "files": [
     "dist",
@@ -76,7 +63,6 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "commander": "^14.0.2",
     "js-yaml": "^4.1.1",
     "lru-cache": "^11.2.4",
     "yaml": "^2.8.2"
