@@ -1,0 +1,60 @@
+name: Publish @ediflow package
+
+# Tag format: <package-dir>-v<version>, e.g. core-v0.3.2, x12-004010-v0.3.1
+# Publishing uses npm Trusted Publishing (OIDC) - no npm token required.
+on:
+  push:
+    tags:
+      - "*-v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: github.repository == 'ediflow-lib/core'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve package from tag
+        id: pkg
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          DIR="${TAG%-v*}"
+          VERSION="${TAG##*-v}"
+          if [ ! -f "packages/${DIR}/package.json" ]; then
+            echo "No package directory packages/${DIR} for tag ${TAG}" >&2
+            exit 1
+          fi
+          ACTUAL=$(node -p "require('./packages/${DIR}/package.json').version")
+          if [ "${ACTUAL}" != "${VERSION}" ]; then
+            echo "Tag version ${VERSION} does not match package.json version ${ACTUAL}" >&2
+            exit 1
+          fi
+          echo "workspace=packages/${DIR}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Update npm (Trusted Publishing needs npm >= 11.5.1)
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test --workspace=${{ steps.pkg.outputs.workspace }} --if-present
+
+      - name: Build
+        run: npm run build --workspace=${{ steps.pkg.outputs.workspace }} --if-present
+
+      - name: Publish
+        run: npm publish --workspace=${{ steps.pkg.outputs.workspace }} --access public --provenance
+

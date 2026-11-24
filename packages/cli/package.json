@@ -3,6 +3,11 @@
   "version": "0.3.0",
   "description": "EDIFlow Command Line Interface - Parse, Build & Validate EDI messages",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediflow-lib/core.git",
+    "directory": "packages/cli"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
