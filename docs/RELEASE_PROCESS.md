@@ -157,6 +157,17 @@ npm publish --dry-run
 
 ### 3. NPM Publish - Actual Release
 
+**Recommended: CI via npm Trusted Publishing (no token).** Push a tag `<package-dir>-v<version>` (must match the version in `package.json`); `.github/workflows/publish.yml` tests, builds and publishes that package:
+
+```bash
+git tag core-v0.3.2 && git push origin core-v0.3.2
+git tag x12-004010-v0.3.1 && git push origin x12-004010-v0.3.1
+```
+
+Each package needs a Trusted Publisher configured once on npmjs.com (package → Settings): GitHub Actions, organization `ediflow-lib`, repository `core`, workflow `publish.yml`.
+
+**Manual fallback (local, requires 2FA OTP):**
+
 **For production release:**
 
 ```bash
